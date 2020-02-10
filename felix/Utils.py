@@ -1,5 +1,6 @@
 import tensorflow as tf
 import os
+import re
 
 labelBaseMap = {
     0: "A",
@@ -32,3 +33,10 @@ def get_valid_taiyaki_filename():
             return filename
     else:
         raise "No filename valid!"
+        
+def analyse_cigar(cigar_string):
+    res = re.findall(r'[\d]+[SMDI]', cigar_string)
+    d = {"S":0,"M":0,"D":0,"I":0}
+    for r in res:
+        d[r[-1]] += int(r[:-1])
+    return d
