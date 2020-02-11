@@ -4,6 +4,24 @@
 # In[ ]:
 
 
+path = "../../felix/assemblydata.npy" #path to the label / unassembled sequences
+import numpy as np
+import collections
+
+
+file = np.load(path, allow_pickle=True)
+sequences_list = []
+sequences = file[0]
+reference = file[1]
+
+for i in range(len(sequences)):
+    sequences_list.append(sequences[i])
+    
+
+
+# In[ ]:
+
+
 def print_find_alignment_many(score,lst,s2,i1,i2):
     print(f"i1:{i1}, i2:{i2}")
     for i in range(len(lst)):
@@ -17,9 +35,6 @@ def show_alignment(s,i):
     if(i < 0):
         pan = pan + i
     return pan * '+' + i * '_' + s + f"    :{i}"
-
-
-# In[ ]:
 
 
 def calc_overlap_many(lst, s2, i1, i2):
@@ -55,10 +70,6 @@ def calc_score_basic_many(lst, s2, i1, i2):
         i2 += 1
 #     print(total_score, overlap)
     return total_score
-
-
-# In[ ]:
-
 
 def get_furthest_index(lst):
     return max([i+len(l) for (i,l) in lst])
@@ -101,87 +112,33 @@ def align_many(lst,s2, fb = False):
    
     return max_i2
 
+def align_list_of_sequences(seq_list, window=10, debug=False):
+    alignments = []
+    max_length = 0 # what is this used for?
+    
+    for i, seq in enumerate(seq_list):
+        to_align_sequences = alignments[max(0, i-window):i]
+        index = align_many(to_align_sequences, seq)
 
-# In[ ]:
+        
+        if debug and len(to_align_sequences) > 0 and abs(index - to_align_sequences[-1][0]) > 5:
+            align_many(to_align_sequences, seq, fb=True)
+            print("======")
 
+        alignments.append((index,seq))
 
-#test 1
-# lst = [
-#     [0,to_base_list("AATTCC")],
-#     [1,to_base_list("ATTCCG")],
-#     [2,to_base_list("TTCCGG")],
-#     [3,to_base_list("TCCGGA")],
-#     [4,to_base_list("CCGGAA")]
-# ]
-# s = tbl("AATTCCGGAA")
-# find_alignment_many(lst, s)
-
-#test2
-# lst = [
-#     [1,to_base_list("AAA")],
-#     [1,to_base_list("A")]
-# ]
-# s = tbl("AA")
-# find_alignment_many(lst, s)
-
-#test3
-lst = [
-    [0,"CTCTTGGGGGATAAGCCTGTTATC"],
-    [0,"ACTCTTGGGGATAAGCCTGTTATCA"],
-    [1,"CTCTTGGGGATAAGCCTGTTATC"],
-    [0,"CTCTTGGGGGATAAGCCTGTTATC"],
-    [0,"CTCTTGGGGGATAAGCCTGTTATC"],
-    [2,"TCTTGGGGATAAGCCTGTTATCC"],
-    [2,"CTTGGGGGATAAGCCTGTTATCCA"],
-    [3,"CTTGGGGATAAGCCTGTTATCC"],
-    [3,"CTTGGGGATAAGCCTGTTATCCC"],
-    [4,"CTTGGGGATAAGCCTGTTATCCC"],
-]
-s = "TGGGGATAAGCCTGTTATCCC"
-# find_alignment_many(lst, s, True)
+        if(index + len(seq) > max_length):
+            max_length = index + len(seq)
+            
+    return alignments
 
 
 # In[ ]:
 
 
-path = "../../felix/assemblydata.npy" #path to the label / unassembled sequences
-import numpy as np
-
-file = np.load(path, allow_pickle=True)
-sequences_list = []
-sequences = file[0]
-reference = file[1]
-
-for i in range(len(sequences)):
-    sequences_list.append(sequences[i])
-    
+alignments = align_list_of_sequences(sequences_list[:68])
 
 
-# In[ ]:
-
-
-import collections
-alignments = []
-max_length = 0
-
-window = 10
-
-seq_list=sequences_list[5:68]
-
-for i, seq in enumerate(seq_list):
-    to_align_sequences = alignments[max(0, i-window):i]
-    index = align_many(to_align_sequences, seq)
-    
-    #debug
-    if(len(to_align_sequences) > 0 and abs(index - to_align_sequences[-1][0]) > 5):
-        align_many(to_align_sequences, seq, fb=True)
-        print("======")
-    
-    alignments.append((index,seq))
-
-    if(index + len(seq) > max_length):
-        max_length = index + len(seq)
-    
 for i, alignment in enumerate(alignments):
     print(f"{i:03d} - {show_alignment(alignment[1], alignment[0])}")
     
@@ -190,51 +147,55 @@ for i, alignment in enumerate(alignments):
 # In[ ]:
 
 
-testseq = alignments[28:38]
-testalgn = alignments[38][1]
-print(testalgn)
-testseq
+def run_test_at_faulty_index(faulty_index, alignments, window=10):
+    # get context for algo
+    testseq = alignments[faulty_index-window:faulty_index]
+    testalgn = alignments[faulty_index][1]
+
+    # run alignment
+    al = align_many(testseq, testalgn)
+    print(al)
+
+    # print to ensure it's correct
+    if al < 0:
+        testseq = [(a-al,b) for (a,b) in testseq]
+        al = 0
+    else:
+        mina = min(a for (a,_) in testseq)
+        minb = min(mina, al)
+        testseq = [(a-minb,b) for (a,b) in testseq]
+        al = al - minb
+
+    for a,b in testseq:
+        print(f"{' '*a}{b}")
+
+    print(f"{' '*al}{testalgn}")
 
 
 # In[ ]:
 
 
-al = align_many(testseq, testalgn)
-
-# otherwise a negative al doesn't make sense
-testseq_minus_al = [(a-al,b) for (a,b) in testseq]
-
-for a,b in testseq_minus_al:
-    print(f"{' '*a}{b}")
-
-#testalgn now effectively at "0"
-print(testalgn)
-print(al)
+run_test_at_faulty_index(46, alignments)
 
 
 # In[ ]:
 
 
-calc_score_basic_many(testseq, testalgn, 7, 0)
+# this should take the raw signal, not the alignments
+def assemble(alignments):
+    dna = ""
+    for col in range(max_length):
+        col_bases = []
+        for j in range(len(alignments)):   
+            i = alignments[j][0]
+            s = alignments[j][1]
+            if(col >= i and col < i + len(s)):
+                col_bases.append(s[col-i])
 
-
-# In[ ]:
-
-
-import collections
-dna = ""
-for col in range(max_length):
-    col_bases = []
-    for j in range(len(alignments)):   
-        i = alignments[j][0]
-        s = alignments[j][1]
-        if(col >= i and col < i + len(s)):
-            col_bases.append(s[col-i])
-
-    freq_base = collections.Counter(col_bases).most_common(1)
-    if(freq_base != []):
-        dna += freq_base[0][0]
-print(dna)
+        freq_base = collections.Counter(col_bases).most_common(1)
+        if(freq_base != []):
+            dna += freq_base[0][0]
+    return dna
 
 
 # In[ ]:
