@@ -1,3 +1,4 @@
+.vscode
 .ipynb_checkpoints
 dataset.pickle
 __pycache__
