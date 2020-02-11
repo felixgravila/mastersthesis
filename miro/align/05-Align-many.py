@@ -7,6 +7,7 @@ import collections
 import sys # for debugging with sys.exit()
 from itertools import zip_longest
 import operator
+import editdistance
 
 def yeet():
     sys.exit()
@@ -21,23 +22,6 @@ for i in range(len(sequences)):
     sequences_list.append(sequences[i])
 
 #%%
-
-
-def print_find_alignment_many(score,lst,s2,i1,i2):
-    print(f"i1:{i1}, i2:{i2}")
-    for i in range(len(lst)):
-        print(i2 * '+' + lst[i][0] * "_" + lst[i][1])
-    print(i1 * '+' + s2)
-    print(f"score:{score}")
-    print("==========")
-    
-def show_alignment(s,i):
-    pan = 10
-    if(i < 0):
-        pan = pan + i
-    return pan * '+' + i * '_' + s + f"    :{i}"
-
-
 
 def get_furthest_index(lst):
     return max([i+len(l) for (i,l) in lst])
@@ -63,7 +47,7 @@ def get_most_popular_base(base_string):
 
 
 # Computes the similarity between lst and s2 if s2 starts at idx
-def calc_score_basic_many(lst, s2, idx, debug=False):
+def calc_score_basic_many(lst, s2, idx):
     lst = lst.copy()
 
     min_in_list = min(a for (a,_) in lst)
@@ -87,7 +71,7 @@ def calc_score_basic_many(lst, s2, idx, debug=False):
     return sum(counts[idx:])
 
 
-def align_many(lst, s, fb = False):
+def align_many(lst, s):
     if len(lst) == 0:
         return 0
 
@@ -101,16 +85,11 @@ def align_many(lst, s, fb = False):
 
 
 
-def align_list_of_sequences(seq_list, window=10, debug=False):
+def align_list_of_sequences(seq_list, window=10):
     alignments = []
     
     for i, seq in enumerate(seq_list):
         index = align_many(alignments[max(0, i-window):i], seq)
-
-        if debug and len(to_align_sequences) > 0 and abs(index - to_align_sequences[-1][0]) > 5:
-            align_many(to_align_sequences, seq, fb=True)
-            print("======")
-
         alignments.append((index,seq))
 
     return alignments
@@ -119,6 +98,13 @@ def align_list_of_sequences(seq_list, window=10, debug=False):
 
 alignments = align_list_of_sequences(sequences_list)
 
+
+
+def show_alignment(s,i):
+    pan = 10
+    if(i < 0):
+        pan = pan + i
+    return pan * '+' + i * '_' + s + f"    :{i}"
 
 for i, alignment in enumerate(alignments[:50]):
     print(f"{i:03d} - {show_alignment(alignment[1], alignment[0])}")
@@ -133,6 +119,9 @@ def assemble(alignments):
 
 
 assembled = assemble(alignments)
-print(len(assembled))
+print(assembled)
+# %%
+
+print(f"Distance to reference is {editdistance.eval(assembled, reference)}")
 
 # %%
