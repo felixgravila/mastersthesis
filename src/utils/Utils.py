@@ -21,7 +21,14 @@ def set_gpu_limit(limitMB):
       except RuntimeError as e:
         print(e)
 
-        
+def set_gpu_growth():
+    gpus = tf.config.experimental.list_physical_devices('GPU')
+    if gpus:
+        try:
+            for gpu in gpus:
+                tf.config.experimental.set_memory_growth(gpu, True)
+        except RuntimeError as e:
+            print(e)
         
 def get_valid_taiyaki_filename():
     possible_filenames = ["/mnt/sdb/taiyaki_mapped/mapped_umi16to9.hdf5",
