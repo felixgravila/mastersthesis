@@ -21,12 +21,12 @@ def compare_from_file(path):
   reference_string = file[1]
   return compare(assembled_string,reference_string)
 
-def __get_assembled_string(alignments):
+def _get_assembled_string(alignments):
     padded = __pad_seq_list(alignments)
     zipped = list(zip_longest(*padded, fillvalue=" "))
     return "".join(list(map(__get_most_popular_base, zipped)))
 
-def __get_aligned_sequences(seq_list,window=10):
+def _get_aligned_sequences(seq_list,window=10):
     aligned_seq_list = []
     
     for i, seq in enumerate(seq_list):
@@ -36,7 +36,7 @@ def __get_aligned_sequences(seq_list,window=10):
 
     return aligned_seq_list
 
-def __find_alignment_index(seq_list, seq_to_align):
+def _find_alignment_index(seq_list, seq_to_align):
   if(len(seq_list) == 0):
     return 0
   
@@ -52,7 +52,7 @@ def __find_alignment_index(seq_list, seq_to_align):
       max_score, max_score_index = (score, i)
   return max_score_index
 
-def __calc_score(seq_list, seq_to_align, index):
+def _calc_score(seq_list, seq_to_align, index):
   seq_list = seq_list.copy()
     
   min_in_list = min(a for (a,_) in seq_list)
@@ -74,26 +74,26 @@ def __calc_score(seq_list, seq_to_align, index):
   counts = list(map(lambda x: x[1].count(x[0]) if x[0] != " " else 0, zip(seq_to_align, zipped_list)))
   return sum(counts[index:])
 
-def __get_furthest_index(seq_list):
+def _get_furthest_index(seq_list):
     return max([i+len(l) for (i,l) in seq_list])
 
-def __get_closest_index(seq_list):
+def _get_closest_index(seq_list):
     return min([i for (i,l) in seq_list])
 
-def __pad_seq_list(seq_list):
+def _pad_seq_list(seq_list):
   return [" "*a+b for (a,b) in seq_list]
 
-def __get_most_popular_base(base_string):
+def _get_most_popular_base(base_string):
   base_count_dic = __count_bases(base_string)
   return max(base_count_dic.items(), key=operator.itemgetter(1))[0]
 
-def __count_bases(base_string):
+def _count_bases(base_string):
     d = {}
     for l in "ATCG":
         d[l] = base_string.count(l)
     return d
   
-def __show_alignment(s,i):
+def _show_alignment(s,i):
     pan = 10
     if(i < 0):
         pan = pan + i
