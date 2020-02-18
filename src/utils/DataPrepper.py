@@ -6,7 +6,7 @@ import numpy as np
 
 class PrepData(Sequence):
     
-    def __init__(self, filename, RNN_LEN, train_validate_split=0.8, min_labels=5):
+    def __init__(self, filename, RNN_LEN, train_validate_split=0.8, min_labels=0):
         self.filename = filename
         self.RNN_LEN = RNN_LEN
         self.train_validate_split=train_validate_split
@@ -30,6 +30,16 @@ class PrepData(Sequence):
         dmin = min(dac)
         dmax = max(dac)
         return [(d-dmin)/(dmax-dmin) for d in dac]
+
+    def get_whole_read(self):
+        while self.pos < len(self.readIDs):
+            readID = self.readIDs[self.pos]
+            with h5py.File(self.filename, 'r') as h5file:
+                DAC = list(self.normalise(h5file['Reads'][readID]['Dacs'][()]))
+                REF = h5file['Reads'][readID]['Reference'][()]
+
+            self.pos += 1
+            yield DAC, REF
     
     def processRead(self, readID):
         train_X = []
@@ -91,8 +101,17 @@ class PrepData(Sequence):
             
             train_X_lens = np.array([[95] for x in train_X], dtype="float32")
             train_y_lens = np.array([[len(x)] for x in train_y], dtype="float32")
-#             maxlen = max([len(r) for r in train_y])
-            train_y_padded = np.array([r + [5]*(self.get_max_label_len()-len(r)) for r in train_y], dtype='float32')
+            
+            # sometimes there are sequences that exceed max_label_len
+            # catch them, remove them, and print message
+            maxlen = max([len(r) for r in train_y])
+            prevlen = len(train_y)
+            if maxlen > self.max_label_len:
+                print(f"Caution: longer labels than max len, saw {maxlen} > {self.max_label_len}.")
+                train_y = [r for r in train_y if len(r) <= self.max_label_len]
+                print(f"Kept {len(train_y)} out of {prevlen}")
+
+            train_y_padded = np.array([r + [5]*(self.max_label_len-len(r)) for r in train_y], dtype='float32')
             X = {'the_input': train_X,
                       'the_labels': train_y_padded,
                       'input_length': train_X_lens,
