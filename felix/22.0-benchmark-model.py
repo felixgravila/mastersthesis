@@ -27,7 +27,7 @@ set_gpu_growth()
 filename = get_valid_taiyaki_filename()
 
 
-prepData = PrepData(filename, RNN_LEN=300)
+prepData = PrepData(filename, RNN_LEN=300, min_labels=0)
 
 chiron = Chiron(max_label_length=prepData.get_max_label_len())
 chiron.model.load_weights("../trained_models/Chiron_v1_e538_dis478.h5")
