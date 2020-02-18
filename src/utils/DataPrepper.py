@@ -30,6 +30,16 @@ class PrepData(Sequence):
         dmin = min(dac)
         dmax = max(dac)
         return [(d-dmin)/(dmax-dmin) for d in dac]
+
+    def get_whole_read(self):
+        while self.pos < len(self.readIDs):
+            readID = self.readIDs[self.pos]
+            with h5py.File(self.filename, 'r') as h5file:
+                DAC = list(self.normalise(h5file['Reads'][readID]['Dacs'][()]))
+                REF = h5file['Reads'][readID]['Reference'][()]
+
+            self.pos += 1
+            yield DAC, REF
     
     def processRead(self, readID):
         train_X = []
