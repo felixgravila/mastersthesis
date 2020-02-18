@@ -6,7 +6,7 @@ import numpy as np
 
 class PrepData(Sequence):
     
-    def __init__(self, filename, RNN_LEN, train_validate_split=0.8, min_labels=5):
+    def __init__(self, filename, RNN_LEN, train_validate_split=0.8, min_labels=0):
         self.filename = filename
         self.RNN_LEN = RNN_LEN
         self.train_validate_split=train_validate_split
