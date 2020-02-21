@@ -23,6 +23,9 @@ class Chiron():
         cur = [[np.argmax(ts) for ts in p] for p in pred]
         nodup = ["".join(list(map(lambda x: labelBaseMap[x], filter(lambda x: x!=4, reduce(lambda acc, x: acc if acc[-1] == x else acc + [x], c[5:], [4]))))) for c in cur]
         return nodup
+
+    def predict_raw(self, input_data):
+        return self.testfunc(input_data)
         
     def make_res_block(self, upper, block):
         res = Conv1D(256, 1,
@@ -54,7 +57,7 @@ class Chiron():
         
         def ctc_lambda_func(args):
             y_pred, labels, input_length, label_length = args
-            y_pred = y_pred[:, 5:, :]
+            # y_pred = y_pred[:, 5:, :]
             return kb.ctc_batch_cost(labels, y_pred, input_length, label_length) 
         
         input_data = Input(name="the_input", shape=(300,1), dtype="float32")
@@ -82,7 +85,7 @@ class Chiron():
         model = Model(inputs=[input_data, labels, input_length, label_length], outputs=loss_out, name="chiron")
         model.compile(loss={'ctc': lambda y_true, y_pred: y_pred}, optimizer='adam')
         
-        testfunc = tf.keras.backend.function([input_data], [y_pred])
+        testfunc = tf.keras.backend.function(input_data, y_pred)
         return model, testfunc
         
     def calculate_loss(self, X, y, testbatchsize=1000):
@@ -105,47 +108,54 @@ class Chiron():
     
     
 class SaveCB(Callback):
-    def __init__(self, model_output_dir, image_output_dir, loss_func, prepper):
+    def __init__(self, model_output_dir, image_output_dir, chiron, prepper):
         self.model_output_dir=model_output_dir
         self.image_output_dir=image_output_dir
-        self.loss_func = loss_func
+        self.chiron = chiron
         self.prepper = prepper
         self.best_dist = None
         self.Xforimg = None
-        self.testvalid = [[],[]]
+        self.testvalid = [[],[],[]]
+        self.start_time = datetime.datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
+
+        if not os.path.exists(self.model_output_dir):
+            os.makedirs(self.model_output_dir)
+        if not os.path.exists(self.image_output_dir):
+            os.makedirs(self.image_output_dir)
         
     def save_anim_pic(self, epoch):
         fig, ax = plt.subplots( nrows=1, ncols=1, figsize=(30,10))
         ax.set_ylim(top=1)
         ax.set_ylim(bottom=0)
-        prediction = self.test_func(self.Xforimg)[0][0]
+        prediction = self.chiron.predict_raw(self.Xforimg)[0]
         transposed = list(map(list, zip(*prediction)))
         for i in range(len(transposed)):
             ax.plot(transposed[i], label=labelBaseMap[i])
         ax.plot(self.Xforimg[0], "k", label="raw")
         ax.legend()
-        fig.savefig(os.path.join(self.image_output_dir, f'{epoch:05d}.png'))
+        fig.savefig(os.path.join(self.image_output_dir, f'{self.start_time}-{epoch:05d}.png'))
         plt.close(fig)
     
 
     def on_epoch_end(self, epoch, logs={}):
         test_X, test_y = next(self.prepper.test_gen())
         train_X, train_y = self.prepper.last_train_gen_data[0]['the_input'], self.prepper.last_train_gen_data[0]['unpadded_labels']
-#         if self.Xforimg is None:
-#             self.Xforimg = test_X[0:1]
-#         self.save_anim_pic(epoch)
+        if self.Xforimg is None:
+            self.Xforimg = test_X[0:1]
+        self.save_anim_pic(epoch)
 
-        totloss, n, _ = self.loss_func(train_X, train_y)
+        totloss, n, _ = self.chiron.calculate_loss(train_X, train_y)
         testloss = totloss/n
         print(f"\nAverage test edit distance is: {testloss}")
-        totloss, n, _ = self.loss_func(test_X, test_y)
+        totloss, n, _ = self.chiron.calculate_loss(test_X, test_y)
         valloss = totloss/n
         print(f"\nAverage validation edit distance is: {valloss}")
         self.testvalid[0].append(testloss)
         self.testvalid[1].append(valloss)
-        np.save("testval", np.array(np.array(self.testvalid)))
+        self.testvalid[2].append(int(datetime.datetime.now().timestamp()))
+        np.save(os.path.join(self.model_output_dir, self.start_time), np.array(self.testvalid))
         
         if self.best_dist is None or valloss < self.best_dist:
             self.best_dist = valloss
-            self.model.save_weights(os.path.join(self.model_output_dir, f'{datetime.datetime.now().strftime("%Y-%m-%d_%H:%M:%S")}_e{epoch:05d}_dis{round(valloss*100)}.h5'))
+            self.model.save_weights(os.path.join(self.model_output_dir, f'{self.start_time}_e{epoch:05d}_dis{round(valloss*100)}.h5'))
     
