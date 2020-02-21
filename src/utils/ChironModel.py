@@ -28,24 +28,29 @@ class Chiron():
         return self.testfunc(input_data)
         
     def make_res_block(self, upper, block):
-        res = Conv1D(256, 1,
-                      padding="same",
-                      name=f"res{block}-r")(upper)
-        upper = Conv1D(256, 1,
+        if block==1:
+            res = Conv1D(256, 1,
+                padding="same",
+                name=f"res{block}-r")(upper)
+        else:
+            res = upper
+            
+        inner = Conv1D(256, 1,
                       padding="same",
                       activation="relu",
                       use_bias="false",
                       name=f"res{block}-c1")(upper)
-        upper = Conv1D(256, 3,
+        inner = Conv1D(256, 3,
                       padding="same",
                       activation="relu",
                       use_bias="false",
-                      name=f"res{block}-c2")(upper)
-        upper = Conv1D(256, 1,
+                      name=f"res{block}-c2")(inner)
+        inner = Conv1D(256, 1,
                       padding="same",
                       use_bias="false",
-                      name=f"res{block}-c3")(upper)
-        added = Add(name=f"res{block}-add")([res, upper])
+                      name=f"res{block}-c3")(inner)
+
+        added = Add(name=f"res{block}-add")([res, inner])
         return Activation('relu', name=f"res{block}-relu")(added)
 
     def make_bdlstm(self, upper, block):
