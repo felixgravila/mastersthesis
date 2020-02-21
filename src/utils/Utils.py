@@ -32,8 +32,8 @@ def set_gpu_growth():
             print(e)
         
 def get_valid_taiyaki_filename():
-    possible_filenames = ["/mnt/sdb/taiyaki_mapped/mapped_umi16to9.hdf5",
-                          "/mnt/nvme/taiyaki_aligned/mapped_umi16to9.hdf5",
+    possible_filenames = ["/mnt/nvme/taiyaki_aligned/mapped_umi16to9.hdf5",
+                          "/hdd/mapped_therest.hdf5",
                           "/Users/felix/MsC/DNA/mapped_umi16to9.hdf5",
                           "c:/Users/mirop/OneDrive/Documents/Programming/Data/bdm/mapped_umi16to9.hdf5"]
 
