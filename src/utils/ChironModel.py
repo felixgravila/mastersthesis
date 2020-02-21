@@ -2,7 +2,7 @@ import numpy as np
 import tensorflow as tf
 import tensorflow.keras.backend as kb
 from tensorflow.keras.models import Sequential, Model
-from tensorflow.keras.layers import Input, Activation, Add, Lambda, Dense, MaxPooling1D, Conv1D, LSTM, GRU
+from tensorflow.keras.layers import Input, Activation, Add, Lambda, Dense, MaxPooling1D, Conv1D, LSTM, GRU, BatchNormalization
 from tensorflow.keras.backend import ctc_batch_cost
 from tensorflow.keras.callbacks import Callback
 from functools import reduce
@@ -28,18 +28,21 @@ class Chiron():
         return self.testfunc(input_data)
         
     def make_res_block(self, upper, block):
+
+        inner = BatchNormalization()(upper)
+
         if block==1:
             res = Conv1D(256, 1,
                 padding="same",
-                name=f"res{block}-r")(upper)
+                name=f"res{block}-r")(inner)
         else:
-            res = upper
-            
+            res = inner
+
         inner = Conv1D(256, 1,
                       padding="same",
                       activation="relu",
                       use_bias="false",
-                      name=f"res{block}-c1")(upper)
+                      name=f"res{block}-c1")(inner)
         inner = Conv1D(256, 3,
                       padding="same",
                       activation="relu",
@@ -54,8 +57,10 @@ class Chiron():
         return Activation('relu', name=f"res{block}-relu")(added)
 
     def make_bdlstm(self, upper, block):
-        lstm_1a = LSTM(200, return_sequences=True, name=f"blstm{block}-fwd")(upper)
-        lstm_1b = LSTM(200, return_sequences=True, go_backwards=True, name=f"blstm{block}-rev")(upper)
+        inner = BatchNormalization()(upper)
+
+        lstm_1a = LSTM(200, return_sequences=True, name=f"blstm{block}-fwd")(inner)
+        lstm_1b = LSTM(200, return_sequences=True, go_backwards=True, name=f"blstm{block}-rev")(inner)
         return Add(name=f"blstm{block}-add")([lstm_1a, lstm_1b])
 
     def make_model(self):
@@ -75,6 +80,8 @@ class Chiron():
         inner = self.make_bdlstm(inner, 1)
         inner = self.make_bdlstm(inner, 2)
         inner = self.make_bdlstm(inner, 3)
+
+        inner = BatchNormalization()(inner)
 
         inner = Dense(64, name="dense", activation="relu")(inner)
         inner = Dense(5, name="dense_output")(inner)
@@ -160,7 +167,7 @@ class SaveCB(Callback):
         self.testvalid[2].append(int(datetime.datetime.now().timestamp()))
         np.save(os.path.join(self.model_output_dir, self.start_time), np.array(self.testvalid))
         
-        if self.best_dist is None or valloss < self.best_dist:
+        if self.best_dist is None or valloss < self.best_dist or epoch%20==0:
             self.best_dist = valloss
             self.model.save_weights(os.path.join(self.model_output_dir, f'{self.start_time}_e{epoch:05d}_dis{round(valloss*100)}.h5'))
     
