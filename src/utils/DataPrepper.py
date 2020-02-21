@@ -87,7 +87,7 @@ class PrepData(Sequence):
         return train_X, train_y, test_X, test_y
     
     
-    def train_gen(self, full=True):
+    def train_gen(self, ignore_boundary_count=0, full=True):
         while self.pos < len(self.readIDs):
             print(f"Processing {self.pos}")
             train_X, train_y, test_X, test_y = self.processRead(self.readIDs[self.pos])
@@ -99,7 +99,7 @@ class PrepData(Sequence):
             test_y  = np.array(test_y) if full else np.array(test_y[:100])
             self.test_gen_data = (test_X, test_y)
             
-            train_X_lens = np.array([[95] for x in train_X], dtype="float32")
+            train_X_lens = np.array([[self.RNN_LEN-ignore_boundary_count] for x in train_X], dtype="float32")
             train_y_lens = np.array([[len(x)] for x in train_y], dtype="float32")
             
             # sometimes there are sequences that exceed max_label_len
