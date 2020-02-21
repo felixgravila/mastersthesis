@@ -29,9 +29,12 @@ save_cb = SaveCB("models", "images", chiron, prepData)
 
 for idx in range(prepData.get_len()):
     print(f"Epoch {idx}/{prepData.get_len()}")
-#     try:
-    a = next(prepData.train_gen())
-    chiron.fit(a[0], a[1], initial_epoch=idx, epochs=idx+1, callbacks=[save_cb])
-#     except Exception as e:
-#         print(f"Error {e}, continuing...")
+    try:
+        a = next(prepData.train_gen())
+        chiron.fit(a[0], a[1], initial_epoch=idx, epochs=idx+1, callbacks=[save_cb])
+    except Exception as e:
+        print(f"Error {e}, continuing...")
 
+
+
+# %%
