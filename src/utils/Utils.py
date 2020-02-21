@@ -6,7 +6,8 @@ labelBaseMap = {
     0: "A",
     1: "C",
     2: "G",
-    3: "T"
+    3: "T",
+    4: "-"
 }
 
 def set_gpu_limit(limitMB):
