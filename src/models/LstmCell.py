@@ -71,7 +71,10 @@
 # #         return new_hidden, (new_cell, new_hidden)
 
 import numpy as np 
-from tensorflow import keras
+from tensorflow import keras 
+from tensorflow.keras import backend as K
+from tensorflow.keras import activations, initializers, regularizers, constraints
+
 
 class MyCell(keras.layers.Layer):
     def __init__(self, units, **kwargs):
@@ -86,12 +89,90 @@ class MyCell(keras.layers.Layer):
         return outputs, new_states
 
 class MyLSTMCell(keras.layers.Layer):
-    def __init__(self, units, **kwargs):
+    def __init__(self, units,
+                activation='tanh',
+                recurrent_activation='sigmoid',
+                kernel_initializer='glorot_uniform',
+                kernel_regularizer=None,
+                kernel_constraint=None,
+                recurrent_initializer='orthogonal',
+                recurrent_regularizer=None,
+                recurrent_constraint=None,
+
+                **kwargs):
         super().__init__(**kwargs)
         self.units = units
         self.state_size = (units,units)
-        self.lstm_cell = keras.layers.LSTMCell(self.units)
+
+        self.activation = activations.get(activation)
+        self.recurrent_activation = activations.get(recurrent_activation)
+
+        self.kernel_initializer = initializers.get(kernel_initializer)
+        self.kernel_regularizer = regularizers.get(kernel_regularizer)
+        self.kernel_constraint = constraints.get(kernel_constraint)
+
+        self.recurrent_initializer = initializers.get(recurrent_initializer)
+        self.recurrent_regularizer = regularizers.get(recurrent_regularizer)
+        self.recurrent_constraint = constraints.get(recurrent_constraint)
+
+
+
+        #self.lstm_cell = keras.layers.LSTMCell(self.units)
+
+    def build(self, input_shape):
+        input_dim = input_shape[-1]
+        self.kernel = self.add_weight(shape=(input_dim, self.units * 4),
+                                      name='kernel',
+                                      initializer=self.kernel_initializer,
+                                      regularizer=self.kernel_regularizer,
+                                      constraint=self.kernel_constraint)
+
+        self.recurrent_kernel = self.add_weight(
+                shape=(self.units, self.units * 4),
+                name='recurrent_kernel',
+                initializer=self.recurrent_initializer,
+                regularizer=self.recurrent_regularizer,
+                constraint=self.recurrent_constraint)
+
+        self.kernel_i = self.kernel[:, :self.units]
+        self.kernel_f = self.kernel[:, self.units: self.units * 2]
+        self.kernel_c = self.kernel[:, self.units * 2: self.units * 3]
+        self.kernel_o = self.kernel[:, self.units * 3:]
+
+        self.recurrent_kernel_i = self.recurrent_kernel[:, :self.units]
+        self.recurrent_kernel_f = (self.recurrent_kernel[:, self.units: self.units * 2])
+        self.recurrent_kernel_c = (self.recurrent_kernel[:, self.units * 2: self.units * 3])
+        self.recurrent_kernel_o = self.recurrent_kernel[:, self.units * 3:]
 
     def call(self, inputs, states):
-        outputs, new_states = self.lstm_cell(inputs, states)
-        return outputs, new_states
+        # outputs, new_states = self.lstm_cell(inputs, states)
+        # return outputs, new_states
+
+        h_tm1 = states[0]  # previous memory state
+        c_tm1 = states[1]  # previous carry state
+
+        inputs_i = inputs
+        inputs_f = inputs
+        inputs_c = inputs
+        inputs_o = inputs
+
+        x_i = K.dot(inputs_i, self.kernel_i)
+        x_f = K.dot(inputs_f, self.kernel_f)
+        x_c = K.dot(inputs_c, self.kernel_c)
+        x_o = K.dot(inputs_o, self.kernel_o)
+
+        h_tm1_i = h_tm1
+        h_tm1_f = h_tm1
+        h_tm1_c = h_tm1
+        h_tm1_o = h_tm1
+
+        i = self.recurrent_activation(x_i + K.dot(h_tm1_i, self.recurrent_kernel_i))
+        f = self.recurrent_activation(x_f + K.dot(h_tm1_f, self.recurrent_kernel_f))
+        c = f * c_tm1 + i * self.activation(x_c + K.dot(h_tm1_c, self.recurrent_kernel_c))
+        o = self.recurrent_activation(x_o + K.dot(h_tm1_o, self.recurrent_kernel_o))
+
+        h = o * self.activation(c)
+        return h, [h, c]
+
+        
+
