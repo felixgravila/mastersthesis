@@ -74,7 +74,7 @@ import numpy as np
 from tensorflow import keras 
 from tensorflow.keras import backend as K
 from tensorflow.keras import activations, initializers, regularizers, constraints
-
+from tensorflow.keras.layers import BatchNormalization
 
 class MyCell(keras.layers.Layer):
     def __init__(self, units, **kwargs):
@@ -145,33 +145,26 @@ class MyLSTMCell(keras.layers.Layer):
         self.recurrent_kernel_o = self.recurrent_kernel[:, self.units * 3:]
 
     def call(self, inputs, states):
-        # outputs, new_states = self.lstm_cell(inputs, states)
-        # return outputs, new_states
-
         h_tm1 = states[0]  # previous memory state
         c_tm1 = states[1]  # previous carry state
 
-        inputs_i = inputs
-        inputs_f = inputs
-        inputs_c = inputs
-        inputs_o = inputs
+        x_i = BatchNormalization()(K.dot(inputs, self.kernel_i)) #BN(W_i . x_t)
+        x_f = BatchNormalization()(K.dot(inputs, self.kernel_f)) #BN(W_f . x_t)
+        x_c = BatchNormalization()(K.dot(inputs, self.kernel_c)) #BN(W_c . x_t)
+        x_o = BatchNormalization()(K.dot(inputs, self.kernel_o)) #BN(W_o . x_t)
 
-        x_i = K.dot(inputs_i, self.kernel_i)
-        x_f = K.dot(inputs_f, self.kernel_f)
-        x_c = K.dot(inputs_c, self.kernel_c)
-        x_o = K.dot(inputs_o, self.kernel_o)
+        h_i = BatchNormalization()(K.dot(h_tm1, self.recurrent_kernel_i)) #BN(U_i . h_tm1)
+        h_f = BatchNormalization()(K.dot(h_tm1, self.recurrent_kernel_f)) #BN(U_f . h_tm1)
+        h_c = BatchNormalization()(K.dot(h_tm1, self.recurrent_kernel_c)) #BN(U_c . h_tm1)
+        h_o = BatchNormalization()(K.dot(h_tm1, self.recurrent_kernel_o)) #BN(U_o . h_tm1)
+        
+        i = self.recurrent_activation(x_i + h_i) #sigmoid(x_i + h_i)
+        f = self.recurrent_activation(x_f + h_f) #sigmoid(x_f + h_f)
+        c_candidate = self.activation(x_c + h_c) #tanh(x_c + h_c)
+        c = f * c_tm1 + i * c_candidate          
+        o = self.recurrent_activation(x_o + h_o) #sigmoid(x_o + h_o)
+        h = o * self.activation(BatchNormalization()(c)) #o * tanh(BN(c))
 
-        h_tm1_i = h_tm1
-        h_tm1_f = h_tm1
-        h_tm1_c = h_tm1
-        h_tm1_o = h_tm1
-
-        i = self.recurrent_activation(x_i + K.dot(h_tm1_i, self.recurrent_kernel_i))
-        f = self.recurrent_activation(x_f + K.dot(h_tm1_f, self.recurrent_kernel_f))
-        c = f * c_tm1 + i * self.activation(x_c + K.dot(h_tm1_c, self.recurrent_kernel_c))
-        o = self.recurrent_activation(x_o + K.dot(h_tm1_o, self.recurrent_kernel_o))
-
-        h = o * self.activation(c)
         return h, [h, c]
 
         
