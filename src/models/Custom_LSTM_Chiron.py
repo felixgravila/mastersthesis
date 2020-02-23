@@ -2,7 +2,7 @@ import numpy as np
 import tensorflow as tf
 import tensorflow.keras.backend as kb
 from tensorflow.keras.models import Sequential, Model
-from tensorflow.keras.layers import Input, Activation, Add, Lambda, Dense, MaxPooling1D, Conv1D, LSTM, GRU, BatchNormalization, RNN
+from tensorflow.keras.layers import Input, Activation, Add, Lambda, Dense, MaxPooling1D, Conv1D, LSTM, GRU, BatchNormalization, RNN, LSTMCell
 from tensorflow.keras.backend import ctc_batch_cost
 from tensorflow.keras.callbacks import Callback
 from functools import reduce
@@ -12,7 +12,7 @@ import os
 import matplotlib.pyplot as plt
 
 from utils.Other import labelBaseMap
-from models.LstmCell import CustomLstmCell
+from models.LstmCell import MyCell, MyLSTMCell
 
 class Cstom_LSTM_Chiron():
     
@@ -63,10 +63,14 @@ class Cstom_LSTM_Chiron():
         inner = BatchNormalization()(upper)
 
         #this part raises exception
-        cell = CustomLstmCell(200)
-        layer = RNN(cell, return_sequences=True, name=f"blstm{block}-fwd")
-        output = layer(upper)
+        # cell = CustomLstmCell(200)
+        # layer = RNN(cell, return_sequences=True, name=f"blstm{block}-fwd")
+        # output = layer(upper)
         #--
+
+        inner2 = RNN(LSTMCell(200), return_sequences=True, name=f"blstm{block}-fwd")(inner)
+        inner3 = RNN(MyCell(200), return_sequences=True, name=f"blstm{block}-fwd")(inner)
+        inner4 = RNN(MyLSTMCell(200), return_sequences=True, name=f"blstm{block}-fwd")(inner)
 
         lstm_1a = LSTM(200, return_sequences=True, name=f"blstm{block}-fwd")(inner)
         lstm_1b = LSTM(200, return_sequences=True, go_backwards=True, name=f"blstm{block}-rev")(inner)
