@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 from utils.Other import labelBaseMap
 from models.BatchNormilized_LSTM_Cell import BatchNormilized_LSTM_Cell
 
-class Cstom_LSTM_Chiron():
+class BatchNormilized_LSTM_ChironModel():
     
     def __init__(self, max_label_length):
         self.max_label_length = max_label_length
@@ -48,8 +48,8 @@ class Cstom_LSTM_Chiron():
     def make_bdlstm(self, input, units, block_number):
 
         cell = BatchNormilized_LSTM_Cell(units)
-        lstm_fw = RNN(cell, return_sequences=True, name=f"blstm{block_number}-fw")
-        lstm_bw = RNN(cell, return_sequences=True, name=f"blstm{block_number}-bw")
+        lstm_fw = RNN(cell, return_sequences=True, name=f"blstm{block_number}-fw")(input)
+        lstm_bw = RNN(cell, return_sequences=True, name=f"blstm{block_number}-bw")(input)
         return Add(name=f"blstm{block_number}-add")([lstm_fw, lstm_bw])
 
     def make_model(self):
@@ -66,9 +66,9 @@ class Cstom_LSTM_Chiron():
         inner = self.make_res_block(inner, 3)
         inner = self.make_res_block(inner, 4)
         inner = self.make_res_block(inner, 5)
-        inner = self.make_bdlstm(inner, 1)
-        inner = self.make_bdlstm(inner, 2)
-        inner = self.make_bdlstm(inner, 3)
+        inner = self.make_bdlstm(inner, 200, 1)
+        inner = self.make_bdlstm(inner, 200, 2)
+        inner = self.make_bdlstm(inner, 200, 3)
 
         inner = BatchNormalization()(inner)
 

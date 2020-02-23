@@ -2,7 +2,7 @@ import sys
 sys.path.insert(0,'./src')
 
 from models.Chiron import Chiron
-from models.Custom_LSTM_Chiron import Cstom_LSTM_Chiron
+from models.BatchNormilized_LSTM_ChironModel import BatchNormilized_LSTM_ChironModel
 from models.Callback import SaveCB
 from utils.DataPrepper import PrepData
 from utils.Other import labelBaseMap, get_valid_taiyaki_filename, set_gpu_growth
@@ -12,8 +12,7 @@ set_gpu_growth()
 filename = get_valid_taiyaki_filename()
 
 prepData = PrepData(filename, RNN_LEN=300)
-#chiron = Chiron(prepData.get_max_label_len())
-custom_chiron = Cstom_LSTM_Chiron(prepData.get_max_label_len())
+custom_chiron = BatchNormilized_LSTM_ChironModel(prepData.get_max_label_len())
 
 save_cb = SaveCB(custom_chiron, prepData)\
     .withCheckpoints("models")\
