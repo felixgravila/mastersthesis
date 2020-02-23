@@ -12,7 +12,7 @@ import os
 import matplotlib.pyplot as plt
 
 from utils.Other import labelBaseMap
-from models.LstmCell import MyCell, MyLSTMCell
+from models.BatchNormilized_LSTM_Cell import BatchNormilized_LSTM_Cell
 
 class Cstom_LSTM_Chiron():
     
@@ -29,52 +29,28 @@ class Cstom_LSTM_Chiron():
     def predict_raw(self, input_data):
         return self.testfunc(input_data)
         
-    def make_res_block(self, upper, block):
+    def make_res_block(self, input, block_number):
 
-        inner = BatchNormalization()(upper)
+        normalized_input = BatchNormalization()(input)
 
-        if block==1:
-            res = Conv1D(256, 1,
-                padding="same",
-                name=f"res{block}-r")(inner)
+        if block_number==1:
+            residual = Conv1D(256, 1, padding="same",name=f"res{block_number}-r")(normalized_input)
         else:
-            res = inner
+            residual = normalized_input
 
-        inner = Conv1D(256, 1,
-                      padding="same",
-                      activation="relu",
-                      use_bias="false",
-                      name=f"res{block}-c1")(inner)
-        inner = Conv1D(256, 3,
-                      padding="same",
-                      activation="relu",
-                      use_bias="false",
-                      name=f"res{block}-c2")(inner)
-        inner = Conv1D(256, 1,
-                      padding="same",
-                      use_bias="false",
-                      name=f"res{block}-c3")(inner)
+        conv1 = Conv1D(256, 1, padding="same", activation="relu", use_bias="false", name=f"res{block_number}-c1")(normalized_input)
+        conv2 = Conv1D(256, 3, padding="same", activation="relu", use_bias="false", name=f"res{block_number}-c2")(conv1)
+        conv3 = Conv1D(256, 1, padding="same", use_bias="false", name=f"res{block_number}-c3")(conv2)
 
-        added = Add(name=f"res{block}-add")([res, inner])
-        return Activation('relu', name=f"res{block}-relu")(added)
+        added = Add(name=f"res{block_number}-add")([residual, conv3])
+        return Activation('relu', name=f"res{block_number}-relu")(added)
 
-    def make_bdlstm(self, upper, block):
+    def make_bdlstm(self, input, units, block_number):
 
-        inner = BatchNormalization()(upper)
-
-        #this part raises exception
-        # cell = CustomLstmCell(200)
-        # layer = RNN(cell, return_sequences=True, name=f"blstm{block}-fwd")
-        # output = layer(upper)
-        #--
-
-        inner2 = RNN(LSTMCell(200), return_sequences=True, name=f"blstm{block}-fwd")(inner)
-        inner3 = RNN(MyCell(200), return_sequences=True, name=f"blstm{block}-fwd")(inner)
-        inner4 = RNN(MyLSTMCell(200), return_sequences=True, name=f"blstm{block}-fwd")(inner)
-
-        lstm_1a = LSTM(200, return_sequences=True, name=f"blstm{block}-fwd")(inner)
-        lstm_1b = LSTM(200, return_sequences=True, go_backwards=True, name=f"blstm{block}-rev")(inner)
-        return Add(name=f"blstm{block}-add")([lstm_1a, lstm_1b])
+        cell = BatchNormilized_LSTM_Cell(units)
+        lstm_fw = RNN(cell, return_sequences=True, name=f"blstm{block_number}-fw")
+        lstm_bw = RNN(cell, return_sequences=True, name=f"blstm{block_number}-bw")
+        return Add(name=f"blstm{block_number}-add")([lstm_fw, lstm_bw])
 
     def make_model(self):
         
