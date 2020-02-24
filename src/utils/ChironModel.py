@@ -29,7 +29,8 @@ class Chiron():
         
     def make_res_block(self, upper, block):
 
-        inner = BatchNormalization()(upper)
+        # inner = BatchNormalization()(upper)
+        inner = upper
 
         if block==1:
             res = Conv1D(256, 1,
@@ -57,7 +58,8 @@ class Chiron():
         return Activation('relu', name=f"res{block}-relu")(added)
 
     def make_bdlstm(self, upper, block):
-        inner = BatchNormalization()(upper)
+        # inner = BatchNormalization()(upper)
+        inner = upper
 
         lstm_1a = LSTM(200, return_sequences=True, name=f"blstm{block}-fwd")(inner)
         lstm_1b = LSTM(200, return_sequences=True, go_backwards=True, name=f"blstm{block}-rev")(inner)
@@ -81,7 +83,7 @@ class Chiron():
         inner = self.make_bdlstm(inner, 2)
         inner = self.make_bdlstm(inner, 3)
 
-        inner = BatchNormalization()(inner)
+        # inner = BatchNormalization()(inner)
 
         inner = Dense(64, name="dense", activation="relu")(inner)
         inner = Dense(5, name="dense_output")(inner)
