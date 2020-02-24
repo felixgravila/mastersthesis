@@ -169,7 +169,10 @@ class SaveCB(Callback):
         self.testvalid[2].append(int(datetime.datetime.now().timestamp()))
         np.save(os.path.join(self.model_output_dir, self.start_time), np.array(self.testvalid))
         
-        if self.best_dist is None or valloss < self.best_dist or epoch%20==0:
+        if self.best_dist is None or valloss < self.best_dist:
             self.best_dist = valloss
             self.model.save_weights(os.path.join(self.model_output_dir, f'{self.start_time}_e{epoch:05d}_dis{round(valloss*100)}.h5'))
+        elif epoch%20==0: # so it doesn't reset best_dist
+            self.model.save_weights(os.path.join(self.model_output_dir, f'{self.start_time}_e{epoch:05d}_dis{round(valloss*100)}.h5'))
+
     
