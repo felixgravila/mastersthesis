@@ -14,9 +14,9 @@ import matplotlib.pyplot as plt
 
 class Chiron():
     
-    def __init__(self, max_label_length):
+    def __init__(self, max_label_length, input_raw_length=300):
         self.max_label_length = max_label_length
-        self.model, self.testfunc = self.make_model()
+        self.model, self.testfunc = self.make_model(input_raw_length)
         
     def predict(self, input_data):
         pred = self.testfunc(input_data)[0]
@@ -63,14 +63,14 @@ class Chiron():
         lstm_1b = LSTM(200, return_sequences=True, go_backwards=True, name=f"blstm{block}-rev")(inner)
         return Add(name=f"blstm{block}-add")([lstm_1a, lstm_1b])
 
-    def make_model(self):
+    def make_model(self, input_raw_length):
         
         def ctc_lambda_func(args):
             y_pred, labels, input_length, label_length = args
             # y_pred = y_pred[:, 5:, :]
             return kb.ctc_batch_cost(labels, y_pred, input_length, label_length) 
         
-        input_data = Input(name="the_input", shape=(300,1), dtype="float32")
+        input_data = Input(name="the_input", shape=(input_raw_length,1), dtype="float32")
 
         inner = self.make_res_block(input_data, 1)
         inner = self.make_res_block(inner, 2)
