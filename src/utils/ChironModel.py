@@ -19,7 +19,7 @@ class Chiron():
         self.model, self.testfunc = self.make_model()
         
     def predict(self, input_data):
-        pred = self.testfunc(input_data)[0]
+        pred = self.testfunc(input_data)
         cur = [[np.argmax(ts) for ts in p] for p in pred]
         nodup = ["".join(list(map(lambda x: labelBaseMap[x], filter(lambda x: x!=4, reduce(lambda acc, x: acc if acc[-1] == x else acc + [x], c[5:], [4]))))) for c in cur]
         return nodup
