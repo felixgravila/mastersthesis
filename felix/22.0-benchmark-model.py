@@ -3,6 +3,7 @@
 
 import sys
 sys.path.insert(0,'../src/utils')
+sys.path.insert(0,'../src/models')
 
 import datetime
 import os
@@ -13,7 +14,7 @@ from functools import partial, reduce
 from IPython.core.debugger import set_trace
 import matplotlib.pyplot as plt
 from DataPrepper import PrepData
-from ChironModel import Chiron
+from ChironNoBN import Chiron
 import tensorflow as tf
 import mappy as mp
 import editdistance
@@ -30,7 +31,8 @@ filename = get_valid_taiyaki_filename()
 prepData = PrepData(filename, RNN_LEN=300, min_labels=0)
 
 chiron = Chiron(max_label_length=prepData.get_max_label_len())
-chiron.model.load_weights("../trained_models/Chiron_v1_e538_dis478.h5")
+# chiron.model.load_weights("../trained_models/Chiron_v1_e538_dis478.h5")
+chiron.model.load_weights("models/2020-02-24_14:03:25_e00554_dis1162.h5")
 
 print(prepData.get_len())
 prepData.pos = 5000 # start at 5000 to be sure it wasn't trained on
