@@ -12,8 +12,11 @@ set_gpu_growth()
 filename = get_valid_taiyaki_filename()
 
 prepData = PrepData(filename, RNN_LEN=300)
-#chiron = Chiron(prepData.get_max_label_len())
-chiron = Custom_LSTM_Cell_ChironModel(prepData.get_max_label_len())
+chiron = Chiron(prepData.get_max_label_len())\
+            .with_batch_normalization()\
+            .build()
+
+#chiron = Custom_LSTM_Cell_ChironModel(prepData.get_max_label_len())
 
 save_cb = SaveCB(chiron, prepData)\
     .withCheckpoints("models")\
