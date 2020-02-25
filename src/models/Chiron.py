@@ -18,14 +18,7 @@ class Chiron():
     def __init__(self, max_label_length, batch_normalization = False):
         self.max_label_length = max_label_length
         self.batch_normalization = batch_normalization
-        
-    def with_batch_normalization(self):
-        self.batch_normalization = True
-        return self
-
-    def build(self):
         self.model, self.testfunc = self.make_model()
-        return self
 
     def predict(self, input_data):
         pred = self.testfunc(input_data)
