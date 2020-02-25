@@ -29,7 +29,8 @@ class Chiron():
         
     def make_res_block(self, upper, block):
 
-        inner = BatchNormalization()(upper)
+        # inner = BatchNormalization()(upper)
+        inner = upper
 
         if block==1:
             res = Conv1D(256, 1,
@@ -57,7 +58,8 @@ class Chiron():
         return Activation('relu', name=f"res{block}-relu")(added)
 
     def make_bdlstm(self, upper, block):
-        inner = BatchNormalization()(upper)
+        # inner = BatchNormalization()(upper)
+        inner = upper
 
         lstm_1a = LSTM(200, return_sequences=True, name=f"blstm{block}-fwd")(inner)
         lstm_1b = LSTM(200, return_sequences=True, go_backwards=True, name=f"blstm{block}-rev")(inner)
@@ -81,7 +83,7 @@ class Chiron():
         inner = self.make_bdlstm(inner, 2)
         inner = self.make_bdlstm(inner, 3)
 
-        inner = BatchNormalization()(inner)
+        # inner = BatchNormalization()(inner)
 
         inner = Dense(64, name="dense", activation="relu")(inner)
         inner = Dense(5, name="dense_output")(inner)
@@ -167,7 +169,10 @@ class SaveCB(Callback):
         self.testvalid[2].append(int(datetime.datetime.now().timestamp()))
         np.save(os.path.join(self.model_output_dir, self.start_time), np.array(self.testvalid))
         
-        if self.best_dist is None or valloss < self.best_dist or epoch%20==0:
+        if self.best_dist is None or valloss < self.best_dist:
             self.best_dist = valloss
             self.model.save_weights(os.path.join(self.model_output_dir, f'{self.start_time}_e{epoch:05d}_dis{round(valloss*100)}.h5'))
+        elif epoch%20==0: # so it doesn't reset best_dist
+            self.model.save_weights(os.path.join(self.model_output_dir, f'{self.start_time}_e{epoch:05d}_dis{round(valloss*100)}.h5'))
+
     
