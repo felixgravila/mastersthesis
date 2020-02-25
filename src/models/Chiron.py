@@ -15,12 +15,13 @@ from utils.Other import labelBaseMap
 
 class Chiron():
     
-    def __init__(self, max_label_length):
+    def __init__(self, max_label_length, batch_normalization = False):
         self.max_label_length = max_label_length
+        self.batch_normalization = batch_normalization
         self.model, self.testfunc = self.make_model()
-        
+
     def predict(self, input_data):
-        pred = self.testfunc(input_data)[0]
+        pred = self.testfunc(input_data)
         cur = [[np.argmax(ts) for ts in p] for p in pred]
         nodup = ["".join(list(map(lambda x: labelBaseMap[x], filter(lambda x: x!=4, reduce(lambda acc, x: acc if acc[-1] == x else acc + [x], c[5:], [4]))))) for c in cur]
         return nodup
@@ -30,7 +31,9 @@ class Chiron():
         
     def make_res_block(self, upper, block):
 
-        inner = BatchNormalization()(upper)
+        inner = upper
+        if(self.batch_normalization):
+            inner = BatchNormalization()(upper)
 
         if block==1:
             res = Conv1D(256, 1,
@@ -58,7 +61,10 @@ class Chiron():
         return Activation('relu', name=f"res{block}-relu")(added)
 
     def make_bdlstm(self, upper, block):
-        inner = BatchNormalization()(upper)
+        
+        inner = upper
+        if(self.batch_normalization):
+            inner = BatchNormalization()(upper)
 
         lstm_1a = LSTM(200, return_sequences=True, name=f"blstm{block}-fwd")(inner)
         lstm_1b = LSTM(200, return_sequences=True, go_backwards=True, name=f"blstm{block}-rev")(inner)
@@ -82,8 +88,9 @@ class Chiron():
         inner = self.make_bdlstm(inner, 2)
         inner = self.make_bdlstm(inner, 3)
 
-        inner = BatchNormalization()(inner)
-
+        if(self.batch_normalization):
+            inner = BatchNormalization()(inner)
+        
         inner = Dense(64, name="dense", activation="relu")(inner)
         inner = Dense(5, name="dense_output")(inner)
 
