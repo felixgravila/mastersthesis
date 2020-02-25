@@ -6,17 +6,18 @@ from tensorflow.keras.layers import Input, Activation, Add, Lambda, Dense, MaxPo
 from tensorflow.keras.backend import ctc_batch_cost
 from tensorflow.keras.callbacks import Callback
 from functools import reduce
-from Utils import labelBaseMap
 import editdistance
 import datetime
 import os
 import matplotlib.pyplot as plt
 
+from utils.Other import labelBaseMap
+
 class Chiron():
     
-    def __init__(self, max_label_length, input_raw_length=300):
+    def __init__(self, max_label_length):
         self.max_label_length = max_label_length
-        self.model, self.testfunc = self.make_model(input_raw_length)
+        self.model, self.testfunc = self.make_model()
         
     def predict(self, input_data):
         pred = self.testfunc(input_data)[0]
@@ -63,14 +64,14 @@ class Chiron():
         lstm_1b = LSTM(200, return_sequences=True, go_backwards=True, name=f"blstm{block}-rev")(inner)
         return Add(name=f"blstm{block}-add")([lstm_1a, lstm_1b])
 
-    def make_model(self, input_raw_length):
+    def make_model(self):
         
         def ctc_lambda_func(args):
             y_pred, labels, input_length, label_length = args
             # y_pred = y_pred[:, 5:, :]
             return kb.ctc_batch_cost(labels, y_pred, input_length, label_length) 
         
-        input_data = Input(name="the_input", shape=(input_raw_length,1), dtype="float32")
+        input_data = Input(name="the_input", shape=(300,1), dtype="float32")
 
         inner = self.make_res_block(input_data, 1)
         inner = self.make_res_block(inner, 2)
@@ -114,60 +115,4 @@ class Chiron():
     
     def fit(self, *args, **kwargs):
         self.model.fit(*args, **kwargs)
-        
-    
-
-    
-    
-class SaveCB(Callback):
-    def __init__(self, model_output_dir, image_output_dir, chiron, prepper):
-        self.model_output_dir=model_output_dir
-        self.image_output_dir=image_output_dir
-        self.chiron = chiron
-        self.prepper = prepper
-        self.best_dist = None
-        self.Xforimg = None
-        self.testvalid = [[],[],[]]
-        self.start_time = datetime.datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
-
-        if not os.path.exists(self.model_output_dir):
-            os.makedirs(self.model_output_dir)
-        if not os.path.exists(self.image_output_dir):
-            os.makedirs(self.image_output_dir)
-        
-    def save_anim_pic(self, epoch):
-        fig, ax = plt.subplots( nrows=1, ncols=1, figsize=(30,10))
-        ax.set_ylim(top=1)
-        ax.set_ylim(bottom=0)
-        prediction = self.chiron.predict_raw(self.Xforimg)[0]
-        transposed = list(map(list, zip(*prediction)))
-        for i in range(len(transposed)):
-            ax.plot(transposed[i], label=labelBaseMap[i])
-        ax.plot(self.Xforimg[0], "k", label="raw")
-        ax.legend()
-        fig.savefig(os.path.join(self.image_output_dir, f'{self.start_time}-{epoch:05d}.png'))
-        plt.close(fig)
-    
-
-    def on_epoch_end(self, epoch, logs={}):
-        test_X, test_y = next(self.prepper.test_gen())
-        train_X, train_y = self.prepper.last_train_gen_data[0]['the_input'], self.prepper.last_train_gen_data[0]['unpadded_labels']
-        if self.Xforimg is None:
-            self.Xforimg = test_X[0:1]
-        self.save_anim_pic(epoch)
-
-        totloss, n, _ = self.chiron.calculate_loss(train_X, train_y)
-        testloss = totloss/n
-        print(f"\nAverage test edit distance is: {testloss}")
-        totloss, n, _ = self.chiron.calculate_loss(test_X, test_y)
-        valloss = totloss/n
-        print(f"\nAverage validation edit distance is: {valloss}")
-        self.testvalid[0].append(testloss)
-        self.testvalid[1].append(valloss)
-        self.testvalid[2].append(int(datetime.datetime.now().timestamp()))
-        np.save(os.path.join(self.model_output_dir, self.start_time), np.array(self.testvalid))
-        
-        if self.best_dist is None or valloss < self.best_dist or epoch%20==0:
-            self.best_dist = valloss
-            self.model.save_weights(os.path.join(self.model_output_dir, f'{self.start_time}_e{epoch:05d}_dis{round(valloss*100)}.h5'))
     
