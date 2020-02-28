@@ -15,10 +15,14 @@ from utils.Other import labelBaseMap
 
 class Chiron():
     
-    def __init__(self, max_label_length, batch_normalization = False):
-        self.max_label_length = max_label_length
+    def __init__(self, input_length, label_length, batch_normalization = False):
+        self.input_length = input_length
+        self.label_length = label_length
         self.batch_normalization = batch_normalization
         self.model, self.testfunc = self.make_model()
+
+    def get_model(self):
+        return self.model
 
     def predict(self, input_data):
         pred = self.testfunc(input_data)
@@ -77,7 +81,7 @@ class Chiron():
             # y_pred = y_pred[:, 5:, :]
             return kb.ctc_batch_cost(labels, y_pred, input_length, label_length) 
         
-        input_data = Input(name="the_input", shape=(300,1), dtype="float32")
+        input_data = Input(name="the_input", shape=(self.input_length,1), dtype="float32")
 
         inner = self.make_res_block(input_data, 1)
         inner = self.make_res_block(inner, 2)
@@ -96,7 +100,7 @@ class Chiron():
 
         y_pred = Activation("softmax", name="softmax")(inner)
 
-        labels = Input(name='the_labels', shape=(self.max_label_length), dtype='float32')
+        labels = Input(name='the_labels', shape=(self.label_length), dtype='float32')
         input_length = Input(name='input_length', shape=(1), dtype='int64')
         label_length = Input(name='label_length', shape=(1), dtype='int64')
 

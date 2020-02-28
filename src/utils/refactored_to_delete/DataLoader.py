@@ -20,6 +20,10 @@ class DataLoader():
             RTS = deque(read['Ref_to_signal'][()])
             REF = deque(read['Reference'][()])
         return DAC, RTS, REF
+    
+    def load_read_label_length(self, read_id):
+        with h5py.File(self.filename, 'r') as h5file:
+            return len(h5file['Reads'][read_id]['Reference'][()])
 
     def load_read_ids(self):
         with h5py.File(self.filename, 'r') as h5file:
