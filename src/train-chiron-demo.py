@@ -36,7 +36,6 @@ save_cb = SaveCB(chiron, data_preper)\
     .withImageOutput("images")
 
 for idx in range(len(generator)):
-    #print(f"Batch {idx}/{len(generator)}")
     generator.print_status()
     try:
         examples = next(generator.get_batch(window_size=300, window_stride=300, ignore_boundary_size=5))
