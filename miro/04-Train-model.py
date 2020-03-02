@@ -1,10 +1,11 @@
 import sys
 sys.path.insert(0,'./src')
 
+import math
+
 from models.Chiron import Chiron
 from models.ChironBuilder import ChironBuilder
 
-from models.Custom_LSTM_Cell_ChironModel import Custom_LSTM_Cell_ChironModel
 from models.Callback import SaveCB
 from utils.DataPrepper import PrepData
 from utils.Other import labelBaseMap, get_valid_taiyaki_filename, set_gpu_growth
@@ -15,15 +16,12 @@ filename = get_valid_taiyaki_filename()
 
 prepData = PrepData(filename, RNN_LEN=300)
 
-builder = ChironBuilder(prepData.get_max_label_len())\
-            .with_batch_normalization()
+input_length = 300
+label_length = 50
 
-chiron = ChironBuilder(prepData.get_max_label_len())\
+chiron = ChironBuilder(input_length, label_length)\
             .with_batch_normalization()\
             .build()
-
-
-#chiron = Custom_LSTM_Cell_ChironModel(prepData.get_max_label_len())
 
 save_cb = SaveCB(chiron, prepData)\
     .withCheckpoints("models")\

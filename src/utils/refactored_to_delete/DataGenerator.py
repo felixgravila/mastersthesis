@@ -1,62 +1,81 @@
 import math
 import numpy as np
-
 from collections import deque
-from tensorflow.keras.utils import Sequence
 
 from utils.refactored_to_delete.DataLoader import DataLoader
-from utils.Other import get_valid_taiyaki_filename
+from utils.refactored_to_delete.DataPrepper import DataPrepper
 
-class DataGenerator(Sequence):
-
-    def __init__(self, read_ids, batch_size, max_label_len = math.ceil(300*0.2), input_length = 290):
-        self._batch_size = batch_size
-        self._read_ids = read_ids
-
-        # TODO: get these in here
-        self.max_label_len = max_label_len
-        self.input_length = input_length
-
+class DataGenerator():
+    def __init__(self, read_ids, batch_size):
+        self.n = 0
+        self.read_ids = read_ids
+        self.batch_size = batch_size
+        #self.batches_per_epoch = batches_per_epoch
 
         self._loader = DataLoader()
+        
+        # TODO: get these in here
+        self.label_length = 50
+        self.input_length = 300
     
     def __len__(self):
-        return self._get_no_batches()
+        return len(self.read_ids)
 
-    def _get_no_batches(self):
-        no_read_ids = len(self._read_ids)
-        batch_size = float(self._batch_size)
-        no_batches = math.ceil(no_read_ids/batch_size)
-        return int(no_batches)
+    def batch(self):
+        while self.n < len(self):
+            signal_windows,label_windows = self._get_windows_in_batch()
+            signal_windows,label_windows = self._suffle_windows_in_batch(signal_windows,label_windows)
+      
+            max_label_length = max([len(r) for r in label_windows])
+            if(max_label_length > self.label_length):
+                label_windows = [r for r in label_windows if len(r) <= self.label_length]
 
-    def __getitem__(self, batch_index):
-        x = []
-        y = []
-        batch_ids = self._read_ids[batch_index * self._batch_size:(batch_index + 1) * self._batch_size]
+            x = self._get_x(signal_windows, label_windows)
+            y = self._get_dummy_y(signal_windows)
+            yield (x,y)
+    
+    def _get_x(self, signal_windows, label_windows):
 
-        for idx in batch_ids:
-            x_read, y_read = self.process_read(idx, window_size=300, window_stride=50)
-            x.extend(x_read)
-            y.extend(y_read)
+        return {
+            'the_input': signal_windows,
+            'the_labels': self.get_y(label_windows),
+            'input_length': self._get_x_len(signal_windows),
+            'label_length': self._get_y_lens(label_windows),
+            'unpadded_labels' : label_windows
+        }
 
-        x = np.array(x)
-        y = np.array(y)
+    def get_y(self, label_windows):
+        return np.array([r + [5]*(self.label_length-len(r)) for r in label_windows], dtype='float32')
 
-        train_y_padded = np.array([r + [5]*(self.max_label_len-len(r)) for r in y], dtype='float32')
+    def _get_x_len(self, signal_windows):
+        return np.array([[self.input_length] for _ in signal_windows], dtype="float32")
 
-        train_X_lens = np.array([[self.input_length] for _ in x], dtype="float32")
-        train_y_lens = np.array([[len(lab)] for lab in y], dtype="float32")
+    def _get_y_lens(self, label_windows):
+        return np.array([[len(lab)] for lab in label_windows], dtype="float32")
 
-        x_res = {'the_input': x,
-                'the_labels': train_y_padded,
-                'input_length': train_X_lens,
-                'label_length': train_y_lens,
-                'unpadded_labels' : y
-            }
-        y_res = {'ctc': np.zeros([len(x)])}
-        return (x_res, y_res)
+    def _get_dummy_y(self, signal_windows):
+        return {'ctc': np.zeros([len(signal_windows)])}
 
-    def process_read(self, read_id, window_size, window_stride):
+    def _get_windows_in_batch(self):
+        x,y = [], []
+        while len(x) < self.batch_size:
+            read_id = self.read_ids[self.n]
+            self.n += 1
+            read_x, read_y = self._process_read(read_id, window_size=300, window_stride=300)
+            x.extend(read_x)
+            y.extend(read_y)
+        x = np.resize(np.array(x), (self.batch_size, self.input_length, 1))
+        y = np.resize(np.array(y), (self.batch_size))
+        return x,y
+
+    def _suffle_windows_in_batch(self, x, y):
+        c = np.c_[x.reshape(len(x), -1), y.reshape(len(y), -1)]
+        np.random.shuffle(c)
+        x_shuffled = c[:, :x.size//len(x)].reshape(x.shape)
+        y_shuffled = c[:, x.size//len(x):].reshape(y.shape)
+        return x_shuffled, y_shuffled
+
+    def _process_read(self, read_id, window_size, window_stride):
         x_read = []
         y_read = []       
         DAC, RTS, REF = self._loader.load_read(read_id)
@@ -85,4 +104,4 @@ class DataGenerator(Sequence):
             x_read.append(list(curdacs))
             y_read.append(list(labels))
             
-        return (x_read,y_read)
+        return (x_read,y_read)   

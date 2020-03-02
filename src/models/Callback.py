@@ -53,24 +53,25 @@ class SaveCB(Callback):
             self.model.save_weights(os.path.join(self.model_output_dir, f'{self.start_time}_e{epoch:05d}_dis{round(valloss*100)}.h5'))
 
     def on_epoch_end(self, epoch, logs={}):
-        test_X, test_y = next(self.prepper.test_gen())
-        train_X, train_y = self.prepper.last_train_gen_data[0]['the_input'], self.prepper.last_train_gen_data[0]['unpadded_labels']
-        if self.Xforimg is None:
-            self.Xforimg = test_X[0:1]
+        print(f"End of epoch {epoch}")
+        # test_X, test_y = next(self.prepper.test_gen())
+        # train_X, train_y = self.prepper.last_train_gen_data[0]['the_input'], self.prepper.last_train_gen_data[0]['unpadded_labels']
+        # if self.Xforimg is None:
+        #     self.Xforimg = test_X[0:1]
         
-        totloss, n, _ = self.chiron.calculate_loss(train_X, train_y)
-        testloss = totloss/n
-        print(f"\nAverage test edit distance is: {testloss}")
-        totloss, n, _ = self.chiron.calculate_loss(test_X, test_y)
-        valloss = totloss/n
-        print(f"\nAverage validation edit distance is: {valloss}")
-        self.testvalid[0].append(testloss)
-        self.testvalid[1].append(valloss)
-        self.testvalid[2].append(int(datetime.datetime.now().timestamp()))
+        # totloss, n, _ = self.chiron.calculate_loss(train_X, train_y)
+        # testloss = totloss/n
+        # print(f"\nAverage test edit distance is: {testloss}")
+        # totloss, n, _ = self.chiron.calculate_loss(test_X, test_y)
+        # valloss = totloss/n
+        # print(f"\nAverage validation edit distance is: {valloss}")
+        # self.testvalid[0].append(testloss)
+        # self.testvalid[1].append(valloss)
+        # self.testvalid[2].append(int(datetime.datetime.now().timestamp()))
         
-        if self.save_image:
-            self.save_anim_pic(epoch)
+        # if self.save_image:
+        #     self.save_anim_pic(epoch)
 
-        if(self.save_model):
-            self.save_model(epoch, valloss)
+        # if(self.save_model):
+        #     self.save_model(epoch, valloss)
     
