@@ -1,23 +1,28 @@
 import numpy as np
 
+from utils.DataBuffer import DataBuffer
+
 class DataGenerator():
     
-    def __init__(self, read_ids, buffer, batch_size=500, input_length=300, label_length=50):
+    def __init__(self, read_ids, batch_size=500, input_length=300, label_length=50, buffer_size=5):
 
-        self.pos = 0
         self._read_ids = read_ids
         self.batch_size = batch_size
         self.input_length = input_length
         self.label_length = label_length
 
-        self._buffer = buffer
+        self._buffer = DataBuffer(read_ids, buffer_size)
+        self._batch_count = 0
           
     def __len__(self):
-        return len(self._read_ids)     
+        return len(self._read_ids)  
+
+    def print_status(self):
+        print(f"Batch number: {self._batch_count}. Read id index: {self._buffer.get_read_id_idx()} / {len(self)}")   
 
     def get_batch(self, window_size, window_stride, ignore_boundary_size=5):
-        while self.pos < len(self):
-
+        while True:
+            self._batch_count += 1
             signal_windows, label_windows = self._buffer.get_windows_in_batch(
                 self.batch_size, 
                 window_size, 

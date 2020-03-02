@@ -1,13 +1,15 @@
 import numpy as np
 from collections import deque
 
+from utils.DataLoader import DataLoader
+
 class DataBuffer():
 
-    def __init__(self, read_ids, loader, size=5):
+    def __init__(self, read_ids, size=5):
         
         self._read_ids = read_ids
         self._position = 0
-        self._loader = loader
+        self._loader = DataLoader()
 
         self._size = size 
         self._signal_windows = []
@@ -23,6 +25,9 @@ class DataBuffer():
         
         self._drop(batch_size)
         return x,y
+
+    def get_read_id_idx(self):
+        return self._position
 
     def _get_buffer_length(self):
         return len(self._label_windows)

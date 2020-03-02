@@ -1,17 +1,17 @@
 # %%
 
-import sys
+#import sys
 import math
 
-sys.path.insert(0,'./src')
+#sys.path.insert(0,'./src')
 
 from models.Chiron import Chiron
 from models.ChironBuilder import ChironBuilder
 from models.Callback import SaveCB
 
-from utils.refactored2.DataGenerator import DataGenerator
-from utils.refactored2.DataPrepper import DataPrepper
-from utils.refactored2.DataBuffer import DataBuffer
+from utils.DataGenerator import DataGenerator
+from utils.DataPrepper import DataPrepper
+from utils.DataBuffer import DataBuffer
 
 from utils.Other import labelBaseMap, get_valid_taiyaki_filename, set_gpu_growth
 
@@ -20,11 +20,12 @@ set_gpu_growth()
 input_length = 300
 label_length = 50
 batch_size = 500
+buffer_size = 5
 
 data_preper = DataPrepper(validation_split=0.1, test_split=0.1)
 
 read_ids = data_preper.get_train_read_ids()
-generator = DataGenerator(read_ids, batch_size=batch_size, input_length=input_length, label_length=label_length, buffer_size=5)
+generator = DataGenerator(read_ids, batch_size=batch_size, input_length=input_length, label_length=label_length, buffer_size=buffer_size)
 
 chiron = ChironBuilder(input_length, label_length)\
             .with_batch_normalization()\
