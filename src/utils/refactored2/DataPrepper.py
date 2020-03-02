@@ -6,8 +6,8 @@ from utils.refactored_to_delete.DataLoader import DataLoader
 
 class DataPrepper():
     
-    def __init__(self, filename=None, validation_split=0.1, test_split=0.1):    
-        self._loader = DataLoader(filename)
+    def __init__(self, data_loader, validation_split=0.1, test_split=0.1):    
+        self._loader = data_loader
         self._validation_split = validation_split
         self._test_split = test_split
         self._train_split = self._get_train_split()

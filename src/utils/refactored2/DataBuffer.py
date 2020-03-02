@@ -1,27 +1,21 @@
 import numpy as np
-
 from collections import deque
-from utils.refactored_to_delete.DataLoader import DataLoader
 
 class DataBuffer():
 
-    def __init__(self, read_ids, input_length, label_length, size=5):
+    def __init__(self, read_ids, loader, size=5):
         
         self._read_ids = read_ids
         self._position = 0
+        self._loader = loader
 
         self._size = size 
         self._signal_windows = []
         self._label_windows = []
-
-        self._input_length = input_length
-        self._label_length = label_length
-
-        self._loader = DataLoader()
         
-    def get_windows_in_batch(self, batch_size):
+    def get_windows_in_batch(self, batch_size, window_size, window_stride, min_labels_per_window, max_labels_per_window):
         while (self._get_buffer_length() < batch_size):
-            self._fetch()
+            self._fetch(window_size, window_stride, min_labels_per_window, max_labels_per_window)
             self._shuffle()
 
         x = np.array(self._signal_windows[:batch_size])
@@ -37,14 +31,14 @@ class DataBuffer():
         self._signal_windows = self._signal_windows[amount+1:]
         self._label_windows = self._label_windows[amount+1:]
 
-    def _fetch(self):
+    def _fetch(self, window_size, window_stride, min_labels_per_window, max_labels_per_window):
         for i in range(self._size):
             read_id_idx = self._position + i
             read_id = self._read_ids[read_id_idx]
-            read_x, read_y = self._fetch_read(read_id, window_size=300, window_stride=300) #TODO: parameterize
+            read_x, read_y = self._fetch_read(read_id, window_size, window_stride) 
     
             for j,label in enumerate(read_y):
-                if(self._is_label_sequence_valid(label)):
+                if(len(label) > min_labels_per_window and len(label) <= max_labels_per_window):
                     self._signal_windows.append(read_x[j])
                     self._label_windows.append(read_y[j])
         
@@ -61,9 +55,6 @@ class DataBuffer():
         
         self._signal_windows = x_shuffled.tolist()
         self._label_windows = y_shuffled.tolist()
-
-    def _is_label_sequence_valid(self, label):
-        return len(label) > 0 and len(label) <= self._label_length
 
     def _fetch_read(self, read_id, window_size, window_stride):
         x_read = []

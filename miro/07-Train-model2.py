@@ -9,6 +9,8 @@ from models.Callback import SaveCB
 
 from utils.refactored2.DataGenerator import DataGenerator
 from utils.refactored2.DataPrepper import DataPrepper
+from utils.refactored_to_delete.DataLoader import DataLoader
+from utils.refactored2.DataBuffer import DataBuffer
 
 from utils.Other import labelBaseMap, get_valid_taiyaki_filename, set_gpu_growth
 
@@ -16,11 +18,14 @@ set_gpu_growth()
 
 input_length = 300
 label_length = 50
+batch_size = 500
 
-data_preper = DataPrepper()
+data_loader = DataLoader()
+data_preper = DataPrepper(data_loader, validation_split=0.1, test_split=0.1)
 
 read_ids = data_preper.get_train_read_ids()
-generator = DataGenerator(read_ids, input_length=input_length, label_length=label_length)
+buffer = DataBuffer(read_ids, data_loader, size=5)
+generator = DataGenerator(read_ids, buffer, batch_size=batch_size, input_length=input_length, label_length=label_length)
 
 chiron = ChironBuilder(input_length, label_length)\
             .with_batch_normalization()\
@@ -31,9 +36,11 @@ save_cb = SaveCB(chiron, data_preper)\
     .withImageOutput("images")
 
 for idx in range(len(generator)):
-    print(f"Epoch {idx}/{len(generator)}")
+    print(f"Batch {idx}/{len(generator)}")
     try:
-        a = next(generator.get_batch())
-        chiron.fit(a[0], a[1], initial_epoch=idx, epochs=idx+1, callbacks=[save_cb])
+        examples = next(generator.get_batch(window_size=300, window_stride=300, ignore_boundary_size=5))
+        x = examples[0]
+        y = examples[1]
+        chiron.fit(x, y, initial_epoch=idx, epochs=idx+1, callbacks=[save_cb])
     except Exception as e:
         print(f"Error {e}, continuing...")
