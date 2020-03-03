@@ -129,3 +129,5 @@ class Chiron():
     def fit(self, *args, **kwargs):
         self.model.fit(*args, **kwargs)
     
+    def fit_generator(self, *args, **kwargs):
+        self.model.fit_generator(*args, **kwargs)
