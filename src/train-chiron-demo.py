@@ -1,6 +1,6 @@
 # %%
 
-#import sys
+import sys
 import math
 
 #sys.path.insert(0,'./src')
@@ -19,28 +19,34 @@ set_gpu_growth()
 
 input_length = 300
 label_length = 50
-batch_size = 500
 buffer_size = 5
+rnn_padding = 5
 
 data_preper = DataPrepper(validation_split=0.1, test_split=0.1)
 
 read_ids = data_preper.get_train_read_ids()
-generator = DataGenerator(read_ids, batch_size=batch_size, input_length=input_length, label_length=label_length, buffer_size=buffer_size)
+generator = DataGenerator(read_ids, batch_size=1000, input_length=input_length, stride=30, label_length=label_length, reads_count=5, rnn_pad_size=rnn_padding)
+
+val_read_ids = data_preper.get_validation_read_ids()
+val_generator = DataGenerator(val_read_ids, batch_size=500, input_length=input_length, stride=150, label_length=label_length, reads_count=5, rnn_pad_size=rnn_padding)
+
+#%%
 
 chiron = ChironBuilder(input_length, label_length)\
             .with_batch_normalization()\
+            .with_rnn_padding(rnn_padding)\
             .build()
 
-save_cb = SaveCB(chiron, data_preper)\
-    .withCheckpoints("models")\
-    .withImageOutput("images")
+save_cb = SaveCB(chiron, val_generator)\
+    .withCheckpoints("model_output")\
+    .withImageOutput("image_output")
 
 for idx in range(len(generator)):
     generator.print_status()
-    try:
-        examples = next(generator.get_batch(window_size=300, window_stride=300, ignore_boundary_size=5))
-        x = examples[0]
-        y = examples[1]
-        chiron.fit(x, y, initial_epoch=idx, epochs=idx+1, callbacks=[save_cb])
-    except Exception as e:
-        print(f"Error {e}, continuing...")
+    # try:
+    X,y = next(generator.get_batch())
+    chiron.fit(X, y, initial_epoch=idx, epochs=idx+1, callbacks=[save_cb])
+    # except Exception as e:
+    #     print(f"Error {e}, continuing...")
+
+# %%

@@ -15,9 +15,10 @@ from utils.Other import labelBaseMap
 
 class Chiron():
     
-    def __init__(self, input_length, label_length, batch_normalization = False):
+    def __init__(self, input_length, label_length, rnn_padding, batch_normalization):
         self.input_length = input_length
         self.label_length = label_length
+        self.rnn_padding = rnn_padding
         self.batch_normalization = batch_normalization
         self.model, self.testfunc = self.make_model()
 
@@ -78,7 +79,8 @@ class Chiron():
         
         def ctc_lambda_func(args):
             y_pred, labels, input_length, label_length = args
-            # y_pred = y_pred[:, 5:, :]
+            if self.rnn_padding > 0:
+                y_pred = y_pred[:, self.rnn_padding:-self.rnn_padding, :]
             return kb.ctc_batch_cost(labels, y_pred, input_length, label_length) 
         
         input_data = Input(name="the_input", shape=(self.input_length,1), dtype="float32")
