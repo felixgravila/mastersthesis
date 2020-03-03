@@ -1,10 +1,9 @@
 import numpy as np
 import tensorflow as tf
 import tensorflow.keras.backend as kb
-from tensorflow.keras.models import Sequential, Model
-from tensorflow.keras.layers import Input, Activation, Add, Lambda, Dense, MaxPooling1D, Conv1D, LSTM, GRU, BatchNormalization
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Input, Activation, Add, Lambda, Dense, MaxPooling1D, Conv1D, LSTM, BatchNormalization
 from tensorflow.keras.backend import ctc_batch_cost
-from tensorflow.keras.callbacks import Callback
 from functools import reduce
 import editdistance
 import datetime
@@ -15,14 +14,19 @@ from utils.Other import labelBaseMap
 
 class Chiron():
     
-    def __init__(self, input_length, rnn_padding, batch_normalization):
+    def __init__(self, input_length, rnn_padding, batch_normalization, maxpool_layer, model_name):
         self.input_length = input_length
         self.rnn_padding = rnn_padding
         self.batch_normalization = batch_normalization
+        self.maxpool_layer = maxpool_layer
+        self.model_name=model_name
         self.model, self.testfunc = self.make_model()
 
     def get_model(self):
         return self.model
+
+    def get_model_name(self):
+        return self.model_name
 
     def predict(self, input_data):
         pred = self.testfunc(input_data)
@@ -80,15 +84,17 @@ class Chiron():
             y_pred, labels, input_length, label_length = args
             if self.rnn_padding > 0:
                 y_pred = y_pred[:, self.rnn_padding:-self.rnn_padding, :]
-            return kb.ctc_batch_cost(labels, y_pred, input_length, label_length) 
+            return ctc_batch_cost(labels, y_pred, input_length, label_length) 
         
         input_data = Input(name="the_input", shape=(self.input_length,1), dtype="float32")
+        inner = input_data
 
-        inner = self.make_res_block(input_data, 1)
-        inner = self.make_res_block(inner, 2)
-        inner = self.make_res_block(inner, 3)
-        inner = self.make_res_block(inner, 4)
-        inner = self.make_res_block(inner, 5)
+        for res_idx in range(1,6):
+            inner = self.make_res_block(input_data, res_idx)
+            if self.maxpool_layer == res_idx:
+                inner = MaxPooling1D(pool_size=2, name="max_pool_1D")(inner)
+
+
         inner = self.make_bdlstm(inner, 1)
         inner = self.make_bdlstm(inner, 2)
         inner = self.make_bdlstm(inner, 3)
