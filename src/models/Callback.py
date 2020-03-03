@@ -34,12 +34,15 @@ class SaveCB(Callback):
 
     def save_image(self, epoch):
         fig, ax = plt.subplots( nrows=1, ncols=1, figsize=(30,10))
-        ax.set_ylim(top=1)
-        ax.set_ylim(bottom=0)
+        xmax = max(self.Xforimg[0])[0]
+        xmin = min(self.Xforimg[0])[0]
+        ax.set_ylim(top=xmax)
+        ax.set_ylim(bottom=xmin)
         prediction = self.chiron.predict_raw(self.Xforimg)[0]
         transposed = list(map(list, zip(*prediction)))
         for i in range(len(transposed)):
-            ax.plot(transposed[i], label=labelBaseMap[i])
+            ti = [t*(xmax-xmin)+xmin for t in transposed[i]]
+            ax.plot(ti, label=labelBaseMap[i])
         ax.plot(self.Xforimg[0], "k", label="raw")
         ax.legend()
         fig.savefig(os.path.join(self.image_output_dir, f'{self.start_time}-{epoch:05d}.png'))
