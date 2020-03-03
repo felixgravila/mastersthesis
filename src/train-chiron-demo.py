@@ -1,5 +1,3 @@
-# %%
-
 import sys
 import math
 
@@ -28,21 +26,18 @@ generator = DataGenerator(read_ids, batch_size=10000, input_length=input_length,
 val_read_ids = data_preper.get_validation_read_ids()
 val_generator = DataGenerator(val_read_ids, batch_size=500, input_length=input_length, stride=150, reads_count=5, rnn_pad_size=rnn_padding)
 
-#%%
-
 chiron = ChironBuilder(input_length)\
             .with_batch_normalization()\
             .with_rnn_padding(rnn_padding)\
+            .with_maxpool(3)\
             .build()
 
 save_cb = SaveCB(chiron, val_generator)\
     .withCheckpoints("model_output")\
     .withImageOutput("image_output")
 
-epoch = 1
+epoch = 0
 while True:    
     generator.print_status()
     X,y = next(generator.get_batch())
     chiron.fit(X, y, initial_epoch=epoch, epochs=epoch+1, callbacks=[save_cb])
-
-# %%
