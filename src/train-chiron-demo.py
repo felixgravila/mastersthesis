@@ -37,7 +37,10 @@ save_cb = SaveCB(chiron, val_generator)\
     .withImageOutput("image_output")
 
 epoch = 0
-while True:    
+while True:
     generator.print_status()
-    X,y = next(generator.get_batch())
-    chiron.fit(X, y, initial_epoch=epoch, epochs=epoch+1, callbacks=[save_cb])
+    try:
+        X,y = next(generator.get_batch())
+        chiron.fit(X, y, initial_epoch=epoch, epochs=epoch+1, callbacks=[save_cb])
+    except Exception as e:
+        print(e)
