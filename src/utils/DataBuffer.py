@@ -17,9 +17,7 @@ class DataBuffer():
         
     def get_windows_in_batch(self, batch_size, window_size, window_stride, min_labels_per_window):
         while (len(self._label_windows) < batch_size):
-            print(f"Fetching because length is {len(self._label_windows)}, batch size is {batch_size}")
             self._fetch(window_size, window_stride, min_labels_per_window)
-            print(f"After fetching, length is now {len(self._label_windows)}")
             self._shuffle()
 
         x = np.array(self._signal_windows[:batch_size])
