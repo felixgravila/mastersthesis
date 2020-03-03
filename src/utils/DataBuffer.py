@@ -11,13 +11,15 @@ class DataBuffer():
         self._position = 0
         self._loader = DataLoader()
 
-        self._size = size 
+        self._size = size
         self._signal_windows = []
         self._label_windows = []
         
-    def get_windows_in_batch(self, batch_size, window_size, window_stride, min_labels_per_window, max_labels_per_window):
-        while (self._get_buffer_length() < batch_size):
-            self._fetch(window_size, window_stride, min_labels_per_window, max_labels_per_window)
+    def get_windows_in_batch(self, batch_size, window_size, window_stride, min_labels_per_window):
+        while (len(self._label_windows) < batch_size):
+            print(f"Fetching because length is {len(self._label_windows)}, batch size is {batch_size}")
+            self._fetch(window_size, window_stride, min_labels_per_window)
+            print(f"After fetching, length is now {len(self._label_windows)}")
             self._shuffle()
 
         x = np.array(self._signal_windows[:batch_size])
@@ -29,23 +31,18 @@ class DataBuffer():
     def get_read_id_idx(self):
         return self._position
 
-    def _get_buffer_length(self):
-        return len(self._label_windows)
-
     def _drop(self, amount):
         self._signal_windows = self._signal_windows[amount+1:]
         self._label_windows = self._label_windows[amount+1:]
 
-    def _fetch(self, window_size, window_stride, min_labels_per_window, max_labels_per_window):
+    def _fetch(self, window_size, window_stride, min_labels_per_window):
         for i in range(self._size):
             read_id_idx = self._position + i
             read_id = self._read_ids[read_id_idx]
-            read_x, read_y = self._fetch_read(read_id, window_size, window_stride) 
-    
-            for j,label in enumerate(read_y):
-                if(len(label) > min_labels_per_window and len(label) <= max_labels_per_window):
-                    self._signal_windows.append(read_x[j])
-                    self._label_windows.append(read_y[j])
+            read_x, read_y = self._fetch_read(read_id, window_size, window_stride, min_labels_per_window) 
+
+            self._signal_windows.extend(read_x)
+            self._label_windows.extend(read_y)
         
         self._position += self._size
 
@@ -61,7 +58,7 @@ class DataBuffer():
         self._signal_windows = x_shuffled.tolist()
         self._label_windows = y_shuffled.tolist()
 
-    def _fetch_read(self, read_id, window_size, window_stride):
+    def _fetch_read(self, read_id, window_size, window_stride, min_labels_per_window):
         x_read = []
         y_read = []       
         DAC, RTS, REF = self._loader.load_read(read_id)
@@ -87,7 +84,8 @@ class DataBuffer():
                 labels.popleft()
                 labelts.popleft()
 
-            x_read.append(list(curdacs))
-            y_read.append(list(labels))
+            if len(labels) >= min_labels_per_window:
+                x_read.append(list(curdacs))
+                y_read.append(list(labels))
             
         return (x_read,y_read)
