@@ -55,7 +55,7 @@ class DataBuffer():
 
         c = np.c_[x.reshape(len(x), -1), y.reshape(len(y), -1)]
         np.random.shuffle(c)
-        x_shuffled = c[:, :x.size//len(x)].reshape(x.shape).astype(int)
+        x_shuffled = c[:, :x.size//len(x)].reshape(x.shape)
         y_shuffled = c[:, x.size//len(x):].reshape(y.shape)
         
         self._signal_windows = x_shuffled.tolist()

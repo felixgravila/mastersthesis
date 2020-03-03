@@ -1,5 +1,6 @@
 from collections import deque
 import h5py
+import numpy as np
 
 from utils.Other import get_valid_taiyaki_filename
 
@@ -12,11 +13,18 @@ class DataLoader():
             self._filename = get_valid_taiyaki_filename()
         else:
             self._filename = filename
+
+    def _normalize_signal(self, signal):
+        signal = np.array(signal)
+        mean = np.mean(signal)
+        standard_dev = np.std(signal)
+        return (signal - mean)/standard_dev
+
     
     def load_read(self, read_id):
         with h5py.File(self._filename, 'r') as h5file:
             read = h5file['Reads'][read_id]
-            DAC = list(read['Dacs'][()])
+            DAC = self._normalize_signal(list(read['Dacs'][()]))
             RTS = deque(read['Ref_to_signal'][()])
             REF = deque(read['Reference'][()])
         return DAC, RTS, REF
