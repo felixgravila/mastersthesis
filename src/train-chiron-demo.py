@@ -19,7 +19,6 @@ set_gpu_growth()
 
 input_length = 300
 label_length = 50
-buffer_size = 5
 rnn_padding = 5
 
 data_preper = DataPrepper(validation_split=0.1, test_split=0.1)
