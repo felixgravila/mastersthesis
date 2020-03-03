@@ -36,8 +36,7 @@ save_cb = SaveCB(chiron, val_generator)\
     .withCheckpoints("model_output")\
     .withImageOutput("image_output")
 
-epoch = 0
-while True:
+for epoch in range(1000):
     generator.print_status()
     try:
         X,y = next(generator.get_batch())
