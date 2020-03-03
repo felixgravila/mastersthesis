@@ -1,15 +1,16 @@
 import numpy as np
+import threading
 
 from utils.DataBuffer import DataBuffer
 
+
 class DataGenerator():
     
-    def __init__(self, read_ids, batch_size, stride, input_length, label_length, reads_count, rnn_pad_size):
+    def __init__(self, read_ids, batch_size, stride, input_length, reads_count, rnn_pad_size):
 
         self._read_ids = read_ids
         self.batch_size = batch_size
         self.input_length = input_length
-        self.label_length = label_length
         self.rnn_pad_size = rnn_pad_size
         self.stride = stride
 
@@ -29,8 +30,7 @@ class DataGenerator():
                 self.batch_size, 
                 self.input_length, 
                 self.stride,
-                min_labels_per_window=0,
-                max_labels_per_window=self.label_length)
+                min_labels_per_window=1)
             
             x = self._get_x(signal_windows, label_windows)
             y = self._get_dummy_y(signal_windows)
@@ -48,7 +48,7 @@ class DataGenerator():
         }
 
     def get_y(self, label_windows):
-        return np.array([r + [5]*(self.label_length-len(r)) for r in label_windows], dtype='float32')
+        return np.array([r + [5]*(self.input_length-len(r)) for r in label_windows], dtype='float32')
 
     def _get_x_len(self, signal_windows):
         return np.array([[self.input_length - 2*self.rnn_pad_size] for _ in signal_windows], dtype="float32")

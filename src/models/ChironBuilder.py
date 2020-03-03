@@ -2,9 +2,8 @@ from models.Chiron import Chiron
 
 class ChironBuilder():
 
-    def __init__(self, input_length, label_length):
+    def __init__(self, input_length):
         self.input_length = input_length
-        self.label_length= label_length
         self.rnn_padding = 0
         self.batch_normalization = False
 
@@ -19,6 +18,5 @@ class ChironBuilder():
     def build(self):
         return Chiron(
             input_length=self.input_length,
-            label_length=self.label_length, 
             rnn_padding = self.rnn_padding,
             batch_normalization = self.batch_normalization)

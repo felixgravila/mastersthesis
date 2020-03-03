@@ -15,9 +15,8 @@ from utils.Other import labelBaseMap
 
 class Chiron():
     
-    def __init__(self, input_length, label_length, rnn_padding, batch_normalization):
+    def __init__(self, input_length, rnn_padding, batch_normalization):
         self.input_length = input_length
-        self.label_length = label_length
         self.rnn_padding = rnn_padding
         self.batch_normalization = batch_normalization
         self.model, self.testfunc = self.make_model()
@@ -102,7 +101,7 @@ class Chiron():
 
         y_pred = Activation("softmax", name="softmax")(inner)
 
-        labels = Input(name='the_labels', shape=(self.label_length), dtype='float32')
+        labels = Input(name='the_labels', shape=(self.input_length), dtype='float32')
         input_length = Input(name='input_length', shape=(1), dtype='int64')
         label_length = Input(name='label_length', shape=(1), dtype='int64')
 
