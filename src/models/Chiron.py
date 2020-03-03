@@ -1,6 +1,5 @@
 import numpy as np
 import tensorflow as tf
-import tensorflow.keras.backend as kb
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Input, Activation, Add, Lambda, Dense, MaxPooling1D, Conv1D, LSTM, BatchNormalization
 from tensorflow.keras.backend import ctc_batch_cost
@@ -16,6 +15,7 @@ class Chiron():
     
     def __init__(self, input_length, rnn_padding, batch_normalization, maxpool_layer, model_name):
         self.input_length = input_length
+        self.rnn_output_length = input_length-(2*rnn_padding) if maxpool_layer == 0 else (input_length//2)-(2*rnn_padding)
         self.rnn_padding = rnn_padding
         self.batch_normalization = batch_normalization
         self.maxpool_layer = maxpool_layer
@@ -90,7 +90,7 @@ class Chiron():
         inner = input_data
 
         for res_idx in range(1,6):
-            inner = self.make_res_block(input_data, res_idx)
+            inner = self.make_res_block(inner, res_idx)
             if self.maxpool_layer == res_idx:
                 inner = MaxPooling1D(pool_size=2, name="max_pool_1D")(inner)
 
@@ -107,7 +107,7 @@ class Chiron():
 
         y_pred = Activation("softmax", name="softmax")(inner)
 
-        labels = Input(name='the_labels', shape=(self.input_length), dtype='float32')
+        labels = Input(name='the_labels', shape=(self.rnn_output_length), dtype='float32')
         input_length = Input(name='input_length', shape=(1), dtype='int64')
         label_length = Input(name='label_length', shape=(1), dtype='int64')
 

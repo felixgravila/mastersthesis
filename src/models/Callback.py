@@ -7,13 +7,14 @@ import numpy as np
 from utils.Other import labelBaseMap
 
 class SaveCB(Callback):
-    def __init__(self, chiron, val_generator):
+    def __init__(self, chiron, val_generator, use_maxpool=False):
 
         self.chiron = chiron
         self.val_generator = val_generator
         self.best_dist = None
         self.save_model_flag = False
         self.save_image_flag = False
+        self.use_maxpool = use_maxpool
         self.Xforimg = None
         self.testvalid = [[],[]]
         self.start_time = datetime.datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
@@ -52,6 +53,8 @@ class SaveCB(Callback):
         transposed = list(map(list, zip(*prediction)))
         for i in range(len(transposed)):
             ti = [t*(xmax-xmin)+xmin for t in transposed[i]]
+            if self.use_maxpool:
+                ti = list(np.repeat(ti, 2))
             ax.plot(ti, label=labelBaseMap[i])
         ax.plot(self.Xforimg[0], "k", label="raw")
         ax.legend()
