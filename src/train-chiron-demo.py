@@ -36,13 +36,14 @@ cb = ChironBuilder(input_length)\
         .with_maxpool(3)\
 
 cb = cb.with_maxpool(3) if use_maxpool else cb
-
 chiron=cb.build()
 
+
 save_cb = SaveCB(chiron, val_generator)\
-    .withCheckpoints("model_output")\
-    .withImageOutput("image_output")\
+    .withCheckpoints()\
+    .withImageOutput()\
     .withMaxPool()
+
 
 #%%
 
