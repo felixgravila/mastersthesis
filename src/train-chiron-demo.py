@@ -37,8 +37,8 @@ cb = cb.with_maxpool(3) if use_maxpool else cb
 chiron = cb.build()
 
 save_cb = SaveCB(chiron, val_generator, use_maxpool=use_maxpool)\
-    .withCheckpoints("model_output")\
-    .withImageOutput("image_output")
+    .withCheckpoints()\
+    .withImageOutput()
 
 #%%
 
