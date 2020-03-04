@@ -38,6 +38,10 @@ class SaveCB(Callback):
         self.save_image_flag = True
         return self
 
+    def withMaxPool(self):
+        self.use_maxpool = True
+        return self
+
     def save_image(self, epoch):
         fig, ax = plt.subplots( nrows=1, ncols=1, figsize=(30,10))
         xmax = max(self.Xforimg[0])[0]

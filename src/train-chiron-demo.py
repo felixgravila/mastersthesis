@@ -32,13 +32,18 @@ val_generator = DataGenerator(val_read_ids, batch_size=500, input_length=input_l
 
 cb = ChironBuilder(input_length)\
         .with_batch_normalization()\
-        .with_rnn_padding(rnn_padding)
-cb = cb.with_maxpool(3) if use_maxpool else cb
-chiron = cb.build()
+        .with_rnn_padding(rnn_padding)\
+        .with_maxpool(3)\
 
-save_cb = SaveCB(chiron, val_generator, use_maxpool=use_maxpool)\
+cb = cb.with_maxpool(3) if use_maxpool else cb
+chiron=cb.build()
+
+
+save_cb = SaveCB(chiron, val_generator)\
     .withCheckpoints()\
-    .withImageOutput()
+    .withImageOutput()\
+    .withMaxPool()
+
 
 #%%
 

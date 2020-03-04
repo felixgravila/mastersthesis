@@ -10,7 +10,7 @@ class DataGenerator():
         self._read_ids = read_ids
         self.batch_size = batch_size
         self.input_length = input_length
-        self.rnn_output_len = input_length-(2*rnn_pad_size) if not use_maxpool else (input_length//2)-(2*rnn_pad_size)
+        self.use_maxpool = use_maxpool
         self.rnn_pad_size = rnn_pad_size
         self.stride = stride
 
@@ -48,13 +48,18 @@ class DataGenerator():
         }
 
     def get_y(self, label_windows):
-        return np.array([r + [5]*(self.rnn_output_len-len(r)) for r in label_windows], dtype='float32')
+        return np.array([r + [5]*(self._get_output_len()-len(r)) for r in label_windows], dtype='float32')
 
     def _get_x_len(self, signal_windows):
-        return np.array([[self.rnn_output_len - 2*self.rnn_pad_size] for _ in signal_windows], dtype="float32")
+        return np.array([[self._get_output_len()] for _ in signal_windows], dtype="float32")
 
     def _get_y_lens(self, label_windows):
         return np.array([[len(lab)] for lab in label_windows], dtype="float32")
 
     def _get_dummy_y(self, signal_windows):
         return {'ctc': np.zeros([len(signal_windows)])}
+
+    def _get_output_len(self):
+        if(self.use_maxpool):
+            return (self.input_length//2)-(2*self.rnn_pad_size)
+        return self.input_length-(2*self.rnn_pad_size)
