@@ -38,6 +38,10 @@ class SaveCB(Callback):
         self.image_output_dir = dir
         return self
 
+    def withMaxPool(self):
+        self.use_maxpool = True
+        return self 
+
     # You can use this, but better to define get_model_name() in model and let it get it from there in __init__
     def withName(self, model_name):
         self.model_name = model_name
