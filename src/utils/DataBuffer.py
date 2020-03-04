@@ -37,9 +37,9 @@ class DataBuffer():
         self._position += 1
         read_id = self._read_ids[pos]
 
-        _, _, REF = self._loader.load_read(read_id)
+        DAC, _, REF = self._loader.load_read(read_id)
         x_read, _ = self._fetch_read(read_id, window_size, window_stride, min_labels_per_window=0)
-        return x_read, list(REF)
+        return x_read, list(REF), DAC
 
     def _drop(self, amount):
         self._signal_windows = self._signal_windows[amount+1:]
