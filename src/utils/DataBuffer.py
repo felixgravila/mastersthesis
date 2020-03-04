@@ -29,6 +29,18 @@ class DataBuffer():
     def get_read_id_idx(self):
         return self._position
 
+    # Used for prediction
+    # x_read is the list of windows (consecutive)
+    # ref is the reference used to identify the bacteria and perform lcs
+    def get_raw_and_split_read(self, window_size, window_stride):
+        pos = self._position
+        self._position += 1
+        read_id = self._read_ids[pos]
+
+        _, _, REF = self._loader.load_read(read_id)
+        x_read, _ = self._fetch_read(read_id, window_size, window_stride, min_labels_per_window=0)
+        return x_read, list(REF)
+
     def _drop(self, amount):
         self._signal_windows = self._signal_windows[amount+1:]
         self._label_windows = self._label_windows[amount+1:]

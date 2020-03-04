@@ -1,6 +1,7 @@
 import numpy as np
 
 from utils.DataBuffer import DataBuffer
+from utils.Other import labelBaseMap
 
 
 class DataGenerator():
@@ -36,6 +37,16 @@ class DataGenerator():
             y = self._get_dummy_y(signal_windows)
 
             yield (x,y)
+
+    def get_evaluate_batch(self):
+        while True:
+            self._batch_count += 1
+            X, ref = self._buffer.get_raw_and_split_read(
+                self.input_length,
+                self.stride
+            )
+            yield np.array(X), "".join([labelBaseMap[r] for r in ref])
+
             
     def _get_x(self, signal_windows, label_windows):
 
