@@ -4,8 +4,8 @@ import editdistance
 import numpy as np
 import operator
 
-def assemble(base_string_list):
-  aligned_seq = _get_aligned_sequences(base_string_list)
+def assemble(base_string_list, window=5):
+  aligned_seq = _get_aligned_sequences(base_string_list, window)
   return _get_assembled_string(aligned_seq)
 
 def assemble_from_file(path):
@@ -26,7 +26,7 @@ def _get_assembled_string(alignments):
     zipped = list(zip_longest(*padded, fillvalue=" "))
     return "".join(list(map(_get_most_popular_base, zipped)))
 
-def _get_aligned_sequences(seq_list,window=10):
+def _get_aligned_sequences(seq_list,window):
     aligned_seq_list = []
     
     for i, seq in enumerate(seq_list):

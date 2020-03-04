@@ -32,7 +32,7 @@ cb = ChironBuilder(input_length)\
 cb.model.load_weights('outputs/chiron-bn-pad5/2020-03-03_21:24:40/checkpoints/chiron-bn-pad5/chiron-bn-pad5-2020-03-03_21:24:40_e00377_dis421.h5')
 
 pred = cb.predict(X)
-assembled = assemble(pred)
+assembled = assemble(pred, window=5)
 print(f"Assembled length: {len(assembled)}")
 ed = editdistance.eval(ref, assembled)
 print(f"Editdistance to ref is {ed}, accuracy {1-(ed/len(ref)):.3f}")
