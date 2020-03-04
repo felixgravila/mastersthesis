@@ -24,23 +24,18 @@ class SaveCB(Callback):
             print("No model name defined in the model.")
             self.model_name = "chiron"
 
-    def  withCheckpoints(self, dir):
-        if(not os.path.exists(dir)):
-            os.makedirs(dir)
+    def withCheckpoints(self):
+        self.model_output_dir = f"outputs/{self.model_name}/{self.start_time}/checkpoints/"
+        if not os.path.exists(self.model_output_dir):
+            os.makedirs(self.model_output_dir)
         self.save_model_flag = True
-        self.model_output_dir = dir
         return self
 
-    def withImageOutput(self, dir):
-        if(not os.path.exists(dir)):
-            os.makedirs(dir)
+    def withImageOutput(self):
+        self.image_output_dir = f"outputs/{self.model_name}/{self.start_time}/images/"
+        if not os.path.exists(self.image_output_dir):
+            os.makedirs(self.image_output_dir)
         self.save_image_flag = True
-        self.image_output_dir = dir
-        return self
-
-    # You can use this, but better to define get_model_name() in model and let it get it from there in __init__
-    def withName(self, model_name):
-        self.model_name = model_name
         return self
 
     def save_image(self, epoch):
@@ -58,13 +53,13 @@ class SaveCB(Callback):
             ax.plot(ti, label=labelBaseMap[i])
         ax.plot(self.Xforimg[0], "k", label="raw")
         ax.legend()
-        fig.savefig(os.path.join(self.image_output_dir, f'{self.model_name}-{self.start_time}-{epoch:05d}.png'))
+        fig.savefig(os.path.join(self.image_output_dir, f'{epoch:05d}.png'))
         plt.close(fig)
     
     def save_model(self, epoch, valloss):
         if self.best_dist is None or valloss < self.best_dist or epoch%20==0:
             self.best_dist = valloss
-            self.model.save_weights(os.path.join(self.model_output_dir, f'{self.model_name}-{self.start_time}_e{epoch:05d}_dis{round(valloss*100)}.h5'))
+            self.model.save_weights(os.path.join(self.model_output_dir, f'{epoch:05d}_dis{round(valloss*100)}.h5'))
 
     def on_epoch_end(self, epoch, logs={}):
         print(f"End of epoch {epoch}")
