@@ -7,6 +7,7 @@ class ChironBuilder():
         self.rnn_padding = 0
         self.maxpool_layer = 0
         self.batch_normalization = False
+        self.dropout = False
         self.model_name = "chiron"
 
     def with_batch_normalization(self):
@@ -23,6 +24,11 @@ class ChironBuilder():
         self.maxpool_layer = maxpool_layer
         self.model_name += f"-maxpool{maxpool_layer}"
         return self
+
+    def with_dropout(self):
+        self.dropout = True
+        self.model_name += f"-dropout"
+        return self
     
     def build(self):
         return Chiron(
@@ -30,4 +36,5 @@ class ChironBuilder():
             rnn_padding = self.rnn_padding,
             batch_normalization = self.batch_normalization,
             maxpool_layer=self.maxpool_layer,
-            model_name=self.model_name)
+            model_name=self.model_name,
+            dropout=self.dropout)

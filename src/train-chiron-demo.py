@@ -32,7 +32,8 @@ val_generator = DataGenerator(val_read_ids, batch_size=500, input_length=input_l
 
 cb = ChironBuilder(input_length)\
         .with_batch_normalization()\
-        .with_rnn_padding(rnn_padding)
+        .with_rnn_padding(rnn_padding)\
+        .with_dropout()
 cb = cb.with_maxpool(3) if use_maxpool else cb
 chiron=cb.build()
 
@@ -45,7 +46,7 @@ save_cb = SaveCB(chiron, val_generator)\
 
 #%%
 
-for epoch in range(1000):
+for epoch in range(2000):
     generator.print_status()
     try:
         X,y = next(generator.get_batch())
