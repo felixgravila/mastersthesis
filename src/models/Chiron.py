@@ -29,11 +29,14 @@ class Chiron():
     def get_model_name(self):
         return self.model_name
 
-    def predict(self, input_data):
-        pred = self.testfunc(input_data)
-        cur = [[np.argmax(ts) for ts in p] for p in pred]
-        nodup = ["".join(list(map(lambda x: labelBaseMap[x], filter(lambda x: x!=4, reduce(lambda acc, x: acc if acc[-1] == x else acc + [x], c[5:], [4]))))) for c in cur]
-        return nodup
+    def predict(self, input_data, batchsize = 300):
+        results = []
+        for i in range(0, len(input_data), batchsize):
+            pred = self.testfunc(input_data[i:i+batchsize])
+            cur = [[np.argmax(ts) for ts in p] for p in pred]
+            nodup = ["".join(list(map(lambda x: labelBaseMap[x], filter(lambda x: x!=4, reduce(lambda acc, x: acc if acc[-1] == x else acc + [x], c[5:], [4]))))) for c in cur]
+            results.extend(nodup)
+        return results
 
     def predict_raw(self, input_data):
         return self.testfunc(input_data)
