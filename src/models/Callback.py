@@ -61,7 +61,7 @@ class SaveCB(Callback):
         plt.close(fig)
     
     def save_model(self, epoch, valloss):
-        if self.best_dist is None or valloss < self.best_dist or epoch%50==0:
+        if self.best_dist is None or valloss < self.best_dist:
             self.best_dist = valloss
             self.model.save_weights(os.path.join(self.model_output_dir, f'{epoch:05d}_dis{round(valloss*100)}.h5'))
 
