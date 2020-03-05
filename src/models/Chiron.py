@@ -1,7 +1,7 @@
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras.models import Model
-from tensorflow.keras.layers import Input, Activation, Add, Lambda, Dense, MaxPooling1D, Conv1D, LSTM, BatchNormalization
+from tensorflow.keras.layers import Input, Activation, Add, Lambda, Dense, MaxPooling1D, Conv1D, LSTM, BatchNormalization, Dropout
 from tensorflow.keras.backend import ctc_batch_cost
 from functools import reduce
 import editdistance
@@ -13,12 +13,13 @@ from utils.Other import labelBaseMap
 
 class Chiron():
     
-    def __init__(self, input_length, rnn_padding, batch_normalization, maxpool_layer, model_name):
+    def __init__(self, input_length, rnn_padding, batch_normalization, maxpool_layer, model_name, dropout):
         self.input_length = input_length
         self.rnn_output_length = input_length-(2*rnn_padding) if maxpool_layer == 0 else (input_length//2)-(2*rnn_padding)
         self.rnn_padding = rnn_padding
         self.batch_normalization = batch_normalization
         self.maxpool_layer = maxpool_layer
+        self.dropout = dropout
         self.model_name=model_name
         self.model, self.testfunc = self.make_model()
 
@@ -66,7 +67,11 @@ class Chiron():
                       name=f"res{block}-c3")(inner)
 
         added = Add(name=f"res{block}-add")([res, inner])
-        return Activation('relu', name=f"res{block}-relu")(added)
+        act = Activation('relu', name=f"res{block}-relu")(added)
+        if self.dropout:
+            return Dropout(0.1, name=f"res{block}-dropout")(act)
+        else:
+            return act
 
     def make_bdlstm(self, upper, block):
         
@@ -87,7 +92,10 @@ class Chiron():
             return ctc_batch_cost(labels, y_pred, input_length, label_length) 
         
         input_data = Input(name="the_input", shape=(self.input_length,1), dtype="float32")
-        inner = input_data
+        if self.dropout:
+            inner = Dropout(0.2, name="input-dropout")(input_data)
+        else:
+            inner = input_data
 
         for res_idx in range(1,6):
             inner = self.make_res_block(inner, res_idx)
@@ -102,6 +110,8 @@ class Chiron():
         if(self.batch_normalization):
             inner = BatchNormalization()(inner)
         
+        if self.dropout:
+            inner = Dropout(0.3, name="dense_dropout")(inner)
         inner = Dense(64, name="dense", activation="relu")(inner)
         inner = Dense(5, name="dense_output")(inner)
 
