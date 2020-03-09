@@ -14,6 +14,10 @@ from utils.Other import analyse_cigar, labelBaseMap, set_gpu_growth
 set_gpu_growth()
 aligner = mp.Aligner("../useful_files/zymo-ref-uniq_2019-03-15.fa")
 
+class style():
+    RED = lambda x: f"\033[31m{x}\033[0m"
+    GREEN = lambda x: f"\033[32m{x}\033[0m"
+
 models = [
     'outputs/chiron-bn-pad5/2020-03-03_21:24:40/checkpoints/00377_dis421.h5',
     'outputs/chiron-bn-pad5-maxpool3/2020-03-04_09:35:31/checkpoints/00787_dis234.h5',
@@ -64,7 +68,6 @@ for idx in range(reads_to_eval):
         X, ref, raw, read_id = next(generator)
         result_dict['read_ids'].append(read_id)
         for modelname, modelfunc in chiron_funcs:
-            print(f"{modelname}...", end="")
             prediction = modelfunc(X)
             assembled = assemble(prediction, window=7)
             try:
@@ -79,6 +82,7 @@ for idx in range(reads_to_eval):
                     'cig': analyse_cigar(besthit.cigar_str),
                     'cigacc': 1-(besthit.NM/besthit.blen)
                 })
+                print(style.GREEN(f"{modelname}..."), end="")
             except:
                 result_dict[modelname].append({
                     'ctg': 0,
@@ -89,6 +93,7 @@ for idx in range(reads_to_eval):
                     'cig': 0,
                     'cigacc': 0
                 })
+                print(style.RED(f"{modelname}..."), end="")
         with open(json_write_file, 'w') as jsonfile:
             json.dump(result_dict, jsonfile)
         print("done.")
