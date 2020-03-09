@@ -41,11 +41,11 @@ class DataGenerator():
     def get_evaluate_batch(self):
         while True:
             self._batch_count += 1
-            X, ref, raw = self._buffer.get_raw_and_split_read(
+            X, ref, raw, read_id = self._buffer.get_raw_and_split_read(
                 self.input_length,
                 self.stride
             )
-            yield np.array(X), "".join([labelBaseMap[r] for r in ref]), raw
+            yield np.array(X), "".join([labelBaseMap[r] for r in ref]), raw, read_id
 
             
     def _get_x(self, signal_windows, label_windows):
