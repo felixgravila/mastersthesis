@@ -1,12 +1,40 @@
 #%%
 
+import matplotlib
 import matplotlib.pyplot as plt
-import numpy as np
+import scipy.stats as stats
+import random
+import json
 
-results = np.load("/mnt/nvme/JupyterWorkroot/mastersthesis/felix/models/2020-02-24_14:03:25.npy", allow_pickle=True)
+with open("eval_output.json", "r") as f:
+    data = json.load(f)
 
-plt.figure(figsize=(20, 10))
-plt.plot(results[0])
-plt.plot(results[1])
+#%%
+
+algos = list(data.keys())
+algos.remove("read_ids")
+print(algos)
+count = len(data['read_ids'])
+
+# algos.remove("chiron-bn-pad5-dropout-maxpool3")
+
 # %%
 
+colours = ["tab:blue","tab:orange","tab:green","tab:red"]
+
+fig, ax = plt.subplots(1, 1, figsize=(20, 10))
+ax.set_xticks(range(0, 100, 2))
+ax.set_ylabel("# reads")
+ax.set_xlabel("% accuracy")
+for algo, colour in zip(algos, colours):
+    allaccs = [a['cigacc']*100 for a in data[algo]]
+    avg_cig_acc = sum(allaccs)/len(allaccs)
+    count_not_found = sum([x==0 for x in allaccs])
+    perc_not_found = count_not_found*100/len(allaccs)
+    print(f"Avg acc for {algo}: {avg_cig_acc:.2f}%, not found: {perc_not_found:.2f}%({count_not_found})")
+    n, x, b = ax.hist(allaccs, label=algo, bins=range(100), alpha=0.7, density=True, color=colour)
+    density = stats.gaussian_kde(allaccs)
+    ax.plot(x, density(x), color=colour)
+plt.legend()
+
+# %%
