@@ -51,7 +51,7 @@ def make_chiron_for_file(file):
         cb = cb.with_maxpool(3)
     chiron = cb.build()
     chiron.model.load_weights(file)
-    return (chiron.get_model_name(), chiron.predict) # using get_model_name instead of description for safety
+    return (chiron.get_model_name(), chiron.predict_beam_search) # using get_model_name instead of description for safety
 
 chiron_funcs = list(map(make_chiron_for_file, models))
 
@@ -68,7 +68,7 @@ for idx in range(reads_to_eval):
         X, ref, raw, read_id = next(generator)
         result_dict['read_ids'].append(read_id)
         for modelname, modelfunc in chiron_funcs:
-            prediction = modelfunc(X)
+            prediction, logs = modelfunc(X, beam_width=1) # beam_width=1 -> greedy
             assembled = assemble(prediction, window=7)
             try:
                 # this crashes if no match found
