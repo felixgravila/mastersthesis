@@ -35,13 +35,14 @@ def get_valid_taiyaki_filename():
     possible_filenames = ["/mnt/nvme/taiyaki_aligned/mapped_umi16to9.hdf5",
                           "/hdd/mapped_therest.hdf5",
                           "/Users/felix/MsC/DNA/mapped_umi16to9.hdf5",
-                          "c:/Users/mirop/OneDrive/Documents/Programming/Data/bdm/mapped_umi16to9.hdf5"]
+                          "c:/Users/mirop/OneDrive/Documents/Programming/Data/bdm/mapped_umi16to9.hdf5",
+                          "/mnt/c/Users/mirop/OneDrive/Documents/Programming/Data/bdm/mapped_umi16to9.hdf5"]
 
     for filename in possible_filenames:
         if os.path.isfile(filename):
             return filename
     else:
-        raise "No filename valid!"
+        raise "Read data file could not be found!"
         
 def analyse_cigar(cigar_string):
     res = re.findall(r'[\d]+[SMDI]', cigar_string)
