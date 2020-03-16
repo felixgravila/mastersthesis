@@ -20,7 +20,7 @@ class style():
 
 model = 'outputs/chiron-pad5-maxpool3/2020-03-04_17:44:03/checkpoints/00927_dis193.h5'
 
-reads_to_eval = 100
+reads_to_eval = 5
 json_write_file = "eval_output_whole.json"
 
 data_preper = DataPrepper(validation_split=0.1, test_split=0.1)
@@ -76,5 +76,12 @@ for idx in range(reads_to_eval):
     except:
         print("No match found...")
 
+
+# %%
+
+print(f"Mapped {len(cigaccs)}/{reads_to_eval} ({(len(cigaccs)/reads_to_eval)*100}%)")
+print(f"Average accuracy: {(sum(cigaccs)/reads_to_eval)*100}%")
+plt.hist([c*100 for c in cigaccs], bins=range(0, 100))
+plt.show()
 
 # %%
