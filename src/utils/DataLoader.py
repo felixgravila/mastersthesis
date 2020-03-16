@@ -20,7 +20,6 @@ class DataLoader():
         standard_dev = np.std(signal)
         return (signal - mean)/standard_dev
 
-    
     def load_read(self, read_id):
         with h5py.File(self._filename, 'r') as h5file:
             read = h5file['Reads'][read_id]

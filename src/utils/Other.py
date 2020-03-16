@@ -35,14 +35,32 @@ def get_valid_taiyaki_filename():
     possible_filenames = ["/mnt/nvme/taiyaki_aligned/mapped_umi16to9.hdf5",
                           "/hdd/mapped_therest.hdf5",
                           "/Users/felix/MsC/DNA/mapped_umi16to9.hdf5",
-                          "c:/Users/mirop/OneDrive/Documents/Programming/Data/bdm/mapped_umi16to9.hdf5"]
+                          "c:/Users/mirop/OneDrive/Documents/Programming/Data/bdm/umi11to5.hdf5",
+                          "c:/Users/mirop/OneDrive/Documents/Programming/Data/bdm/mapped_therest.hdf5",
+                          "c:/Users/mirop/OneDrive/Documents/Programming/Data/bdm/mapped_umi16to9.hdf5",
+                          "/mnt/c/Users/mirop/OneDrive/Documents/Programming/Data/bdm/mapped_umi16to9.hdf5"]
+
+    for filename in possible_filenames:
+        if os.path.isfile(filename):
+            print(f"Loading data from file:{filename}")
+            return filename
+    else:
+        raise "Read data file could not be found!"
+
+def get_valid_model_filename(model_name):
+    possible_filenames = [
+        f"/mnt/c/Users/mirop/OneDrive/Documents/Programming/Data/bdm/outputs/{model_name}/checkpoints/model.h5",
+        f"c:/Users/mirop/OneDrive/Documents/Programming/Data/bdm/outputs/{model_name}/checkpoints/model.h5"
+    ]
+
+    print(possible_filenames[0])
 
     for filename in possible_filenames:
         if os.path.isfile(filename):
             return filename
     else:
-        raise "No filename valid!"
-        
+        raise f"Model file could not be found!"
+  
 def analyse_cigar(cigar_string):
     res = re.findall(r'[\d]+[SMDI]', cigar_string)
     d = {"S":0,"M":0,"D":0,"I":0}
