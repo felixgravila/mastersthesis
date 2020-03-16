@@ -13,14 +13,15 @@ with open("eval_output.json", "r") as f:
 
 algos = list(data.keys())
 algos.remove("read_ids")
+algos.remove("read_ids_pad0")
 print(algos)
-count = len(data['read_ids'])
 
-# algos.remove("chiron-bn-pad5-dropout-maxpool3")
+for k in data.keys():
+    print(f"{k}: {len(data[k])}")
 
 # %%
 
-colours = ["tab:blue","tab:orange","tab:green","tab:red"]
+colours = ["tab:blue","tab:orange","tab:green","tab:red", "tab:cyan"]
 
 fig, ax = plt.subplots(1, 1, figsize=(20, 10))
 ax.set_xticks(range(0, 100, 2))
