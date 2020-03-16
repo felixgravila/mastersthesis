@@ -3,6 +3,7 @@ import collections
 import editdistance
 import numpy as np
 import operator
+import os
 
 def assemble(base_string_list, window=5):
   aligned_seq = _get_aligned_sequences(base_string_list, window)
@@ -12,6 +13,12 @@ def assemble_from_file(path):
   file = np.load(path, allow_pickle=True)
   return assemble(file[0])
 
+def assemble_and_output(filename, base_string_list, window=5):
+  aligned_seq = _get_aligned_sequences(base_string_list, window)
+  assembled = _get_assembled_string(aligned_seq)
+  _output(aligned_seq, assembled, filename)
+  return assembled
+
 def compare(assembled_string, reference_string):
   return editdistance.eval(assembled_string, reference_string)
 
@@ -20,6 +27,22 @@ def compare_from_file(path):
   assembled_string = assemble(file[0])
   reference_string = file[1]
   return compare(assembled_string,reference_string)
+
+def _output(alignments, assembled, filename):
+    if (os.path.exists(filename)):
+      os.remove(filename)
+    
+    with open(filename, 'a') as f:
+      start_index = _get_closest_index(alignments)
+      
+      for alignment in alignments:
+        idx = alignment[0]
+        seq = alignment[1]
+        alignment_string = _get_alignment_string(seq, idx)
+        f.write(alignment_string + '\n')
+      
+      alignment_string = _get_alignment_string(assembled, start_index)
+      f.write(alignment_string)
 
 def _get_assembled_string(alignments):
     padded = _pad_seq_list(alignments)
@@ -93,7 +116,7 @@ def _count_bases(base_string):
         d[l] = base_string.count(l)
     return d
   
-def _show_alignment(s,i):
+def _get_alignment_string(s,i):
     pan = 10
     if(i < 0):
         pan = pan + i
