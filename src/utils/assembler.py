@@ -58,8 +58,8 @@ def _get_aligned_sequences(seq_list,window):
     
     for i, seq in enumerate(seq_list):
         window_seq_list = aligned_seq_list[max(0, i-window):i] # this is just the context window
-        if len(seq) < 3:
-          continue
+        # if len(seq) < 3:
+        #   continue
         index = _find_alignment_index(window_seq_list, seq) # this is what computes the offset of seq
         aligned_seq_list.append((index,seq))
 
@@ -69,11 +69,11 @@ def _find_alignment_index(seq_list, seq_to_align):
   if(len(seq_list) == 0):
     return 0
   
-  max_score = 0
-  max_score_index = 0
-
   alignment_from = _get_closest_index(seq_list)-len(seq_to_align)+1 # returns the smallest `index` in the context window
   alignment_to = _get_furthest_index(seq_list)-1 # returns the furthest away character
+
+  max_score = 0
+  max_score_index = alignment_to
 
   for i in range(alignment_from, alignment_to):
     score = _calc_score(seq_list, seq_to_align, i)
