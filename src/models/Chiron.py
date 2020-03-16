@@ -2,11 +2,9 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Input, Activation, Add, Lambda, Dense, MaxPooling1D, Conv1D, LSTM, BatchNormalization, Dropout
-from tensorflow.keras.backend import ctc_batch_cost
+from tensorflow.keras.backend import ctc_batch_cost, ctc_decode
 from functools import reduce
 import editdistance
-import datetime
-import os
 import matplotlib.pyplot as plt
 
 from utils.Other import labelBaseMap
@@ -36,7 +34,28 @@ class Chiron():
             cur = [[np.argmax(ts) for ts in p] for p in pred]
             nodup = ["".join(list(map(lambda x: labelBaseMap[x], filter(lambda x: x!=4, reduce(lambda acc, x: acc if acc[-1] == x else acc + [x], c[5:], [4]))))) for c in cur]
             results.extend(nodup)
-        return results
+        logs = [1]*len(results) # for compatibility with predict_beam_search
+        return results, logs
+
+    def predict_beam_search(self, input_data, batchsize = 300, beam_width=10):
+        results = []
+        logs = []
+        for i in range(0, len(input_data), batchsize):
+            pred = self.testfunc(input_data[i:i+batchsize])
+            input_lenghts = np.array([self.rnn_output_length]*len(pred))
+            greedy = beam_width <= 1
+            decoded = ctc_decode(pred, input_lenghts, greedy=greedy, beam_width=beam_width, top_paths=1)
+
+            # transform the actual tensor output of decoded into a string with the labels
+            # decoded[0] contains one list with the outputs -> decoded[0][0] is the list of outputs
+            # decoded[1] is the list of log likelihoods
+            transformed_to_bases = []
+            for d in decoded[0][0]:
+                l = list(filter(lambda x: x>=0, np.array(d)))
+                tr = "".join([labelBaseMap[x] for x in l])
+                results.append(tr)
+            logs.extend(np.array(decoded[1]))
+        return results, logs
 
     def predict_raw(self, input_data):
         return self.testfunc(input_data)
