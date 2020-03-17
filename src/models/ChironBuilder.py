@@ -8,6 +8,7 @@ class ChironBuilder():
         self.maxpool_layer = 0
         self.batch_normalization = False
         self.dropout = False
+        self.none_input = False
         self.model_name = "chiron"
 
     def with_batch_normalization(self):
@@ -30,6 +31,16 @@ class ChironBuilder():
         self.model_name += f"-dropout"
         return self
     
+    '''
+    Sets the input to the first CNN layer to None
+    This ignores `input_length`
+    
+    Used for prediction where we can thus predict inputs of any length
+    '''
+    def with_None_input(self):
+        self.none_input = True
+        return self
+    
     def build(self):
         return Chiron(
             input_length=self.input_length,
@@ -37,4 +48,5 @@ class ChironBuilder():
             batch_normalization = self.batch_normalization,
             maxpool_layer=self.maxpool_layer,
             model_name=self.model_name,
-            dropout=self.dropout)
+            dropout=self.dropout,
+            use_None_input=self.none_input)

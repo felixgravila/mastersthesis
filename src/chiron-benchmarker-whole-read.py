@@ -20,7 +20,7 @@ class style():
 
 model = 'outputs/chiron-pad5-maxpool3/2020-03-04_17:44:03/checkpoints/00927_dis193.h5'
 
-reads_to_eval = 5
+reads_to_eval = 2000
 json_write_file = "eval_output_whole.json"
 
 data_preper = DataPrepper(validation_split=0.1, test_split=0.1)
@@ -43,25 +43,30 @@ def make_chiron_for_file(file, input_length):
         cb = cb.with_dropout()
     if "maxpool3" in description:
         cb = cb.with_maxpool(3)
+    cb = cb.with_None_input()
     chiron = cb.build()
     chiron.model.load_weights(file)
     return chiron.predict
 
+predictor = make_chiron_for_file(model, 300) # 300 doesn't do anything since we use None input
 #%%
 
-cigaccs = []
+result_dict = {
+    'read_ids': [],
+    'chiron-pad5-maxpool3': []
+}
 
 for idx in range(reads_to_eval):
     X, ref, raw, read_id = next(generator)
     print(f"Evaluating {idx}/{reads_to_eval}... Read {read_id} ", end="")
-    predictor = make_chiron_for_file(model, len(raw))
     raw = raw.reshape(1,-1,1)
+    
+    result_dict['read_ids'].append(read_id)
 
     prediction, logs = predictor(raw)
 
     try:
         besthit = next(aligner.map(prediction[0]))
-
         r = {
             'ctg': besthit.ctg,
             'r_st': besthit.r_st,
@@ -71,17 +76,23 @@ for idx in range(reads_to_eval):
             'cig': analyse_cigar(besthit.cigar_str),
             'cigacc': 1-(besthit.NM/besthit.blen)
         }
-        cigaccs.append( 1-(besthit.NM/besthit.blen) )
-        print(r)
+        print(style.GREEN(f"Done, cigacc {(1-(besthit.NM/besthit.blen))*100:.2f}%"))
     except:
-        print("No match found...")
+        r = {
+            'ctg': 0,
+            'r_st': 0,
+            'r_en': 0,
+            'NM': 0,
+            'blen': 0,
+            'cig': 0,
+            'cigacc': 0
+        }
+        print(style.RED(f"No match..."))
+    
+    result_dict['chiron-pad5-maxpool3'].append(r)
+    with open(json_write_file, 'w') as jsonfile:
+            json.dump(result_dict, jsonfile)
+
+print("Done.")
 
 
-# %%
-
-print(f"Mapped {len(cigaccs)}/{reads_to_eval} ({(len(cigaccs)/reads_to_eval)*100}%)")
-print(f"Average accuracy: {(sum(cigaccs)/reads_to_eval)*100}%")
-plt.hist([c*100 for c in cigaccs], bins=range(0, 100))
-plt.show()
-
-# %%
