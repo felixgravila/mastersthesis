@@ -2,5 +2,3 @@ models/*
 images
 weights
 eval_output.json
-eval_output_before_new_assembler.json
-eval_output_after_new_assembler.json
