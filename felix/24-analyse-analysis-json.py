@@ -14,6 +14,7 @@ with open("eval_output.json", "r") as f:
 algos = list(data.keys())
 algos.remove("read_ids")
 algos.remove("read_ids_pad0")
+algos.remove("read_ids_fixasm")
 print(algos)
 
 for k in data.keys():
@@ -21,7 +22,7 @@ for k in data.keys():
 
 # %%
 
-colours = ["tab:blue","tab:orange","tab:green","tab:red", "tab:cyan"]
+colours = ["tab:blue","tab:orange","tab:green","tab:red", "tab:cyan", "lime"]
 
 fig, ax = plt.subplots(1, 1, figsize=(20, 10))
 ax.set_xticks(range(0, 100, 2))
