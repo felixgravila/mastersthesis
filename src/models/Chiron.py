@@ -11,8 +11,9 @@ from utils.Other import labelBaseMap
 
 class Chiron():
     
-    def __init__(self, input_length, rnn_padding, batch_normalization, maxpool_layer, model_name, dropout):
+    def __init__(self, input_length, rnn_padding, batch_normalization, maxpool_layer, model_name, dropout, use_None_input):
         self.input_length = input_length
+        self.use_None_input = use_None_input
         self.rnn_output_length = input_length-(2*rnn_padding) if maxpool_layer == 0 else (input_length//2)-(2*rnn_padding)
         self.rnn_padding = rnn_padding
         self.batch_normalization = batch_normalization
@@ -113,7 +114,11 @@ class Chiron():
                 y_pred = y_pred[:, self.rnn_padding:-self.rnn_padding, :]
             return ctc_batch_cost(labels, y_pred, input_length, label_length) 
         
-        input_data = Input(name="the_input", shape=(self.input_length,1), dtype="float32")
+        if self.use_None_input:
+            input_data = Input(name="the_input", shape=(None,1), dtype="float32")
+        else:
+            input_data = Input(name="the_input", shape=(self.input_length,1), dtype="float32")
+
         if self.dropout:
             inner = Dropout(0.2, name="input-dropout")(input_data)
         else:
