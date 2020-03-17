@@ -12,9 +12,7 @@ with open("eval_output.json", "r") as f:
 #%%
 
 algos = list(data.keys())
-algos.remove("read_ids")
-algos.remove("read_ids_pad0")
-algos.remove("read_ids_fixasm")
+algos = [algo for algo in algos if "read_ids" not in algo]
 print(algos)
 
 for k in data.keys():
@@ -22,7 +20,7 @@ for k in data.keys():
 
 # %%
 
-colours = ["tab:blue","tab:orange","tab:green","tab:red", "tab:cyan", "lime"]
+colours = ["tab:blue","tab:orange","tab:green","tab:red", "tab:cyan", "seagreen", "firebrick"]
 
 fig, ax = plt.subplots(1, 1, figsize=(20, 10))
 ax.set_xticks(range(0, 100, 2))
@@ -34,7 +32,7 @@ for algo, colour in zip(algos, colours):
     count_not_found = sum([x==0 for x in allaccs])
     perc_not_found = count_not_found*100/len(allaccs)
     print(f"Avg acc for {algo}: {avg_cig_acc:.2f}%, not found: {perc_not_found:.2f}%({count_not_found})")
-    n, x, b = ax.hist(allaccs, label=algo, bins=range(100), alpha=0.7, density=True, color=colour)
+    n, x, b = ax.hist(allaccs, label=algo, bins=range(0, 100), alpha=0.7, density=True, color=colour)
     density = stats.gaussian_kde(allaccs)
     ax.plot(x, density(x), color=colour)
 plt.legend()
