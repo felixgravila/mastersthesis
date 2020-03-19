@@ -6,7 +6,7 @@ from utils.Other import labelBaseMap
 
 class DataGenerator():
     
-    def __init__(self, read_ids, batch_size, stride, input_length, reads_count, rnn_pad_size, use_maxpool):
+    def __init__(self, read_ids, batch_size, stride, input_length, reads_count, use_maxpool, rnn_pad_size=0):
 
         self._read_ids = read_ids
         self.batch_size = batch_size

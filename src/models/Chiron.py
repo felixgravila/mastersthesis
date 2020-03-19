@@ -19,14 +19,20 @@ class Chiron():
         self.batch_normalization = batch_normalization
         self.maxpool_layer = maxpool_layer
         self.dropout = dropout
-        self.model_name=model_name
-        self.model, self.testfunc = self.make_model()
+        self.name=model_name
+        self._model, self.testfunc = self.make_model()
+   
+    def fit(self, *args, **kwargs):
+        self._model.fit(*args, **kwargs)
+    
+    def fit_generator(self, *args, **kwargs):
+        self._model.fit_generator(*args, **kwargs)
 
-    def get_model(self):
-        return self.model
+    def load_weights(self, *args, **kwargs):
+        self._model.load_weights(*args, **kwargs)
 
-    def get_model_name(self):
-        return self.model_name
+    def save_weights(self, *args, **kwargs):
+        self._model.save_weights(*args, **kwargs)
 
     def predict(self, input_data, batchsize = 300):
         results = []
@@ -155,21 +161,3 @@ class Chiron():
         
         testfunc = tf.keras.backend.function(input_data, y_pred)
         return model, testfunc
-        
-    def calculate_loss(self, X, y, testbatchsize=1000):
-        editdis = 0
-        editdiss = []
-        for b in range(0, len(X), testbatchsize):
-            predicted = self.predict(X[b:b+testbatchsize])
-            mtest_y = ["".join(list(map(lambda x: labelBaseMap[x], ty))) for ty in y[b:b+testbatchsize]]
-            for (p,l) in zip(predicted, mtest_y):
-                ed = editdistance.eval(p,l)
-                editdis += ed
-                editdiss.append(ed)
-        return (editdis, len(X), editdiss)
-    
-    def fit(self, *args, **kwargs):
-        self.model.fit(*args, **kwargs)
-    
-    def fit_generator(self, *args, **kwargs):
-        self.model.fit_generator(*args, **kwargs)

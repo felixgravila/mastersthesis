@@ -3,13 +3,13 @@ import matplotlib.pyplot as plt
 import datetime
 from tensorflow.keras.callbacks import Callback
 import numpy as np
+import editdistance
 
 from utils.Other import labelBaseMap
 
 class SaveCB(Callback):
-    def __init__(self, chiron, val_generator, use_maxpool=False):
-
-        self.chiron = chiron
+    def __init__(self, model, val_generator, use_maxpool=False):
+        self.modelwrapper = model
         self.val_generator = val_generator
         self.best_dist = None
         self.save_model_flag = False
@@ -18,21 +18,16 @@ class SaveCB(Callback):
         self.Xforimg = None
         self.testvalid = [[],[]]
         self.start_time = datetime.datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
-        try:
-            self.model_name = self.chiron.get_model_name()
-        except:
-            print("No model name defined in the model.")
-            self.model_name = "chiron"
 
     def withCheckpoints(self):
-        self.model_output_dir = f"outputs/{self.model_name}/{self.start_time}/checkpoints/"
+        self.model_output_dir = f"outputs/{self.modelwrapper.name}/{self.start_time}/checkpoints/"
         if not os.path.exists(self.model_output_dir):
             os.makedirs(self.model_output_dir)
         self.save_model_flag = True
         return self
 
     def withImageOutput(self):
-        self.image_output_dir = f"outputs/{self.model_name}/{self.start_time}/images/"
+        self.image_output_dir = f"outputs/{self.modelwrapper.name}/{self.start_time}/images/"
         if not os.path.exists(self.image_output_dir):
             os.makedirs(self.image_output_dir)
         self.save_image_flag = True
@@ -48,7 +43,7 @@ class SaveCB(Callback):
         xmin = min(self.Xforimg[0])[0]
         ax.set_ylim(top=xmax)
         ax.set_ylim(bottom=xmin)
-        prediction = self.chiron.predict_raw(self.Xforimg)[0]
+        prediction = self.modelwrapper.predict_raw(self.Xforimg)[0]
         transposed = list(map(list, zip(*prediction)))
         for i in range(len(transposed)):
             ti = [t*(xmax-xmin)+xmin for t in transposed[i]]
@@ -63,7 +58,7 @@ class SaveCB(Callback):
     def save_model(self, epoch, valloss):
         if self.best_dist is None or valloss < self.best_dist:
             self.best_dist = valloss
-            self.model.save_weights(os.path.join(self.model_output_dir, f'{epoch:05d}_dis{round(valloss*100)}.h5'))
+            self.modelwrapper.save_weights(os.path.join(self.model_output_dir, f'{epoch:05d}_dis{round(valloss*100)}.h5'))
 
     def on_epoch_end(self, epoch, logs={}):
         print(f"End of epoch {epoch}")
@@ -72,12 +67,12 @@ class SaveCB(Callback):
         val_X = val_data['the_input']
         val_y = val_data['unpadded_labels']
 
-        tot_editdis, example_count, _ = self.chiron.calculate_loss(val_X, val_y)
+        tot_editdis, example_count, _ = self._calculate_loss(val_X, val_y)
         valloss = tot_editdis/example_count
         self.testvalid[0].append(valloss)
         self.testvalid[1].append(int(datetime.datetime.now().timestamp()))
         print(f"\nAverage validation edit distance is: {valloss}")
-        np.save(os.path.join(self.model_output_dir, f"{self.model_name}-{self.start_time}"), np.array(self.testvalid))
+        np.save(os.path.join(self.model_output_dir, f"{self.modelwrapper.name}-{self.start_time}"), np.array(self.testvalid))
 
         if self.save_model_flag:
             self.save_model(epoch, valloss)
@@ -85,3 +80,15 @@ class SaveCB(Callback):
             if self.Xforimg is None:
                 self.Xforimg = val_X[0:1]
             self.save_image(epoch)
+
+    def _calculate_loss(self, X, y, testbatchsize=1000):
+        editdis = 0
+        editdiss = []
+        for b in range(0, len(X), testbatchsize):
+            predicted = self.modelwrapper.predict(X[b:b+testbatchsize])
+            mtest_y = ["".join(list(map(lambda x: labelBaseMap[x], ty))) for ty in y[b:b+testbatchsize]]
+            for (p,l) in zip(predicted, mtest_y):
+                ed = editdistance.eval(p,l)
+                editdis += ed
+                editdiss.append(ed)
+        return (editdis, len(X), editdiss)
