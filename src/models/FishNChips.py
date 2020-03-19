@@ -27,6 +27,9 @@ class FishNChips():
     def save_weights(self, *args, **kwargs):
         self._model.save_weights(*args, **kwargs)
 
+    def summary(self):
+        self._model.summary()
+
     def predict(self, input_data, batchsize = 300):
         results = []
         for i in range(0, len(input_data), batchsize):
@@ -64,10 +67,40 @@ class FishNChips():
                       padding="same",
                       use_bias="false",
                       name=f"res{block}-c3")(inner)
-
+        
         # Add the residual connection to the output of the 3 conv layers
         added = Add(name=f"res{block}-add")([res, inner])
         return Activation('relu', name=f"res{block}-relu")(added)
+
+
+    def _make_attention(self, upper):
+        posenc = tf.convert_to_tensor(self._positional_encoding(256, self._ctc_length))
+        inner = Lambda(lambda x: tf.add(posenc, x))(upper)
+        
+        return inner
+
+    '''
+    Function that returns a tensor with the positional encodings
+    using sin and cos
+    params:
+        depth: the number of dimensions of each data point
+        num_pos: the length of the time series
+    '''
+    def _positional_encoding(self, depth, num_pos):
+        min_rate = 1/10000
+
+        assert depth%2 == 0, "Depth must be even."
+        angle_rate_exponents = np.linspace(0,1,depth//2)
+        angle_rates = min_rate**(angle_rate_exponents)
+
+        positions = np.arange(num_pos) 
+        angle_rads = (positions[:, np.newaxis])*angle_rates[np.newaxis, :]
+
+        sines = np.sin(angle_rads) # shape (150, 128) (128 == depth/2)
+        cosines = np.cos(angle_rads) # shape (150, 128)
+        pos_encoding = np.concatenate([sines, cosines], axis=-1) # shape (150, 256)
+        return np.array(pos_encoding, dtype="float32")
+
 
     def _make(self):
         
@@ -84,10 +117,11 @@ class FishNChips():
                 inner = MaxPooling1D(pool_size=2, name="max_pool_1D")(inner)
 
         # TODO: Attention here
+        inner = self._make_attention(inner)        
 
         inner = Dense(64, name="dense", activation="relu")(inner)
         inner = Dense(5, name="dense_output")(inner)
-
+        
         y_pred = Activation("softmax", name="softmax")(inner)
 
         labels = Input(name='the_labels', shape=(self._ctc_length), dtype='float32')
