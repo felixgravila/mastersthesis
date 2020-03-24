@@ -28,12 +28,9 @@ class MultiHeadAttention(tf.keras.layers.Layer):
     batch_size = tf.shape(q)[0]
 
     # (d_model = 256, num_heads = 8) -> depth = 32
-
     # batch size 10, length 150
     # (10, 150, 256)
-    print(q.shape)
     q = self.wq(q)  # (batch_size, seq_len, d_model)
-    print(q.shape)
     k = self.wk(k)  # (batch_size, seq_len, d_model)
     v = self.wv(v)  # (batch_size, seq_len, d_model)
     
