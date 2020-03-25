@@ -1,6 +1,6 @@
 import tensorflow as tf
-from DecoderLayer import DecoderLayer
-from attention_utils import positional_encoding
+from models.Attention.DecoderLayer import DecoderLayer
+from models.Attention.attention_utils import positional_encoding
 
 class Decoder(tf.keras.layers.Layer):
   def __init__(self, num_layers, d_model, num_heads, dff, maximum_position_encoding, rate=0.1):

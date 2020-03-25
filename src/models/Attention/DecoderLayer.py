@@ -1,6 +1,6 @@
 import tensorflow as tf
-from MultiHeadAttention import MultiHeadAttention
-from attention_utils import point_wise_feed_forward_network
+from models.Attention.MultiHeadAttention import MultiHeadAttention
+from models.Attention.attention_utils import point_wise_feed_forward_network
 
 class DecoderLayer(tf.keras.layers.Layer):
   def __init__(self, d_model, num_heads, dff, rate=0.1):

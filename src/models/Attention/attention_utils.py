@@ -37,29 +37,6 @@ def scaled_dot_product_attention(q, k, v, mask):
 
   return output, attention_weights  
 
-    
-# def positional_encoding(depth, num_pos):
-#     '''
-#     Function that returns a tensor with the positional encodings
-#     using sin and cos
-#     params:
-#         depth: the number of dimensions of each data point
-#         num_pos: the length of the time series
-#     '''
-#     min_rate = 1/10000
-
-#     assert depth%2 == 0, "Depth must be even."
-#     angle_rate_exponents = np.linspace(0,1,depth//2)
-#     angle_rates = min_rate**(angle_rate_exponents)
-
-#     positions = np.arange(num_pos) 
-#     angle_rads = (positions[:, np.newaxis])*angle_rates[np.newaxis, :]
-
-#     sines = np.sin(angle_rads) # shape (150, 128) (128 == depth/2)
-#     cosines = np.cos(angle_rads) # shape (150, 128)
-#     pos_encoding = np.concatenate([sines, cosines], axis=-1) # shape (150, 256)
-#     return np.array(pos_encoding, dtype="float32")
-
 def positional_encoding(position, d_model):
   angle_rads = get_angles(np.arange(position)[:, np.newaxis],
                           np.arange(d_model)[np.newaxis, :],
@@ -85,8 +62,7 @@ def point_wise_feed_forward_network(d_model, dff):
       tf.keras.layers.Dense(d_model)  # (batch_size, seq_len, d_model)
   ])
 
-    
-def create_look_ahead_mask(self, size):
+def create_look_ahead_mask(size):
     """
     Input n
     Creates a n*n matrix
@@ -112,3 +88,20 @@ def print_out(q, k, v):
   print (temp_attn)
   print ('Output is:')
   print (temp_out)
+
+def create_masks(inp, tar):
+  # Encoder padding mask
+  enc_padding_mask = create_padding_mask(inp)
+  
+  # Used in the 2nd attention block in the decoder.
+  # This padding mask is used to mask the encoder outputs.
+  dec_padding_mask = create_padding_mask(inp)
+  
+  # Used in the 1st attention block in the decoder.
+  # It is used to pad and mask future tokens in the input received by 
+  # the decoder.
+  look_ahead_mask = create_look_ahead_mask(tf.shape(tar)[1])
+  dec_target_padding_mask = create_padding_mask(tar)
+  combined_mask = tf.maximum(dec_target_padding_mask, look_ahead_mask)
+  
+  return enc_padding_mask, combined_mask, dec_padding_mask
