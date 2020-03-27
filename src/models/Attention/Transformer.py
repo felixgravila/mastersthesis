@@ -3,12 +3,12 @@ from models.Attention.Encoder import Encoder
 from models.Attention.Decoder import Decoder
 
 class Transformer(tf.keras.Model):
-  def __init__(self, num_layers, d_model, output_dim, num_heads, dff, pe_input, pe_target, rate=0.1):
+  def __init__(self, num_layers, d_model, output_dim, num_heads, dff, pe_encoder_max_length, pe_decoder_max_length, rate=0.1):
     super(Transformer, self).__init__()
 
-    self.encoder = Encoder(num_layers, d_model, num_heads, dff, pe_input, rate)
+    self.encoder = Encoder(num_layers, d_model, num_heads, dff, pe_encoder_max_length, rate)
 
-    self.decoder = Decoder(num_layers, d_model, num_heads, dff, pe_target, rate)
+    self.decoder = Decoder(num_layers, d_model, num_heads, dff, pe_decoder_max_length, rate)
 
     self.final_layer = tf.keras.layers.Dense(output_dim)
     

@@ -1,7 +1,7 @@
 import tensorflow as tf
 import numpy as np
 
-def scaled_dot_product_attention(q, k, v):
+def scaled_dot_product_attention(q, k, v, mask):
   """Calculate the attention weights.
   q, k, v must have matching leading dimensions.
   k, v must have matching penultimate dimension, i.e.: seq_len_k = seq_len_v.
@@ -24,6 +24,10 @@ def scaled_dot_product_attention(q, k, v):
   # scale matmul_qk
   dk = tf.cast(tf.shape(k)[-1], tf.float32)
   scaled_attention_logits = matmul_qk / tf.math.sqrt(dk)
+
+  # add the mask to the scaled tensor.
+  if mask is not None:
+    scaled_attention_logits += (mask * -1e9)  
 
   # softmax is normalized on the last axis (seq_len_k) so that the scores
   # add up to 1.

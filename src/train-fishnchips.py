@@ -63,11 +63,11 @@ d_model = 256
 dff = 512
 num_heads = 8
 
-input_vocab_size = 4 + 2
-target_vocab_size = 4 + 2
+pe_encoder_max_length = 150
+pe_decoder_max_length = 50
 dropout_rate = 0.1
 
-transformer = Transformer(num_layers=num_layers, d_model=d_model, output_dim=4, num_heads=num_heads, dff=dff, pe_input=1000, pe_target=target_vocab_size, rate=dropout_rate)
+transformer = Transformer(num_layers=num_layers, d_model=d_model, output_dim=4, num_heads=num_heads, dff=dff, pe_encoder_max_length=pe_encoder_max_length, pe_decoder_max_length=pe_decoder_max_length, rate=dropout_rate)
 
 EPOCHS = 2
 
@@ -81,7 +81,6 @@ EPOCHS = 2
 def train_step(inp, tar):
   tar_inp = tar[:, :-1]
   tar_real = tar[:, 1:]
-  
   
   # TODO: consider not adding mask on input
   combined_mask = create_combined_mask(tar_inp)
