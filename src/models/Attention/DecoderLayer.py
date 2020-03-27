@@ -20,14 +20,14 @@ class DecoderLayer(tf.keras.layers.Layer):
     self.dropout3 = tf.keras.layers.Dropout(rate)
     
     
-  def call(self, x, enc_output, training, look_ahead_mask, padding_mask):
+  def call(self, x, enc_output, training, look_ahead_mask):
     # enc_output.shape == (batch_size, input_seq_len, d_model)
 
     attn1, attn_weights_block1 = self.mha1(x, x, x, look_ahead_mask)  # (batch_size, target_seq_len, d_model)
     attn1 = self.dropout1(attn1, training=training)
     out1 = self.layernorm1(attn1 + x)
     
-    attn2, attn_weights_block2 = self.mha2(enc_output, enc_output, out1, padding_mask)  # (batch_size, target_seq_len, d_model)
+    attn2, attn_weights_block2 = self.mha2(enc_output, enc_output, out1)  # (batch_size, target_seq_len, d_model)
     attn2 = self.dropout2(attn2, training=training)
     out2 = self.layernorm2(attn2 + out1)  # (batch_size, target_seq_len, d_model)
     

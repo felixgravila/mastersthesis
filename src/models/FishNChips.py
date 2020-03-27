@@ -2,7 +2,7 @@ import tensorflow as tf
 
 from models.Layers.ConvBlock import ConvolutionBlock
 from models.Attention.Transformer import Transformer
-from models.Attention.attention_utils import create_masks
+from models.Attention.attention_utils import create_look_ahead_mask
 
 class FishNChips(tf.keras.Model):
     def __init__(self, d_model, num_cnn_blocks, max_pool_layer_idx, training=False):
@@ -16,8 +16,8 @@ class FishNChips(tf.keras.Model):
     
     def call(self, x, y_true):
         x = self.call_cnn_blocks(x)
-        enc_padding_mask, combined_mask, dec_padding_mask = create_masks(x, y_true)
-        x, attention_weights = self.tranformer(x, y_true, self.training, enc_padding_mask, combined_mask, dec_padding_mask)
+        combined_mask = create_look_ahead_mask(y_true)
+        x, attention_weights = self.tranformer(x, y_true, self.training, combined_mask)
         return x, attention_weights
         
     def call_cnn_blocks(self, x):

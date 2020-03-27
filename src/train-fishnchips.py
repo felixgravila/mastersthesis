@@ -3,17 +3,19 @@ import sys
 import math
 import tensorflow as tf
 import numpy as np
+import time
 #sys.path.insert(0,'./src')
 
-from models.FishNChips import FishNChips
+#from models.FishNChips import FishNChips
 from models.Callback import SaveCB
+from models.Attention.Transformer import Transformer
 
 from utils.DataGenerator import DataGenerator
 from utils.DataPrepper import DataPrepper
 from utils.DataBuffer import DataBuffer
 
 from models.Attention.CustomSchedule import CustomSchedule
-from models.Attention.attention_utils import create_masks
+from models.Attention.attention_utils import create_combined_mask
 
 from utils.Other import labelBaseMap, get_valid_taiyaki_filename, set_gpu_growth
 
@@ -32,6 +34,11 @@ val_generator = DataGenerator(val_read_ids, batch_size=500, input_length=input_l
 
 #%%
 
+def printt(value):
+    print(20*">")
+    print(value)
+    print(20*">")
+
 train_loss = tf.keras.metrics.Mean(name='train_loss')
 train_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='train_accuracy')
 
@@ -49,28 +56,70 @@ def loss_function(real, pred):
 learning_rate = CustomSchedule(256)
 optimizer = tf.keras.optimizers.Adam(learning_rate, beta_1=0.9, beta_2=0.98, epsilon=1e-9)
 
-fish = FishNChips(d_model=256, num_cnn_blocks=5, max_pool_layer_idx=3, training=False)
+# fish = FishNChips(d_model=256, num_cnn_blocks=5, max_pool_layer_idx=3, training=False)
 
-x = tf.random.uniform((1,300,1))
-y = tf.random.uniform((1, 50))
-# y -> [1,2,3,4,0,0,0,0,0,0,...]
-outp = fish(x, y)
-print(outp)
-fish.compile(loss=loss_function, optimizer=optimizer)
+num_layers = 4
+d_model = 256
+dff = 512
+num_heads = 8
 
-print(fish.summary())
+input_vocab_size = 4 + 2
+target_vocab_size = 4 + 2
+dropout_rate = 0.1
 
-#%%
+transformer = Transformer(num_layers=num_layers, d_model=d_model, output_dim=4, num_heads=num_heads, dff=dff, pe_input=1000, pe_target=target_vocab_size, rate=dropout_rate)
 
-# save_cb = SaveCB(model=fish, val_generator=val_generator)\
-#     .withCheckpoints()\
-#     .withImageOutput()
-# if use_maxpool:
-#     save_cb = save_cb.withMaxPool()
+EPOCHS = 2
 
-# #%%
+# The @tf.function trace-compiles train_step into a TF graph for faster
+# execution. The function specializes to the precise shape of the argument
+# tensors. To avoid re-tracing due to the variable sequence lengths or variable
+# batch sizes (the last batch is smaller), use input_signature to specify
+# more generic shapes.
 
-# for epoch in range(2000):
-#     generator.print_status()
-#     X,y = next(generator.get_batch())
-#     fish.fit(X, y, initial_epoch=epoch, epochs=epoch+1, callbacks=[save_cb])
+@tf.function()
+def train_step(inp, tar):
+  tar_inp = tar[:, :-1]
+  tar_real = tar[:, 1:]
+  
+  
+  # TODO: consider not adding mask on input
+  combined_mask = create_combined_mask(tar_inp)
+  
+  with tf.GradientTape() as tape:
+    predictions, _ = transformer(inp, tar_inp, True, combined_mask)
+    loss = loss_function(tar_real, predictions)
+
+  gradients = tape.gradient(loss, transformer.trainable_variables)    
+  optimizer.apply_gradients(zip(gradients, transformer.trainable_variables))
+  
+  train_loss(loss)
+  train_accuracy(tar_real, predictions)
+
+# make train_dataset
+ex_X = tf.random.uniform((2, 150, 256))
+ex_y = tf.constant([[5, 1, 2, 1, 4, 3, 3, 2, 6, 0, 0, 0, 0],
+                    [5, 2, 1, 3, 4, 1, 1, 2, 2, 2, 6, 0, 0]])
+train_dataset = [[ex_X, ex_y]]
+
+for epoch in range(EPOCHS):
+  start = time.time()
+  
+  train_loss.reset_states()
+  train_accuracy.reset_states()
+  
+  # inp -> portuguese, tar -> english
+  for (batch, (inp, tar)) in enumerate(train_dataset):
+    inp = tf.constant(inp)
+    tar = tf.constant(tar)
+    train_step(inp, tar)
+    
+    if batch % 50 == 0:
+      print ('Epoch {} Batch {} Loss {:.4f} Accuracy {:.4f}'.format(
+          epoch + 1, batch, train_loss.result(), train_accuracy.result()))
+    
+  print ('Epoch {} Loss {:.4f} Accuracy {:.4f}'.format(epoch + 1, 
+                                                train_loss.result(), 
+                                                train_accuracy.result()))
+
+  print ('Time taken for 1 epoch: {} secs\n'.format(time.time() - start))

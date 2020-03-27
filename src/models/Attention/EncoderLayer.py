@@ -15,9 +15,9 @@ class EncoderLayer(tf.keras.layers.Layer):
     self.dropout1 = tf.keras.layers.Dropout(rate)
     self.dropout2 = tf.keras.layers.Dropout(rate)
     
-  def call(self, x, training, mask):
+  def call(self, x, training):
 
-    attn_output, _ = self.mha(x, x, x, mask)  # (batch_size, input_seq_len, d_model)
+    attn_output, _ = self.mha(x, x, x)  # (batch_size, input_seq_len, d_model)
     attn_output = self.dropout1(attn_output, training=training)
     out1 = self.layernorm1(x + attn_output)  # (batch_size, input_seq_len, d_model)
     

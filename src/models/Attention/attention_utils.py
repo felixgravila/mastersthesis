@@ -1,7 +1,7 @@
 import tensorflow as tf
 import numpy as np
 
-def scaled_dot_product_attention(q, k, v, mask):
+def scaled_dot_product_attention(q, k, v):
   """Calculate the attention weights.
   q, k, v must have matching leading dimensions.
   k, v must have matching penultimate dimension, i.e.: seq_len_k = seq_len_v.
@@ -24,10 +24,6 @@ def scaled_dot_product_attention(q, k, v, mask):
   # scale matmul_qk
   dk = tf.cast(tf.shape(k)[-1], tf.float32)
   scaled_attention_logits = matmul_qk / tf.math.sqrt(dk)
-
-  # add the mask to the scaled tensor.
-  if mask is not None:
-    scaled_attention_logits += (mask * -1e9)  
 
   # softmax is normalized on the last axis (seq_len_k) so that the scores
   # add up to 1.
@@ -89,19 +85,10 @@ def print_out(q, k, v):
   print ('Output is:')
   print (temp_out)
 
-def create_masks(inp, tar):
-  # Encoder padding mask
-  enc_padding_mask = create_padding_mask(inp)
-  
-  # Used in the 2nd attention block in the decoder.
-  # This padding mask is used to mask the encoder outputs.
-  dec_padding_mask = create_padding_mask(inp)
-  
+def create_combined_mask(tar):  
   # Used in the 1st attention block in the decoder.
   # It is used to pad and mask future tokens in the input received by 
   # the decoder.
-  look_ahead_mask = create_look_ahead_mask(tf.shape(tar)[1])
-  dec_target_padding_mask = create_padding_mask(tar)
-  combined_mask = tf.maximum(dec_target_padding_mask, look_ahead_mask)
-  
-  return enc_padding_mask, combined_mask, dec_padding_mask
+  look_ahead_mask = create_look_ahead_mask(tf.shape(tar)[1]) # this does the diagonal mask
+  dec_target_padding_mask = create_padding_mask(tar) # this does the mask on padding
+  return tf.maximum(dec_target_padding_mask, look_ahead_mask) # this makes a mask that goes on diagonal but also masks padding
