@@ -20,18 +20,23 @@ from utils.Other import labelBaseMap, get_valid_taiyaki_filename, set_gpu_growth
 
 set_gpu_growth()
 
-input_length = 300
+INPUT_LENGTH = 300
 use_maxpool = True
+
+EPOCHS = 5
+BATCH_SIZE = 32
 
 data_preper = DataPrepper(validation_split=0.1, test_split=0.1)
 
 read_ids = data_preper.get_train_read_ids()
-generator = DataGenerator(read_ids, batch_size=1000, input_length=input_length, stride=30, reads_count=5, use_maxpool=use_maxpool)
+generator = DataGenerator(read_ids, batch_size=50*BATCH_SIZE, input_length=INPUT_LENGTH, stride=30, reads_count=5, use_maxpool=use_maxpool)
 
 val_read_ids = data_preper.get_validation_read_ids()
-val_generator = DataGenerator(val_read_ids, batch_size=500, input_length=input_length, stride=150, reads_count=5, use_maxpool=use_maxpool)
+val_generator = DataGenerator(val_read_ids, batch_size=10*BATCH_SIZE, input_length=INPUT_LENGTH, stride=150, reads_count=5, use_maxpool=use_maxpool)
 
 #%%
+
+
 
 def printt(value):
     print(20*">")
@@ -44,6 +49,10 @@ train_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='train_accuracy
 loss_object = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True, reduction='none') 
 
 def loss_function(real, pred):
+
+    printt(real.shape)
+    printt(pred.shape)
+
     mask = tf.math.logical_not(tf.math.equal(real, 0))
     loss_ = loss_object(real, pred)
 
@@ -63,7 +72,7 @@ dff = 512
 num_heads = 8
 
 pe_encoder_max_length = 300
-pe_decoder_max_length = 50
+pe_decoder_max_length = 100
 dropout_rate = 0.1
 
 #transformer = Transformer(num_layers=num_layers, d_model=d_model, output_dim=4, num_heads=num_heads, dff=dff, pe_encoder_max_length=pe_encoder_max_length, pe_decoder_max_length=pe_decoder_max_length, rate=dropout_rate)
@@ -80,7 +89,6 @@ fish = FishNChips(
   pe_decoder_max_length=pe_decoder_max_length, 
   rate=dropout_rate)
 
-EPOCHS = 2
 
 # The @tf.function trace-compiles train_step into a TF graph for faster
 # execution. The function specializes to the precise shape of the argument
@@ -101,24 +109,44 @@ def train_step(inp, tar):
 
   gradients = tape.gradient(loss, fish.trainable_variables)    
   optimizer.apply_gradients(zip(gradients, fish.trainable_variables))
+  printt(tf.shape(fish.trainable_variables))
   
   train_loss(loss)
   train_accuracy(tar_real, predictions)
 
-# make train_dataset
-ex_X = tf.random.uniform((2, 300, 1))
-ex_y = tf.constant([[5, 1, 2, 1, 4, 3, 3, 2, 6, 0, 0, 0, 0],
-                    [5, 2, 1, 3, 4, 1, 1, 2, 2, 2, 6, 0, 0]])
-train_dataset = [[ex_X, ex_y]]
+# # make train_dataset
+# ex_X = tf.random.uniform((2, 300, 1))
+# ex_y = tf.constant([[5, 1, 2, 1, 4, 3, 3, 2, 6, 0, 0, 0, 0],
+#                     [5, 2, 1, 3, 4, 1, 1, 2, 2, 2, 6, 0, 0]])
+# train_dataset = [[ex_X, ex_y]]
 
 for epoch in range(EPOCHS):
+
+  """
+  Making old generator value work for new model
+  This should probably get reworked at some point 
+  """
+  val = next(generator.get_batch())
+
+  train_X_batch = val[0]['the_input'].reshape(-1, BATCH_SIZE, INPUT_LENGTH, 1)
+  train_y_orig = val[0]['unpadded_labels']
+  train_y_batch = []
+  for y in train_y_orig:
+    y = [t+1 for t in y] # since 0 is a base
+    y.insert(0, 5) # add 5 as start token
+    y.append(6) # add 6 as end token
+    y.extend([0]*(pe_decoder_max_length-len(y))) # pad with zeros to pe_decoder_max_length
+    train_y_batch.append(y)
+  train_y_batch = np.array(train_y_batch)
+  train_y_batch = train_y_batch.reshape((-1, BATCH_SIZE, 100))
+  # Done reshaping datad
+
   start = time.time()
-  
   train_loss.reset_states()
   train_accuracy.reset_states()
   
   # inp -> portuguese, tar -> english
-  for (batch, (inp, tar)) in enumerate(train_dataset):
+  for (batch, (inp, tar)) in enumerate(list(zip(train_X_batch, train_y_batch))):
     inp = tf.constant(inp)
     tar = tf.constant(tar)
     train_step(inp, tar)
