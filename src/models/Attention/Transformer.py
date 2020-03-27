@@ -2,7 +2,7 @@ import tensorflow as tf
 from models.Attention.Encoder import Encoder
 from models.Attention.Decoder import Decoder
 
-class Transformer(tf.keras.Model):
+class Transformer(tf.keras.layers.Layer):
   def __init__(self, num_layers, d_model, output_dim, num_heads, dff, pe_encoder_max_length, pe_decoder_max_length, rate=0.1):
     super(Transformer, self).__init__()
 

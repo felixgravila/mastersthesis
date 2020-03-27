@@ -5,20 +5,18 @@ from models.Attention.Transformer import Transformer
 from models.Attention.attention_utils import create_look_ahead_mask
 
 class FishNChips(tf.keras.Model):
-    def __init__(self, d_model, num_cnn_blocks, max_pool_layer_idx, training=False):
+    def __init__(self, num_cnn_blocks, max_pool_layer_idx, num_layers, d_model, output_dim, num_heads, dff, pe_encoder_max_length, pe_decoder_max_length, rate=0.1):
         super(FishNChips, self).__init__()
-        self.training = training
         self.max_pool_layer_idx = max_pool_layer_idx
         self.max_pool = tf.keras.layers.MaxPooling1D(pool_size=2, name="max_pool_1D")
         
         self.cnn_blocks = [ConvolutionBlock([1,3,1], d_model, i) for i in range(num_cnn_blocks)]
-        self.tranformer = Transformer(num_layers=2, d_model=d_model, output_dim=4, num_heads=8, dff=2048, pe_input=1000, pe_target=1000)
+        self.transformer = Transformer(num_layers=num_layers, d_model=d_model, output_dim=output_dim, num_heads=num_heads, dff=dff, pe_encoder_max_length=pe_encoder_max_length, pe_decoder_max_length=pe_decoder_max_length)
     
-    def call(self, x, y_true):
-        x = self.call_cnn_blocks(x)
-        combined_mask = create_look_ahead_mask(y_true)
-        x, attention_weights = self.tranformer(x, y_true, self.training, combined_mask)
-        return x, attention_weights
+    def call(self, inp, tar, training, look_ahead_mask):
+        x = self.call_cnn_blocks(inp)
+        att_output, att_weights = self.transformer(x, tar, training, look_ahead_mask)
+        return att_output, att_weights
         
     def call_cnn_blocks(self, x):
         for i,cnn_block in enumerate(self.cnn_blocks):
