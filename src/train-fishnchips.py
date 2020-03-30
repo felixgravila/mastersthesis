@@ -23,13 +23,14 @@ set_gpu_growth()
 INPUT_LENGTH = 300
 use_maxpool = True
 
-EPOCHS = 5
-BATCH_SIZE = 32
+EPOCHS = 1
+NO_BATCHES = 1
+BATCH_SIZE = 2
 
 data_preper = DataPrepper(validation_split=0.1, test_split=0.1)
 
 read_ids = data_preper.get_train_read_ids()
-generator = DataGenerator(read_ids, batch_size=50*BATCH_SIZE, input_length=INPUT_LENGTH, stride=30, reads_count=5, use_maxpool=use_maxpool)
+generator = DataGenerator(read_ids, batch_size=NO_BATCHES*BATCH_SIZE, input_length=INPUT_LENGTH, stride=30, reads_count=5, use_maxpool=use_maxpool)
 
 val_read_ids = data_preper.get_validation_read_ids()
 val_generator = DataGenerator(val_read_ids, batch_size=10*BATCH_SIZE, input_length=INPUT_LENGTH, stride=150, reads_count=5, use_maxpool=use_maxpool)
@@ -38,9 +39,9 @@ val_generator = DataGenerator(val_read_ids, batch_size=10*BATCH_SIZE, input_leng
 
 
 
-def printt(value):
+def printt(value, *args, **kwargs):
     print(20*">")
-    print(value)
+    print(value, *args, **kwargs)
     print(20*">")
 
 train_loss = tf.keras.metrics.Mean(name='train_loss')
@@ -49,16 +50,13 @@ train_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='train_accuracy
 loss_object = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True, reduction='none') 
 
 def loss_function(real, pred):
-
-    printt(real.shape)
-    printt(pred.shape)
-
-    mask = tf.math.logical_not(tf.math.equal(real, 0))
+    real = tf.map_fn(lambda x: x-1, real)
+    mask = tf.math.logical_not(tf.math.equal(real, -1))
     loss_ = loss_object(real, pred)
+    loss_ = tf.clip_by_value(loss_, tf.float32.min, tf.float32.max)
 
     mask = tf.cast(mask, dtype=loss_.dtype)
     loss_ *= mask
-    
     return tf.reduce_mean(loss_)
 
 learning_rate = CustomSchedule(256)
@@ -82,12 +80,14 @@ fish = FishNChips(
   max_pool_layer_idx=3, 
   num_layers=num_layers, 
   d_model=d_model, 
-  output_dim=4, 
+  output_dim=5, # ATCG + STOP
   num_heads=num_heads, 
   dff=dff, 
   pe_encoder_max_length=pe_encoder_max_length, 
   pe_decoder_max_length=pe_decoder_max_length, 
   rate=dropout_rate)
+
+#%%
 
 
 # The @tf.function trace-compiles train_step into a TF graph for faster
@@ -104,12 +104,14 @@ def train_step(inp, tar):
   combined_mask = create_combined_mask(tar_inp)
   
   with tf.GradientTape() as tape:
+    tape.watch([inp, tar_inp])
     predictions, _ = fish(inp, tar_inp, True, combined_mask)   
     loss = loss_function(tar_real, predictions)
+    tf.print(loss)
 
-  gradients = tape.gradient(loss, fish.trainable_variables)    
+  gradients = tape.gradient(loss, fish.trainable_variables)
+  # tf.print(gradients, output_stream="file://./gradients.out", summarize=1000000)
   optimizer.apply_gradients(zip(gradients, fish.trainable_variables))
-  printt(tf.shape(fish.trainable_variables))
   
   train_loss(loss)
   train_accuracy(tar_real, predictions)
@@ -133,8 +135,8 @@ for epoch in range(EPOCHS):
   train_y_batch = []
   for y in train_y_orig:
     y = [t+1 for t in y] # since 0 is a base
-    y.insert(0, 5) # add 5 as start token
-    y.append(6) # add 6 as end token
+    y.insert(0, 6) # add 6 as start token
+    y.append(5) # add 5 as end token
     y.extend([0]*(pe_decoder_max_length-len(y))) # pad with zeros to pe_decoder_max_length
     train_y_batch.append(y)
   train_y_batch = np.array(train_y_batch)
@@ -147,7 +149,7 @@ for epoch in range(EPOCHS):
   
   # inp -> portuguese, tar -> english
   for (batch, (inp, tar)) in enumerate(list(zip(train_X_batch, train_y_batch))):
-    inp = tf.constant(inp)
+    inp = tf.constant(inp, dtype=tf.float32)
     tar = tf.constant(tar)
     train_step(inp, tar)
     
@@ -160,3 +162,6 @@ for epoch in range(EPOCHS):
                                                 train_accuracy.result()))
 
   print ('Time taken for 1 epoch: {} secs\n'.format(time.time() - start))
+
+
+# %%
