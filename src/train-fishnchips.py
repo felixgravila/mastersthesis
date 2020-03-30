@@ -23,9 +23,9 @@ set_gpu_growth()
 INPUT_LENGTH = 300
 use_maxpool = True
 
-EPOCHS = 1
-NO_BATCHES = 1
-BATCH_SIZE = 2
+EPOCHS = 1000
+NO_BATCHES = 100
+BATCH_SIZE = 64
 
 data_preper = DataPrepper(validation_split=0.1, test_split=0.1)
 
@@ -51,6 +51,7 @@ loss_object = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True, re
 
 def loss_function(real, pred):
     real = tf.map_fn(lambda x: x-1, real)
+    real = tf.clip_by_value(real, 0, 7)
     mask = tf.math.logical_not(tf.math.equal(real, -1))
     loss_ = loss_object(real, pred)
     loss_ = tf.clip_by_value(loss_, tf.float32.min, tf.float32.max)
@@ -96,7 +97,12 @@ fish = FishNChips(
 # batch sizes (the last batch is smaller), use input_signature to specify
 # more generic shapes.
 
-@tf.function()
+train_step_signature = [
+    tf.TensorSpec(shape=(None, None, 1), dtype=tf.float32),
+    tf.TensorSpec(shape=(None, None), dtype=tf.int32),
+]
+
+@tf.function(input_signature=train_step_signature)
 def train_step(inp, tar):
   tar_inp = tar[:, :-1]
   tar_real = tar[:, 1:]
@@ -104,10 +110,8 @@ def train_step(inp, tar):
   combined_mask = create_combined_mask(tar_inp)
   
   with tf.GradientTape() as tape:
-    tape.watch([inp, tar_inp])
     predictions, _ = fish(inp, tar_inp, True, combined_mask)   
     loss = loss_function(tar_real, predictions)
-    tf.print(loss)
 
   gradients = tape.gradient(loss, fish.trainable_variables)
   # tf.print(gradients, output_stream="file://./gradients.out", summarize=1000000)
@@ -121,6 +125,11 @@ def train_step(inp, tar):
 # ex_y = tf.constant([[5, 1, 2, 1, 4, 3, 3, 2, 6, 0, 0, 0, 0],
 #                     [5, 2, 1, 3, 4, 1, 1, 2, 2, 2, 6, 0, 0]])
 # train_dataset = [[ex_X, ex_y]]
+
+old_acc = 0
+accs = []
+PATIENCE = 20
+waited = 0
 
 for epoch in range(EPOCHS):
 
@@ -150,18 +159,28 @@ for epoch in range(EPOCHS):
   # inp -> portuguese, tar -> english
   for (batch, (inp, tar)) in enumerate(list(zip(train_X_batch, train_y_batch))):
     inp = tf.constant(inp, dtype=tf.float32)
-    tar = tf.constant(tar)
+    tar = tf.constant(tar, dtype=tf.int32)
     train_step(inp, tar)
     
-    if batch % 50 == 0:
-      print ('Epoch {} Batch {} Loss {:.4f} Accuracy {:.4f}'.format(
-          epoch + 1, batch, train_loss.result(), train_accuracy.result()))
+    if batch % 10 == 0:
+      print (f'Epoch {epoch + 1} Batch {batch} Loss {train_loss.result():.4f} Accuracy {train_accuracy.result():.4f}')
+    accs.append(train_accuracy.result())
+    np.save("train_res", np.array(accs))
     
-  print ('Epoch {} Loss {:.4f} Accuracy {:.4f}'.format(epoch + 1, 
-                                                train_loss.result(), 
-                                                train_accuracy.result()))
+  loss = train_loss.result()
+  acc = train_accuracy.result()
+  print (f'Epoch {epoch + 1} Loss {loss:.4f} Accuracy {acc:.4f}')
+  print (f'Time taken for 1 epoch: {time.time() - start} secs\n')
 
-  print ('Time taken for 1 epoch: {} secs\n'.format(time.time() - start))
+  if acc > old_acc:
+    old_acc = acc
+    fish.save_weights("fish_weights.h5")
+  else:
+    waited += 1
+    if waited > PATIENCE:
+      print("Out of patience, exiting...")
+      break
+
 
 
 # %%
