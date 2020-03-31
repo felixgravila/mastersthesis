@@ -23,13 +23,13 @@ set_gpu_growth()
 INPUT_LENGTH = 300
 use_maxpool = True
 
-# EPOCHS = 1000
-# NO_BATCHES = 100
-# BATCH_SIZE = 64
+EPOCHS = 1000
+NO_BATCHES = 200
+BATCH_SIZE = 32
 
-EPOCHS = 1
-NO_BATCHES = 1
-BATCH_SIZE = 2
+# EPOCHS = 1
+# NO_BATCHES = 1
+# BATCH_SIZE = 2
 
 data_preper = DataPrepper(validation_split=0.1, test_split=0.1)
 
@@ -130,9 +130,9 @@ def train_step(inp, tar):
 #                     [5, 2, 1, 3, 4, 1, 1, 2, 2, 2, 6, 0, 0]])
 # train_dataset = [[ex_X, ex_y]]
 
-old_acc = 0
+old_loss = 1
 accs = []
-PATIENCE = 20
+PATIENCE = 50
 waited = 0
 
 for epoch in range(EPOCHS):
@@ -176,8 +176,8 @@ for epoch in range(EPOCHS):
   print (f'Epoch {epoch + 1} Loss {loss:.4f} Accuracy {acc:.4f}')
   print (f'Time taken for 1 epoch: {time.time() - start} secs\n')
 
-  if acc > old_acc:
-    old_acc = acc
+  if loss < old_loss:
+    old_loss = loss
     fish.save_weights("fish_weights.h5")
   else:
     waited += 1

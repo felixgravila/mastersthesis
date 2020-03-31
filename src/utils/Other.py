@@ -10,6 +10,16 @@ labelBaseMap = {
     4: "-"
 }
 
+attentionLabelBaseMap = {
+    0: 'P',
+    1: 'A',
+    2: 'C',
+    3: 'G',
+    4: 'T',
+    5: 'S',
+    6: 'E'
+}
+
 def set_gpu_limit(limitMB):
     gpus = tf.config.experimental.list_physical_devices('GPU')
     if gpus:
