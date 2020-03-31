@@ -23,9 +23,13 @@ set_gpu_growth()
 INPUT_LENGTH = 300
 use_maxpool = True
 
-EPOCHS = 1000
-NO_BATCHES = 100
-BATCH_SIZE = 64
+# EPOCHS = 1000
+# NO_BATCHES = 100
+# BATCH_SIZE = 64
+
+EPOCHS = 1
+NO_BATCHES = 1
+BATCH_SIZE = 2
 
 data_preper = DataPrepper(validation_split=0.1, test_split=0.1)
 
@@ -37,7 +41,8 @@ val_generator = DataGenerator(val_read_ids, batch_size=10*BATCH_SIZE, input_leng
 
 #%%
 
-
+def printf(value, file="info"):
+    tf.print(value, output_stream=f"file://./{file}.out", summarize=1000000)
 
 def printt(value, *args, **kwargs):
     print(20*">")
@@ -50,11 +55,8 @@ train_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='train_accuracy
 loss_object = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True, reduction='none') 
 
 def loss_function(real, pred):
-    real = tf.map_fn(lambda x: x-1, real)
-    real = tf.clip_by_value(real, 0, 7)
-    mask = tf.math.logical_not(tf.math.equal(real, -1))
+    mask = tf.math.logical_not(tf.math.equal(real, 0))
     loss_ = loss_object(real, pred)
-    loss_ = tf.clip_by_value(loss_, tf.float32.min, tf.float32.max)
 
     mask = tf.cast(mask, dtype=loss_.dtype)
     loss_ *= mask
@@ -81,7 +83,7 @@ fish = FishNChips(
   max_pool_layer_idx=3, 
   num_layers=num_layers, 
   d_model=d_model, 
-  output_dim=5, # ATCG + STOP
+  output_dim=1 + 4 + 1 + 1, # PAD + ATCG + START + STOP
   num_heads=num_heads, 
   dff=dff, 
   pe_encoder_max_length=pe_encoder_max_length, 
@@ -114,8 +116,10 @@ def train_step(inp, tar):
     loss = loss_function(tar_real, predictions)
 
   gradients = tape.gradient(loss, fish.trainable_variables)
-  # tf.print(gradients, output_stream="file://./gradients.out", summarize=1000000)
+  # printf(gradients)
   optimizer.apply_gradients(zip(gradients, fish.trainable_variables))
+  for trainable_var in fish.trainable_variables:
+    printf(trainable_var.name)
   
   train_loss(loss)
   train_accuracy(tar_real, predictions)
@@ -144,8 +148,8 @@ for epoch in range(EPOCHS):
   train_y_batch = []
   for y in train_y_orig:
     y = [t+1 for t in y] # since 0 is a base
-    y.insert(0, 6) # add 6 as start token
-    y.append(5) # add 5 as end token
+    y.insert(0, 5) # add 5 as start token
+    y.append(6) # add 6 as end token
     y.extend([0]*(pe_decoder_max_length-len(y))) # pad with zeros to pe_decoder_max_length
     train_y_batch.append(y)
   train_y_batch = np.array(train_y_batch)
