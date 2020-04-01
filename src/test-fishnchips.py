@@ -20,7 +20,7 @@ set_gpu_growth()
 
 num_layers = 4
 d_model = 256
-dff = 512
+dff = 2*d_model
 num_heads = 8
 
 pe_encoder_max_length = 300
@@ -104,7 +104,7 @@ def evaluate(inp):
 
 if __name__ == "__main__":
     evaluate(tf.random.uniform((300, 1)))
-    fish.load_weights("fish_weights.h5")
+    fish.load_weights(f"fish_weights_{d_model}.h5")
     results = [evaluate(X)[0].numpy() for X in X_batch]
     results = ["".join([attentionLabelBaseMap[y] for y in r]) for r in results]
 
