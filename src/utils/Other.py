@@ -20,6 +20,9 @@ attentionLabelBaseMap = {
     6: 'E'
 }
 
+def print_tensor_to_file(value, file="info"):
+    tf.print(value, output_stream=f"file://./{file}.out", summarize=1000000)
+
 def set_gpu_limit(limitMB):
     gpus = tf.config.experimental.list_physical_devices('GPU')
     if gpus:
