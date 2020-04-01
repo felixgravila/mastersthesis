@@ -14,9 +14,9 @@ from models.FishNChips import FishNChips
 set_gpu_growth()
 
 #%%
-EPOCHS = 5
-PATIENCE = 50
-NO_BATCHES = 5
+EPOCHS = 5000
+PATIENCE = 300
+NO_BATCHES = 200
 BATCH_SIZE = 32
 
 ENCODER_MAX_LENGTH = 300
@@ -25,7 +25,7 @@ ATTENTION_BLOCKS = 4
 CNN_BLOCKS = 5
 MAXPOOL_IDX = 3
 D_MODEL = 256
-DFF = 512
+DFF = 2*D_MODEL
 NUM_HEADS = 8
 DROPOUT_RATE = 0.1
 STRIDE = 30
@@ -82,7 +82,6 @@ accs = []
 waited = 0
 
 for epoch in range(EPOCHS):
-    
     start = time.time()
     train_loss.reset_states()
     train_accuracy.reset_states()
@@ -96,7 +95,7 @@ for epoch in range(EPOCHS):
         if batch % 10 == 0:
             print (f'Epoch {epoch + 1} Batch {batch} Loss {train_loss.result():.4f} Accuracy {train_accuracy.result():.4f}')
         accs.append([train_loss.result(), train_accuracy.result()])
-        np.save("train_res", np.array(accs))    
+        np.save(f"train_res_{d_model}", np.array(accs))    
 
     loss = train_loss.result()
     acc = train_accuracy.result()
@@ -105,9 +104,10 @@ for epoch in range(EPOCHS):
 
     if loss < old_loss:
         old_loss = loss
-        fish.save_weights("fish_weights.h5")
+        fish.save_weights(f"fish_weights_{d_model}.h5")
     else:
         waited += 1
         if waited > PATIENCE:
             print("Out of patience, exiting...")
-        break
+            break
+         
