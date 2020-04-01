@@ -23,7 +23,7 @@ set_gpu_growth()
 INPUT_LENGTH = 300
 use_maxpool = True
 
-EPOCHS = 1000
+EPOCHS = 5000
 NO_BATCHES = 200
 BATCH_SIZE = 32
 
@@ -68,8 +68,8 @@ optimizer = tf.keras.optimizers.Adam(learning_rate, beta_1=0.9, beta_2=0.98, eps
 # fish = FishNChips(d_model=256, num_cnn_blocks=5, max_pool_layer_idx=3, training=False)
 
 num_layers = 4
-d_model = 256
-dff = 512
+d_model = 1024  
+dff = 2*d_model
 num_heads = 8
 
 pe_encoder_max_length = 300
@@ -118,8 +118,6 @@ def train_step(inp, tar):
   gradients = tape.gradient(loss, fish.trainable_variables)
   # printf(gradients)
   optimizer.apply_gradients(zip(gradients, fish.trainable_variables))
-  for trainable_var in fish.trainable_variables:
-    printf(trainable_var.name)
   
   train_loss(loss)
   train_accuracy(tar_real, predictions)
@@ -132,7 +130,7 @@ def train_step(inp, tar):
 
 old_loss = 1
 accs = []
-PATIENCE = 50
+PATIENCE = 300
 waited = 0
 
 for epoch in range(EPOCHS):
@@ -169,7 +167,7 @@ for epoch in range(EPOCHS):
     if batch % 10 == 0:
       print (f'Epoch {epoch + 1} Batch {batch} Loss {train_loss.result():.4f} Accuracy {train_accuracy.result():.4f}')
     accs.append([train_loss.result(), train_accuracy.result()])
-    np.save("train_res", np.array(accs))
+    np.save(f"train_res_{d_model}", np.array(accs))
     
   loss = train_loss.result()
   acc = train_accuracy.result()
@@ -178,7 +176,7 @@ for epoch in range(EPOCHS):
 
   if loss < old_loss:
     old_loss = loss
-    fish.save_weights("fish_weights.h5")
+    fish.save_weights(f"fish_weights_{d_model}.h5")
   else:
     waited += 1
     if waited > PATIENCE:
