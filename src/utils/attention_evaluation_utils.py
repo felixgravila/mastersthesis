@@ -2,7 +2,7 @@ import tensorflow as tf
 import numpy as np
 
 from models.Attention.attention_utils import create_combined_mask
-from utils.Other import attentionLabelBaseMap
+from utils.Other import attentionLabelBaseMap, with_timer
 
 def build(model):
     inp = tf.random.uniform((model.pe_encoder_max_length, 1)) 
@@ -41,6 +41,7 @@ def evaluate_window(inp, model, as_bases=True):
         output = "".join([attentionLabelBaseMap[base_token] for base_token in output])
     return output, attention_weights
 
+@with_timer
 def evaluate_batch(inp, model, batch_size, as_bases=True):
     
     start_token = 5
@@ -50,7 +51,7 @@ def evaluate_batch(inp, model, batch_size, as_bases=True):
     attention_weights = None
     end_tokens = np.zeros(batch_size, dtype=int) # track end token in batch: [0, 1...] -> [no_end_token, end_token, ...] 
 
-    for _ in range(model.pe_encoder_max_length):
+    for _ in range(model.pe_decoder_max_length):
         combined_mask = create_combined_mask(output)
         predictions, attention_weights = model(inp, output, False, combined_mask) # (batch_size, i + 1, vocab_size)
         predictions = predictions[: ,-1:, :]  # (batch_size, 1, vocab_size) - take latest prediction 
@@ -62,7 +63,7 @@ def evaluate_batch(inp, model, batch_size, as_bases=True):
                 
         if all(j == 1 for j in end_tokens): # every example in batch has an end token
             output = output[:,1:] # remove start tokens
-            output = _cut_predition_ends(output, end_token) # cut end token and everything after it
+            output = cut_predition_ends(output, end_token) # cut end token and everything after it
             if as_bases: # convert every example to a string of bases
                 output = ["".join([attentionLabelBaseMap[base_token] for base_token in example]) for example in output]
             return output, attention_weights
@@ -70,16 +71,16 @@ def evaluate_batch(inp, model, batch_size, as_bases=True):
         output = tf.concat([output, predisction_ids], axis=-1)
 
     output = output[:,1:]
-    output = _cut_predition_ends(output, end_token)
+    output = cut_predition_ends(output, end_token)
     if as_bases:
         output = ["".join([attentionLabelBaseMap[base_token] for base_token in example]) for example in output]
     return output, attention_weights
 
-def _cut_predition_ends(output_batch, end_token):
+def cut_predition_ends(output_batch, end_token):
     outputs = []
     for example in output_batch:
         for j,token in enumerate(example):
-            if(token == end_token):
+            if(token == end_token or j == len(example)-1):
                 outputs.append(example[:j].numpy())
                 break
     return outputs

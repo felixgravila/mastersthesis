@@ -23,7 +23,7 @@ class AttentionDataGenerator(DataGenerator):
                 y.append(6) # add 6 as end token
                 y.extend([0]*(self._pe_decoder_max_length-len(y))) # pad with zeros to pe_decoder_max_length
                 if label_as_bases:
-                    y = "".join([attentionLabelBaseMap[i] for i in y])
+                    y = "".join([attentionLabelBaseMap[base_token] if (base_token in [1,2,3,4]) else "" for base_token in y])
                 
                 y_new.append(y)
             y_new = np.array(y_new)          
