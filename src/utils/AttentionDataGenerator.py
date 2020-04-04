@@ -1,6 +1,7 @@
 import numpy as np
 
 from utils.DataGenerator import DataGenerator
+from utils.Other import attentionLabelBaseMap
 
 class AttentionDataGenerator(DataGenerator):
     def __init__(self, read_ids, batch_size, stride, pe_encoder_max_length, pe_decoder_max_length):
@@ -9,7 +10,7 @@ class AttentionDataGenerator(DataGenerator):
         self._pe_decoder_max_length = pe_decoder_max_length
         self._batch_count = 0
 
-    def get_batch(self):
+    def get_batch(self, label_as_bases=False):
         while True:
             self._batch_count += 1
             
@@ -21,16 +22,19 @@ class AttentionDataGenerator(DataGenerator):
                 y.insert(0, 5) # add 5 as start token
                 y.append(6) # add 6 as end token
                 y.extend([0]*(self._pe_decoder_max_length-len(y))) # pad with zeros to pe_decoder_max_length
+                if label_as_bases:
+                    y = "".join([attentionLabelBaseMap[i] for i in y])
+                
                 y_new.append(y)
             y_new = np.array(y_new)          
 
             yield (x,y_new)
     
-    def get_batches(self, number_of_batches):
+    def get_batches(self, number_of_batches, label_as_bases=False):
         while True:
             batches = []
             for _ in range(number_of_batches):
-                x,y = next(self.get_batch())
+                x,y = next(self.get_batch(), label_as_bases)
                 batches.append([x,y])
 
             #batches = np.array(batches)
