@@ -1,6 +1,7 @@
 import tensorflow as tf
 import os
 import re
+from datetime import datetime
 
 labelBaseMap = {
     0: "A",
@@ -81,3 +82,12 @@ def analyse_cigar(cigar_string):
     for r in res:
         d[r[-1]] += int(r[:-1])
     return d
+
+def with_timer(func):
+    def wrapper(*args, **kwargs):
+        start_time = datetime.now()
+        res = func(*args, **kwargs)
+        end_time = datetime.now()
+        print(f"Class/function:{func.__qualname__ }, Took: {end_time-start_time}, Start:{start_time}, End:{end_time}")
+        return res
+    return wrapper

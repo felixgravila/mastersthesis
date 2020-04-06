@@ -2,21 +2,27 @@ import tensorflow as tf
 
 from models.Layers.ConvBlock import ConvolutionBlock
 from models.Attention.Transformer import Transformer
+from utils.Other import with_timer
 
 class FishNChips(tf.keras.Model):
     def __init__(self, num_cnn_blocks, max_pool_layer_idx, num_layers, d_model, output_dim, num_heads, dff, pe_encoder_max_length, pe_decoder_max_length, rate=0.1):
         super(FishNChips, self).__init__()
+        self.pe_encoder_max_length = pe_encoder_max_length
+        self.pe_decoder_max_length = pe_decoder_max_length
+        
         self.max_pool_layer_idx = max_pool_layer_idx
         self.max_pool = tf.keras.layers.MaxPooling1D(pool_size=2, name="max_pool_1D")
         
         self.cnn_blocks = [ConvolutionBlock([1,3,1], d_model, i) for i in range(num_cnn_blocks)]
         self.transformer = Transformer(num_layers=num_layers, d_model=d_model, output_dim=output_dim, num_heads=num_heads, dff=dff, pe_encoder_max_length=pe_encoder_max_length, pe_decoder_max_length=pe_decoder_max_length)
     
+    #@with_timer
     def call(self, inp, tar, training, look_ahead_mask):
         x = self.call_cnn_blocks(inp)
         att_output, att_weights = self.transformer(x, tar, training, look_ahead_mask)
         return att_output, att_weights
-        
+
+    #@with_timer  
     def call_cnn_blocks(self, x):
         for i,cnn_block in enumerate(self.cnn_blocks):
             x = cnn_block(x)
