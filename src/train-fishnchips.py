@@ -22,8 +22,8 @@ BATCH_SIZE = 32
 ENCODER_MAX_LENGTH = 300
 DECODER_MAX_LENGTH = 100
 ATTENTION_BLOCKS = 4
-CNN_BLOCKS = 5
-MAXPOOL_IDX = 3
+CNN_BLOCKS = 0
+MAXPOOL_IDX = 3 # ignored if > CNN_BLOCKS
 D_MODEL = 256
 DFF = 2*D_MODEL
 NUM_HEADS = 8
@@ -95,7 +95,7 @@ for epoch in range(EPOCHS):
         if batch % 10 == 0:
             print (f'Epoch {epoch + 1} Batch {batch} Loss {train_loss.result():.4f} Accuracy {train_accuracy.result():.4f}')
         accs.append([train_loss.result(), train_accuracy.result()])
-        np.save(f"train_res_{D_MODEL}", np.array(accs))    
+        np.save(f"train_res_{D_MODEL}_{CNN_BLOCKS}CNN", np.array(accs))    
 
     loss = train_loss.result()
     acc = train_accuracy.result()
@@ -104,7 +104,7 @@ for epoch in range(EPOCHS):
 
     if loss < old_loss:
         old_loss = loss
-        fish.save_weights(f"fish_weights_{D_MODEL}.h5")
+        fish.save_weights(f"fish_weights_{D_MODEL}_{CNN_BLOCKS}CNN.h5")
     else:
         waited += 1
         if waited > PATIENCE:
