@@ -1,2 +1,3 @@
-
 outputs/
+*.h5
+*.npy
