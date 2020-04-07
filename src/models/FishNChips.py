@@ -7,6 +7,8 @@ from utils.Other import with_timer
 class FishNChips(tf.keras.Model):
     def __init__(self, num_cnn_blocks, max_pool_layer_idx, num_layers, d_model, output_dim, num_heads, dff, pe_encoder_max_length, pe_decoder_max_length, rate=0.1):
         super(FishNChips, self).__init__()
+        self.pe_encoder_max_length = pe_encoder_max_length
+        self.pe_decoder_max_length = pe_decoder_max_length
 
         # cnn layer for dimensionality expansion
         self.first_cnn = tf.keras.layers.Conv1D(d_model, 1, padding="same", activation="relu", name=f"dimensionality-cnn")
