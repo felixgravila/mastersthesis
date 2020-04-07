@@ -95,7 +95,7 @@ for epoch in range(EPOCHS):
         if batch % 10 == 0:
             print (f'Epoch {epoch + 1} Batch {batch} Loss {train_loss.result():.4f} Accuracy {train_accuracy.result():.4f}')
         accs.append([train_loss.result(), train_accuracy.result()])
-        np.save(f"./trained_models/train_res__{D_MODEL}_{CNN_BLOCKS}CNN-{NUM_HEADS}H", np.array(accs))    
+        np.save(f"./trained_models/train_res_{D_MODEL}_{CNN_BLOCKS}CNN-{NUM_HEADS}H", np.array(accs))    
 
     loss = train_loss.result()
     acc = train_accuracy.result()
