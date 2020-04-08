@@ -1,13 +1,14 @@
 # %%
+import sys
+import editdistance
+import matplotlib.pyplot as plt
+sys.path.insert(0, './src')
+
 from utils.Other import set_gpu_growth
 from utils.DataPrepper import DataPrepper
 from models.FishNChips import FishNChips
 from utils.attention_evaluation_utils import build, evaluate_batch
 from utils.AttentionDataGenerator import AttentionDataGenerator
-import sys
-import editdistance
-import matplotlib.pyplot as plt
-sys.path.insert(0, './src')
 
 set_gpu_growth()
 
@@ -23,8 +24,8 @@ DECODER_MAX_LENGTH = 100
 DROPOUT_RATR = 0.1
 STRIDE = 30
 
-EPOCHS = 3
-BATCH_SIZE = 32
+EPOCHS = 10
+BATCH_SIZE = 2
 AS_BASE_STRING = True
 
 # %%
@@ -51,12 +52,12 @@ fish = FishNChips(
 if __name__ == "__main__":
 
     build(fish)
-    fish.load_weights("./fish_weights_256.h5")
+    fish.load_weights("./src/fish_weights_256.h5")
 
     for epoch in range(EPOCHS):
         x_batch, y_batch_true = next(generator.get_batch(label_as_bases=AS_BASE_STRING))
         y_batch_pred, _ = evaluate_batch(x_batch, fish, BATCH_SIZE, as_bases=AS_BASE_STRING)
 
-        # for i, (t, p) in enumerate(zip(y_batch_true, y_batch_pred)):
-        #     ed = editdistance.eval(t, p)
-        #     print(f"ED:{editdistance.eval(t,p)}, True:{t}, Pred:{p}")
+        for i, (t, p) in enumerate(zip(y_batch_true, y_batch_pred)):
+            ed = editdistance.eval(t, p)
+            print(f"ED:{editdistance.eval(t,p)}, True:{t}, Pred:{p}")

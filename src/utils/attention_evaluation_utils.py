@@ -2,7 +2,7 @@ import tensorflow as tf
 import numpy as np
 
 from models.Attention.attention_utils import create_combined_mask
-from utils.Other import attentionLabelBaseMap, with_timer
+from utils.Other import attentionLabelBaseMap, with_eval_timer
 
 def build(model):
     inp = tf.random.uniform((model.pe_encoder_max_length, 1)) 
@@ -41,7 +41,7 @@ def evaluate_window(inp, model, as_bases=True):
         output = "".join([attentionLabelBaseMap[base_token] for base_token in output])
     return output, attention_weights
 
-@with_timer
+@with_eval_timer
 def evaluate_batch(inp, model, batch_size, as_bases=True):
     
     start_token = 5
@@ -51,12 +51,14 @@ def evaluate_batch(inp, model, batch_size, as_bases=True):
     attention_weights = None
     end_tokens = np.zeros(batch_size, dtype=int) # track end token in batch: [0, 1...] -> [no_end_token, end_token, ...] 
 
+    use_cached_enc_output = False
     for _ in range(model.pe_decoder_max_length):
         combined_mask = create_combined_mask(output)
-        predictions, attention_weights = model(inp, output, False, combined_mask) # (batch_size, i + 1, vocab_size)
+        predictions, attention_weights = model(inp, output, False, combined_mask, use_cached_enc_output) # (batch_size, i + 1, vocab_size)
+        use_cached_enc_output = True
+        
         predictions = predictions[: ,-1:, :]  # (batch_size, 1, vocab_size) - take latest prediction 
         predisction_ids = tf.cast(tf.argmax(predictions, axis=-1), tf.int32) # take highest base token for every batch example
-
         for j in range(predisction_ids.shape[0]):
             if(predisction_ids[j][0] == end_token):
                 end_tokens[j] = 1 # check and add new end tokens

@@ -88,6 +88,24 @@ def with_timer(func):
         start_time = datetime.now()
         res = func(*args, **kwargs)
         end_time = datetime.now()
-        print(f"Class/function:{func.__qualname__ }, Took: {end_time-start_time}, Start:{start_time}, End:{end_time}")
+        took = end_time-start_time
+        print(f"Took: {end_time-start_time}, Len: {len(res[0])}, Start:{start_time}, End:{end_time}, Class/function:{func.__qualname__ }")
+        return res
+    return wrapper
+
+def with_eval_timer(func):
+    def wrapper(*args, **kwargs):
+        start_time = datetime.now()
+        res = func(*args, **kwargs)
+        end_time = datetime.now()
+
+        max_len = 0
+        for seq in res[0]:
+            if(len(seq) > max_len):
+                max_len = len(seq)
+
+        took = end_time-start_time
+        avg_per_base = took / max_len
+        print(f"Took: {end_time-start_time}, Max seq length: {max_len}, Avg time per base:{avg_per_base}, Class/function:{func.__qualname__ }")
         return res
     return wrapper
