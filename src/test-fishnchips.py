@@ -14,10 +14,10 @@ set_gpu_growth()
 
 # %%
 ATTENTION_BLOCKS = 4
-CNN_BLOCKS = 5
+CNN_BLOCKS = 0
 MAXPOOL_BLOCK_IDX = 3
 D_MODEL = 256
-DFF = 512
+DFF = 2*D_MODEL
 NUM_HEADS = 8
 ENCODER_MAX_LENGTH = 300
 DECODER_MAX_LENGTH = 100
@@ -47,17 +47,13 @@ fish = FishNChips(
     pe_encoder_max_length=ENCODER_MAX_LENGTH,
     pe_decoder_max_length=DECODER_MAX_LENGTH,
     rate=DROPOUT_RATR)
+build(fish)
+fish.load_weights(f"./trained_models/fish_weights_{D_MODEL}_{CNN_BLOCKS}CNN-{NUM_HEADS}H.h5")
 
-# %%
-if __name__ == "__main__":
+for epoch in range(EPOCHS):
+    x_batch, y_batch_true = next(generator.get_batch(label_as_bases=AS_BASE_STRING))
+    y_batch_pred, _ = evaluate_batch(x_batch, fish, BATCH_SIZE, as_bases=AS_BASE_STRING)
 
-    build(fish)
-    fish.load_weights("./src/fish_weights_256.h5")
-
-    for epoch in range(EPOCHS):
-        x_batch, y_batch_true = next(generator.get_batch(label_as_bases=AS_BASE_STRING))
-        y_batch_pred, _ = evaluate_batch(x_batch, fish, BATCH_SIZE, as_bases=AS_BASE_STRING)
-
-        for i, (t, p) in enumerate(zip(y_batch_true, y_batch_pred)):
-            ed = editdistance.eval(t, p)
-            print(f"ED:{editdistance.eval(t,p)}, True:{t}, Pred:{p}")
+    for i, (t, p) in enumerate(zip(y_batch_true, y_batch_pred)):
+        ed = editdistance.eval(t, p)
+        print(f"ED:{editdistance.eval(t,p)}, True:{t}, Pred:{p}")
