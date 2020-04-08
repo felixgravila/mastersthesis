@@ -87,7 +87,7 @@ for i in range(READS):
         print(f"Predicting windows {i}-{i+len(x_batch)}")
 
         y_batch_true = y_windows[i:i+BATCH_SIZE]
-        y_batch_pred, _ = evaluate_batch(x_batch, fish, BATCH_SIZE, as_bases=AS_BASE_STRING)
+        y_batch_pred, _ = evaluate_batch(x_batch, fish, len(x_batch), as_bases=AS_BASE_STRING)
         y_pred.extend(y_batch_pred)
         print()
 
