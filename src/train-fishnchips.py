@@ -54,10 +54,9 @@ fish = FishNChips(
   rate=DROPOUT_RATE)
 
 train_step_signature = [
-    tf.TensorSpec(shape=(None, None, 1), dtype=tf.float32),
-    tf.TensorSpec(shape=(None, None), dtype=tf.int32),
+    tf.TensorSpec(shape=(BATCH_SIZE, ENCODER_MAX_LENGTH, 1), dtype=tf.float32),
+    tf.TensorSpec(shape=(BATCH_SIZE, DECODER_MAX_LENGTH), dtype=tf.int32),
 ]
-
 @tf.function(input_signature=train_step_signature)
 def train_step(inp, tar):
   tar_inp = tar[:, :-1]
