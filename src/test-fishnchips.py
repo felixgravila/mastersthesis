@@ -1,13 +1,14 @@
 # %%
+import sys
+import editdistance
+import matplotlib.pyplot as plt
+sys.path.insert(0, './src')
+
 from utils.Other import set_gpu_growth
 from utils.DataPrepper import DataPrepper
 from models.FishNChips import FishNChips
 from utils.attention_evaluation_utils import build, evaluate_batch
 from utils.AttentionDataGenerator import AttentionDataGenerator
-import sys
-import editdistance
-import matplotlib.pyplot as plt
-sys.path.insert(0, './src')
 
 set_gpu_growth()
 
@@ -23,8 +24,8 @@ DECODER_MAX_LENGTH = 100
 DROPOUT_RATR = 0.1
 STRIDE = 30
 
-EPOCHS = 3
-BATCH_SIZE = 32
+EPOCHS = 10
+BATCH_SIZE = 2
 AS_BASE_STRING = True
 
 # %%
@@ -50,7 +51,7 @@ fish = FishNChips(
 #%%
 
 build(fish)
-fish.load_weights(f"./trained_models/fish_weights_{D_MODEL}_{CNN_BLOCKS}CNN-{NUM_HEADS}H.h5")
+fish.load_weights(f"./trained_models/fish_weights_256_0CNN-8H.h5")
 
 #%%
 

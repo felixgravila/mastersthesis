@@ -21,10 +21,10 @@ class FishNChips(tf.keras.Model):
         self.transformer = Transformer(num_layers=num_layers, d_model=d_model, output_dim=output_dim, num_heads=num_heads, dff=dff, pe_encoder_max_length=pe_encoder_max_length, pe_decoder_max_length=pe_decoder_max_length)
     
     #@with_timer
-    def call(self, inp, tar, training, look_ahead_mask):
+    def call(self, inp, tar, training, look_ahead_mask, use_cached_enc_ouput=False):
         x = self.first_cnn(inp) # to bring to proper dimensionality
         x = self.call_cnn_blocks(x) # won't do anything if no cnn blocks
-        att_output, att_weights = self.transformer(x, tar, training, look_ahead_mask)
+        att_output, att_weights = self.transformer(x, tar, training, look_ahead_mask, use_cached_enc_ouput)
         return att_output, att_weights
 
     #@with_timer  
