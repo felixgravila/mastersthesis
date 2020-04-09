@@ -30,9 +30,3 @@ class Transformer(tf.keras.layers.Layer):
     self.cached_enc_output = enc_output
     self.prev_inp = inp
     return enc_output
-  
-  def _has_input_changed(self, inp, prev_inp):
-    if prev_inp is None:
-      return True 
-
-    return not tf.reduce_all(inp == prev_inp)
