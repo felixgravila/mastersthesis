@@ -1,5 +1,5 @@
 *.h5
 *.npy
-!fish_weights_256_0CNN-8H.h5
-!train_res_256_0CNN-8H.npy
+!fish_weights_256_0CNN_8H.h5
+!train_res_256_0CNN_8H.npy
 
