@@ -96,3 +96,6 @@ def create_combined_mask(tar):
   look_ahead_mask = create_look_ahead_mask(tf.shape(tar)[1]) # this does the diagonal mask
   dec_target_padding_mask = create_padding_mask(tar) # this does the mask on padding
   return tf.maximum(dec_target_padding_mask, look_ahead_mask) # this makes a mask that goes on diagonal but also masks padding
+
+def create_mask_ctc(tar):
+  return create_look_ahead_mask(tf.shape(tar)[1]) # this does the diagonal mask

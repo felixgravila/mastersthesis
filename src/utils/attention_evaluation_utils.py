@@ -1,7 +1,7 @@
 import tensorflow as tf
 import numpy as np
 
-from models.Attention.attention_utils import create_combined_mask
+from models.Attention.attention_utils import create_combined_mask, create_mask_ctc
 from utils.Other import attentionLabelBaseMap, with_eval_timer
 
 def build(model):
@@ -41,7 +41,7 @@ def evaluate_window(inp, model, as_bases=True):
         output = "".join([attentionLabelBaseMap[base_token] for base_token in output])
     return output, attention_weights
 
-@with_eval_timer
+# @with_eval_timer
 def evaluate_batch(inp, model, batch_size, as_bases=True):
     
     start_token = 5
@@ -56,7 +56,7 @@ def evaluate_batch(inp, model, batch_size, as_bases=True):
         combined_mask = create_combined_mask(output)
         predictions, attention_weights = model(inp, output, False, combined_mask, use_cached_enc_output) # (batch_size, i + 1, vocab_size)
         use_cached_enc_output = True
-        
+            
         predictions = predictions[: ,-1:, :]  # (batch_size, 1, vocab_size) - take latest prediction 
         predisction_ids = tf.cast(tf.argmax(predictions, axis=-1), tf.int32) # take highest base token for every batch example
         for j in range(predisction_ids.shape[0]):
@@ -64,7 +64,7 @@ def evaluate_batch(inp, model, batch_size, as_bases=True):
                 end_tokens[j] = 1 # check and add new end tokens
                 
         if all(j == 1 for j in end_tokens): # every example in batch has an end token
-            output = output[:,1:] # remove start tokens
+                # remove start tokens
             output = cut_predition_ends(output, end_token) # cut end token and everything after it
             if as_bases: # convert every example to a string of bases
                 output = ["".join([attentionLabelBaseMap[base_token] for base_token in example]) for example in output]
@@ -76,6 +76,28 @@ def evaluate_batch(inp, model, batch_size, as_bases=True):
     output = cut_predition_ends(output, end_token)
     if as_bases:
         output = ["".join([attentionLabelBaseMap[base_token] for base_token in example]) for example in output]
+    return output, attention_weights
+
+def evaluate_batch_ctc(inp, model):
+    batch_size = len(inp)  
+    start_token = [0,0,0,0,0,1,0,0] # start token is one earlier since dash is the last one for ctc
+
+    output = tf.expand_dims(batch_size*[start_token], 1) # (batchsize, 1)
+    output = tf.cast(output, tf.float32)
+    attention_weights = None
+
+    use_cached_enc_output = False
+    for i in range(model.pe_decoder_max_length):
+        print(f"   Doing iteration: {i}/{model.pe_decoder_max_length}", end="\r")
+        lah_mask = create_mask_ctc(output)
+        predictions, attention_weights = model(inp, output, True, lah_mask, use_cached_enc_output) # (batch_size, i + 1, vocab_size)
+        use_cached_enc_output = True
+        
+        predictions = predictions[: ,-1:, :]  # (batch_size, vocab_size) - take latest prediction
+        output = tf.concat([output, predictions], axis=1)
+
+    print()
+    output = output[:,1:]
     return output, attention_weights
 
 def cut_predition_ends(output_batch, end_token):

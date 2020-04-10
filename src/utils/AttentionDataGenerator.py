@@ -17,6 +17,12 @@ class AttentionDataGenerator(DataGenerator):
             x, y_orig = self._buffer.get_windows_in_batch(self.batch_size, self.input_length, self.stride, min_labels_per_window=1)  
             y = self._to_target_language(y_orig, label_as_bases)         
             yield (x,y)
+
+    def get_batch_ctc(self):
+        while True:
+            self._batch_count += 1
+            x,y = self._buffer.get_windows_in_batch(self.batch_size, self.input_length, self.stride, min_labels_per_window=1)
+            yield (x,y)
     
     def get_batches(self, number_of_batches, label_as_bases=False):
         while True:
@@ -27,6 +33,16 @@ class AttentionDataGenerator(DataGenerator):
 
             #batches = np.array(batches)
             yield batches
+
+    def get_batches_ctc(self, number_of_batches, label_as_bases=False):
+        while True:
+            batches = []
+            for _ in range(number_of_batches):
+                x,y = next(self.get_batch_ctc())
+                batches.append([x,y])
+
+            yield batches
+
 
     def get_window_batch(self, label_as_bases=False):
         while True:

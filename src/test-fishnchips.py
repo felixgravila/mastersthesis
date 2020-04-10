@@ -51,7 +51,7 @@ fish = FishNChips(
 #%%
 
 build(fish)
-fish.load_weights(f"./trained_models/fish_weights_256_0CNN-8H.h5")
+fish.load_weights(f"./trained_models/fish_weights_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H.h5")
 
 #%%
 
@@ -59,9 +59,9 @@ for epoch in range(EPOCHS):
     x_batch, y_batch_true = next(generator.get_batch(label_as_bases=AS_BASE_STRING))
     y_batch_pred, _ = evaluate_batch(x_batch, fish, BATCH_SIZE, as_bases=AS_BASE_STRING)
 
-    # for i, (t, p) in enumerate(zip(y_batch_true, y_batch_pred)):
-    #     ed = editdistance.eval(t, p)
-    #     print(f"ED:{editdistance.eval(t,p)}, True:{t}, Pred:{p}")
+    for i, (t, p) in enumerate(zip(y_batch_true, y_batch_pred)):
+        ed = editdistance.eval(t, p)
+        print(f"ED:{editdistance.eval(t,p)}, True:{t}, Pred:{p}")
 
 
 # %%

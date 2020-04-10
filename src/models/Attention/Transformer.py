@@ -8,7 +8,7 @@ class Transformer(tf.keras.layers.Layer):
 
     self.encoder = Encoder(num_layers, d_model, num_heads, dff, pe_encoder_max_length, rate)
     self.decoder = Decoder(num_layers, d_model, num_heads, dff, pe_decoder_max_length, rate)
-    self.final_layer = tf.keras.layers.Dense(output_dim)
+    self.final_layer = tf.keras.layers.Dense(output_dim, activation="softmax")
 
     self.prev_inp = None
     self.cached_enc_output = None
