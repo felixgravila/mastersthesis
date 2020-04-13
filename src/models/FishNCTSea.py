@@ -1,8 +1,10 @@
 import tensorflow as tf
+import numpy as np
+from functools import reduce
 
 from models.Layers.ConvBlock import ConvolutionBlock
 from models.Attention.Encoder import Encoder
-from utils.Other import with_timer
+from utils.Other import with_timer, labelBaseMap
 
 class FishNCTSea(tf.keras.Model):
     def __init__(self, num_cnn_blocks, max_pool_layer_idx, num_layers, d_model, output_dim, num_heads, dff, pe_encoder_max_length, rate=0.1):
@@ -37,3 +39,12 @@ class FishNCTSea(tf.keras.Model):
                 x = self.max_pool(x)
         return x
         
+
+    def predict(self, X, batchsize=100):
+        results = []
+        for i in range(0, len(X), batchsize):
+            pred = self(X[i:i+batchsize], False)
+            cur = [[np.argmax(ts) for ts in p] for p in pred]
+            nodup = ["".join(list(map(lambda x: labelBaseMap[x], filter(lambda x: x!=4, reduce(lambda acc, x: acc if acc[-1] == x else acc + [x], c[5:], [4]))))) for c in cur]
+            results.extend(nodup)
+        return results

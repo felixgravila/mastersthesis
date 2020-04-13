@@ -6,11 +6,13 @@ import matplotlib.pyplot as plt
 
 from utils.DataGenerator import DataGenerator
 from utils.DataPrepper import DataPrepper
-from utils.Other import set_gpu_growth, print_tensor_to_file
+from utils.Other import set_gpu_growth, print_tensor_to_file, labelBaseMap
 
 from models.Attention.CustomSchedule import CustomSchedule
 from models.FishNCTSea import FishNCTSea
 from utils.attention_evaluation_utils import evaluate_batch, evaluate_batch_ctc
+
+import editdistance
 
 set_gpu_growth()
 
@@ -49,6 +51,7 @@ fish = FishNCTSea(
   dff=DFF,
   pe_encoder_max_length=ENCODER_MAX_LENGTH,
   rate=DROPOUT_RATE)
+fish.build(input_shape=(None, ENCODER_MAX_LENGTH, 1))
   
 """ 
 ctc_batch_cost(labels, y_pred, input_length, label_length) 
@@ -99,6 +102,18 @@ def make_anim_image(X, epoch):
   plt.close()
 
 
+def test_edit_distance():
+  print(f"Testing ed for epoch {epoch}...")
+  batch, _ = next(generator.get_batch())
+  test_data = batch['the_input']
+  test_labels = batch['unpadded_labels']
+  test_labels = ["".join([labelBaseMap[x] for x in y]) for y in test_labels]
+  predictions = fish.predict(test_data)
+
+  eds = [editdistance.eval(p,t) for (p,t) in zip(predictions, test_labels)]
+  return np.mean(eds)
+
+
 #%%
 old_loss = 1000000000
 losses = []
@@ -131,12 +146,13 @@ for epoch in range(EPOCHS):
 
     make_anim_image(Xforimg, epoch)
 
-    loss = train_loss.result()
-    print (f'Epoch {epoch + 1} Loss {loss:.4f}')
-    print (f'Time taken for 1 epoch: {time.time() - start} secs\n')
+    aed = test_edit_distance()
 
-    if loss < old_loss:
-        old_loss = loss
+    loss = train_loss.result()
+    print (f'Epoch {epoch + 1} Loss {loss:.4f} AED {aed:.4f} TOOK {time.time() - start} secs')
+
+    if aed < old_loss:
+        old_loss = aed
         fish.save_weights(f"./trained_models/fishnctsea_weights_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H.h5")
     else:
         waited += 1
