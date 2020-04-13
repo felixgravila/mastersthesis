@@ -100,7 +100,7 @@ def make_anim_image(X, epoch):
 
 
 #%%
-old_loss = 1
+old_loss = 1000000000
 losses = []
 waited = 0
 
