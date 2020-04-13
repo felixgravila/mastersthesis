@@ -71,7 +71,7 @@ label_length = tf.constant([[3], [4]])
 def train_step(inp, labels, input_length, label_length):
   with tf.GradientTape() as tape: 
     predictions, _ = evaluate_batch_ctc(inp, fish)
-    print_tensor_to_file(predictions)
+    # print_tensor_to_file(predictions)
     loss = tf.keras.backend.ctc_batch_cost(labels, predictions, input_length, label_length)
 
   gradients = tape.gradient(loss, fish.trainable_variables)
