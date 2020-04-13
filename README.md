@@ -21,3 +21,6 @@ Avg acc for chiron-pad5-maxpool3: 91.35%, not found: 0%(0)
 256 acc 81.7% (on 25 items)
 1024 acc 93.19% (on 22 items (manually removed 3 outliers)) - took ~ 1h20 on a v100
 ```
+
+## MISC
+Tried beam search with width > 1, didn't work
