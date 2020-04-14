@@ -1,4 +1,5 @@
 import numpy as np
+from scipy import signal
 
 from utils.DataBuffer import DataBuffer
 from utils.Other import labelBaseMap
@@ -37,6 +38,23 @@ class DataGenerator():
             y = self._get_dummy_y(signal_windows)
 
             yield (x,y)
+
+    def get_batch_spectro(self):
+        while True:
+            x,y = next(self.get_batch())
+            new_inputs = []
+            for window in x['the_input']:
+                sig = window.reshape(-1,)
+                _,_, Sxx = signal.spectrogram(sig, nperseg=10, noverlap=5)
+                # for input_length = 300, Sxx.shape = (59, 6)
+                new_inputs.append(Sxx.transpose())
+            x['the_input'] = np.array(new_inputs)
+            out_len_after_pad = new_inputs[0].shape[0] - 2*self.rnn_pad_size
+            x['the_labels'] = x['the_labels'][:,:out_len_after_pad]
+            x['input_length'] = np.array([len(new_inputs[0])]*len(new_inputs))
+
+            yield (x,y)
+
 
     def get_evaluate_batch(self):
         while True:

@@ -4,6 +4,7 @@ class ChironBuilder():
 
     def __init__(self, input_length):
         self.input_length = input_length
+        self.input_dim = 1
         self.rnn_padding = 0
         self.maxpool_layer = 0
         self.batch_normalization = False
@@ -40,6 +41,15 @@ class ChironBuilder():
     def with_None_input(self):
         self.none_input = True
         return self
+
+    '''
+    Signal usually has input dim 1
+    This can be used e.g with spectrogram data
+    '''
+    def with_different_input_dim(self, input_dim):
+        self.input_dim = input_dim
+        self.model_name += f"-indim{input_dim}"
+        return self
     
     def build(self):
         return Chiron(
@@ -49,4 +59,5 @@ class ChironBuilder():
             maxpool_layer=self.maxpool_layer,
             model_name=self.model_name,
             dropout=self.dropout,
-            use_None_input=self.none_input)
+            use_None_input=self.none_input,
+            input_dim=self.input_dim)
