@@ -12,15 +12,15 @@ from utils.Other import set_gpu_growth, print_tensor_to_file
 from models.Attention.CustomSchedule import CustomSchedule
 from models.Attention.attention_utils import create_combined_mask
 from models.FishNChipsCTSea import FishNChipsCTSea
-from utils.attention_evaluation_utils import evaluate_batch, evaluate_batch_ctc
+from utils.attention_evaluation_utils import evaluate_batch_ctc_combined
 
 set_gpu_growth()
 
 #%%
 EPOCHS = 9999
 PATIENCE = 300
-NO_BATCHES = 100
-BATCH_SIZE = 32
+NO_BATCHES = 10
+BATCH_SIZE = 3
 
 ENCODER_MAX_LENGTH = 300
 DECODER_MAX_LENGTH = 100
@@ -108,7 +108,7 @@ def normalise_squiggle(squiggle):
 
 def make_anim_image(X, epoch):
   print(f"Making animation image for epoch {epoch}...")
-  tar = tf.random.uniform((BATCH_SIZE, DECODER_MAX_LENGTH))
+  tar = tf.random.uniform((BATCH_SIZE, DECODER_MAX_LENGTH - 1), dtype=tf.dtypes.int32, minval=0, maxval=7)
   predictions_enc, _ = fish(X, tar, False, None)
   pred = predictions_enc[0]
   pred_transp = list(map(list, zip(*pred)))
@@ -122,16 +122,17 @@ def make_anim_image(X, epoch):
   plt.savefig(f"trained_models/image_e{epoch:05d}.png")
   plt.close()
 
-def test_edit_distance(print=False):
+def test_edit_distance(output=False):
     print("evaluating...")
     x_batch, y_batch_true = next(generator.get_batch(label_as_bases=True))
-    y_batch_pred, _ = evaluate_batch_ctc(x_batch, fish, BATCH_SIZE, as_bases=True)
+    y_batch_pred = evaluate_batch_ctc_combined(x_batch, fish, BATCH_SIZE, as_bases=True)
 
     eds = []
     for _, (t, p) in enumerate(zip(y_batch_true, y_batch_pred)):
       ed = editdistance.eval(t, p)
-      print(f"ED:{editdistance.eval(t,p)}, True:{t}, Pred:{p}")
       eds.append(ed)
+      if(output):
+        print(f"ED:{editdistance.eval(t,p)}, True:{t}, Pred:{p}")
     return np.array(eds).mean()
 #%%
 old_loss = 1000000000
@@ -173,7 +174,7 @@ for epoch in range(EPOCHS):
     make_anim_image(Xforimg, epoch)
 
     if epoch % 5 == 0:
-      aed = test_edit_distance()
+      aed = test_edit_distance(output=True)
     
     loss = train_loss.result()
     print (f'Epoch {epoch + 1} Loss {loss:.4f} AED {aed:.4f} TOOK {time.time() - start} secs')
