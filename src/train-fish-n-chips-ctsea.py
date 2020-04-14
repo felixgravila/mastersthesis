@@ -106,10 +106,11 @@ def normalise_squiggle(squiggle):
   squiggle = (squiggle-squig_min)/(squig_max-squig_min)
   return squiggle
 
-def make_anim_image(X, epoch):
+def make_anim_image(inp, tar, epoch):
   print(f"Making animation image for epoch {epoch}...")
-  tar = tf.random.uniform((BATCH_SIZE, DECODER_MAX_LENGTH - 1), dtype=tf.dtypes.int32, minval=0, maxval=7)
-  predictions_enc, _ = fish(X, tar, False, None)
+  mask = create_combined_mask(tar)
+  predictions_enc, _ = fish(inp, tar, False, mask)
+  
   pred = predictions_enc[0]
   pred_transp = list(map(list, zip(*pred)))
   
@@ -117,7 +118,7 @@ def make_anim_image(X, epoch):
   for i,l in enumerate(pred_transp):
     #ll = list(np.repeat(l, 3))
     plt.plot(l, label=i)
-  plt.plot(normalise_squiggle(X[0]), c="k")
+  plt.plot(normalise_squiggle(inp[0]), c="k")
   plt.legend()
   plt.savefig(f"trained_models/image_e{epoch:05d}.png")
   plt.close()
@@ -140,7 +141,9 @@ losses = []
 waited = 0
 aed = 1000000000
 
-Xforimg = np.array([next(generator.get_batch_combined())[0][0]])
+img_data = next(generator.get_batch_combined())
+img_inp = np.array([img_data[0][0]])
+img_tar = np.array([img_data[2][0]])
 
 for epoch in range(EPOCHS):
     start = time.time()
@@ -171,7 +174,7 @@ for epoch in range(EPOCHS):
     losses.append([train_loss.result()])
     np.save(f"./trained_models/fish-n-chips-ctsea-combined_RES_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H", np.array(losses))
 
-    make_anim_image(Xforimg, epoch)
+    make_anim_image(img_inp, img_tar, epoch)
 
     if epoch % 5 == 0:
       aed = test_edit_distance(output=True)
