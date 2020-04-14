@@ -98,7 +98,7 @@ def make_anim_image(X, epoch):
     plt.plot(l, label=i)
   plt.plot(normalise_squiggle(X[0]), c="k")
   plt.legend()
-  plt.savefig(f"trained_models/fishnctsea_image_e{epoch:05d}.png")
+  plt.savefig(f"trained_models/fishnctsea_image_d{D_MODEL}_e{epoch:05d}.png")
   plt.close()
 
 
