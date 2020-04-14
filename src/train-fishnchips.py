@@ -2,6 +2,7 @@
 import time
 import tensorflow as tf 
 import numpy as np
+import editdistance
 
 from utils.AttentionDataGenerator import AttentionDataGenerator
 from utils.DataPrepper import DataPrepper
@@ -10,14 +11,15 @@ from utils.Other import set_gpu_growth, print_tensor_to_file
 from models.Attention.CustomSchedule import CustomSchedule
 from models.Attention.attention_utils import create_combined_mask
 from models.FishNChips import FishNChips
+from utils.attention_evaluation_utils import evaluate_batch
 
 set_gpu_growth()
 
 #%%
 EPOCHS = 5000
 PATIENCE = 300
-NO_BATCHES = 200
-BATCH_SIZE = 32
+NO_BATCHES = 10
+BATCH_SIZE = 3
 
 ENCODER_MAX_LENGTH = 300
 DECODER_MAX_LENGTH = 100
@@ -75,6 +77,20 @@ def train_step(inp, tar):
   train_loss(loss)
   train_accuracy(tar_real, predictions)
 
+  
+def test_edit_distance(output=False):
+    print("evaluating...")
+    x_batch, y_batch_true = next(generator.get_batch(label_as_bases=True))
+    y_batch_pred, _ = evaluate_batch(x_batch, fish, BATCH_SIZE, as_bases=True)
+
+    eds = []
+    for _, (t, p) in enumerate(zip(y_batch_true, y_batch_pred)):
+      ed = editdistance.eval(t, p)
+      eds.append(ed)
+      if(output):
+        print(f"ED:{ed}, True:{t}, Pred:{p}")
+    return np.array(eds).mean()
+
 #%%
 old_loss = 1
 accs = []
@@ -102,6 +118,10 @@ for epoch in range(EPOCHS):
     print (f'Epoch {epoch + 1} Loss {loss:.4f} Accuracy {acc:.4f}')
     print (f'Time taken for 1 epoch: {time.time() - start} secs\n')
 
+    if epoch % 5 == 0:
+      aed = test_edit_distance(output=True)
+      print(f"AED: {aed}")
+
     if loss < old_loss:
       waited = 0
       old_loss = loss
@@ -112,3 +132,4 @@ for epoch in range(EPOCHS):
             print("Out of patience, exiting...")
             break
          
+

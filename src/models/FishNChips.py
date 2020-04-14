@@ -24,10 +24,10 @@ class FishNChips(tf.keras.Model):
     #@with_timer
     def call(self, inp, tar, training, look_ahead_mask, use_cached_enc_ouput=False):
         x_enc = self.first_encoder_cnn(inp) # to bring to proper dimensionality
-        x_dec = self.first_decoder_cnn(tar) # to bring to proper dimensionality for ctc 8->d_model
+        #x_dec = self.first_decoder_cnn(tar) # to bring to proper dimensionality for ctc 8->d_model
         
         x_enc = self.call_cnn_blocks(x_enc) # won't do anything if no cnn blocks
-        att_output, att_weights = self.transformer(x_enc, x_dec, training, look_ahead_mask, use_cached_enc_ouput)
+        att_output, att_weights = self.transformer(x_enc, tar, training, look_ahead_mask, use_cached_enc_ouput)
         return att_output, att_weights
 
     #@with_timer  

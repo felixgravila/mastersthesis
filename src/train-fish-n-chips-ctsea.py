@@ -78,10 +78,13 @@ def train_step(inp, tar, labels, input_length, label_length):
   with tf.GradientTape() as tape: 
     enc_out, dec_out = fish(inp, tar_inp, True, combined_mask)
     
-    loss_ctc = tf.keras.backend.ctc_batch_cost(labels, enc_out, input_length, label_length)
-    loss_dec = get_decoder_loss(tar_real, dec_out, loss_object)
-    alpha = 0.2
-    loss_ = alpha * loss_ctc + (1-alpha) * loss_dec
+    # loss_ctc = tf.keras.backend.ctc_batch_cost(labels, enc_out, input_length, label_length)
+    # loss_dec = get_decoder_loss(tar_real, dec_out, loss_object)
+    # alpha = 0.2
+    # loss_ = alpha * loss_ctc + (1-alpha) * loss_dec
+    # loss = tf.reduce_mean(loss_)
+
+    loss_ = get_decoder_loss(tar_real, dec_out, loss_object)
     loss = tf.reduce_mean(loss_)
 
   gradients = tape.gradient(loss, fish.trainable_variables)
