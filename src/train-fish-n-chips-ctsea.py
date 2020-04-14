@@ -137,7 +137,7 @@ def test_edit_distance(print=False):
 old_loss = 1000000000
 losses = []
 waited = 0
-aed = -1
+aed = 1000000000
 
 Xforimg = np.array([next(generator.get_batch_combined())[0][0]])
 
@@ -168,7 +168,7 @@ for epoch in range(EPOCHS):
         print(e)
 
     losses.append([train_loss.result()])
-    np.save(f"./trained_models/train_res_ctc_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H", np.array(losses))
+    np.save(f"./trained_models/fish-n-chips-ctsea-combined_RES_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H", np.array(losses))
 
     make_anim_image(Xforimg, epoch)
 
@@ -178,12 +178,15 @@ for epoch in range(EPOCHS):
     loss = train_loss.result()
     print (f'Epoch {epoch + 1} Loss {loss:.4f} AED {aed:.4f} TOOK {time.time() - start} secs')
 
-    if loss < old_loss:
-        old_loss = loss
-        fish.save_weights(f"./trained_models/fish_weights_ctc_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H.h5")
+    if aed < old_loss:
+      waited = 0
+      old_loss = aed
+      fish.save_weights(f"./trained_models/fish-n-chips-ctsea-combined_WEIGHTS_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H.h5")
     else:
         waited += 1
         if waited > PATIENCE:
             print("Out of patience, exiting...")
             break
+         
+
          
