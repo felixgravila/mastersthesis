@@ -19,8 +19,8 @@ set_gpu_growth()
 #%%
 EPOCHS = 9999
 PATIENCE = 300
-NO_BATCHES = 10
-BATCH_SIZE = 3
+NO_BATCHES = 100
+BATCH_SIZE = 32
 
 ENCODER_MAX_LENGTH = 300
 DECODER_MAX_LENGTH = 100
@@ -40,7 +40,7 @@ generator = AttentionDataGenerator(read_ids, BATCH_SIZE, STRIDE, ENCODER_MAX_LEN
 train_loss = tf.keras.metrics.Mean(name='train_loss')
 loss_object = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True, reduction='none') 
 
-learning_rate = CustomSchedule(D_MODEL)
+learning_rate = CustomSchedule(D_MODEL) #DMODEL * 2 -> lr / 2
 optimizer = tf.keras.optimizers.Adam(learning_rate, beta_1=0.9, beta_2=0.98, epsilon=1e-9)
 
 fish = FishNChipsCTSea(
@@ -122,14 +122,15 @@ def make_anim_image(X, epoch):
   plt.savefig(f"trained_models/image_e{epoch:05d}.png")
   plt.close()
 
-def test_edit_distance():
+def test_edit_distance(print=False):
     print("evaluating...")
     x_batch, y_batch_true = next(generator.get_batch(label_as_bases=True))
-    y_batch_pred, _ = evaluate_batch(x_batch, fish, BATCH_SIZE, as_bases=True)
+    y_batch_pred, _ = evaluate_batch_ctc(x_batch, fish, BATCH_SIZE, as_bases=True)
 
     eds = []
     for _, (t, p) in enumerate(zip(y_batch_true, y_batch_pred)):
       ed = editdistance.eval(t, p)
+      print(f"ED:{editdistance.eval(t,p)}, True:{t}, Pred:{p}")
       eds.append(ed)
     return np.array(eds).mean()
 #%%
