@@ -98,7 +98,7 @@ def make_anim_image(X, epoch):
     plt.plot(l, label=i)
   plt.plot(normalise_squiggle(X[0]), c="k")
   plt.legend()
-  plt.savefig(f"trained_models/fishnctsea_image_e{epoch:05d}.png")
+  plt.savefig(f"trained_models/fishnctsea_image_d{D_MODEL}_e{epoch:05d}.png")
   plt.close()
 
 
@@ -141,19 +141,20 @@ for epoch in range(EPOCHS):
       except Exception as e:
         print(e)
 
-    losses.append([train_loss.result()])
+    aed = test_edit_distance()
+
+    losses.append([train_loss.result(), aed])
     np.save(f"./trained_models/train_res_fisnctsea_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H", np.array(losses))
 
     make_anim_image(Xforimg, epoch)
-
-    aed = test_edit_distance()
 
     loss = train_loss.result()
     print (f'Epoch {epoch + 1} Loss {loss:.4f} AED {aed:.4f} TOOK {time.time() - start} secs')
 
     if aed < old_loss:
-        old_loss = aed
-        fish.save_weights(f"./trained_models/fishnctsea_weights_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H.h5")
+      waited = 0
+      old_loss = aed
+      fish.save_weights(f"./trained_models/fishnctsea_weights_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H.h5")
     else:
         waited += 1
         if waited > PATIENCE:

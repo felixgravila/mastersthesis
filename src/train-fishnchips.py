@@ -103,8 +103,9 @@ for epoch in range(EPOCHS):
     print (f'Time taken for 1 epoch: {time.time() - start} secs\n')
 
     if loss < old_loss:
-        old_loss = loss
-        fish.save_weights(f"./trained_models/fish_weights_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H.h5")
+      waited = 0
+      old_loss = loss
+      fish.save_weights(f"./trained_models/fish_weights_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H.h5")
     else:
         waited += 1
         if waited > PATIENCE:
