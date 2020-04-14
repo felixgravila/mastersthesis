@@ -141,12 +141,12 @@ for epoch in range(EPOCHS):
       except Exception as e:
         print(e)
 
-    losses.append([train_loss.result()])
+    aed = test_edit_distance()
+
+    losses.append([train_loss.result(), aed])
     np.save(f"./trained_models/train_res_fisnctsea_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H", np.array(losses))
 
     make_anim_image(Xforimg, epoch)
-
-    aed = test_edit_distance()
 
     loss = train_loss.result()
     print (f'Epoch {epoch + 1} Loss {loss:.4f} AED {aed:.4f} TOOK {time.time() - start} secs')
