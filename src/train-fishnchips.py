@@ -105,6 +105,7 @@ for epoch in range(config['EPOCHS']):
     print (f'Time taken for 1 epoch: {time.time() - start} secs\n')
 
     if loss < old_loss:
+        waited = 0
         old_loss = loss
         fish.save_weights(f"{MODEL_SAVE_FILENAME}.h5")
     else:
