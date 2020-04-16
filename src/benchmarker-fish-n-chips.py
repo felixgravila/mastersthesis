@@ -76,7 +76,7 @@ fish = FishNChips(
 build(fish)
 fish.load_weights(f"./trained_models/fish_weights_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H.h5")
 
-read_ids = DataPrepper(validation_split=0.1, test_split=0.1).get_train_read_ids()
+read_ids = DataPrepper(validation_split=0.1, test_split=0.1).get_test_read_ids()
 generator = AttentionDataGenerator(read_ids, BATCH_SIZE, STRIDE, ENCODER_MAX_LENGTH, DECODER_MAX_LENGTH)
 aligner = mp.Aligner("../useful_files/zymo-ref-uniq_2019-03-15.fa")
 
