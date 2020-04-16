@@ -111,7 +111,7 @@ for epoch in range(EPOCHS):
             print (f'Epoch {epoch + 1} Batch {batch} Loss {train_loss.result():.4f} Accuracy {train_accuracy.result():.4f}')
 
     accs.append([train_loss.result(), train_accuracy.result()])
-    np.save(f"./trained_models/train_res_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H_{ATTENTION_BLOCKS}B", np.array(accs))    
+    np.save(f"./trained_models/fishnchips_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H_{ATTENTION_BLOCKS}B", np.array(accs))    
 
     loss = train_loss.result()
     acc = train_accuracy.result()
@@ -125,7 +125,7 @@ for epoch in range(EPOCHS):
     if loss < old_loss:
       waited = 0
       old_loss = loss
-      fish.save_weights(f"./trained_models/fish_weights_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H_{ATTENTION_BLOCKS}B.h5")
+      fish.save_weights(f"./trained_models/fishnchips_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H_{ATTENTION_BLOCKS}B.h5")
     else:
         waited += 1
         if waited > PATIENCE:
