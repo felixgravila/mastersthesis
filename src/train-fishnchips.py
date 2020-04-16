@@ -4,6 +4,7 @@ import tensorflow as tf
 import numpy as np
 import sys
 import json
+import os
 
 from utils.AttentionDataGenerator import AttentionDataGenerator
 from utils.DataPrepper import DataPrepper
@@ -23,6 +24,13 @@ if len(sys.argv)>1:
   config_filename = sys.argv[1]
 with open(config_filename, "r") as f:
   config = json.load(f)
+
+MODEL_SAVE_FILENAME = f"./trained_models/fishnchips_{config['D_MODEL']}_{config['CNN_BLOCKS']}CNN_{config['NUM_HEADS']}H_{config['ATTENTION_BLOCKS']}B"
+
+if os.path.isfile(f"{MODEL_SAVE_FILENAME}.h5"):
+  answer = input("This model exists, are you sure you want to overwrite it? [y/N]:")
+  if answer not in "Yy":
+    sys.exit()
 
 #%%
 read_ids = DataPrepper(validation_split=0.1, test_split=0.1).get_train_read_ids()
@@ -89,7 +97,7 @@ for epoch in range(config['EPOCHS']):
             print (f'Epoch {epoch + 1} Batch {batch} Loss {train_loss.result():.4f} Accuracy {train_accuracy.result():.4f}')
 
     accs.append([train_loss.result(), train_accuracy.result()])
-    np.save(f"./trained_models/fishnchips_{config['D_MODEL']}_{config['CNN_BLOCKS']}CNN_{config['NUM_HEADS']}H_{config['ATTENTION_BLOCKS']}B", np.array(accs))    
+    np.save(f"{MODEL_SAVE_FILENAME}.npy", np.array(accs))    
 
     loss = train_loss.result()
     acc = train_accuracy.result()
@@ -98,7 +106,7 @@ for epoch in range(config['EPOCHS']):
 
     if loss < old_loss:
         old_loss = loss
-        fish.save_weights(f"./trained_models/fishnchips_{config['D_MODEL']}_{config['CNN_BLOCKS']}CNN_{config['NUM_HEADS']}H_{config['ATTENTION_BLOCKS']}B.h5")
+        fish.save_weights(f"{MODEL_SAVE_FILENAME}.h5")
     else:
         waited += 1
         if waited > config['PATIENCE']:
