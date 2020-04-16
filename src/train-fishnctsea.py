@@ -144,7 +144,7 @@ for epoch in range(EPOCHS):
     aed = test_edit_distance()
 
     losses.append([train_loss.result(), aed])
-    np.save(f"./trained_models/train_res_fisnctsea_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H", np.array(losses))
+    np.save(f"./trained_models/fishnctsea_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H_{ATTENTION_BLOCKS}B", np.array(losses))
 
     make_anim_image(Xforimg, epoch)
 
@@ -154,7 +154,7 @@ for epoch in range(EPOCHS):
     if aed < old_loss:
       waited = 0
       old_loss = aed
-      fish.save_weights(f"./trained_models/fishnctsea_weights_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H.h5")
+      fish.save_weights(f"./trained_models/fishnctsea_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H_{ATTENTION_BLOCKS}B.h5")
     else:
         waited += 1
         if waited > PATIENCE:
