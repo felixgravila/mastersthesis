@@ -2,6 +2,8 @@
 import time
 import tensorflow as tf 
 import numpy as np
+import sys
+import json
 
 from utils.AttentionDataGenerator import AttentionDataGenerator
 from utils.DataPrepper import DataPrepper
@@ -14,48 +16,40 @@ from models.FishNChips import FishNChips
 set_gpu_growth()
 
 #%%
-EPOCHS = 5000
-PATIENCE = 300
-NO_BATCHES = 200
-BATCH_SIZE = 32
 
-ENCODER_MAX_LENGTH = 300
-DECODER_MAX_LENGTH = 100
-ATTENTION_BLOCKS = 4
-CNN_BLOCKS = 0
-MAXPOOL_IDX = 3 # ignored if > CNN_BLOCKS
-D_MODEL = 256
-DFF = 2*D_MODEL
-NUM_HEADS = 8
-DROPOUT_RATE = 0.1
-STRIDE = 30
+config_filename = "configs/train-fishnchips-config-skel.json"
+
+if len(sys.argv)>1:
+  config_filename = sys.argv[1]
+with open(config_filename, "r") as f:
+  config = json.load(f)
 
 #%%
 read_ids = DataPrepper(validation_split=0.1, test_split=0.1).get_train_read_ids()
-generator = AttentionDataGenerator(read_ids, BATCH_SIZE, STRIDE, ENCODER_MAX_LENGTH, DECODER_MAX_LENGTH)
+generator = AttentionDataGenerator(read_ids, config['BATCH_SIZE'], config['STRIDE'], config['ENCODER_MAX_LENGTH'], config['DECODER_MAX_LENGTH'])
 
 train_loss = tf.keras.metrics.Mean(name='train_loss')
 train_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='train_accuracy')
 loss_object = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True, reduction='none') 
 
-learning_rate = CustomSchedule(D_MODEL)
+learning_rate = CustomSchedule(config['D_MODEL'])
 optimizer = tf.keras.optimizers.Adam(learning_rate, beta_1=0.9, beta_2=0.98, epsilon=1e-9)
 
 fish = FishNChips(
-  num_cnn_blocks=CNN_BLOCKS, 
-  max_pool_layer_idx=MAXPOOL_IDX, 
-  num_layers=ATTENTION_BLOCKS, 
-  d_model=D_MODEL, 
+  num_cnn_blocks=config['CNN_BLOCKS'], 
+  max_pool_layer_idx=config['MAXPOOL_IDX'], 
+  num_layers=config['ATTENTION_BLOCKS'], 
+  d_model=config['D_MODEL'], 
   output_dim=1 + 4 + 1 + 1, # PAD + ATCG + START + STOP
-  num_heads=NUM_HEADS, 
-  dff=DFF, 
-  pe_encoder_max_length=ENCODER_MAX_LENGTH, 
-  pe_decoder_max_length=DECODER_MAX_LENGTH, 
-  rate=DROPOUT_RATE)
+  num_heads=config['NUM_HEADS'],
+  dff=config['DFF'], 
+  pe_encoder_max_length=config['ENCODER_MAX_LENGTH'], 
+  pe_decoder_max_length=config['DECODER_MAX_LENGTH'], 
+  rate=config['DROPOUT_RATE'])
 
 train_step_signature = [
-    tf.TensorSpec(shape=(BATCH_SIZE, ENCODER_MAX_LENGTH, 1), dtype=tf.float32),
-    tf.TensorSpec(shape=(BATCH_SIZE, DECODER_MAX_LENGTH), dtype=tf.int32),
+    tf.TensorSpec(shape=(config['BATCH_SIZE'], config['ENCODER_MAX_LENGTH'], 1), dtype=tf.float32),
+    tf.TensorSpec(shape=(config['BATCH_SIZE'], config['DECODER_MAX_LENGTH']), dtype=tf.int32),
 ]
 @tf.function(input_signature=train_step_signature)
 def train_step(inp, tar):
@@ -80,11 +74,11 @@ old_loss = 1
 accs = []
 waited = 0
 
-for epoch in range(EPOCHS):
+for epoch in range(config['EPOCHS']):
     start = time.time()
     train_loss.reset_states()
     train_accuracy.reset_states()
-    batches = next(generator.get_batches(NO_BATCHES))
+    batches = next(generator.get_batches(config['NO_BATCHES']))
 
     for (batch, (inp, tar)) in enumerate(batches):  
         inp = tf.constant(inp, dtype=tf.float32)
@@ -95,7 +89,7 @@ for epoch in range(EPOCHS):
             print (f'Epoch {epoch + 1} Batch {batch} Loss {train_loss.result():.4f} Accuracy {train_accuracy.result():.4f}')
 
     accs.append([train_loss.result(), train_accuracy.result()])
-    np.save(f"./trained_models/train_res_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H", np.array(accs))    
+    np.save(f"./trained_models/train_res_{config['D_MODEL']}_{config['CNN_BLOCKS']}CNN_{config['NUM_HEADS']}H", np.array(accs))    
 
     loss = train_loss.result()
     acc = train_accuracy.result()
@@ -104,10 +98,10 @@ for epoch in range(EPOCHS):
 
     if loss < old_loss:
         old_loss = loss
-        fish.save_weights(f"./trained_models/fish_weights_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H.h5")
+        fish.save_weights(f"./trained_models/fish_weights_{config['D_MODEL']}_{config['CNN_BLOCKS']}CNN_{config['NUM_HEADS']}H.h5")
     else:
         waited += 1
-        if waited > PATIENCE:
+        if waited > config['PATIENCE']:
             print("Out of patience, exiting...")
             break
          
