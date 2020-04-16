@@ -93,16 +93,14 @@ for epoch in range(config['EPOCHS']):
         tar = tf.constant(tar, dtype=tf.int32)
         train_step(inp, tar)
 
-        if batch % 10 == 0:
-            print (f'Epoch {epoch + 1} Batch {batch} Loss {train_loss.result():.4f} Accuracy {train_accuracy.result():.4f}')
+        print (f'Epoch {epoch + 1} Batch {batch} Loss {train_loss.result():.4f} Accuracy {train_accuracy.result():.4f}', end="\r")
 
     accs.append([train_loss.result(), train_accuracy.result()])
     np.save(f"{MODEL_SAVE_FILENAME}.npy", np.array(accs))    
 
     loss = train_loss.result()
     acc = train_accuracy.result()
-    print (f'Epoch {epoch + 1} Loss {loss:.4f} Accuracy {acc:.4f}')
-    print (f'Time taken for 1 epoch: {time.time() - start} secs\n')
+    print (f'Epoch {epoch + 1} Loss {loss:.4f} Accuracy {acc:.4f}, took {time.time() - start} secs')
 
     if loss < old_loss:
         waited = 0
