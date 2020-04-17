@@ -104,7 +104,6 @@ read_ids = DataPrepper(validation_split=0.1, test_split=0.1).get_test_read_ids()
 generator = DataGenerator(read_ids, BATCH_SIZE, STRIDE, ENCODER_MAX_LENGTH, 5, False)
 aligner = mp.Aligner("../useful_files/zymo-ref-uniq_2019-03-15.fa")
 
-result_dict = []
 for i in range(len(result_dict), READS):
     x_windows, y_windows, ref, raw, read_id = next(generator.get_evaluate_batch_with_labels())
     nr_windows = len(x_windows)
