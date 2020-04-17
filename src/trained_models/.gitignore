@@ -1,5 +1,8 @@
 *.h5
 *.npy
+*.json
+*.png
+*.zip
 !fishnchips_256_0CNN_8H_4B.h5
 !fishnchips_256_0CNN_8H_4B.npy
 
