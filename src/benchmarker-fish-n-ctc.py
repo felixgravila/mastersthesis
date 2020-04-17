@@ -119,7 +119,7 @@ for i in range(len(result_dict), READS):
         y_batch_pred = fish.predict(x_batch)
         y_pred.extend(y_batch_pred)
     
-    print("Assembling...")
+    # print("Assembling...")
     if OUTPUT_ASSEMEBLY:
         assembly = assemble_and_output(f"./trained_models/assembly{i}_{read_id}.txt", y_pred)
     else:
