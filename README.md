@@ -25,6 +25,7 @@ Avg acc for chiron-pad5-maxpool3: 91.35%, not found: 0%(0)
 ## MISC
 Tried beam search with width > 1, didn't work
 
+Tried Dead Fish with alpha 0.4 and CTC looked good, might be that CTC is overpowering the decoder
 
 ## BENCHMARKS
 
