@@ -41,7 +41,7 @@ def evaluate_window(inp, model, as_bases=True):
         output = "".join([attentionLabelBaseMap[base_token] for base_token in output])
     return output, attention_weights
 
-@with_eval_timer
+# @with_eval_timer
 def evaluate_batch(inp, model, batch_size, as_bases=True):
     
     start_token = 5
