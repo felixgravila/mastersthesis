@@ -31,12 +31,12 @@ Tried beam search with width > 1, didn't work
 | Name               | Type                      | D_Model | Blocks | Heads | CNN | Alpha | Accuracy    | Best ED |
 |--------------------|---------------------------|---------|--------|-------|-----|-------|-------------|---------|
 | Fish n Chips       | Encoder + Decoder         | 256     | 4      | 8     | 0   | None  | .81         | Unknown |
-| Fish n Chips       | Encoder + Decoder         | 1024    | 4      | 8     | 0   | None  | .91         | Unknown |
-| Fish n Chips       | Encoder + Decoder         | 256     | 4      | 4     | 0   | None  | In progress | Unknown |
-| Fish n Chips       | Encoder + Decoder         | 256     | 4      | 16    | 0   | None  | In progress | Unknown |
-| Fish n Chips       | Encoder + Decoder         | 256     | 2      | 8     | 0   | None  | In progress | Unknown |
+| Fish n Chips       | Encoder + Decoder         | 1024    | 4      | 8     | 0   | None  | .90         | Unknown |
+| Fish n Chips       | Encoder + Decoder         | 256     | 4      | 4     | 0   | None  | .85         | Unknown |
+| Fish n Chips       | Encoder + Decoder         | 256     | 4      | 16    | 0   | None  | .887        | Unknown |
+| Fish n Chips       | Encoder + Decoder         | 256     | 2      | 8     | 0   | None  | .9074       | Unknown |
 | Fish n Chips       | Encoder + Decoder         | 256     | 8      | 8     | 0   | None  | In progress | Unknown |
 | Fish n Chips CTSea | Encoder + [Decoder / CTC] | 512     | 4      | 8     | 0   | .1    | .82         | Unknown |
-| Fish n Chips CTSea | Encoder + [Decoder / CTC] | 512     | 4      | 8     | 0   | .4    | In progress | Unknown |
-| Fish n CTSea       | Encoder + CTC             | 1024    | 4      | 8     | 0   | None  | Unknown     | 10      |
+| Fish n Chips CTSea | Encoder + [Decoder / CTC] | 256     | 4      | 8     | 0   | .4    | Disaster    | Unknown |
+| Fish n CTSea       | Encoder + CTC             | 512     | 4      | 8     | 0   | None  | Unknown     | 10      |
 | Dead Fish          | Encoder + Decoder + CTC   | 256     | 4      | 8     | 0   | None  | Disaster    | Unknown |
