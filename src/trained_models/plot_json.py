@@ -8,7 +8,8 @@ files = [
     "trained_models/fishnchips_256_0CNN_4H_4B.json",
     "trained_models/fishnchips_256_0CNN_16H_4B.json",
     "trained_models/fishnchips_256_0CNN_8H_2B.json",
-    "trained_models/fishnchips_256_0CNN_8H_8B.json"
+    "trained_models/fishnchips_256_0CNN_8H_8B.json",
+    "trained_models/fishnctsea_512_0CNN_8H_4B.json"
 ]
 
 plt.figure(figsize=(20, 10))
@@ -21,7 +22,7 @@ for filepath in files:
         avg = numpy.mean(cigaccs)
         cleaned_filename = filepath.split("/")[1].split(".")[0]
 
-        plt.hist(cigaccs, density=True, alpha=0.8, bins=range(0,100,2), label=f"{cleaned_filename}: {avg:.2f} ({len(cigaccs)})%")
+        plt.hist(cigaccs, density=True, alpha=0.8, bins=range(0,100,2), label=f"{cleaned_filename}: {avg:.2f}% ({len(cigaccs)})")
 
 plt.legend()
 plt.show()
