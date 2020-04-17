@@ -170,7 +170,7 @@ for epoch in range(EPOCHS):
 
         # if batch % 10 == 0:
         if True:
-            print (f'Epoch {epoch + 1} Batch {batch} Loss {train_loss.result():.4f}')
+            print (f'Epoch {epoch + 1} Batch {batch} Loss {train_loss.result():.4f}', end="\r")
       except Exception as e:
         print(e)
 
