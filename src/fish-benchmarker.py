@@ -16,12 +16,12 @@ sys.path.insert(0, './src')
 set_gpu_growth()
 
 # %%
-ATTENTION_BLOCKS = 4
+ATTENTION_BLOCKS = 2
 CNN_BLOCKS = 0
 MAXPOOL_BLOCK_IDX = 3
 D_MODEL = 256
 DFF = 2*D_MODEL
-NUM_HEADS = 16
+NUM_HEADS = 8
 ENCODER_MAX_LENGTH = 300
 DECODER_MAX_LENGTH = 100
 DROPOUT_RATE = 0.1
@@ -33,13 +33,12 @@ AS_BASE_STRING = True
 
 MODEL_SAVE_FILENAME = f"./trained_models/fishnchips_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H_{ATTENTION_BLOCKS}B"
 
+result_dict = []
 if os.path.isfile(f"{MODEL_SAVE_FILENAME}.json"):
   answer = input("This model exists, do you want to append to existing analysis [Y/n]?:")
   if answer not in "Nn" or answer == "":
     with open(f"{MODEL_SAVE_FILENAME}.json", "r") as f:
         result_dict = json.load(f)
-  else:
-    result_dict = []
 
 
 # on gtx 1080
