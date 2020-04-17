@@ -19,8 +19,8 @@ set_gpu_growth()
 #%%
 EPOCHS = 9999
 PATIENCE = 300
-NO_BATCHES = 10
-BATCH_SIZE = 3
+NO_BATCHES = 100
+BATCH_SIZE = 32
 
 ENCODER_MAX_LENGTH = 300
 DECODER_MAX_LENGTH = 100
@@ -32,7 +32,7 @@ DFF = 2*D_MODEL
 NUM_HEADS = 8
 DROPOUT_RATE = 0.1
 STRIDE = 30
-ALPHA = 0.2
+ALPHA = 0.4
 
 #%%
 read_ids = DataPrepper(validation_split=0.1, test_split=0.1).get_train_read_ids()
