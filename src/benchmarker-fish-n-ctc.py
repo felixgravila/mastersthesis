@@ -41,8 +41,8 @@ if os.path.isfile(f"{MODEL_SAVE_FILENAME}.json"):
 """
  Script parameters
 """
-READS = 2
-BATCH_SIZE = 96
+READS = 50
+BATCH_SIZE = 64
 OUTPUT_ASSEMEBLY = False
 
 # on gtx 1080
