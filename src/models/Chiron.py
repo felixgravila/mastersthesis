@@ -11,8 +11,10 @@ from utils.Other import labelBaseMap
 
 class Chiron():
     
-    def __init__(self, input_length, rnn_padding, batch_normalization, maxpool_layer, model_name, dropout, use_None_input):
+    def __init__(self, input_length, cnn_filters, lstm_units, rnn_padding, batch_normalization, maxpool_layer, model_name, dropout, use_None_input):
         self.input_length = input_length
+        self.cnn_filters = cnn_filters
+        self.lstm_units = lstm_units
         self.use_None_input = use_None_input
         self.rnn_output_length = input_length-(2*rnn_padding) if maxpool_layer == 0 else (input_length//2)-(2*rnn_padding)
         self.rnn_padding = rnn_padding
@@ -74,23 +76,23 @@ class Chiron():
             inner = BatchNormalization()(upper)
 
         if block==1:
-            res = Conv1D(256, 1,
+            res = Conv1D(self.cnn_filters, 1,
                 padding="same",
                 name=f"res{block}-r")(inner)
         else:
             res = inner
 
-        inner = Conv1D(256, 1,
+        inner = Conv1D(self.cnn_filters, 1,
                       padding="same",
                       activation="relu",
                       use_bias="false",
                       name=f"res{block}-c1")(inner)
-        inner = Conv1D(256, 3,
+        inner = Conv1D(self.cnn_filters, 3,
                       padding="same",
                       activation="relu",
                       use_bias="false",
                       name=f"res{block}-c2")(inner)
-        inner = Conv1D(256, 1,
+        inner = Conv1D(self.cnn_filters, 1,
                       padding="same",
                       use_bias="false",
                       name=f"res{block}-c3")(inner)
@@ -108,8 +110,8 @@ class Chiron():
         if(self.batch_normalization):
             inner = BatchNormalization()(upper)
 
-        lstm_1a = LSTM(200, return_sequences=True, name=f"blstm{block}-fwd")(inner)
-        lstm_1b = LSTM(200, return_sequences=True, go_backwards=True, name=f"blstm{block}-rev")(inner)
+        lstm_1a = LSTM(self.lstm_units, return_sequences=True, name=f"blstm{block}-fwd")(inner)
+        lstm_1b = LSTM(self.lstm_units, return_sequences=True, go_backwards=True, name=f"blstm{block}-rev")(inner)
         return Add(name=f"blstm{block}-add")([lstm_1a, lstm_1b])
 
     def make_model(self):
