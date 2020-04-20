@@ -35,10 +35,13 @@ Tried Dead Fish with alpha 0.4 and CTC looked good, might be that CTC is overpow
 | Fish n Chips       | Encoder + Decoder               | 1024    | 4      | 8     | 0   | 90%      |
 | Fish n Chips       | Encoder + Decoder               | 256     | 4      | 4     | 0   | 85%      |
 | Fish n Chips       | Encoder + Decoder               | 256     | 4      | 16    | 0   | 88.7%    |
+| Fish n Chips       | Encoder + Decoder               | 250     | 4      | 25    | 0   | Progress |
+| Fish n Chips       | Encoder + Decoder               | 256     | 4      | 32    | 0   | Progress |
 | Fish n Chips       | Encoder + Decoder               | 256     | 2      | 8     | 0   | 90.74%   |
 | Fish n Chips       | Encoder + Decoder               | 256     | 1      | 8     | 0   | 68.54%   |
 | Fish n Chips       | Encoder + Decoder               | 256     | 8      | 8     | 0   | 0%       |
 | Fish n Chips CTSea | Encoder + [Decoder / CTC] α 0.1 | 512     | 4      | 8     | 0   | 82%      |
 | Fish n Chips CTSea | Encoder + [Decoder / CTC] α 0.4 | 256     | 4      | 8     | 0   | Disaster |
 | Fish n CTSea       | Encoder + CTC                   | 512     | 4      | 8     | 0   | 78%      |
+| Fish n CTSea       | Encoder + CTC                   | 2048    | 4      | 8     | 0   | Progress |
 | Dead Fish          | Encoder + Decoder + CTC         | 256     | 4      | 8     | 0   | Disaster |
