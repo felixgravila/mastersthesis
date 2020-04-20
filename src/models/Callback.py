@@ -18,6 +18,8 @@ class SaveCB(Callback):
         self.Xforimg = None
         self.testvalid = [[],[]]
         self.start_time = datetime.datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
+        self.patience = 0
+        self.waited = 0
 
     def withCheckpoints(self):
         self.model_output_dir = f"outputs/{self.modelwrapper.name}/{self.start_time}/checkpoints/"
@@ -35,6 +37,10 @@ class SaveCB(Callback):
 
     def withMaxPool(self):
         self.use_maxpool = True
+        return self
+
+    def withPatience(self, patience=100):
+        self.patience = patience
         return self
 
     def save_image(self, epoch):
@@ -59,6 +65,17 @@ class SaveCB(Callback):
         if self.best_dist is None or valloss < self.best_dist:
             self.best_dist = valloss
             self.modelwrapper.save_weights(os.path.join(self.model_output_dir, f'{epoch:05d}_dis{round(valloss*100)}.h5'))
+    
+    def handle_patience(self, valloss):
+        if self.best_dist is None or valloss < self.best_dist:
+            self.waited = 0
+            self.best_dist = valloss
+        else:
+            self.waited += 1
+            if self.waited>self.patience:
+                print("Out of patience. Exiting...")
+                self.modelwrapper.stop_training = True
+
 
     def on_epoch_end(self, epoch, logs={}):
         print(f"End of epoch {epoch}")
@@ -73,13 +90,15 @@ class SaveCB(Callback):
         self.testvalid[1].append(int(datetime.datetime.now().timestamp()))
         print(f"\nAverage validation edit distance is: {valloss}")
         np.save(os.path.join(self.model_output_dir, f"{self.modelwrapper.name}-{self.start_time}"), np.array(self.testvalid))
-
+       
         if self.save_model_flag:
             self.save_model(epoch, valloss)
         if self.save_image_flag:
             if self.Xforimg is None:
                 self.Xforimg = val_X[0:1]
             self.save_image(epoch)
+        if self.patience > 0:
+            self.handle_patience(valloss)
 
     def _calculate_loss(self, X, y, testbatchsize=1000):
         editdis = 0
