@@ -23,6 +23,7 @@ class Chiron():
         self.dropout = dropout
         self.name=model_name
         self._model, self.testfunc = self.make_model()
+        self.stop_training = False
    
     def fit(self, *args, **kwargs):
         self._model.fit(*args, **kwargs)

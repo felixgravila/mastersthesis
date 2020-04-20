@@ -41,12 +41,15 @@ chiron=cb.build()
 save_cb = SaveCB(chiron, val_generator)\
     .withCheckpoints()\
     .withImageOutput()\
-    .withMaxPool()
+    .withMaxPool()\
+    .withPatience()
 
 
 #%%
 
 for epoch in range(2000):
+    if chiron.stop_training:
+        break
     generator.print_status()
     try:
         X,y = next(generator.get_batch())
