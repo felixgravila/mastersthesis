@@ -85,7 +85,7 @@ class SaveCB(Callback):
         editdis = 0
         editdiss = []
         for b in range(0, len(X), testbatchsize):
-            predicted = self.modelwrapper.predict(X[b:b+testbatchsize])
+            predicted, _ = self.modelwrapper.predict(X[b:b+testbatchsize])
             mtest_y = ["".join(list(map(lambda x: labelBaseMap[x], ty))) for ty in y[b:b+testbatchsize]]
             for (p,l) in zip(predicted, mtest_y):
                 ed = editdistance.eval(p,l)
