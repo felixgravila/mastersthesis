@@ -30,7 +30,7 @@ val_generator = DataGenerator(val_read_ids, batch_size=500, input_length=input_l
 
 #%%
 
-cb = ChironBuilder(input_length)\
+cb = ChironBuilder(input_length, cnn_filters=512, lstm_units=512)\
         .with_batch_normalization()\
         .with_rnn_padding(rnn_padding)\
         .with_dropout()
