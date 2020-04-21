@@ -40,7 +40,7 @@ save_cb = SaveCB(chiron, val_generator)\
     .withCheckpoints()\
     .withImageOutput()\
     .withMaxPool()\
-    .withPatience()
+    .withPatience(patience=300)
 
 
 #%%
