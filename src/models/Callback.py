@@ -67,7 +67,7 @@ class SaveCB(Callback):
             self.modelwrapper.save_weights(os.path.join(self.model_output_dir, f'{epoch:05d}_dis{round(valloss*100)}.h5'))
     
     def handle_patience(self, valloss):
-        if self.best_dist is None or valloss < self.best_dist:
+        if self.best_dist is None or valloss <= self.best_dist:
             self.waited = 0
             self.best_dist = valloss
         else:
