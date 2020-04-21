@@ -9,7 +9,8 @@ Avg acc for chiron-pad5-maxpool3: 92.33%, not found: 0.10%(4)
 Avg acc for chiron-bn-pad5-dropout-maxpool3: 70.90%, not found: 3.77%(151)
 
 after assembler fix:
-Avg acc for chiron-pad5-maxpool3: 93.15%, not found: 0%(0)
+Avg acc for chiron-pad5-maxpool3 (256/250): 93.15%, not found: 0%(0)
+Avg acc for chiron-pad5-maxpool3 (512/512): 86.73%, not found: 0%(0)
 
 evaluate whole read (no assembler):
 Avg acc for chiron-pad5-maxpool3: 91.35%, not found: 0%(0)
@@ -35,7 +36,7 @@ Tried Dead Fish with alpha 0.4 and CTC looked good, might be that CTC is overpow
 | Fish n Chips       | Encoder + Decoder               | 1024    | 4      | 8     | 0   | 90%      |
 | Fish n Chips       | Encoder + Decoder               | 256     | 4      | 4     | 0   | 85%      |
 | Fish n Chips       | Encoder + Decoder               | 256     | 4      | 16    | 0   | 88.7%    |
-| Fish n Chips       | Encoder + Decoder               | 250     | 4      | 25    | 0   | Progress |
+| Fish n Chips       | Encoder + Decoder               | 250     | 4      | 25    | 0   | 93.41%   |
 | Fish n Chips       | Encoder + Decoder               | 256     | 4      | 32    | 0   | Progress |
 | Fish n Chips       | Encoder + Decoder               | 256     | 2      | 8     | 0   | 90.74%   |
 | Fish n Chips       | Encoder + Decoder               | 256     | 1      | 8     | 0   | 68.54%   |
