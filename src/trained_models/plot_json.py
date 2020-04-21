@@ -8,9 +8,11 @@ files = [
     "trained_models/fishnchips_256_0CNN_4H_4B.json",
     "trained_models/fishnchips_256_0CNN_16H_4B.json",
     "trained_models/fishnchips_256_0CNN_8H_2B.json",
-    "trained_models/fishnchips_256_0CNN_8H_8B.json",
+    # "trained_models/fishnchips_256_0CNN_8H_8B.json",
     "trained_models/fishnctsea_512_0CNN_8H_4B.json",
-    "trained_models/fishnchips_256_0CNN_8H_1B.json"
+    "trained_models/fishnchips_256_0CNN_8H_1B.json",
+    "trained_models/fishnchips_250_0CNN_25H_4B.json",
+    "trained_models/fishnchips_256_0CNN_32H_4B.json"
 ]
 
 plt.figure(figsize=(20, 10))
