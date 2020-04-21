@@ -28,7 +28,7 @@ DECODER_MAX_LENGTH = 100
 DROPOUT_RATE = 0.1
 STRIDE = 30
 
-READS = 2
+READS = 10
 BATCH_SIZE = 64
 AS_BASE_STRING = True
 
@@ -122,7 +122,7 @@ for read in range(len(result_dict), READS):
         assembly = assemble(y_pred)
 
         dna_pred, dna_true = get_comparison(assembly)
-        output_comparison(dna_pred, dna_true, "./benchmark_comparison.txt")
+        output_comparison(dna_pred, dna_true, "./trained_models/benchmark_comparison.txt")
 
         result = get_cig_result(aligner, assembly)
         result_dict.append(result)
