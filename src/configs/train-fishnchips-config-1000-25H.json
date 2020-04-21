@@ -13,5 +13,5 @@
 	"NUM_HEADS": 25,
 	"DROPOUT_RATE": 0.1,
 	"STRIDE": 30,
-	"L_RATE_MULT": 1
+	"L_RATE_MULT": 10
 }
