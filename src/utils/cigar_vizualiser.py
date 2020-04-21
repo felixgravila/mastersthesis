@@ -9,7 +9,10 @@ def get_comparison(dna_pred):
         return dna_pred, ""
     
     dna_true = _get_reference(mapped.ctg)
-    return _compare(dna_pred, dna_true, mapped.r_st, mapped.cigar_str)
+    dna_true = dna_true[mapped.r_st:mapped.r_en]
+    dna_pred = dna_pred[mapped.q_st:mapped.q_en]
+
+    return _compare(dna_pred, dna_true, mapped.cigar_str)
 
 def output_comparison(dna_pred, dna_true, filename):
     with open(filename, 'a') as f:
@@ -45,11 +48,12 @@ def _get_reference(key):
             end_idx = len(ref_file_str-1)
         return ref_file_str[start_idx:end_idx].replace("\n","")
 
-def _compare(dna_pred, dna_true, true_idx, dna_cigar):
+def _compare(dna_pred, dna_true, dna_cigar):
     
     dna_cigar_operations = re.findall(r'[\d]+[SMDI]', dna_cigar)
-    dna_result = "" + true_idx * "_"
+    dna_result = ""
     pred_idx = 0
+    true_idx = 0
 
     cigar_func_dic = {
         "M": _match_op,
@@ -63,7 +67,7 @@ def _compare(dna_pred, dna_true, true_idx, dna_cigar):
         o_amount = int(o[:-1])
         o_func = cigar_func_dic[o_type]
         dna_result, dna_true, dna_pred, true_idx, pred_idx = o_func(o_amount, dna_result, dna_true, dna_pred, true_idx, pred_idx)
-        
+
     return dna_result, dna_true
 
 def _match_op(amount, res, true, pred, true_idx, pred_idx):
