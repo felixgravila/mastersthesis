@@ -5,6 +5,7 @@ from models.FishNChips import FishNChips
 from utils.attention_evaluation_utils import build, evaluate_batch
 from utils.AttentionDataGenerator import AttentionDataGenerator
 from utils.assembler import assemble
+from utils.cigar_vizualiser import get_comparison, output_comparison, print_comparison
 
 import os
 import sys
@@ -16,7 +17,7 @@ sys.path.insert(0, './src')
 set_gpu_growth()
 
 # %%
-ATTENTION_BLOCKS = 2
+ATTENTION_BLOCKS = 4
 CNN_BLOCKS = 0
 MAXPOOL_BLOCK_IDX = 3
 D_MODEL = 256
@@ -27,7 +28,7 @@ DECODER_MAX_LENGTH = 100
 DROPOUT_RATE = 0.1
 STRIDE = 30
 
-READS = 50
+READS = 2
 BATCH_SIZE = 64
 AS_BASE_STRING = True
 
@@ -119,6 +120,10 @@ for read in range(len(result_dict), READS):
             y_pred.extend(y_batch_pred)
 
         assembly = assemble(y_pred)
+
+        dna_pred, dna_true = get_comparison(assembly)
+        output_comparison(dna_pred, dna_true, "./benchmark_comparison.txt")
+
         result = get_cig_result(aligner, assembly)
         result_dict.append(result)
         print(f"{read:02d}/{READS} Done read... cigacc {result['cigacc']}"+" "*50) # 50 blanks to overwrite the previous print
