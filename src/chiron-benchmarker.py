@@ -4,6 +4,7 @@ import mappy as mp
 import matplotlib.pyplot as plt
 import numpy as np
 import json
+import re
 
 from models.ChironBuilder import ChironBuilder
 from utils.assembler import assemble
@@ -19,14 +20,15 @@ class style():
     GREEN = lambda x: f"\033[32m{x}\033[0m"
 
 models = [
-    'outputs/chiron-bn-pad5/2020-03-03_21:24:40/checkpoints/00377_dis421.h5',
-    'outputs/chiron-bn-pad5-maxpool3/2020-03-04_09:35:31/checkpoints/00787_dis234.h5',
-    'outputs/chiron-pad5-maxpool3/2020-03-04_17:44:03/checkpoints/00927_dis193.h5',
-    'outputs/chiron-bn-pad5-dropout-maxpool3/2020-03-05_08:48:58/checkpoints/01924_dis588.h5'
+    'outputs/chiron-256CNN-200LSTM-bn-pad5-dropout-maxpool3/2020-04-20_15:04:21/checkpoints/00063_dis821.h5'
+    # 'outputs/chiron-bn-pad5/2020-03-03_21:24:40/checkpoints/00377_dis421.h5',
+    # 'outputs/chiron-bn-pad5-maxpool3/2020-03-04_09:35:31/checkpoints/00787_dis234.h5',
+    # 'outputs/chiron-pad5-maxpool3/2020-03-04_17:44:03/checkpoints/00927_dis193.h5',
+    # 'outputs/chiron-bn-pad5-dropout-maxpool3/2020-03-05_08:48:58/checkpoints/01924_dis588.h5'
 ]
 
 input_length = 300
-reads_to_eval = 1000
+reads_to_eval = 200
 json_write_file = "eval_output.json"
 
 data_preper = DataPrepper(validation_split=0.1, test_split=0.1)
@@ -40,18 +42,18 @@ returns name of model and predict func
 '''
 def make_chiron_for_file(file):
     description = file.split("/")[1]
-    cb = ChironBuilder(input_length)
+    cnn = int(re.findall(r"\d+CNN", description)[0][:-3])
+    lstm = int(re.findall(r"\d+LSTM", description)[0][:-4])
+    cb = ChironBuilder(input_length, cnn_filters=cnn, lstm_units=lstm)
     if "bn" in description:
         cb = cb.with_batch_normalization()
     if "pad5" in description:
         cb = cb.with_rnn_padding(5)
-    if "dropout" in description:
-        cb = cb.with_dropout()
     if "maxpool3" in description:
         cb = cb.with_maxpool(3)
     chiron = cb.build()
-    chiron.model.load_weights(file)
-    return (chiron.get_model_name(), chiron.predict_beam_search) # using get_model_name instead of description for safety
+    chiron.load_weights(file)
+    return (chiron.name, chiron.predict_beam_search) # using get_model_name instead of description for safety
 
 chiron_funcs = list(map(make_chiron_for_file, models))
 
@@ -61,6 +63,8 @@ result_dict = {
 for funcname in [c[0] for c in chiron_funcs]:
     # initialise dict with empty arrays for each func
     result_dict[funcname] = []
+
+#%%
 
 for idx in range(reads_to_eval):
     try:
@@ -102,3 +106,5 @@ for idx in range(reads_to_eval):
 
 # with open(jsonfile, 'r') as jf:
 #     results = json.load(jf)
+
+# %%
