@@ -3,20 +3,13 @@ import re
 
 reference_file = "../useful_files/zymo-ref-uniq_2019-03-15.fa"
 
-def get_comparison(dna_pred, file_name=None):
+def get_comparison(dna_pred):
     mapped = _map_prediction(dna_pred)
     if mapped == None:
         return dna_pred, ""
     
     dna_true = _get_reference(mapped.ctg)
-    dna_pred, dna_true = _compare(dna_pred, dna_true, mapped.r_st, mapped.cigar_str)
-    
-    if file_name is not None:
-        with open(file_name, 'a') as f:
-            f.write(f"PRED: {dna_pred} \n")
-            f.write(f"TRUE: {dna_true} \n")
-            f.write('\n')
-    return dna_pred, dna_true
+    return _compare(dna_pred, dna_true, mapped.r_st, mapped.cigar_str)
 
 def output_comparison(dna_pred, dna_true, filename):
     with open(filename, 'a') as f:
@@ -30,6 +23,7 @@ def print_comparison(dna_pred, dna_true):
         print(f"Segments {i}:")
         print(f"PRED:{dna_pred[i:i+incr]}")
         print(f"TRUE:{dna_true[i:i+incr]}")
+
 
 def _map_prediction(pred):
     try:

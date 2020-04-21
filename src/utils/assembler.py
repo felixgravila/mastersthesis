@@ -19,6 +19,19 @@ def assemble_and_output(filename, base_string_list, window=5):
   _output(aligned_seq, assembled, filename)
   return assembled
 
+def assemble_and_output_labelled(filename, y_pred, y_true):
+  aligned_seq = _get_aligned_sequences(y_pred, window=5)
+  injected_aligned_seq = []
+  for i,(pad_idx,seq) in enumerate(aligned_seq):
+    true_pair = (pad_idx, y_true[i].lower())
+    pred_pair = (pad_idx,seq)
+    injected_aligned_seq.append(true_pair)
+    injected_aligned_seq.append(pred_pair)
+  
+  assembled = _get_assembled_string(aligned_seq)
+  _output(injected_aligned_seq, assembled, filename)
+  return assembled
+  
 def compare(assembled_string, reference_string):
   return editdistance.eval(assembled_string, reference_string)
 
@@ -29,20 +42,20 @@ def compare_from_file(path):
   return compare(assembled_string,reference_string)
 
 def _output(alignments, assembled, filename):
-    if (os.path.exists(filename)):
-      os.remove(filename)
+  if (os.path.exists(filename)):
+    os.remove(filename)
+  
+  with open(filename, 'a') as f:
+    start_index = _get_closest_index(alignments)
     
-    with open(filename, 'a') as f:
-      start_index = _get_closest_index(alignments)
-      
-      for alignment in alignments:
-        idx = alignment[0]
-        seq = alignment[1]
-        alignment_string = _get_alignment_string(seq, idx)
-        f.write(alignment_string + '\n')
-      
-      alignment_string = _get_alignment_string(assembled, start_index)
-      f.write(alignment_string)
+    for alignment in alignments:
+      idx = alignment[0]
+      seq = alignment[1]
+      alignment_string = _get_alignment_string(seq, idx)
+      f.write(alignment_string + '\n')
+    
+    alignment_string = _get_alignment_string(assembled, start_index)
+    f.write(alignment_string)
 
 def _get_assembled_string(alignments):
     padded = _pad_seq_list(alignments)
