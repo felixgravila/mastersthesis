@@ -20,8 +20,8 @@ class style():
     GREEN = lambda x: f"\033[32m{x}\033[0m"
 
 models = [
-    'outputs/chiron-256CNN-200LSTM-bn-pad5-dropout-maxpool3/2020-04-20_15:04:21/checkpoints/00063_dis821.h5'
-    # 'outputs/chiron-bn-pad5/2020-03-03_21:24:40/checkpoints/00377_dis421.h5',
+    # 'outputs/chiron-256CNN-200LSTM-bn-pad5-dropout-maxpool3/2020-04-20_15:04:21/checkpoints/00063_dis821.h5'
+    'outputs/chiron-bn-pad5/2020-03-03_21:24:40/checkpoints/00377_dis421.h5',
     # 'outputs/chiron-bn-pad5-maxpool3/2020-03-04_09:35:31/checkpoints/00787_dis234.h5',
     # 'outputs/chiron-pad5-maxpool3/2020-03-04_17:44:03/checkpoints/00927_dis193.h5',
     # 'outputs/chiron-bn-pad5-dropout-maxpool3/2020-03-05_08:48:58/checkpoints/01924_dis588.h5'
@@ -42,8 +42,12 @@ returns name of model and predict func
 '''
 def make_chiron_for_file(file):
     description = file.split("/")[1]
-    cnn = int(re.findall(r"\d+CNN", description)[0][:-3])
-    lstm = int(re.findall(r"\d+LSTM", description)[0][:-4])
+    if "CNN" in description:
+        cnn = int(re.findall(r"\d+CNN", description)[0][:-3])
+        lstm = int(re.findall(r"\d+LSTM", description)[0][:-4])
+    else:
+        cnn = 256
+        lstm = 200
     cb = ChironBuilder(input_length, cnn_filters=cnn, lstm_units=lstm)
     if "bn" in description:
         cb = cb.with_batch_normalization()
