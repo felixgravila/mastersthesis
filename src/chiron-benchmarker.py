@@ -19,17 +19,10 @@ class style():
     RED = lambda x: f"\033[31m{x}\033[0m"
     GREEN = lambda x: f"\033[32m{x}\033[0m"
 
-models = [
-    # 'outputs/chiron-256CNN-200LSTM-bn-pad5-dropout-maxpool3/2020-04-20_15:04:21/checkpoints/00063_dis821.h5'
-    'outputs/chiron-bn-pad5/2020-03-03_21:24:40/checkpoints/00377_dis421.h5',
-    # 'outputs/chiron-bn-pad5-maxpool3/2020-03-04_09:35:31/checkpoints/00787_dis234.h5',
-    # 'outputs/chiron-pad5-maxpool3/2020-03-04_17:44:03/checkpoints/00927_dis193.h5',
-    # 'outputs/chiron-bn-pad5-dropout-maxpool3/2020-03-05_08:48:58/checkpoints/01924_dis588.h5'
-]
+model = 'outputs/chiron-512CNN-512LSTM-pad5-maxpool3/2020-04-21_17:32:55/checkpoints/00464_dis247.h5'
 
 input_length = 300
 reads_to_eval = 200
-json_write_file = "eval_output.json"
 
 data_preper = DataPrepper(validation_split=0.1, test_split=0.1)
 read_ids = data_preper.get_train_read_ids()
@@ -59,14 +52,10 @@ def make_chiron_for_file(file):
     chiron.load_weights(file)
     return (chiron.name, chiron.predict_beam_search) # using get_model_name instead of description for safety
 
-chiron_funcs = list(map(make_chiron_for_file, models))
+modelname, chiron = make_chiron_for_file(model)
 
-result_dict = {
-    'read_ids': []
-}
-for funcname in [c[0] for c in chiron_funcs]:
-    # initialise dict with empty arrays for each func
-    result_dict[funcname] = []
+result_dict = []
+json_write_file = f"trained_models/{modelname}.json"
 
 #%%
 
@@ -74,34 +63,36 @@ for idx in range(reads_to_eval):
     try:
         print(f"Evaluating {idx}/{reads_to_eval}...", end="")
         X, ref, raw, read_id = next(generator)
-        result_dict['read_ids'].append(read_id)
-        for modelname, modelfunc in chiron_funcs:
-            prediction, logs = modelfunc(X, beam_width=1) # beam_width=1 -> greedy
-            assembled = assemble(prediction, window=7)
-            try:
-                # this crashes if no match found
-                besthit = next(aligner.map(assembled))
-                result_dict[modelname].append({
-                    'ctg': besthit.ctg,
-                    'r_st': besthit.r_st,
-                    'r_en': besthit.r_en,
-                    'NM': besthit.NM,
-                    'blen': besthit.blen,
-                    'cig': analyse_cigar(besthit.cigar_str),
-                    'cigacc': 1-(besthit.NM/besthit.blen)
-                })
-                print(style.GREEN(f"{modelname}..."), end="")
-            except:
-                result_dict[modelname].append({
-                    'ctg': 0,
-                    'r_st': 0,
-                    'r_en': 0,
-                    'NM': 0,
-                    'blen': 0,
-                    'cig': 0,
-                    'cigacc': 0
-                })
-                print(style.RED(f"{modelname}..."), end="")
+
+        prediction, logs = chiron(X, beam_width=1) # beam_width=1 -> greedy
+        assembled = assemble(prediction, window=7)
+        try:
+            # this crashes if no match found
+            besthit = next(aligner.map(assembled))
+            cigacc = 1-(besthit.NM/besthit.blen)
+            result_dict.append({
+                'read_id':read_id,
+                'ctg': besthit.ctg,
+                'r_st': besthit.r_st,
+                'r_en': besthit.r_en,
+                'NM': besthit.NM,
+                'blen': besthit.blen,
+                'cig': analyse_cigar(besthit.cigar_str),
+                'cigacc': cigacc
+            })
+            print(style.GREEN(f"{modelname} ({cigacc*100:.2f})..."), end="")
+        except:
+            result_dict.append({
+                'read_id':read_id,
+                'ctg': 0,
+                'r_st': 0,
+                'r_en': 0,
+                'NM': 0,
+                'blen': 0,
+                'cig': 0,
+                'cigacc': 0
+            })
+            print(style.RED(f"{modelname}..."), end="")
         with open(json_write_file, 'w') as jsonfile:
             json.dump(result_dict, jsonfile)
         print("done.")
