@@ -123,10 +123,11 @@ for el in models:
             acc = get_cig_acc(aligner, assembly)
 
             if acc > TRASHOLD:
-                output_str, _ = get_comparison(assembly)
+                dna_pred, dna_true = get_comparison(assembly)
                 outputs.append({
                     'name':model_name,
-                    'cig_viz':output_str,
+                    'dna_pred':dna_pred,
+                    'dna_true':dna_true,
                     'acc':acc
                 })
 

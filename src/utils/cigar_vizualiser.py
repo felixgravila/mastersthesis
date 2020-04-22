@@ -14,6 +14,18 @@ def get_comparison(dna_pred, use_color=True):
 
     return _compare(dna_pred, dna_true, mapped.cigar_str, use_color)
 
+"""
+expects: dna_pred, dna_true - returned from get_comparison
+"""
+def calculate_mismatches(dna_pred, dna_true):
+    idx_true = 0
+    comparison_lst = []
+    for b in dna_pred:
+        if b in "ATGC":
+            comparison_lst.append(b == dna_true[idx_true])
+            idx_true +=1
+    return comparison_lst.count('')
+
 def output_comparison(dna_pred, dna_true, filename):
     with open(filename, 'a') as f:
         f.write(f"PRED: {dna_pred} \n")
