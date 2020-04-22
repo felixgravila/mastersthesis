@@ -32,7 +32,7 @@ DFF = 2*D_MODEL
 NUM_HEADS = 8
 DROPOUT_RATE = 0.1
 STRIDE = 30
-ALPHA = 0.4
+ALPHA = 0.1
 
 #%%
 read_ids = DataPrepper(validation_split=0.1, test_split=0.1).get_train_read_ids()
@@ -79,7 +79,7 @@ def train_step(inp, tar, labels, input_length, label_length):
   with tf.GradientTape() as tape: 
     enc_out, dec_out = fish(inp, tar_inp, True, combined_mask)
     
-    loss_ctc = tf.keras.backend.ctc_batch_cost(labels, enc_out, input_length, label_length)
+    loss_ctc = tf.keras.backend.ctc_batch_cost(labels, enc_out, input_length, label_length) / ENCODER_MAX_LENGTH
     loss_dec = get_decoder_loss(tar_real, dec_out, loss_object)
     loss_ = ALPHA * loss_ctc + (1-ALPHA) * loss_dec
     loss = tf.reduce_mean(loss_)
