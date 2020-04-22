@@ -131,7 +131,7 @@ for el in models:
                 })
 
             print(f"{read:02d}/{READS} Done read... cigacc {acc}"+" "*50) # 50 blanks to overwrite the previous print    
-            with open(f'./temps/benchmark_vizualizer.json', 'w') as jsonfile:
+            with open(f'./temps/cigar_analysis.json', 'w') as jsonfile:
                 json.dump(outputs, jsonfile)     
         except Exception as e:
             print(e)

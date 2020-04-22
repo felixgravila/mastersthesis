@@ -27,7 +27,6 @@ def print_comparison(dna_pred, dna_true):
         print(f"PRED:{dna_pred[i:i+incr]}")
         print(f"TRUE:{dna_true[i:i+incr]}")
 
-
 def _map_prediction(pred):
     try:
         aligner = mp.Aligner(reference_file)
