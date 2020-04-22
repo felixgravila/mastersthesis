@@ -27,9 +27,9 @@ set_gpu_growth()
 # raise Exception('done')
 
 # %%
-READS = 1
+READS = 10
 BATCH_SIZE = 32
-TRASHOLD = 90
+TRASHOLD = 0.8
 
 models = [{
     'name': 'fishnchips_256_0CNN_8H_4B',
@@ -126,11 +126,12 @@ for el in models:
                 output_str, _ = get_comparison(assembly)
                 outputs.append({
                     'name':model_name,
-                    'cig_viz':output_str
+                    'cig_viz':output_str,
+                    'acc':acc
                 })
 
             print(f"{read:02d}/{READS} Done read... cigacc {acc}"+" "*50) # 50 blanks to overwrite the previous print    
-            with open(f'benchmark_vizualizer.json', 'w') as jsonfile:
+            with open(f'./temps/benchmark_vizualizer.json', 'w') as jsonfile:
                 json.dump(outputs, jsonfile)     
         except Exception as e:
             print(e)
