@@ -18,6 +18,16 @@ class RawReadGenerator():
                 windows.append(dac[-self._window_size:])
             yield filename, np.array(windows).reshape((-1, self._window_size, 1))
 
+    def generator_with_raw(self):
+        dac_gen = self._get_dac()
+        for filename, dac in dac_gen:
+            windows = []
+            for i in range(0, len(dac)-self._window_size, self._stride):
+                windows.append(dac[i:i+self._window_size])
+            if i+self._window_size != len(dac):
+                windows.append(dac[-self._window_size:])
+            yield filename, np.array(windows).reshape((-1, self._window_size, 1)), dac
+
     def _get_next_read_filename(self):
         for d in os.listdir(self._root_folder):
             if "filename_mapping.txt" not in d:
