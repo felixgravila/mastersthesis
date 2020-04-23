@@ -1,30 +1,16 @@
 import mappy as mp
+from collections import deque
 import re
 
 reference_file = "../useful_files/zymo-ref-uniq_2019-03-15.fa"
 
 def get_comparison(dna_pred, use_color=True):
-    mapped = _map_prediction(dna_pred)
-    if mapped == None:
-        return dna_pred, ""
-    
-    dna_true = _get_reference(mapped.ctg)
-    dna_true = dna_true[mapped.r_st:mapped.r_en]
-    dna_pred = dna_pred[mapped.q_st:mapped.q_en]
+    dna_pred, dna_true, dna_cigar = _align(dna_pred)
+    return _compare(dna_pred, dna_true, dna_cigar, use_color)
 
-    return _compare(dna_pred, dna_true, mapped.cigar_str, use_color)
-
-"""
-expects: dna_pred, dna_true - returned from get_comparison
-"""
-def calculate_mismatches(dna_pred, dna_true):
-    idx_true = 0
-    comparison_lst = []
-    for b in dna_pred:
-        if b in "ATGC":
-            comparison_lst.append(b == dna_true[idx_true])
-            idx_true +=1
-    return comparison_lst.count('')
+def get_miss_matches(dna_pred):
+    dna_pred, dna_true, dna_cigar = _align(dna_pred)
+    return _calc_miss_matches(dna_pred, dna_true, dna_cigar)
 
 def output_comparison(dna_pred, dna_true, filename):
     with open(filename, 'a') as f:
@@ -38,6 +24,75 @@ def print_comparison(dna_pred, dna_true):
         print(f"Segments {i}:")
         print(f"PRED:{dna_pred[i:i+incr]}")
         print(f"TRUE:{dna_true[i:i+incr]}")
+
+def print_mismatches(dna_pred, dna_true, amount_per_read=200):
+
+    assert len(dna_pred) == len(dna_true)
+    
+    class style():
+        RED = lambda x: f"\033[31m{x}\033[0m"
+        GREEN = lambda x: f"\033[32m{x}\033[0m"
+
+    str_len = 100
+    for i in range(0, amount_per_read, str_len):
+        for j in range(i, i+str_len):
+            if(j >= len(dna_pred)):
+                continue
+            if dna_true[j] == dna_pred[j]:
+                print(dna_pred[j], end="")
+            else:
+                print(style.RED(dna_pred[j]), end="")
+        print()
+        for j in range(i, i+str_len):
+            if(j >= len(dna_pred)):
+                continue
+            if dna_true[j] == dna_pred[j]:
+                print(dna_pred[j], end="")
+            else:
+                print(style.GREEN(dna_pred[j]), end="")
+        print("\n----")
+
+
+def _calc_miss_matches(dna_pred, dna_true, dna_cigar):
+    
+    dna_cigar_operations = re.findall(r'[\d]+[SMDI]', dna_cigar)
+
+    result_true = ""
+    result_pred = ""
+    
+    refdeque = deque(dna_true)
+    assdeque = deque(dna_pred)
+    cigdeque = deque(dna_cigar_operations)
+    while len(cigdeque) > 0:
+        cc = cigdeque.popleft()
+        count = int(cc[:-1])
+        action = cc[-1]
+
+        for _ in range(count):
+            if action == "M":
+                result_true += refdeque.popleft()
+                result_pred += assdeque.popleft()
+            elif action == "I":
+                assdeque.popleft()
+            elif action == "D":
+                refdeque.popleft()
+    num_mismatches = sum([a!=b for a,b in zip(result_true, result_pred)])
+    return result_pred, result_true, num_mismatches
+
+def _align(dna_pred):
+    mapped = _map_prediction(dna_pred)
+    if mapped == None:
+        raise Exception("Unable to map prediction.")
+    
+    dna_cigar = mapped.cigar_str
+    dna_true = _get_reference(mapped.ctg)
+    dna_true = dna_true[mapped.r_st:mapped.r_en]
+    dna_pred = dna_pred[mapped.q_st:mapped.q_en] 
+
+    if mapped.strand == -1:
+        dna_pred = mp.revcomp(dna_pred)
+    
+    return dna_pred, dna_true, dna_cigar   
 
 def _map_prediction(pred):
     try:
@@ -60,20 +115,13 @@ def _get_reference(key):
         return ref_file_str[start_idx:end_idx].replace("\n","")
 
 def _with_color(color):
-    colors = {
-        'red': "\033[1;31m",  
-        'blue': "\033[1;34m",
-        'green': "\033[0;32m",
-        'cyan':"\033[1;36m",
-        'reset': "\033[0;0m"
-    }
     def inner_decorator(func):
 
         def wrapper(o_amount, dna_result, dna_true, dna_pred, true_idx, pred_idx, use_color):
             if use_color:
-                dna_result += colors[color]
+                dna_result += _get_colors()[color]
                 dna_result, dna_true, dna_pred, true_idx, pred_idx = func(o_amount, dna_result, dna_true, dna_pred, true_idx, pred_idx, use_color)
-                dna_result += colors['reset']
+                dna_result += _get_colors()['reset']
                 return dna_result, dna_true, dna_pred, true_idx, pred_idx
             return func(o_amount, dna_result, dna_true, dna_pred, true_idx, pred_idx)
         return wrapper
@@ -135,3 +183,12 @@ def _substitute_op(amount, res, true, pred, true_idx, pred_idx, use_color):
     true_idx += amount + 1
     pred_idx += amount
     return res, true, pred, true_idx, pred_idx
+
+def _get_colors():
+    return {
+    'red': "\033[1;31m",  
+    'blue': "\033[1;34m",
+    'green': "\033[0;32m",
+    'cyan':"\033[1;36m",
+    'reset': "\033[0;0m"
+    }

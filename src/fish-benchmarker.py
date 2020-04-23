@@ -121,9 +121,6 @@ for read in range(len(result_dict), READS):
 
         assembly = assemble(y_pred)
 
-        dna_pred, dna_true = get_comparison(assembly)
-        output_comparison(dna_pred, dna_true, "./trained_models/benchmark_comparison.txt")
-
         result = get_cig_result(aligner, assembly)
         result_dict.append(result)
         print(f"{read:02d}/{READS} Done read... cigacc {result['cigacc']}"+" "*50) # 50 blanks to overwrite the previous print
