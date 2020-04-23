@@ -21,7 +21,7 @@ aligner = mp.Aligner("../useful_files/zymo-ref-uniq_2019-03-15.fa")
 
 # model = 'outputs/chiron-512CNN-512LSTM-pad5-maxpool3/2020-04-21_17:32:55/checkpoints/00464_dis247.h5'
 model = 'outputs/chiron-bn-pad5/2020-03-03_21:24:40/checkpoints/00377_dis421.h5'
-in_folder = '/mnt/nvme/bio/extracted/umi_each_bact_with_1_single'
+in_folder = '../somedata/singlefast5/'
 output_file = 'chiron_output.fa'
 
 
