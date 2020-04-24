@@ -6,7 +6,9 @@ reference_file = "../useful_files/zymo-ref-uniq_2019-03-15.fa"
 
 def get_comparison(dna_pred, use_color=True):
     dna_pred, dna_true, dna_cigar = _align(dna_pred)
-    return _compare(dna_pred, dna_true, dna_cigar, use_color)
+    dna_pred, dna_true = _compare(dna_pred, dna_true, dna_cigar, use_color)
+    cig_analysis = _analyse_cigar(dna_cigar)
+    return dna_pred, dna_true, cig_analysis
 
 def get_miss_matches(dna_pred):
     dna_pred, dna_true, dna_cigar = _align(dna_pred)
@@ -52,6 +54,27 @@ def print_mismatches(dna_pred, dna_true, amount_per_read=200):
                 print(style.GREEN(dna_pred[j]), end="")
         print("\n----")
 
+def get_mapping(pred):
+    try:
+        aligner = mp.Aligner(reference_file)
+        return next(aligner.map(pred))
+    except Exception as e:
+        print(e)
+        return None
+
+def get_reference(key):
+    if not key:
+        raise Exception(f"Attempting to get reference with a non-key:{key}")
+    with open(reference_file, "r") as f:
+        ref_file_str = f.read()
+        idx = ref_file_str.find(key)
+        if idx == -1:
+            raise Exception("Didnt match reference file.")
+        start_idx = idx + len(key)
+        end_idx = ref_file_str.find(">", start_idx)
+        if end_idx == -1:
+            end_idx = len(ref_file_str)-1
+        return ref_file_str[start_idx:end_idx].replace("\n","")
 
 def _calc_miss_matches(dna_pred, dna_true, dna_cigar):
     
@@ -80,12 +103,12 @@ def _calc_miss_matches(dna_pred, dna_true, dna_cigar):
     return result_pred, result_true, num_mismatches
 
 def _align(dna_pred):
-    mapped = _map_prediction(dna_pred)
+    mapped = get_mapping(dna_pred)
     if mapped == None:
         raise Exception("Unable to map prediction.")
     
     dna_cigar = mapped.cigar_str
-    dna_true = _get_reference(mapped.ctg)
+    dna_true = get_reference(mapped.ctg)
     dna_true = dna_true[mapped.r_st:mapped.r_en]
     dna_pred = dna_pred[mapped.q_st:mapped.q_en] 
 
@@ -94,25 +117,12 @@ def _align(dna_pred):
     
     return dna_pred, dna_true, dna_cigar   
 
-def _map_prediction(pred):
-    try:
-        aligner = mp.Aligner(reference_file)
-        return next(aligner.map(pred))
-    except Exception as e:
-        print(e)
-        return None
-
-def _get_reference(key):
-    with open(reference_file, "r") as f:
-        ref_file_str = f.read()
-        idx = ref_file_str.find(key)
-        if idx == -1:
-            raise Exception("Didnt match reference file.")
-        start_idx = idx + len(key)
-        end_idx = ref_file_str.find(">", start_idx)
-        if end_idx == -1:
-            end_idx = len(ref_file_str-1)
-        return ref_file_str[start_idx:end_idx].replace("\n","")
+def _analyse_cigar(cigar_string):
+    res = re.findall(r'[\d]+[SMDI]', cigar_string)
+    d = {"S":0,"M":0,"D":0,"I":0}
+    for r in res:
+        d[r[-1]] += int(r[:-1])
+    return d
 
 def _with_color(color):
     def inner_decorator(func):
