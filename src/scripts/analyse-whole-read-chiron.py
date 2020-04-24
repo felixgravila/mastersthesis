@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import json
 sys.path.insert(0, './../src')
 
-from utils.assembler import assemble_and_output
+from utils.assembler import assemble_and_output,assemble
 from models.ChironBuilder import ChironBuilder
 from utils.Other import set_gpu_growth
 from utils.RawReadGenerator import RawReadGenerator
@@ -41,7 +41,7 @@ def get_cig_acc(aligner, assembly):
     except:
         return 0
 
-def run():
+def run(output_file=None, out_img=False, out_assembly=False):
     aligner = mp.Aligner("../useful_files/zymo-ref-uniq_2019-03-15.fa")
     model = "./trained_models/00377_dis421.h5"
     readGenerator = RawReadGenerator(
@@ -54,16 +54,21 @@ def run():
     for filename, x, dac_raw in readGenerator:
         count += 1
 
-        plt.figure(figsize=(30,5))
-        plt.plot(dac_raw[:3000], 'r')
-        plt.title(filename)
-        plt.savefig(f"./temps/{modelname}_{filename}.png")
-        plt.close()
+        if out_img:
+            plt.figure(figsize=(30,5))
+            plt.plot(dac_raw[:3000], 'r')
+            plt.title(filename)
+            plt.savefig(f"./temps/{modelname}_{filename}.png")
+            plt.close()
 
         print(f"Predicting read num. {count}.")
-        y_pred, logs = chiron(x, beam_width=1)
+        y_pred, _ = chiron(x, beam_width=1)
         print(f"Assembling read num. {count}.")
-        dna_pred = assemble_and_output(f"./temps/{filename}.txt", y_pred)
+        if out_assembly:
+            dna_pred = assemble_and_output(f"./temps/{filename}.txt", y_pred)
+        else:
+            dna_pred = assemble(y_pred)
+
         acc = get_cig_acc(aligner, dna_pred)
 
         outputs.append({
@@ -71,8 +76,13 @@ def run():
             'dna_pred': dna_pred,
             'acc': acc
         })
-        with open(f"./temps/{modelname}", 'w') as jsonfile:
+        if output_file == None:
+            output_file = f"{modelname}.json"
+        with open(f"./temps/{output_file}", 'w') as jsonfile:
             json.dump(outputs, jsonfile)  
 
 if __name__ == "__main__":
-    run()
+    output_file = sys.argv[1]
+    out_img = sys.argv[2]
+    out_assembly = sys.argv[3]
+    run(output_file, out_img, out_assembly )
