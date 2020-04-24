@@ -54,7 +54,7 @@ def run(output_file=None, out_img=False, out_assembly=False):
     for filename, x, dac_raw in readGenerator:
         count += 1
 
-        if out_img:
+        if out_img=="True":
             plt.figure(figsize=(30,5))
             plt.plot(dac_raw[:3000], 'r')
             plt.title(filename)
@@ -64,7 +64,7 @@ def run(output_file=None, out_img=False, out_assembly=False):
         print(f"Predicting read num. {count}.")
         y_pred, _ = chiron(x, beam_width=1)
         print(f"Assembling read num. {count}.")
-        if out_assembly:
+        if out_assembly=="True":
             dna_pred = assemble_and_output(f"./temps/{filename}.txt", y_pred)
         else:
             dna_pred = assemble(y_pred)
