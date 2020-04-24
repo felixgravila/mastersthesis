@@ -46,6 +46,5 @@ Tried Dead Fish with alpha 0.4 and CTC looked good, might be that CTC is overpow
 | Fish n Chips CTSea | Encoder + [Decoder / CTC] α 0.1 | 512     | 4      | 8     | 0   | 82%      |
 | Fish n Chips CTSea | Encoder + [Decoder / CTC] α 0.4 | 256     | 4      | 8     | 0   | Disaster |
 | Fish n CTSea       | Encoder + CTC                   | 512     | 4      | 8     | 0   | 78%      |
-| Fish n CTSea       | Encoder + CTC                   | 2048    | 4      | 8     | 0   | Progress |
 | Dead Fish          | Encoder + Decoder + CTC         | 256     | 4      | 8     | 0   | Disaster |
 | ChironCopy         |                                 | 512     |        |       | 5   | 89.72%   |
