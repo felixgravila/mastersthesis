@@ -98,7 +98,7 @@ for filename, dac in readGenerator:
     prediction, logs = chiron(dac, beam_width=1) # beam_width=1 -> greedy
     assembled = assemble(prediction, window=7)
     with open(output_file, 'a') as f:
-        f.write(f">{filename}\n")
+        f.write(f"@{filename}\n")
         f.write(f"{assembled}\n")
     print_acc_while_basecalling(assembled)
 
