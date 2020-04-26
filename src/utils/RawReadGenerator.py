@@ -28,13 +28,6 @@ class RawReadGenerator():
                 windows.append(dac[-self._window_size:])
             yield filename, np.array(windows).reshape((-1, self._window_size, 1)), dac
 
-    def _get_next_read_filename(self):
-        for d in os.listdir(self._root_folder):
-            if "filename_mapping.txt" not in d:
-                for f in os.listdir(os.path.join(self._root_folder, d)):
-                    cleaned_filename = f.split(".")[0]
-                    yield cleaned_filename, os.path.join(self._root_folder, d, f)
-
     def _get_dac(self):
         filename_gen = self._get_next_read_filename()
         for filename, next_file in filename_gen:
@@ -45,6 +38,12 @@ class RawReadGenerator():
                 DAC = self._normalize_signal(list(DAC))
             yield filename, DAC
 
+    def _get_next_read_filename(self):
+        for d in os.listdir(self._root_folder):
+            if "filename_mapping.txt" not in d:
+                for f in os.listdir(os.path.join(self._root_folder, d)):
+                    cleaned_filename = f.split(".")[0]
+                    yield cleaned_filename, os.path.join(self._root_folder, d, f)
 
     def _normalize_signal(self, signal):
         signal = np.array(signal)
