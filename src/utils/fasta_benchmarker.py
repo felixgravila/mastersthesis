@@ -2,7 +2,7 @@
 
 import numpy as np
 import mappy as mp 
-import os
+import os, sys
 from collections import deque
 import json
 from Other import analyse_cigar
@@ -14,12 +14,18 @@ class style():
     GREEN = lambda x: f"\033[32m{x}\033[0m"
 
 # folder = 'fasta/chiron-bn-pad5'
-folder = '/mnt/nvme/bio/train_chiron/output_DNA_MODEL/result/'
+# folder = '/mnt/nvme/bio/train_chiron/output_DNA_MODEL/result/'
 # folder = '/mnt/nvme/bio/mastersthesis/somedata/guppy_output'
+folder = 'fasta/fishnchips_250_5CNN_25H_4B'
 experiment_name = "DNA_MODEL"
 
 result_dict = []
 json_write_file = f"trained_models/fa_{experiment_name}.json"
+
+if os.path.isfile(json_write_file):
+    answer = input("File exists. Overwrite [Y/n]?:")
+    if answer in "Nn" and answer is not "":
+        sys.exit(0)
 
 #%%
 
