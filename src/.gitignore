@@ -1,1 +1,4 @@
 outputs/
+temps/*.txt
+temps/*.png
+temps/*.jpg

@@ -29,6 +29,9 @@ class DataPrepper():
     def get_test_read_ids(self):
         return self._test_read_ids
 
+    def get_all_read_ids(self):
+        return self._read_ids
+
     def _get_train_split(self):
         if(self._validation_split + self._test_split > 1):
             raise AttributeError("Data preper: Invalid train, test and validation split. Split cannot exceed 1.")
