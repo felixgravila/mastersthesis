@@ -9,7 +9,7 @@ class Decoder(tf.keras.layers.Layer):
     self.d_model = d_model
     self.num_layers = num_layers
     
-    self.embedding = tf.keras.layers.Embedding(10, d_model)
+    self.embedding = tf.keras.layers.Embedding(15, d_model)
     self.pos_encoding = positional_encoding(maximum_position_encoding_length, d_model)
     
     self.dec_layers = [DecoderLayer(d_model, num_heads, dff, rate) for _ in range(num_layers)]
