@@ -30,6 +30,10 @@ Tried Dead Fish with alpha 0.4 and CTC looked good, might be that CTC is overpow
 
 ## BENCHMARKS
 
+| Name               | Accuracy |
+|--------------------|----------|
+| Chiron (DNA_MODEL) | 85.1%    |
+
 | Name               | Type                    | D_Model | Blocks | Heads | CNN    | Accuracy |
 |--------------------|-------------------------|---------|--------|-------|--------|----------|
 | ChironCopy         | Enc + Dec + CTC iter    | 512     |        |       | 5      | 89.72%   |
