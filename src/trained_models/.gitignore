@@ -4,4 +4,4 @@
 *.zip
 !fishnchips_256_0CNN_8H_4B.h5
 !fishnchips_256_0CNN_8H_4B.npy
-
+!fishnchips_250_5CNN_25H_4B.h5
