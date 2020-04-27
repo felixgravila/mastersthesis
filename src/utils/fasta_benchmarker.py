@@ -5,15 +5,17 @@ import mappy as mp
 import os
 from collections import deque
 import json
+from Other import analyse_cigar
 
-aligner = mp.Aligner("../useful_files/zymo-ref-uniq_2019-03-15.fa")
+aligner = mp.Aligner("/mnt/nvme/bio/mastersthesis/useful_files/zymo-ref-uniq_2019-03-15.fa")
 
 class style():
     RED = lambda x: f"\033[31m{x}\033[0m"
     GREEN = lambda x: f"\033[32m{x}\033[0m"
 
-# folder = '/mnt/nvme/bio/train_chiron/output_DNA_MODEL/result'
-folder = 'fasta/chiron-bn-pad5'
+# folder = 'fasta/chiron-bn-pad5'
+folder = '/mnt/nvme/bio/train_chiron/output_DNA_MODEL/result/'
+# folder = '/mnt/nvme/bio/mastersthesis/somedata/guppy_output'
 experiment_name = "DNA_MODEL"
 
 result_dict = []
@@ -24,6 +26,8 @@ json_write_file = f"trained_models/fa_{experiment_name}.json"
 reads = {}
 
 for fastafile in os.listdir(folder):
+    if fastafile.split(".")[-1] not in ["fastq", "fasta", "fa", "fq"]:
+        continue
     with open(os.path.join(folder, fastafile), "r") as f:
         data = deque(f.readlines())
     while len(data) > 0:
@@ -34,10 +38,11 @@ for fastafile in os.listdir(folder):
             reads[rid] = dna
 
 #%%
-    
+
 cigaccs = []
-for rid, dna in reads.items():
-    print(f"Aligning len {len(dna)}")
+tot_reads = len(reads)
+for i, (rid, dna) in enumerate(reads.items()):
+    print(f"Aligning {i:04d}/{tot_reads}"+" "*50, end="\r")
     try:
         # this crashes if no match found
         besthit = next(aligner.map(dna))
@@ -54,7 +59,7 @@ for rid, dna in reads.items():
         })
         # print(style.GREEN(f"{modelname} ({cigacc*100:.2f})..."), end="")
         cigaccs.append(cigacc*100)
-    except:
+    except Exception as e:
         result_dict.append({
             'read_id':rid,
             'ctg': 0,

@@ -1,0 +1,15 @@
+2020-04-27 13:15:52.434134 [guppy/message] ONT Guppy basecalling software version 3.5.2+5b7a51b, client-server API version 1.1.0
+config file:        
+model file:         
+input path:         /data/singlefast5/
+save path:          /data/guppy_output
+chunk size:         1000
+chunks per runner:  20
+records per file:   4000
+num basecallers:    1
+cpu mode:           ON
+threads per caller: 4
+
+2020-04-27 13:15:52.434236 [guppy/info] crashpad_handler not supported on this platform.
+2020-04-27 13:15:52.435529 [guppy/error] Model File "" could not be opened.
+2020-04-27 13:15:52.435552 [guppy/warning] An error occurred in the basecaller. Aborting.
