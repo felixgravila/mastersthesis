@@ -1,4 +1,5 @@
 from models.Chiron import Chiron
+import re
 
 class ChironBuilder():
 
@@ -54,3 +55,29 @@ class ChironBuilder():
             model_name=self.model_name,
             dropout=self.dropout,
             use_None_input=self.none_input)
+
+
+'''
+makes a chiron for the model file
+loads the weights
+returns name of model and predict func
+'''
+def chiron_for_file(input_length, file):
+    description = file.split("/")[1]
+    if "CNN" in description:
+        cnn = int(re.findall(r"\d+CNN", description)[0][:-3])
+        lstm = int(re.findall(r"\d+LSTM", description)[0][:-4])
+    else:
+        cnn = 256
+        lstm = 200
+
+    cb = ChironBuilder(input_length, cnn_filters=cnn, lstm_units=lstm)
+    if "bn" in description:
+        cb = cb.with_batch_normalization()
+    if "pad5" in description:
+        cb = cb.with_rnn_padding(5)
+    if "maxpool3" in description:
+        cb = cb.with_maxpool(3)
+    chiron = cb.build()
+    chiron.load_weights(file)
+    return (chiron.name, chiron.predict_beam_search) # using get_model_name instead of description for safety
