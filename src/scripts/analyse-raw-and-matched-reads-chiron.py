@@ -1,9 +1,9 @@
-from itertools import filterfalse
 import sys
 import re
 import matplotlib.pyplot as plt
 import json
 from collections import deque
+import mappy as mp
 sys.path.insert(0, './../src')
 
 from utils.assembler import assemble_and_output,assemble
@@ -12,14 +12,13 @@ from utils.Other import set_gpu_growth
 from utils.DataGeneratorCombined import DataGeneratorCombined
 from utils.DataPrepper import DataPrepper
 from utils.DataLoader import DataLoader
-import numpy as mp
+
 set_gpu_growth()
 
 INPUT_LENGTH = 300
 
 def make_chiron_for_file(file):
-    description = "outputs/chiron-bn-pad5/2020-03-03_21:24:40/checkpoints/00377_dis421.h5".split("/")[
-        1]
+    description = "outputs/chiron-bn-pad5/2020-03-03_21:24:40/checkpoints/00377_dis421.h5".split("/")[1]
     if "CNN" in description:
         cnn = int(re.findall(r"\d+CNN", description)[0][:-3])
         lstm = int(re.findall(r"\d+LSTM", description)[0][:-4])
@@ -49,17 +48,24 @@ def run(output_file=None, out_img=False, out_assembly=False):
     aligner = mp.Aligner("../useful_files/zymo-ref-uniq_2019-03-15.fa")
     model = "./trained_models/00377_dis421.h5"
     
-    data_loader = DataLoader()
     data_preper = DataPrepper(validation_split=0.1, test_split=0.1)
     read_ids = data_preper.get_all_read_ids()
     
-    readGenerator = DataGeneratorCombined("../somedata/singlefast5/", window_size=INPUT_LENGTH, stride=30).generator(available_read_ids=read_ids)
+    readGeneratorObj = DataGeneratorCombined("../somedata/singlefast5/", window_size=INPUT_LENGTH, stride=30)
+    generator = readGeneratorObj.generator(available_read_ids=read_ids)
     modelname, chiron = make_chiron_for_file(model)
 
     outputs = []
     outputs_raw = []
-    for read_id, x_raw, x, dac in readGenerator:
-        if x != []:
+    for i,(read_id, x_raw, x, _) in enumerate(generator):
+        
+        print(f"Iteration:{i}")
+
+        if i % 10 == 0:
+            print(f"Skips:{readGeneratorObj.skip_count}")
+            print(f"Matches:{readGeneratorObj.match_count}")
+
+        if x == None:
             continue
         
         y_pred, _ = chiron(x, beam_width=1)

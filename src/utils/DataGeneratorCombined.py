@@ -7,19 +7,21 @@ class DataGeneratorCombined(RawReadGenerator):
     def __init__(self, root_folder, window_size, stride=30):
         super().__init__(root_folder, window_size, stride=30) 
         self._loader = DataLoader()
-        self._skip_count = 0
+        self.skip_count = 0
+        self.match_count = 0
 
-    def generator(self, available_read_ids):
-        
+    def generator(self, available_read_ids):    
         dac_gen = self._get_dac()
         for read_id, dac in dac_gen:
             if read_id not in available_read_ids:
                 raw_windows = self._compute_raw_windows(dac)
-                yield (read_id, raw_windows, [], dac)
+                self.skip_count += 1
+                yield (read_id, raw_windows, None, dac)                
                 continue
 
             raw_windows = self._compute_raw_windows(dac)
             windows = self._compute_windows(read_id)
+            self.match_count += 1
             yield (read_id, raw_windows, windows, dac)
         
     def _compute_raw_windows(self, dac):
@@ -58,4 +60,4 @@ class DataGeneratorCombined(RawReadGenerator):
             if len(labels) >= 1:
                 windows.append(list(curdacs))
             
-        return windows
+        return np.array(windows)
