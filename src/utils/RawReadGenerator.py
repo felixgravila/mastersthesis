@@ -7,6 +7,11 @@ class RawReadGenerator():
         self._root_folder = root_folder
         self._window_size = window_size
         self._stride = stride
+        self._all_files = self._get_all_files()
+    
+    @property
+    def len(self):
+        return len(self._all_files)
 
     def generator(self):
         dac_gen = self._get_dac()
@@ -50,3 +55,12 @@ class RawReadGenerator():
         mean = np.mean(signal)
         standard_dev = np.std(signal)
         return (signal - mean)/standard_dev
+
+    def _get_all_files(self):
+        all_files = []
+        for d in os.listdir(self._root_folder):
+            jpath = os.path.join(self._root_folder, d)
+            if os.path.isdir(jpath):
+                all_files.extend(os.listdir(jpath))
+        all_files = [x for x in all_files if ".fast5" in x]
+        return all_files
