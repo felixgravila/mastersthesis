@@ -35,14 +35,14 @@ Tried Dead Fish with alpha 0.4 and CTC looked good, might be that CTC is overpow
 | Chiron (DNA_MODEL)                 | 85.1%    |
 | Guppy (dna_r9.4.1_450bps_fast.cfg) | 91.1%    |
 
-| Name                            | CNN Blocks | Filters | LSTM cells | Padding | BN | Maxpool | Dropout | Accuracy   |
-|---------------------------------|------------|---------|------------|---------|----|---------|---------|------------|
-| Chiron-bn-pad5                  | 5          | 256 (?) | 250 (?)    | T       | T  |         |         | 85.10%     |
-| Chiron-bn-pad5-maxpool3         | 5          | 256 (?) | 250 (?)    | T       | T  | T       |         | 90.79%     |
-| Chiron-bn-pad5-dropout-maxpool3 | 5          | 256 (?) | 250 (?)    | T       | T  | T       | T       | 70.90%  *  |
-| Chiron-pad5-maxpool3            | 5          | 256 (?) | 250 (?)    | T       |    | T       |         | 93.15%     |
-| Chiron-pad5-maxpool3 (big)      | 5          | 512 (?) | 512 (?)    | T       |    | T       |         | 86.73%     |
-| Chiron-pad5-maxpool3 (whole)    | 5          | 256 (?) | 250 (?)    | T       |    | T       |         | 91.35%     |
+| Name                            | CNN Blocks | Filters | Cells | Padding | BN | Maxpool | Dropout | Accuracy   |
+|---------------------------------|------------|---------|-------|---------|----|---------|---------|------------|
+| Chiron-bn-pad5                  | 5          | 256     | 250   | T       | T  |         |         | 85.10%     |
+| Chiron-bn-pad5-maxpool3         | 5          | 256     | 250   | T       | T  | T       |         | 90.79%     |
+| Chiron-bn-pad5-dropout-maxpool3 | 5          | 256     | 250   | T       | T  | T       | T       | 70.90%  *  |
+| Chiron-pad5-maxpool3            | 5          | 256     | 250   | T       |    | T       |         | 93.15%     |
+| Chiron-pad5-maxpool3 (big)      | 5          | 512     | 512   | T       |    | T       |         | 86.73%     |
+| Chiron-pad5-maxpool3 (whole)    | 5          | 256     | 250   | T       |    | T       |         | 91.35%     |
 
 | Name               | Type                    | D_Model | Blocks | Heads | CNN    | Accuracy |
 |--------------------|-------------------------|---------|--------|-------|--------|----------|
