@@ -14,7 +14,8 @@ files = [
     "trained_models/fishnchips_250_0CNN_25H_4B.json",
     # "trained_models/fishnchips_256_0CNN_32H_4B.json",
     "trained_models/fishnchips_1000_0CNN_25H_2B.json",
-    "trained_models/fishnchips_250_5CNN_25H_4B.json"
+    "trained_models/fishnchips_250_5CNN_25H_4B.json",
+    "trained_models/fishnchips_1000_0CNN_50H_2B.json"
 ]
 
 plt.figure(figsize=(20, 10))
