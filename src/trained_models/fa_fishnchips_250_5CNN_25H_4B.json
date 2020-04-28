@@ -1,1 +1,6441 @@
-[{"read_id": "ad1bff83-083a-40dc-83c6-43933ae22401", "ctg": "Bacillus_10;size=1;", "r_st": 34, "r_en": 4249, "NM": 426, "blen": 4215, "cig": {"S": 0, "M": 3810, "D": 405, "I": 0}, "cigacc": 0.898932384341637}, {"read_id": "7e96de41-2af9-466d-bd0a-315510f1c528", "ctg": "Bacillus_10;size=1;", "r_st": 20, "r_en": 4241, "NM": 420, "blen": 4221, "cig": {"S": 0, "M": 3823, "D": 398, "I": 0}, "cigacc": 0.900497512437811}, {"read_id": "3cf602fb-c280-4b6a-8f44-88f830e59530", "ctg": "Bacillus_10;size=1;", "r_st": 23, "r_en": 4238, "NM": 152, "blen": 4215, "cig": {"S": 0, "M": 4075, "D": 140, "I": 0}, "cigacc": 0.9639383155397391}, {"read_id": "7ccc4e89-3a8a-4d0f-9738-200d582a3569", "ctg": "Bacillus_10;size=1;", "r_st": 2, "r_en": 4209, "NM": 177, "blen": 4208, "cig": {"S": 0, "M": 4044, "D": 163, "I": 1}, "cigacc": 0.9579372623574145}, {"read_id": "5f185c28-e3ef-4d1d-b920-ddab0410d4b2", "ctg": "Bacillus_10;size=1;", "r_st": 0, "r_en": 4223, "NM": 155, "blen": 4225, "cig": {"S": 0, "M": 4087, "D": 136, "I": 2}, "cigacc": 0.9633136094674556}, {"read_id": "cabe44a8-021b-4c0f-92c7-9e79e58bbfa9", "ctg": "Bacillus_10;size=1;", "r_st": 28, "r_en": 4246, "NM": 22, "blen": 4218, "cig": {"S": 0, "M": 4197, "D": 21, "I": 0}, "cigacc": 0.9947842579421526}, {"read_id": "fe1296e5-2c19-4120-b363-685b0a61501b", "ctg": "Lactobacillus_1;size=1;", "r_st": 22, "r_en": 4304, "NM": 191, "blen": 4282, "cig": {"S": 0, "M": 4102, "D": 180, "I": 0}, "cigacc": 0.955394675385334}, {"read_id": "f4db3292-3057-4dc2-be24-3636622d9d66", "ctg": "Bacillus_10;size=1;", "r_st": 16, "r_en": 4235, "NM": 511, "blen": 4224, "cig": {"S": 0, "M": 3740, "D": 479, "I": 5}, "cigacc": 0.8790246212121212}, {"read_id": "68f8f227-ad47-4bcd-9a79-de282ca5f960", "ctg": "Bacillus_10;size=1;", "r_st": 7, "r_en": 4224, "NM": 63, "blen": 4217, "cig": {"S": 0, "M": 4161, "D": 56, "I": 0}, "cigacc": 0.9850604695281006}, {"read_id": "d21febd1-5cb5-4e82-a7f1-8542c7c21240", "ctg": "Bacillus_10;size=1;", "r_st": 2, "r_en": 4213, "NM": 130, "blen": 4214, "cig": {"S": 0, "M": 4097, "D": 114, "I": 3}, "cigacc": 0.9691504508780256}, {"read_id": "b0984658-33b0-493c-9bd9-ac8f91fd097f", "ctg": "Bacillus_10;size=1;", "r_st": 0, "r_en": 4224, "NM": 362, "blen": 4225, "cig": {"S": 0, "M": 3895, "D": 329, "I": 1}, "cigacc": 0.9143195266272189}, {"read_id": "3d902c46-c1d7-4b28-bbc3-aa92a98b6b5e", "ctg": "Bacillus_10;size=1;", "r_st": 2, "r_en": 4228, "NM": 184, "blen": 4227, "cig": {"S": 0, "M": 4052, "D": 174, "I": 1}, "cigacc": 0.9564703099124675}, {"read_id": "44cb49c9-7afa-433d-a65f-4e956be419aa", "ctg": "Bacillus_10;size=1;", "r_st": 1, "r_en": 4237, "NM": 126, "blen": 4236, "cig": {"S": 0, "M": 4119, "D": 117, "I": 0}, "cigacc": 0.9702549575070821}, {"read_id": "fd136872-5fae-4047-af64-4ecaa8e32663", "ctg": "Bacillus_10;size=1;", "r_st": 28, "r_en": 4248, "NM": 75, "blen": 4221, "cig": {"S": 0, "M": 4150, "D": 70, "I": 1}, "cigacc": 0.9822316986496091}, {"read_id": "399cca22-068a-4b68-8d93-4abf833d33de", "ctg": "Bacillus_10;size=1;", "r_st": 18, "r_en": 3553, "NM": 374, "blen": 3537, "cig": {"S": 0, "M": 3192, "D": 343, "I": 2}, "cigacc": 0.8942606728866271}, {"read_id": "1d4266e9-b3a9-4523-89f2-d5a789b45646", "ctg": "Bacillus_10;size=1;", "r_st": 30, "r_en": 4242, "NM": 140, "blen": 4214, "cig": {"S": 0, "M": 4084, "D": 128, "I": 2}, "cigacc": 0.9667774086378738}, {"read_id": "eb452a8d-a277-4347-ada7-d80efa774d39", "ctg": "Bacillus_10;size=1;", "r_st": 26, "r_en": 4242, "NM": 150, "blen": 4216, "cig": {"S": 0, "M": 4074, "D": 142, "I": 0}, "cigacc": 0.9644212523719166}, {"read_id": "953839f0-e386-468c-975c-927c286a9e6e", "ctg": "Bacillus_10;size=1;", "r_st": 0, "r_en": 4221, "NM": 125, "blen": 4224, "cig": {"S": 0, "M": 4109, "D": 112, "I": 3}, "cigacc": 0.970407196969697}, {"read_id": "dd5bd284-34f5-4998-abc0-f2724ee2cb37", "ctg": "Escherichia_7;size=1;", "r_st": 36, "r_en": 4264, "NM": 404, "blen": 4231, "cig": {"S": 0, "M": 3840, "D": 388, "I": 3}, "cigacc": 0.9045142992200426}, {"read_id": "80c4303e-602d-4a5f-9b85-3bf4c29b9eee", "ctg": "Bacillus_10;size=1;", "r_st": 3, "r_en": 4241, "NM": 373, "blen": 4245, "cig": {"S": 0, "M": 3888, "D": 350, "I": 7}, "cigacc": 0.9121319199057715}, {"read_id": "80c4303e-602d-4a5f-9b85-3bf4c29b9eee", "ctg": "Bacillus_10;size=1;", "r_st": 2, "r_en": 533, "NM": 86, "blen": 531, "cig": {"S": 0, "M": 454, "D": 77, "I": 0}, "cigacc": 0.8380414312617702}, {"read_id": "830cd394-4f34-42ea-a40d-0ee7bf78a115", "ctg": "Bacillus_10;size=1;", "r_st": 48, "r_en": 4240, "NM": 277, "blen": 4194, "cig": {"S": 0, "M": 3924, "D": 268, "I": 2}, "cigacc": 0.9339532665712923}, {"read_id": "bb1cc025-223f-4607-92dc-3398fdcff172", "ctg": "Bacillus_10;size=1;", "r_st": 3, "r_en": 4218, "NM": 300, "blen": 4215, "cig": {"S": 0, "M": 3924, "D": 291, "I": 0}, "cigacc": 0.9288256227758007}, {"read_id": "319e1a7a-c4f5-4909-93be-ac832b771b77", "ctg": "Bacillus_10;size=1;", "r_st": 33, "r_en": 4249, "NM": 82, "blen": 4217, "cig": {"S": 0, "M": 4139, "D": 77, "I": 1}, "cigacc": 0.9805548968460991}, {"read_id": "399166b4-d062-4377-bae6-aaadd19865f8", "ctg": "Bacillus_10;size=1;", "r_st": 18, "r_en": 4244, "NM": 105, "blen": 4226, "cig": {"S": 0, "M": 4130, "D": 96, "I": 0}, "cigacc": 0.9751538097491718}, {"read_id": "4c2474ac-27c9-4d58-ae1a-b7dccbab1d49", "ctg": 0, "r_st": 0, "r_en": 0, "NM": 0, "blen": 0, "cig": 0, "cigacc": 0}, {"read_id": "ac92adbc-a982-476a-b030-2d2f79c91b0d", "ctg": "Bacillus_10;size=1;", "r_st": 0, "r_en": 4243, "NM": 60, "blen": 4244, "cig": {"S": 0, "M": 4188, "D": 55, "I": 1}, "cigacc": 0.9858623939679547}, {"read_id": "61a275b5-e525-44b2-b69d-3de4ad9c60eb", "ctg": "Listeria_1;size=1;", "r_st": 15, "r_en": 4305, "NM": 386, "blen": 4294, "cig": {"S": 0, "M": 3925, "D": 365, "I": 4}, "cigacc": 0.9101071262226362}, {"read_id": "133d83fb-589f-42f6-aa48-3cbef4d8194d", "ctg": "Bacillus_10;size=1;", "r_st": 1, "r_en": 4239, "NM": 293, "blen": 4242, "cig": {"S": 0, "M": 3972, "D": 266, "I": 4}, "cigacc": 0.9309288071664309}, {"read_id": "9626fa94-e60a-47c1-be15-a2388f5b97cf", "ctg": "Bacillus_10;size=1;", "r_st": 0, "r_en": 4234, "NM": 340, "blen": 4240, "cig": {"S": 0, "M": 3910, "D": 324, "I": 6}, "cigacc": 0.9198113207547169}, {"read_id": "dcb00f6d-96ca-4788-9f67-9801f18593f1", "ctg": "Bacillus_10;size=1;", "r_st": 0, "r_en": 4243, "NM": 203, "blen": 4247, "cig": {"S": 0, "M": 4056, "D": 187, "I": 4}, "cigacc": 0.9522015540381445}, {"read_id": "0b1e81b1-e2eb-46ff-aa27-a6e6e6147ff3", "ctg": "Bacillus_10;size=1;", "r_st": 1, "r_en": 4228, "NM": 129, "blen": 4233, "cig": {"S": 0, "M": 4113, "D": 114, "I": 6}, "cigacc": 0.969525159461375}, {"read_id": "53da65c1-7695-4fb4-943e-8db626ef8a28", "ctg": "Bacillus_10;size=1;", "r_st": 3, "r_en": 4235, "NM": 587, "blen": 4234, "cig": {"S": 0, "M": 3672, "D": 560, "I": 2}, "cigacc": 0.8613604156825697}, {"read_id": "dc3426e8-d00d-42f2-a5dc-b952123747b7", "ctg": "Bacillus_10;size=1;", "r_st": 21, "r_en": 4205, "NM": 426, "blen": 4188, "cig": {"S": 0, "M": 3783, "D": 401, "I": 4}, "cigacc": 0.8982808022922636}, {"read_id": "1d3c0518-8a60-425f-967a-b59d1eea43f5", "ctg": "Bacillus_10;size=1;", "r_st": 0, "r_en": 4240, "NM": 587, "blen": 4247, "cig": {"S": 0, "M": 3693, "D": 547, "I": 7}, "cigacc": 0.8617847892630092}, {"read_id": "fd436dd8-f9d1-46d7-8178-a42ac4b8942d", "ctg": "Bacillus_10;size=1;", "r_st": 28, "r_en": 4243, "NM": 77, "blen": 4215, "cig": {"S": 0, "M": 4146, "D": 69, "I": 0}, "cigacc": 0.9817319098457888}, {"read_id": "7816198c-7eb0-490f-ab2b-31135b40441e", "ctg": "Bacillus_10;size=1;", "r_st": 14, "r_en": 4249, "NM": 202, "blen": 4236, "cig": {"S": 0, "M": 4046, "D": 189, "I": 1}, "cigacc": 0.9523135033050047}, {"read_id": "2f06640d-2b41-4464-aaf4-ad7ce296b9cf", "ctg": "Bacillus_10;size=1;", "r_st": 14, "r_en": 4249, "NM": 239, "blen": 4239, "cig": {"S": 0, "M": 4014, "D": 221, "I": 4}, "cigacc": 0.9436187780136824}, {"read_id": "e3b23e59-2661-42db-bbc3-a8e303eaeeec", "ctg": "Bacillus_10;size=1;", "r_st": 32, "r_en": 4240, "NM": 188, "blen": 4209, "cig": {"S": 0, "M": 4029, "D": 179, "I": 1}, "cigacc": 0.9553338085055832}, {"read_id": "5737d866-8ce6-4bc8-991e-0a6008a35e8d", "ctg": "Bacillus_10;size=1;", "r_st": 22, "r_en": 4240, "NM": 159, "blen": 4218, "cig": {"S": 0, "M": 4066, "D": 152, "I": 0}, "cigacc": 0.9623044096728307}, {"read_id": "6f5b5f9a-4603-44f8-a6bb-fa9de1699aaa", "ctg": "Bacillus_10;size=1;", "r_st": 1, "r_en": 4218, "NM": 195, "blen": 4217, "cig": {"S": 0, "M": 4029, "D": 188, "I": 0}, "cigacc": 0.9537585961584064}, {"read_id": "fbdbd8ea-b649-450b-9e0c-a6afe10d2a0a", "ctg": "Bacillus_10;size=1;", "r_st": 26, "r_en": 4239, "NM": 160, "blen": 4216, "cig": {"S": 0, "M": 4067, "D": 146, "I": 3}, "cigacc": 0.9620493358633776}, {"read_id": "54680c48-3819-499a-9a05-4821709f1dac", "ctg": "Bacillus_10;size=1;", "r_st": 11, "r_en": 4224, "NM": 251, "blen": 4213, "cig": {"S": 0, "M": 3973, "D": 240, "I": 0}, "cigacc": 0.9404225017802041}, {"read_id": "b54c6494-4cae-4514-acaa-93932bd6921a", "ctg": "Bacillus_10;size=1;", "r_st": 7, "r_en": 4233, "NM": 275, "blen": 4230, "cig": {"S": 0, "M": 3964, "D": 262, "I": 4}, "cigacc": 0.9349881796690307}, {"read_id": "823e4a0d-93c2-4d8b-877f-2f37ab4816b5", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 6, "r_en": 4455, "NM": 283, "blen": 4449, "cig": {"S": 0, "M": 4173, "D": 276, "I": 0}, "cigacc": 0.9363902000449539}, {"read_id": "65fef0df-003c-4288-8bed-cc86460d1942", "ctg": "Bacillus_10;size=1;", "r_st": 22, "r_en": 4237, "NM": 575, "blen": 4219, "cig": {"S": 0, "M": 3677, "D": 538, "I": 4}, "cigacc": 0.8637117800426641}, {"read_id": "b7db8ab4-1fba-49e0-88d6-976efd47d5c0", "ctg": "Bacillus_10;size=1;", "r_st": 9, "r_en": 4215, "NM": 151, "blen": 4210, "cig": {"S": 0, "M": 4067, "D": 139, "I": 4}, "cigacc": 0.9641330166270784}, {"read_id": "df043aaa-0f25-4347-a813-7b7929f69c34", "ctg": "Bacillus_10;size=1;", "r_st": 2, "r_en": 4211, "NM": 175, "blen": 4211, "cig": {"S": 0, "M": 4048, "D": 161, "I": 2}, "cigacc": 0.9584421752552837}, {"read_id": "2d89fdc3-e6ed-4211-87a6-4e5034b30483", "ctg": "Bacillus_10;size=1;", "r_st": 26, "r_en": 4249, "NM": 358, "blen": 4224, "cig": {"S": 0, "M": 3885, "D": 338, "I": 1}, "cigacc": 0.9152462121212122}, {"read_id": "cb9b9b0a-d031-46fd-ae2d-d36e2d37bf96", "ctg": "Staphylococcus_5;size=1;", "r_st": 14, "r_en": 4439, "NM": 168, "blen": 4425, "cig": {"S": 0, "M": 4261, "D": 164, "I": 0}, "cigacc": 0.9620338983050848}, {"read_id": "cb9b9b0a-d031-46fd-ae2d-d36e2d37bf96", "ctg": "Staphylococcus_5;size=1;", "r_st": 6, "r_en": 4429, "NM": 199, "blen": 4424, "cig": {"S": 0, "M": 4232, "D": 191, "I": 1}, "cigacc": 0.9550180831826401}, {"read_id": "faa6479c-3579-4137-9e91-9535c58155e0", "ctg": "Bacillus_10;size=1;", "r_st": 0, "r_en": 4217, "NM": 129, "blen": 4224, "cig": {"S": 0, "M": 4107, "D": 110, "I": 7}, "cigacc": 0.9694602272727273}, {"read_id": "47fae97b-78f9-4e3a-95a2-6c46bbee274d", "ctg": "Bacillus_10;size=1;", "r_st": 4, "r_en": 4221, "NM": 128, "blen": 4218, "cig": {"S": 0, "M": 4103, "D": 114, "I": 1}, "cigacc": 0.9696538643907064}, {"read_id": "75c8ec96-9cac-40b8-a36e-11c356bdc2a3", "ctg": "Bacillus_10;size=1;", "r_st": 3, "r_en": 4248, "NM": 324, "blen": 4245, "cig": {"S": 0, "M": 3948, "D": 297, "I": 0}, "cigacc": 0.9236749116607774}, {"read_id": "1b1c5d87-bf60-4c21-bb56-f8e6d4c313af", "ctg": "Bacillus_10;size=1;", "r_st": 3, "r_en": 4224, "NM": 170, "blen": 4221, "cig": {"S": 0, "M": 4062, "D": 159, "I": 0}, "cigacc": 0.9597251836057806}, {"read_id": "841eac18-9d23-48a5-804d-1ce378332d37", "ctg": "Bacillus_10;size=1;", "r_st": 5, "r_en": 4221, "NM": 68, "blen": 4218, "cig": {"S": 0, "M": 4155, "D": 61, "I": 2}, "cigacc": 0.9838786154575628}, {"read_id": "f41b5bb3-7556-4d12-bc22-ec8eace19556", "ctg": "Bacillus_10;size=1;", "r_st": 13, "r_en": 4239, "NM": 396, "blen": 4230, "cig": {"S": 0, "M": 3847, "D": 379, "I": 4}, "cigacc": 0.9063829787234042}, {"read_id": "26bd1ec8-909e-4f50-ad65-71be6e879642", "ctg": "Staphylococcus_6;size=1;", "r_st": 4, "r_en": 4506, "NM": 126, "blen": 4507, "cig": {"S": 0, "M": 4385, "D": 117, "I": 5}, "cigacc": 0.9720434879076991}, {"read_id": "8342a679-ad7f-4362-bbc9-ac847a0c7708", "ctg": "Bacillus_10;size=1;", "r_st": 35, "r_en": 4234, "NM": 331, "blen": 4202, "cig": {"S": 0, "M": 3883, "D": 316, "I": 3}, "cigacc": 0.9212279866730129}, {"read_id": "25b28afc-b437-47b3-8e58-e1be1279fa21", "ctg": "Bacillus_10;size=1;", "r_st": 35, "r_en": 4245, "NM": 116, "blen": 4213, "cig": {"S": 0, "M": 4102, "D": 108, "I": 3}, "cigacc": 0.9724661761215286}, {"read_id": "792754e5-171f-4585-8bae-844dc7897932", "ctg": "Bacillus_10;size=1;", "r_st": 30, "r_en": 4249, "NM": 174, "blen": 4219, "cig": {"S": 0, "M": 4052, "D": 167, "I": 0}, "cigacc": 0.958757999525954}, {"read_id": "4668c500-d4c1-440c-b62c-55dbfad4c3af", "ctg": "Bacillus_3;size=1;", "r_st": 8, "r_en": 4374, "NM": 812, "blen": 4368, "cig": {"S": 0, "M": 3594, "D": 772, "I": 2}, "cigacc": 0.8141025641025641}, {"read_id": "9dc25a1d-b86a-4308-afba-06fb4c672568", "ctg": "Bacillus_10;size=1;", "r_st": 3, "r_en": 4222, "NM": 117, "blen": 4222, "cig": {"S": 0, "M": 4113, "D": 106, "I": 3}, "cigacc": 0.9722880151586926}, {"read_id": "d85ea77b-6304-4195-8423-936c4d0c7b6e", "ctg": "Lactobacillus_3;size=1;", "r_st": 36, "r_en": 4297, "NM": 23, "blen": 4261, "cig": {"S": 0, "M": 4243, "D": 18, "I": 0}, "cigacc": 0.9946022060549167}, {"read_id": "b4fbb65a-dcb9-4b4e-b930-ea96b2d54e07", "ctg": "Bacillus_10;size=1;", "r_st": 17, "r_en": 4249, "NM": 41, "blen": 4233, "cig": {"S": 0, "M": 4198, "D": 34, "I": 1}, "cigacc": 0.990314197968344}, {"read_id": "3e9e6a56-e6fd-4b31-b4ff-a9ee477d94a3", "ctg": "Bacillus_10;size=1;", "r_st": 30, "r_en": 4249, "NM": 315, "blen": 4224, "cig": {"S": 0, "M": 3920, "D": 299, "I": 5}, "cigacc": 0.9254261363636364}, {"read_id": "74b3665e-5301-4e90-a91c-ad1964ee23e2", "ctg": "Bacillus_10;size=1;", "r_st": 28, "r_en": 4249, "NM": 252, "blen": 4221, "cig": {"S": 0, "M": 3974, "D": 247, "I": 0}, "cigacc": 0.9402985074626866}, {"read_id": "c54c7a0a-0349-4771-a28a-286df5400872", "ctg": "Bacillus_1;size=1;", "r_st": 60, "r_en": 4244, "NM": 221, "blen": 4186, "cig": {"S": 0, "M": 3971, "D": 213, "I": 2}, "cigacc": 0.9472049689440993}, {"read_id": "1be0cadb-190f-4f9b-9939-7784b8d1a8cc", "ctg": "Bacillus_1;size=1;", "r_st": 7, "r_en": 4219, "NM": 415, "blen": 4219, "cig": {"S": 0, "M": 3830, "D": 382, "I": 7}, "cigacc": 0.901635458639488}, {"read_id": "5de32519-f151-4a0a-a504-e0f5b125bf84", "ctg": "Escherichia_2;size=1;", "r_st": 30, "r_en": 4391, "NM": 143, "blen": 4361, "cig": {"S": 0, "M": 4226, "D": 135, "I": 0}, "cigacc": 0.9672093556523733}, {"read_id": "b884bfd1-2ef8-4dba-b646-729ba71a511d", "ctg": "Bacillus_1;size=1;", "r_st": 3, "r_en": 4240, "NM": 20, "blen": 4237, "cig": {"S": 0, "M": 4222, "D": 15, "I": 0}, "cigacc": 0.9952796790181733}, {"read_id": "b3c05c03-5994-4755-8156-8cf13a9244da", "ctg": "Bacillus_1;size=1;", "r_st": 14, "r_en": 4245, "NM": 184, "blen": 4233, "cig": {"S": 0, "M": 4055, "D": 176, "I": 2}, "cigacc": 0.9565320103945193}, {"read_id": "1dafc082-c4be-4043-882a-c337bb314fd4", "ctg": "Bacillus_1;size=1;", "r_st": 20, "r_en": 4217, "NM": 302, "blen": 4202, "cig": {"S": 0, "M": 3922, "D": 275, "I": 5}, "cigacc": 0.9281294621608758}, {"read_id": "a38bb2be-a7af-47bb-b230-609775901c9e", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 2, "r_en": 4445, "NM": 511, "blen": 4443, "cig": {"S": 0, "M": 3952, "D": 491, "I": 0}, "cigacc": 0.8849876209768175}, {"read_id": "4a7d507f-64f2-4ce5-9cf0-fc2bcced2327", "ctg": "Bacillus_1;size=1;", "r_st": 8, "r_en": 4221, "NM": 225, "blen": 4214, "cig": {"S": 0, "M": 4003, "D": 210, "I": 1}, "cigacc": 0.9466065495965829}, {"read_id": "e71ab25d-f6d6-4c92-845a-11a982ce8408", "ctg": "Bacillus_1;size=1;", "r_st": 21, "r_en": 4232, "NM": 248, "blen": 4211, "cig": {"S": 0, "M": 3969, "D": 242, "I": 0}, "cigacc": 0.9411066255046308}, {"read_id": "32541ee1-0945-4a3a-807b-2ee9e573830b", "ctg": "Bacillus_1;size=1;", "r_st": 29, "r_en": 4221, "NM": 293, "blen": 4192, "cig": {"S": 0, "M": 3911, "D": 281, "I": 0}, "cigacc": 0.930104961832061}, {"read_id": "b2974d93-6f9a-4b0b-bb5b-89af082ff9f9", "ctg": "Bacillus_1;size=1;", "r_st": 20, "r_en": 4226, "NM": 102, "blen": 4207, "cig": {"S": 0, "M": 4111, "D": 95, "I": 1}, "cigacc": 0.9757546945566913}, {"read_id": "5d82cca5-18d8-4fea-9814-63d7f81fa4d2", "ctg": "Bacillus_1;size=1;", "r_st": 3, "r_en": 4182, "NM": 153, "blen": 4179, "cig": {"S": 0, "M": 4033, "D": 146, "I": 0}, "cigacc": 0.9633883704235463}, {"read_id": "b883c1d8-f603-4ec6-83cb-3d69e299bde5", "ctg": "Bacillus_1;size=1;", "r_st": 2, "r_en": 4248, "NM": 128, "blen": 4250, "cig": {"S": 0, "M": 4129, "D": 117, "I": 4}, "cigacc": 0.9698823529411764}, {"read_id": "6255cd36-0bcd-469b-9f8f-4a79ee5af704", "ctg": "Bacillus_1;size=1;", "r_st": 18, "r_en": 4245, "NM": 86, "blen": 4228, "cig": {"S": 0, "M": 4150, "D": 77, "I": 1}, "cigacc": 0.9796594134342479}, {"read_id": "2aa86614-3a71-446e-9243-75c79ab52fd2", "ctg": "Bacillus_1;size=1;", "r_st": 28, "r_en": 4239, "NM": 141, "blen": 4211, "cig": {"S": 0, "M": 4074, "D": 137, "I": 0}, "cigacc": 0.9665162669199715}, {"read_id": "7fae4fb3-f19d-4a4a-b54e-df50ea4657b0", "ctg": "Bacillus_1;size=1;", "r_st": 4, "r_en": 4239, "NM": 109, "blen": 4238, "cig": {"S": 0, "M": 4134, "D": 101, "I": 3}, "cigacc": 0.9742803209060877}, {"read_id": "17b14d0a-6221-4600-95d3-44fce956e150", "ctg": "Bacillus_1;size=1;", "r_st": 24, "r_en": 4227, "NM": 236, "blen": 4204, "cig": {"S": 0, "M": 3982, "D": 221, "I": 1}, "cigacc": 0.9438629876308278}, {"read_id": "0514a8a9-36c3-4151-b63f-5e28ae500604", "ctg": "Bacillus_1;size=1;", "r_st": 3, "r_en": 4226, "NM": 139, "blen": 4224, "cig": {"S": 0, "M": 4090, "D": 133, "I": 1}, "cigacc": 0.967092803030303}, {"read_id": "25acfd2e-91e6-4da4-ad3c-f6da41279748", "ctg": "Bacillus_1;size=1;", "r_st": 3, "r_en": 4242, "NM": 374, "blen": 4242, "cig": {"S": 0, "M": 3889, "D": 350, "I": 3}, "cigacc": 0.9118340405469119}, {"read_id": "23b70f68-c51d-4b8c-a35a-73c8e84dfbce", "ctg": "Bacillus_1;size=1;", "r_st": 33, "r_en": 4237, "NM": 318, "blen": 4208, "cig": {"S": 0, "M": 3906, "D": 298, "I": 4}, "cigacc": 0.9244296577946768}, {"read_id": "a1ec048f-f88d-43d7-b215-a65c4be2c210", "ctg": "Bacillus_1;size=1;", "r_st": 2, "r_en": 4225, "NM": 168, "blen": 4223, "cig": {"S": 0, "M": 4066, "D": 157, "I": 0}, "cigacc": 0.9602178546057305}, {"read_id": "49e5abe9-35b4-45af-87e0-1bc4dbed1424", "ctg": "Bacillus_1;size=1;", "r_st": 12, "r_en": 4221, "NM": 139, "blen": 4210, "cig": {"S": 0, "M": 4076, "D": 133, "I": 1}, "cigacc": 0.9669833729216152}, {"read_id": "56d04668-2e93-4838-a1f4-8b863844df16", "ctg": "Bacillus_1;size=1;", "r_st": 16, "r_en": 4220, "NM": 186, "blen": 4204, "cig": {"S": 0, "M": 4035, "D": 169, "I": 0}, "cigacc": 0.955756422454805}, {"read_id": "7c661c4e-f65d-4bc2-8072-ac1219671dcf", "ctg": "Bacillus_1;size=1;", "r_st": 23, "r_en": 4240, "NM": 752, "blen": 4223, "cig": {"S": 0, "M": 3520, "D": 697, "I": 6}, "cigacc": 0.8219275396637462}, {"read_id": "4bb94817-321e-4095-b80c-13c75192eca1", "ctg": "Bacillus_1;size=1;", "r_st": 4, "r_en": 4246, "NM": 99, "blen": 4244, "cig": {"S": 0, "M": 4149, "D": 93, "I": 2}, "cigacc": 0.9766729500471254}, {"read_id": "2ff43789-e2ec-4370-82bf-a5c7eff99c64", "ctg": "Lactobacillus_3;size=1;", "r_st": 7, "r_en": 4260, "NM": 153, "blen": 4255, "cig": {"S": 0, "M": 4105, "D": 148, "I": 2}, "cigacc": 0.964042303172738}, {"read_id": "ee9bc698-e7a7-4684-a4ce-35dbd065ea01", "ctg": "Bacillus_1;size=1;", "r_st": 3, "r_en": 4245, "NM": 140, "blen": 4245, "cig": {"S": 0, "M": 4116, "D": 126, "I": 3}, "cigacc": 0.967020023557126}, {"read_id": "943fa916-8ea9-4949-bb14-7d737e5c4c95", "ctg": "Staphylococcus_4;size=1;", "r_st": 77, "r_en": 4409, "NM": 693, "blen": 4332, "cig": {"S": 0, "M": 3672, "D": 660, "I": 0}, "cigacc": 0.840027700831025}, {"read_id": "7712434c-31b8-479f-9fa5-2ef53e48eb1b", "ctg": "Lactobacillus_4;size=1;", "r_st": 28, "r_en": 4282, "NM": 124, "blen": 4262, "cig": {"S": 0, "M": 4142, "D": 112, "I": 8}, "cigacc": 0.970905678085406}, {"read_id": "79892cf2-bb1a-4f7d-a96c-219c7238c24b", "ctg": "Bacillus_1;size=1;", "r_st": 28, "r_en": 4240, "NM": 89, "blen": 4212, "cig": {"S": 0, "M": 4127, "D": 85, "I": 0}, "cigacc": 0.9788698955365622}, {"read_id": "24f38344-621b-455e-846f-b3e739e6020c", "ctg": "Bacillus_1;size=1;", "r_st": 28, "r_en": 4246, "NM": 70, "blen": 4219, "cig": {"S": 0, "M": 4157, "D": 61, "I": 1}, "cigacc": 0.9834083906138895}, {"read_id": "1421799d-254a-4cbd-a40b-ff7d1d171f6b", "ctg": "Bacillus_1;size=1;", "r_st": 28, "r_en": 4242, "NM": 190, "blen": 4214, "cig": {"S": 0, "M": 4037, "D": 177, "I": 0}, "cigacc": 0.9549121974371144}, {"read_id": "eff03899-da24-4857-aebe-5cc5265fa116", "ctg": "Escherichia_1;size=1;", "r_st": 9, "r_en": 4433, "NM": 1117, "blen": 4428, "cig": {"S": 0, "M": 3370, "D": 1054, "I": 4}, "cigacc": 0.7477416440831075}, {"read_id": "64cf9a02-5d16-4573-8474-aeec33fc441b", "ctg": "Lactobacillus_1;size=1;", "r_st": 14, "r_en": 4286, "NM": 399, "blen": 4272, "cig": {"S": 0, "M": 3884, "D": 388, "I": 0}, "cigacc": 0.9066011235955056}, {"read_id": "cd9d3998-175c-4ab0-8960-84a9789fa88c", "ctg": "Escherichia_1;size=1;", "r_st": 30, "r_en": 4419, "NM": 267, "blen": 4391, "cig": {"S": 0, "M": 4143, "D": 246, "I": 2}, "cigacc": 0.9391938055112731}, {"read_id": "1d2fb543-6e58-4865-81fc-8c7e037eddc7", "ctg": "Escherichia_1;size=1;", "r_st": 30, "r_en": 4473, "NM": 176, "blen": 4445, "cig": {"S": 0, "M": 4280, "D": 163, "I": 2}, "cigacc": 0.9604049493813274}, {"read_id": "9ddf4d95-593e-4805-85f3-09113e73c2d0", "ctg": "Escherichia_1;size=1;", "r_st": 23, "r_en": 4490, "NM": 266, "blen": 4471, "cig": {"S": 0, "M": 4226, "D": 241, "I": 4}, "cigacc": 0.9405054797584433}, {"read_id": "a976bc83-f2d3-418f-9c1a-08d7b07c01f4", "ctg": "Escherichia_1;size=1;", "r_st": 3, "r_en": 4464, "NM": 183, "blen": 4464, "cig": {"S": 0, "M": 4293, "D": 168, "I": 3}, "cigacc": 0.959005376344086}, {"read_id": "9fcf512d-748d-43af-99dd-3c3f3296ba14", "ctg": "Escherichia_1;size=1;", "r_st": 18, "r_en": 4489, "NM": 352, "blen": 4472, "cig": {"S": 0, "M": 4143, "D": 328, "I": 1}, "cigacc": 0.9212880143112702}, {"read_id": "ea418c21-47f6-46b5-9ded-4f07764b1cd0", "ctg": "Escherichia_1;size=1;", "r_st": 3, "r_en": 4419, "NM": 205, "blen": 4418, "cig": {"S": 0, "M": 4220, "D": 196, "I": 2}, "cigacc": 0.9535989135355365}, {"read_id": "6a3b9d52-fa1c-4d8f-9381-2aca47291dc0", "ctg": "Staphylococcus_1;size=1;", "r_st": 17, "r_en": 4496, "NM": 142, "blen": 4480, "cig": {"S": 0, "M": 4344, "D": 135, "I": 1}, "cigacc": 0.9683035714285715}, {"read_id": "12659775-e457-489b-b29c-ab6e1638561f", "ctg": "Escherichia_1;size=1;", "r_st": 8, "r_en": 3996, "NM": 582, "blen": 3992, "cig": {"S": 0, "M": 3447, "D": 541, "I": 4}, "cigacc": 0.8542084168336673}, {"read_id": "e3020eb6-d41e-4c31-b2ad-df22dc013c89", "ctg": "Staphylococcus_2;size=1;", "r_st": 0, "r_en": 4526, "NM": 187, "blen": 4528, "cig": {"S": 0, "M": 4348, "D": 178, "I": 2}, "cigacc": 0.9587014134275619}, {"read_id": "11a7cd37-5780-4304-a2f6-7ab9d486716c", "ctg": "Escherichia_1;size=1;", "r_st": 3, "r_en": 4463, "NM": 513, "blen": 4463, "cig": {"S": 0, "M": 3967, "D": 493, "I": 3}, "cigacc": 0.8850548958099933}, {"read_id": "1e6aa86f-1b10-40dd-8cb4-b85a21d70956", "ctg": "Escherichia_1;size=1;", "r_st": 23, "r_en": 4490, "NM": 256, "blen": 4469, "cig": {"S": 0, "M": 4233, "D": 234, "I": 2}, "cigacc": 0.9427164913850974}, {"read_id": "1aae1c9a-939b-4026-8016-f82e4cc89383", "ctg": "Escherichia_1;size=1;", "r_st": 4, "r_en": 4469, "NM": 448, "blen": 4465, "cig": {"S": 0, "M": 4044, "D": 421, "I": 0}, "cigacc": 0.8996640537513998}, {"read_id": "39dda7de-ad97-4fd8-834e-a80cd0d7837a", "ctg": "Lactobacillus_3;size=1;", "r_st": 3, "r_en": 4273, "NM": 57, "blen": 4271, "cig": {"S": 0, "M": 4218, "D": 52, "I": 1}, "cigacc": 0.9866541793490986}, {"read_id": "e450474c-1cd7-4067-8c49-806db70157cf", "ctg": "Bacillus_8;size=1;", "r_st": 3, "r_en": 4218, "NM": 374, "blen": 4218, "cig": {"S": 0, "M": 3860, "D": 355, "I": 3}, "cigacc": 0.9113323850165955}, {"read_id": "b36dbb87-0799-4eb2-9339-9dde845bf225", "ctg": "Escherichia_1;size=1;", "r_st": 3, "r_en": 4457, "NM": 681, "blen": 4454, "cig": {"S": 0, "M": 3800, "D": 654, "I": 0}, "cigacc": 0.847103726986978}, {"read_id": "859e1bfc-efa1-4e21-a837-fb164ea200e5", "ctg": "Escherichia_1;size=1;", "r_st": 29, "r_en": 4490, "NM": 126, "blen": 4464, "cig": {"S": 0, "M": 4344, "D": 117, "I": 3}, "cigacc": 0.9717741935483871}, {"read_id": "c91dbad9-eeb1-4cdb-acde-bcf3443fff60", "ctg": "Bacillus_8;size=1;", "r_st": 35, "r_en": 4216, "NM": 528, "blen": 4181, "cig": {"S": 0, "M": 3678, "D": 503, "I": 0}, "cigacc": 0.8737144223869888}, {"read_id": "d96228b1-2747-4aa4-a591-3121a5bfae0a", "ctg": "Escherichia_1;size=1;", "r_st": 33, "r_en": 4474, "NM": 913, "blen": 4445, "cig": {"S": 0, "M": 3569, "D": 872, "I": 4}, "cigacc": 0.7946006749156356}, {"read_id": "cdd7bece-a1ad-45c7-a38b-7c9ce75d5ed1", "ctg": "Escherichia_1;size=1;", "r_st": 3, "r_en": 4446, "NM": 180, "blen": 4447, "cig": {"S": 0, "M": 4274, "D": 169, "I": 4}, "cigacc": 0.9595232741173825}, {"read_id": "c1e0614a-ebb9-4281-b7df-f41f05e09166", "ctg": "Escherichia_1;size=1;", "r_st": 42, "r_en": 4487, "NM": 568, "blen": 4453, "cig": {"S": 0, "M": 3918, "D": 527, "I": 8}, "cigacc": 0.8724455423310128}, {"read_id": "51d0ad04-fbf9-451a-878b-811125eb24bd", "ctg": "Escherichia_1;size=1;", "r_st": 3, "r_en": 4465, "NM": 320, "blen": 4469, "cig": {"S": 0, "M": 4162, "D": 300, "I": 7}, "cigacc": 0.9283956142313716}, {"read_id": "e5a0e67c-68d4-4462-9faf-5470b3456c34", "ctg": "Escherichia_1;size=1;", "r_st": 184, "r_en": 4466, "NM": 762, "blen": 4286, "cig": {"S": 0, "M": 3554, "D": 728, "I": 4}, "cigacc": 0.8222118525431638}, {"read_id": "53cead20-d494-4f79-a7ad-0af717d20496", "ctg": "Escherichia_1;size=1;", "r_st": 4, "r_en": 4463, "NM": 797, "blen": 4465, "cig": {"S": 0, "M": 3702, "D": 757, "I": 6}, "cigacc": 0.8215005599104144}, {"read_id": "0eeebc7a-9754-408d-9884-136de4d219d0", "ctg": "Escherichia_1;size=1;", "r_st": 57, "r_en": 4487, "NM": 278, "blen": 4434, "cig": {"S": 0, "M": 4175, "D": 255, "I": 4}, "cigacc": 0.9373026612539468}, {"read_id": "50c36694-f8d4-4c02-880f-b63660b4bf49", "ctg": "Escherichia_1;size=1;", "r_st": 38, "r_en": 4472, "NM": 290, "blen": 4434, "cig": {"S": 0, "M": 4157, "D": 277, "I": 0}, "cigacc": 0.934596301308074}, {"read_id": "c25c3ca2-7eac-4eb9-a0eb-b03bb5eeaf82", "ctg": "Escherichia_1;size=1;", "r_st": 21, "r_en": 4477, "NM": 248, "blen": 4459, "cig": {"S": 0, "M": 4220, "D": 236, "I": 3}, "cigacc": 0.9443821484637811}, {"read_id": "3068733d-d97d-4648-af76-4b02d217eda1", "ctg": "Escherichia_1;size=1;", "r_st": 30, "r_en": 4479, "NM": 311, "blen": 4449, "cig": {"S": 0, "M": 4154, "D": 295, "I": 0}, "cigacc": 0.9300966509327939}, {"read_id": "6bfd9602-b481-49f1-9abf-2b2cd942897a", "ctg": "Escherichia_1;size=1;", "r_st": 8, "r_en": 4450, "NM": 485, "blen": 4448, "cig": {"S": 0, "M": 3989, "D": 453, "I": 6}, "cigacc": 0.8909622302158273}, {"read_id": "40a1b75f-434e-40e5-a7bf-c1969db6503e", "ctg": "Escherichia_1;size=1;", "r_st": 36, "r_en": 4473, "NM": 783, "blen": 4439, "cig": {"S": 0, "M": 3691, "D": 746, "I": 2}, "cigacc": 0.823608920928137}, {"read_id": "f999942a-8113-40fe-b54f-1d804cf91af4", "ctg": "Escherichia_1;size=1;", "r_st": 34, "r_en": 4490, "NM": 195, "blen": 4460, "cig": {"S": 0, "M": 4286, "D": 170, "I": 4}, "cigacc": 0.9562780269058296}, {"read_id": "05e1b8f1-a261-4aeb-b58f-adacef0a5146", "ctg": "Escherichia_1;size=1;", "r_st": 39, "r_en": 4490, "NM": 281, "blen": 4451, "cig": {"S": 0, "M": 4180, "D": 271, "I": 0}, "cigacc": 0.9368681195237025}, {"read_id": "3e3d4d30-8346-40fc-8026-bd37f13b250e", "ctg": "Escherichia_1;size=1;", "r_st": 5, "r_en": 4467, "NM": 227, "blen": 4463, "cig": {"S": 0, "M": 4246, "D": 216, "I": 1}, "cigacc": 0.9491373515572485}, {"read_id": "cfadf7dc-e135-4d03-9809-2df36ef5877e", "ctg": "Escherichia_1;size=1;", "r_st": 30, "r_en": 4490, "NM": 267, "blen": 4460, "cig": {"S": 0, "M": 4213, "D": 247, "I": 0}, "cigacc": 0.940134529147982}, {"read_id": "cdfc1115-6ad7-4a12-931a-7ffd83442175", "ctg": "Escherichia_1;size=1;", "r_st": 3, "r_en": 4420, "NM": 239, "blen": 4422, "cig": {"S": 0, "M": 4192, "D": 225, "I": 5}, "cigacc": 0.9459520578923564}, {"read_id": "12022872-0b83-43ed-aad9-7d4c991492f1", "ctg": "Escherichia_1;size=1;", "r_st": 3, "r_en": 4467, "NM": 461, "blen": 4473, "cig": {"S": 0, "M": 4036, "D": 428, "I": 9}, "cigacc": 0.8969371786273195}, {"read_id": "a942b291-df4f-454a-823e-52c96e814022", "ctg": "Escherichia_1;size=1;", "r_st": 86, "r_en": 4451, "NM": 864, "blen": 4369, "cig": {"S": 0, "M": 3538, "D": 827, "I": 4}, "cigacc": 0.8022430762188144}, {"read_id": "19b7e2ad-901c-4f4a-a1d5-fc5915f28dfe", "ctg": "Salmonella_1;size=1;", "r_st": 32, "r_en": 4383, "NM": 476, "blen": 4352, "cig": {"S": 0, "M": 3903, "D": 448, "I": 1}, "cigacc": 0.890625}, {"read_id": "17811499-a34f-4d9e-a55c-9082133a7427", "ctg": "Salmonella_1;size=1;", "r_st": 29, "r_en": 4399, "NM": 196, "blen": 4372, "cig": {"S": 0, "M": 4184, "D": 186, "I": 2}, "cigacc": 0.9551692589204026}, {"read_id": "18cdb5ce-cca1-48f7-95c7-b8a289fd2a92", "ctg": "Salmonella_1;size=1;", "r_st": 18, "r_en": 4392, "NM": 310, "blen": 4376, "cig": {"S": 0, "M": 4077, "D": 297, "I": 2}, "cigacc": 0.9291590493601463}, {"read_id": "81e0bd6c-1dc5-46f6-bf1d-a997d32b5b9d", "ctg": "Salmonella_1;size=1;", "r_st": 27, "r_en": 4242, "NM": 280, "blen": 4217, "cig": {"S": 0, "M": 3951, "D": 264, "I": 2}, "cigacc": 0.933602086791558}, {"read_id": "e6e21d34-9ea6-4bba-b768-361e2d778d04", "ctg": "Salmonella_1;size=1;", "r_st": 30, "r_en": 4399, "NM": 343, "blen": 4370, "cig": {"S": 0, "M": 4047, "D": 322, "I": 1}, "cigacc": 0.9215102974828375}, {"read_id": "d8f29360-7ab7-48c8-9fc3-45094e7f73bd", "ctg": "Salmonella_1;size=1;", "r_st": 10, "r_en": 4374, "NM": 446, "blen": 4382, "cig": {"S": 0, "M": 3954, "D": 410, "I": 18}, "cigacc": 0.8982199908717481}, {"read_id": "7ce46d0d-23f5-4da0-a21c-f8da8fed0c8a", "ctg": "Salmonella_1;size=1;", "r_st": 81, "r_en": 4393, "NM": 293, "blen": 4312, "cig": {"S": 0, "M": 4041, "D": 271, "I": 0}, "cigacc": 0.9320500927643784}, {"read_id": "6abd667e-dbae-4c9a-939c-b7bde0914eb1", "ctg": "Salmonella_1;size=1;", "r_st": 32, "r_en": 4385, "NM": 368, "blen": 4363, "cig": {"S": 0, "M": 4011, "D": 342, "I": 10}, "cigacc": 0.9156543662617465}, {"read_id": "e1001301-1d5e-436e-90c5-07eebed7e161", "ctg": "Salmonella_1;size=1;", "r_st": 3, "r_en": 4377, "NM": 377, "blen": 4379, "cig": {"S": 0, "M": 4027, "D": 347, "I": 5}, "cigacc": 0.9139072847682119}, {"read_id": "6e55273f-5902-4936-9880-9fd84291bb34", "ctg": "Salmonella_1;size=1;", "r_st": 2, "r_en": 4376, "NM": 694, "blen": 4383, "cig": {"S": 0, "M": 3723, "D": 651, "I": 9}, "cigacc": 0.8416609628108601}, {"read_id": "1825790d-4439-49ca-b988-b34bcb09b7e7", "ctg": "Salmonella_1;size=1;", "r_st": 1, "r_en": 4375, "NM": 624, "blen": 4375, "cig": {"S": 0, "M": 3781, "D": 593, "I": 1}, "cigacc": 0.8573714285714286}, {"read_id": "2bd86cb3-344a-4aa9-98d9-4b37ccc2d2d3", "ctg": "Salmonella_1;size=1;", "r_st": 38, "r_en": 4388, "NM": 428, "blen": 4353, "cig": {"S": 0, "M": 3940, "D": 410, "I": 3}, "cigacc": 0.9016770043648059}, {"read_id": "84546c79-8538-44c4-bfae-f79a756ee509", "ctg": "Salmonella_1;size=1;", "r_st": 91, "r_en": 4389, "NM": 434, "blen": 4302, "cig": {"S": 0, "M": 3892, "D": 406, "I": 4}, "cigacc": 0.8991166899116689}, {"read_id": "3b691e26-ab78-4562-84fd-55e7bb550eca", "ctg": "Salmonella_1;size=1;", "r_st": 8, "r_en": 4372, "NM": 442, "blen": 4364, "cig": {"S": 0, "M": 3948, "D": 416, "I": 0}, "cigacc": 0.8987167736021998}, {"read_id": "0fd7bd4c-c26a-47b7-8113-71f22a19cd54", "ctg": "Salmonella_1;size=1;", "r_st": 18, "r_en": 4395, "NM": 180, "blen": 4378, "cig": {"S": 0, "M": 4212, "D": 165, "I": 1}, "cigacc": 0.9588853357697579}, {"read_id": "1a64231b-96de-4e21-b491-6cf087b89c01", "ctg": "Salmonella_1;size=1;", "r_st": 36, "r_en": 4396, "NM": 359, "blen": 4363, "cig": {"S": 0, "M": 4019, "D": 341, "I": 3}, "cigacc": 0.9177171670868668}, {"read_id": "0d3af573-e815-4ab5-8bff-f9a639cb8f0a", "ctg": "Salmonella_1;size=1;", "r_st": 11, "r_en": 4376, "NM": 209, "blen": 4369, "cig": {"S": 0, "M": 4171, "D": 194, "I": 4}, "cigacc": 0.9521629663538567}, {"read_id": "8fa72930-ea53-47ef-a1a1-e547f44edc71", "ctg": "Lactobacillus_5;size=1;", "r_st": 25, "r_en": 4478, "NM": 201, "blen": 4460, "cig": {"S": 0, "M": 4271, "D": 182, "I": 7}, "cigacc": 0.954932735426009}, {"read_id": "36157c00-d422-4553-bb84-db919ce7ad4f", "ctg": "Listeria_3;size=1;", "r_st": 82, "r_en": 4576, "NM": 233, "blen": 4498, "cig": {"S": 0, "M": 4283, "D": 211, "I": 4}, "cigacc": 0.9481991996442863}, {"read_id": "e540df82-29fb-44de-a6a8-905a64c70af7", "ctg": "Salmonella_1;size=1;", "r_st": 19, "r_en": 4395, "NM": 452, "blen": 4377, "cig": {"S": 0, "M": 3950, "D": 426, "I": 1}, "cigacc": 0.8967329220927576}, {"read_id": "53c413b9-38ef-4b42-906f-bec32f704cc3", "ctg": "Salmonella_1;size=1;", "r_st": 3, "r_en": 4362, "NM": 259, "blen": 4361, "cig": {"S": 0, "M": 4112, "D": 247, "I": 2}, "cigacc": 0.9406099518459069}, {"read_id": "b81b4e75-5418-459b-bd4e-4140a2bc2a22", "ctg": "Lactobacillus_3;size=1;", "r_st": 18, "r_en": 4293, "NM": 306, "blen": 4280, "cig": {"S": 0, "M": 3984, "D": 291, "I": 5}, "cigacc": 0.9285046728971963}, {"read_id": "2357722c-94f9-4a3c-8f02-9faa54ffb675", "ctg": "Salmonella_1;size=1;", "r_st": 4, "r_en": 4378, "NM": 966, "blen": 4389, "cig": {"S": 0, "M": 3480, "D": 894, "I": 15}, "cigacc": 0.7799043062200957}, {"read_id": "d3efaeaf-ef15-44a0-9096-d1b93be4470f", "ctg": "Salmonella_1;size=1;", "r_st": 271, "r_en": 4399, "NM": 1043, "blen": 4131, "cig": {"S": 0, "M": 3137, "D": 991, "I": 3}, "cigacc": 0.747518760590656}, {"read_id": "8b9e7c0e-878a-45f3-bc93-1006f8bb5dd6", "ctg": "Listeria_2_5;size=2;", "r_st": 15, "r_en": 4318, "NM": 314, "blen": 4306, "cig": {"S": 0, "M": 4006, "D": 297, "I": 3}, "cigacc": 0.927078495123084}, {"read_id": "8b9e7c0e-878a-45f3-bc93-1006f8bb5dd6", "ctg": "Listeria_2_5;size=2;", "r_st": 7, "r_en": 4296, "NM": 471, "blen": 4293, "cig": {"S": 0, "M": 3840, "D": 449, "I": 4}, "cigacc": 0.8902865129280224}, {"read_id": "50395dc3-5efd-45d6-bce5-e48596a40f75", "ctg": "Salmonella_1;size=1;", "r_st": 33, "r_en": 4399, "NM": 232, "blen": 4367, "cig": {"S": 0, "M": 4143, "D": 223, "I": 1}, "cigacc": 0.9468742844057706}, {"read_id": "1a19950f-62cf-4168-bb01-6d69122a5275", "ctg": "Salmonella_1;size=1;", "r_st": 3, "r_en": 4357, "NM": 425, "blen": 4357, "cig": {"S": 0, "M": 3949, "D": 405, "I": 3}, "cigacc": 0.9024558182235483}, {"read_id": "7eb4336b-1cc7-4bbb-a445-396e7d108439", "ctg": "Salmonella_1;size=1;", "r_st": 5, "r_en": 4357, "NM": 363, "blen": 4353, "cig": {"S": 0, "M": 4002, "D": 350, "I": 1}, "cigacc": 0.9166092350103376}, {"read_id": "4509ee01-1350-4f58-85f0-f8f44cf53258", "ctg": "Salmonella_1;size=1;", "r_st": 100, "r_en": 4399, "NM": 1100, "blen": 4308, "cig": {"S": 0, "M": 3276, "D": 1023, "I": 9}, "cigacc": 0.744661095636026}, {"read_id": "544217e2-7536-49f2-8cbe-5dfea5556e2e", "ctg": "Salmonella_1;size=1;", "r_st": 5, "r_en": 4372, "NM": 293, "blen": 4371, "cig": {"S": 0, "M": 4105, "D": 262, "I": 4}, "cigacc": 0.9329672843742851}, {"read_id": "e2b2e8e6-ebca-488c-b6c5-8e6b39323dd6", "ctg": "Lactobacillus_3;size=1;", "r_st": 39, "r_en": 4276, "NM": 420, "blen": 4242, "cig": {"S": 0, "M": 3846, "D": 391, "I": 5}, "cigacc": 0.900990099009901}, {"read_id": "49667fc7-3a9f-41de-b9eb-ca682e1a4935", "ctg": "Staphylococcus_5;size=1;", "r_st": 22, "r_en": 4460, "NM": 165, "blen": 4439, "cig": {"S": 0, "M": 4284, "D": 154, "I": 1}, "cigacc": 0.9628294660959675}, {"read_id": "0fcf97d8-f866-4dad-8775-f99f2b7c0f4a", "ctg": "Listeria_1;size=1;", "r_st": 966, "r_en": 4309, "NM": 548, "blen": 3347, "cig": {"S": 0, "M": 2822, "D": 521, "I": 4}, "cigacc": 0.8362712877203466}, {"read_id": "8316abe5-9c15-4220-8334-9a88904a0be5", "ctg": "Enterococcus_1;size=1;", "r_st": 24, "r_en": 4386, "NM": 303, "blen": 4367, "cig": {"S": 0, "M": 4081, "D": 281, "I": 5}, "cigacc": 0.9306159835127089}, {"read_id": "b5c27287-fa7f-48b5-8e3c-1dc738f675ab", "ctg": "Staphylococcus_6;size=1;", "r_st": 1, "r_en": 4499, "NM": 80, "blen": 4503, "cig": {"S": 0, "M": 4424, "D": 74, "I": 5}, "cigacc": 0.9822340661781035}, {"read_id": "b5c27287-fa7f-48b5-8e3c-1dc738f675ab", "ctg": "Staphylococcus_6;size=1;", "r_st": 7, "r_en": 4495, "NM": 126, "blen": 4488, "cig": {"S": 0, "M": 4366, "D": 122, "I": 0}, "cigacc": 0.9719251336898396}, {"read_id": "068876f5-d8a9-47b0-a5bc-c29c5e13e789", "ctg": "Enterococcus_1;size=1;", "r_st": 3, "r_en": 4389, "NM": 189, "blen": 4387, "cig": {"S": 0, "M": 4213, "D": 173, "I": 1}, "cigacc": 0.9569181673125142}, {"read_id": "1b071aee-ee26-4973-aa54-c97bb5049761", "ctg": "Enterococcus_1;size=1;", "r_st": 14, "r_en": 4372, "NM": 266, "blen": 4362, "cig": {"S": 0, "M": 4111, "D": 247, "I": 4}, "cigacc": 0.9390187987161852}, {"read_id": "a0af9b8b-65d5-4536-b0ba-8087a6fc38cd", "ctg": "Lactobacillus_2;size=1;", "r_st": 3, "r_en": 4472, "NM": 256, "blen": 4471, "cig": {"S": 0, "M": 4233, "D": 236, "I": 2}, "cigacc": 0.9427421158577499}, {"read_id": "83172331-5a0f-4eb1-8bc2-215596c88aa8", "ctg": "Enterococcus_1;size=1;", "r_st": 107, "r_en": 4400, "NM": 381, "blen": 4300, "cig": {"S": 0, "M": 3948, "D": 345, "I": 7}, "cigacc": 0.9113953488372093}, {"read_id": "83172331-5a0f-4eb1-8bc2-215596c88aa8", "ctg": "Enterococcus_1;size=1;", "r_st": 309, "r_en": 4387, "NM": 601, "blen": 4081, "cig": {"S": 0, "M": 3506, "D": 572, "I": 3}, "cigacc": 0.8527321734868905}, {"read_id": "2a1c6ff8-82c1-4879-be43-43c5d221be7c", "ctg": "Enterococcus_1;size=1;", "r_st": 2, "r_en": 4389, "NM": 241, "blen": 4389, "cig": {"S": 0, "M": 4157, "D": 230, "I": 2}, "cigacc": 0.9450899977215766}, {"read_id": "fd1773b0-218c-4439-847c-2e758c4622a9", "ctg": "Enterococcus_1;size=1;", "r_st": 23, "r_en": 4392, "NM": 566, "blen": 4375, "cig": {"S": 0, "M": 3842, "D": 527, "I": 6}, "cigacc": 0.8706285714285714}, {"read_id": "ac1e4daa-0b21-4a4f-a6e6-eede8c4b1f37", "ctg": "Enterococcus_1;size=1;", "r_st": 28, "r_en": 4379, "NM": 460, "blen": 4358, "cig": {"S": 0, "M": 3923, "D": 428, "I": 7}, "cigacc": 0.8944469940339606}, {"read_id": "d09ebca8-c554-4af4-afda-b14a1943b3e7", "ctg": "Enterococcus_1;size=1;", "r_st": 3, "r_en": 4385, "NM": 286, "blen": 4392, "cig": {"S": 0, "M": 4121, "D": 261, "I": 10}, "cigacc": 0.9348816029143898}, {"read_id": "7e31a326-a8df-4bc7-9f05-7c361a6965ff", "ctg": "Enterococcus_1;size=1;", "r_st": 22, "r_en": 4394, "NM": 274, "blen": 4374, "cig": {"S": 0, "M": 4115, "D": 257, "I": 2}, "cigacc": 0.9373571101966164}, {"read_id": "238162ac-2e4c-4e15-b030-48e8d839b604", "ctg": "Enterococcus_1;size=1;", "r_st": 0, "r_en": 4382, "NM": 166, "blen": 4383, "cig": {"S": 0, "M": 4230, "D": 152, "I": 1}, "cigacc": 0.9621263974446725}, {"read_id": "9dbce1e3-a46e-41c6-bcfd-85cf8aff4b88", "ctg": "Enterococcus_1;size=1;", "r_st": 3, "r_en": 4393, "NM": 822, "blen": 4400, "cig": {"S": 0, "M": 3621, "D": 769, "I": 10}, "cigacc": 0.8131818181818182}, {"read_id": "3d8b160a-e387-45bb-ad2f-c68e4a7eafb3", "ctg": "Enterococcus_1;size=1;", "r_st": 3, "r_en": 4372, "NM": 457, "blen": 4379, "cig": {"S": 0, "M": 3945, "D": 424, "I": 10}, "cigacc": 0.8956382735784426}, {"read_id": "e7f695f2-584c-4ec3-87f0-3498e2547d61", "ctg": "Enterococcus_1;size=1;", "r_st": 4, "r_en": 4379, "NM": 322, "blen": 4379, "cig": {"S": 0, "M": 4072, "D": 303, "I": 4}, "cigacc": 0.9264672299611784}, {"read_id": "8fe17451-3750-4063-8a07-1d6296b98a36", "ctg": "Staphylococcus_3;size=1;", "r_st": 16, "r_en": 4544, "NM": 274, "blen": 4531, "cig": {"S": 0, "M": 4264, "D": 264, "I": 3}, "cigacc": 0.9395276980798941}, {"read_id": "01e12d83-9c6d-422f-bea6-2fd021124ee9", "ctg": "Enterococcus_1;size=1;", "r_st": 4, "r_en": 4378, "NM": 358, "blen": 4379, "cig": {"S": 0, "M": 4043, "D": 331, "I": 5}, "cigacc": 0.9182461749257822}, {"read_id": "de16ef8e-dae4-4b65-89fd-c55b874df901", "ctg": "Enterococcus_1;size=1;", "r_st": 2, "r_en": 4384, "NM": 557, "blen": 4389, "cig": {"S": 0, "M": 3848, "D": 534, "I": 7}, "cigacc": 0.8730918204602415}, {"read_id": "e53b9d32-f364-42d9-8434-3221d7527d1b", "ctg": "Enterococcus_1;size=1;", "r_st": 4, "r_en": 4380, "NM": 373, "blen": 4383, "cig": {"S": 0, "M": 4021, "D": 355, "I": 7}, "cigacc": 0.9148984713666438}, {"read_id": "3c9d4e46-c701-4b98-b4b7-bf6487827f46", "ctg": "Lactobacillus_1;size=1;", "r_st": 5, "r_en": 4287, "NM": 69, "blen": 4282, "cig": {"S": 0, "M": 4222, "D": 60, "I": 0}, "cigacc": 0.9838860345632882}, {"read_id": "fdfcf065-5882-4ffe-9f06-216060c2ae8f", "ctg": "Staphylococcus_4;size=1;", "r_st": 13, "r_en": 4425, "NM": 126, "blen": 4412, "cig": {"S": 0, "M": 4289, "D": 123, "I": 0}, "cigacc": 0.971441523118767}, {"read_id": "87e43762-0369-4a89-b745-a45c9245c2ae", "ctg": "Lactobacillus_1;size=1;", "r_st": 81, "r_en": 4286, "NM": 1031, "blen": 4217, "cig": {"S": 0, "M": 3254, "D": 951, "I": 12}, "cigacc": 0.7555133981503439}, {"read_id": "a82b2b37-a85f-487b-9b42-59fab9243c30", "ctg": "Lactobacillus_1;size=1;", "r_st": 29, "r_en": 4295, "NM": 169, "blen": 4271, "cig": {"S": 0, "M": 4113, "D": 153, "I": 5}, "cigacc": 0.9604308124560993}, {"read_id": "3d7624f2-14fd-416f-bfd0-659e72e80902", "ctg": "Lactobacillus_1;size=1;", "r_st": 6, "r_en": 4274, "NM": 192, "blen": 4269, "cig": {"S": 0, "M": 4084, "D": 184, "I": 1}, "cigacc": 0.955024595924104}, {"read_id": "68fcd9a5-f868-4b1c-a59d-7f9fd52ca772", "ctg": "Lactobacillus_1;size=1;", "r_st": 22, "r_en": 4263, "NM": 80, "blen": 4241, "cig": {"S": 0, "M": 4165, "D": 76, "I": 0}, "cigacc": 0.9811365244046215}, {"read_id": "8d16faea-4534-4872-9277-b4ba3cdb0d4d", "ctg": "Enterococcus_3;size=1;", "r_st": 8, "r_en": 4268, "NM": 228, "blen": 4266, "cig": {"S": 0, "M": 4052, "D": 208, "I": 6}, "cigacc": 0.9465541490857946}, {"read_id": "961318f6-a9e6-463e-a83a-c0494a2759da", "ctg": "Lactobacillus_1;size=1;", "r_st": 17, "r_en": 4273, "NM": 647, "blen": 4259, "cig": {"S": 0, "M": 3647, "D": 609, "I": 3}, "cigacc": 0.8480864052594506}, {"read_id": "c0fa0d68-f54e-4821-97ac-ec63c86efd94", "ctg": "Lactobacillus_1;size=1;", "r_st": 25, "r_en": 4281, "NM": 370, "blen": 4259, "cig": {"S": 0, "M": 3903, "D": 353, "I": 3}, "cigacc": 0.9131251467480629}, {"read_id": "a0b761fb-c7c0-4530-8af2-8a586b92ad53", "ctg": "Lactobacillus_1;size=1;", "r_st": 4, "r_en": 4287, "NM": 210, "blen": 4283, "cig": {"S": 0, "M": 4081, "D": 202, "I": 0}, "cigacc": 0.9509689469997665}, {"read_id": "0e7ca8ec-5f0f-446a-980c-5f69bfb7a5c2", "ctg": "Lactobacillus_1;size=1;", "r_st": 22, "r_en": 4294, "NM": 48, "blen": 4272, "cig": {"S": 0, "M": 4232, "D": 40, "I": 0}, "cigacc": 0.9887640449438202}, {"read_id": "b6079ba1-349c-42ff-8701-139361380dcc", "ctg": "Lactobacillus_1;size=1;", "r_st": 8, "r_en": 4281, "NM": 176, "blen": 4277, "cig": {"S": 0, "M": 4105, "D": 168, "I": 4}, "cigacc": 0.9588496609773205}, {"read_id": "dcb5325e-3fb7-4b36-b155-2b5e044f8516", "ctg": "Lactobacillus_1;size=1;", "r_st": 4, "r_en": 4287, "NM": 56, "blen": 4283, "cig": {"S": 0, "M": 4227, "D": 56, "I": 0}, "cigacc": 0.9869250525332711}, {"read_id": "74eabe65-58c1-4c2c-af19-9d4a426aac4d", "ctg": "Lactobacillus_1;size=1;", "r_st": 256, "r_en": 2153, "NM": 826, "blen": 1902, "cig": {"S": 0, "M": 1136, "D": 761, "I": 5}, "cigacc": 0.5657202944269191}, {"read_id": "41b6ebde-f02c-4988-b672-11a25b7d2b6c", "ctg": "Lactobacillus_1;size=1;", "r_st": 17, "r_en": 4307, "NM": 91, "blen": 4290, "cig": {"S": 0, "M": 4202, "D": 88, "I": 0}, "cigacc": 0.9787878787878788}, {"read_id": "81e369c0-4b9e-4c87-851f-9ad180c23563", "ctg": "Lactobacillus_1;size=1;", "r_st": 2, "r_en": 4287, "NM": 131, "blen": 4285, "cig": {"S": 0, "M": 4160, "D": 125, "I": 0}, "cigacc": 0.9694282380396733}, {"read_id": "fe93f663-3589-4918-a4c3-ef9aa67da6d5", "ctg": "Enterococcus_1;size=1;", "r_st": 1, "r_en": 4403, "NM": 387, "blen": 4402, "cig": {"S": 0, "M": 4036, "D": 366, "I": 0}, "cigacc": 0.9120854157201272}, {"read_id": "615671b8-5e37-413c-81c7-46977f540310", "ctg": "Lactobacillus_1;size=1;", "r_st": 93, "r_en": 4279, "NM": 129, "blen": 4186, "cig": {"S": 0, "M": 4063, "D": 123, "I": 0}, "cigacc": 0.9691829909221213}, {"read_id": "5afb47bc-3de6-4ca2-bcf5-adcb76c247bd", "ctg": "Lactobacillus_1;size=1;", "r_st": 18, "r_en": 4283, "NM": 261, "blen": 4268, "cig": {"S": 0, "M": 4022, "D": 243, "I": 3}, "cigacc": 0.9388472352389878}, {"read_id": "d8b08489-2e85-4778-9456-5a9d4b319dd0", "ctg": "Lactobacillus_1;size=1;", "r_st": 16, "r_en": 4282, "NM": 155, "blen": 4266, "cig": {"S": 0, "M": 4117, "D": 149, "I": 0}, "cigacc": 0.963666197843413}, {"read_id": "f51550ce-bb1f-4f17-9580-8f580a10a42a", "ctg": "Listeria_1;size=1;", "r_st": 1, "r_en": 4309, "NM": 127, "blen": 4309, "cig": {"S": 0, "M": 4186, "D": 122, "I": 1}, "cigacc": 0.9705268043629612}, {"read_id": "f51550ce-bb1f-4f17-9580-8f580a10a42a", "ctg": "Listeria_1;size=1;", "r_st": 7, "r_en": 4309, "NM": 128, "blen": 4304, "cig": {"S": 0, "M": 4182, "D": 120, "I": 2}, "cigacc": 0.9702602230483272}, {"read_id": "1683fe6e-5fe0-4ca8-a139-e870f60025cc", "ctg": "Listeria_6;size=1;", "r_st": 12, "r_en": 4326, "NM": 142, "blen": 4316, "cig": {"S": 0, "M": 4182, "D": 132, "I": 2}, "cigacc": 0.9670991658943466}, {"read_id": "7f9a0b21-37e2-45e7-9da8-8d6b6b3e34a7", "ctg": "Lactobacillus_1;size=1;", "r_st": 23, "r_en": 4304, "NM": 162, "blen": 4282, "cig": {"S": 0, "M": 4121, "D": 160, "I": 1}, "cigacc": 0.9621672115833723}, {"read_id": "7500d5b0-c8d7-43fd-859d-9eddf6d1b502", "ctg": "Lactobacillus_1;size=1;", "r_st": 16, "r_en": 4279, "NM": 375, "blen": 4266, "cig": {"S": 0, "M": 3906, "D": 357, "I": 3}, "cigacc": 0.9120956399437412}, {"read_id": "652a3ee3-0f80-4a5a-9ba7-9f063b19dc43", "ctg": "Lactobacillus_1;size=1;", "r_st": 0, "r_en": 4300, "NM": 145, "blen": 4301, "cig": {"S": 0, "M": 4162, "D": 138, "I": 1}, "cigacc": 0.9662869100209254}, {"read_id": "053ec0c4-dde1-43af-a763-c6c5b25ff591", "ctg": "Lactobacillus_1;size=1;", "r_st": 3, "r_en": 4276, "NM": 180, "blen": 4273, "cig": {"S": 0, "M": 4100, "D": 173, "I": 0}, "cigacc": 0.9578750292534519}, {"read_id": "3da73011-8d4a-4d5b-8551-c2acafaec2f4", "ctg": "Listeria_3;size=1;", "r_st": 4, "r_en": 4560, "NM": 73, "blen": 4557, "cig": {"S": 0, "M": 4487, "D": 69, "I": 1}, "cigacc": 0.9839806890498135}, {"read_id": "4db217de-3ca6-4fd9-8d6b-ed4826f1ce1a", "ctg": "Lactobacillus_1;size=1;", "r_st": 28, "r_en": 4302, "NM": 74, "blen": 4275, "cig": {"S": 0, "M": 4203, "D": 71, "I": 1}, "cigacc": 0.9826900584795322}, {"read_id": "029654c8-d99c-4992-95d1-d706b81351ed", "ctg": "Lactobacillus_1;size=1;", "r_st": 20, "r_en": 4302, "NM": 201, "blen": 4283, "cig": {"S": 0, "M": 4092, "D": 190, "I": 1}, "cigacc": 0.9530702778426337}, {"read_id": "3089d324-56a0-4a56-aac1-c9adde7e57f0", "ctg": "Lactobacillus_1;size=1;", "r_st": 22, "r_en": 4302, "NM": 384, "blen": 4282, "cig": {"S": 0, "M": 3905, "D": 375, "I": 2}, "cigacc": 0.9103222793087342}, {"read_id": "9b403aa1-180f-42ce-b2dc-c9bb54f61c18", "ctg": "Staphylococcus_4;size=1;", "r_st": 24, "r_en": 4419, "NM": 37, "blen": 4395, "cig": {"S": 0, "M": 4361, "D": 34, "I": 0}, "cigacc": 0.9915813424345847}, {"read_id": "fee77c14-2ce6-4e57-a407-bb493a6cc6bf", "ctg": "Lactobacillus_1;size=1;", "r_st": 18, "r_en": 4299, "NM": 576, "blen": 4282, "cig": {"S": 0, "M": 3725, "D": 556, "I": 1}, "cigacc": 0.8654834189631013}, {"read_id": "4a35e5e0-5e08-408b-8ee4-6f81c9bb4303", "ctg": "Lactobacillus_1;size=1;", "r_st": 20, "r_en": 4277, "NM": 92, "blen": 4257, "cig": {"S": 0, "M": 4168, "D": 89, "I": 0}, "cigacc": 0.9783885365280715}, {"read_id": "0146a02d-60d0-4476-996d-32bdf559c19e", "ctg": "Lactobacillus_1;size=1;", "r_st": 4, "r_en": 4300, "NM": 149, "blen": 4296, "cig": {"S": 0, "M": 4159, "D": 137, "I": 0}, "cigacc": 0.965316573556797}, {"read_id": "8db2f37e-3f91-49c6-a546-4aa5eafb9c3d", "ctg": "Lactobacillus_1;size=1;", "r_st": 13, "r_en": 4298, "NM": 72, "blen": 4285, "cig": {"S": 0, "M": 4215, "D": 70, "I": 0}, "cigacc": 0.9831971995332556}, {"read_id": "1cdabab0-fedb-49b5-8aaf-bb410bcc5198", "ctg": "Salmonella_3;size=1;", "r_st": 0, "r_en": 4532, "NM": 403, "blen": 4533, "cig": {"S": 0, "M": 4152, "D": 380, "I": 1}, "cigacc": 0.9110964041473638}, {"read_id": "0b88f337-a392-4bc8-bd05-887730a899c0", "ctg": "Lactobacillus_1;size=1;", "r_st": 14, "r_en": 4287, "NM": 182, "blen": 4275, "cig": {"S": 0, "M": 4102, "D": 171, "I": 2}, "cigacc": 0.9574269005847953}, {"read_id": "2a0b1e9c-4dda-49e6-84a7-59602951c0dd", "ctg": "Lactobacillus_1;size=1;", "r_st": 29, "r_en": 4298, "NM": 149, "blen": 4269, "cig": {"S": 0, "M": 4125, "D": 144, "I": 0}, "cigacc": 0.9650972124619349}, {"read_id": "9064abf9-e0a4-4f1c-ac71-98e7a75bddcc", "ctg": "Lactobacillus_1;size=1;", "r_st": 4, "r_en": 4306, "NM": 196, "blen": 4305, "cig": {"S": 0, "M": 4119, "D": 183, "I": 3}, "cigacc": 0.9544715447154472}, {"read_id": "28c45cbc-f8c5-46cf-a95a-bfb6f62aee1f", "ctg": "Lactobacillus_1;size=1;", "r_st": 12, "r_en": 4277, "NM": 476, "blen": 4269, "cig": {"S": 0, "M": 3815, "D": 450, "I": 4}, "cigacc": 0.8884984773951745}, {"read_id": "922f5425-a440-43a3-97a8-526649530b64", "ctg": "Lactobacillus_1;size=1;", "r_st": 20, "r_en": 4300, "NM": 90, "blen": 4280, "cig": {"S": 0, "M": 4190, "D": 90, "I": 0}, "cigacc": 0.9789719626168224}, {"read_id": "ca921bd3-4651-43e5-833b-193944b5c152", "ctg": "Lactobacillus_1;size=1;", "r_st": 12, "r_en": 4276, "NM": 37, "blen": 4264, "cig": {"S": 0, "M": 4227, "D": 37, "I": 0}, "cigacc": 0.9913227016885553}, {"read_id": "a1771c6a-3bd4-431d-b682-c158e8c76962", "ctg": "Lactobacillus_1;size=1;", "r_st": 6, "r_en": 4283, "NM": 186, "blen": 4279, "cig": {"S": 0, "M": 4099, "D": 178, "I": 2}, "cigacc": 0.95653189997663}, {"read_id": "aca5655f-1668-4f8d-b531-79445221280d", "ctg": "Lactobacillus_1;size=1;", "r_st": 31, "r_en": 4307, "NM": 110, "blen": 4278, "cig": {"S": 0, "M": 4179, "D": 97, "I": 2}, "cigacc": 0.9742870500233755}, {"read_id": "58eeae03-6f1f-4a69-a720-d0e87f29572e", "ctg": "Lactobacillus_1;size=1;", "r_st": 33, "r_en": 4304, "NM": 121, "blen": 4271, "cig": {"S": 0, "M": 4158, "D": 113, "I": 0}, "cigacc": 0.9716693982673847}, {"read_id": "ac7e30c1-3814-43c2-9975-2675fda188aa", "ctg": "Lactobacillus_1;size=1;", "r_st": 5, "r_en": 4272, "NM": 176, "blen": 4274, "cig": {"S": 0, "M": 4104, "D": 163, "I": 7}, "cigacc": 0.9588207767898924}, {"read_id": "ea7561d3-cc54-4477-a94e-a2e5fa8a7415", "ctg": "Lactobacillus_1;size=1;", "r_st": 19, "r_en": 4300, "NM": 137, "blen": 4282, "cig": {"S": 0, "M": 4152, "D": 129, "I": 1}, "cigacc": 0.9680056048575432}, {"read_id": "6aef41ea-7573-4b88-b85c-6c9e592e6145", "ctg": "Lactobacillus_1;size=1;", "r_st": 13, "r_en": 4275, "NM": 87, "blen": 4267, "cig": {"S": 0, "M": 4186, "D": 76, "I": 5}, "cigacc": 0.9796109678931334}, {"read_id": "0742fa44-908d-4a3c-a9af-cadcadc1591f", "ctg": "Lactobacillus_1;size=1;", "r_st": 0, "r_en": 4286, "NM": 94, "blen": 4286, "cig": {"S": 0, "M": 4200, "D": 86, "I": 0}, "cigacc": 0.9780681287914139}, {"read_id": "f0f367d4-01ae-4817-8a2e-a7e920a0ad94", "ctg": "Lactobacillus_1;size=1;", "r_st": 23, "r_en": 4295, "NM": 79, "blen": 4272, "cig": {"S": 0, "M": 4197, "D": 75, "I": 0}, "cigacc": 0.9815074906367042}, {"read_id": "78099c88-74c3-483d-bb4e-58258a76f3b6", "ctg": "Lactobacillus_1;size=1;", "r_st": 0, "r_en": 4281, "NM": 152, "blen": 4281, "cig": {"S": 0, "M": 4132, "D": 149, "I": 0}, "cigacc": 0.9644942770380752}, {"read_id": "5faaff0e-ae97-4c0d-9cba-0d5eb4c06696", "ctg": "Listeria_2_5;size=2;", "r_st": 1, "r_en": 4309, "NM": 130, "blen": 4309, "cig": {"S": 0, "M": 4187, "D": 121, "I": 1}, "cigacc": 0.9698305871431887}, {"read_id": "eef4f3da-4fc4-4245-bd0d-fb7eea7bbd96", "ctg": "Lactobacillus_1;size=1;", "r_st": 38, "r_en": 4307, "NM": 894, "blen": 4273, "cig": {"S": 0, "M": 3426, "D": 843, "I": 4}, "cigacc": 0.7907793119588111}, {"read_id": "e28cbdac-8afe-4bcf-be1d-f951d6d0f59c", "ctg": "Lactobacillus_1;size=1;", "r_st": 18, "r_en": 4296, "NM": 226, "blen": 4286, "cig": {"S": 0, "M": 4070, "D": 208, "I": 8}, "cigacc": 0.9472701819878675}, {"read_id": "e28cbdac-8afe-4bcf-be1d-f951d6d0f59c", "ctg": "Lactobacillus_1;size=1;", "r_st": 18, "r_en": 4293, "NM": 274, "blen": 4276, "cig": {"S": 0, "M": 4022, "D": 253, "I": 1}, "cigacc": 0.9359214218896165}, {"read_id": "5444427e-7553-4c98-81a8-17fd778f67cf", "ctg": "Lactobacillus_1;size=1;", "r_st": 29, "r_en": 4294, "NM": 75, "blen": 4265, "cig": {"S": 0, "M": 4197, "D": 68, "I": 0}, "cigacc": 0.9824150058616647}, {"read_id": "580b5eab-bebb-47ae-a203-40e85ed753db", "ctg": "Staphylococcus_4;size=1;", "r_st": 27, "r_en": 4418, "NM": 75, "blen": 4394, "cig": {"S": 0, "M": 4320, "D": 71, "I": 3}, "cigacc": 0.9829312699135184}, {"read_id": "580b5eab-bebb-47ae-a203-40e85ed753db", "ctg": "Staphylococcus_4;size=1;", "r_st": 2022, "r_en": 4396, "NM": 398, "blen": 2375, "cig": {"S": 0, "M": 1991, "D": 383, "I": 1}, "cigacc": 0.832421052631579}, {"read_id": "44391418-49c8-49a8-bc7e-0c83560a0838", "ctg": "Lactobacillus_1;size=1;", "r_st": 18, "r_en": 4270, "NM": 317, "blen": 4261, "cig": {"S": 0, "M": 3956, "D": 296, "I": 9}, "cigacc": 0.9256043182351561}, {"read_id": "995524f3-3930-470f-978e-960826fe87b0", "ctg": "Lactobacillus_1;size=1;", "r_st": 20, "r_en": 4283, "NM": 154, "blen": 4264, "cig": {"S": 0, "M": 4115, "D": 148, "I": 1}, "cigacc": 0.9638836772983115}, {"read_id": "906f19ac-0950-4b43-90ab-ff6708f0d11d", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 34, "r_en": 4495, "NM": 603, "blen": 4463, "cig": {"S": 0, "M": 3884, "D": 577, "I": 2}, "cigacc": 0.8648890880573605}, {"read_id": "2e67c7b5-1e17-4c4f-a904-7d9f9e30f342", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 36, "r_en": 4476, "NM": 81, "blen": 4440, "cig": {"S": 0, "M": 4363, "D": 77, "I": 0}, "cigacc": 0.9817567567567568}, {"read_id": "238268ff-dad4-434d-bac1-34cabe7a9eff", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 35, "r_en": 4448, "NM": 229, "blen": 4414, "cig": {"S": 0, "M": 4190, "D": 223, "I": 1}, "cigacc": 0.948119619392841}, {"read_id": "f837af2d-2306-455e-9ea1-6002b08a4d1c", "ctg": "Listeria_2_5;size=2;", "r_st": 20, "r_en": 4314, "NM": 94, "blen": 4296, "cig": {"S": 0, "M": 4206, "D": 88, "I": 2}, "cigacc": 0.9781191806331471}, {"read_id": "ce3562d8-d2fc-4dff-88ee-909723e0f131", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 42, "r_en": 4491, "NM": 403, "blen": 4452, "cig": {"S": 0, "M": 4071, "D": 378, "I": 3}, "cigacc": 0.9094788858939802}, {"read_id": "561e15c1-9933-49d6-9808-a152b2672c26", "ctg": "Escherichia_3;size=1;", "r_st": 35, "r_en": 4346, "NM": 282, "blen": 4311, "cig": {"S": 0, "M": 4039, "D": 272, "I": 0}, "cigacc": 0.9345859429366736}, {"read_id": "9f8621fa-5720-438c-943e-2f43d1eaa881", "ctg": "Lactobacillus_1;size=1;", "r_st": 18, "r_en": 4298, "NM": 118, "blen": 4281, "cig": {"S": 0, "M": 4170, "D": 110, "I": 1}, "cigacc": 0.9724363466479794}, {"read_id": "275095c4-36c5-4907-8a4a-a00708901305", "ctg": "Escherichia_1;size=1;", "r_st": 28, "r_en": 4467, "NM": 342, "blen": 4443, "cig": {"S": 0, "M": 4118, "D": 321, "I": 4}, "cigacc": 0.9230249831195139}, {"read_id": "a65646d0-7735-42de-a61b-5631b67cf381", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 12, "r_en": 4472, "NM": 414, "blen": 4461, "cig": {"S": 0, "M": 4062, "D": 398, "I": 1}, "cigacc": 0.9071956960322798}, {"read_id": "100d61e0-a968-4e38-afee-ae03f6a9b642", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 22, "r_en": 4490, "NM": 340, "blen": 4469, "cig": {"S": 0, "M": 4149, "D": 319, "I": 1}, "cigacc": 0.9239203401208325}, {"read_id": "1fb5cc88-6ec0-4a3d-a94d-bc345b94a03f", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 19, "r_en": 4472, "NM": 602, "blen": 4456, "cig": {"S": 0, "M": 3879, "D": 574, "I": 3}, "cigacc": 0.8649012567324955}, {"read_id": "cd631012-5c5d-486d-8340-c12f3c71f942", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 42, "r_en": 4485, "NM": 1021, "blen": 4449, "cig": {"S": 0, "M": 3481, "D": 962, "I": 6}, "cigacc": 0.7705102270173072}, {"read_id": "3be2d4c5-f43b-45f2-8c03-b4818ee924e1", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 33, "r_en": 4495, "NM": 152, "blen": 4465, "cig": {"S": 0, "M": 4317, "D": 145, "I": 3}, "cigacc": 0.9659574468085106}, {"read_id": "e7ae8912-8377-4db8-b9cc-a130e638aab9", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 3, "r_en": 4472, "NM": 365, "blen": 4471, "cig": {"S": 0, "M": 4120, "D": 349, "I": 2}, "cigacc": 0.9183627823753076}, {"read_id": "14d5cd99-7b1d-46b5-8df8-7c01d0f14673", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 36, "r_en": 4492, "NM": 234, "blen": 4456, "cig": {"S": 0, "M": 4237, "D": 219, "I": 0}, "cigacc": 0.9474865350089766}, {"read_id": "0b938e6e-68ca-475c-ac16-fb72ed17560c", "ctg": "Lactobacillus_3;size=1;", "r_st": 19, "r_en": 4285, "NM": 90, "blen": 4268, "cig": {"S": 0, "M": 4181, "D": 85, "I": 2}, "cigacc": 0.978912839737582}, {"read_id": "cd60c94d-ef61-48f2-81e9-a3d3b38667f0", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 27, "r_en": 4472, "NM": 1021, "blen": 4448, "cig": {"S": 0, "M": 3484, "D": 961, "I": 3}, "cigacc": 0.7704586330935252}, {"read_id": "65549ea1-b4a6-419c-be0b-663f74f440c3", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 28, "r_en": 4493, "NM": 633, "blen": 4470, "cig": {"S": 0, "M": 3867, "D": 598, "I": 5}, "cigacc": 0.8583892617449664}, {"read_id": "86b502c9-549d-47da-aad5-65820644aa5a", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 39, "r_en": 4485, "NM": 546, "blen": 4449, "cig": {"S": 0, "M": 3935, "D": 511, "I": 3}, "cigacc": 0.8772757923128793}, {"read_id": "000962a1-9b04-4a96-b935-eadc4dc7c900", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 16, "r_en": 4462, "NM": 777, "blen": 4455, "cig": {"S": 0, "M": 3722, "D": 724, "I": 9}, "cigacc": 0.8255892255892257}, {"read_id": "c9c14d58-21ff-4f0d-b040-66bcbbdedbcd", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 49, "r_en": 4485, "NM": 186, "blen": 4438, "cig": {"S": 0, "M": 4267, "D": 169, "I": 2}, "cigacc": 0.9580892293826048}, {"read_id": "c9c14d58-21ff-4f0d-b040-66bcbbdedbcd", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 34, "r_en": 4492, "NM": 237, "blen": 4458, "cig": {"S": 0, "M": 4228, "D": 230, "I": 0}, "cigacc": 0.9468371467025571}, {"read_id": "6e8a95e3-7c8d-4ef1-ba2d-7bb008f4199e", "ctg": "Staphylococcus_5;size=1;", "r_st": 26, "r_en": 4455, "NM": 29, "blen": 4429, "cig": {"S": 0, "M": 4402, "D": 27, "I": 0}, "cigacc": 0.9934522465567849}, {"read_id": "b8c8757c-55fd-4136-8a23-7d5952fa4950", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 26, "r_en": 4469, "NM": 237, "blen": 4444, "cig": {"S": 0, "M": 4217, "D": 226, "I": 1}, "cigacc": 0.9466696669666966}, {"read_id": "ad840bef-8e82-42d5-b3a0-8436c314df83", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 42, "r_en": 4485, "NM": 182, "blen": 4444, "cig": {"S": 0, "M": 4276, "D": 167, "I": 1}, "cigacc": 0.959045904590459}, {"read_id": "422ea9af-ea1a-4836-8994-7fb584e6d4d5", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 41, "r_en": 4424, "NM": 743, "blen": 4386, "cig": {"S": 0, "M": 3675, "D": 708, "I": 3}, "cigacc": 0.8305973552211583}, {"read_id": "c55492fb-779e-4ec1-bc3e-a90131431e56", "ctg": "Staphylococcus_5;size=1;", "r_st": 29, "r_en": 4439, "NM": 16, "blen": 4410, "cig": {"S": 0, "M": 4397, "D": 13, "I": 0}, "cigacc": 0.9963718820861678}, {"read_id": "b7d0f77d-fd10-4ab9-b6f8-a8198558bf88", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 33, "r_en": 4484, "NM": 182, "blen": 4455, "cig": {"S": 0, "M": 4278, "D": 173, "I": 4}, "cigacc": 0.9591470258136925}, {"read_id": "60514578-b148-4399-afb6-85aba0016946", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 59, "r_en": 4495, "NM": 209, "blen": 4437, "cig": {"S": 0, "M": 4234, "D": 202, "I": 1}, "cigacc": 0.9528961009691232}, {"read_id": "4f8ab5a2-314e-477d-b7c6-a283517656ca", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 36, "r_en": 4492, "NM": 64, "blen": 4457, "cig": {"S": 0, "M": 4397, "D": 59, "I": 1}, "cigacc": 0.9856405654027373}, {"read_id": "201e2a29-e55d-47a8-b108-de14cdf4ae63", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 0, "r_en": 4469, "NM": 1888, "blen": 4473, "cig": {"S": 0, "M": 2686, "D": 1783, "I": 4}, "cigacc": 0.577911915940085}, {"read_id": "68e450b2-411e-4442-8230-dde7a66984e9", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 7, "r_en": 4472, "NM": 240, "blen": 4469, "cig": {"S": 0, "M": 4239, "D": 226, "I": 4}, "cigacc": 0.9462967106735287}, {"read_id": "6bc63f26-ea7c-45be-86ad-bc8aaf899da0", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 30, "r_en": 4486, "NM": 683, "blen": 4460, "cig": {"S": 0, "M": 3810, "D": 646, "I": 4}, "cigacc": 0.8468609865470852}, {"read_id": "f681ed11-ef39-4e60-8b51-b90dc7f821a0", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 12, "r_en": 4448, "NM": 549, "blen": 4443, "cig": {"S": 0, "M": 3926, "D": 510, "I": 7}, "cigacc": 0.8764348413234301}, {"read_id": "cbb024d4-58a9-4a6b-92ad-c3b95e5f5bec", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 13, "r_en": 4470, "NM": 224, "blen": 4458, "cig": {"S": 0, "M": 4245, "D": 212, "I": 1}, "cigacc": 0.9497532525796322}, {"read_id": "09924459-e82c-411e-a0a8-4cdca36564c5", "ctg": "Lactobacillus_3;size=1;", "r_st": 395, "r_en": 4262, "NM": 1515, "blen": 3872, "cig": {"S": 0, "M": 2449, "D": 1418, "I": 5}, "cigacc": 0.6087293388429752}, {"read_id": "0bcc7dce-91df-4b4b-8e5b-6f5062a97d67", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 17, "r_en": 4472, "NM": 97, "blen": 4456, "cig": {"S": 0, "M": 4368, "D": 87, "I": 1}, "cigacc": 0.9782315978456014}, {"read_id": "0bcc7dce-91df-4b4b-8e5b-6f5062a97d67", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 8, "r_en": 4478, "NM": 179, "blen": 4478, "cig": {"S": 0, "M": 4308, "D": 162, "I": 8}, "cigacc": 0.9600267976775346}, {"read_id": "b9426932-2539-4835-b330-63e9f3b6a6a7", "ctg": "Pseudomonas_1_2_3_4;size=4;", "r_st": 5, "r_en": 4464, "NM": 289, "blen": 4462, "cig": {"S": 0, "M": 4186, "D": 273, "I": 3}, "cigacc": 0.9352308381891529}, {"read_id": "4a93df21-bbd5-42ac-aa1d-23acce2a8ecf", "ctg": "Listeria_1;size=1;", "r_st": 14, "r_en": 4302, "NM": 100, "blen": 4288, "cig": {"S": 0, "M": 4194, "D": 94, "I": 0}, "cigacc": 0.976679104477612}, {"read_id": "91860c58-5acb-40e4-be56-6e36b9ddaf7a", "ctg": "Staphylococcus_5;size=1;", "r_st": 30, "r_en": 2069, "NM": 113, "blen": 2039, "cig": {"S": 0, "M": 1932, "D": 107, "I": 0}, "cigacc": 0.9445806768023541}, {"read_id": "d2575956-3739-4731-943a-aa12da11e030", "ctg": "Lactobacillus_3;size=1;", "r_st": 18, "r_en": 4297, "NM": 47, "blen": 4279, "cig": {"S": 0, "M": 4245, "D": 34, "I": 0}, "cigacc": 0.9890161252629119}, {"read_id": "caca8808-8edb-4805-b777-e5a13b48c2ad", "ctg": "Listeria_1;size=1;", "r_st": 3, "r_en": 4330, "NM": 250, "blen": 4327, "cig": {"S": 0, "M": 4087, "D": 240, "I": 0}, "cigacc": 0.9422232493644558}, {"read_id": "01c33d74-8d60-4a7b-967a-ebdbd685aba3", "ctg": "Listeria_1;size=1;", "r_st": 5, "r_en": 4295, "NM": 148, "blen": 4291, "cig": {"S": 0, "M": 4149, "D": 141, "I": 1}, "cigacc": 0.9655092053134468}, {"read_id": "b6820d2f-9b6c-4078-8d82-4aba7806db6d", "ctg": "Listeria_1;size=1;", "r_st": 0, "r_en": 4299, "NM": 586, "blen": 4299, "cig": {"S": 0, "M": 3731, "D": 568, "I": 0}, "cigacc": 0.8636892300535008}, {"read_id": "91870b74-7ce7-4003-9e4a-4d6b1bae143f", "ctg": "Listeria_1;size=1;", "r_st": 6, "r_en": 4295, "NM": 48, "blen": 4289, "cig": {"S": 0, "M": 4245, "D": 44, "I": 0}, "cigacc": 0.9888085800885987}, {"read_id": "07cf8f55-1c33-476a-8de4-7318059815cc", "ctg": "Listeria_1;size=1;", "r_st": 32, "r_en": 3410, "NM": 894, "blen": 3381, "cig": {"S": 0, "M": 2537, "D": 841, "I": 3}, "cigacc": 0.735581188997338}, {"read_id": "7199f363-d549-4ef2-9998-0201ad70a571", "ctg": "Listeria_1;size=1;", "r_st": 69, "r_en": 4309, "NM": 648, "blen": 4248, "cig": {"S": 0, "M": 3639, "D": 601, "I": 8}, "cigacc": 0.847457627118644}, {"read_id": "75255237-1490-4da4-b66b-87fb7a81dc1d", "ctg": "Listeria_1;size=1;", "r_st": 7, "r_en": 4309, "NM": 180, "blen": 4302, "cig": {"S": 0, "M": 4134, "D": 168, "I": 0}, "cigacc": 0.9581589958158996}, {"read_id": "346a14ae-9a50-40b1-b9a3-db73bcaa1f28", "ctg": "Listeria_1;size=1;", "r_st": 3, "r_en": 3910, "NM": 738, "blen": 3910, "cig": {"S": 0, "M": 3215, "D": 692, "I": 3}, "cigacc": 0.8112531969309463}, {"read_id": "5c2620bb-1f6f-406d-b328-b308591f202b", "ctg": "Listeria_1;size=1;", "r_st": 3, "r_en": 4310, "NM": 122, "blen": 4310, "cig": {"S": 0, "M": 4191, "D": 116, "I": 3}, "cigacc": 0.9716937354988399}, {"read_id": "ccb26c72-f64c-4dc5-8f1f-e0aec4c9d317", "ctg": "Listeria_1;size=1;", "r_st": 17, "r_en": 4296, "NM": 370, "blen": 4279, "cig": {"S": 0, "M": 3929, "D": 350, "I": 0}, "cigacc": 0.9135311988782426}, {"read_id": "ebed6ed8-23e7-4bf0-91bb-9a075197b87f", "ctg": "Listeria_1;size=1;", "r_st": 30, "r_en": 4319, "NM": 161, "blen": 4290, "cig": {"S": 0, "M": 4142, "D": 147, "I": 1}, "cigacc": 0.9624708624708624}, {"read_id": "0d7eb256-6522-407d-bcd8-f722c66ac2ab", "ctg": "Listeria_1;size=1;", "r_st": 1, "r_en": 4320, "NM": 428, "blen": 4322, "cig": {"S": 0, "M": 3910, "D": 409, "I": 3}, "cigacc": 0.900971772327626}, {"read_id": "61bbd38e-dec9-4b15-9fa3-642f1091203a", "ctg": "Listeria_1;size=1;", "r_st": 25, "r_en": 4328, "NM": 95, "blen": 4305, "cig": {"S": 0, "M": 4216, "D": 87, "I": 2}, "cigacc": 0.9779326364692218}, {"read_id": "6c895e4c-75a9-4c7a-b443-f26300cb2040", "ctg": "Listeria_1;size=1;", "r_st": 25, "r_en": 4324, "NM": 102, "blen": 4299, "cig": {"S": 0, "M": 4202, "D": 97, "I": 0}, "cigacc": 0.9762735519888346}, {"read_id": "acc35ab1-f51a-4b89-b1ad-2e2473495e96", "ctg": "Listeria_1;size=1;", "r_st": 3, "r_en": 4295, "NM": 242, "blen": 4299, "cig": {"S": 0, "M": 4071, "D": 221, "I": 7}, "cigacc": 0.9437078390323331}, {"read_id": "44218513-95a4-4b48-b060-28e2e3704905", "ctg": "Listeria_1;size=1;", "r_st": 0, "r_en": 4281, "NM": 301, "blen": 4281, "cig": {"S": 0, "M": 3992, "D": 289, "I": 0}, "cigacc": 0.9296893249240832}, {"read_id": "5edf3dbd-cf0c-4ff9-87a4-eb84a195e7f9", "ctg": "Lactobacillus_1;size=1;", "r_st": 19, "r_en": 4305, "NM": 105, "blen": 4290, "cig": {"S": 0, "M": 4201, "D": 85, "I": 4}, "cigacc": 0.9755244755244755}, {"read_id": "5edf3dbd-cf0c-4ff9-87a4-eb84a195e7f9", "ctg": "Lactobacillus_1;size=1;", "r_st": 48, "r_en": 4296, "NM": 182, "blen": 4248, "cig": {"S": 0, "M": 4076, "D": 172, "I": 0}, "cigacc": 0.957156308851224}, {"read_id": "5edf3dbd-cf0c-4ff9-87a4-eb84a195e7f9", "ctg": "Lactobacillus_1;size=1;", "r_st": 11, "r_en": 4276, "NM": 417, "blen": 4266, "cig": {"S": 0, "M": 3871, "D": 394, "I": 1}, "cigacc": 0.9022503516174403}, {"read_id": "39b6f022-743c-489c-9c4f-8746d314b573", "ctg": "Listeria_1;size=1;", "r_st": 33, "r_en": 4313, "NM": 552, "blen": 4281, "cig": {"S": 0, "M": 3774, "D": 506, "I": 1}, "cigacc": 0.8710581639803784}, {"read_id": "39b6f022-743c-489c-9c4f-8746d314b573", "ctg": "Listeria_1;size=1;", "r_st": 1189, "r_en": 1261, "NM": 1, "blen": 72, "cig": {"S": 0, "M": 72, "D": 0, "I": 0}, "cigacc": 0.9861111111111112}, {"read_id": "c83e7181-1d63-4116-af21-fafed51db9a9", "ctg": "Listeria_1;size=1;", "r_st": 3, "r_en": 4330, "NM": 56, "blen": 4329, "cig": {"S": 0, "M": 4283, "D": 44, "I": 2}, "cigacc": 0.987063987063987}, {"read_id": "5d3f01da-d014-49a7-b951-d2b544d3fdf1", "ctg": "Listeria_1;size=1;", "r_st": 16, "r_en": 4330, "NM": 57, "blen": 4314, "cig": {"S": 0, "M": 4262, "D": 52, "I": 0}, "cigacc": 0.9867872044506258}, {"read_id": "97f64442-a35e-47a9-93da-2bbaa20a1dca", "ctg": "Listeria_1;size=1;", "r_st": 19, "r_en": 4306, "NM": 466, "blen": 4287, "cig": {"S": 0, "M": 3847, "D": 440, "I": 0}, "cigacc": 0.8912992768836016}, {"read_id": "32bcc490-3f65-4957-92a1-b4f92fc9541b", "ctg": "Listeria_1;size=1;", "r_st": 3, "r_en": 4315, "NM": 358, "blen": 4317, "cig": {"S": 0, "M": 3972, "D": 340, "I": 5}, "cigacc": 0.9170720407690526}, {"read_id": "170ec768-2177-4ffc-9e2b-f73bff98e283", "ctg": "Listeria_1;size=1;", "r_st": 0, "r_en": 4310, "NM": 93, "blen": 4312, "cig": {"S": 0, "M": 4226, "D": 84, "I": 2}, "cigacc": 0.9784322820037106}, {"read_id": "87ca8ba9-5d83-45f8-b7d6-b993c334122e", "ctg": "Listeria_1;size=1;", "r_st": 29, "r_en": 4321, "NM": 101, "blen": 4292, "cig": {"S": 0, "M": 4197, "D": 95, "I": 0}, "cigacc": 0.9764678471575023}, {"read_id": "d91ea43d-b4d4-4ece-858a-823d0a2af7d3", "ctg": "Bacillus_9;size=1;", "r_st": 23, "r_en": 4234, "NM": 445, "blen": 4213, "cig": {"S": 0, "M": 3799, "D": 412, "I": 2}, "cigacc": 0.8943745549489674}, {"read_id": "0630cb15-274e-44d1-8ea3-a931caa64c30", "ctg": "Listeria_1;size=1;", "r_st": 22, "r_en": 4328, "NM": 91, "blen": 4306, "cig": {"S": 0, "M": 4217, "D": 89, "I": 0}, "cigacc": 0.9788666976312123}, {"read_id": "7dbe2cf6-2e17-48b5-9a6f-a89a8fd923a7", "ctg": "Listeria_1;size=1;", "r_st": 22, "r_en": 4330, "NM": 190, "blen": 4312, "cig": {"S": 0, "M": 4136, "D": 172, "I": 4}, "cigacc": 0.9559369202226345}, {"read_id": "bede145f-8366-4146-8162-5990b4444e1a", "ctg": "Salmonella_2;size=1;", "r_st": 10, "r_en": 4352, "NM": 516, "blen": 4348, "cig": {"S": 0, "M": 3854, "D": 488, "I": 6}, "cigacc": 0.8813247470101195}, {"read_id": "17b80620-5f05-46de-a13f-dc495725dd2b", "ctg": "Listeria_1;size=1;", "r_st": 23, "r_en": 4326, "NM": 192, "blen": 4307, "cig": {"S": 0, "M": 4127, "D": 176, "I": 4}, "cigacc": 0.9554214070118412}, {"read_id": "2010c6a5-9e45-4038-a1d3-c2df881a0cea", "ctg": "Listeria_1;size=1;", "r_st": 4, "r_en": 4292, "NM": 133, "blen": 4289, "cig": {"S": 0, "M": 4164, "D": 124, "I": 1}, "cigacc": 0.968990440662159}, {"read_id": "960025e2-d4e9-419a-93d2-00f2e8231cbb", "ctg": "Listeria_1;size=1;", "r_st": 7, "r_en": 4299, "NM": 147, "blen": 4296, "cig": {"S": 0, "M": 4154, "D": 138, "I": 4}, "cigacc": 0.965782122905028}, {"read_id": "ca77fea0-5d75-4bb4-978c-6e8fd276e300", "ctg": "Listeria_1;size=1;", "r_st": 3, "r_en": 4296, "NM": 759, "blen": 4299, "cig": {"S": 0, "M": 3573, "D": 720, "I": 6}, "cigacc": 0.823447313328681}, {"read_id": "15b945e1-27e7-4380-8c51-53c113deaee7", "ctg": "Listeria_1;size=1;", "r_st": 0, "r_en": 4323, "NM": 100, "blen": 4323, "cig": {"S": 0, "M": 4233, "D": 90, "I": 0}, "cigacc": 0.9768679157992135}, {"read_id": "451042f6-c501-4a41-920e-2a1dadf7b3eb", "ctg": "Staphylococcus_4;size=1;", "r_st": 26, "r_en": 3792, "NM": 61, "blen": 3766, "cig": {"S": 0, "M": 3708, "D": 58, "I": 0}, "cigacc": 0.9838024429102497}, {"read_id": "177fc12d-d9ec-48ec-972e-31051b54051a", "ctg": "Listeria_1;size=1;", "r_st": 3, "r_en": 4324, "NM": 311, "blen": 4327, "cig": {"S": 0, "M": 4032, "D": 289, "I": 6}, "cigacc": 0.9281257222093829}, {"read_id": "8eb1fed3-a88d-4eb0-b55c-94489cc8773a", "ctg": "Staphylococcus_5;size=1;", "r_st": 70, "r_en": 4447, "NM": 535, "blen": 4379, "cig": {"S": 0, "M": 3865, "D": 512, "I": 2}, "cigacc": 0.8778259876684175}, {"read_id": "0909f6d4-dd70-43cf-9f9f-69f44cfc4b53", "ctg": "Listeria_1;size=1;", "r_st": 25, "r_en": 4330, "NM": 144, "blen": 4310, "cig": {"S": 0, "M": 4172, "D": 133, "I": 5}, "cigacc": 0.9665893271461717}, {"read_id": "932e017e-871a-4f38-9875-28313e3a8fa9", "ctg": "Listeria_1;size=1;", "r_st": 49, "r_en": 4316, "NM": 142, "blen": 4268, "cig": {"S": 0, "M": 4132, "D": 135, "I": 1}, "cigacc": 0.9667291471415183}, {"read_id": "95bed1a4-dde3-49ee-a031-6a7cdffdb124", "ctg": "Listeria_1;size=1;", "r_st": 3, "r_en": 4327, "NM": 1451, "blen": 4334, "cig": {"S": 0, "M": 2975, "D": 1349, "I": 10}, "cigacc": 0.6652053530226119}, {"read_id": "ad015e0b-6398-4645-9374-d10195efed59", "ctg": "Staphylococcus_1;size=1;", "r_st": 22, "r_en": 4498, "NM": 60, "blen": 4476, "cig": {"S": 0, "M": 4419, "D": 57, "I": 0}, "cigacc": 0.9865951742627346}, {"read_id": "fcb1c4b3-3712-4009-b82a-c636cfbbeafb", "ctg": "Staphylococcus_1;size=1;", "r_st": 3, "r_en": 4485, "NM": 75, "blen": 4483, "cig": {"S": 0, "M": 4413, "D": 69, "I": 1}, "cigacc": 0.983270131608298}, {"read_id": "b84398d3-7a36-4d64-9513-f491e70214d0", "ctg": "Staphylococcus_1;size=1;", "r_st": 40, "r_en": 4480, "NM": 302, "blen": 4443, "cig": {"S": 0, "M": 4163, "D": 277, "I": 3}, "cigacc": 0.9320279090704479}, {"read_id": "e07fd4ba-5bee-4a4f-ab17-3bf78e739c6c", "ctg": "Staphylococcus_1;size=1;", "r_st": 20, "r_en": 4450, "NM": 182, "blen": 4430, "cig": {"S": 0, "M": 4257, "D": 173, "I": 0}, "cigacc": 0.9589164785553047}, {"read_id": "66b0449f-5c3c-47b4-8827-31e12dd0a7be", "ctg": "Staphylococcus_1;size=1;", "r_st": 27, "r_en": 4487, "NM": 287, "blen": 4461, "cig": {"S": 0, "M": 4190, "D": 270, "I": 1}, "cigacc": 0.9356646491817978}, {"read_id": "642d989f-26cf-45e1-8302-323bb6ce4dff", "ctg": "Staphylococcus_1;size=1;", "r_st": 18, "r_en": 4497, "NM": 136, "blen": 4480, "cig": {"S": 0, "M": 4350, "D": 129, "I": 1}, "cigacc": 0.9696428571428571}, {"read_id": "b82f5381-0828-41c0-acc1-2de0d188ab26", "ctg": "Staphylococcus_1;size=1;", "r_st": 6, "r_en": 4485, "NM": 171, "blen": 4480, "cig": {"S": 0, "M": 4312, "D": 167, "I": 1}, "cigacc": 0.9618303571428571}, {"read_id": "73d65204-b11b-413f-ae63-de40cafc7300", "ctg": "Staphylococcus_1;size=1;", "r_st": 13, "r_en": 4488, "NM": 82, "blen": 4481, "cig": {"S": 0, "M": 4408, "D": 67, "I": 6}, "cigacc": 0.9817005132782861}, {"read_id": "a1d2e1a4-7b53-4992-b5c3-72c941310a8f", "ctg": "Staphylococcus_1;size=1;", "r_st": 4, "r_en": 4477, "NM": 54, "blen": 4474, "cig": {"S": 0, "M": 4422, "D": 51, "I": 1}, "cigacc": 0.9879302637460885}, {"read_id": "9ea1d9ce-cff3-4ad9-8a2a-37693ec5cd71", "ctg": "Staphylococcus_1;size=1;", "r_st": 19, "r_en": 4502, "NM": 119, "blen": 4486, "cig": {"S": 0, "M": 4367, "D": 116, "I": 3}, "cigacc": 0.97347302719572}, {"read_id": "866017f0-c449-4410-b927-4ab9932e5c71", "ctg": "Staphylococcus_1;size=1;", "r_st": 2, "r_en": 4498, "NM": 109, "blen": 4498, "cig": {"S": 0, "M": 4401, "D": 95, "I": 2}, "cigacc": 0.9757670075589151}, {"read_id": "4c398986-3274-403f-be9f-3c08280bb1cb", "ctg": "Staphylococcus_1;size=1;", "r_st": 23, "r_en": 4492, "NM": 118, "blen": 4469, "cig": {"S": 0, "M": 4353, "D": 116, "I": 0}, "cigacc": 0.9735958827478183}, {"read_id": "4c398986-3274-403f-be9f-3c08280bb1cb", "ctg": "Staphylococcus_1;size=1;", "r_st": 1, "r_en": 4479, "NM": 410, "blen": 4481, "cig": {"S": 0, "M": 4083, "D": 395, "I": 3}, "cigacc": 0.9085025663914305}, {"read_id": "93c88d79-bfc3-4904-a046-770dedd98f42", "ctg": "Lactobacillus_1;size=1;", "r_st": 93, "r_en": 4271, "NM": 475, "blen": 4187, "cig": {"S": 0, "M": 3731, "D": 447, "I": 9}, "cigacc": 0.8865536183424887}, {"read_id": "93c88d79-bfc3-4904-a046-770dedd98f42", "ctg": "Lactobacillus_1;size=1;", "r_st": 0, "r_en": 1427, "NM": 52, "blen": 1428, "cig": {"S": 0, "M": 1377, "D": 50, "I": 1}, "cigacc": 0.9635854341736695}, {"read_id": "ad73ac14-5124-4cc6-b3b5-78bcfd06e7e7", "ctg": "Listeria_2_5;size=2;", "r_st": 23, "r_en": 4312, "NM": 95, "blen": 4289, "cig": {"S": 0, "M": 4198, "D": 91, "I": 0}, "cigacc": 0.977850314758685}, {"read_id": "ff67b9c7-1809-4c6a-ba7b-e7a956dc0467", "ctg": "Staphylococcus_1;size=1;", "r_st": 17, "r_en": 4501, "NM": 198, "blen": 4484, "cig": {"S": 0, "M": 4294, "D": 190, "I": 0}, "cigacc": 0.955842997323818}, {"read_id": "9f05195a-24a8-4af4-bb14-ae7b8f71d12b", "ctg": "Staphylococcus_1;size=1;", "r_st": 14, "r_en": 4502, "NM": 117, "blen": 4491, "cig": {"S": 0, "M": 4383, "D": 105, "I": 3}, "cigacc": 0.9739478957915831}, {"read_id": "99d28b91-173a-4f70-8631-09d3da7b5d20", "ctg": "Bacillus_4_5;size=2;", "r_st": 2, "r_en": 4230, "NM": 191, "blen": 4229, "cig": {"S": 0, "M": 4044, "D": 184, "I": 1}, "cigacc": 0.9548356585481201}, {"read_id": "2d718f37-9738-402b-a186-f6baa6b98e9a", "ctg": "Staphylococcus_1;size=1;", "r_st": 167, "r_en": 4490, "NM": 1279, "blen": 4324, "cig": {"S": 0, "M": 3132, "D": 1191, "I": 1}, "cigacc": 0.704209065679926}, {"read_id": "c88b9c3a-7514-4184-a12f-e3e33685ec03", "ctg": "Staphylococcus_1;size=1;", "r_st": 24, "r_en": 4494, "NM": 267, "blen": 4472, "cig": {"S": 0, "M": 4221, "D": 249, "I": 2}, "cigacc": 0.9402951699463328}]
+[
+	{
+		"read_id": "ad1bff83-083a-40dc-83c6-43933ae22401",
+		"dna_len": 3864,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 34,
+		"r_en": 4249,
+		"q_st": 26,
+		"q_en": 3836,
+		"NM": 426,
+		"blen": 4215,
+		"cig": {
+			"S": 0,
+			"M": 3810,
+			"D": 405,
+			"I": 0
+		},
+		"cigacc": 0.898932384341637
+	},
+	{
+		"read_id": "7e96de41-2af9-466d-bd0a-315510f1c528",
+		"dna_len": 7940,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 20,
+		"r_en": 4241,
+		"q_st": 4077,
+		"q_en": 7900,
+		"NM": 420,
+		"blen": 4221,
+		"cig": {
+			"S": 0,
+			"M": 3823,
+			"D": 398,
+			"I": 0
+		},
+		"cigacc": 0.900497512437811
+	},
+	{
+		"read_id": "3cf602fb-c280-4b6a-8f44-88f830e59530",
+		"dna_len": 4146,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 23,
+		"r_en": 4238,
+		"q_st": 34,
+		"q_en": 4109,
+		"NM": 152,
+		"blen": 4215,
+		"cig": {
+			"S": 0,
+			"M": 4075,
+			"D": 140,
+			"I": 0
+		},
+		"cigacc": 0.9639383155397391
+	},
+	{
+		"read_id": "7ccc4e89-3a8a-4d0f-9738-200d582a3569",
+		"dna_len": 4112,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 2,
+		"r_en": 4209,
+		"q_st": 26,
+		"q_en": 4071,
+		"NM": 177,
+		"blen": 4208,
+		"cig": {
+			"S": 0,
+			"M": 4044,
+			"D": 163,
+			"I": 1
+		},
+		"cigacc": 0.9579372623574145
+	},
+	{
+		"read_id": "5f185c28-e3ef-4d1d-b920-ddab0410d4b2",
+		"dna_len": 4145,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 0,
+		"r_en": 4223,
+		"q_st": 29,
+		"q_en": 4118,
+		"NM": 155,
+		"blen": 4225,
+		"cig": {
+			"S": 0,
+			"M": 4087,
+			"D": 136,
+			"I": 2
+		},
+		"cigacc": 0.9633136094674556
+	},
+	{
+		"read_id": "cabe44a8-021b-4c0f-92c7-9e79e58bbfa9",
+		"dna_len": 4255,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 28,
+		"r_en": 4246,
+		"q_st": 16,
+		"q_en": 4213,
+		"NM": 22,
+		"blen": 4218,
+		"cig": {
+			"S": 0,
+			"M": 4197,
+			"D": 21,
+			"I": 0
+		},
+		"cigacc": 0.9947842579421526
+	},
+	{
+		"read_id": "fe1296e5-2c19-4120-b363-685b0a61501b",
+		"dna_len": 8330,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 22,
+		"r_en": 4304,
+		"q_st": 4187,
+		"q_en": 8289,
+		"NM": 191,
+		"blen": 4282,
+		"cig": {
+			"S": 0,
+			"M": 4102,
+			"D": 180,
+			"I": 0
+		},
+		"cigacc": 0.955394675385334
+	},
+	{
+		"read_id": "f4db3292-3057-4dc2-be24-3636622d9d66",
+		"dna_len": 3816,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 16,
+		"r_en": 4235,
+		"q_st": 35,
+		"q_en": 3780,
+		"NM": 511,
+		"blen": 4224,
+		"cig": {
+			"S": 0,
+			"M": 3740,
+			"D": 479,
+			"I": 5
+		},
+		"cigacc": 0.8790246212121212
+	},
+	{
+		"read_id": "68f8f227-ad47-4bcd-9a79-de282ca5f960",
+		"dna_len": 8315,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 7,
+		"r_en": 4224,
+		"q_st": 31,
+		"q_en": 4192,
+		"NM": 63,
+		"blen": 4217,
+		"cig": {
+			"S": 0,
+			"M": 4161,
+			"D": 56,
+			"I": 0
+		},
+		"cigacc": 0.9850604695281006
+	},
+	{
+		"read_id": "d21febd1-5cb5-4e82-a7f1-8542c7c21240",
+		"dna_len": 4180,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 2,
+		"r_en": 4213,
+		"q_st": 27,
+		"q_en": 4127,
+		"NM": 130,
+		"blen": 4214,
+		"cig": {
+			"S": 0,
+			"M": 4097,
+			"D": 114,
+			"I": 3
+		},
+		"cigacc": 0.9691504508780256
+	},
+	{
+		"read_id": "b0984658-33b0-493c-9bd9-ac8f91fd097f",
+		"dna_len": 3963,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 0,
+		"r_en": 4224,
+		"q_st": 32,
+		"q_en": 3928,
+		"NM": 362,
+		"blen": 4225,
+		"cig": {
+			"S": 0,
+			"M": 3895,
+			"D": 329,
+			"I": 1
+		},
+		"cigacc": 0.9143195266272189
+	},
+	{
+		"read_id": "3d902c46-c1d7-4b28-bbc3-aa92a98b6b5e",
+		"dna_len": 8145,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 2,
+		"r_en": 4228,
+		"q_st": 4063,
+		"q_en": 8116,
+		"NM": 184,
+		"blen": 4227,
+		"cig": {
+			"S": 0,
+			"M": 4052,
+			"D": 174,
+			"I": 1
+		},
+		"cigacc": 0.9564703099124675
+	},
+	{
+		"read_id": "44cb49c9-7afa-433d-a65f-4e956be419aa",
+		"dna_len": 4164,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 1,
+		"r_en": 4237,
+		"q_st": 27,
+		"q_en": 4146,
+		"NM": 126,
+		"blen": 4236,
+		"cig": {
+			"S": 0,
+			"M": 4119,
+			"D": 117,
+			"I": 0
+		},
+		"cigacc": 0.9702549575070821
+	},
+	{
+		"read_id": "fd136872-5fae-4047-af64-4ecaa8e32663",
+		"dna_len": 8584,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 28,
+		"r_en": 4248,
+		"q_st": 5,
+		"q_en": 4156,
+		"NM": 75,
+		"blen": 4221,
+		"cig": {
+			"S": 0,
+			"M": 4150,
+			"D": 70,
+			"I": 1
+		},
+		"cigacc": 0.9822316986496091
+	},
+	{
+		"read_id": "399cca22-068a-4b68-8d93-4abf833d33de",
+		"dna_len": 7528,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 18,
+		"r_en": 3553,
+		"q_st": 4291,
+		"q_en": 7485,
+		"NM": 374,
+		"blen": 3537,
+		"cig": {
+			"S": 0,
+			"M": 3192,
+			"D": 343,
+			"I": 2
+		},
+		"cigacc": 0.8942606728866271
+	},
+	{
+		"read_id": "1d4266e9-b3a9-4523-89f2-d5a789b45646",
+		"dna_len": 4160,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 30,
+		"r_en": 4242,
+		"q_st": 24,
+		"q_en": 4110,
+		"NM": 140,
+		"blen": 4214,
+		"cig": {
+			"S": 0,
+			"M": 4084,
+			"D": 128,
+			"I": 2
+		},
+		"cigacc": 0.9667774086378738
+	},
+	{
+		"read_id": "eb452a8d-a277-4347-ada7-d80efa774d39",
+		"dna_len": 5023,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 26,
+		"r_en": 4242,
+		"q_st": 20,
+		"q_en": 4094,
+		"NM": 150,
+		"blen": 4216,
+		"cig": {
+			"S": 0,
+			"M": 4074,
+			"D": 142,
+			"I": 0
+		},
+		"cigacc": 0.9644212523719166
+	},
+	{
+		"read_id": "953839f0-e386-468c-975c-927c286a9e6e",
+		"dna_len": 4180,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 0,
+		"r_en": 4221,
+		"q_st": 37,
+		"q_en": 4149,
+		"NM": 125,
+		"blen": 4224,
+		"cig": {
+			"S": 0,
+			"M": 4109,
+			"D": 112,
+			"I": 3
+		},
+		"cigacc": 0.970407196969697
+	},
+	{
+		"read_id": "dd5bd284-34f5-4998-abc0-f2724ee2cb37",
+		"dna_len": 12355,
+		"ctg": "Escherichia_7;size=1;",
+		"r_st": 36,
+		"r_en": 4264,
+		"q_st": 4380,
+		"q_en": 8223,
+		"NM": 404,
+		"blen": 4231,
+		"cig": {
+			"S": 0,
+			"M": 3840,
+			"D": 388,
+			"I": 3
+		},
+		"cigacc": 0.9045142992200426
+	},
+	{
+		"read_id": "80c4303e-602d-4a5f-9b85-3bf4c29b9eee",
+		"dna_len": 16202,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 3,
+		"r_en": 4241,
+		"q_st": 7626,
+		"q_en": 11521,
+		"NM": 373,
+		"blen": 4245,
+		"cig": {
+			"S": 0,
+			"M": 3888,
+			"D": 350,
+			"I": 7
+		},
+		"cigacc": 0.9121319199057715
+	},
+	{
+		"read_id": "80c4303e-602d-4a5f-9b85-3bf4c29b9eee",
+		"dna_len": 16202,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 2,
+		"r_en": 533,
+		"q_st": 11545,
+		"q_en": 11999,
+		"NM": 86,
+		"blen": 531,
+		"cig": {
+			"S": 0,
+			"M": 454,
+			"D": 77,
+			"I": 0
+		},
+		"cigacc": 0.8380414312617702
+	},
+	{
+		"read_id": "830cd394-4f34-42ea-a40d-0ee7bf78a115",
+		"dna_len": 12094,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 48,
+		"r_en": 4240,
+		"q_st": 4458,
+		"q_en": 8384,
+		"NM": 277,
+		"blen": 4194,
+		"cig": {
+			"S": 0,
+			"M": 3924,
+			"D": 268,
+			"I": 2
+		},
+		"cigacc": 0.9339532665712923
+	},
+	{
+		"read_id": "bb1cc025-223f-4607-92dc-3398fdcff172",
+		"dna_len": 18455,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 3,
+		"r_en": 4218,
+		"q_st": 3768,
+		"q_en": 7692,
+		"NM": 300,
+		"blen": 4215,
+		"cig": {
+			"S": 0,
+			"M": 3924,
+			"D": 291,
+			"I": 0
+		},
+		"cigacc": 0.9288256227758007
+	},
+	{
+		"read_id": "319e1a7a-c4f5-4909-93be-ac832b771b77",
+		"dna_len": 9069,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 33,
+		"r_en": 4249,
+		"q_st": 3935,
+		"q_en": 8075,
+		"NM": 82,
+		"blen": 4217,
+		"cig": {
+			"S": 0,
+			"M": 4139,
+			"D": 77,
+			"I": 1
+		},
+		"cigacc": 0.9805548968460991
+	},
+	{
+		"read_id": "399166b4-d062-4377-bae6-aaadd19865f8",
+		"dna_len": 4185,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 18,
+		"r_en": 4244,
+		"q_st": 18,
+		"q_en": 4148,
+		"NM": 105,
+		"blen": 4226,
+		"cig": {
+			"S": 0,
+			"M": 4130,
+			"D": 96,
+			"I": 0
+		},
+		"cigacc": 0.9751538097491718
+	},
+	{
+		"read_id": "4c2474ac-27c9-4d58-ae1a-b7dccbab1d49",
+		"dna_len": 11103,
+		"ctg": 0,
+		"r_st": 0,
+		"r_en": 0,
+		"q_st": 0,
+		"q_en": 0,
+		"NM": 0,
+		"blen": 0,
+		"cig": 0,
+		"cigacc": 0
+	},
+	{
+		"read_id": "ac92adbc-a982-476a-b030-2d2f79c91b0d",
+		"dna_len": 4247,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 0,
+		"r_en": 4243,
+		"q_st": 24,
+		"q_en": 4213,
+		"NM": 60,
+		"blen": 4244,
+		"cig": {
+			"S": 0,
+			"M": 4188,
+			"D": 55,
+			"I": 1
+		},
+		"cigacc": 0.9858623939679547
+	},
+	{
+		"read_id": "61a275b5-e525-44b2-b69d-3de4ad9c60eb",
+		"dna_len": 11531,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 15,
+		"r_en": 4305,
+		"q_st": 7560,
+		"q_en": 11489,
+		"NM": 386,
+		"blen": 4294,
+		"cig": {
+			"S": 0,
+			"M": 3925,
+			"D": 365,
+			"I": 4
+		},
+		"cigacc": 0.9101071262226362
+	},
+	{
+		"read_id": "133d83fb-589f-42f6-aa48-3cbef4d8194d",
+		"dna_len": 4019,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 1,
+		"r_en": 4239,
+		"q_st": 12,
+		"q_en": 3988,
+		"NM": 293,
+		"blen": 4242,
+		"cig": {
+			"S": 0,
+			"M": 3972,
+			"D": 266,
+			"I": 4
+		},
+		"cigacc": 0.9309288071664309
+	},
+	{
+		"read_id": "9626fa94-e60a-47c1-be15-a2388f5b97cf",
+		"dna_len": 3980,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 0,
+		"r_en": 4234,
+		"q_st": 25,
+		"q_en": 3941,
+		"NM": 340,
+		"blen": 4240,
+		"cig": {
+			"S": 0,
+			"M": 3910,
+			"D": 324,
+			"I": 6
+		},
+		"cigacc": 0.9198113207547169
+	},
+	{
+		"read_id": "dcb00f6d-96ca-4788-9f67-9801f18593f1",
+		"dna_len": 4117,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 0,
+		"r_en": 4243,
+		"q_st": 28,
+		"q_en": 4088,
+		"NM": 203,
+		"blen": 4247,
+		"cig": {
+			"S": 0,
+			"M": 4056,
+			"D": 187,
+			"I": 4
+		},
+		"cigacc": 0.9522015540381445
+	},
+	{
+		"read_id": "0b1e81b1-e2eb-46ff-aa27-a6e6e6147ff3",
+		"dna_len": 4187,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 1,
+		"r_en": 4228,
+		"q_st": 29,
+		"q_en": 4148,
+		"NM": 129,
+		"blen": 4233,
+		"cig": {
+			"S": 0,
+			"M": 4113,
+			"D": 114,
+			"I": 6
+		},
+		"cigacc": 0.969525159461375
+	},
+	{
+		"read_id": "53da65c1-7695-4fb4-943e-8db626ef8a28",
+		"dna_len": 7893,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 3,
+		"r_en": 4235,
+		"q_st": 4197,
+		"q_en": 7871,
+		"NM": 587,
+		"blen": 4234,
+		"cig": {
+			"S": 0,
+			"M": 3672,
+			"D": 560,
+			"I": 2
+		},
+		"cigacc": 0.8613604156825697
+	},
+	{
+		"read_id": "dc3426e8-d00d-42f2-a5dc-b952123747b7",
+		"dna_len": 3856,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 21,
+		"r_en": 4205,
+		"q_st": 38,
+		"q_en": 3825,
+		"NM": 426,
+		"blen": 4188,
+		"cig": {
+			"S": 0,
+			"M": 3783,
+			"D": 401,
+			"I": 4
+		},
+		"cigacc": 0.8982808022922636
+	},
+	{
+		"read_id": "1d3c0518-8a60-425f-967a-b59d1eea43f5",
+		"dna_len": 6304,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 0,
+		"r_en": 4240,
+		"q_st": 29,
+		"q_en": 3729,
+		"NM": 587,
+		"blen": 4247,
+		"cig": {
+			"S": 0,
+			"M": 3693,
+			"D": 547,
+			"I": 7
+		},
+		"cigacc": 0.8617847892630092
+	},
+	{
+		"read_id": "fd436dd8-f9d1-46d7-8178-a42ac4b8942d",
+		"dna_len": 4201,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 28,
+		"r_en": 4243,
+		"q_st": 20,
+		"q_en": 4166,
+		"NM": 77,
+		"blen": 4215,
+		"cig": {
+			"S": 0,
+			"M": 4146,
+			"D": 69,
+			"I": 0
+		},
+		"cigacc": 0.9817319098457888
+	},
+	{
+		"read_id": "7816198c-7eb0-490f-ab2b-31135b40441e",
+		"dna_len": 5470,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 14,
+		"r_en": 4249,
+		"q_st": 1392,
+		"q_en": 5439,
+		"NM": 202,
+		"blen": 4236,
+		"cig": {
+			"S": 0,
+			"M": 4046,
+			"D": 189,
+			"I": 1
+		},
+		"cigacc": 0.9523135033050047
+	},
+	{
+		"read_id": "2f06640d-2b41-4464-aaf4-ad7ce296b9cf",
+		"dna_len": 4089,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 14,
+		"r_en": 4249,
+		"q_st": 24,
+		"q_en": 4042,
+		"NM": 239,
+		"blen": 4239,
+		"cig": {
+			"S": 0,
+			"M": 4014,
+			"D": 221,
+			"I": 4
+		},
+		"cigacc": 0.9436187780136824
+	},
+	{
+		"read_id": "e3b23e59-2661-42db-bbc3-a8e303eaeeec",
+		"dna_len": 4103,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 32,
+		"r_en": 4240,
+		"q_st": 31,
+		"q_en": 4061,
+		"NM": 188,
+		"blen": 4209,
+		"cig": {
+			"S": 0,
+			"M": 4029,
+			"D": 179,
+			"I": 1
+		},
+		"cigacc": 0.9553338085055832
+	},
+	{
+		"read_id": "5737d866-8ce6-4bc8-991e-0a6008a35e8d",
+		"dna_len": 4127,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 22,
+		"r_en": 4240,
+		"q_st": 30,
+		"q_en": 4096,
+		"NM": 159,
+		"blen": 4218,
+		"cig": {
+			"S": 0,
+			"M": 4066,
+			"D": 152,
+			"I": 0
+		},
+		"cigacc": 0.9623044096728307
+	},
+	{
+		"read_id": "6f5b5f9a-4603-44f8-a6bb-fa9de1699aaa",
+		"dna_len": 4087,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 1,
+		"r_en": 4218,
+		"q_st": 28,
+		"q_en": 4057,
+		"NM": 195,
+		"blen": 4217,
+		"cig": {
+			"S": 0,
+			"M": 4029,
+			"D": 188,
+			"I": 0
+		},
+		"cigacc": 0.9537585961584064
+	},
+	{
+		"read_id": "fbdbd8ea-b649-450b-9e0c-a6afe10d2a0a",
+		"dna_len": 4146,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 26,
+		"r_en": 4239,
+		"q_st": 41,
+		"q_en": 4111,
+		"NM": 160,
+		"blen": 4216,
+		"cig": {
+			"S": 0,
+			"M": 4067,
+			"D": 146,
+			"I": 3
+		},
+		"cigacc": 0.9620493358633776
+	},
+	{
+		"read_id": "54680c48-3819-499a-9a05-4821709f1dac",
+		"dna_len": 4037,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 11,
+		"r_en": 4224,
+		"q_st": 29,
+		"q_en": 4002,
+		"NM": 251,
+		"blen": 4213,
+		"cig": {
+			"S": 0,
+			"M": 3973,
+			"D": 240,
+			"I": 0
+		},
+		"cigacc": 0.9404225017802041
+	},
+	{
+		"read_id": "b54c6494-4cae-4514-acaa-93932bd6921a",
+		"dna_len": 8056,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 7,
+		"r_en": 4233,
+		"q_st": 4057,
+		"q_en": 8025,
+		"NM": 275,
+		"blen": 4230,
+		"cig": {
+			"S": 0,
+			"M": 3964,
+			"D": 262,
+			"I": 4
+		},
+		"cigacc": 0.9349881796690307
+	},
+	{
+		"read_id": "823e4a0d-93c2-4d8b-877f-2f37ab4816b5",
+		"dna_len": 16032,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 6,
+		"r_en": 4455,
+		"q_st": 7740,
+		"q_en": 11913,
+		"NM": 283,
+		"blen": 4449,
+		"cig": {
+			"S": 0,
+			"M": 4173,
+			"D": 276,
+			"I": 0
+		},
+		"cigacc": 0.9363902000449539
+	},
+	{
+		"read_id": "65fef0df-003c-4288-8bed-cc86460d1942",
+		"dna_len": 3738,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 22,
+		"r_en": 4237,
+		"q_st": 18,
+		"q_en": 3699,
+		"NM": 575,
+		"blen": 4219,
+		"cig": {
+			"S": 0,
+			"M": 3677,
+			"D": 538,
+			"I": 4
+		},
+		"cigacc": 0.8637117800426641
+	},
+	{
+		"read_id": "b7db8ab4-1fba-49e0-88d6-976efd47d5c0",
+		"dna_len": 10495,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 9,
+		"r_en": 4215,
+		"q_st": 34,
+		"q_en": 4105,
+		"NM": 151,
+		"blen": 4210,
+		"cig": {
+			"S": 0,
+			"M": 4067,
+			"D": 139,
+			"I": 4
+		},
+		"cigacc": 0.9641330166270784
+	},
+	{
+		"read_id": "df043aaa-0f25-4347-a813-7b7929f69c34",
+		"dna_len": 8193,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 2,
+		"r_en": 4211,
+		"q_st": 4111,
+		"q_en": 8161,
+		"NM": 175,
+		"blen": 4211,
+		"cig": {
+			"S": 0,
+			"M": 4048,
+			"D": 161,
+			"I": 2
+		},
+		"cigacc": 0.9584421752552837
+	},
+	{
+		"read_id": "2d89fdc3-e6ed-4211-87a6-4e5034b30483",
+		"dna_len": 3952,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 26,
+		"r_en": 4249,
+		"q_st": 26,
+		"q_en": 3912,
+		"NM": 358,
+		"blen": 4224,
+		"cig": {
+			"S": 0,
+			"M": 3885,
+			"D": 338,
+			"I": 1
+		},
+		"cigacc": 0.9152462121212122
+	},
+	{
+		"read_id": "cb9b9b0a-d031-46fd-ae2d-d36e2d37bf96",
+		"dna_len": 12707,
+		"ctg": "Staphylococcus_5;size=1;",
+		"r_st": 14,
+		"r_en": 4439,
+		"q_st": 19,
+		"q_en": 4280,
+		"NM": 168,
+		"blen": 4425,
+		"cig": {
+			"S": 0,
+			"M": 4261,
+			"D": 164,
+			"I": 0
+		},
+		"cigacc": 0.9620338983050848
+	},
+	{
+		"read_id": "cb9b9b0a-d031-46fd-ae2d-d36e2d37bf96",
+		"dna_len": 12707,
+		"ctg": "Staphylococcus_5;size=1;",
+		"r_st": 6,
+		"r_en": 4429,
+		"q_st": 8053,
+		"q_en": 12286,
+		"NM": 199,
+		"blen": 4424,
+		"cig": {
+			"S": 0,
+			"M": 4232,
+			"D": 191,
+			"I": 1
+		},
+		"cigacc": 0.9550180831826401
+	},
+	{
+		"read_id": "faa6479c-3579-4137-9e91-9535c58155e0",
+		"dna_len": 4182,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 0,
+		"r_en": 4217,
+		"q_st": 30,
+		"q_en": 4144,
+		"NM": 129,
+		"blen": 4224,
+		"cig": {
+			"S": 0,
+			"M": 4107,
+			"D": 110,
+			"I": 7
+		},
+		"cigacc": 0.9694602272727273
+	},
+	{
+		"read_id": "47fae97b-78f9-4e3a-95a2-6c46bbee274d",
+		"dna_len": 5402,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 4,
+		"r_en": 4221,
+		"q_st": 39,
+		"q_en": 4143,
+		"NM": 128,
+		"blen": 4218,
+		"cig": {
+			"S": 0,
+			"M": 4103,
+			"D": 114,
+			"I": 1
+		},
+		"cigacc": 0.9696538643907064
+	},
+	{
+		"read_id": "75c8ec96-9cac-40b8-a36e-11c356bdc2a3",
+		"dna_len": 4008,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 3,
+		"r_en": 4248,
+		"q_st": 12,
+		"q_en": 3960,
+		"NM": 324,
+		"blen": 4245,
+		"cig": {
+			"S": 0,
+			"M": 3948,
+			"D": 297,
+			"I": 0
+		},
+		"cigacc": 0.9236749116607774
+	},
+	{
+		"read_id": "1b1c5d87-bf60-4c21-bb56-f8e6d4c313af",
+		"dna_len": 4132,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 3,
+		"r_en": 4224,
+		"q_st": 37,
+		"q_en": 4099,
+		"NM": 170,
+		"blen": 4221,
+		"cig": {
+			"S": 0,
+			"M": 4062,
+			"D": 159,
+			"I": 0
+		},
+		"cigacc": 0.9597251836057806
+	},
+	{
+		"read_id": "841eac18-9d23-48a5-804d-1ce378332d37",
+		"dna_len": 8405,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 5,
+		"r_en": 4221,
+		"q_st": 4220,
+		"q_en": 8377,
+		"NM": 68,
+		"blen": 4218,
+		"cig": {
+			"S": 0,
+			"M": 4155,
+			"D": 61,
+			"I": 2
+		},
+		"cigacc": 0.9838786154575628
+	},
+	{
+		"read_id": "f41b5bb3-7556-4d12-bc22-ec8eace19556",
+		"dna_len": 3934,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 13,
+		"r_en": 4239,
+		"q_st": 37,
+		"q_en": 3888,
+		"NM": 396,
+		"blen": 4230,
+		"cig": {
+			"S": 0,
+			"M": 3847,
+			"D": 379,
+			"I": 4
+		},
+		"cigacc": 0.9063829787234042
+	},
+	{
+		"read_id": "26bd1ec8-909e-4f50-ad65-71be6e879642",
+		"dna_len": 21572,
+		"ctg": "Staphylococcus_6;size=1;",
+		"r_st": 4,
+		"r_en": 4506,
+		"q_st": 34,
+		"q_en": 4424,
+		"NM": 126,
+		"blen": 4507,
+		"cig": {
+			"S": 0,
+			"M": 4385,
+			"D": 117,
+			"I": 5
+		},
+		"cigacc": 0.9720434879076991
+	},
+	{
+		"read_id": "8342a679-ad7f-4362-bbc9-ac847a0c7708",
+		"dna_len": 3949,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 35,
+		"r_en": 4234,
+		"q_st": 31,
+		"q_en": 3917,
+		"NM": 331,
+		"blen": 4202,
+		"cig": {
+			"S": 0,
+			"M": 3883,
+			"D": 316,
+			"I": 3
+		},
+		"cigacc": 0.9212279866730129
+	},
+	{
+		"read_id": "25b28afc-b437-47b3-8e58-e1be1279fa21",
+		"dna_len": 4166,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 35,
+		"r_en": 4245,
+		"q_st": 32,
+		"q_en": 4137,
+		"NM": 116,
+		"blen": 4213,
+		"cig": {
+			"S": 0,
+			"M": 4102,
+			"D": 108,
+			"I": 3
+		},
+		"cigacc": 0.9724661761215286
+	},
+	{
+		"read_id": "792754e5-171f-4585-8bae-844dc7897932",
+		"dna_len": 4097,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 30,
+		"r_en": 4249,
+		"q_st": 21,
+		"q_en": 4073,
+		"NM": 174,
+		"blen": 4219,
+		"cig": {
+			"S": 0,
+			"M": 4052,
+			"D": 167,
+			"I": 0
+		},
+		"cigacc": 0.958757999525954
+	},
+	{
+		"read_id": "4668c500-d4c1-440c-b62c-55dbfad4c3af",
+		"dna_len": 7569,
+		"ctg": "Bacillus_3;size=1;",
+		"r_st": 8,
+		"r_en": 4374,
+		"q_st": 20,
+		"q_en": 3616,
+		"NM": 812,
+		"blen": 4368,
+		"cig": {
+			"S": 0,
+			"M": 3594,
+			"D": 772,
+			"I": 2
+		},
+		"cigacc": 0.8141025641025641
+	},
+	{
+		"read_id": "9dc25a1d-b86a-4308-afba-06fb4c672568",
+		"dna_len": 12058,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 3,
+		"r_en": 4222,
+		"q_st": 7921,
+		"q_en": 12037,
+		"NM": 117,
+		"blen": 4222,
+		"cig": {
+			"S": 0,
+			"M": 4113,
+			"D": 106,
+			"I": 3
+		},
+		"cigacc": 0.9722880151586926
+	},
+	{
+		"read_id": "d85ea77b-6304-4195-8423-936c4d0c7b6e",
+		"dna_len": 8262,
+		"ctg": "Lactobacillus_3;size=1;",
+		"r_st": 36,
+		"r_en": 4297,
+		"q_st": 3995,
+		"q_en": 8238,
+		"NM": 23,
+		"blen": 4261,
+		"cig": {
+			"S": 0,
+			"M": 4243,
+			"D": 18,
+			"I": 0
+		},
+		"cigacc": 0.9946022060549167
+	},
+	{
+		"read_id": "b4fbb65a-dcb9-4b4e-b930-ea96b2d54e07",
+		"dna_len": 6930,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 17,
+		"r_en": 4249,
+		"q_st": 15,
+		"q_en": 4214,
+		"NM": 41,
+		"blen": 4233,
+		"cig": {
+			"S": 0,
+			"M": 4198,
+			"D": 34,
+			"I": 1
+		},
+		"cigacc": 0.990314197968344
+	},
+	{
+		"read_id": "3e9e6a56-e6fd-4b31-b4ff-a9ee477d94a3",
+		"dna_len": 4004,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 30,
+		"r_en": 4249,
+		"q_st": 28,
+		"q_en": 3953,
+		"NM": 315,
+		"blen": 4224,
+		"cig": {
+			"S": 0,
+			"M": 3920,
+			"D": 299,
+			"I": 5
+		},
+		"cigacc": 0.9254261363636364
+	},
+	{
+		"read_id": "74b3665e-5301-4e90-a91c-ad1964ee23e2",
+		"dna_len": 4055,
+		"ctg": "Bacillus_10;size=1;",
+		"r_st": 28,
+		"r_en": 4249,
+		"q_st": 38,
+		"q_en": 4012,
+		"NM": 252,
+		"blen": 4221,
+		"cig": {
+			"S": 0,
+			"M": 3974,
+			"D": 247,
+			"I": 0
+		},
+		"cigacc": 0.9402985074626866
+	},
+	{
+		"read_id": "c54c7a0a-0349-4771-a28a-286df5400872",
+		"dna_len": 4032,
+		"ctg": "Bacillus_1;size=1;",
+		"r_st": 60,
+		"r_en": 4244,
+		"q_st": 18,
+		"q_en": 3991,
+		"NM": 221,
+		"blen": 4186,
+		"cig": {
+			"S": 0,
+			"M": 3971,
+			"D": 213,
+			"I": 2
+		},
+		"cigacc": 0.9472049689440993
+	},
+	{
+		"read_id": "1be0cadb-190f-4f9b-9939-7784b8d1a8cc",
+		"dna_len": 6728,
+		"ctg": "Bacillus_1;size=1;",
+		"r_st": 7,
+		"r_en": 4219,
+		"q_st": 24,
+		"q_en": 3861,
+		"NM": 415,
+		"blen": 4219,
+		"cig": {
+			"S": 0,
+			"M": 3830,
+			"D": 382,
+			"I": 7
+		},
+		"cigacc": 0.901635458639488
+	},
+	{
+		"read_id": "5de32519-f151-4a0a-a504-e0f5b125bf84",
+		"dna_len": 23807,
+		"ctg": "Escherichia_2;size=1;",
+		"r_st": 30,
+		"r_en": 4391,
+		"q_st": 12,
+		"q_en": 4238,
+		"NM": 143,
+		"blen": 4361,
+		"cig": {
+			"S": 0,
+			"M": 4226,
+			"D": 135,
+			"I": 0
+		},
+		"cigacc": 0.9672093556523733
+	},
+	{
+		"read_id": "b884bfd1-2ef8-4dba-b646-729ba71a511d",
+		"dna_len": 4291,
+		"ctg": "Bacillus_1;size=1;",
+		"r_st": 3,
+		"r_en": 4240,
+		"q_st": 35,
+		"q_en": 4257,
+		"NM": 20,
+		"blen": 4237,
+		"cig": {
+			"S": 0,
+			"M": 4222,
+			"D": 15,
+			"I": 0
+		},
+		"cigacc": 0.9952796790181733
+	},
+	{
+		"read_id": "b3c05c03-5994-4755-8156-8cf13a9244da",
+		"dna_len": 4117,
+		"ctg": "Bacillus_1;size=1;",
+		"r_st": 14,
+		"r_en": 4245,
+		"q_st": 32,
+		"q_en": 4089,
+		"NM": 184,
+		"blen": 4233,
+		"cig": {
+			"S": 0,
+			"M": 4055,
+			"D": 176,
+			"I": 2
+		},
+		"cigacc": 0.9565320103945193
+	},
+	{
+		"read_id": "1dafc082-c4be-4043-882a-c337bb314fd4",
+		"dna_len": 8299,
+		"ctg": "Bacillus_1;size=1;",
+		"r_st": 20,
+		"r_en": 4217,
+		"q_st": 17,
+		"q_en": 3944,
+		"NM": 302,
+		"blen": 4202,
+		"cig": {
+			"S": 0,
+			"M": 3922,
+			"D": 275,
+			"I": 5
+		},
+		"cigacc": 0.9281294621608758
+	},
+	{
+		"read_id": "a38bb2be-a7af-47bb-b230-609775901c9e",
+		"dna_len": 7822,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 2,
+		"r_en": 4445,
+		"q_st": 3810,
+		"q_en": 7762,
+		"NM": 511,
+		"blen": 4443,
+		"cig": {
+			"S": 0,
+			"M": 3952,
+			"D": 491,
+			"I": 0
+		},
+		"cigacc": 0.8849876209768175
+	},
+	{
+		"read_id": "4a7d507f-64f2-4ce5-9cf0-fc2bcced2327",
+		"dna_len": 4053,
+		"ctg": "Bacillus_1;size=1;",
+		"r_st": 8,
+		"r_en": 4221,
+		"q_st": 12,
+		"q_en": 4016,
+		"NM": 225,
+		"blen": 4214,
+		"cig": {
+			"S": 0,
+			"M": 4003,
+			"D": 210,
+			"I": 1
+		},
+		"cigacc": 0.9466065495965829
+	},
+	{
+		"read_id": "e71ab25d-f6d6-4c92-845a-11a982ce8408",
+		"dna_len": 8355,
+		"ctg": "Bacillus_1;size=1;",
+		"r_st": 21,
+		"r_en": 4232,
+		"q_st": 47,
+		"q_en": 4016,
+		"NM": 248,
+		"blen": 4211,
+		"cig": {
+			"S": 0,
+			"M": 3969,
+			"D": 242,
+			"I": 0
+		},
+		"cigacc": 0.9411066255046308
+	},
+	{
+		"read_id": "32541ee1-0945-4a3a-807b-2ee9e573830b",
+		"dna_len": 3973,
+		"ctg": "Bacillus_1;size=1;",
+		"r_st": 29,
+		"r_en": 4221,
+		"q_st": 24,
+		"q_en": 3935,
+		"NM": 293,
+		"blen": 4192,
+		"cig": {
+			"S": 0,
+			"M": 3911,
+			"D": 281,
+			"I": 0
+		},
+		"cigacc": 0.930104961832061
+	},
+	{
+		"read_id": "b2974d93-6f9a-4b0b-bb5b-89af082ff9f9",
+		"dna_len": 4190,
+		"ctg": "Bacillus_1;size=1;",
+		"r_st": 20,
+		"r_en": 4226,
+		"q_st": 39,
+		"q_en": 4151,
+		"NM": 102,
+		"blen": 4207,
+		"cig": {
+			"S": 0,
+			"M": 4111,
+			"D": 95,
+			"I": 1
+		},
+		"cigacc": 0.9757546945566913
+	},
+	{
+		"read_id": "5d82cca5-18d8-4fea-9814-63d7f81fa4d2",
+		"dna_len": 4101,
+		"ctg": "Bacillus_1;size=1;",
+		"r_st": 3,
+		"r_en": 4182,
+		"q_st": 26,
+		"q_en": 4059,
+		"NM": 153,
+		"blen": 4179,
+		"cig": {
+			"S": 0,
+			"M": 4033,
+			"D": 146,
+			"I": 0
+		},
+		"cigacc": 0.9633883704235463
+	},
+	{
+		"read_id": "b883c1d8-f603-4ec6-83cb-3d69e299bde5",
+		"dna_len": 4178,
+		"ctg": "Bacillus_1;size=1;",
+		"r_st": 2,
+		"r_en": 4248,
+		"q_st": 16,
+		"q_en": 4149,
+		"NM": 128,
+		"blen": 4250,
+		"cig": {
+			"S": 0,
+			"M": 4129,
+			"D": 117,
+			"I": 4
+		},
+		"cigacc": 0.9698823529411764
+	},
+	{
+		"read_id": "6255cd36-0bcd-469b-9f8f-4a79ee5af704",
+		"dna_len": 4202,
+		"ctg": "Bacillus_1;size=1;",
+		"r_st": 18,
+		"r_en": 4245,
+		"q_st": 25,
+		"q_en": 4176,
+		"NM": 86,
+		"blen": 4228,
+		"cig": {
+			"S": 0,
+			"M": 4150,
+			"D": 77,
+			"I": 1
+		},
+		"cigacc": 0.9796594134342479
+	},
+	{
+		"read_id": "2aa86614-3a71-446e-9243-75c79ab52fd2",
+		"dna_len": 4138,
+		"ctg": "Bacillus_1;size=1;",
+		"r_st": 28,
+		"r_en": 4239,
+		"q_st": 23,
+		"q_en": 4097,
+		"NM": 141,
+		"blen": 4211,
+		"cig": {
+			"S": 0,
+			"M": 4074,
+			"D": 137,
+			"I": 0
+		},
+		"cigacc": 0.9665162669199715
+	},
+	{
+		"read_id": "7fae4fb3-f19d-4a4a-b54e-df50ea4657b0",
+		"dna_len": 9513,
+		"ctg": "Bacillus_1;size=1;",
+		"r_st": 4,
+		"r_en": 4239,
+		"q_st": 5341,
+		"q_en": 9478,
+		"NM": 109,
+		"blen": 4238,
+		"cig": {
+			"S": 0,
+			"M": 4134,
+			"D": 101,
+			"I": 3
+		},
+		"cigacc": 0.9742803209060877
+	},
+	{
+		"read_id": "17b14d0a-6221-4600-95d3-44fce956e150",
+		"dna_len": 4048,
+		"ctg": "Bacillus_1;size=1;",
+		"r_st": 24,
+		"r_en": 4227,
+		"q_st": 49,
+		"q_en": 4032,
+		"NM": 236,
+		"blen": 4204,
+		"cig": {
+			"S": 0,
+			"M": 3982,
+			"D": 221,
+			"I": 1
+		},
+		"cigacc": 0.9438629876308278
+	},
+	{
+		"read_id": "0514a8a9-36c3-4151-b63f-5e28ae500604",
+		"dna_len": 4141,
+		"ctg": "Bacillus_1;size=1;",
+		"r_st": 3,
+		"r_en": 4226,
+		"q_st": 20,
+		"q_en": 4111,
+		"NM": 139,
+		"blen": 4224,
+		"cig": {
+			"S": 0,
+			"M": 4090,
+			"D": 133,
+			"I": 1
+		},
+		"cigacc": 0.967092803030303
+	},
+	{
+		"read_id": "25acfd2e-91e6-4da4-ad3c-f6da41279748",
+		"dna_len": 3965,
+		"ctg": "Bacillus_1;size=1;",
+		"r_st": 3,
+		"r_en": 4242,
+		"q_st": 47,
+		"q_en": 3939,
+		"NM": 374,
+		"blen": 4242,
+		"cig": {
+			"S": 0,
+			"M": 3889,
+			"D": 350,
+			"I": 3
+		},
+		"cigacc": 0.9118340405469119
+	},
+	{
+		"read_id": "23b70f68-c51d-4b8c-a35a-73c8e84dfbce",
+		"dna_len": 16084,
+		"ctg": "Bacillus_1;size=1;",
+		"r_st": 33,
+		"r_en": 4237,
+		"q_st": 4341,
+		"q_en": 8251,
+		"NM": 318,
+		"blen": 4208,
+		"cig": {
+			"S": 0,
+			"M": 3906,
+			"D": 298,
+			"I": 4
+		},
+		"cigacc": 0.9244296577946768
+	},
+	{
+		"read_id": "a1ec048f-f88d-43d7-b215-a65c4be2c210",
+		"dna_len": 4103,
+		"ctg": "Bacillus_1;size=1;",
+		"r_st": 2,
+		"r_en": 4225,
+		"q_st": 10,
+		"q_en": 4076,
+		"NM": 168,
+		"blen": 4223,
+		"cig": {
+			"S": 0,
+			"M": 4066,
+			"D": 157,
+			"I": 0
+		},
+		"cigacc": 0.9602178546057305
+	},
+	{
+		"read_id": "49e5abe9-35b4-45af-87e0-1bc4dbed1424",
+		"dna_len": 5567,
+		"ctg": "Bacillus_1;size=1;",
+		"r_st": 12,
+		"r_en": 4221,
+		"q_st": 29,
+		"q_en": 4106,
+		"NM": 139,
+		"blen": 4210,
+		"cig": {
+			"S": 0,
+			"M": 4076,
+			"D": 133,
+			"I": 1
+		},
+		"cigacc": 0.9669833729216152
+	},
+	{
+		"read_id": "56d04668-2e93-4838-a1f4-8b863844df16",
+		"dna_len": 4084,
+		"ctg": "Bacillus_1;size=1;",
+		"r_st": 16,
+		"r_en": 4220,
+		"q_st": 23,
+		"q_en": 4058,
+		"NM": 186,
+		"blen": 4204,
+		"cig": {
+			"S": 0,
+			"M": 4035,
+			"D": 169,
+			"I": 0
+		},
+		"cigacc": 0.955756422454805
+	},
+	{
+		"read_id": "7c661c4e-f65d-4bc2-8072-ac1219671dcf",
+		"dna_len": 3582,
+		"ctg": "Bacillus_1;size=1;",
+		"r_st": 23,
+		"r_en": 4240,
+		"q_st": 27,
+		"q_en": 3553,
+		"NM": 752,
+		"blen": 4223,
+		"cig": {
+			"S": 0,
+			"M": 3520,
+			"D": 697,
+			"I": 6
+		},
+		"cigacc": 0.8219275396637462
+	},
+	{
+		"read_id": "4bb94817-321e-4095-b80c-13c75192eca1",
+		"dna_len": 4214,
+		"ctg": "Bacillus_1;size=1;",
+		"r_st": 4,
+		"r_en": 4246,
+		"q_st": 22,
+		"q_en": 4173,
+		"NM": 99,
+		"blen": 4244,
+		"cig": {
+			"S": 0,
+			"M": 4149,
+			"D": 93,
+			"I": 2
+		},
+		"cigacc": 0.9766729500471254
+	},
+	{
+		"read_id": "2ff43789-e2ec-4370-82bf-a5c7eff99c64",
+		"dna_len": 17251,
+		"ctg": "Lactobacillus_3;size=1;",
+		"r_st": 7,
+		"r_en": 4260,
+		"q_st": 13072,
+		"q_en": 17179,
+		"NM": 153,
+		"blen": 4255,
+		"cig": {
+			"S": 0,
+			"M": 4105,
+			"D": 148,
+			"I": 2
+		},
+		"cigacc": 0.964042303172738
+	},
+	{
+		"read_id": "ee9bc698-e7a7-4684-a4ce-35dbd065ea01",
+		"dna_len": 4164,
+		"ctg": "Bacillus_1;size=1;",
+		"r_st": 3,
+		"r_en": 4245,
+		"q_st": 11,
+		"q_en": 4130,
+		"NM": 140,
+		"blen": 4245,
+		"cig": {
+			"S": 0,
+			"M": 4116,
+			"D": 126,
+			"I": 3
+		},
+		"cigacc": 0.967020023557126
+	},
+	{
+		"read_id": "943fa916-8ea9-4949-bb14-7d737e5c4c95",
+		"dna_len": 19344,
+		"ctg": "Staphylococcus_4;size=1;",
+		"r_st": 77,
+		"r_en": 4409,
+		"q_st": 15635,
+		"q_en": 19307,
+		"NM": 693,
+		"blen": 4332,
+		"cig": {
+			"S": 0,
+			"M": 3672,
+			"D": 660,
+			"I": 0
+		},
+		"cigacc": 0.840027700831025
+	},
+	{
+		"read_id": "7712434c-31b8-479f-9fa5-2ef53e48eb1b",
+		"dna_len": 7128,
+		"ctg": "Lactobacillus_4;size=1;",
+		"r_st": 28,
+		"r_en": 4282,
+		"q_st": 27,
+		"q_en": 4177,
+		"NM": 124,
+		"blen": 4262,
+		"cig": {
+			"S": 0,
+			"M": 4142,
+			"D": 112,
+			"I": 8
+		},
+		"cigacc": 0.970905678085406
+	},
+	{
+		"read_id": "79892cf2-bb1a-4f7d-a96c-219c7238c24b",
+		"dna_len": 4224,
+		"ctg": "Bacillus_1;size=1;",
+		"r_st": 28,
+		"r_en": 4240,
+		"q_st": 39,
+		"q_en": 4166,
+		"NM": 89,
+		"blen": 4212,
+		"cig": {
+			"S": 0,
+			"M": 4127,
+			"D": 85,
+			"I": 0
+		},
+		"cigacc": 0.9788698955365622
+	},
+	{
+		"read_id": "24f38344-621b-455e-846f-b3e739e6020c",
+		"dna_len": 4215,
+		"ctg": "Bacillus_1;size=1;",
+		"r_st": 28,
+		"r_en": 4246,
+		"q_st": 16,
+		"q_en": 4174,
+		"NM": 70,
+		"blen": 4219,
+		"cig": {
+			"S": 0,
+			"M": 4157,
+			"D": 61,
+			"I": 1
+		},
+		"cigacc": 0.9834083906138895
+	},
+	{
+		"read_id": "1421799d-254a-4cbd-a40b-ff7d1d171f6b",
+		"dna_len": 5046,
+		"ctg": "Bacillus_1;size=1;",
+		"r_st": 28,
+		"r_en": 4242,
+		"q_st": 30,
+		"q_en": 4067,
+		"NM": 190,
+		"blen": 4214,
+		"cig": {
+			"S": 0,
+			"M": 4037,
+			"D": 177,
+			"I": 0
+		},
+		"cigacc": 0.9549121974371144
+	},
+	{
+		"read_id": "eff03899-da24-4857-aebe-5cc5265fa116",
+		"dna_len": 5680,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 9,
+		"r_en": 4433,
+		"q_st": 35,
+		"q_en": 3409,
+		"NM": 1117,
+		"blen": 4428,
+		"cig": {
+			"S": 0,
+			"M": 3370,
+			"D": 1054,
+			"I": 4
+		},
+		"cigacc": 0.7477416440831075
+	},
+	{
+		"read_id": "64cf9a02-5d16-4573-8474-aeec33fc441b",
+		"dna_len": 8033,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 14,
+		"r_en": 4286,
+		"q_st": 4101,
+		"q_en": 7985,
+		"NM": 399,
+		"blen": 4272,
+		"cig": {
+			"S": 0,
+			"M": 3884,
+			"D": 388,
+			"I": 0
+		},
+		"cigacc": 0.9066011235955056
+	},
+	{
+		"read_id": "cd9d3998-175c-4ab0-8960-84a9789fa88c",
+		"dna_len": 4247,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 30,
+		"r_en": 4419,
+		"q_st": 35,
+		"q_en": 4180,
+		"NM": 267,
+		"blen": 4391,
+		"cig": {
+			"S": 0,
+			"M": 4143,
+			"D": 246,
+			"I": 2
+		},
+		"cigacc": 0.9391938055112731
+	},
+	{
+		"read_id": "1d2fb543-6e58-4865-81fc-8c7e037eddc7",
+		"dna_len": 4347,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 30,
+		"r_en": 4473,
+		"q_st": 34,
+		"q_en": 4316,
+		"NM": 176,
+		"blen": 4445,
+		"cig": {
+			"S": 0,
+			"M": 4280,
+			"D": 163,
+			"I": 2
+		},
+		"cigacc": 0.9604049493813274
+	},
+	{
+		"read_id": "9ddf4d95-593e-4805-85f3-09113e73c2d0",
+		"dna_len": 4301,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 23,
+		"r_en": 4490,
+		"q_st": 44,
+		"q_en": 4274,
+		"NM": 266,
+		"blen": 4471,
+		"cig": {
+			"S": 0,
+			"M": 4226,
+			"D": 241,
+			"I": 4
+		},
+		"cigacc": 0.9405054797584433
+	},
+	{
+		"read_id": "a976bc83-f2d3-418f-9c1a-08d7b07c01f4",
+		"dna_len": 8320,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 3,
+		"r_en": 4464,
+		"q_st": 46,
+		"q_en": 4342,
+		"NM": 183,
+		"blen": 4464,
+		"cig": {
+			"S": 0,
+			"M": 4293,
+			"D": 168,
+			"I": 3
+		},
+		"cigacc": 0.959005376344086
+	},
+	{
+		"read_id": "9fcf512d-748d-43af-99dd-3c3f3296ba14",
+		"dna_len": 4200,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 18,
+		"r_en": 4489,
+		"q_st": 31,
+		"q_en": 4175,
+		"NM": 352,
+		"blen": 4472,
+		"cig": {
+			"S": 0,
+			"M": 4143,
+			"D": 328,
+			"I": 1
+		},
+		"cigacc": 0.9212880143112702
+	},
+	{
+		"read_id": "ea418c21-47f6-46b5-9ded-4f07764b1cd0",
+		"dna_len": 8495,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 3,
+		"r_en": 4419,
+		"q_st": 23,
+		"q_en": 4245,
+		"NM": 205,
+		"blen": 4418,
+		"cig": {
+			"S": 0,
+			"M": 4220,
+			"D": 196,
+			"I": 2
+		},
+		"cigacc": 0.9535989135355365
+	},
+	{
+		"read_id": "6a3b9d52-fa1c-4d8f-9381-2aca47291dc0",
+		"dna_len": 12634,
+		"ctg": "Staphylococcus_1;size=1;",
+		"r_st": 17,
+		"r_en": 4496,
+		"q_st": 4113,
+		"q_en": 8458,
+		"NM": 142,
+		"blen": 4480,
+		"cig": {
+			"S": 0,
+			"M": 4344,
+			"D": 135,
+			"I": 1
+		},
+		"cigacc": 0.9683035714285715
+	},
+	{
+		"read_id": "12659775-e457-489b-b29c-ab6e1638561f",
+		"dna_len": 3713,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 8,
+		"r_en": 3996,
+		"q_st": 20,
+		"q_en": 3471,
+		"NM": 582,
+		"blen": 3992,
+		"cig": {
+			"S": 0,
+			"M": 3447,
+			"D": 541,
+			"I": 4
+		},
+		"cigacc": 0.8542084168336673
+	},
+	{
+		"read_id": "e3020eb6-d41e-4c31-b2ad-df22dc013c89",
+		"dna_len": 12083,
+		"ctg": "Staphylococcus_2;size=1;",
+		"r_st": 0,
+		"r_en": 4526,
+		"q_st": 28,
+		"q_en": 4378,
+		"NM": 187,
+		"blen": 4528,
+		"cig": {
+			"S": 0,
+			"M": 4348,
+			"D": 178,
+			"I": 2
+		},
+		"cigacc": 0.9587014134275619
+	},
+	{
+		"read_id": "11a7cd37-5780-4304-a2f6-7ab9d486716c",
+		"dna_len": 4038,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 3,
+		"r_en": 4463,
+		"q_st": 36,
+		"q_en": 4006,
+		"NM": 513,
+		"blen": 4463,
+		"cig": {
+			"S": 0,
+			"M": 3967,
+			"D": 493,
+			"I": 3
+		},
+		"cigacc": 0.8850548958099933
+	},
+	{
+		"read_id": "1e6aa86f-1b10-40dd-8cb4-b85a21d70956",
+		"dna_len": 4291,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 23,
+		"r_en": 4490,
+		"q_st": 29,
+		"q_en": 4264,
+		"NM": 256,
+		"blen": 4469,
+		"cig": {
+			"S": 0,
+			"M": 4233,
+			"D": 234,
+			"I": 2
+		},
+		"cigacc": 0.9427164913850974
+	},
+	{
+		"read_id": "1aae1c9a-939b-4026-8016-f82e4cc89383",
+		"dna_len": 4087,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 4,
+		"r_en": 4469,
+		"q_st": 19,
+		"q_en": 4063,
+		"NM": 448,
+		"blen": 4465,
+		"cig": {
+			"S": 0,
+			"M": 4044,
+			"D": 421,
+			"I": 0
+		},
+		"cigacc": 0.8996640537513998
+	},
+	{
+		"read_id": "39dda7de-ad97-4fd8-834e-a80cd0d7837a",
+		"dna_len": 8633,
+		"ctg": "Lactobacillus_3;size=1;",
+		"r_st": 3,
+		"r_en": 4273,
+		"q_st": 31,
+		"q_en": 4250,
+		"NM": 57,
+		"blen": 4271,
+		"cig": {
+			"S": 0,
+			"M": 4218,
+			"D": 52,
+			"I": 1
+		},
+		"cigacc": 0.9866541793490986
+	},
+	{
+		"read_id": "e450474c-1cd7-4067-8c49-806db70157cf",
+		"dna_len": 7802,
+		"ctg": "Bacillus_8;size=1;",
+		"r_st": 3,
+		"r_en": 4218,
+		"q_st": 3891,
+		"q_en": 7754,
+		"NM": 374,
+		"blen": 4218,
+		"cig": {
+			"S": 0,
+			"M": 3860,
+			"D": 355,
+			"I": 3
+		},
+		"cigacc": 0.9113323850165955
+	},
+	{
+		"read_id": "b36dbb87-0799-4eb2-9339-9dde845bf225",
+		"dna_len": 3859,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 3,
+		"r_en": 4457,
+		"q_st": 23,
+		"q_en": 3823,
+		"NM": 681,
+		"blen": 4454,
+		"cig": {
+			"S": 0,
+			"M": 3800,
+			"D": 654,
+			"I": 0
+		},
+		"cigacc": 0.847103726986978
+	},
+	{
+		"read_id": "859e1bfc-efa1-4e21-a837-fb164ea200e5",
+		"dna_len": 4400,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 29,
+		"r_en": 4490,
+		"q_st": 29,
+		"q_en": 4376,
+		"NM": 126,
+		"blen": 4464,
+		"cig": {
+			"S": 0,
+			"M": 4344,
+			"D": 117,
+			"I": 3
+		},
+		"cigacc": 0.9717741935483871
+	},
+	{
+		"read_id": "c91dbad9-eeb1-4cdb-acde-bcf3443fff60",
+		"dna_len": 12287,
+		"ctg": "Bacillus_8;size=1;",
+		"r_st": 35,
+		"r_en": 4216,
+		"q_st": 4299,
+		"q_en": 7977,
+		"NM": 528,
+		"blen": 4181,
+		"cig": {
+			"S": 0,
+			"M": 3678,
+			"D": 503,
+			"I": 0
+		},
+		"cigacc": 0.8737144223869888
+	},
+	{
+		"read_id": "d96228b1-2747-4aa4-a591-3121a5bfae0a",
+		"dna_len": 3641,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 33,
+		"r_en": 4474,
+		"q_st": 40,
+		"q_en": 3613,
+		"NM": 913,
+		"blen": 4445,
+		"cig": {
+			"S": 0,
+			"M": 3569,
+			"D": 872,
+			"I": 4
+		},
+		"cigacc": 0.7946006749156356
+	},
+	{
+		"read_id": "cdd7bece-a1ad-45c7-a38b-7c9ce75d5ed1",
+		"dna_len": 12670,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 3,
+		"r_en": 4446,
+		"q_st": 27,
+		"q_en": 4305,
+		"NM": 180,
+		"blen": 4447,
+		"cig": {
+			"S": 0,
+			"M": 4274,
+			"D": 169,
+			"I": 4
+		},
+		"cigacc": 0.9595232741173825
+	},
+	{
+		"read_id": "c1e0614a-ebb9-4281-b7df-f41f05e09166",
+		"dna_len": 4009,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 42,
+		"r_en": 4487,
+		"q_st": 30,
+		"q_en": 3956,
+		"NM": 568,
+		"blen": 4453,
+		"cig": {
+			"S": 0,
+			"M": 3918,
+			"D": 527,
+			"I": 8
+		},
+		"cigacc": 0.8724455423310128
+	},
+	{
+		"read_id": "51d0ad04-fbf9-451a-878b-811125eb24bd",
+		"dna_len": 4268,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 3,
+		"r_en": 4465,
+		"q_st": 40,
+		"q_en": 4209,
+		"NM": 320,
+		"blen": 4469,
+		"cig": {
+			"S": 0,
+			"M": 4162,
+			"D": 300,
+			"I": 7
+		},
+		"cigacc": 0.9283956142313716
+	},
+	{
+		"read_id": "e5a0e67c-68d4-4462-9faf-5470b3456c34",
+		"dna_len": 3676,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 184,
+		"r_en": 4466,
+		"q_st": 87,
+		"q_en": 3645,
+		"NM": 762,
+		"blen": 4286,
+		"cig": {
+			"S": 0,
+			"M": 3554,
+			"D": 728,
+			"I": 4
+		},
+		"cigacc": 0.8222118525431638
+	},
+	{
+		"read_id": "53cead20-d494-4f79-a7ad-0af717d20496",
+		"dna_len": 10729,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 4,
+		"r_en": 4463,
+		"q_st": 23,
+		"q_en": 3731,
+		"NM": 797,
+		"blen": 4465,
+		"cig": {
+			"S": 0,
+			"M": 3702,
+			"D": 757,
+			"I": 6
+		},
+		"cigacc": 0.8215005599104144
+	},
+	{
+		"read_id": "0eeebc7a-9754-408d-9884-136de4d219d0",
+		"dna_len": 4233,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 57,
+		"r_en": 4487,
+		"q_st": 20,
+		"q_en": 4199,
+		"NM": 278,
+		"blen": 4434,
+		"cig": {
+			"S": 0,
+			"M": 4175,
+			"D": 255,
+			"I": 4
+		},
+		"cigacc": 0.9373026612539468
+	},
+	{
+		"read_id": "50c36694-f8d4-4c02-880f-b63660b4bf49",
+		"dna_len": 7938,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 38,
+		"r_en": 4472,
+		"q_st": 25,
+		"q_en": 4182,
+		"NM": 290,
+		"blen": 4434,
+		"cig": {
+			"S": 0,
+			"M": 4157,
+			"D": 277,
+			"I": 0
+		},
+		"cigacc": 0.934596301308074
+	},
+	{
+		"read_id": "c25c3ca2-7eac-4eb9-a0eb-b03bb5eeaf82",
+		"dna_len": 4305,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 21,
+		"r_en": 4477,
+		"q_st": 49,
+		"q_en": 4272,
+		"NM": 248,
+		"blen": 4459,
+		"cig": {
+			"S": 0,
+			"M": 4220,
+			"D": 236,
+			"I": 3
+		},
+		"cigacc": 0.9443821484637811
+	},
+	{
+		"read_id": "3068733d-d97d-4648-af76-4b02d217eda1",
+		"dna_len": 4215,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 30,
+		"r_en": 4479,
+		"q_st": 37,
+		"q_en": 4191,
+		"NM": 311,
+		"blen": 4449,
+		"cig": {
+			"S": 0,
+			"M": 4154,
+			"D": 295,
+			"I": 0
+		},
+		"cigacc": 0.9300966509327939
+	},
+	{
+		"read_id": "6bfd9602-b481-49f1-9abf-2b2cd942897a",
+		"dna_len": 4045,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 8,
+		"r_en": 4450,
+		"q_st": 20,
+		"q_en": 4015,
+		"NM": 485,
+		"blen": 4448,
+		"cig": {
+			"S": 0,
+			"M": 3989,
+			"D": 453,
+			"I": 6
+		},
+		"cigacc": 0.8909622302158273
+	},
+	{
+		"read_id": "40a1b75f-434e-40e5-a7bf-c1969db6503e",
+		"dna_len": 3771,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 36,
+		"r_en": 4473,
+		"q_st": 39,
+		"q_en": 3732,
+		"NM": 783,
+		"blen": 4439,
+		"cig": {
+			"S": 0,
+			"M": 3691,
+			"D": 746,
+			"I": 2
+		},
+		"cigacc": 0.823608920928137
+	},
+	{
+		"read_id": "f999942a-8113-40fe-b54f-1d804cf91af4",
+		"dna_len": 4343,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 34,
+		"r_en": 4490,
+		"q_st": 17,
+		"q_en": 4307,
+		"NM": 195,
+		"blen": 4460,
+		"cig": {
+			"S": 0,
+			"M": 4286,
+			"D": 170,
+			"I": 4
+		},
+		"cigacc": 0.9562780269058296
+	},
+	{
+		"read_id": "05e1b8f1-a261-4aeb-b58f-adacef0a5146",
+		"dna_len": 4250,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 39,
+		"r_en": 4490,
+		"q_st": 37,
+		"q_en": 4217,
+		"NM": 281,
+		"blen": 4451,
+		"cig": {
+			"S": 0,
+			"M": 4180,
+			"D": 271,
+			"I": 0
+		},
+		"cigacc": 0.9368681195237025
+	},
+	{
+		"read_id": "3e3d4d30-8346-40fc-8026-bd37f13b250e",
+		"dna_len": 4316,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 5,
+		"r_en": 4467,
+		"q_st": 35,
+		"q_en": 4282,
+		"NM": 227,
+		"blen": 4463,
+		"cig": {
+			"S": 0,
+			"M": 4246,
+			"D": 216,
+			"I": 1
+		},
+		"cigacc": 0.9491373515572485
+	},
+	{
+		"read_id": "cfadf7dc-e135-4d03-9809-2df36ef5877e",
+		"dna_len": 4273,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 30,
+		"r_en": 4490,
+		"q_st": 22,
+		"q_en": 4235,
+		"NM": 267,
+		"blen": 4460,
+		"cig": {
+			"S": 0,
+			"M": 4213,
+			"D": 247,
+			"I": 0
+		},
+		"cigacc": 0.940134529147982
+	},
+	{
+		"read_id": "cdfc1115-6ad7-4a12-931a-7ffd83442175",
+		"dna_len": 4265,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 3,
+		"r_en": 4420,
+		"q_st": 14,
+		"q_en": 4211,
+		"NM": 239,
+		"blen": 4422,
+		"cig": {
+			"S": 0,
+			"M": 4192,
+			"D": 225,
+			"I": 5
+		},
+		"cigacc": 0.9459520578923564
+	},
+	{
+		"read_id": "12022872-0b83-43ed-aad9-7d4c991492f1",
+		"dna_len": 4131,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 3,
+		"r_en": 4467,
+		"q_st": 49,
+		"q_en": 4094,
+		"NM": 461,
+		"blen": 4473,
+		"cig": {
+			"S": 0,
+			"M": 4036,
+			"D": 428,
+			"I": 9
+		},
+		"cigacc": 0.8969371786273195
+	},
+	{
+		"read_id": "a942b291-df4f-454a-823e-52c96e814022",
+		"dna_len": 3651,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 86,
+		"r_en": 4451,
+		"q_st": 57,
+		"q_en": 3599,
+		"NM": 864,
+		"blen": 4369,
+		"cig": {
+			"S": 0,
+			"M": 3538,
+			"D": 827,
+			"I": 4
+		},
+		"cigacc": 0.8022430762188144
+	},
+	{
+		"read_id": "19b7e2ad-901c-4f4a-a1d5-fc5915f28dfe",
+		"dna_len": 12440,
+		"ctg": "Salmonella_1;size=1;",
+		"r_st": 32,
+		"r_en": 4383,
+		"q_st": 28,
+		"q_en": 3932,
+		"NM": 476,
+		"blen": 4352,
+		"cig": {
+			"S": 0,
+			"M": 3903,
+			"D": 448,
+			"I": 1
+		},
+		"cigacc": 0.890625
+	},
+	{
+		"read_id": "17811499-a34f-4d9e-a55c-9082133a7427",
+		"dna_len": 4246,
+		"ctg": "Salmonella_1;size=1;",
+		"r_st": 29,
+		"r_en": 4399,
+		"q_st": 35,
+		"q_en": 4221,
+		"NM": 196,
+		"blen": 4372,
+		"cig": {
+			"S": 0,
+			"M": 4184,
+			"D": 186,
+			"I": 2
+		},
+		"cigacc": 0.9551692589204026
+	},
+	{
+		"read_id": "18cdb5ce-cca1-48f7-95c7-b8a289fd2a92",
+		"dna_len": 4186,
+		"ctg": "Salmonella_1;size=1;",
+		"r_st": 18,
+		"r_en": 4392,
+		"q_st": 49,
+		"q_en": 4128,
+		"NM": 310,
+		"blen": 4376,
+		"cig": {
+			"S": 0,
+			"M": 4077,
+			"D": 297,
+			"I": 2
+		},
+		"cigacc": 0.9291590493601463
+	},
+	{
+		"read_id": "81e0bd6c-1dc5-46f6-bf1d-a997d32b5b9d",
+		"dna_len": 8493,
+		"ctg": "Salmonella_1;size=1;",
+		"r_st": 27,
+		"r_en": 4242,
+		"q_st": 4520,
+		"q_en": 8473,
+		"NM": 280,
+		"blen": 4217,
+		"cig": {
+			"S": 0,
+			"M": 3951,
+			"D": 264,
+			"I": 2
+		},
+		"cigacc": 0.933602086791558
+	},
+	{
+		"read_id": "e6e21d34-9ea6-4bba-b768-361e2d778d04",
+		"dna_len": 4082,
+		"ctg": "Salmonella_1;size=1;",
+		"r_st": 30,
+		"r_en": 4399,
+		"q_st": 16,
+		"q_en": 4064,
+		"NM": 343,
+		"blen": 4370,
+		"cig": {
+			"S": 0,
+			"M": 4047,
+			"D": 322,
+			"I": 1
+		},
+		"cigacc": 0.9215102974828375
+	},
+	{
+		"read_id": "d8f29360-7ab7-48c8-9fc3-45094e7f73bd",
+		"dna_len": 4042,
+		"ctg": "Salmonella_1;size=1;",
+		"r_st": 10,
+		"r_en": 4374,
+		"q_st": 26,
+		"q_en": 3998,
+		"NM": 446,
+		"blen": 4382,
+		"cig": {
+			"S": 0,
+			"M": 3954,
+			"D": 410,
+			"I": 18
+		},
+		"cigacc": 0.8982199908717481
+	},
+	{
+		"read_id": "7ce46d0d-23f5-4da0-a21c-f8da8fed0c8a",
+		"dna_len": 4123,
+		"ctg": "Salmonella_1;size=1;",
+		"r_st": 81,
+		"r_en": 4393,
+		"q_st": 33,
+		"q_en": 4074,
+		"NM": 293,
+		"blen": 4312,
+		"cig": {
+			"S": 0,
+			"M": 4041,
+			"D": 271,
+			"I": 0
+		},
+		"cigacc": 0.9320500927643784
+	},
+	{
+		"read_id": "6abd667e-dbae-4c9a-939c-b7bde0914eb1",
+		"dna_len": 4095,
+		"ctg": "Salmonella_1;size=1;",
+		"r_st": 32,
+		"r_en": 4385,
+		"q_st": 35,
+		"q_en": 4056,
+		"NM": 368,
+		"blen": 4363,
+		"cig": {
+			"S": 0,
+			"M": 4011,
+			"D": 342,
+			"I": 10
+		},
+		"cigacc": 0.9156543662617465
+	},
+	{
+		"read_id": "e1001301-1d5e-436e-90c5-07eebed7e161",
+		"dna_len": 4113,
+		"ctg": "Salmonella_1;size=1;",
+		"r_st": 3,
+		"r_en": 4377,
+		"q_st": 39,
+		"q_en": 4071,
+		"NM": 377,
+		"blen": 4379,
+		"cig": {
+			"S": 0,
+			"M": 4027,
+			"D": 347,
+			"I": 5
+		},
+		"cigacc": 0.9139072847682119
+	},
+	{
+		"read_id": "6e55273f-5902-4936-9880-9fd84291bb34",
+		"dna_len": 3787,
+		"ctg": "Salmonella_1;size=1;",
+		"r_st": 2,
+		"r_en": 4376,
+		"q_st": 23,
+		"q_en": 3755,
+		"NM": 694,
+		"blen": 4383,
+		"cig": {
+			"S": 0,
+			"M": 3723,
+			"D": 651,
+			"I": 9
+		},
+		"cigacc": 0.8416609628108601
+	},
+	{
+		"read_id": "1825790d-4439-49ca-b988-b34bcb09b7e7",
+		"dna_len": 3843,
+		"ctg": "Salmonella_1;size=1;",
+		"r_st": 1,
+		"r_en": 4375,
+		"q_st": 26,
+		"q_en": 3808,
+		"NM": 624,
+		"blen": 4375,
+		"cig": {
+			"S": 0,
+			"M": 3781,
+			"D": 593,
+			"I": 1
+		},
+		"cigacc": 0.8573714285714286
+	},
+	{
+		"read_id": "2bd86cb3-344a-4aa9-98d9-4b37ccc2d2d3",
+		"dna_len": 4017,
+		"ctg": "Salmonella_1;size=1;",
+		"r_st": 38,
+		"r_en": 4388,
+		"q_st": 43,
+		"q_en": 3986,
+		"NM": 428,
+		"blen": 4353,
+		"cig": {
+			"S": 0,
+			"M": 3940,
+			"D": 410,
+			"I": 3
+		},
+		"cigacc": 0.9016770043648059
+	},
+	{
+		"read_id": "84546c79-8538-44c4-bfae-f79a756ee509",
+		"dna_len": 8756,
+		"ctg": "Salmonella_1;size=1;",
+		"r_st": 91,
+		"r_en": 4389,
+		"q_st": 36,
+		"q_en": 3932,
+		"NM": 434,
+		"blen": 4302,
+		"cig": {
+			"S": 0,
+			"M": 3892,
+			"D": 406,
+			"I": 4
+		},
+		"cigacc": 0.8991166899116689
+	},
+	{
+		"read_id": "3b691e26-ab78-4562-84fd-55e7bb550eca",
+		"dna_len": 7855,
+		"ctg": "Salmonella_1;size=1;",
+		"r_st": 8,
+		"r_en": 4372,
+		"q_st": 3891,
+		"q_en": 7839,
+		"NM": 442,
+		"blen": 4364,
+		"cig": {
+			"S": 0,
+			"M": 3948,
+			"D": 416,
+			"I": 0
+		},
+		"cigacc": 0.8987167736021998
+	},
+	{
+		"read_id": "0fd7bd4c-c26a-47b7-8113-71f22a19cd54",
+		"dna_len": 4272,
+		"ctg": "Salmonella_1;size=1;",
+		"r_st": 18,
+		"r_en": 4395,
+		"q_st": 23,
+		"q_en": 4236,
+		"NM": 180,
+		"blen": 4378,
+		"cig": {
+			"S": 0,
+			"M": 4212,
+			"D": 165,
+			"I": 1
+		},
+		"cigacc": 0.9588853357697579
+	},
+	{
+		"read_id": "1a64231b-96de-4e21-b491-6cf087b89c01",
+		"dna_len": 4094,
+		"ctg": "Salmonella_1;size=1;",
+		"r_st": 36,
+		"r_en": 4396,
+		"q_st": 39,
+		"q_en": 4061,
+		"NM": 359,
+		"blen": 4363,
+		"cig": {
+			"S": 0,
+			"M": 4019,
+			"D": 341,
+			"I": 3
+		},
+		"cigacc": 0.9177171670868668
+	},
+	{
+		"read_id": "0d3af573-e815-4ab5-8bff-f9a639cb8f0a",
+		"dna_len": 8753,
+		"ctg": "Salmonella_1;size=1;",
+		"r_st": 11,
+		"r_en": 4376,
+		"q_st": 4526,
+		"q_en": 8701,
+		"NM": 209,
+		"blen": 4369,
+		"cig": {
+			"S": 0,
+			"M": 4171,
+			"D": 194,
+			"I": 4
+		},
+		"cigacc": 0.9521629663538567
+	},
+	{
+		"read_id": "8fa72930-ea53-47ef-a1a1-e547f44edc71",
+		"dna_len": 11834,
+		"ctg": "Lactobacillus_5;size=1;",
+		"r_st": 25,
+		"r_en": 4478,
+		"q_st": 58,
+		"q_en": 4336,
+		"NM": 201,
+		"blen": 4460,
+		"cig": {
+			"S": 0,
+			"M": 4271,
+			"D": 182,
+			"I": 7
+		},
+		"cigacc": 0.954932735426009
+	},
+	{
+		"read_id": "36157c00-d422-4553-bb84-db919ce7ad4f",
+		"dna_len": 8516,
+		"ctg": "Listeria_3;size=1;",
+		"r_st": 82,
+		"r_en": 4576,
+		"q_st": 4191,
+		"q_en": 8478,
+		"NM": 233,
+		"blen": 4498,
+		"cig": {
+			"S": 0,
+			"M": 4283,
+			"D": 211,
+			"I": 4
+		},
+		"cigacc": 0.9481991996442863
+	},
+	{
+		"read_id": "e540df82-29fb-44de-a6a8-905a64c70af7",
+		"dna_len": 3997,
+		"ctg": "Salmonella_1;size=1;",
+		"r_st": 19,
+		"r_en": 4395,
+		"q_st": 30,
+		"q_en": 3981,
+		"NM": 452,
+		"blen": 4377,
+		"cig": {
+			"S": 0,
+			"M": 3950,
+			"D": 426,
+			"I": 1
+		},
+		"cigacc": 0.8967329220927576
+	},
+	{
+		"read_id": "53c413b9-38ef-4b42-906f-bec32f704cc3",
+		"dna_len": 4175,
+		"ctg": "Salmonella_1;size=1;",
+		"r_st": 3,
+		"r_en": 4362,
+		"q_st": 25,
+		"q_en": 4139,
+		"NM": 259,
+		"blen": 4361,
+		"cig": {
+			"S": 0,
+			"M": 4112,
+			"D": 247,
+			"I": 2
+		},
+		"cigacc": 0.9406099518459069
+	},
+	{
+		"read_id": "b81b4e75-5418-459b-bd4e-4140a2bc2a22",
+		"dna_len": 7546,
+		"ctg": "Lactobacillus_3;size=1;",
+		"r_st": 18,
+		"r_en": 4293,
+		"q_st": 24,
+		"q_en": 4013,
+		"NM": 306,
+		"blen": 4280,
+		"cig": {
+			"S": 0,
+			"M": 3984,
+			"D": 291,
+			"I": 5
+		},
+		"cigacc": 0.9285046728971963
+	},
+	{
+		"read_id": "2357722c-94f9-4a3c-8f02-9faa54ffb675",
+		"dna_len": 3533,
+		"ctg": "Salmonella_1;size=1;",
+		"r_st": 4,
+		"r_en": 4378,
+		"q_st": 7,
+		"q_en": 3502,
+		"NM": 966,
+		"blen": 4389,
+		"cig": {
+			"S": 0,
+			"M": 3480,
+			"D": 894,
+			"I": 15
+		},
+		"cigacc": 0.7799043062200957
+	},
+	{
+		"read_id": "d3efaeaf-ef15-44a0-9096-d1b93be4470f",
+		"dna_len": 3294,
+		"ctg": "Salmonella_1;size=1;",
+		"r_st": 271,
+		"r_en": 4399,
+		"q_st": 16,
+		"q_en": 3156,
+		"NM": 1043,
+		"blen": 4131,
+		"cig": {
+			"S": 0,
+			"M": 3137,
+			"D": 991,
+			"I": 3
+		},
+		"cigacc": 0.747518760590656
+	},
+	{
+		"read_id": "8b9e7c0e-878a-45f3-bc93-1006f8bb5dd6",
+		"dna_len": 22967,
+		"ctg": "Listeria_2_5;size=2;",
+		"r_st": 15,
+		"r_en": 4318,
+		"q_st": 33,
+		"q_en": 4042,
+		"NM": 314,
+		"blen": 4306,
+		"cig": {
+			"S": 0,
+			"M": 4006,
+			"D": 297,
+			"I": 3
+		},
+		"cigacc": 0.927078495123084
+	},
+	{
+		"read_id": "8b9e7c0e-878a-45f3-bc93-1006f8bb5dd6",
+		"dna_len": 22967,
+		"ctg": "Listeria_2_5;size=2;",
+		"r_st": 7,
+		"r_en": 4296,
+		"q_st": 11993,
+		"q_en": 15837,
+		"NM": 471,
+		"blen": 4293,
+		"cig": {
+			"S": 0,
+			"M": 3840,
+			"D": 449,
+			"I": 4
+		},
+		"cigacc": 0.8902865129280224
+	},
+	{
+		"read_id": "50395dc3-5efd-45d6-bce5-e48596a40f75",
+		"dna_len": 4211,
+		"ctg": "Salmonella_1;size=1;",
+		"r_st": 33,
+		"r_en": 4399,
+		"q_st": 33,
+		"q_en": 4177,
+		"NM": 232,
+		"blen": 4367,
+		"cig": {
+			"S": 0,
+			"M": 4143,
+			"D": 223,
+			"I": 1
+		},
+		"cigacc": 0.9468742844057706
+	},
+	{
+		"read_id": "1a19950f-62cf-4168-bb01-6d69122a5275",
+		"dna_len": 12453,
+		"ctg": "Salmonella_1;size=1;",
+		"r_st": 3,
+		"r_en": 4357,
+		"q_st": 39,
+		"q_en": 3991,
+		"NM": 425,
+		"blen": 4357,
+		"cig": {
+			"S": 0,
+			"M": 3949,
+			"D": 405,
+			"I": 3
+		},
+		"cigacc": 0.9024558182235483
+	},
+	{
+		"read_id": "7eb4336b-1cc7-4bbb-a445-396e7d108439",
+		"dna_len": 8352,
+		"ctg": "Salmonella_1;size=1;",
+		"r_st": 5,
+		"r_en": 4357,
+		"q_st": 4312,
+		"q_en": 8315,
+		"NM": 363,
+		"blen": 4353,
+		"cig": {
+			"S": 0,
+			"M": 4002,
+			"D": 350,
+			"I": 1
+		},
+		"cigacc": 0.9166092350103376
+	},
+	{
+		"read_id": "4509ee01-1350-4f58-85f0-f8f44cf53258",
+		"dna_len": 3372,
+		"ctg": "Salmonella_1;size=1;",
+		"r_st": 100,
+		"r_en": 4399,
+		"q_st": 27,
+		"q_en": 3312,
+		"NM": 1100,
+		"blen": 4308,
+		"cig": {
+			"S": 0,
+			"M": 3276,
+			"D": 1023,
+			"I": 9
+		},
+		"cigacc": 0.744661095636026
+	},
+	{
+		"read_id": "544217e2-7536-49f2-8cbe-5dfea5556e2e",
+		"dna_len": 4145,
+		"ctg": "Salmonella_1;size=1;",
+		"r_st": 5,
+		"r_en": 4372,
+		"q_st": 26,
+		"q_en": 4135,
+		"NM": 293,
+		"blen": 4371,
+		"cig": {
+			"S": 0,
+			"M": 4105,
+			"D": 262,
+			"I": 4
+		},
+		"cigacc": 0.9329672843742851
+	},
+	{
+		"read_id": "e2b2e8e6-ebca-488c-b6c5-8e6b39323dd6",
+		"dna_len": 11871,
+		"ctg": "Lactobacillus_3;size=1;",
+		"r_st": 39,
+		"r_en": 4276,
+		"q_st": 3963,
+		"q_en": 7814,
+		"NM": 420,
+		"blen": 4242,
+		"cig": {
+			"S": 0,
+			"M": 3846,
+			"D": 391,
+			"I": 5
+		},
+		"cigacc": 0.900990099009901
+	},
+	{
+		"read_id": "49667fc7-3a9f-41de-b9eb-ca682e1a4935",
+		"dna_len": 8526,
+		"ctg": "Staphylococcus_5;size=1;",
+		"r_st": 22,
+		"r_en": 4460,
+		"q_st": 40,
+		"q_en": 4325,
+		"NM": 165,
+		"blen": 4439,
+		"cig": {
+			"S": 0,
+			"M": 4284,
+			"D": 154,
+			"I": 1
+		},
+		"cigacc": 0.9628294660959675
+	},
+	{
+		"read_id": "0fcf97d8-f866-4dad-8775-f99f2b7c0f4a",
+		"dna_len": 7309,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 966,
+		"r_en": 4309,
+		"q_st": 4431,
+		"q_en": 7257,
+		"NM": 548,
+		"blen": 3347,
+		"cig": {
+			"S": 0,
+			"M": 2822,
+			"D": 521,
+			"I": 4
+		},
+		"cigacc": 0.8362712877203466
+	},
+	{
+		"read_id": "8316abe5-9c15-4220-8334-9a88904a0be5",
+		"dna_len": 4156,
+		"ctg": "Enterococcus_1;size=1;",
+		"r_st": 24,
+		"r_en": 4386,
+		"q_st": 35,
+		"q_en": 4121,
+		"NM": 303,
+		"blen": 4367,
+		"cig": {
+			"S": 0,
+			"M": 4081,
+			"D": 281,
+			"I": 5
+		},
+		"cigacc": 0.9306159835127089
+	},
+	{
+		"read_id": "b5c27287-fa7f-48b5-8e3c-1dc738f675ab",
+		"dna_len": 12860,
+		"ctg": "Staphylococcus_6;size=1;",
+		"r_st": 1,
+		"r_en": 4499,
+		"q_st": 4441,
+		"q_en": 8870,
+		"NM": 80,
+		"blen": 4503,
+		"cig": {
+			"S": 0,
+			"M": 4424,
+			"D": 74,
+			"I": 5
+		},
+		"cigacc": 0.9822340661781035
+	},
+	{
+		"read_id": "b5c27287-fa7f-48b5-8e3c-1dc738f675ab",
+		"dna_len": 12860,
+		"ctg": "Staphylococcus_6;size=1;",
+		"r_st": 7,
+		"r_en": 4495,
+		"q_st": 41,
+		"q_en": 4407,
+		"NM": 126,
+		"blen": 4488,
+		"cig": {
+			"S": 0,
+			"M": 4366,
+			"D": 122,
+			"I": 0
+		},
+		"cigacc": 0.9719251336898396
+	},
+	{
+		"read_id": "068876f5-d8a9-47b0-a5bc-c29c5e13e789",
+		"dna_len": 4275,
+		"ctg": "Enterococcus_1;size=1;",
+		"r_st": 3,
+		"r_en": 4389,
+		"q_st": 28,
+		"q_en": 4242,
+		"NM": 189,
+		"blen": 4387,
+		"cig": {
+			"S": 0,
+			"M": 4213,
+			"D": 173,
+			"I": 1
+		},
+		"cigacc": 0.9569181673125142
+	},
+	{
+		"read_id": "1b071aee-ee26-4973-aa54-c97bb5049761",
+		"dna_len": 4178,
+		"ctg": "Enterococcus_1;size=1;",
+		"r_st": 14,
+		"r_en": 4372,
+		"q_st": 30,
+		"q_en": 4145,
+		"NM": 266,
+		"blen": 4362,
+		"cig": {
+			"S": 0,
+			"M": 4111,
+			"D": 247,
+			"I": 4
+		},
+		"cigacc": 0.9390187987161852
+	},
+	{
+		"read_id": "a0af9b8b-65d5-4536-b0ba-8087a6fc38cd",
+		"dna_len": 12840,
+		"ctg": "Lactobacillus_2;size=1;",
+		"r_st": 3,
+		"r_en": 4472,
+		"q_st": 8562,
+		"q_en": 12797,
+		"NM": 256,
+		"blen": 4471,
+		"cig": {
+			"S": 0,
+			"M": 4233,
+			"D": 236,
+			"I": 2
+		},
+		"cigacc": 0.9427421158577499
+	},
+	{
+		"read_id": "83172331-5a0f-4eb1-8bc2-215596c88aa8",
+		"dna_len": 11855,
+		"ctg": "Enterococcus_1;size=1;",
+		"r_st": 107,
+		"r_en": 4400,
+		"q_st": 43,
+		"q_en": 3998,
+		"NM": 381,
+		"blen": 4300,
+		"cig": {
+			"S": 0,
+			"M": 3948,
+			"D": 345,
+			"I": 7
+		},
+		"cigacc": 0.9113953488372093
+	},
+	{
+		"read_id": "83172331-5a0f-4eb1-8bc2-215596c88aa8",
+		"dna_len": 11855,
+		"ctg": "Enterococcus_1;size=1;",
+		"r_st": 309,
+		"r_en": 4387,
+		"q_st": 8161,
+		"q_en": 11670,
+		"NM": 601,
+		"blen": 4081,
+		"cig": {
+			"S": 0,
+			"M": 3506,
+			"D": 572,
+			"I": 3
+		},
+		"cigacc": 0.8527321734868905
+	},
+	{
+		"read_id": "2a1c6ff8-82c1-4879-be43-43c5d221be7c",
+		"dna_len": 4219,
+		"ctg": "Enterococcus_1;size=1;",
+		"r_st": 2,
+		"r_en": 4389,
+		"q_st": 17,
+		"q_en": 4176,
+		"NM": 241,
+		"blen": 4389,
+		"cig": {
+			"S": 0,
+			"M": 4157,
+			"D": 230,
+			"I": 2
+		},
+		"cigacc": 0.9450899977215766
+	},
+	{
+		"read_id": "fd1773b0-218c-4439-847c-2e758c4622a9",
+		"dna_len": 3953,
+		"ctg": "Enterococcus_1;size=1;",
+		"r_st": 23,
+		"r_en": 4392,
+		"q_st": 38,
+		"q_en": 3886,
+		"NM": 566,
+		"blen": 4375,
+		"cig": {
+			"S": 0,
+			"M": 3842,
+			"D": 527,
+			"I": 6
+		},
+		"cigacc": 0.8706285714285714
+	},
+	{
+		"read_id": "ac1e4daa-0b21-4a4f-a6e6-eede8c4b1f37",
+		"dna_len": 8277,
+		"ctg": "Enterococcus_1;size=1;",
+		"r_st": 28,
+		"r_en": 4379,
+		"q_st": 39,
+		"q_en": 3969,
+		"NM": 460,
+		"blen": 4358,
+		"cig": {
+			"S": 0,
+			"M": 3923,
+			"D": 428,
+			"I": 7
+		},
+		"cigacc": 0.8944469940339606
+	},
+	{
+		"read_id": "d09ebca8-c554-4af4-afda-b14a1943b3e7",
+		"dna_len": 4185,
+		"ctg": "Enterococcus_1;size=1;",
+		"r_st": 3,
+		"r_en": 4385,
+		"q_st": 26,
+		"q_en": 4157,
+		"NM": 286,
+		"blen": 4392,
+		"cig": {
+			"S": 0,
+			"M": 4121,
+			"D": 261,
+			"I": 10
+		},
+		"cigacc": 0.9348816029143898
+	},
+	{
+		"read_id": "7e31a326-a8df-4bc7-9f05-7c361a6965ff",
+		"dna_len": 4190,
+		"ctg": "Enterococcus_1;size=1;",
+		"r_st": 22,
+		"r_en": 4394,
+		"q_st": 46,
+		"q_en": 4163,
+		"NM": 274,
+		"blen": 4374,
+		"cig": {
+			"S": 0,
+			"M": 4115,
+			"D": 257,
+			"I": 2
+		},
+		"cigacc": 0.9373571101966164
+	},
+	{
+		"read_id": "238162ac-2e4c-4e15-b030-48e8d839b604",
+		"dna_len": 4304,
+		"ctg": "Enterococcus_1;size=1;",
+		"r_st": 0,
+		"r_en": 4382,
+		"q_st": 33,
+		"q_en": 4264,
+		"NM": 166,
+		"blen": 4383,
+		"cig": {
+			"S": 0,
+			"M": 4230,
+			"D": 152,
+			"I": 1
+		},
+		"cigacc": 0.9621263974446725
+	},
+	{
+		"read_id": "9dbce1e3-a46e-41c6-bcfd-85cf8aff4b88",
+		"dna_len": 3717,
+		"ctg": "Enterococcus_1;size=1;",
+		"r_st": 3,
+		"r_en": 4393,
+		"q_st": 45,
+		"q_en": 3676,
+		"NM": 822,
+		"blen": 4400,
+		"cig": {
+			"S": 0,
+			"M": 3621,
+			"D": 769,
+			"I": 10
+		},
+		"cigacc": 0.8131818181818182
+	},
+	{
+		"read_id": "3d8b160a-e387-45bb-ad2f-c68e4a7eafb3",
+		"dna_len": 4030,
+		"ctg": "Enterococcus_1;size=1;",
+		"r_st": 3,
+		"r_en": 4372,
+		"q_st": 31,
+		"q_en": 3986,
+		"NM": 457,
+		"blen": 4379,
+		"cig": {
+			"S": 0,
+			"M": 3945,
+			"D": 424,
+			"I": 10
+		},
+		"cigacc": 0.8956382735784426
+	},
+	{
+		"read_id": "e7f695f2-584c-4ec3-87f0-3498e2547d61",
+		"dna_len": 4123,
+		"ctg": "Enterococcus_1;size=1;",
+		"r_st": 4,
+		"r_en": 4379,
+		"q_st": 21,
+		"q_en": 4097,
+		"NM": 322,
+		"blen": 4379,
+		"cig": {
+			"S": 0,
+			"M": 4072,
+			"D": 303,
+			"I": 4
+		},
+		"cigacc": 0.9264672299611784
+	},
+	{
+		"read_id": "8fe17451-3750-4063-8a07-1d6296b98a36",
+		"dna_len": 25333,
+		"ctg": "Staphylococcus_3;size=1;",
+		"r_st": 16,
+		"r_en": 4544,
+		"q_st": 24,
+		"q_en": 4291,
+		"NM": 274,
+		"blen": 4531,
+		"cig": {
+			"S": 0,
+			"M": 4264,
+			"D": 264,
+			"I": 3
+		},
+		"cigacc": 0.9395276980798941
+	},
+	{
+		"read_id": "01e12d83-9c6d-422f-bea6-2fd021124ee9",
+		"dna_len": 4102,
+		"ctg": "Enterococcus_1;size=1;",
+		"r_st": 4,
+		"r_en": 4378,
+		"q_st": 28,
+		"q_en": 4076,
+		"NM": 358,
+		"blen": 4379,
+		"cig": {
+			"S": 0,
+			"M": 4043,
+			"D": 331,
+			"I": 5
+		},
+		"cigacc": 0.9182461749257822
+	},
+	{
+		"read_id": "de16ef8e-dae4-4b65-89fd-c55b874df901",
+		"dna_len": 3930,
+		"ctg": "Enterococcus_1;size=1;",
+		"r_st": 2,
+		"r_en": 4384,
+		"q_st": 44,
+		"q_en": 3899,
+		"NM": 557,
+		"blen": 4389,
+		"cig": {
+			"S": 0,
+			"M": 3848,
+			"D": 534,
+			"I": 7
+		},
+		"cigacc": 0.8730918204602415
+	},
+	{
+		"read_id": "e53b9d32-f364-42d9-8434-3221d7527d1b",
+		"dna_len": 7862,
+		"ctg": "Enterococcus_1;size=1;",
+		"r_st": 4,
+		"r_en": 4380,
+		"q_st": 3803,
+		"q_en": 7831,
+		"NM": 373,
+		"blen": 4383,
+		"cig": {
+			"S": 0,
+			"M": 4021,
+			"D": 355,
+			"I": 7
+		},
+		"cigacc": 0.9148984713666438
+	},
+	{
+		"read_id": "3c9d4e46-c701-4b98-b4b7-bf6487827f46",
+		"dna_len": 13000,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 5,
+		"r_en": 4287,
+		"q_st": 8768,
+		"q_en": 12990,
+		"NM": 69,
+		"blen": 4282,
+		"cig": {
+			"S": 0,
+			"M": 4222,
+			"D": 60,
+			"I": 0
+		},
+		"cigacc": 0.9838860345632882
+	},
+	{
+		"read_id": "fdfcf065-5882-4ffe-9f06-216060c2ae8f",
+		"dna_len": 8527,
+		"ctg": "Staphylococcus_4;size=1;",
+		"r_st": 13,
+		"r_en": 4425,
+		"q_st": 4212,
+		"q_en": 8501,
+		"NM": 126,
+		"blen": 4412,
+		"cig": {
+			"S": 0,
+			"M": 4289,
+			"D": 123,
+			"I": 0
+		},
+		"cigacc": 0.971441523118767
+	},
+	{
+		"read_id": "87e43762-0369-4a89-b745-a45c9245c2ae",
+		"dna_len": 11900,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 81,
+		"r_en": 4286,
+		"q_st": 8592,
+		"q_en": 11858,
+		"NM": 1031,
+		"blen": 4217,
+		"cig": {
+			"S": 0,
+			"M": 3254,
+			"D": 951,
+			"I": 12
+		},
+		"cigacc": 0.7555133981503439
+	},
+	{
+		"read_id": "a82b2b37-a85f-487b-9b42-59fab9243c30",
+		"dna_len": 7477,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 29,
+		"r_en": 4295,
+		"q_st": 43,
+		"q_en": 4161,
+		"NM": 169,
+		"blen": 4271,
+		"cig": {
+			"S": 0,
+			"M": 4113,
+			"D": 153,
+			"I": 5
+		},
+		"cigacc": 0.9604308124560993
+	},
+	{
+		"read_id": "3d7624f2-14fd-416f-bfd0-659e72e80902",
+		"dna_len": 4170,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 6,
+		"r_en": 4274,
+		"q_st": 34,
+		"q_en": 4119,
+		"NM": 192,
+		"blen": 4269,
+		"cig": {
+			"S": 0,
+			"M": 4084,
+			"D": 184,
+			"I": 1
+		},
+		"cigacc": 0.955024595924104
+	},
+	{
+		"read_id": "68fcd9a5-f868-4b1c-a59d-7f9fd52ca772",
+		"dna_len": 4249,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 22,
+		"r_en": 4263,
+		"q_st": 61,
+		"q_en": 4226,
+		"NM": 80,
+		"blen": 4241,
+		"cig": {
+			"S": 0,
+			"M": 4165,
+			"D": 76,
+			"I": 0
+		},
+		"cigacc": 0.9811365244046215
+	},
+	{
+		"read_id": "8d16faea-4534-4872-9277-b4ba3cdb0d4d",
+		"dna_len": 15728,
+		"ctg": "Enterococcus_3;size=1;",
+		"r_st": 8,
+		"r_en": 4268,
+		"q_st": 11637,
+		"q_en": 15695,
+		"NM": 228,
+		"blen": 4266,
+		"cig": {
+			"S": 0,
+			"M": 4052,
+			"D": 208,
+			"I": 6
+		},
+		"cigacc": 0.9465541490857946
+	},
+	{
+		"read_id": "961318f6-a9e6-463e-a83a-c0494a2759da",
+		"dna_len": 3710,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 17,
+		"r_en": 4273,
+		"q_st": 17,
+		"q_en": 3667,
+		"NM": 647,
+		"blen": 4259,
+		"cig": {
+			"S": 0,
+			"M": 3647,
+			"D": 609,
+			"I": 3
+		},
+		"cigacc": 0.8480864052594506
+	},
+	{
+		"read_id": "c0fa0d68-f54e-4821-97ac-ec63c86efd94",
+		"dna_len": 3951,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 25,
+		"r_en": 4281,
+		"q_st": 22,
+		"q_en": 3928,
+		"NM": 370,
+		"blen": 4259,
+		"cig": {
+			"S": 0,
+			"M": 3903,
+			"D": 353,
+			"I": 3
+		},
+		"cigacc": 0.9131251467480629
+	},
+	{
+		"read_id": "a0b761fb-c7c0-4530-8af2-8a586b92ad53",
+		"dna_len": 4147,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 4,
+		"r_en": 4287,
+		"q_st": 35,
+		"q_en": 4116,
+		"NM": 210,
+		"blen": 4283,
+		"cig": {
+			"S": 0,
+			"M": 4081,
+			"D": 202,
+			"I": 0
+		},
+		"cigacc": 0.9509689469997665
+	},
+	{
+		"read_id": "0e7ca8ec-5f0f-446a-980c-5f69bfb7a5c2",
+		"dna_len": 12888,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 22,
+		"r_en": 4294,
+		"q_st": 4142,
+		"q_en": 8374,
+		"NM": 48,
+		"blen": 4272,
+		"cig": {
+			"S": 0,
+			"M": 4232,
+			"D": 40,
+			"I": 0
+		},
+		"cigacc": 0.9887640449438202
+	},
+	{
+		"read_id": "b6079ba1-349c-42ff-8701-139361380dcc",
+		"dna_len": 4152,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 8,
+		"r_en": 4281,
+		"q_st": 19,
+		"q_en": 4128,
+		"NM": 176,
+		"blen": 4277,
+		"cig": {
+			"S": 0,
+			"M": 4105,
+			"D": 168,
+			"I": 4
+		},
+		"cigacc": 0.9588496609773205
+	},
+	{
+		"read_id": "dcb5325e-3fb7-4b36-b155-2b5e044f8516",
+		"dna_len": 4318,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 4,
+		"r_en": 4287,
+		"q_st": 39,
+		"q_en": 4266,
+		"NM": 56,
+		"blen": 4283,
+		"cig": {
+			"S": 0,
+			"M": 4227,
+			"D": 56,
+			"I": 0
+		},
+		"cigacc": 0.9869250525332711
+	},
+	{
+		"read_id": "74eabe65-58c1-4c2c-af19-9d4a426aac4d",
+		"dna_len": 2059,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 256,
+		"r_en": 2153,
+		"q_st": 822,
+		"q_en": 1963,
+		"NM": 826,
+		"blen": 1902,
+		"cig": {
+			"S": 0,
+			"M": 1136,
+			"D": 761,
+			"I": 5
+		},
+		"cigacc": 0.5657202944269191
+	},
+	{
+		"read_id": "41b6ebde-f02c-4988-b672-11a25b7d2b6c",
+		"dna_len": 4271,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 17,
+		"r_en": 4307,
+		"q_st": 32,
+		"q_en": 4234,
+		"NM": 91,
+		"blen": 4290,
+		"cig": {
+			"S": 0,
+			"M": 4202,
+			"D": 88,
+			"I": 0
+		},
+		"cigacc": 0.9787878787878788
+	},
+	{
+		"read_id": "81e369c0-4b9e-4c87-851f-9ad180c23563",
+		"dna_len": 4203,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 2,
+		"r_en": 4287,
+		"q_st": 27,
+		"q_en": 4187,
+		"NM": 131,
+		"blen": 4285,
+		"cig": {
+			"S": 0,
+			"M": 4160,
+			"D": 125,
+			"I": 0
+		},
+		"cigacc": 0.9694282380396733
+	},
+	{
+		"read_id": "fe93f663-3589-4918-a4c3-ef9aa67da6d5",
+		"dna_len": 12437,
+		"ctg": "Enterococcus_1;size=1;",
+		"r_st": 1,
+		"r_en": 4403,
+		"q_st": 8372,
+		"q_en": 12408,
+		"NM": 387,
+		"blen": 4402,
+		"cig": {
+			"S": 0,
+			"M": 4036,
+			"D": 366,
+			"I": 0
+		},
+		"cigacc": 0.9120854157201272
+	},
+	{
+		"read_id": "615671b8-5e37-413c-81c7-46977f540310",
+		"dna_len": 4142,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 93,
+		"r_en": 4279,
+		"q_st": 54,
+		"q_en": 4117,
+		"NM": 129,
+		"blen": 4186,
+		"cig": {
+			"S": 0,
+			"M": 4063,
+			"D": 123,
+			"I": 0
+		},
+		"cigacc": 0.9691829909221213
+	},
+	{
+		"read_id": "5afb47bc-3de6-4ca2-bcf5-adcb76c247bd",
+		"dna_len": 4104,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 18,
+		"r_en": 4283,
+		"q_st": 55,
+		"q_en": 4080,
+		"NM": 261,
+		"blen": 4268,
+		"cig": {
+			"S": 0,
+			"M": 4022,
+			"D": 243,
+			"I": 3
+		},
+		"cigacc": 0.9388472352389878
+	},
+	{
+		"read_id": "d8b08489-2e85-4778-9456-5a9d4b319dd0",
+		"dna_len": 4178,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 16,
+		"r_en": 4282,
+		"q_st": 21,
+		"q_en": 4138,
+		"NM": 155,
+		"blen": 4266,
+		"cig": {
+			"S": 0,
+			"M": 4117,
+			"D": 149,
+			"I": 0
+		},
+		"cigacc": 0.963666197843413
+	},
+	{
+		"read_id": "f51550ce-bb1f-4f17-9580-8f580a10a42a",
+		"dna_len": 19491,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 1,
+		"r_en": 4309,
+		"q_st": 20,
+		"q_en": 4207,
+		"NM": 127,
+		"blen": 4309,
+		"cig": {
+			"S": 0,
+			"M": 4186,
+			"D": 122,
+			"I": 1
+		},
+		"cigacc": 0.9705268043629612
+	},
+	{
+		"read_id": "f51550ce-bb1f-4f17-9580-8f580a10a42a",
+		"dna_len": 19491,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 7,
+		"r_en": 4309,
+		"q_st": 15282,
+		"q_en": 19466,
+		"NM": 128,
+		"blen": 4304,
+		"cig": {
+			"S": 0,
+			"M": 4182,
+			"D": 120,
+			"I": 2
+		},
+		"cigacc": 0.9702602230483272
+	},
+	{
+		"read_id": "1683fe6e-5fe0-4ca8-a139-e870f60025cc",
+		"dna_len": 12709,
+		"ctg": "Listeria_6;size=1;",
+		"r_st": 12,
+		"r_en": 4326,
+		"q_st": 4299,
+		"q_en": 8483,
+		"NM": 142,
+		"blen": 4316,
+		"cig": {
+			"S": 0,
+			"M": 4182,
+			"D": 132,
+			"I": 2
+		},
+		"cigacc": 0.9670991658943466
+	},
+	{
+		"read_id": "7f9a0b21-37e2-45e7-9da8-8d6b6b3e34a7",
+		"dna_len": 4194,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 23,
+		"r_en": 4304,
+		"q_st": 38,
+		"q_en": 4160,
+		"NM": 162,
+		"blen": 4282,
+		"cig": {
+			"S": 0,
+			"M": 4121,
+			"D": 160,
+			"I": 1
+		},
+		"cigacc": 0.9621672115833723
+	},
+	{
+		"read_id": "7500d5b0-c8d7-43fd-859d-9eddf6d1b502",
+		"dna_len": 3958,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 16,
+		"r_en": 4279,
+		"q_st": 28,
+		"q_en": 3937,
+		"NM": 375,
+		"blen": 4266,
+		"cig": {
+			"S": 0,
+			"M": 3906,
+			"D": 357,
+			"I": 3
+		},
+		"cigacc": 0.9120956399437412
+	},
+	{
+		"read_id": "652a3ee3-0f80-4a5a-9ba7-9f063b19dc43",
+		"dna_len": 4224,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 0,
+		"r_en": 4300,
+		"q_st": 22,
+		"q_en": 4185,
+		"NM": 145,
+		"blen": 4301,
+		"cig": {
+			"S": 0,
+			"M": 4162,
+			"D": 138,
+			"I": 1
+		},
+		"cigacc": 0.9662869100209254
+	},
+	{
+		"read_id": "053ec0c4-dde1-43af-a763-c6c5b25ff591",
+		"dna_len": 4179,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 3,
+		"r_en": 4276,
+		"q_st": 19,
+		"q_en": 4119,
+		"NM": 180,
+		"blen": 4273,
+		"cig": {
+			"S": 0,
+			"M": 4100,
+			"D": 173,
+			"I": 0
+		},
+		"cigacc": 0.9578750292534519
+	},
+	{
+		"read_id": "3da73011-8d4a-4d5b-8551-c2acafaec2f4",
+		"dna_len": 17265,
+		"ctg": "Listeria_3;size=1;",
+		"r_st": 4,
+		"r_en": 4560,
+		"q_st": 12754,
+		"q_en": 17242,
+		"NM": 73,
+		"blen": 4557,
+		"cig": {
+			"S": 0,
+			"M": 4487,
+			"D": 69,
+			"I": 1
+		},
+		"cigacc": 0.9839806890498135
+	},
+	{
+		"read_id": "4db217de-3ca6-4fd9-8d6b-ed4826f1ce1a",
+		"dna_len": 4289,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 28,
+		"r_en": 4302,
+		"q_st": 47,
+		"q_en": 4251,
+		"NM": 74,
+		"blen": 4275,
+		"cig": {
+			"S": 0,
+			"M": 4203,
+			"D": 71,
+			"I": 1
+		},
+		"cigacc": 0.9826900584795322
+	},
+	{
+		"read_id": "029654c8-d99c-4992-95d1-d706b81351ed",
+		"dna_len": 7922,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 20,
+		"r_en": 4302,
+		"q_st": 27,
+		"q_en": 4120,
+		"NM": 201,
+		"blen": 4283,
+		"cig": {
+			"S": 0,
+			"M": 4092,
+			"D": 190,
+			"I": 1
+		},
+		"cigacc": 0.9530702778426337
+	},
+	{
+		"read_id": "3089d324-56a0-4a56-aac1-c9adde7e57f0",
+		"dna_len": 3983,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 22,
+		"r_en": 4302,
+		"q_st": 41,
+		"q_en": 3948,
+		"NM": 384,
+		"blen": 4282,
+		"cig": {
+			"S": 0,
+			"M": 3905,
+			"D": 375,
+			"I": 2
+		},
+		"cigacc": 0.9103222793087342
+	},
+	{
+		"read_id": "9b403aa1-180f-42ce-b2dc-c9bb54f61c18",
+		"dna_len": 23432,
+		"ctg": "Staphylococcus_4;size=1;",
+		"r_st": 24,
+		"r_en": 4419,
+		"q_st": 19038,
+		"q_en": 23399,
+		"NM": 37,
+		"blen": 4395,
+		"cig": {
+			"S": 0,
+			"M": 4361,
+			"D": 34,
+			"I": 0
+		},
+		"cigacc": 0.9915813424345847
+	},
+	{
+		"read_id": "fee77c14-2ce6-4e57-a407-bb493a6cc6bf",
+		"dna_len": 3805,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 18,
+		"r_en": 4299,
+		"q_st": 39,
+		"q_en": 3765,
+		"NM": 576,
+		"blen": 4282,
+		"cig": {
+			"S": 0,
+			"M": 3725,
+			"D": 556,
+			"I": 1
+		},
+		"cigacc": 0.8654834189631013
+	},
+	{
+		"read_id": "4a35e5e0-5e08-408b-8ee4-6f81c9bb4303",
+		"dna_len": 4226,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 20,
+		"r_en": 4277,
+		"q_st": 10,
+		"q_en": 4178,
+		"NM": 92,
+		"blen": 4257,
+		"cig": {
+			"S": 0,
+			"M": 4168,
+			"D": 89,
+			"I": 0
+		},
+		"cigacc": 0.9783885365280715
+	},
+	{
+		"read_id": "0146a02d-60d0-4476-996d-32bdf559c19e",
+		"dna_len": 4227,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 4,
+		"r_en": 4300,
+		"q_st": 25,
+		"q_en": 4184,
+		"NM": 149,
+		"blen": 4296,
+		"cig": {
+			"S": 0,
+			"M": 4159,
+			"D": 137,
+			"I": 0
+		},
+		"cigacc": 0.965316573556797
+	},
+	{
+		"read_id": "8db2f37e-3f91-49c6-a546-4aa5eafb9c3d",
+		"dna_len": 4283,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 13,
+		"r_en": 4298,
+		"q_st": 35,
+		"q_en": 4250,
+		"NM": 72,
+		"blen": 4285,
+		"cig": {
+			"S": 0,
+			"M": 4215,
+			"D": 70,
+			"I": 0
+		},
+		"cigacc": 0.9831971995332556
+	},
+	{
+		"read_id": "1cdabab0-fedb-49b5-8aaf-bb410bcc5198",
+		"dna_len": 25696,
+		"ctg": "Salmonella_3;size=1;",
+		"r_st": 0,
+		"r_en": 4532,
+		"q_st": 12845,
+		"q_en": 16998,
+		"NM": 403,
+		"blen": 4533,
+		"cig": {
+			"S": 0,
+			"M": 4152,
+			"D": 380,
+			"I": 1
+		},
+		"cigacc": 0.9110964041473638
+	},
+	{
+		"read_id": "0b88f337-a392-4bc8-bd05-887730a899c0",
+		"dna_len": 4144,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 14,
+		"r_en": 4287,
+		"q_st": 6,
+		"q_en": 4110,
+		"NM": 182,
+		"blen": 4275,
+		"cig": {
+			"S": 0,
+			"M": 4102,
+			"D": 171,
+			"I": 2
+		},
+		"cigacc": 0.9574269005847953
+	},
+	{
+		"read_id": "2a0b1e9c-4dda-49e6-84a7-59602951c0dd",
+		"dna_len": 4218,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 29,
+		"r_en": 4298,
+		"q_st": 51,
+		"q_en": 4176,
+		"NM": 149,
+		"blen": 4269,
+		"cig": {
+			"S": 0,
+			"M": 4125,
+			"D": 144,
+			"I": 0
+		},
+		"cigacc": 0.9650972124619349
+	},
+	{
+		"read_id": "9064abf9-e0a4-4f1c-ac71-98e7a75bddcc",
+		"dna_len": 4177,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 4,
+		"r_en": 4306,
+		"q_st": 14,
+		"q_en": 4136,
+		"NM": 196,
+		"blen": 4305,
+		"cig": {
+			"S": 0,
+			"M": 4119,
+			"D": 183,
+			"I": 3
+		},
+		"cigacc": 0.9544715447154472
+	},
+	{
+		"read_id": "28c45cbc-f8c5-46cf-a95a-bfb6f62aee1f",
+		"dna_len": 3884,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 12,
+		"r_en": 4277,
+		"q_st": 33,
+		"q_en": 3852,
+		"NM": 476,
+		"blen": 4269,
+		"cig": {
+			"S": 0,
+			"M": 3815,
+			"D": 450,
+			"I": 4
+		},
+		"cigacc": 0.8884984773951745
+	},
+	{
+		"read_id": "922f5425-a440-43a3-97a8-526649530b64",
+		"dna_len": 4271,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 20,
+		"r_en": 4300,
+		"q_st": 47,
+		"q_en": 4237,
+		"NM": 90,
+		"blen": 4280,
+		"cig": {
+			"S": 0,
+			"M": 4190,
+			"D": 90,
+			"I": 0
+		},
+		"cigacc": 0.9789719626168224
+	},
+	{
+		"read_id": "ca921bd3-4651-43e5-833b-193944b5c152",
+		"dna_len": 4303,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 12,
+		"r_en": 4276,
+		"q_st": 33,
+		"q_en": 4260,
+		"NM": 37,
+		"blen": 4264,
+		"cig": {
+			"S": 0,
+			"M": 4227,
+			"D": 37,
+			"I": 0
+		},
+		"cigacc": 0.9913227016885553
+	},
+	{
+		"read_id": "a1771c6a-3bd4-431d-b682-c158e8c76962",
+		"dna_len": 4158,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 6,
+		"r_en": 4283,
+		"q_st": 25,
+		"q_en": 4126,
+		"NM": 186,
+		"blen": 4279,
+		"cig": {
+			"S": 0,
+			"M": 4099,
+			"D": 178,
+			"I": 2
+		},
+		"cigacc": 0.95653189997663
+	},
+	{
+		"read_id": "aca5655f-1668-4f8d-b531-79445221280d",
+		"dna_len": 4267,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 31,
+		"r_en": 4307,
+		"q_st": 31,
+		"q_en": 4212,
+		"NM": 110,
+		"blen": 4278,
+		"cig": {
+			"S": 0,
+			"M": 4179,
+			"D": 97,
+			"I": 2
+		},
+		"cigacc": 0.9742870500233755
+	},
+	{
+		"read_id": "58eeae03-6f1f-4a69-a720-d0e87f29572e",
+		"dna_len": 4223,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 33,
+		"r_en": 4304,
+		"q_st": 20,
+		"q_en": 4178,
+		"NM": 121,
+		"blen": 4271,
+		"cig": {
+			"S": 0,
+			"M": 4158,
+			"D": 113,
+			"I": 0
+		},
+		"cigacc": 0.9716693982673847
+	},
+	{
+		"read_id": "ac7e30c1-3814-43c2-9975-2675fda188aa",
+		"dna_len": 4187,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 5,
+		"r_en": 4272,
+		"q_st": 30,
+		"q_en": 4141,
+		"NM": 176,
+		"blen": 4274,
+		"cig": {
+			"S": 0,
+			"M": 4104,
+			"D": 163,
+			"I": 7
+		},
+		"cigacc": 0.9588207767898924
+	},
+	{
+		"read_id": "ea7561d3-cc54-4477-a94e-a2e5fa8a7415",
+		"dna_len": 4215,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 19,
+		"r_en": 4300,
+		"q_st": 34,
+		"q_en": 4187,
+		"NM": 137,
+		"blen": 4282,
+		"cig": {
+			"S": 0,
+			"M": 4152,
+			"D": 129,
+			"I": 1
+		},
+		"cigacc": 0.9680056048575432
+	},
+	{
+		"read_id": "6aef41ea-7573-4b88-b85c-6c9e592e6145",
+		"dna_len": 4250,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 13,
+		"r_en": 4275,
+		"q_st": 7,
+		"q_en": 4198,
+		"NM": 87,
+		"blen": 4267,
+		"cig": {
+			"S": 0,
+			"M": 4186,
+			"D": 76,
+			"I": 5
+		},
+		"cigacc": 0.9796109678931334
+	},
+	{
+		"read_id": "0742fa44-908d-4a3c-a9af-cadcadc1591f",
+		"dna_len": 4274,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 0,
+		"r_en": 4286,
+		"q_st": 20,
+		"q_en": 4220,
+		"NM": 94,
+		"blen": 4286,
+		"cig": {
+			"S": 0,
+			"M": 4200,
+			"D": 86,
+			"I": 0
+		},
+		"cigacc": 0.9780681287914139
+	},
+	{
+		"read_id": "f0f367d4-01ae-4817-8a2e-a7e920a0ad94",
+		"dna_len": 4271,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 23,
+		"r_en": 4295,
+		"q_st": 19,
+		"q_en": 4216,
+		"NM": 79,
+		"blen": 4272,
+		"cig": {
+			"S": 0,
+			"M": 4197,
+			"D": 75,
+			"I": 0
+		},
+		"cigacc": 0.9815074906367042
+	},
+	{
+		"read_id": "78099c88-74c3-483d-bb4e-58258a76f3b6",
+		"dna_len": 8606,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 0,
+		"r_en": 4281,
+		"q_st": 34,
+		"q_en": 4166,
+		"NM": 152,
+		"blen": 4281,
+		"cig": {
+			"S": 0,
+			"M": 4132,
+			"D": 149,
+			"I": 0
+		},
+		"cigacc": 0.9644942770380752
+	},
+	{
+		"read_id": "5faaff0e-ae97-4c0d-9cba-0d5eb4c06696",
+		"dna_len": 15378,
+		"ctg": "Listeria_2_5;size=2;",
+		"r_st": 1,
+		"r_en": 4309,
+		"q_st": 11153,
+		"q_en": 15341,
+		"NM": 130,
+		"blen": 4309,
+		"cig": {
+			"S": 0,
+			"M": 4187,
+			"D": 121,
+			"I": 1
+		},
+		"cigacc": 0.9698305871431887
+	},
+	{
+		"read_id": "eef4f3da-4fc4-4245-bd0d-fb7eea7bbd96",
+		"dna_len": 7364,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 38,
+		"r_en": 4307,
+		"q_st": 38,
+		"q_en": 3468,
+		"NM": 894,
+		"blen": 4273,
+		"cig": {
+			"S": 0,
+			"M": 3426,
+			"D": 843,
+			"I": 4
+		},
+		"cigacc": 0.7907793119588111
+	},
+	{
+		"read_id": "e28cbdac-8afe-4bcf-be1d-f951d6d0f59c",
+		"dna_len": 8166,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 18,
+		"r_en": 4296,
+		"q_st": 15,
+		"q_en": 4093,
+		"NM": 226,
+		"blen": 4286,
+		"cig": {
+			"S": 0,
+			"M": 4070,
+			"D": 208,
+			"I": 8
+		},
+		"cigacc": 0.9472701819878675
+	},
+	{
+		"read_id": "e28cbdac-8afe-4bcf-be1d-f951d6d0f59c",
+		"dna_len": 8166,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 18,
+		"r_en": 4293,
+		"q_st": 4111,
+		"q_en": 8134,
+		"NM": 274,
+		"blen": 4276,
+		"cig": {
+			"S": 0,
+			"M": 4022,
+			"D": 253,
+			"I": 1
+		},
+		"cigacc": 0.9359214218896165
+	},
+	{
+		"read_id": "5444427e-7553-4c98-81a8-17fd778f67cf",
+		"dna_len": 4257,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 29,
+		"r_en": 4294,
+		"q_st": 25,
+		"q_en": 4222,
+		"NM": 75,
+		"blen": 4265,
+		"cig": {
+			"S": 0,
+			"M": 4197,
+			"D": 68,
+			"I": 0
+		},
+		"cigacc": 0.9824150058616647
+	},
+	{
+		"read_id": "580b5eab-bebb-47ae-a203-40e85ed753db",
+		"dna_len": 19730,
+		"ctg": "Staphylococcus_4;size=1;",
+		"r_st": 27,
+		"r_en": 4418,
+		"q_st": 31,
+		"q_en": 4354,
+		"NM": 75,
+		"blen": 4394,
+		"cig": {
+			"S": 0,
+			"M": 4320,
+			"D": 71,
+			"I": 3
+		},
+		"cigacc": 0.9829312699135184
+	},
+	{
+		"read_id": "580b5eab-bebb-47ae-a203-40e85ed753db",
+		"dna_len": 19730,
+		"ctg": "Staphylococcus_4;size=1;",
+		"r_st": 2022,
+		"r_en": 4396,
+		"q_st": 9301,
+		"q_en": 11293,
+		"NM": 398,
+		"blen": 2375,
+		"cig": {
+			"S": 0,
+			"M": 1991,
+			"D": 383,
+			"I": 1
+		},
+		"cigacc": 0.832421052631579
+	},
+	{
+		"read_id": "44391418-49c8-49a8-bc7e-0c83560a0838",
+		"dna_len": 4033,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 18,
+		"r_en": 4270,
+		"q_st": 25,
+		"q_en": 3990,
+		"NM": 317,
+		"blen": 4261,
+		"cig": {
+			"S": 0,
+			"M": 3956,
+			"D": 296,
+			"I": 9
+		},
+		"cigacc": 0.9256043182351561
+	},
+	{
+		"read_id": "995524f3-3930-470f-978e-960826fe87b0",
+		"dna_len": 4162,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 20,
+		"r_en": 4283,
+		"q_st": 13,
+		"q_en": 4129,
+		"NM": 154,
+		"blen": 4264,
+		"cig": {
+			"S": 0,
+			"M": 4115,
+			"D": 148,
+			"I": 1
+		},
+		"cigacc": 0.9638836772983115
+	},
+	{
+		"read_id": "906f19ac-0950-4b43-90ab-ff6708f0d11d",
+		"dna_len": 3942,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 34,
+		"r_en": 4495,
+		"q_st": 26,
+		"q_en": 3912,
+		"NM": 603,
+		"blen": 4463,
+		"cig": {
+			"S": 0,
+			"M": 3884,
+			"D": 577,
+			"I": 2
+		},
+		"cigacc": 0.8648890880573605
+	},
+	{
+		"read_id": "2e67c7b5-1e17-4c4f-a904-7d9f9e30f342",
+		"dna_len": 4430,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 36,
+		"r_en": 4476,
+		"q_st": 37,
+		"q_en": 4400,
+		"NM": 81,
+		"blen": 4440,
+		"cig": {
+			"S": 0,
+			"M": 4363,
+			"D": 77,
+			"I": 0
+		},
+		"cigacc": 0.9817567567567568
+	},
+	{
+		"read_id": "238268ff-dad4-434d-bac1-34cabe7a9eff",
+		"dna_len": 4287,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 35,
+		"r_en": 4448,
+		"q_st": 46,
+		"q_en": 4237,
+		"NM": 229,
+		"blen": 4414,
+		"cig": {
+			"S": 0,
+			"M": 4190,
+			"D": 223,
+			"I": 1
+		},
+		"cigacc": 0.948119619392841
+	},
+	{
+		"read_id": "f837af2d-2306-455e-9ea1-6002b08a4d1c",
+		"dna_len": 16264,
+		"ctg": "Listeria_2_5;size=2;",
+		"r_st": 20,
+		"r_en": 4314,
+		"q_st": 28,
+		"q_en": 4236,
+		"NM": 94,
+		"blen": 4296,
+		"cig": {
+			"S": 0,
+			"M": 4206,
+			"D": 88,
+			"I": 2
+		},
+		"cigacc": 0.9781191806331471
+	},
+	{
+		"read_id": "ce3562d8-d2fc-4dff-88ee-909723e0f131",
+		"dna_len": 4141,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 42,
+		"r_en": 4491,
+		"q_st": 38,
+		"q_en": 4112,
+		"NM": 403,
+		"blen": 4452,
+		"cig": {
+			"S": 0,
+			"M": 4071,
+			"D": 378,
+			"I": 3
+		},
+		"cigacc": 0.9094788858939802
+	},
+	{
+		"read_id": "561e15c1-9933-49d6-9808-a152b2672c26",
+		"dna_len": 12445,
+		"ctg": "Escherichia_3;size=1;",
+		"r_st": 35,
+		"r_en": 4346,
+		"q_st": 43,
+		"q_en": 4082,
+		"NM": 282,
+		"blen": 4311,
+		"cig": {
+			"S": 0,
+			"M": 4039,
+			"D": 272,
+			"I": 0
+		},
+		"cigacc": 0.9345859429366736
+	},
+	{
+		"read_id": "9f8621fa-5720-438c-943e-2f43d1eaa881",
+		"dna_len": 20083,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 18,
+		"r_en": 4298,
+		"q_st": 8659,
+		"q_en": 12830,
+		"NM": 118,
+		"blen": 4281,
+		"cig": {
+			"S": 0,
+			"M": 4170,
+			"D": 110,
+			"I": 1
+		},
+		"cigacc": 0.9724363466479794
+	},
+	{
+		"read_id": "275095c4-36c5-4907-8a4a-a00708901305",
+		"dna_len": 15171,
+		"ctg": "Escherichia_1;size=1;",
+		"r_st": 28,
+		"r_en": 4467,
+		"q_st": 4443,
+		"q_en": 8565,
+		"NM": 342,
+		"blen": 4443,
+		"cig": {
+			"S": 0,
+			"M": 4118,
+			"D": 321,
+			"I": 4
+		},
+		"cigacc": 0.9230249831195139
+	},
+	{
+		"read_id": "a65646d0-7735-42de-a61b-5631b67cf381",
+		"dna_len": 8502,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 12,
+		"r_en": 4472,
+		"q_st": 19,
+		"q_en": 4082,
+		"NM": 414,
+		"blen": 4461,
+		"cig": {
+			"S": 0,
+			"M": 4062,
+			"D": 398,
+			"I": 1
+		},
+		"cigacc": 0.9071956960322798
+	},
+	{
+		"read_id": "100d61e0-a968-4e38-afee-ae03f6a9b642",
+		"dna_len": 13661,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 22,
+		"r_en": 4490,
+		"q_st": 4003,
+		"q_en": 8153,
+		"NM": 340,
+		"blen": 4469,
+		"cig": {
+			"S": 0,
+			"M": 4149,
+			"D": 319,
+			"I": 1
+		},
+		"cigacc": 0.9239203401208325
+	},
+	{
+		"read_id": "1fb5cc88-6ec0-4a3d-a94d-bc345b94a03f",
+		"dna_len": 3961,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 19,
+		"r_en": 4472,
+		"q_st": 40,
+		"q_en": 3922,
+		"NM": 602,
+		"blen": 4456,
+		"cig": {
+			"S": 0,
+			"M": 3879,
+			"D": 574,
+			"I": 3
+		},
+		"cigacc": 0.8649012567324955
+	},
+	{
+		"read_id": "cd631012-5c5d-486d-8340-c12f3c71f942",
+		"dna_len": 3548,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 42,
+		"r_en": 4485,
+		"q_st": 23,
+		"q_en": 3510,
+		"NM": 1021,
+		"blen": 4449,
+		"cig": {
+			"S": 0,
+			"M": 3481,
+			"D": 962,
+			"I": 6
+		},
+		"cigacc": 0.7705102270173072
+	},
+	{
+		"read_id": "3be2d4c5-f43b-45f2-8c03-b4818ee924e1",
+		"dna_len": 4390,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 33,
+		"r_en": 4495,
+		"q_st": 37,
+		"q_en": 4357,
+		"NM": 152,
+		"blen": 4465,
+		"cig": {
+			"S": 0,
+			"M": 4317,
+			"D": 145,
+			"I": 3
+		},
+		"cigacc": 0.9659574468085106
+	},
+	{
+		"read_id": "e7ae8912-8377-4db8-b9cc-a130e638aab9",
+		"dna_len": 4182,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 3,
+		"r_en": 4472,
+		"q_st": 18,
+		"q_en": 4140,
+		"NM": 365,
+		"blen": 4471,
+		"cig": {
+			"S": 0,
+			"M": 4120,
+			"D": 349,
+			"I": 2
+		},
+		"cigacc": 0.9183627823753076
+	},
+	{
+		"read_id": "14d5cd99-7b1d-46b5-8df8-7c01d0f14673",
+		"dna_len": 4286,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 36,
+		"r_en": 4492,
+		"q_st": 10,
+		"q_en": 4247,
+		"NM": 234,
+		"blen": 4456,
+		"cig": {
+			"S": 0,
+			"M": 4237,
+			"D": 219,
+			"I": 0
+		},
+		"cigacc": 0.9474865350089766
+	},
+	{
+		"read_id": "0b938e6e-68ca-475c-ac16-fb72ed17560c",
+		"dna_len": 8425,
+		"ctg": "Lactobacillus_3;size=1;",
+		"r_st": 19,
+		"r_en": 4285,
+		"q_st": 4215,
+		"q_en": 8398,
+		"NM": 90,
+		"blen": 4268,
+		"cig": {
+			"S": 0,
+			"M": 4181,
+			"D": 85,
+			"I": 2
+		},
+		"cigacc": 0.978912839737582
+	},
+	{
+		"read_id": "cd60c94d-ef61-48f2-81e9-a3d3b38667f0",
+		"dna_len": 7560,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 27,
+		"r_en": 4472,
+		"q_st": 33,
+		"q_en": 3520,
+		"NM": 1021,
+		"blen": 4448,
+		"cig": {
+			"S": 0,
+			"M": 3484,
+			"D": 961,
+			"I": 3
+		},
+		"cigacc": 0.7704586330935252
+	},
+	{
+		"read_id": "65549ea1-b4a6-419c-be0b-663f74f440c3",
+		"dna_len": 3928,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 28,
+		"r_en": 4493,
+		"q_st": 20,
+		"q_en": 3892,
+		"NM": 633,
+		"blen": 4470,
+		"cig": {
+			"S": 0,
+			"M": 3867,
+			"D": 598,
+			"I": 5
+		},
+		"cigacc": 0.8583892617449664
+	},
+	{
+		"read_id": "86b502c9-549d-47da-aad5-65820644aa5a",
+		"dna_len": 4010,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 39,
+		"r_en": 4485,
+		"q_st": 33,
+		"q_en": 3971,
+		"NM": 546,
+		"blen": 4449,
+		"cig": {
+			"S": 0,
+			"M": 3935,
+			"D": 511,
+			"I": 3
+		},
+		"cigacc": 0.8772757923128793
+	},
+	{
+		"read_id": "000962a1-9b04-4a96-b935-eadc4dc7c900",
+		"dna_len": 3820,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 16,
+		"r_en": 4462,
+		"q_st": 33,
+		"q_en": 3764,
+		"NM": 777,
+		"blen": 4455,
+		"cig": {
+			"S": 0,
+			"M": 3722,
+			"D": 724,
+			"I": 9
+		},
+		"cigacc": 0.8255892255892257
+	},
+	{
+		"read_id": "c9c14d58-21ff-4f0d-b040-66bcbbdedbcd",
+		"dna_len": 8617,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 49,
+		"r_en": 4485,
+		"q_st": 27,
+		"q_en": 4296,
+		"NM": 186,
+		"blen": 4438,
+		"cig": {
+			"S": 0,
+			"M": 4267,
+			"D": 169,
+			"I": 2
+		},
+		"cigacc": 0.9580892293826048
+	},
+	{
+		"read_id": "c9c14d58-21ff-4f0d-b040-66bcbbdedbcd",
+		"dna_len": 8617,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 34,
+		"r_en": 4492,
+		"q_st": 4353,
+		"q_en": 8581,
+		"NM": 237,
+		"blen": 4458,
+		"cig": {
+			"S": 0,
+			"M": 4228,
+			"D": 230,
+			"I": 0
+		},
+		"cigacc": 0.9468371467025571
+	},
+	{
+		"read_id": "6e8a95e3-7c8d-4ef1-ba2d-7bb008f4199e",
+		"dna_len": 12913,
+		"ctg": "Staphylococcus_5;size=1;",
+		"r_st": 26,
+		"r_en": 4455,
+		"q_st": 8482,
+		"q_en": 12884,
+		"NM": 29,
+		"blen": 4429,
+		"cig": {
+			"S": 0,
+			"M": 4402,
+			"D": 27,
+			"I": 0
+		},
+		"cigacc": 0.9934522465567849
+	},
+	{
+		"read_id": "b8c8757c-55fd-4136-8a23-7d5952fa4950",
+		"dna_len": 4295,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 26,
+		"r_en": 4469,
+		"q_st": 45,
+		"q_en": 4263,
+		"NM": 237,
+		"blen": 4444,
+		"cig": {
+			"S": 0,
+			"M": 4217,
+			"D": 226,
+			"I": 1
+		},
+		"cigacc": 0.9466696669666966
+	},
+	{
+		"read_id": "ad840bef-8e82-42d5-b3a0-8436c314df83",
+		"dna_len": 4347,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 42,
+		"r_en": 4485,
+		"q_st": 19,
+		"q_en": 4296,
+		"NM": 182,
+		"blen": 4444,
+		"cig": {
+			"S": 0,
+			"M": 4276,
+			"D": 167,
+			"I": 1
+		},
+		"cigacc": 0.959045904590459
+	},
+	{
+		"read_id": "422ea9af-ea1a-4836-8994-7fb584e6d4d5",
+		"dna_len": 12450,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 41,
+		"r_en": 4424,
+		"q_st": 4332,
+		"q_en": 8010,
+		"NM": 743,
+		"blen": 4386,
+		"cig": {
+			"S": 0,
+			"M": 3675,
+			"D": 708,
+			"I": 3
+		},
+		"cigacc": 0.8305973552211583
+	},
+	{
+		"read_id": "c55492fb-779e-4ec1-bc3e-a90131431e56",
+		"dna_len": 14088,
+		"ctg": "Staphylococcus_5;size=1;",
+		"r_st": 29,
+		"r_en": 4439,
+		"q_st": 4169,
+		"q_en": 8566,
+		"NM": 16,
+		"blen": 4410,
+		"cig": {
+			"S": 0,
+			"M": 4397,
+			"D": 13,
+			"I": 0
+		},
+		"cigacc": 0.9963718820861678
+	},
+	{
+		"read_id": "b7d0f77d-fd10-4ab9-b6f8-a8198558bf88",
+		"dna_len": 4353,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 33,
+		"r_en": 4484,
+		"q_st": 45,
+		"q_en": 4327,
+		"NM": 182,
+		"blen": 4455,
+		"cig": {
+			"S": 0,
+			"M": 4278,
+			"D": 173,
+			"I": 4
+		},
+		"cigacc": 0.9591470258136925
+	},
+	{
+		"read_id": "60514578-b148-4399-afb6-85aba0016946",
+		"dna_len": 4300,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 59,
+		"r_en": 4495,
+		"q_st": 22,
+		"q_en": 4257,
+		"NM": 209,
+		"blen": 4437,
+		"cig": {
+			"S": 0,
+			"M": 4234,
+			"D": 202,
+			"I": 1
+		},
+		"cigacc": 0.9528961009691232
+	},
+	{
+		"read_id": "4f8ab5a2-314e-477d-b7c6-a283517656ca",
+		"dna_len": 4462,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 36,
+		"r_en": 4492,
+		"q_st": 23,
+		"q_en": 4421,
+		"NM": 64,
+		"blen": 4457,
+		"cig": {
+			"S": 0,
+			"M": 4397,
+			"D": 59,
+			"I": 1
+		},
+		"cigacc": 0.9856405654027373
+	},
+	{
+		"read_id": "201e2a29-e55d-47a8-b108-de14cdf4ae63",
+		"dna_len": 2740,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 0,
+		"r_en": 4469,
+		"q_st": 23,
+		"q_en": 2713,
+		"NM": 1888,
+		"blen": 4473,
+		"cig": {
+			"S": 0,
+			"M": 2686,
+			"D": 1783,
+			"I": 4
+		},
+		"cigacc": 0.577911915940085
+	},
+	{
+		"read_id": "68e450b2-411e-4442-8230-dde7a66984e9",
+		"dna_len": 8602,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 7,
+		"r_en": 4472,
+		"q_st": 23,
+		"q_en": 4266,
+		"NM": 240,
+		"blen": 4469,
+		"cig": {
+			"S": 0,
+			"M": 4239,
+			"D": 226,
+			"I": 4
+		},
+		"cigacc": 0.9462967106735287
+	},
+	{
+		"read_id": "6bc63f26-ea7c-45be-86ad-bc8aaf899da0",
+		"dna_len": 3862,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 30,
+		"r_en": 4486,
+		"q_st": 28,
+		"q_en": 3842,
+		"NM": 683,
+		"blen": 4460,
+		"cig": {
+			"S": 0,
+			"M": 3810,
+			"D": 646,
+			"I": 4
+		},
+		"cigacc": 0.8468609865470852
+	},
+	{
+		"read_id": "f681ed11-ef39-4e60-8b51-b90dc7f821a0",
+		"dna_len": 4034,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 12,
+		"r_en": 4448,
+		"q_st": 43,
+		"q_en": 3976,
+		"NM": 549,
+		"blen": 4443,
+		"cig": {
+			"S": 0,
+			"M": 3926,
+			"D": 510,
+			"I": 7
+		},
+		"cigacc": 0.8764348413234301
+	},
+	{
+		"read_id": "cbb024d4-58a9-4a6b-92ad-c3b95e5f5bec",
+		"dna_len": 12252,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 13,
+		"r_en": 4470,
+		"q_st": 22,
+		"q_en": 4268,
+		"NM": 224,
+		"blen": 4458,
+		"cig": {
+			"S": 0,
+			"M": 4245,
+			"D": 212,
+			"I": 1
+		},
+		"cigacc": 0.9497532525796322
+	},
+	{
+		"read_id": "09924459-e82c-411e-a0a8-4cdca36564c5",
+		"dna_len": 11071,
+		"ctg": "Lactobacillus_3;size=1;",
+		"r_st": 395,
+		"r_en": 4262,
+		"q_st": 8570,
+		"q_en": 11024,
+		"NM": 1515,
+		"blen": 3872,
+		"cig": {
+			"S": 0,
+			"M": 2449,
+			"D": 1418,
+			"I": 5
+		},
+		"cigacc": 0.6087293388429752
+	},
+	{
+		"read_id": "0bcc7dce-91df-4b4b-8e5b-6f5062a97d67",
+		"dna_len": 8788,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 17,
+		"r_en": 4472,
+		"q_st": 4361,
+		"q_en": 8730,
+		"NM": 97,
+		"blen": 4456,
+		"cig": {
+			"S": 0,
+			"M": 4368,
+			"D": 87,
+			"I": 1
+		},
+		"cigacc": 0.9782315978456014
+	},
+	{
+		"read_id": "0bcc7dce-91df-4b4b-8e5b-6f5062a97d67",
+		"dna_len": 8788,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 8,
+		"r_en": 4478,
+		"q_st": 19,
+		"q_en": 4335,
+		"NM": 179,
+		"blen": 4478,
+		"cig": {
+			"S": 0,
+			"M": 4308,
+			"D": 162,
+			"I": 8
+		},
+		"cigacc": 0.9600267976775346
+	},
+	{
+		"read_id": "b9426932-2539-4835-b330-63e9f3b6a6a7",
+		"dna_len": 4249,
+		"ctg": "Pseudomonas_1_2_3_4;size=4;",
+		"r_st": 5,
+		"r_en": 4464,
+		"q_st": 19,
+		"q_en": 4208,
+		"NM": 289,
+		"blen": 4462,
+		"cig": {
+			"S": 0,
+			"M": 4186,
+			"D": 273,
+			"I": 3
+		},
+		"cigacc": 0.9352308381891529
+	},
+	{
+		"read_id": "4a93df21-bbd5-42ac-aa1d-23acce2a8ecf",
+		"dna_len": 4227,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 14,
+		"r_en": 4302,
+		"q_st": 19,
+		"q_en": 4213,
+		"NM": 100,
+		"blen": 4288,
+		"cig": {
+			"S": 0,
+			"M": 4194,
+			"D": 94,
+			"I": 0
+		},
+		"cigacc": 0.976679104477612
+	},
+	{
+		"read_id": "91860c58-5acb-40e4-be56-6e36b9ddaf7a",
+		"dna_len": 11100,
+		"ctg": "Staphylococcus_5;size=1;",
+		"r_st": 30,
+		"r_en": 2069,
+		"q_st": 4834,
+		"q_en": 6766,
+		"NM": 113,
+		"blen": 2039,
+		"cig": {
+			"S": 0,
+			"M": 1932,
+			"D": 107,
+			"I": 0
+		},
+		"cigacc": 0.9445806768023541
+	},
+	{
+		"read_id": "d2575956-3739-4731-943a-aa12da11e030",
+		"dna_len": 8523,
+		"ctg": "Lactobacillus_3;size=1;",
+		"r_st": 18,
+		"r_en": 4297,
+		"q_st": 4255,
+		"q_en": 8500,
+		"NM": 47,
+		"blen": 4279,
+		"cig": {
+			"S": 0,
+			"M": 4245,
+			"D": 34,
+			"I": 0
+		},
+		"cigacc": 0.9890161252629119
+	},
+	{
+		"read_id": "caca8808-8edb-4805-b777-e5a13b48c2ad",
+		"dna_len": 4155,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 3,
+		"r_en": 4330,
+		"q_st": 27,
+		"q_en": 4114,
+		"NM": 250,
+		"blen": 4327,
+		"cig": {
+			"S": 0,
+			"M": 4087,
+			"D": 240,
+			"I": 0
+		},
+		"cigacc": 0.9422232493644558
+	},
+	{
+		"read_id": "01c33d74-8d60-4a7b-967a-ebdbd685aba3",
+		"dna_len": 4213,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 5,
+		"r_en": 4295,
+		"q_st": 27,
+		"q_en": 4177,
+		"NM": 148,
+		"blen": 4291,
+		"cig": {
+			"S": 0,
+			"M": 4149,
+			"D": 141,
+			"I": 1
+		},
+		"cigacc": 0.9655092053134468
+	},
+	{
+		"read_id": "b6820d2f-9b6c-4078-8d82-4aba7806db6d",
+		"dna_len": 9227,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 0,
+		"r_en": 4299,
+		"q_st": 5450,
+		"q_en": 9181,
+		"NM": 586,
+		"blen": 4299,
+		"cig": {
+			"S": 0,
+			"M": 3731,
+			"D": 568,
+			"I": 0
+		},
+		"cigacc": 0.8636892300535008
+	},
+	{
+		"read_id": "91870b74-7ce7-4003-9e4a-4d6b1bae143f",
+		"dna_len": 4308,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 6,
+		"r_en": 4295,
+		"q_st": 27,
+		"q_en": 4272,
+		"NM": 48,
+		"blen": 4289,
+		"cig": {
+			"S": 0,
+			"M": 4245,
+			"D": 44,
+			"I": 0
+		},
+		"cigacc": 0.9888085800885987
+	},
+	{
+		"read_id": "07cf8f55-1c33-476a-8de4-7318059815cc",
+		"dna_len": 5106,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 32,
+		"r_en": 3410,
+		"q_st": 2530,
+		"q_en": 5070,
+		"NM": 894,
+		"blen": 3381,
+		"cig": {
+			"S": 0,
+			"M": 2537,
+			"D": 841,
+			"I": 3
+		},
+		"cigacc": 0.735581188997338
+	},
+	{
+		"read_id": "7199f363-d549-4ef2-9998-0201ad70a571",
+		"dna_len": 13521,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 69,
+		"r_en": 4309,
+		"q_st": 47,
+		"q_en": 3694,
+		"NM": 648,
+		"blen": 4248,
+		"cig": {
+			"S": 0,
+			"M": 3639,
+			"D": 601,
+			"I": 8
+		},
+		"cigacc": 0.847457627118644
+	},
+	{
+		"read_id": "75255237-1490-4da4-b66b-87fb7a81dc1d",
+		"dna_len": 9291,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 7,
+		"r_en": 4309,
+		"q_st": 26,
+		"q_en": 4160,
+		"NM": 180,
+		"blen": 4302,
+		"cig": {
+			"S": 0,
+			"M": 4134,
+			"D": 168,
+			"I": 0
+		},
+		"cigacc": 0.9581589958158996
+	},
+	{
+		"read_id": "346a14ae-9a50-40b1-b9a3-db73bcaa1f28",
+		"dna_len": 3424,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 3,
+		"r_en": 3910,
+		"q_st": 22,
+		"q_en": 3240,
+		"NM": 738,
+		"blen": 3910,
+		"cig": {
+			"S": 0,
+			"M": 3215,
+			"D": 692,
+			"I": 3
+		},
+		"cigacc": 0.8112531969309463
+	},
+	{
+		"read_id": "5c2620bb-1f6f-406d-b328-b308591f202b",
+		"dna_len": 4278,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 3,
+		"r_en": 4310,
+		"q_st": 36,
+		"q_en": 4230,
+		"NM": 122,
+		"blen": 4310,
+		"cig": {
+			"S": 0,
+			"M": 4191,
+			"D": 116,
+			"I": 3
+		},
+		"cigacc": 0.9716937354988399
+	},
+	{
+		"read_id": "ccb26c72-f64c-4dc5-8f1f-e0aec4c9d317",
+		"dna_len": 3991,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 17,
+		"r_en": 4296,
+		"q_st": 29,
+		"q_en": 3958,
+		"NM": 370,
+		"blen": 4279,
+		"cig": {
+			"S": 0,
+			"M": 3929,
+			"D": 350,
+			"I": 0
+		},
+		"cigacc": 0.9135311988782426
+	},
+	{
+		"read_id": "ebed6ed8-23e7-4bf0-91bb-9a075197b87f",
+		"dna_len": 4204,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 30,
+		"r_en": 4319,
+		"q_st": 29,
+		"q_en": 4172,
+		"NM": 161,
+		"blen": 4290,
+		"cig": {
+			"S": 0,
+			"M": 4142,
+			"D": 147,
+			"I": 1
+		},
+		"cigacc": 0.9624708624708624
+	},
+	{
+		"read_id": "0d7eb256-6522-407d-bcd8-f722c66ac2ab",
+		"dna_len": 3975,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 1,
+		"r_en": 4320,
+		"q_st": 27,
+		"q_en": 3940,
+		"NM": 428,
+		"blen": 4322,
+		"cig": {
+			"S": 0,
+			"M": 3910,
+			"D": 409,
+			"I": 3
+		},
+		"cigacc": 0.900971772327626
+	},
+	{
+		"read_id": "61bbd38e-dec9-4b15-9fa3-642f1091203a",
+		"dna_len": 4289,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 25,
+		"r_en": 4328,
+		"q_st": 24,
+		"q_en": 4242,
+		"NM": 95,
+		"blen": 4305,
+		"cig": {
+			"S": 0,
+			"M": 4216,
+			"D": 87,
+			"I": 2
+		},
+		"cigacc": 0.9779326364692218
+	},
+	{
+		"read_id": "6c895e4c-75a9-4c7a-b443-f26300cb2040",
+		"dna_len": 4266,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 25,
+		"r_en": 4324,
+		"q_st": 25,
+		"q_en": 4227,
+		"NM": 102,
+		"blen": 4299,
+		"cig": {
+			"S": 0,
+			"M": 4202,
+			"D": 97,
+			"I": 0
+		},
+		"cigacc": 0.9762735519888346
+	},
+	{
+		"read_id": "acc35ab1-f51a-4b89-b1ad-2e2473495e96",
+		"dna_len": 4158,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 3,
+		"r_en": 4295,
+		"q_st": 35,
+		"q_en": 4113,
+		"NM": 242,
+		"blen": 4299,
+		"cig": {
+			"S": 0,
+			"M": 4071,
+			"D": 221,
+			"I": 7
+		},
+		"cigacc": 0.9437078390323331
+	},
+	{
+		"read_id": "44218513-95a4-4b48-b060-28e2e3704905",
+		"dna_len": 8240,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 0,
+		"r_en": 4281,
+		"q_st": 4207,
+		"q_en": 8199,
+		"NM": 301,
+		"blen": 4281,
+		"cig": {
+			"S": 0,
+			"M": 3992,
+			"D": 289,
+			"I": 0
+		},
+		"cigacc": 0.9296893249240832
+	},
+	{
+		"read_id": "5edf3dbd-cf0c-4ff9-87a4-eb84a195e7f9",
+		"dna_len": 28577,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 19,
+		"r_en": 4305,
+		"q_st": 24354,
+		"q_en": 28559,
+		"NM": 105,
+		"blen": 4290,
+		"cig": {
+			"S": 0,
+			"M": 4201,
+			"D": 85,
+			"I": 4
+		},
+		"cigacc": 0.9755244755244755
+	},
+	{
+		"read_id": "5edf3dbd-cf0c-4ff9-87a4-eb84a195e7f9",
+		"dna_len": 28577,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 48,
+		"r_en": 4296,
+		"q_st": 20223,
+		"q_en": 24299,
+		"NM": 182,
+		"blen": 4248,
+		"cig": {
+			"S": 0,
+			"M": 4076,
+			"D": 172,
+			"I": 0
+		},
+		"cigacc": 0.957156308851224
+	},
+	{
+		"read_id": "5edf3dbd-cf0c-4ff9-87a4-eb84a195e7f9",
+		"dna_len": 28577,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 11,
+		"r_en": 4276,
+		"q_st": 13762,
+		"q_en": 17634,
+		"NM": 417,
+		"blen": 4266,
+		"cig": {
+			"S": 0,
+			"M": 3871,
+			"D": 394,
+			"I": 1
+		},
+		"cigacc": 0.9022503516174403
+	},
+	{
+		"read_id": "39b6f022-743c-489c-9c4f-8746d314b573",
+		"dna_len": 4516,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 33,
+		"r_en": 4313,
+		"q_st": 26,
+		"q_en": 3801,
+		"NM": 552,
+		"blen": 4281,
+		"cig": {
+			"S": 0,
+			"M": 3774,
+			"D": 506,
+			"I": 1
+		},
+		"cigacc": 0.8710581639803784
+	},
+	{
+		"read_id": "39b6f022-743c-489c-9c4f-8746d314b573",
+		"dna_len": 4516,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 1189,
+		"r_en": 1261,
+		"q_st": 3910,
+		"q_en": 3982,
+		"NM": 1,
+		"blen": 72,
+		"cig": {
+			"S": 0,
+			"M": 72,
+			"D": 0,
+			"I": 0
+		},
+		"cigacc": 0.9861111111111112
+	},
+	{
+		"read_id": "c83e7181-1d63-4116-af21-fafed51db9a9",
+		"dna_len": 4352,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 3,
+		"r_en": 4330,
+		"q_st": 37,
+		"q_en": 4322,
+		"NM": 56,
+		"blen": 4329,
+		"cig": {
+			"S": 0,
+			"M": 4283,
+			"D": 44,
+			"I": 2
+		},
+		"cigacc": 0.987063987063987
+	},
+	{
+		"read_id": "5d3f01da-d014-49a7-b951-d2b544d3fdf1",
+		"dna_len": 4358,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 16,
+		"r_en": 4330,
+		"q_st": 48,
+		"q_en": 4310,
+		"NM": 57,
+		"blen": 4314,
+		"cig": {
+			"S": 0,
+			"M": 4262,
+			"D": 52,
+			"I": 0
+		},
+		"cigacc": 0.9867872044506258
+	},
+	{
+		"read_id": "97f64442-a35e-47a9-93da-2bbaa20a1dca",
+		"dna_len": 3909,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 19,
+		"r_en": 4306,
+		"q_st": 36,
+		"q_en": 3883,
+		"NM": 466,
+		"blen": 4287,
+		"cig": {
+			"S": 0,
+			"M": 3847,
+			"D": 440,
+			"I": 0
+		},
+		"cigacc": 0.8912992768836016
+	},
+	{
+		"read_id": "32bcc490-3f65-4957-92a1-b4f92fc9541b",
+		"dna_len": 4033,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 3,
+		"r_en": 4315,
+		"q_st": 27,
+		"q_en": 4004,
+		"NM": 358,
+		"blen": 4317,
+		"cig": {
+			"S": 0,
+			"M": 3972,
+			"D": 340,
+			"I": 5
+		},
+		"cigacc": 0.9170720407690526
+	},
+	{
+		"read_id": "170ec768-2177-4ffc-9e2b-f73bff98e283",
+		"dna_len": 8580,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 0,
+		"r_en": 4310,
+		"q_st": 4314,
+		"q_en": 8542,
+		"NM": 93,
+		"blen": 4312,
+		"cig": {
+			"S": 0,
+			"M": 4226,
+			"D": 84,
+			"I": 2
+		},
+		"cigacc": 0.9784322820037106
+	},
+	{
+		"read_id": "87ca8ba9-5d83-45f8-b7d6-b993c334122e",
+		"dna_len": 13242,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 29,
+		"r_en": 4321,
+		"q_st": 30,
+		"q_en": 4227,
+		"NM": 101,
+		"blen": 4292,
+		"cig": {
+			"S": 0,
+			"M": 4197,
+			"D": 95,
+			"I": 0
+		},
+		"cigacc": 0.9764678471575023
+	},
+	{
+		"read_id": "d91ea43d-b4d4-4ece-858a-823d0a2af7d3",
+		"dna_len": 7897,
+		"ctg": "Bacillus_9;size=1;",
+		"r_st": 23,
+		"r_en": 4234,
+		"q_st": 26,
+		"q_en": 3827,
+		"NM": 445,
+		"blen": 4213,
+		"cig": {
+			"S": 0,
+			"M": 3799,
+			"D": 412,
+			"I": 2
+		},
+		"cigacc": 0.8943745549489674
+	},
+	{
+		"read_id": "0630cb15-274e-44d1-8ea3-a931caa64c30",
+		"dna_len": 4298,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 22,
+		"r_en": 4328,
+		"q_st": 40,
+		"q_en": 4257,
+		"NM": 91,
+		"blen": 4306,
+		"cig": {
+			"S": 0,
+			"M": 4217,
+			"D": 89,
+			"I": 0
+		},
+		"cigacc": 0.9788666976312123
+	},
+	{
+		"read_id": "7dbe2cf6-2e17-48b5-9a6f-a89a8fd923a7",
+		"dna_len": 4179,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 22,
+		"r_en": 4330,
+		"q_st": 16,
+		"q_en": 4156,
+		"NM": 190,
+		"blen": 4312,
+		"cig": {
+			"S": 0,
+			"M": 4136,
+			"D": 172,
+			"I": 4
+		},
+		"cigacc": 0.9559369202226345
+	},
+	{
+		"read_id": "bede145f-8366-4146-8162-5990b4444e1a",
+		"dna_len": 7721,
+		"ctg": "Salmonella_2;size=1;",
+		"r_st": 10,
+		"r_en": 4352,
+		"q_st": 26,
+		"q_en": 3886,
+		"NM": 516,
+		"blen": 4348,
+		"cig": {
+			"S": 0,
+			"M": 3854,
+			"D": 488,
+			"I": 6
+		},
+		"cigacc": 0.8813247470101195
+	},
+	{
+		"read_id": "17b80620-5f05-46de-a13f-dc495725dd2b",
+		"dna_len": 11567,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 23,
+		"r_en": 4326,
+		"q_st": 4175,
+		"q_en": 8306,
+		"NM": 192,
+		"blen": 4307,
+		"cig": {
+			"S": 0,
+			"M": 4127,
+			"D": 176,
+			"I": 4
+		},
+		"cigacc": 0.9554214070118412
+	},
+	{
+		"read_id": "2010c6a5-9e45-4038-a1d3-c2df881a0cea",
+		"dna_len": 4233,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 4,
+		"r_en": 4292,
+		"q_st": 23,
+		"q_en": 4188,
+		"NM": 133,
+		"blen": 4289,
+		"cig": {
+			"S": 0,
+			"M": 4164,
+			"D": 124,
+			"I": 1
+		},
+		"cigacc": 0.968990440662159
+	},
+	{
+		"read_id": "960025e2-d4e9-419a-93d2-00f2e8231cbb",
+		"dna_len": 4215,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 7,
+		"r_en": 4299,
+		"q_st": 28,
+		"q_en": 4186,
+		"NM": 147,
+		"blen": 4296,
+		"cig": {
+			"S": 0,
+			"M": 4154,
+			"D": 138,
+			"I": 4
+		},
+		"cigacc": 0.965782122905028
+	},
+	{
+		"read_id": "ca77fea0-5d75-4bb4-978c-6e8fd276e300",
+		"dna_len": 4423,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 3,
+		"r_en": 4296,
+		"q_st": 49,
+		"q_en": 3628,
+		"NM": 759,
+		"blen": 4299,
+		"cig": {
+			"S": 0,
+			"M": 3573,
+			"D": 720,
+			"I": 6
+		},
+		"cigacc": 0.823447313328681
+	},
+	{
+		"read_id": "15b945e1-27e7-4380-8c51-53c113deaee7",
+		"dna_len": 4303,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 0,
+		"r_en": 4323,
+		"q_st": 33,
+		"q_en": 4266,
+		"NM": 100,
+		"blen": 4323,
+		"cig": {
+			"S": 0,
+			"M": 4233,
+			"D": 90,
+			"I": 0
+		},
+		"cigacc": 0.9768679157992135
+	},
+	{
+		"read_id": "451042f6-c501-4a41-920e-2a1dadf7b3eb",
+		"dna_len": 14601,
+		"ctg": "Staphylococcus_4;size=1;",
+		"r_st": 26,
+		"r_en": 3792,
+		"q_st": 7145,
+		"q_en": 10853,
+		"NM": 61,
+		"blen": 3766,
+		"cig": {
+			"S": 0,
+			"M": 3708,
+			"D": 58,
+			"I": 0
+		},
+		"cigacc": 0.9838024429102497
+	},
+	{
+		"read_id": "177fc12d-d9ec-48ec-972e-31051b54051a",
+		"dna_len": 4099,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 3,
+		"r_en": 4324,
+		"q_st": 42,
+		"q_en": 4080,
+		"NM": 311,
+		"blen": 4327,
+		"cig": {
+			"S": 0,
+			"M": 4032,
+			"D": 289,
+			"I": 6
+		},
+		"cigacc": 0.9281257222093829
+	},
+	{
+		"read_id": "8eb1fed3-a88d-4eb0-b55c-94489cc8773a",
+		"dna_len": 12081,
+		"ctg": "Staphylococcus_5;size=1;",
+		"r_st": 70,
+		"r_en": 4447,
+		"q_st": 4027,
+		"q_en": 7894,
+		"NM": 535,
+		"blen": 4379,
+		"cig": {
+			"S": 0,
+			"M": 3865,
+			"D": 512,
+			"I": 2
+		},
+		"cigacc": 0.8778259876684175
+	},
+	{
+		"read_id": "0909f6d4-dd70-43cf-9f9f-69f44cfc4b53",
+		"dna_len": 4237,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 25,
+		"r_en": 4330,
+		"q_st": 37,
+		"q_en": 4214,
+		"NM": 144,
+		"blen": 4310,
+		"cig": {
+			"S": 0,
+			"M": 4172,
+			"D": 133,
+			"I": 5
+		},
+		"cigacc": 0.9665893271461717
+	},
+	{
+		"read_id": "932e017e-871a-4f38-9875-28313e3a8fa9",
+		"dna_len": 8180,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 49,
+		"r_en": 4316,
+		"q_st": 37,
+		"q_en": 4170,
+		"NM": 142,
+		"blen": 4268,
+		"cig": {
+			"S": 0,
+			"M": 4132,
+			"D": 135,
+			"I": 1
+		},
+		"cigacc": 0.9667291471415183
+	},
+	{
+		"read_id": "95bed1a4-dde3-49ee-a031-6a7cdffdb124",
+		"dna_len": 3041,
+		"ctg": "Listeria_1;size=1;",
+		"r_st": 3,
+		"r_en": 4327,
+		"q_st": 21,
+		"q_en": 3006,
+		"NM": 1451,
+		"blen": 4334,
+		"cig": {
+			"S": 0,
+			"M": 2975,
+			"D": 1349,
+			"I": 10
+		},
+		"cigacc": 0.6652053530226119
+	},
+	{
+		"read_id": "ad015e0b-6398-4645-9374-d10195efed59",
+		"dna_len": 4489,
+		"ctg": "Staphylococcus_1;size=1;",
+		"r_st": 22,
+		"r_en": 4498,
+		"q_st": 36,
+		"q_en": 4455,
+		"NM": 60,
+		"blen": 4476,
+		"cig": {
+			"S": 0,
+			"M": 4419,
+			"D": 57,
+			"I": 0
+		},
+		"cigacc": 0.9865951742627346
+	},
+	{
+		"read_id": "fcb1c4b3-3712-4009-b82a-c636cfbbeafb",
+		"dna_len": 4472,
+		"ctg": "Staphylococcus_1;size=1;",
+		"r_st": 3,
+		"r_en": 4485,
+		"q_st": 43,
+		"q_en": 4457,
+		"NM": 75,
+		"blen": 4483,
+		"cig": {
+			"S": 0,
+			"M": 4413,
+			"D": 69,
+			"I": 1
+		},
+		"cigacc": 0.983270131608298
+	},
+	{
+		"read_id": "b84398d3-7a36-4d64-9513-f491e70214d0",
+		"dna_len": 4255,
+		"ctg": "Staphylococcus_1;size=1;",
+		"r_st": 40,
+		"r_en": 4480,
+		"q_st": 46,
+		"q_en": 4212,
+		"NM": 302,
+		"blen": 4443,
+		"cig": {
+			"S": 0,
+			"M": 4163,
+			"D": 277,
+			"I": 3
+		},
+		"cigacc": 0.9320279090704479
+	},
+	{
+		"read_id": "e07fd4ba-5bee-4a4f-ab17-3bf78e739c6c",
+		"dna_len": 4340,
+		"ctg": "Staphylococcus_1;size=1;",
+		"r_st": 20,
+		"r_en": 4450,
+		"q_st": 28,
+		"q_en": 4285,
+		"NM": 182,
+		"blen": 4430,
+		"cig": {
+			"S": 0,
+			"M": 4257,
+			"D": 173,
+			"I": 0
+		},
+		"cigacc": 0.9589164785553047
+	},
+	{
+		"read_id": "66b0449f-5c3c-47b4-8827-31e12dd0a7be",
+		"dna_len": 4240,
+		"ctg": "Staphylococcus_1;size=1;",
+		"r_st": 27,
+		"r_en": 4487,
+		"q_st": 16,
+		"q_en": 4207,
+		"NM": 287,
+		"blen": 4461,
+		"cig": {
+			"S": 0,
+			"M": 4190,
+			"D": 270,
+			"I": 1
+		},
+		"cigacc": 0.9356646491817978
+	},
+	{
+		"read_id": "642d989f-26cf-45e1-8302-323bb6ce4dff",
+		"dna_len": 6890,
+		"ctg": "Staphylococcus_1;size=1;",
+		"r_st": 18,
+		"r_en": 4497,
+		"q_st": 27,
+		"q_en": 4378,
+		"NM": 136,
+		"blen": 4480,
+		"cig": {
+			"S": 0,
+			"M": 4350,
+			"D": 129,
+			"I": 1
+		},
+		"cigacc": 0.9696428571428571
+	},
+	{
+		"read_id": "b82f5381-0828-41c0-acc1-2de0d188ab26",
+		"dna_len": 12874,
+		"ctg": "Staphylococcus_1;size=1;",
+		"r_st": 6,
+		"r_en": 4485,
+		"q_st": 8519,
+		"q_en": 12832,
+		"NM": 171,
+		"blen": 4480,
+		"cig": {
+			"S": 0,
+			"M": 4312,
+			"D": 167,
+			"I": 1
+		},
+		"cigacc": 0.9618303571428571
+	},
+	{
+		"read_id": "73d65204-b11b-413f-ae63-de40cafc7300",
+		"dna_len": 4468,
+		"ctg": "Staphylococcus_1;size=1;",
+		"r_st": 13,
+		"r_en": 4488,
+		"q_st": 26,
+		"q_en": 4440,
+		"NM": 82,
+		"blen": 4481,
+		"cig": {
+			"S": 0,
+			"M": 4408,
+			"D": 67,
+			"I": 6
+		},
+		"cigacc": 0.9817005132782861
+	},
+	{
+		"read_id": "a1d2e1a4-7b53-4992-b5c3-72c941310a8f",
+		"dna_len": 4495,
+		"ctg": "Staphylococcus_1;size=1;",
+		"r_st": 4,
+		"r_en": 4477,
+		"q_st": 32,
+		"q_en": 4455,
+		"NM": 54,
+		"blen": 4474,
+		"cig": {
+			"S": 0,
+			"M": 4422,
+			"D": 51,
+			"I": 1
+		},
+		"cigacc": 0.9879302637460885
+	},
+	{
+		"read_id": "9ea1d9ce-cff3-4ad9-8a2a-37693ec5cd71",
+		"dna_len": 4441,
+		"ctg": "Staphylococcus_1;size=1;",
+		"r_st": 19,
+		"r_en": 4502,
+		"q_st": 49,
+		"q_en": 4419,
+		"NM": 119,
+		"blen": 4486,
+		"cig": {
+			"S": 0,
+			"M": 4367,
+			"D": 116,
+			"I": 3
+		},
+		"cigacc": 0.97347302719572
+	},
+	{
+		"read_id": "866017f0-c449-4410-b927-4ab9932e5c71",
+		"dna_len": 4460,
+		"ctg": "Staphylococcus_1;size=1;",
+		"r_st": 2,
+		"r_en": 4498,
+		"q_st": 20,
+		"q_en": 4423,
+		"NM": 109,
+		"blen": 4498,
+		"cig": {
+			"S": 0,
+			"M": 4401,
+			"D": 95,
+			"I": 2
+		},
+		"cigacc": 0.9757670075589151
+	},
+	{
+		"read_id": "4c398986-3274-403f-be9f-3c08280bb1cb",
+		"dna_len": 14078,
+		"ctg": "Staphylococcus_1;size=1;",
+		"r_st": 23,
+		"r_en": 4492,
+		"q_st": 36,
+		"q_en": 4389,
+		"NM": 118,
+		"blen": 4469,
+		"cig": {
+			"S": 0,
+			"M": 4353,
+			"D": 116,
+			"I": 0
+		},
+		"cigacc": 0.9735958827478183
+	},
+	{
+		"read_id": "4c398986-3274-403f-be9f-3c08280bb1cb",
+		"dna_len": 14078,
+		"ctg": "Staphylococcus_1;size=1;",
+		"r_st": 1,
+		"r_en": 4479,
+		"q_st": 7954,
+		"q_en": 12040,
+		"NM": 410,
+		"blen": 4481,
+		"cig": {
+			"S": 0,
+			"M": 4083,
+			"D": 395,
+			"I": 3
+		},
+		"cigacc": 0.9085025663914305
+	},
+	{
+		"read_id": "93c88d79-bfc3-4904-a046-770dedd98f42",
+		"dna_len": 18972,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 93,
+		"r_en": 4271,
+		"q_st": 13147,
+		"q_en": 16887,
+		"NM": 475,
+		"blen": 4187,
+		"cig": {
+			"S": 0,
+			"M": 3731,
+			"D": 447,
+			"I": 9
+		},
+		"cigacc": 0.8865536183424887
+	},
+	{
+		"read_id": "93c88d79-bfc3-4904-a046-770dedd98f42",
+		"dna_len": 18972,
+		"ctg": "Lactobacillus_1;size=1;",
+		"r_st": 0,
+		"r_en": 1427,
+		"q_st": 17569,
+		"q_en": 18947,
+		"NM": 52,
+		"blen": 1428,
+		"cig": {
+			"S": 0,
+			"M": 1377,
+			"D": 50,
+			"I": 1
+		},
+		"cigacc": 0.9635854341736695
+	},
+	{
+		"read_id": "ad73ac14-5124-4cc6-b3b5-78bcfd06e7e7",
+		"dna_len": 9826,
+		"ctg": "Listeria_2_5;size=2;",
+		"r_st": 23,
+		"r_en": 4312,
+		"q_st": 32,
+		"q_en": 4230,
+		"NM": 95,
+		"blen": 4289,
+		"cig": {
+			"S": 0,
+			"M": 4198,
+			"D": 91,
+			"I": 0
+		},
+		"cigacc": 0.977850314758685
+	},
+	{
+		"read_id": "ff67b9c7-1809-4c6a-ba7b-e7a956dc0467",
+		"dna_len": 8429,
+		"ctg": "Staphylococcus_1;size=1;",
+		"r_st": 17,
+		"r_en": 4501,
+		"q_st": 4111,
+		"q_en": 8405,
+		"NM": 198,
+		"blen": 4484,
+		"cig": {
+			"S": 0,
+			"M": 4294,
+			"D": 190,
+			"I": 0
+		},
+		"cigacc": 0.955842997323818
+	},
+	{
+		"read_id": "9f05195a-24a8-4af4-bb14-ae7b8f71d12b",
+		"dna_len": 4451,
+		"ctg": "Staphylococcus_1;size=1;",
+		"r_st": 14,
+		"r_en": 4502,
+		"q_st": 38,
+		"q_en": 4424,
+		"NM": 117,
+		"blen": 4491,
+		"cig": {
+			"S": 0,
+			"M": 4383,
+			"D": 105,
+			"I": 3
+		},
+		"cigacc": 0.9739478957915831
+	},
+	{
+		"read_id": "99d28b91-173a-4f70-8631-09d3da7b5d20",
+		"dna_len": 8528,
+		"ctg": "Bacillus_4_5;size=2;",
+		"r_st": 2,
+		"r_en": 4230,
+		"q_st": 3,
+		"q_en": 4048,
+		"NM": 191,
+		"blen": 4229,
+		"cig": {
+			"S": 0,
+			"M": 4044,
+			"D": 184,
+			"I": 1
+		},
+		"cigacc": 0.9548356585481201
+	},
+	{
+		"read_id": "2d718f37-9738-402b-a186-f6baa6b98e9a",
+		"dna_len": 5526,
+		"ctg": "Staphylococcus_1;size=1;",
+		"r_st": 167,
+		"r_en": 4490,
+		"q_st": 29,
+		"q_en": 3162,
+		"NM": 1279,
+		"blen": 4324,
+		"cig": {
+			"S": 0,
+			"M": 3132,
+			"D": 1191,
+			"I": 1
+		},
+		"cigacc": 0.704209065679926
+	},
+	{
+		"read_id": "c88b9c3a-7514-4184-a12f-e3e33685ec03",
+		"dna_len": 6172,
+		"ctg": "Staphylococcus_1;size=1;",
+		"r_st": 24,
+		"r_en": 4494,
+		"q_st": 32,
+		"q_en": 4255,
+		"NM": 267,
+		"blen": 4472,
+		"cig": {
+			"S": 0,
+			"M": 4221,
+			"D": 249,
+			"I": 2
+		},
+		"cigacc": 0.9402951699463328
+	}
+]

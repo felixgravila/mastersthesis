@@ -17,7 +17,8 @@ experiments = [
     # ('path', 'name'),
     ('fasta/chiron-bn-pad5', 'chiron_bn_pad5'),
     ('/mnt/nvme/bio/train_chiron/output_DNA_MODEL/result/', 'chiron_dna_model'),
-    ('/mnt/nvme/bio/mastersthesis/somedata/guppy_output', 'guppy'),
+    ('/mnt/nvme/bio/mastersthesis/somedata/dna_r9.4.1_450bps_fast', 'guppy_fast'),
+    ('/mnt/nvme/bio/mastersthesis/somedata/guppy_dna_r9.4.1_450bps_hac', 'guppy_hac'),
     ('fasta/fishnchips_250_5CNN_25H_4B', 'fishnchips_250_5CNN_25H_4B'),
     ('fasta/chiron-pad5-maxpool3', 'chiron_pad5_maxpool3'),
     ('fasta/chiron-pad5-maxpool3-wholeread', 'chiron_pad5_maxpool3_wholeread')
@@ -68,9 +69,12 @@ for folder,experiment_name in experiments:
                 cigacc = 1-(hit.NM/hit.blen)
                 result_dict.append({
                     'read_id':rid,
+                    'dna_len': len(dna),
                     'ctg': hit.ctg,
                     'r_st': hit.r_st,
                     'r_en': hit.r_en,
+                    'q_st': hit.q_st,
+                    'q_en': hit.q_en,
                     'NM': hit.NM,
                     'blen': hit.blen,
                     'cig': analyse_cigar(hit.cigar_str),
@@ -83,9 +87,12 @@ for folder,experiment_name in experiments:
             misses += 1
             result_dict.append({
                 'read_id':rid,
+                'dna_len': len(dna),
                 'ctg': 0,
                 'r_st': 0,
                 'r_en': 0,
+                'q_st': 0,
+                'q_en': 0,
                 'NM': 0,
                 'blen': 0,
                 'cig': 0,

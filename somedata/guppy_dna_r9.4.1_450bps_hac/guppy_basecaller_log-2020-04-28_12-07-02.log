@@ -1,0 +1,776 @@
+2020-04-28 12:07:02.665218 [guppy/message] ONT Guppy basecalling software version 3.5.2+5b7a51b, client-server API version 1.1.0
+config file:        /opt/ont/guppy/data/dna_r9.4.1_450bps_hac.cfg
+model file:         /opt/ont/guppy/data/template_r9.4.1_450bps_hac.jsn
+input path:         reorg_singlefast5/
+save path:          dna_r9.4.1_450bps_hac
+chunk size:         2000
+chunks per runner:  512
+records per file:   4000
+num basecallers:    1
+cpu mode:           ON
+threads per caller: 4
+
+2020-04-28 12:07:02.665777 [guppy/info] crashpad_handler not supported on this platform.
+2020-04-28 12:07:03.513063 [guppy/message] Found 252 fast5 files to process.
+2020-04-28 12:07:03.513113 [guppy/message] Init time: 847 ms
+2020-04-28 12:07:03.622092 [guppy/info] Read 'e8a09ee2-058d-4873-ab04-99eb3190de3f' from file "e8a09ee2-058d-4873-ab04-99eb3190de3f.fast5" has been loaded.
+2020-04-28 12:07:03.622169 [guppy/info] Read 'afbfa212-2c1b-40e2-81f4-c0a86079c8d0' from file "afbfa212-2c1b-40e2-81f4-c0a86079c8d0.fast5" has been loaded.
+2020-04-28 12:07:03.622183 [guppy/info] Read 'aa7863a8-f635-498d-a4fd-e531bbfa6e58' from file "aa7863a8-f635-498d-a4fd-e531bbfa6e58.fast5" has been loaded.
+2020-04-28 12:07:03.622195 [guppy/info] Read '7dc5727e-9716-4b04-a190-dca3a04e9af8' from file "7dc5727e-9716-4b04-a190-dca3a04e9af8.fast5" has been loaded.
+2020-04-28 12:07:03.622207 [guppy/info] Read 'a63167dc-d481-4247-b264-a1f6a3827080' from file "a63167dc-d481-4247-b264-a1f6a3827080.fast5" has been loaded.
+2020-04-28 12:07:03.622219 [guppy/info] Read '4be7efb1-398e-43a2-842e-bac0bd053b41' from file "4be7efb1-398e-43a2-842e-bac0bd053b41.fast5" has been loaded.
+2020-04-28 12:07:03.622231 [guppy/info] Read 'c145c07a-39cb-425c-8a54-7a13dfa1233a' from file "c145c07a-39cb-425c-8a54-7a13dfa1233a.fast5" has been loaded.
+2020-04-28 12:07:03.622245 [guppy/info] Read '387e3e1d-cfd7-4f28-935e-0c40cc567a2b' from file "387e3e1d-cfd7-4f28-935e-0c40cc567a2b.fast5" has been loaded.
+2020-04-28 12:07:03.622257 [guppy/info] Read 'aa5fe8a4-2606-4f21-b540-e4c6460e5072' from file "aa5fe8a4-2606-4f21-b540-e4c6460e5072.fast5" has been loaded.
+2020-04-28 12:07:03.622268 [guppy/info] Read 'a2f83504-449e-45ec-b035-a34c9cfabec3' from file "a2f83504-449e-45ec-b035-a34c9cfabec3.fast5" has been loaded.
+2020-04-28 12:07:03.622280 [guppy/info] Read 'bb20f2e0-52a9-4265-9de7-3c0240fa4944' from file "bb20f2e0-52a9-4265-9de7-3c0240fa4944.fast5" has been loaded.
+2020-04-28 12:07:03.622291 [guppy/info] Read '99148061-0834-4aa6-9594-b636ff2622d4' from file "99148061-0834-4aa6-9594-b636ff2622d4.fast5" has been loaded.
+2020-04-28 12:07:03.622302 [guppy/info] Read 'bac2d5bf-13ef-4b31-9dc5-0399519a1645' from file "bac2d5bf-13ef-4b31-9dc5-0399519a1645.fast5" has been loaded.
+2020-04-28 12:07:03.622313 [guppy/info] Read 'e470b4c9-72d8-4306-a873-297f98015001' from file "e470b4c9-72d8-4306-a873-297f98015001.fast5" has been loaded.
+2020-04-28 12:07:03.622323 [guppy/info] Read 'a9894e69-e1c5-46e2-84fa-ca91399136bc' from file "a9894e69-e1c5-46e2-84fa-ca91399136bc.fast5" has been loaded.
+2020-04-28 12:07:03.622335 [guppy/info] Read 'd3d661c1-a744-4a63-ad2e-d30f9c79d08d' from file "d3d661c1-a744-4a63-ad2e-d30f9c79d08d.fast5" has been loaded.
+2020-04-28 12:07:03.622347 [guppy/info] Read '790c08bd-684d-4e06-8757-c39f2395351b' from file "790c08bd-684d-4e06-8757-c39f2395351b.fast5" has been loaded.
+2020-04-28 12:07:03.622359 [guppy/info] Read '75edfe80-6c7a-4624-95f8-9f52e3c4439d' from file "75edfe80-6c7a-4624-95f8-9f52e3c4439d.fast5" has been loaded.
+2020-04-28 12:07:03.622370 [guppy/info] Read '6d42c546-4026-414e-a621-242a253313c4' from file "6d42c546-4026-414e-a621-242a253313c4.fast5" has been loaded.
+2020-04-28 12:07:03.622381 [guppy/info] Read '42aa6a0f-36d3-4b02-a737-2292628d4576' from file "42aa6a0f-36d3-4b02-a737-2292628d4576.fast5" has been loaded.
+2020-04-28 12:07:03.622393 [guppy/info] Read 'd5d95d5b-afc7-4edb-897e-ae58dd87708a' from file "d5d95d5b-afc7-4edb-897e-ae58dd87708a.fast5" has been loaded.
+2020-04-28 12:07:03.622404 [guppy/info] Read 'ffcdac70-fec1-4e7e-8369-a549582a83d2' from file "ffcdac70-fec1-4e7e-8369-a549582a83d2.fast5" has been loaded.
+2020-04-28 12:07:03.622424 [guppy/info] Read 'bad9f66f-1288-442a-965d-8f33666d52e8' from file "bad9f66f-1288-442a-965d-8f33666d52e8.fast5" has been loaded.
+2020-04-28 12:07:03.622436 [guppy/info] Read 'f3021c21-5023-4c39-8b79-00bf87d878c3' from file "f3021c21-5023-4c39-8b79-00bf87d878c3.fast5" has been loaded.
+2020-04-28 12:07:03.622449 [guppy/info] Read '14f8b17d-b4a9-4503-a5c7-2191a4165e21' from file "14f8b17d-b4a9-4503-a5c7-2191a4165e21.fast5" has been loaded.
+2020-04-28 12:07:03.622460 [guppy/info] Read '38fc9ec6-3fb1-4251-b23f-b2c2bb236b45' from file "38fc9ec6-3fb1-4251-b23f-b2c2bb236b45.fast5" has been loaded.
+2020-04-28 12:07:03.622471 [guppy/info] Read 'c836f151-fd65-452f-9db0-8b6c83479488' from file "c836f151-fd65-452f-9db0-8b6c83479488.fast5" has been loaded.
+2020-04-28 12:07:03.622482 [guppy/info] Read '7dcac916-1931-4316-bb55-d7b5e4019818' from file "7dcac916-1931-4316-bb55-d7b5e4019818.fast5" has been loaded.
+2020-04-28 12:07:03.622582 [guppy/info] Read 'e9bd8783-ac3c-4bbf-94cb-0bf2ff5ff61a' from file "e9bd8783-ac3c-4bbf-94cb-0bf2ff5ff61a.fast5" has been loaded.
+2020-04-28 12:07:03.622595 [guppy/info] Read '5c7b2535-388f-41d5-8b39-93690897376c' from file "5c7b2535-388f-41d5-8b39-93690897376c.fast5" has been loaded.
+2020-04-28 12:07:03.622607 [guppy/info] Read '81ae5d0b-7517-4916-ab1f-0c824b0ecda6' from file "81ae5d0b-7517-4916-ab1f-0c824b0ecda6.fast5" has been loaded.
+2020-04-28 12:07:03.622619 [guppy/info] Read '07f13b1d-93f1-4b4b-8978-dc0ece350eaa' from file "07f13b1d-93f1-4b4b-8978-dc0ece350eaa.fast5" has been loaded.
+2020-04-28 12:07:03.622631 [guppy/info] Read 'fda83784-4ee9-4df4-b175-5cce727f45ee' from file "fda83784-4ee9-4df4-b175-5cce727f45ee.fast5" has been loaded.
+2020-04-28 12:07:03.622643 [guppy/info] Read 'd0652af3-cf2d-4271-a853-c824374e7aef' from file "d0652af3-cf2d-4271-a853-c824374e7aef.fast5" has been loaded.
+2020-04-28 12:07:03.622654 [guppy/info] Read 'cfefa04a-b45e-4581-827b-8c13d4f4223b' from file "cfefa04a-b45e-4581-827b-8c13d4f4223b.fast5" has been loaded.
+2020-04-28 12:07:03.622665 [guppy/info] Read '02192130-16b7-4214-b258-79a8279f07cf' from file "02192130-16b7-4214-b258-79a8279f07cf.fast5" has been loaded.
+2020-04-28 12:07:03.622677 [guppy/info] Read '58060894-11dd-4c08-9650-b330fda0f9cd' from file "58060894-11dd-4c08-9650-b330fda0f9cd.fast5" has been loaded.
+2020-04-28 12:07:03.622687 [guppy/info] Read 'b7ce19d7-11a8-4ccc-a4f0-60847e270654' from file "b7ce19d7-11a8-4ccc-a4f0-60847e270654.fast5" has been loaded.
+2020-04-28 12:07:03.622698 [guppy/info] Read '20e04879-a854-4822-ba0b-9494c7641c59' from file "20e04879-a854-4822-ba0b-9494c7641c59.fast5" has been loaded.
+2020-04-28 12:07:03.622709 [guppy/info] Read 'ea12ee6f-acd4-4b05-afbc-a220eacfce0e' from file "ea12ee6f-acd4-4b05-afbc-a220eacfce0e.fast5" has been loaded.
+2020-04-28 12:07:03.622723 [guppy/info] Read 'b110acc2-d2ba-4138-b071-faf69fd1a34b' from file "b110acc2-d2ba-4138-b071-faf69fd1a34b.fast5" has been loaded.
+2020-04-28 12:07:03.622748 [guppy/info] Read '6a85db1c-7759-408c-99ac-153b19bfb01c' from file "6a85db1c-7759-408c-99ac-153b19bfb01c.fast5" has been loaded.
+2020-04-28 12:07:03.622760 [guppy/info] Read '0100e84e-b217-4960-8eb4-081f8ee83f82' from file "0100e84e-b217-4960-8eb4-081f8ee83f82.fast5" has been loaded.
+2020-04-28 12:07:03.622771 [guppy/info] Read '156131a5-07e6-4bba-8f2e-3f4a39517931' from file "156131a5-07e6-4bba-8f2e-3f4a39517931.fast5" has been loaded.
+2020-04-28 12:07:03.622783 [guppy/info] Read 'b65dfb29-0d5b-404f-8c67-01c2d7389026' from file "b65dfb29-0d5b-404f-8c67-01c2d7389026.fast5" has been loaded.
+2020-04-28 12:07:03.622793 [guppy/info] Read '3ccc3726-9164-4f37-b55f-63387978f1f0' from file "3ccc3726-9164-4f37-b55f-63387978f1f0.fast5" has been loaded.
+2020-04-28 12:07:03.622804 [guppy/info] Read '844c8f5c-62e6-4275-8495-c881f6765aaa' from file "844c8f5c-62e6-4275-8495-c881f6765aaa.fast5" has been loaded.
+2020-04-28 12:07:03.622815 [guppy/info] Read '99fbec22-82db-4000-9778-5ca2ea19a7a6' from file "99fbec22-82db-4000-9778-5ca2ea19a7a6.fast5" has been loaded.
+2020-04-28 12:07:03.622831 [guppy/info] Read 'e1ffaa9b-002d-4f45-88ed-5354de30fe11' from file "e1ffaa9b-002d-4f45-88ed-5354de30fe11.fast5" has been loaded.
+2020-04-28 12:07:03.622844 [guppy/info] Read '27ac20d2-8acc-47a8-98d0-b86d222c6c18' from file "27ac20d2-8acc-47a8-98d0-b86d222c6c18.fast5" has been loaded.
+2020-04-28 12:07:03.622856 [guppy/info] Read '618e3047-9fb1-4273-8636-8e9ddc500a8b' from file "618e3047-9fb1-4273-8636-8e9ddc500a8b.fast5" has been loaded.
+2020-04-28 12:07:03.622867 [guppy/info] Read 'f6189de4-8898-40f3-9ded-09669143c35c' from file "f6189de4-8898-40f3-9ded-09669143c35c.fast5" has been loaded.
+2020-04-28 12:07:03.622877 [guppy/info] Read '0a61b2b7-7d8b-4845-86d7-a4086ea05e4c' from file "0a61b2b7-7d8b-4845-86d7-a4086ea05e4c.fast5" has been loaded.
+2020-04-28 12:07:03.622888 [guppy/info] Read '515c27bc-9590-4584-8d1a-383a3de6169f' from file "515c27bc-9590-4584-8d1a-383a3de6169f.fast5" has been loaded.
+2020-04-28 12:07:03.622900 [guppy/info] Read 'e02a0642-83ff-446f-9549-a80e77f85a41' from file "e02a0642-83ff-446f-9549-a80e77f85a41.fast5" has been loaded.
+2020-04-28 12:07:03.622912 [guppy/info] Read 'aa625a7a-6e41-494e-b6c2-f125189bd3b3' from file "aa625a7a-6e41-494e-b6c2-f125189bd3b3.fast5" has been loaded.
+2020-04-28 12:07:03.622923 [guppy/info] Read '17f439c5-298b-4816-9640-8a4332c5bcd1' from file "17f439c5-298b-4816-9640-8a4332c5bcd1.fast5" has been loaded.
+2020-04-28 12:07:03.622936 [guppy/info] Read '7613827b-9093-4d6f-85d4-fbf6ab9ca360' from file "7613827b-9093-4d6f-85d4-fbf6ab9ca360.fast5" has been loaded.
+2020-04-28 12:07:03.622947 [guppy/info] Read '36673890-fe45-415d-92fd-2cdb513e8286' from file "36673890-fe45-415d-92fd-2cdb513e8286.fast5" has been loaded.
+2020-04-28 12:07:03.622958 [guppy/info] Read '95f1a234-ccc5-437e-8021-e12c88c67de7' from file "95f1a234-ccc5-437e-8021-e12c88c67de7.fast5" has been loaded.
+2020-04-28 12:07:03.622968 [guppy/info] Read '16f548e8-d310-48b3-96ec-82e699fded8b' from file "16f548e8-d310-48b3-96ec-82e699fded8b.fast5" has been loaded.
+2020-04-28 12:07:03.622979 [guppy/info] Read 'a39b0fcd-5dc8-42c3-bb20-ba05c0bb30a4' from file "a39b0fcd-5dc8-42c3-bb20-ba05c0bb30a4.fast5" has been loaded.
+2020-04-28 12:07:03.622990 [guppy/info] Read 'c5c193ef-2d20-4fdf-9b10-8e1a89128564' from file "c5c193ef-2d20-4fdf-9b10-8e1a89128564.fast5" has been loaded.
+2020-04-28 12:07:03.623001 [guppy/info] Read 'f2b3b46a-2e60-495f-bdc6-d25b762ad3db' from file "f2b3b46a-2e60-495f-bdc6-d25b762ad3db.fast5" has been loaded.
+2020-04-28 12:07:03.623012 [guppy/info] Read 'ad158df1-1503-4e32-8abc-4845f1173742' from file "ad158df1-1503-4e32-8abc-4845f1173742.fast5" has been loaded.
+2020-04-28 12:07:03.623024 [guppy/info] Read '8f82dbab-82fb-4711-9376-69c1f5db9680' from file "8f82dbab-82fb-4711-9376-69c1f5db9680.fast5" has been loaded.
+2020-04-28 12:07:03.623035 [guppy/info] Read '7413169f-9188-49bf-ac29-a27376b5db72' from file "7413169f-9188-49bf-ac29-a27376b5db72.fast5" has been loaded.
+2020-04-28 12:07:03.623046 [guppy/info] Read '2f929475-128c-4089-9cd9-7c6d26bd8627' from file "2f929475-128c-4089-9cd9-7c6d26bd8627.fast5" has been loaded.
+2020-04-28 12:07:03.623057 [guppy/info] Read 'dde5702f-01e7-4253-b53e-8030c7532a63' from file "dde5702f-01e7-4253-b53e-8030c7532a63.fast5" has been loaded.
+2020-04-28 12:07:03.623068 [guppy/info] Read '5acb5376-096b-42e2-986d-2f05158cd3d1' from file "5acb5376-096b-42e2-986d-2f05158cd3d1.fast5" has been loaded.
+2020-04-28 12:07:03.623079 [guppy/info] Read '51f97946-3252-4cb6-a981-064306a06441' from file "51f97946-3252-4cb6-a981-064306a06441.fast5" has been loaded.
+2020-04-28 12:07:03.623090 [guppy/info] Read 'a8f34ac6-62ab-41ff-b47d-6bdb07055006' from file "a8f34ac6-62ab-41ff-b47d-6bdb07055006.fast5" has been loaded.
+2020-04-28 12:07:03.623102 [guppy/info] Read 'ad66347a-983f-478d-bf95-187e2c4fa775' from file "ad66347a-983f-478d-bf95-187e2c4fa775.fast5" has been loaded.
+2020-04-28 12:07:03.623112 [guppy/info] Read 'fafc3799-ef8e-4fd5-8aad-afd0888e1c0f' from file "fafc3799-ef8e-4fd5-8aad-afd0888e1c0f.fast5" has been loaded.
+2020-04-28 12:07:03.623127 [guppy/info] Read '04e2797e-6a65-497f-a15f-efeaf65d5ff8' from file "04e2797e-6a65-497f-a15f-efeaf65d5ff8.fast5" has been loaded.
+2020-04-28 12:07:03.623141 [guppy/info] Read '693dfb92-cb56-4c85-982f-9cc6441f7cac' from file "693dfb92-cb56-4c85-982f-9cc6441f7cac.fast5" has been loaded.
+2020-04-28 12:07:03.623153 [guppy/info] Read 'cc3a8924-400a-49d3-8e8d-152fc79f411b' from file "cc3a8924-400a-49d3-8e8d-152fc79f411b.fast5" has been loaded.
+2020-04-28 12:07:03.623164 [guppy/info] Read 'e94c95aa-55a7-4156-bc4b-74c1e853038d' from file "e94c95aa-55a7-4156-bc4b-74c1e853038d.fast5" has been loaded.
+2020-04-28 12:07:03.623175 [guppy/info] Read 'e4bbfb5a-d8aa-4d3e-a643-cf2e64efd696' from file "e4bbfb5a-d8aa-4d3e-a643-cf2e64efd696.fast5" has been loaded.
+2020-04-28 12:07:03.623186 [guppy/info] Read '86029047-e93c-4b28-ae3a-41798474b122' from file "86029047-e93c-4b28-ae3a-41798474b122.fast5" has been loaded.
+2020-04-28 12:07:03.623198 [guppy/info] Read 'dc35f49c-4ab4-4cca-a315-d9d411b7dfaf' from file "dc35f49c-4ab4-4cca-a315-d9d411b7dfaf.fast5" has been loaded.
+2020-04-28 12:07:03.633299 [guppy/info] Read '4c730d42-21b3-4149-b46f-141392b38586' from file "4c730d42-21b3-4149-b46f-141392b38586.fast5" has been loaded.
+2020-04-28 12:07:03.633337 [guppy/info] Read '58178eb5-8792-442f-bbb1-9f1c686ac6f0' from file "58178eb5-8792-442f-bbb1-9f1c686ac6f0.fast5" has been loaded.
+2020-04-28 12:07:03.633351 [guppy/info] Read 'a4c49b03-09a9-49ef-b8d2-e806daf64224' from file "a4c49b03-09a9-49ef-b8d2-e806daf64224.fast5" has been loaded.
+2020-04-28 12:07:03.633364 [guppy/info] Read '1dc31553-fe65-4ff2-b902-6502a28b53b9' from file "1dc31553-fe65-4ff2-b902-6502a28b53b9.fast5" has been loaded.
+2020-04-28 12:07:03.633376 [guppy/info] Read '4ad71129-6602-4696-81a8-2d455e043ca0' from file "4ad71129-6602-4696-81a8-2d455e043ca0.fast5" has been loaded.
+2020-04-28 12:07:03.633388 [guppy/info] Read 'bebd15e5-fb2e-41e6-b194-68a61e9b7b05' from file "bebd15e5-fb2e-41e6-b194-68a61e9b7b05.fast5" has been loaded.
+2020-04-28 12:07:03.633399 [guppy/info] Read '024a83db-c1c4-4a45-bfac-73790ac88ce6' from file "024a83db-c1c4-4a45-bfac-73790ac88ce6.fast5" has been loaded.
+2020-04-28 12:07:03.633411 [guppy/info] Read '13d478fd-435c-41f8-9350-b8da9831fe74' from file "13d478fd-435c-41f8-9350-b8da9831fe74.fast5" has been loaded.
+2020-04-28 12:07:03.633422 [guppy/info] Read '7aecaa2f-5bdf-4bc9-aea5-06386a67af45' from file "7aecaa2f-5bdf-4bc9-aea5-06386a67af45.fast5" has been loaded.
+2020-04-28 12:07:03.643538 [guppy/info] Read '7123623c-9fcc-447b-a624-b32cfa21cae4' from file "7123623c-9fcc-447b-a624-b32cfa21cae4.fast5" has been loaded.
+2020-04-28 12:07:03.643607 [guppy/info] Read '66bdb0d6-631f-4910-a699-67313159e8e6' from file "66bdb0d6-631f-4910-a699-67313159e8e6.fast5" has been loaded.
+2020-04-28 12:07:03.643623 [guppy/info] Read '80648d5a-12c2-4dea-ab4d-0a034ac25210' from file "80648d5a-12c2-4dea-ab4d-0a034ac25210.fast5" has been loaded.
+2020-04-28 12:07:03.643638 [guppy/info] Read '43979774-9ad8-4b8d-b398-57a217ea7b1c' from file "43979774-9ad8-4b8d-b398-57a217ea7b1c.fast5" has been loaded.
+2020-04-28 12:07:03.643652 [guppy/info] Read 'c39fc548-4712-4283-a40d-343256240481' from file "c39fc548-4712-4283-a40d-343256240481.fast5" has been loaded.
+2020-04-28 12:07:03.643665 [guppy/info] Read '1e988e7a-fcb5-493d-910a-e1b7644ed5ab' from file "1e988e7a-fcb5-493d-910a-e1b7644ed5ab.fast5" has been loaded.
+2020-04-28 12:07:03.643678 [guppy/info] Read '481d0b8c-0f06-4fbf-b915-aa4337c66171' from file "481d0b8c-0f06-4fbf-b915-aa4337c66171.fast5" has been loaded.
+2020-04-28 12:07:03.643691 [guppy/info] Read '010ac325-d26a-40e2-b55c-1f84689ae41a' from file "010ac325-d26a-40e2-b55c-1f84689ae41a.fast5" has been loaded.
+2020-04-28 12:07:03.643705 [guppy/info] Read 'c0002b7c-c612-4a92-b033-7ed74cb59c73' from file "c0002b7c-c612-4a92-b033-7ed74cb59c73.fast5" has been loaded.
+2020-04-28 12:07:03.643718 [guppy/info] Read '8f5f15ee-7b42-4bb1-9f62-cebefbac7683' from file "8f5f15ee-7b42-4bb1-9f62-cebefbac7683.fast5" has been loaded.
+2020-04-28 12:07:03.643731 [guppy/info] Read '1ba2c497-0016-4b41-a18e-cb993728ce5b' from file "1ba2c497-0016-4b41-a18e-cb993728ce5b.fast5" has been loaded.
+2020-04-28 12:07:03.653836 [guppy/info] Read 'fa049bd4-47c6-4eda-ae8b-af9c91292f0b' from file "fa049bd4-47c6-4eda-ae8b-af9c91292f0b.fast5" has been loaded.
+2020-04-28 12:07:03.656127 [guppy/info] Read '79024b59-01bd-4dbe-b2a7-76f7b0c8cbc8' from file "79024b59-01bd-4dbe-b2a7-76f7b0c8cbc8.fast5" has been loaded.
+2020-04-28 12:07:03.656151 [guppy/info] Read '6c1cd21c-77b3-4e4b-8756-5bc60fe9aeae' from file "6c1cd21c-77b3-4e4b-8756-5bc60fe9aeae.fast5" has been loaded.
+2020-04-28 12:07:03.656165 [guppy/info] Read '0c4f1054-c932-4e01-b0cb-b1ef97f56c4e' from file "0c4f1054-c932-4e01-b0cb-b1ef97f56c4e.fast5" has been loaded.
+2020-04-28 12:07:03.656178 [guppy/info] Read 'dfcfe595-f944-4127-9861-75ce19697492' from file "dfcfe595-f944-4127-9861-75ce19697492.fast5" has been loaded.
+2020-04-28 12:07:03.656192 [guppy/info] Read '04de3e69-75ea-4299-a510-557ced9b6610' from file "04de3e69-75ea-4299-a510-557ced9b6610.fast5" has been loaded.
+2020-04-28 12:07:03.656205 [guppy/info] Read '84001c37-643f-4342-82e4-84677df9fe86' from file "84001c37-643f-4342-82e4-84677df9fe86.fast5" has been loaded.
+2020-04-28 12:07:03.656218 [guppy/info] Read '6b5049cb-d13d-4808-8450-397a312d17b9' from file "6b5049cb-d13d-4808-8450-397a312d17b9.fast5" has been loaded.
+2020-04-28 12:07:03.666291 [guppy/info] Read '3bfff38a-faa2-4713-93fc-7055c05ab7d9' from file "3bfff38a-faa2-4713-93fc-7055c05ab7d9.fast5" has been loaded.
+2020-04-28 12:07:03.666315 [guppy/info] Read '5c465ebe-2ad8-4458-b1c0-466fecf3fd91' from file "5c465ebe-2ad8-4458-b1c0-466fecf3fd91.fast5" has been loaded.
+2020-04-28 12:07:03.666325 [guppy/info] Read '9dde1bb5-f52c-4eba-b55c-27ae5a3b70d8' from file "9dde1bb5-f52c-4eba-b55c-27ae5a3b70d8.fast5" has been loaded.
+2020-04-28 12:07:03.666333 [guppy/info] Read '1c23c923-b875-402b-8791-619e3beac05e' from file "1c23c923-b875-402b-8791-619e3beac05e.fast5" has been loaded.
+2020-04-28 12:07:03.666343 [guppy/info] Read '3ea8fad4-76ce-4c3d-8760-2c287d6d2b17' from file "3ea8fad4-76ce-4c3d-8760-2c287d6d2b17.fast5" has been loaded.
+2020-04-28 12:07:03.666352 [guppy/info] Read '493d8cb1-ca97-4ff1-a371-8b9ddbee5dd6' from file "493d8cb1-ca97-4ff1-a371-8b9ddbee5dd6.fast5" has been loaded.
+2020-04-28 12:07:03.666360 [guppy/info] Read '97f72a03-2e2a-4e89-991b-4e34c91ecbc5' from file "97f72a03-2e2a-4e89-991b-4e34c91ecbc5.fast5" has been loaded.
+2020-04-28 12:07:03.666369 [guppy/info] Read '11185a16-60ba-419a-b342-b1fb1b2f44e8' from file "11185a16-60ba-419a-b342-b1fb1b2f44e8.fast5" has been loaded.
+2020-04-28 12:07:03.676439 [guppy/info] Read '23992c44-279f-4bcd-a25d-8669d4111f9a' from file "23992c44-279f-4bcd-a25d-8669d4111f9a.fast5" has been loaded.
+2020-04-28 12:07:03.678052 [guppy/info] Read 'f68a7d29-07b0-48fa-90a6-abde5e8319ed' from file "f68a7d29-07b0-48fa-90a6-abde5e8319ed.fast5" has been loaded.
+2020-04-28 12:07:03.678070 [guppy/info] Read '6783dd2e-f068-4665-bc34-475191bde1c2' from file "6783dd2e-f068-4665-bc34-475191bde1c2.fast5" has been loaded.
+2020-04-28 12:07:03.678083 [guppy/info] Read 'a5f09217-d3ef-4025-bae4-b369d070a984' from file "a5f09217-d3ef-4025-bae4-b369d070a984.fast5" has been loaded.
+2020-04-28 12:07:03.678096 [guppy/info] Read '73f0ba4c-1893-468b-a9d4-ae897a533cbe' from file "73f0ba4c-1893-468b-a9d4-ae897a533cbe.fast5" has been loaded.
+2020-04-28 12:07:03.678109 [guppy/info] Read 'd4da37f9-0a37-4e61-9c22-7a7f4e127013' from file "d4da37f9-0a37-4e61-9c22-7a7f4e127013.fast5" has been loaded.
+2020-04-28 12:07:03.678122 [guppy/info] Read '5aa4fd3c-f970-4127-a325-2e4e366a0cff' from file "5aa4fd3c-f970-4127-a325-2e4e366a0cff.fast5" has been loaded.
+2020-04-28 12:07:03.678136 [guppy/info] Read 'b1ef5ed7-8101-404e-a1d2-6090a7422cea' from file "b1ef5ed7-8101-404e-a1d2-6090a7422cea.fast5" has been loaded.
+2020-04-28 12:07:03.678149 [guppy/info] Read '514b2a40-b7d9-4094-95f9-f03cbc6df6f2' from file "514b2a40-b7d9-4094-95f9-f03cbc6df6f2.fast5" has been loaded.
+2020-04-28 12:07:03.678162 [guppy/info] Read 'f093a870-78da-43ca-8ab1-e752847f2b8c' from file "f093a870-78da-43ca-8ab1-e752847f2b8c.fast5" has been loaded.
+2020-04-28 12:07:03.688252 [guppy/info] Read '3bc8ccb9-987e-4f4c-80ae-9be60c70a1e9' from file "3bc8ccb9-987e-4f4c-80ae-9be60c70a1e9.fast5" has been loaded.
+2020-04-28 12:07:03.688310 [guppy/info] Read '6c6534a9-c3da-4cda-be69-93943a1d5b76' from file "6c6534a9-c3da-4cda-be69-93943a1d5b76.fast5" has been loaded.
+2020-04-28 12:07:03.688322 [guppy/info] Read '1ae7cf1a-b8be-4cf0-9ee1-88a38c7e52ac' from file "1ae7cf1a-b8be-4cf0-9ee1-88a38c7e52ac.fast5" has been loaded.
+2020-04-28 12:07:03.688332 [guppy/info] Read 'cee8317c-b192-4482-b9ed-a749adcc92f9' from file "cee8317c-b192-4482-b9ed-a749adcc92f9.fast5" has been loaded.
+2020-04-28 12:07:03.688341 [guppy/info] Read 'fe323748-25b5-4fb4-a639-429cdff108d2' from file "fe323748-25b5-4fb4-a639-429cdff108d2.fast5" has been loaded.
+2020-04-28 12:07:03.688351 [guppy/info] Read '029c7f77-e48d-4c2f-9ba4-94621e7d7d08' from file "029c7f77-e48d-4c2f-9ba4-94621e7d7d08.fast5" has been loaded.
+2020-04-28 12:07:03.688361 [guppy/info] Read '639b928a-0fb3-46a3-8e9e-b78c3fc013e7' from file "639b928a-0fb3-46a3-8e9e-b78c3fc013e7.fast5" has been loaded.
+2020-04-28 12:07:03.688371 [guppy/info] Read 'ae85aba2-3f59-4be2-acd1-f492a7f2211b' from file "ae85aba2-3f59-4be2-acd1-f492a7f2211b.fast5" has been loaded.
+2020-04-28 12:07:03.688380 [guppy/info] Read '40c28a13-0929-41db-9964-ae949ddc66b1' from file "40c28a13-0929-41db-9964-ae949ddc66b1.fast5" has been loaded.
+2020-04-28 12:07:03.688390 [guppy/info] Read 'dfcafbb8-6bf7-42af-a52b-6e471102f599' from file "dfcafbb8-6bf7-42af-a52b-6e471102f599.fast5" has been loaded.
+2020-04-28 12:07:03.688400 [guppy/info] Read 'e47bf1a0-7c17-4406-bc2c-d5f4d999de77' from file "e47bf1a0-7c17-4406-bc2c-d5f4d999de77.fast5" has been loaded.
+2020-04-28 12:07:03.698468 [guppy/info] Read '7e2004a1-9ab9-4aa9-ad6f-c93145ff6b0c' from file "7e2004a1-9ab9-4aa9-ad6f-c93145ff6b0c.fast5" has been loaded.
+2020-04-28 12:07:03.699683 [guppy/info] Read '5f2c47dc-4ee3-4fa2-ae92-08c78ad77122' from file "5f2c47dc-4ee3-4fa2-ae92-08c78ad77122.fast5" has been loaded.
+2020-04-28 12:07:03.699699 [guppy/info] Read 'ca8dde64-61cd-422d-9347-f62845a36b19' from file "ca8dde64-61cd-422d-9347-f62845a36b19.fast5" has been loaded.
+2020-04-28 12:07:03.699711 [guppy/info] Read '8ca1b365-e5dd-4594-bb4b-4003c8315275' from file "8ca1b365-e5dd-4594-bb4b-4003c8315275.fast5" has been loaded.
+2020-04-28 12:07:03.699721 [guppy/info] Read '482958b6-0c64-4568-bca0-fe4eb82a4f58' from file "482958b6-0c64-4568-bca0-fe4eb82a4f58.fast5" has been loaded.
+2020-04-28 12:07:03.699732 [guppy/info] Read 'c70d2951-680c-4f52-962c-5fbffd316367' from file "c70d2951-680c-4f52-962c-5fbffd316367.fast5" has been loaded.
+2020-04-28 12:07:03.699742 [guppy/info] Read '60823b6d-6482-401c-a40a-99c785b1c9c0' from file "60823b6d-6482-401c-a40a-99c785b1c9c0.fast5" has been loaded.
+2020-04-28 12:07:03.699752 [guppy/info] Read 'b986b1f7-4157-44af-acbe-1a072634b7bc' from file "b986b1f7-4157-44af-acbe-1a072634b7bc.fast5" has been loaded.
+2020-04-28 12:07:03.699762 [guppy/info] Read '913e1853-7b90-42ba-8fb8-eda7dd6b1cec' from file "913e1853-7b90-42ba-8fb8-eda7dd6b1cec.fast5" has been loaded.
+2020-04-28 12:07:03.699772 [guppy/info] Read '41ca9451-0431-436b-99fa-404c75402407' from file "41ca9451-0431-436b-99fa-404c75402407.fast5" has been loaded.
+2020-04-28 12:07:03.699783 [guppy/info] Read 'd17cb045-1904-46e4-849b-32673cab5c7c' from file "d17cb045-1904-46e4-849b-32673cab5c7c.fast5" has been loaded.
+2020-04-28 12:07:03.709943 [guppy/info] Read 'e862690d-e0c4-45db-8e8c-b032afd3de3c' from file "e862690d-e0c4-45db-8e8c-b032afd3de3c.fast5" has been loaded.
+2020-04-28 12:07:03.709962 [guppy/info] Read '5b7429e4-6e2f-456e-8a5e-556a5c9e6332' from file "5b7429e4-6e2f-456e-8a5e-556a5c9e6332.fast5" has been loaded.
+2020-04-28 12:07:03.709973 [guppy/info] Read '01e21949-24e7-4adb-ba7d-97dc623c90ce' from file "01e21949-24e7-4adb-ba7d-97dc623c90ce.fast5" has been loaded.
+2020-04-28 12:07:03.709984 [guppy/info] Read 'd875e4ee-af78-4992-837e-3848489f9bdf' from file "d875e4ee-af78-4992-837e-3848489f9bdf.fast5" has been loaded.
+2020-04-28 12:07:03.710003 [guppy/info] Read '83e92c1a-5e6f-4d1d-8193-8000886b83ab' from file "83e92c1a-5e6f-4d1d-8193-8000886b83ab.fast5" has been loaded.
+2020-04-28 12:07:03.710013 [guppy/info] Read 'a4d9b80a-e11c-4132-91be-411532d362ad' from file "a4d9b80a-e11c-4132-91be-411532d362ad.fast5" has been loaded.
+2020-04-28 12:07:03.710024 [guppy/info] Read '9fd5487e-767b-43b9-8def-1c2aa7b0d77c' from file "9fd5487e-767b-43b9-8def-1c2aa7b0d77c.fast5" has been loaded.
+2020-04-28 12:07:03.710034 [guppy/info] Read '0ce4eb1a-3b52-4b0a-87c6-d811b90c10a5' from file "0ce4eb1a-3b52-4b0a-87c6-d811b90c10a5.fast5" has been loaded.
+2020-04-28 12:07:03.720100 [guppy/info] Read 'd44238e6-cd71-4c05-a9fe-c842f49edc6d' from file "d44238e6-cd71-4c05-a9fe-c842f49edc6d.fast5" has been loaded.
+2020-04-28 12:07:03.721461 [guppy/info] Read 'b438db5c-f6de-46bf-aaae-0094c9f6880e' from file "b438db5c-f6de-46bf-aaae-0094c9f6880e.fast5" has been loaded.
+2020-04-28 12:07:03.721476 [guppy/info] Read '108d6c19-5cb9-4164-ae36-35ed222db54f' from file "108d6c19-5cb9-4164-ae36-35ed222db54f.fast5" has been loaded.
+2020-04-28 12:07:03.721488 [guppy/info] Read 'c67a8951-6922-42c6-881a-6d135fba530f' from file "c67a8951-6922-42c6-881a-6d135fba530f.fast5" has been loaded.
+2020-04-28 12:07:03.721498 [guppy/info] Read 'b989a0b8-8c30-4fd6-aa5b-24971e8b0564' from file "b989a0b8-8c30-4fd6-aa5b-24971e8b0564.fast5" has been loaded.
+2020-04-28 12:07:03.721509 [guppy/info] Read '1ec1b2f7-ef96-436c-a351-30d70ce5a510' from file "1ec1b2f7-ef96-436c-a351-30d70ce5a510.fast5" has been loaded.
+2020-04-28 12:07:03.721519 [guppy/info] Read '3786232b-81e5-48c9-930d-d127ea8dc280' from file "3786232b-81e5-48c9-930d-d127ea8dc280.fast5" has been loaded.
+2020-04-28 12:07:03.721530 [guppy/info] Read 'a29d2951-7e8e-4e0f-b336-8e85b707dbf9' from file "a29d2951-7e8e-4e0f-b336-8e85b707dbf9.fast5" has been loaded.
+2020-04-28 12:07:03.721540 [guppy/info] Read '3b35e502-8928-44cd-a02d-6b53aeef868b' from file "3b35e502-8928-44cd-a02d-6b53aeef868b.fast5" has been loaded.
+2020-04-28 12:07:03.721550 [guppy/info] Read '1a3a80fd-2639-4a7d-8527-a2fb07c2e32c' from file "1a3a80fd-2639-4a7d-8527-a2fb07c2e32c.fast5" has been loaded.
+2020-04-28 12:07:03.721560 [guppy/info] Read '6d162eff-dffe-4724-ae70-f65d5448742b' from file "6d162eff-dffe-4724-ae70-f65d5448742b.fast5" has been loaded.
+2020-04-28 12:07:03.731692 [guppy/info] Read '1bdd47a6-b65f-4c7a-b268-037b934b65b6' from file "1bdd47a6-b65f-4c7a-b268-037b934b65b6.fast5" has been loaded.
+2020-04-28 12:07:03.731724 [guppy/info] Read '1cefba6b-9517-4d14-8b03-2edfb2e67ab3' from file "1cefba6b-9517-4d14-8b03-2edfb2e67ab3.fast5" has been loaded.
+2020-04-28 12:07:03.731735 [guppy/info] Read '0b9c1661-6b44-4f8f-b93d-a60a80910cca' from file "0b9c1661-6b44-4f8f-b93d-a60a80910cca.fast5" has been loaded.
+2020-04-28 12:07:03.731746 [guppy/info] Read '2324a99e-a52b-4ccb-b6f7-0d13f2877bbf' from file "2324a99e-a52b-4ccb-b6f7-0d13f2877bbf.fast5" has been loaded.
+2020-04-28 12:07:03.731756 [guppy/info] Read '51d85c67-68aa-4901-a582-28f876b1e428' from file "51d85c67-68aa-4901-a582-28f876b1e428.fast5" has been loaded.
+2020-04-28 12:07:03.731767 [guppy/info] Read 'b86e586f-b070-4230-a7f3-7224535e06ab' from file "b86e586f-b070-4230-a7f3-7224535e06ab.fast5" has been loaded.
+2020-04-28 12:07:03.731777 [guppy/info] Read '6de9b5a0-516c-45a6-9d3c-4566c7eed4d7' from file "6de9b5a0-516c-45a6-9d3c-4566c7eed4d7.fast5" has been loaded.
+2020-04-28 12:07:03.731787 [guppy/info] Read '614a4ea1-a49c-4fdc-9365-d7a2426e0f42' from file "614a4ea1-a49c-4fdc-9365-d7a2426e0f42.fast5" has been loaded.
+2020-04-28 12:07:03.731797 [guppy/info] Read '0d64772e-0aba-4cd0-97eb-7157c22585c2' from file "0d64772e-0aba-4cd0-97eb-7157c22585c2.fast5" has been loaded.
+2020-04-28 12:07:03.741866 [guppy/info] Read '5d9deab3-3fed-478c-aeed-3f2239d16386' from file "5d9deab3-3fed-478c-aeed-3f2239d16386.fast5" has been loaded.
+2020-04-28 12:07:03.742876 [guppy/info] Read '1a0b3e8b-3b1c-4984-84ac-eac22ea39c84' from file "1a0b3e8b-3b1c-4984-84ac-eac22ea39c84.fast5" has been loaded.
+2020-04-28 12:07:03.742892 [guppy/info] Read '19299a9e-075b-4cd7-89ec-8e1be16d8afc' from file "19299a9e-075b-4cd7-89ec-8e1be16d8afc.fast5" has been loaded.
+2020-04-28 12:07:03.742913 [guppy/info] Read '2310914a-c120-4e40-910d-45ee042f10a3' from file "2310914a-c120-4e40-910d-45ee042f10a3.fast5" has been loaded.
+2020-04-28 12:07:03.742924 [guppy/info] Read '997ab7ed-d83c-462b-8cf6-e0c8f958cd98' from file "997ab7ed-d83c-462b-8cf6-e0c8f958cd98.fast5" has been loaded.
+2020-04-28 12:07:03.742934 [guppy/info] Read '61576778-780e-4f35-9cde-504fa693537f' from file "61576778-780e-4f35-9cde-504fa693537f.fast5" has been loaded.
+2020-04-28 12:07:03.742944 [guppy/info] Read '75e82310-02dd-4f62-b1f0-b4afb212d0d8' from file "75e82310-02dd-4f62-b1f0-b4afb212d0d8.fast5" has been loaded.
+2020-04-28 12:07:03.742954 [guppy/info] Read '2ae54705-a763-44d3-96d5-8c6c30c78072' from file "2ae54705-a763-44d3-96d5-8c6c30c78072.fast5" has been loaded.
+2020-04-28 12:07:03.742964 [guppy/info] Read '89e4482e-721d-4ad5-bd85-8e9a598f2da0' from file "89e4482e-721d-4ad5-bd85-8e9a598f2da0.fast5" has been loaded.
+2020-04-28 12:07:03.753030 [guppy/info] Read '232b120e-fe3c-497e-8ee7-39b10ec9d1a8' from file "232b120e-fe3c-497e-8ee7-39b10ec9d1a8.fast5" has been loaded.
+2020-04-28 12:07:03.753051 [guppy/info] Read '6307891f-93e7-4693-ab5b-b8d7054ac3c5' from file "6307891f-93e7-4693-ab5b-b8d7054ac3c5.fast5" has been loaded.
+2020-04-28 12:07:03.753063 [guppy/info] Read '4814db1d-49c8-4b7e-9f5c-bc82f00af0b4' from file "4814db1d-49c8-4b7e-9f5c-bc82f00af0b4.fast5" has been loaded.
+2020-04-28 12:07:03.753075 [guppy/info] Read '5726b9ad-181f-47f8-b0ed-e3a6962f1dcf' from file "5726b9ad-181f-47f8-b0ed-e3a6962f1dcf.fast5" has been loaded.
+2020-04-28 12:07:03.753087 [guppy/info] Read 'dc349f70-34fd-4fff-abfc-61c8d38db00c' from file "dc349f70-34fd-4fff-abfc-61c8d38db00c.fast5" has been loaded.
+2020-04-28 12:07:03.753099 [guppy/info] Read '76a2f3de-2d92-460d-97d3-64cfaa08169c' from file "76a2f3de-2d92-460d-97d3-64cfaa08169c.fast5" has been loaded.
+2020-04-28 12:07:03.753110 [guppy/info] Read '1ab7ddf1-41d2-4c6b-a143-d46634b45689' from file "1ab7ddf1-41d2-4c6b-a143-d46634b45689.fast5" has been loaded.
+2020-04-28 12:07:03.753119 [guppy/info] Read 'ea786a64-c9be-4aa2-9e9a-c2df967dac53' from file "ea786a64-c9be-4aa2-9e9a-c2df967dac53.fast5" has been loaded.
+2020-04-28 12:07:03.753130 [guppy/info] Read 'c694c327-475b-4003-ad1e-16bb11ac4a0b' from file "c694c327-475b-4003-ad1e-16bb11ac4a0b.fast5" has been loaded.
+2020-04-28 12:07:03.753140 [guppy/info] Read '8612105c-8403-46d0-8d99-08e67b352d5f' from file "8612105c-8403-46d0-8d99-08e67b352d5f.fast5" has been loaded.
+2020-04-28 12:07:03.763222 [guppy/info] Read '05f0f901-f020-4303-b131-055df1d1bfb2' from file "05f0f901-f020-4303-b131-055df1d1bfb2.fast5" has been loaded.
+2020-04-28 12:07:03.764520 [guppy/info] Read '9b5d95c1-d479-4ab7-a257-0734b312384a' from file "9b5d95c1-d479-4ab7-a257-0734b312384a.fast5" has been loaded.
+2020-04-28 12:07:03.764535 [guppy/info] Read '1a0204cc-250e-4199-861a-6239c42ba36d' from file "1a0204cc-250e-4199-861a-6239c42ba36d.fast5" has been loaded.
+2020-04-28 12:07:03.764546 [guppy/info] Read 'd282813f-6b2d-4504-a304-46bbd7a9bb80' from file "d282813f-6b2d-4504-a304-46bbd7a9bb80.fast5" has been loaded.
+2020-04-28 12:07:03.764557 [guppy/info] Read 'ff5479e5-0ec3-4040-bc17-3b40b431a514' from file "ff5479e5-0ec3-4040-bc17-3b40b431a514.fast5" has been loaded.
+2020-04-28 12:07:03.764567 [guppy/info] Read '82688f35-db87-4f5d-9749-88fb7e68a916' from file "82688f35-db87-4f5d-9749-88fb7e68a916.fast5" has been loaded.
+2020-04-28 12:07:03.764578 [guppy/info] Read '0b132d36-546a-4971-a14e-f2c53f3d4f20' from file "0b132d36-546a-4971-a14e-f2c53f3d4f20.fast5" has been loaded.
+2020-04-28 12:07:03.764589 [guppy/info] Read '251972c0-ed92-46da-a422-61ef6bec6a7a' from file "251972c0-ed92-46da-a422-61ef6bec6a7a.fast5" has been loaded.
+2020-04-28 12:07:03.764599 [guppy/info] Read '0f462745-95ed-4cab-a7f5-e05cec6a07dc' from file "0f462745-95ed-4cab-a7f5-e05cec6a07dc.fast5" has been loaded.
+2020-04-28 12:07:03.764609 [guppy/info] Read 'a96aad23-4125-499f-8b6b-f46ba67e4aa4' from file "a96aad23-4125-499f-8b6b-f46ba67e4aa4.fast5" has been loaded.
+2020-04-28 12:07:03.764628 [guppy/info] Read '0513f329-fac7-476f-94ce-d5c959229688' from file "0513f329-fac7-476f-94ce-d5c959229688.fast5" has been loaded.
+2020-04-28 12:07:03.774697 [guppy/info] Read '956e122c-29eb-453c-9286-458e8d3bc2e4' from file "956e122c-29eb-453c-9286-458e8d3bc2e4.fast5" has been loaded.
+2020-04-28 12:07:03.774724 [guppy/info] Read 'fdb4b486-a325-4312-848d-78234458a0b9' from file "fdb4b486-a325-4312-848d-78234458a0b9.fast5" has been loaded.
+2020-04-28 12:07:03.774739 [guppy/info] Read 'b843a5b7-97aa-4906-ab00-879f5ae1211d' from file "b843a5b7-97aa-4906-ab00-879f5ae1211d.fast5" has been loaded.
+2020-04-28 12:07:03.774750 [guppy/info] Read '4a90c25c-3bdc-42ed-b520-d0e9d6244e16' from file "4a90c25c-3bdc-42ed-b520-d0e9d6244e16.fast5" has been loaded.
+2020-04-28 12:07:03.774761 [guppy/info] Read '499641fb-c566-448f-b69e-bdb298fcfa48' from file "499641fb-c566-448f-b69e-bdb298fcfa48.fast5" has been loaded.
+2020-04-28 12:07:03.774771 [guppy/info] Read '8e880fff-e407-4512-aa90-1214fff9bad3' from file "8e880fff-e407-4512-aa90-1214fff9bad3.fast5" has been loaded.
+2020-04-28 12:07:03.774781 [guppy/info] Read '908f43e2-c64d-450b-8925-fae25af4e1da' from file "908f43e2-c64d-450b-8925-fae25af4e1da.fast5" has been loaded.
+2020-04-28 12:07:03.784860 [guppy/info] Read '6f9b143c-04b4-4147-9815-091e576e1058' from file "6f9b143c-04b4-4147-9815-091e576e1058.fast5" has been loaded.
+2020-04-28 12:07:03.787167 [guppy/info] Read 'd9e26fa6-013c-49e4-ab3f-33e6536651bf' from file "d9e26fa6-013c-49e4-ab3f-33e6536651bf.fast5" has been loaded.
+2020-04-28 12:07:03.787185 [guppy/info] Read '245653d2-dc5f-47b1-986f-784a010fff60' from file "245653d2-dc5f-47b1-986f-784a010fff60.fast5" has been loaded.
+2020-04-28 12:07:03.787197 [guppy/info] Read 'a05be6ce-85a9-4dac-8e2c-a09263711056' from file "a05be6ce-85a9-4dac-8e2c-a09263711056.fast5" has been loaded.
+2020-04-28 12:07:03.787207 [guppy/info] Read '26959a37-38de-4b21-98e9-052c5741c219' from file "26959a37-38de-4b21-98e9-052c5741c219.fast5" has been loaded.
+2020-04-28 12:07:03.787218 [guppy/info] Read 'f3532b4b-729c-4f80-954f-0ebae8200e47' from file "f3532b4b-729c-4f80-954f-0ebae8200e47.fast5" has been loaded.
+2020-04-28 12:07:03.787228 [guppy/info] Read 'bc2bb52e-9c57-4979-b033-6a47fb29af39' from file "bc2bb52e-9c57-4979-b033-6a47fb29af39.fast5" has been loaded.
+2020-04-28 12:07:03.787238 [guppy/info] Read '2a1a0159-6441-436e-ad55-30b525ba57ee' from file "2a1a0159-6441-436e-ad55-30b525ba57ee.fast5" has been loaded.
+2020-04-28 12:07:03.787248 [guppy/info] Read '2d4cc6b1-e52c-42d4-80c2-b59003d2ddc3' from file "2d4cc6b1-e52c-42d4-80c2-b59003d2ddc3.fast5" has been loaded.
+2020-04-28 12:07:03.797329 [guppy/info] Read '6322f748-c1fe-4bd3-a34f-8719fedcd37a' from file "6322f748-c1fe-4bd3-a34f-8719fedcd37a.fast5" has been loaded.
+2020-04-28 12:07:03.798234 [guppy/info] Read '3433225e-89e2-41a0-9737-161c1fefaf17' from file "3433225e-89e2-41a0-9737-161c1fefaf17.fast5" has been loaded.
+2020-04-28 12:07:03.798248 [guppy/info] Read 'ecf99359-693b-4d2e-9607-f266fcd1c33a' from file "ecf99359-693b-4d2e-9607-f266fcd1c33a.fast5" has been loaded.
+2020-04-28 12:07:03.798259 [guppy/info] Read '7cdb9bcf-bb5d-4cd4-9acc-a25416034eee' from file "7cdb9bcf-bb5d-4cd4-9acc-a25416034eee.fast5" has been loaded.
+2020-04-28 12:07:03.798270 [guppy/info] Read '4ee5e630-0cc0-47e1-9a1a-d3cf17091898' from file "4ee5e630-0cc0-47e1-9a1a-d3cf17091898.fast5" has been loaded.
+2020-04-28 12:07:03.798280 [guppy/info] Read '8d3572de-7e95-4b2c-bfe2-96f3a56218d6' from file "8d3572de-7e95-4b2c-bfe2-96f3a56218d6.fast5" has been loaded.
+2020-04-28 12:07:03.798290 [guppy/info] Read 'c872b44a-6fa8-465c-a55d-a34fb33375e5' from file "c872b44a-6fa8-465c-a55d-a34fb33375e5.fast5" has been loaded.
+2020-04-28 12:07:03.798300 [guppy/info] Read '1e850816-890a-4d06-820c-53365368a05f' from file "1e850816-890a-4d06-820c-53365368a05f.fast5" has been loaded.
+2020-04-28 12:07:03.798310 [guppy/info] Read '4d6cdaf5-fa2d-46d2-92ef-002999b9f07e' from file "4d6cdaf5-fa2d-46d2-92ef-002999b9f07e.fast5" has been loaded.
+2020-04-28 12:07:03.808393 [guppy/info] Read '0ec9d31f-a8d7-4490-8377-7e73f211a670' from file "0ec9d31f-a8d7-4490-8377-7e73f211a670.fast5" has been loaded.
+2020-04-28 12:07:03.808428 [guppy/info] Read '923edfa2-3d03-4944-b757-adc406525406' from file "923edfa2-3d03-4944-b757-adc406525406.fast5" has been loaded.
+2020-04-28 12:07:03.808440 [guppy/info] Read 'faf567d4-f9bd-42f8-8531-446faa5ff7bd' from file "faf567d4-f9bd-42f8-8531-446faa5ff7bd.fast5" has been loaded.
+2020-04-28 12:07:03.808450 [guppy/info] Read '0f5cb484-c1fd-49ea-838a-7e56e0c0b887' from file "0f5cb484-c1fd-49ea-838a-7e56e0c0b887.fast5" has been loaded.
+2020-04-28 12:07:03.808460 [guppy/info] Read '399736f2-013e-4e56-875a-997eb1716e29' from file "399736f2-013e-4e56-875a-997eb1716e29.fast5" has been loaded.
+2020-04-28 12:07:03.808469 [guppy/info] Read '0098b822-4b8d-41b0-9573-073957a4f092' from file "0098b822-4b8d-41b0-9573-073957a4f092.fast5" has been loaded.
+2020-04-28 12:07:03.808480 [guppy/info] Read '114dba1d-b5ac-45b7-92f0-5581dbf38219' from file "114dba1d-b5ac-45b7-92f0-5581dbf38219.fast5" has been loaded.
+2020-04-28 12:07:03.808490 [guppy/info] Read 'b58c8136-cf59-4e3e-b119-99c2e2a9048f' from file "b58c8136-cf59-4e3e-b119-99c2e2a9048f.fast5" has been loaded.
+2020-04-28 12:07:03.808500 [guppy/info] Read 'ce4b5e25-7bb6-4047-aeac-ad1d8205cccb' from file "ce4b5e25-7bb6-4047-aeac-ad1d8205cccb.fast5" has been loaded.
+2020-04-28 12:07:03.808604 [guppy/info] Read '2bba0650-33a6-4e33-a39e-a75fa6345032' from file "2bba0650-33a6-4e33-a39e-a75fa6345032.fast5" has been loaded.
+2020-04-28 12:07:03.818677 [guppy/info] Read 'e23f94d6-308c-4bec-a9f7-4f5e7a044081' from file "e23f94d6-308c-4bec-a9f7-4f5e7a044081.fast5" has been loaded.
+2020-04-28 12:07:03.819655 [guppy/info] Read '52d6a7bf-f4ad-4689-ae17-273c92853b93' from file "52d6a7bf-f4ad-4689-ae17-273c92853b93.fast5" has been loaded.
+2020-04-28 12:07:03.819670 [guppy/info] Read '8e0d982c-dcdd-4603-a208-9cb4dc0c8697' from file "8e0d982c-dcdd-4603-a208-9cb4dc0c8697.fast5" has been loaded.
+2020-04-28 12:07:03.819682 [guppy/info] Read 'ebf34f79-5f86-4566-a891-88648fcb4b19' from file "ebf34f79-5f86-4566-a891-88648fcb4b19.fast5" has been loaded.
+2020-04-28 12:07:03.819692 [guppy/info] Read 'ef38af56-6f45-4dd0-a9ed-d77b27234adb' from file "ef38af56-6f45-4dd0-a9ed-d77b27234adb.fast5" has been loaded.
+2020-04-28 12:07:03.819702 [guppy/info] Read 'a694dc63-a960-4c7b-84a6-6904c6e46f30' from file "a694dc63-a960-4c7b-84a6-6904c6e46f30.fast5" has been loaded.
+2020-04-28 12:07:03.819713 [guppy/info] Read 'f3a63161-dbd1-4989-83ee-361e50a5d93a' from file "f3a63161-dbd1-4989-83ee-361e50a5d93a.fast5" has been loaded.
+2020-04-28 12:07:03.819723 [guppy/info] Read '8e717764-9e77-46d8-80cb-efbd8938cf1b' from file "8e717764-9e77-46d8-80cb-efbd8938cf1b.fast5" has been loaded.
+2020-04-28 12:07:03.829800 [guppy/info] Read '5c4c9048-257b-458f-af31-ec885dfe6d46' from file "5c4c9048-257b-458f-af31-ec885dfe6d46.fast5" has been loaded.
+2020-04-28 12:07:03.829844 [guppy/info] Read '5bb17f73-10b7-4920-a407-d15ad33f98ea' from file "5bb17f73-10b7-4920-a407-d15ad33f98ea.fast5" has been loaded.
+2020-04-28 12:07:03.829858 [guppy/info] Dispatched batch 0 containing 252 inputs:
+2020-04-28 12:07:03.829891 [guppy/info] Batch input 0 : reorg_singlefast5/e8a09ee2-058d-4873-ab04-99eb3190de3f.fast5
+2020-04-28 12:07:03.829897 [guppy/info] Batch input 0 : reorg_singlefast5/afbfa212-2c1b-40e2-81f4-c0a86079c8d0.fast5
+2020-04-28 12:07:03.829901 [guppy/info] Batch input 0 : reorg_singlefast5/aa7863a8-f635-498d-a4fd-e531bbfa6e58.fast5
+2020-04-28 12:07:03.829905 [guppy/info] Batch input 0 : reorg_singlefast5/7dc5727e-9716-4b04-a190-dca3a04e9af8.fast5
+2020-04-28 12:07:03.829909 [guppy/info] Batch input 0 : reorg_singlefast5/a63167dc-d481-4247-b264-a1f6a3827080.fast5
+2020-04-28 12:07:03.829913 [guppy/info] Batch input 0 : reorg_singlefast5/4be7efb1-398e-43a2-842e-bac0bd053b41.fast5
+2020-04-28 12:07:03.829917 [guppy/info] Batch input 0 : reorg_singlefast5/c145c07a-39cb-425c-8a54-7a13dfa1233a.fast5
+2020-04-28 12:07:03.829921 [guppy/info] Batch input 0 : reorg_singlefast5/387e3e1d-cfd7-4f28-935e-0c40cc567a2b.fast5
+2020-04-28 12:07:03.829932 [guppy/info] Batch input 0 : reorg_singlefast5/aa5fe8a4-2606-4f21-b540-e4c6460e5072.fast5
+2020-04-28 12:07:03.829936 [guppy/info] Batch input 0 : reorg_singlefast5/a2f83504-449e-45ec-b035-a34c9cfabec3.fast5
+2020-04-28 12:07:03.829940 [guppy/info] Batch input 0 : reorg_singlefast5/bb20f2e0-52a9-4265-9de7-3c0240fa4944.fast5
+2020-04-28 12:07:03.829944 [guppy/info] Batch input 0 : reorg_singlefast5/99148061-0834-4aa6-9594-b636ff2622d4.fast5
+2020-04-28 12:07:03.829948 [guppy/info] Batch input 0 : reorg_singlefast5/bac2d5bf-13ef-4b31-9dc5-0399519a1645.fast5
+2020-04-28 12:07:03.829951 [guppy/info] Batch input 0 : reorg_singlefast5/e470b4c9-72d8-4306-a873-297f98015001.fast5
+2020-04-28 12:07:03.829955 [guppy/info] Batch input 0 : reorg_singlefast5/a9894e69-e1c5-46e2-84fa-ca91399136bc.fast5
+2020-04-28 12:07:03.829959 [guppy/info] Batch input 0 : reorg_singlefast5/d3d661c1-a744-4a63-ad2e-d30f9c79d08d.fast5
+2020-04-28 12:07:03.829963 [guppy/info] Batch input 0 : reorg_singlefast5/790c08bd-684d-4e06-8757-c39f2395351b.fast5
+2020-04-28 12:07:03.829967 [guppy/info] Batch input 0 : reorg_singlefast5/75edfe80-6c7a-4624-95f8-9f52e3c4439d.fast5
+2020-04-28 12:07:03.829970 [guppy/info] Batch input 0 : reorg_singlefast5/6d42c546-4026-414e-a621-242a253313c4.fast5
+2020-04-28 12:07:03.829974 [guppy/info] Batch input 0 : reorg_singlefast5/42aa6a0f-36d3-4b02-a737-2292628d4576.fast5
+2020-04-28 12:07:03.829978 [guppy/info] Batch input 0 : reorg_singlefast5/d5d95d5b-afc7-4edb-897e-ae58dd87708a.fast5
+2020-04-28 12:07:03.829982 [guppy/info] Batch input 0 : reorg_singlefast5/ffcdac70-fec1-4e7e-8369-a549582a83d2.fast5
+2020-04-28 12:07:03.829986 [guppy/info] Batch input 0 : reorg_singlefast5/bad9f66f-1288-442a-965d-8f33666d52e8.fast5
+2020-04-28 12:07:03.829989 [guppy/info] Batch input 0 : reorg_singlefast5/f3021c21-5023-4c39-8b79-00bf87d878c3.fast5
+2020-04-28 12:07:03.829993 [guppy/info] Batch input 0 : reorg_singlefast5/14f8b17d-b4a9-4503-a5c7-2191a4165e21.fast5
+2020-04-28 12:07:03.829997 [guppy/info] Batch input 0 : reorg_singlefast5/38fc9ec6-3fb1-4251-b23f-b2c2bb236b45.fast5
+2020-04-28 12:07:03.830001 [guppy/info] Batch input 0 : reorg_singlefast5/c836f151-fd65-452f-9db0-8b6c83479488.fast5
+2020-04-28 12:07:03.830005 [guppy/info] Batch input 0 : reorg_singlefast5/7dcac916-1931-4316-bb55-d7b5e4019818.fast5
+2020-04-28 12:07:03.830008 [guppy/info] Batch input 0 : reorg_singlefast5/e9bd8783-ac3c-4bbf-94cb-0bf2ff5ff61a.fast5
+2020-04-28 12:07:03.830012 [guppy/info] Batch input 0 : reorg_singlefast5/5c7b2535-388f-41d5-8b39-93690897376c.fast5
+2020-04-28 12:07:03.830016 [guppy/info] Batch input 0 : reorg_singlefast5/81ae5d0b-7517-4916-ab1f-0c824b0ecda6.fast5
+2020-04-28 12:07:03.830020 [guppy/info] Batch input 0 : reorg_singlefast5/07f13b1d-93f1-4b4b-8978-dc0ece350eaa.fast5
+2020-04-28 12:07:03.830023 [guppy/info] Batch input 0 : reorg_singlefast5/fda83784-4ee9-4df4-b175-5cce727f45ee.fast5
+2020-04-28 12:07:03.830027 [guppy/info] Batch input 0 : reorg_singlefast5/d0652af3-cf2d-4271-a853-c824374e7aef.fast5
+2020-04-28 12:07:03.830031 [guppy/info] Batch input 0 : reorg_singlefast5/cfefa04a-b45e-4581-827b-8c13d4f4223b.fast5
+2020-04-28 12:07:03.830035 [guppy/info] Batch input 0 : reorg_singlefast5/02192130-16b7-4214-b258-79a8279f07cf.fast5
+2020-04-28 12:07:03.830038 [guppy/info] Batch input 0 : reorg_singlefast5/58060894-11dd-4c08-9650-b330fda0f9cd.fast5
+2020-04-28 12:07:03.830042 [guppy/info] Batch input 0 : reorg_singlefast5/b7ce19d7-11a8-4ccc-a4f0-60847e270654.fast5
+2020-04-28 12:07:03.830046 [guppy/info] Batch input 0 : reorg_singlefast5/20e04879-a854-4822-ba0b-9494c7641c59.fast5
+2020-04-28 12:07:03.830050 [guppy/info] Batch input 0 : reorg_singlefast5/ea12ee6f-acd4-4b05-afbc-a220eacfce0e.fast5
+2020-04-28 12:07:03.830054 [guppy/info] Batch input 0 : reorg_singlefast5/b110acc2-d2ba-4138-b071-faf69fd1a34b.fast5
+2020-04-28 12:07:03.830057 [guppy/info] Batch input 0 : reorg_singlefast5/6a85db1c-7759-408c-99ac-153b19bfb01c.fast5
+2020-04-28 12:07:03.830061 [guppy/info] Batch input 0 : reorg_singlefast5/0100e84e-b217-4960-8eb4-081f8ee83f82.fast5
+2020-04-28 12:07:03.830067 [guppy/info] Batch input 0 : reorg_singlefast5/156131a5-07e6-4bba-8f2e-3f4a39517931.fast5
+2020-04-28 12:07:03.830071 [guppy/info] Batch input 0 : reorg_singlefast5/b65dfb29-0d5b-404f-8c67-01c2d7389026.fast5
+2020-04-28 12:07:03.830075 [guppy/info] Batch input 0 : reorg_singlefast5/3ccc3726-9164-4f37-b55f-63387978f1f0.fast5
+2020-04-28 12:07:03.830078 [guppy/info] Batch input 0 : reorg_singlefast5/844c8f5c-62e6-4275-8495-c881f6765aaa.fast5
+2020-04-28 12:07:03.830082 [guppy/info] Batch input 0 : reorg_singlefast5/99fbec22-82db-4000-9778-5ca2ea19a7a6.fast5
+2020-04-28 12:07:03.830086 [guppy/info] Batch input 0 : reorg_singlefast5/e1ffaa9b-002d-4f45-88ed-5354de30fe11.fast5
+2020-04-28 12:07:03.830093 [guppy/info] Batch input 0 : reorg_singlefast5/27ac20d2-8acc-47a8-98d0-b86d222c6c18.fast5
+2020-04-28 12:07:03.830097 [guppy/info] Batch input 0 : reorg_singlefast5/618e3047-9fb1-4273-8636-8e9ddc500a8b.fast5
+2020-04-28 12:07:03.830100 [guppy/info] Batch input 0 : reorg_singlefast5/f6189de4-8898-40f3-9ded-09669143c35c.fast5
+2020-04-28 12:07:03.830104 [guppy/info] Batch input 0 : reorg_singlefast5/0a61b2b7-7d8b-4845-86d7-a4086ea05e4c.fast5
+2020-04-28 12:07:03.830108 [guppy/info] Batch input 0 : reorg_singlefast5/515c27bc-9590-4584-8d1a-383a3de6169f.fast5
+2020-04-28 12:07:03.830112 [guppy/info] Batch input 0 : reorg_singlefast5/e02a0642-83ff-446f-9549-a80e77f85a41.fast5
+2020-04-28 12:07:03.830115 [guppy/info] Batch input 0 : reorg_singlefast5/aa625a7a-6e41-494e-b6c2-f125189bd3b3.fast5
+2020-04-28 12:07:03.830119 [guppy/info] Batch input 0 : reorg_singlefast5/17f439c5-298b-4816-9640-8a4332c5bcd1.fast5
+2020-04-28 12:07:03.830123 [guppy/info] Batch input 0 : reorg_singlefast5/7613827b-9093-4d6f-85d4-fbf6ab9ca360.fast5
+2020-04-28 12:07:03.830127 [guppy/info] Batch input 0 : reorg_singlefast5/36673890-fe45-415d-92fd-2cdb513e8286.fast5
+2020-04-28 12:07:03.830131 [guppy/info] Batch input 0 : reorg_singlefast5/95f1a234-ccc5-437e-8021-e12c88c67de7.fast5
+2020-04-28 12:07:03.830134 [guppy/info] Batch input 0 : reorg_singlefast5/16f548e8-d310-48b3-96ec-82e699fded8b.fast5
+2020-04-28 12:07:03.830138 [guppy/info] Batch input 0 : reorg_singlefast5/a39b0fcd-5dc8-42c3-bb20-ba05c0bb30a4.fast5
+2020-04-28 12:07:03.830142 [guppy/info] Batch input 0 : reorg_singlefast5/c5c193ef-2d20-4fdf-9b10-8e1a89128564.fast5
+2020-04-28 12:07:03.830145 [guppy/info] Batch input 0 : reorg_singlefast5/f2b3b46a-2e60-495f-bdc6-d25b762ad3db.fast5
+2020-04-28 12:07:03.830149 [guppy/info] Batch input 0 : reorg_singlefast5/ad158df1-1503-4e32-8abc-4845f1173742.fast5
+2020-04-28 12:07:03.830153 [guppy/info] Batch input 0 : reorg_singlefast5/8f82dbab-82fb-4711-9376-69c1f5db9680.fast5
+2020-04-28 12:07:03.830157 [guppy/info] Batch input 0 : reorg_singlefast5/7413169f-9188-49bf-ac29-a27376b5db72.fast5
+2020-04-28 12:07:03.830160 [guppy/info] Batch input 0 : reorg_singlefast5/2f929475-128c-4089-9cd9-7c6d26bd8627.fast5
+2020-04-28 12:07:03.830165 [guppy/info] Batch input 0 : reorg_singlefast5/dde5702f-01e7-4253-b53e-8030c7532a63.fast5
+2020-04-28 12:07:03.830169 [guppy/info] Batch input 0 : reorg_singlefast5/5acb5376-096b-42e2-986d-2f05158cd3d1.fast5
+2020-04-28 12:07:03.830173 [guppy/info] Batch input 0 : reorg_singlefast5/51f97946-3252-4cb6-a981-064306a06441.fast5
+2020-04-28 12:07:03.830177 [guppy/info] Batch input 0 : reorg_singlefast5/a8f34ac6-62ab-41ff-b47d-6bdb07055006.fast5
+2020-04-28 12:07:03.830181 [guppy/info] Batch input 0 : reorg_singlefast5/ad66347a-983f-478d-bf95-187e2c4fa775.fast5
+2020-04-28 12:07:03.830185 [guppy/info] Batch input 0 : reorg_singlefast5/fafc3799-ef8e-4fd5-8aad-afd0888e1c0f.fast5
+2020-04-28 12:07:03.830189 [guppy/info] Batch input 0 : reorg_singlefast5/04e2797e-6a65-497f-a15f-efeaf65d5ff8.fast5
+2020-04-28 12:07:03.830192 [guppy/info] Batch input 0 : reorg_singlefast5/693dfb92-cb56-4c85-982f-9cc6441f7cac.fast5
+2020-04-28 12:07:03.830196 [guppy/info] Batch input 0 : reorg_singlefast5/cc3a8924-400a-49d3-8e8d-152fc79f411b.fast5
+2020-04-28 12:07:03.830200 [guppy/info] Batch input 0 : reorg_singlefast5/e94c95aa-55a7-4156-bc4b-74c1e853038d.fast5
+2020-04-28 12:07:03.830206 [guppy/info] Batch input 0 : reorg_singlefast5/e4bbfb5a-d8aa-4d3e-a643-cf2e64efd696.fast5
+2020-04-28 12:07:03.830210 [guppy/info] Batch input 0 : reorg_singlefast5/86029047-e93c-4b28-ae3a-41798474b122.fast5
+2020-04-28 12:07:03.830214 [guppy/info] Batch input 0 : reorg_singlefast5/dc35f49c-4ab4-4cca-a315-d9d411b7dfaf.fast5
+2020-04-28 12:07:03.830217 [guppy/info] Batch input 0 : reorg_singlefast5/4c730d42-21b3-4149-b46f-141392b38586.fast5
+2020-04-28 12:07:03.830221 [guppy/info] Batch input 0 : reorg_singlefast5/58178eb5-8792-442f-bbb1-9f1c686ac6f0.fast5
+2020-04-28 12:07:03.830225 [guppy/info] Batch input 0 : reorg_singlefast5/a4c49b03-09a9-49ef-b8d2-e806daf64224.fast5
+2020-04-28 12:07:03.830229 [guppy/info] Batch input 0 : reorg_singlefast5/1dc31553-fe65-4ff2-b902-6502a28b53b9.fast5
+2020-04-28 12:07:03.830233 [guppy/info] Batch input 0 : reorg_singlefast5/4ad71129-6602-4696-81a8-2d455e043ca0.fast5
+2020-04-28 12:07:03.830236 [guppy/info] Batch input 0 : reorg_singlefast5/bebd15e5-fb2e-41e6-b194-68a61e9b7b05.fast5
+2020-04-28 12:07:03.830240 [guppy/info] Batch input 0 : reorg_singlefast5/024a83db-c1c4-4a45-bfac-73790ac88ce6.fast5
+2020-04-28 12:07:03.830244 [guppy/info] Batch input 0 : reorg_singlefast5/13d478fd-435c-41f8-9350-b8da9831fe74.fast5
+2020-04-28 12:07:03.830248 [guppy/info] Batch input 0 : reorg_singlefast5/7aecaa2f-5bdf-4bc9-aea5-06386a67af45.fast5
+2020-04-28 12:07:03.830251 [guppy/info] Batch input 0 : reorg_singlefast5/7123623c-9fcc-447b-a624-b32cfa21cae4.fast5
+2020-04-28 12:07:03.830255 [guppy/info] Batch input 0 : reorg_singlefast5/66bdb0d6-631f-4910-a699-67313159e8e6.fast5
+2020-04-28 12:07:03.830259 [guppy/info] Batch input 0 : reorg_singlefast5/80648d5a-12c2-4dea-ab4d-0a034ac25210.fast5
+2020-04-28 12:07:03.830263 [guppy/info] Batch input 0 : reorg_singlefast5/43979774-9ad8-4b8d-b398-57a217ea7b1c.fast5
+2020-04-28 12:07:03.830266 [guppy/info] Batch input 0 : reorg_singlefast5/c39fc548-4712-4283-a40d-343256240481.fast5
+2020-04-28 12:07:03.830270 [guppy/info] Batch input 0 : reorg_singlefast5/1e988e7a-fcb5-493d-910a-e1b7644ed5ab.fast5
+2020-04-28 12:07:03.830274 [guppy/info] Batch input 0 : reorg_singlefast5/481d0b8c-0f06-4fbf-b915-aa4337c66171.fast5
+2020-04-28 12:07:03.830278 [guppy/info] Batch input 0 : reorg_singlefast5/010ac325-d26a-40e2-b55c-1f84689ae41a.fast5
+2020-04-28 12:07:03.830281 [guppy/info] Batch input 0 : reorg_singlefast5/c0002b7c-c612-4a92-b033-7ed74cb59c73.fast5
+2020-04-28 12:07:03.830285 [guppy/info] Batch input 0 : reorg_singlefast5/8f5f15ee-7b42-4bb1-9f62-cebefbac7683.fast5
+2020-04-28 12:07:03.830289 [guppy/info] Batch input 0 : reorg_singlefast5/1ba2c497-0016-4b41-a18e-cb993728ce5b.fast5
+2020-04-28 12:07:03.830294 [guppy/info] Batch input 0 : reorg_singlefast5/fa049bd4-47c6-4eda-ae8b-af9c91292f0b.fast5
+2020-04-28 12:07:03.830298 [guppy/info] Batch input 0 : reorg_singlefast5/79024b59-01bd-4dbe-b2a7-76f7b0c8cbc8.fast5
+2020-04-28 12:07:03.830302 [guppy/info] Batch input 0 : reorg_singlefast5/6c1cd21c-77b3-4e4b-8756-5bc60fe9aeae.fast5
+2020-04-28 12:07:03.830306 [guppy/info] Batch input 0 : reorg_singlefast5/0c4f1054-c932-4e01-b0cb-b1ef97f56c4e.fast5
+2020-04-28 12:07:03.830310 [guppy/info] Batch input 0 : reorg_singlefast5/dfcfe595-f944-4127-9861-75ce19697492.fast5
+2020-04-28 12:07:03.830313 [guppy/info] Batch input 0 : reorg_singlefast5/04de3e69-75ea-4299-a510-557ced9b6610.fast5
+2020-04-28 12:07:03.830317 [guppy/info] Batch input 0 : reorg_singlefast5/84001c37-643f-4342-82e4-84677df9fe86.fast5
+2020-04-28 12:07:03.830321 [guppy/info] Batch input 0 : reorg_singlefast5/6b5049cb-d13d-4808-8450-397a312d17b9.fast5
+2020-04-28 12:07:03.830325 [guppy/info] Batch input 0 : reorg_singlefast5/3bfff38a-faa2-4713-93fc-7055c05ab7d9.fast5
+2020-04-28 12:07:03.830328 [guppy/info] Batch input 0 : reorg_singlefast5/5c465ebe-2ad8-4458-b1c0-466fecf3fd91.fast5
+2020-04-28 12:07:03.830332 [guppy/info] Batch input 0 : reorg_singlefast5/9dde1bb5-f52c-4eba-b55c-27ae5a3b70d8.fast5
+2020-04-28 12:07:03.830336 [guppy/info] Batch input 0 : reorg_singlefast5/1c23c923-b875-402b-8791-619e3beac05e.fast5
+2020-04-28 12:07:03.830341 [guppy/info] Batch input 0 : reorg_singlefast5/3ea8fad4-76ce-4c3d-8760-2c287d6d2b17.fast5
+2020-04-28 12:07:03.830345 [guppy/info] Batch input 0 : reorg_singlefast5/493d8cb1-ca97-4ff1-a371-8b9ddbee5dd6.fast5
+2020-04-28 12:07:03.830349 [guppy/info] Batch input 0 : reorg_singlefast5/97f72a03-2e2a-4e89-991b-4e34c91ecbc5.fast5
+2020-04-28 12:07:03.830353 [guppy/info] Batch input 0 : reorg_singlefast5/11185a16-60ba-419a-b342-b1fb1b2f44e8.fast5
+2020-04-28 12:07:03.830357 [guppy/info] Batch input 0 : reorg_singlefast5/23992c44-279f-4bcd-a25d-8669d4111f9a.fast5
+2020-04-28 12:07:03.830360 [guppy/info] Batch input 0 : reorg_singlefast5/f68a7d29-07b0-48fa-90a6-abde5e8319ed.fast5
+2020-04-28 12:07:03.830364 [guppy/info] Batch input 0 : reorg_singlefast5/6783dd2e-f068-4665-bc34-475191bde1c2.fast5
+2020-04-28 12:07:03.830368 [guppy/info] Batch input 0 : reorg_singlefast5/a5f09217-d3ef-4025-bae4-b369d070a984.fast5
+2020-04-28 12:07:03.830372 [guppy/info] Batch input 0 : reorg_singlefast5/73f0ba4c-1893-468b-a9d4-ae897a533cbe.fast5
+2020-04-28 12:07:03.830376 [guppy/info] Batch input 0 : reorg_singlefast5/d4da37f9-0a37-4e61-9c22-7a7f4e127013.fast5
+2020-04-28 12:07:03.830380 [guppy/info] Batch input 0 : reorg_singlefast5/5aa4fd3c-f970-4127-a325-2e4e366a0cff.fast5
+2020-04-28 12:07:03.830384 [guppy/info] Batch input 0 : reorg_singlefast5/b1ef5ed7-8101-404e-a1d2-6090a7422cea.fast5
+2020-04-28 12:07:03.830387 [guppy/info] Batch input 0 : reorg_singlefast5/514b2a40-b7d9-4094-95f9-f03cbc6df6f2.fast5
+2020-04-28 12:07:03.830391 [guppy/info] Batch input 0 : reorg_singlefast5/f093a870-78da-43ca-8ab1-e752847f2b8c.fast5
+2020-04-28 12:07:03.830395 [guppy/info] Batch input 0 : reorg_singlefast5/3bc8ccb9-987e-4f4c-80ae-9be60c70a1e9.fast5
+2020-04-28 12:07:03.830399 [guppy/info] Batch input 0 : reorg_singlefast5/6c6534a9-c3da-4cda-be69-93943a1d5b76.fast5
+2020-04-28 12:07:03.830402 [guppy/info] Batch input 0 : reorg_singlefast5/1ae7cf1a-b8be-4cf0-9ee1-88a38c7e52ac.fast5
+2020-04-28 12:07:03.830406 [guppy/info] Batch input 0 : reorg_singlefast5/cee8317c-b192-4482-b9ed-a749adcc92f9.fast5
+2020-04-28 12:07:03.830410 [guppy/info] Batch input 0 : reorg_singlefast5/fe323748-25b5-4fb4-a639-429cdff108d2.fast5
+2020-04-28 12:07:03.830414 [guppy/info] Batch input 0 : reorg_singlefast5/029c7f77-e48d-4c2f-9ba4-94621e7d7d08.fast5
+2020-04-28 12:07:03.830418 [guppy/info] Batch input 0 : reorg_singlefast5/639b928a-0fb3-46a3-8e9e-b78c3fc013e7.fast5
+2020-04-28 12:07:03.830421 [guppy/info] Batch input 0 : reorg_singlefast5/ae85aba2-3f59-4be2-acd1-f492a7f2211b.fast5
+2020-04-28 12:07:03.830425 [guppy/info] Batch input 0 : reorg_singlefast5/40c28a13-0929-41db-9964-ae949ddc66b1.fast5
+2020-04-28 12:07:03.830429 [guppy/info] Batch input 0 : reorg_singlefast5/dfcafbb8-6bf7-42af-a52b-6e471102f599.fast5
+2020-04-28 12:07:03.830433 [guppy/info] Batch input 0 : reorg_singlefast5/e47bf1a0-7c17-4406-bc2c-d5f4d999de77.fast5
+2020-04-28 12:07:03.830436 [guppy/info] Batch input 0 : reorg_singlefast5/7e2004a1-9ab9-4aa9-ad6f-c93145ff6b0c.fast5
+2020-04-28 12:07:03.830440 [guppy/info] Batch input 0 : reorg_singlefast5/5f2c47dc-4ee3-4fa2-ae92-08c78ad77122.fast5
+2020-04-28 12:07:03.830444 [guppy/info] Batch input 0 : reorg_singlefast5/ca8dde64-61cd-422d-9347-f62845a36b19.fast5
+2020-04-28 12:07:03.830448 [guppy/info] Batch input 0 : reorg_singlefast5/8ca1b365-e5dd-4594-bb4b-4003c8315275.fast5
+2020-04-28 12:07:03.830451 [guppy/info] Batch input 0 : reorg_singlefast5/482958b6-0c64-4568-bca0-fe4eb82a4f58.fast5
+2020-04-28 12:07:03.830457 [guppy/info] Batch input 0 : reorg_singlefast5/c70d2951-680c-4f52-962c-5fbffd316367.fast5
+2020-04-28 12:07:03.830460 [guppy/info] Batch input 0 : reorg_singlefast5/60823b6d-6482-401c-a40a-99c785b1c9c0.fast5
+2020-04-28 12:07:03.830464 [guppy/info] Batch input 0 : reorg_singlefast5/b986b1f7-4157-44af-acbe-1a072634b7bc.fast5
+2020-04-28 12:07:03.830468 [guppy/info] Batch input 0 : reorg_singlefast5/913e1853-7b90-42ba-8fb8-eda7dd6b1cec.fast5
+2020-04-28 12:07:03.830472 [guppy/info] Batch input 0 : reorg_singlefast5/41ca9451-0431-436b-99fa-404c75402407.fast5
+2020-04-28 12:07:03.830477 [guppy/info] Batch input 0 : reorg_singlefast5/d17cb045-1904-46e4-849b-32673cab5c7c.fast5
+2020-04-28 12:07:03.830481 [guppy/info] Batch input 0 : reorg_singlefast5/e862690d-e0c4-45db-8e8c-b032afd3de3c.fast5
+2020-04-28 12:07:03.830485 [guppy/info] Batch input 0 : reorg_singlefast5/5b7429e4-6e2f-456e-8a5e-556a5c9e6332.fast5
+2020-04-28 12:07:03.830489 [guppy/info] Batch input 0 : reorg_singlefast5/01e21949-24e7-4adb-ba7d-97dc623c90ce.fast5
+2020-04-28 12:07:03.830492 [guppy/info] Batch input 0 : reorg_singlefast5/d875e4ee-af78-4992-837e-3848489f9bdf.fast5
+2020-04-28 12:07:03.830496 [guppy/info] Batch input 0 : reorg_singlefast5/83e92c1a-5e6f-4d1d-8193-8000886b83ab.fast5
+2020-04-28 12:07:03.830500 [guppy/info] Batch input 0 : reorg_singlefast5/a4d9b80a-e11c-4132-91be-411532d362ad.fast5
+2020-04-28 12:07:03.830504 [guppy/info] Batch input 0 : reorg_singlefast5/9fd5487e-767b-43b9-8def-1c2aa7b0d77c.fast5
+2020-04-28 12:07:03.830507 [guppy/info] Batch input 0 : reorg_singlefast5/0ce4eb1a-3b52-4b0a-87c6-d811b90c10a5.fast5
+2020-04-28 12:07:03.830512 [guppy/info] Batch input 0 : reorg_singlefast5/d44238e6-cd71-4c05-a9fe-c842f49edc6d.fast5
+2020-04-28 12:07:03.830515 [guppy/info] Batch input 0 : reorg_singlefast5/b438db5c-f6de-46bf-aaae-0094c9f6880e.fast5
+2020-04-28 12:07:03.830519 [guppy/info] Batch input 0 : reorg_singlefast5/108d6c19-5cb9-4164-ae36-35ed222db54f.fast5
+2020-04-28 12:07:03.830523 [guppy/info] Batch input 0 : reorg_singlefast5/c67a8951-6922-42c6-881a-6d135fba530f.fast5
+2020-04-28 12:07:03.830527 [guppy/info] Batch input 0 : reorg_singlefast5/b989a0b8-8c30-4fd6-aa5b-24971e8b0564.fast5
+2020-04-28 12:07:03.830530 [guppy/info] Batch input 0 : reorg_singlefast5/1ec1b2f7-ef96-436c-a351-30d70ce5a510.fast5
+2020-04-28 12:07:03.830534 [guppy/info] Batch input 0 : reorg_singlefast5/3786232b-81e5-48c9-930d-d127ea8dc280.fast5
+2020-04-28 12:07:03.830538 [guppy/info] Batch input 0 : reorg_singlefast5/a29d2951-7e8e-4e0f-b336-8e85b707dbf9.fast5
+2020-04-28 12:07:03.830542 [guppy/info] Batch input 0 : reorg_singlefast5/3b35e502-8928-44cd-a02d-6b53aeef868b.fast5
+2020-04-28 12:07:03.830546 [guppy/info] Batch input 0 : reorg_singlefast5/1a3a80fd-2639-4a7d-8527-a2fb07c2e32c.fast5
+2020-04-28 12:07:03.830549 [guppy/info] Batch input 0 : reorg_singlefast5/6d162eff-dffe-4724-ae70-f65d5448742b.fast5
+2020-04-28 12:07:03.830553 [guppy/info] Batch input 0 : reorg_singlefast5/1bdd47a6-b65f-4c7a-b268-037b934b65b6.fast5
+2020-04-28 12:07:03.830557 [guppy/info] Batch input 0 : reorg_singlefast5/1cefba6b-9517-4d14-8b03-2edfb2e67ab3.fast5
+2020-04-28 12:07:03.830561 [guppy/info] Batch input 0 : reorg_singlefast5/0b9c1661-6b44-4f8f-b93d-a60a80910cca.fast5
+2020-04-28 12:07:03.830564 [guppy/info] Batch input 0 : reorg_singlefast5/2324a99e-a52b-4ccb-b6f7-0d13f2877bbf.fast5
+2020-04-28 12:07:03.830568 [guppy/info] Batch input 0 : reorg_singlefast5/51d85c67-68aa-4901-a582-28f876b1e428.fast5
+2020-04-28 12:07:03.830572 [guppy/info] Batch input 0 : reorg_singlefast5/b86e586f-b070-4230-a7f3-7224535e06ab.fast5
+2020-04-28 12:07:03.830576 [guppy/info] Batch input 0 : reorg_singlefast5/6de9b5a0-516c-45a6-9d3c-4566c7eed4d7.fast5
+2020-04-28 12:07:03.830579 [guppy/info] Batch input 0 : reorg_singlefast5/614a4ea1-a49c-4fdc-9365-d7a2426e0f42.fast5
+2020-04-28 12:07:03.830583 [guppy/info] Batch input 0 : reorg_singlefast5/0d64772e-0aba-4cd0-97eb-7157c22585c2.fast5
+2020-04-28 12:07:03.830587 [guppy/info] Batch input 0 : reorg_singlefast5/5d9deab3-3fed-478c-aeed-3f2239d16386.fast5
+2020-04-28 12:07:03.830591 [guppy/info] Batch input 0 : reorg_singlefast5/1a0b3e8b-3b1c-4984-84ac-eac22ea39c84.fast5
+2020-04-28 12:07:03.830595 [guppy/info] Batch input 0 : reorg_singlefast5/19299a9e-075b-4cd7-89ec-8e1be16d8afc.fast5
+2020-04-28 12:07:03.830598 [guppy/info] Batch input 0 : reorg_singlefast5/2310914a-c120-4e40-910d-45ee042f10a3.fast5
+2020-04-28 12:07:03.830602 [guppy/info] Batch input 0 : reorg_singlefast5/997ab7ed-d83c-462b-8cf6-e0c8f958cd98.fast5
+2020-04-28 12:07:03.830606 [guppy/info] Batch input 0 : reorg_singlefast5/61576778-780e-4f35-9cde-504fa693537f.fast5
+2020-04-28 12:07:03.830613 [guppy/info] Batch input 0 : reorg_singlefast5/75e82310-02dd-4f62-b1f0-b4afb212d0d8.fast5
+2020-04-28 12:07:03.830616 [guppy/info] Batch input 0 : reorg_singlefast5/2ae54705-a763-44d3-96d5-8c6c30c78072.fast5
+2020-04-28 12:07:03.830622 [guppy/info] Batch input 0 : reorg_singlefast5/89e4482e-721d-4ad5-bd85-8e9a598f2da0.fast5
+2020-04-28 12:07:03.830625 [guppy/info] Batch input 0 : reorg_singlefast5/232b120e-fe3c-497e-8ee7-39b10ec9d1a8.fast5
+2020-04-28 12:07:03.830631 [guppy/info] Batch input 0 : reorg_singlefast5/6307891f-93e7-4693-ab5b-b8d7054ac3c5.fast5
+2020-04-28 12:07:03.830635 [guppy/info] Batch input 0 : reorg_singlefast5/4814db1d-49c8-4b7e-9f5c-bc82f00af0b4.fast5
+2020-04-28 12:07:03.830639 [guppy/info] Batch input 0 : reorg_singlefast5/5726b9ad-181f-47f8-b0ed-e3a6962f1dcf.fast5
+2020-04-28 12:07:03.830642 [guppy/info] Batch input 0 : reorg_singlefast5/dc349f70-34fd-4fff-abfc-61c8d38db00c.fast5
+2020-04-28 12:07:03.830646 [guppy/info] Batch input 0 : reorg_singlefast5/76a2f3de-2d92-460d-97d3-64cfaa08169c.fast5
+2020-04-28 12:07:03.830650 [guppy/info] Batch input 0 : reorg_singlefast5/1ab7ddf1-41d2-4c6b-a143-d46634b45689.fast5
+2020-04-28 12:07:03.830654 [guppy/info] Batch input 0 : reorg_singlefast5/ea786a64-c9be-4aa2-9e9a-c2df967dac53.fast5
+2020-04-28 12:07:03.830657 [guppy/info] Batch input 0 : reorg_singlefast5/c694c327-475b-4003-ad1e-16bb11ac4a0b.fast5
+2020-04-28 12:07:03.830661 [guppy/info] Batch input 0 : reorg_singlefast5/8612105c-8403-46d0-8d99-08e67b352d5f.fast5
+2020-04-28 12:07:03.830665 [guppy/info] Batch input 0 : reorg_singlefast5/05f0f901-f020-4303-b131-055df1d1bfb2.fast5
+2020-04-28 12:07:03.830669 [guppy/info] Batch input 0 : reorg_singlefast5/9b5d95c1-d479-4ab7-a257-0734b312384a.fast5
+2020-04-28 12:07:03.830672 [guppy/info] Batch input 0 : reorg_singlefast5/1a0204cc-250e-4199-861a-6239c42ba36d.fast5
+2020-04-28 12:07:03.830676 [guppy/info] Batch input 0 : reorg_singlefast5/d282813f-6b2d-4504-a304-46bbd7a9bb80.fast5
+2020-04-28 12:07:03.830680 [guppy/info] Batch input 0 : reorg_singlefast5/ff5479e5-0ec3-4040-bc17-3b40b431a514.fast5
+2020-04-28 12:07:03.830684 [guppy/info] Batch input 0 : reorg_singlefast5/82688f35-db87-4f5d-9749-88fb7e68a916.fast5
+2020-04-28 12:07:03.830687 [guppy/info] Batch input 0 : reorg_singlefast5/0b132d36-546a-4971-a14e-f2c53f3d4f20.fast5
+2020-04-28 12:07:03.830691 [guppy/info] Batch input 0 : reorg_singlefast5/251972c0-ed92-46da-a422-61ef6bec6a7a.fast5
+2020-04-28 12:07:03.830695 [guppy/info] Batch input 0 : reorg_singlefast5/0f462745-95ed-4cab-a7f5-e05cec6a07dc.fast5
+2020-04-28 12:07:03.830699 [guppy/info] Batch input 0 : reorg_singlefast5/a96aad23-4125-499f-8b6b-f46ba67e4aa4.fast5
+2020-04-28 12:07:03.830703 [guppy/info] Batch input 0 : reorg_singlefast5/0513f329-fac7-476f-94ce-d5c959229688.fast5
+2020-04-28 12:07:03.830706 [guppy/info] Batch input 0 : reorg_singlefast5/956e122c-29eb-453c-9286-458e8d3bc2e4.fast5
+2020-04-28 12:07:03.830710 [guppy/info] Batch input 0 : reorg_singlefast5/fdb4b486-a325-4312-848d-78234458a0b9.fast5
+2020-04-28 12:07:03.830714 [guppy/info] Batch input 0 : reorg_singlefast5/b843a5b7-97aa-4906-ab00-879f5ae1211d.fast5
+2020-04-28 12:07:03.830718 [guppy/info] Batch input 0 : reorg_singlefast5/4a90c25c-3bdc-42ed-b520-d0e9d6244e16.fast5
+2020-04-28 12:07:03.830721 [guppy/info] Batch input 0 : reorg_singlefast5/499641fb-c566-448f-b69e-bdb298fcfa48.fast5
+2020-04-28 12:07:03.830742 [guppy/info] Batch input 0 : reorg_singlefast5/8e880fff-e407-4512-aa90-1214fff9bad3.fast5
+2020-04-28 12:07:03.830748 [guppy/info] Batch input 0 : reorg_singlefast5/908f43e2-c64d-450b-8925-fae25af4e1da.fast5
+2020-04-28 12:07:03.830751 [guppy/info] Batch input 0 : reorg_singlefast5/6f9b143c-04b4-4147-9815-091e576e1058.fast5
+2020-04-28 12:07:03.830755 [guppy/info] Batch input 0 : reorg_singlefast5/d9e26fa6-013c-49e4-ab3f-33e6536651bf.fast5
+2020-04-28 12:07:03.830759 [guppy/info] Batch input 0 : reorg_singlefast5/245653d2-dc5f-47b1-986f-784a010fff60.fast5
+2020-04-28 12:07:03.830763 [guppy/info] Batch input 0 : reorg_singlefast5/a05be6ce-85a9-4dac-8e2c-a09263711056.fast5
+2020-04-28 12:07:03.830769 [guppy/info] Batch input 0 : reorg_singlefast5/26959a37-38de-4b21-98e9-052c5741c219.fast5
+2020-04-28 12:07:03.830774 [guppy/info] Batch input 0 : reorg_singlefast5/f3532b4b-729c-4f80-954f-0ebae8200e47.fast5
+2020-04-28 12:07:03.830778 [guppy/info] Batch input 0 : reorg_singlefast5/bc2bb52e-9c57-4979-b033-6a47fb29af39.fast5
+2020-04-28 12:07:03.830782 [guppy/info] Batch input 0 : reorg_singlefast5/2a1a0159-6441-436e-ad55-30b525ba57ee.fast5
+2020-04-28 12:07:03.830786 [guppy/info] Batch input 0 : reorg_singlefast5/2d4cc6b1-e52c-42d4-80c2-b59003d2ddc3.fast5
+2020-04-28 12:07:03.830790 [guppy/info] Batch input 0 : reorg_singlefast5/6322f748-c1fe-4bd3-a34f-8719fedcd37a.fast5
+2020-04-28 12:07:03.830794 [guppy/info] Batch input 0 : reorg_singlefast5/3433225e-89e2-41a0-9737-161c1fefaf17.fast5
+2020-04-28 12:07:03.830798 [guppy/info] Batch input 0 : reorg_singlefast5/ecf99359-693b-4d2e-9607-f266fcd1c33a.fast5
+2020-04-28 12:07:03.830801 [guppy/info] Batch input 0 : reorg_singlefast5/7cdb9bcf-bb5d-4cd4-9acc-a25416034eee.fast5
+2020-04-28 12:07:03.830807 [guppy/info] Batch input 0 : reorg_singlefast5/4ee5e630-0cc0-47e1-9a1a-d3cf17091898.fast5
+2020-04-28 12:07:03.830810 [guppy/info] Batch input 0 : reorg_singlefast5/8d3572de-7e95-4b2c-bfe2-96f3a56218d6.fast5
+2020-04-28 12:07:03.830814 [guppy/info] Batch input 0 : reorg_singlefast5/c872b44a-6fa8-465c-a55d-a34fb33375e5.fast5
+2020-04-28 12:07:03.830818 [guppy/info] Batch input 0 : reorg_singlefast5/1e850816-890a-4d06-820c-53365368a05f.fast5
+2020-04-28 12:07:03.830822 [guppy/info] Batch input 0 : reorg_singlefast5/4d6cdaf5-fa2d-46d2-92ef-002999b9f07e.fast5
+2020-04-28 12:07:03.830826 [guppy/info] Batch input 0 : reorg_singlefast5/0ec9d31f-a8d7-4490-8377-7e73f211a670.fast5
+2020-04-28 12:07:03.830829 [guppy/info] Batch input 0 : reorg_singlefast5/923edfa2-3d03-4944-b757-adc406525406.fast5
+2020-04-28 12:07:03.830833 [guppy/info] Batch input 0 : reorg_singlefast5/faf567d4-f9bd-42f8-8531-446faa5ff7bd.fast5
+2020-04-28 12:07:03.830837 [guppy/info] Batch input 0 : reorg_singlefast5/0f5cb484-c1fd-49ea-838a-7e56e0c0b887.fast5
+2020-04-28 12:07:03.830841 [guppy/info] Batch input 0 : reorg_singlefast5/399736f2-013e-4e56-875a-997eb1716e29.fast5
+2020-04-28 12:07:03.830844 [guppy/info] Batch input 0 : reorg_singlefast5/0098b822-4b8d-41b0-9573-073957a4f092.fast5
+2020-04-28 12:07:03.830848 [guppy/info] Batch input 0 : reorg_singlefast5/114dba1d-b5ac-45b7-92f0-5581dbf38219.fast5
+2020-04-28 12:07:03.830852 [guppy/info] Batch input 0 : reorg_singlefast5/b58c8136-cf59-4e3e-b119-99c2e2a9048f.fast5
+2020-04-28 12:07:03.830856 [guppy/info] Batch input 0 : reorg_singlefast5/ce4b5e25-7bb6-4047-aeac-ad1d8205cccb.fast5
+2020-04-28 12:07:03.830860 [guppy/info] Batch input 0 : reorg_singlefast5/2bba0650-33a6-4e33-a39e-a75fa6345032.fast5
+2020-04-28 12:07:03.830863 [guppy/info] Batch input 0 : reorg_singlefast5/e23f94d6-308c-4bec-a9f7-4f5e7a044081.fast5
+2020-04-28 12:07:03.830867 [guppy/info] Batch input 0 : reorg_singlefast5/52d6a7bf-f4ad-4689-ae17-273c92853b93.fast5
+2020-04-28 12:07:03.830871 [guppy/info] Batch input 0 : reorg_singlefast5/8e0d982c-dcdd-4603-a208-9cb4dc0c8697.fast5
+2020-04-28 12:07:03.830875 [guppy/info] Batch input 0 : reorg_singlefast5/ebf34f79-5f86-4566-a891-88648fcb4b19.fast5
+2020-04-28 12:07:03.830878 [guppy/info] Batch input 0 : reorg_singlefast5/ef38af56-6f45-4dd0-a9ed-d77b27234adb.fast5
+2020-04-28 12:07:03.830882 [guppy/info] Batch input 0 : reorg_singlefast5/a694dc63-a960-4c7b-84a6-6904c6e46f30.fast5
+2020-04-28 12:07:03.830886 [guppy/info] Batch input 0 : reorg_singlefast5/f3a63161-dbd1-4989-83ee-361e50a5d93a.fast5
+2020-04-28 12:07:03.830890 [guppy/info] Batch input 0 : reorg_singlefast5/8e717764-9e77-46d8-80cb-efbd8938cf1b.fast5
+2020-04-28 12:07:03.830893 [guppy/info] Batch input 0 : reorg_singlefast5/5c4c9048-257b-458f-af31-ec885dfe6d46.fast5
+2020-04-28 12:07:03.830899 [guppy/info] Batch input 0 : reorg_singlefast5/5bb17f73-10b7-4920-a407-d15ad33f98ea.fast5
+2020-04-28 12:07:06.417149 [guppy/info] Read 'afbfa212-2c1b-40e2-81f4-c0a86079c8d0' from file "afbfa212-2c1b-40e2-81f4-c0a86079c8d0.fast5" completed.
+2020-04-28 12:07:07.017649 [guppy/info] Read 'e8a09ee2-058d-4873-ab04-99eb3190de3f' from file "e8a09ee2-058d-4873-ab04-99eb3190de3f.fast5" completed.
+2020-04-28 12:07:08.018327 [guppy/info] Read '7dc5727e-9716-4b04-a190-dca3a04e9af8' from file "7dc5727e-9716-4b04-a190-dca3a04e9af8.fast5" completed.
+2020-04-28 12:07:09.019058 [guppy/info] Read 'aa7863a8-f635-498d-a4fd-e531bbfa6e58' from file "aa7863a8-f635-498d-a4fd-e531bbfa6e58.fast5" completed.
+2020-04-28 12:07:10.019635 [guppy/info] Read '4be7efb1-398e-43a2-842e-bac0bd053b41' from file "4be7efb1-398e-43a2-842e-bac0bd053b41.fast5" completed.
+2020-04-28 12:07:12.020584 [guppy/info] Read 'a63167dc-d481-4247-b264-a1f6a3827080' from file "a63167dc-d481-4247-b264-a1f6a3827080.fast5" completed.
+2020-04-28 12:07:14.221645 [guppy/info] Read '387e3e1d-cfd7-4f28-935e-0c40cc567a2b' from file "387e3e1d-cfd7-4f28-935e-0c40cc567a2b.fast5" completed.
+2020-04-28 12:07:15.622419 [guppy/info] Read 'c145c07a-39cb-425c-8a54-7a13dfa1233a' from file "c145c07a-39cb-425c-8a54-7a13dfa1233a.fast5" completed.
+2020-04-28 12:07:16.823167 [guppy/info] Read 'a2f83504-449e-45ec-b035-a34c9cfabec3' from file "a2f83504-449e-45ec-b035-a34c9cfabec3.fast5" completed.
+2020-04-28 12:07:17.823788 [guppy/info] Read 'aa5fe8a4-2606-4f21-b540-e4c6460e5072' from file "aa5fe8a4-2606-4f21-b540-e4c6460e5072.fast5" completed.
+2020-04-28 12:07:19.024487 [guppy/info] Read '99148061-0834-4aa6-9594-b636ff2622d4' from file "99148061-0834-4aa6-9594-b636ff2622d4.fast5" completed.
+2020-04-28 12:07:21.225472 [guppy/info] Read 'bb20f2e0-52a9-4265-9de7-3c0240fa4944' from file "bb20f2e0-52a9-4265-9de7-3c0240fa4944.fast5" completed.
+2020-04-28 12:07:22.025974 [guppy/info] Read 'e470b4c9-72d8-4306-a873-297f98015001' from file "e470b4c9-72d8-4306-a873-297f98015001.fast5" completed.
+2020-04-28 12:07:26.827671 [guppy/info] Read 'bac2d5bf-13ef-4b31-9dc5-0399519a1645' from file "bac2d5bf-13ef-4b31-9dc5-0399519a1645.fast5" completed.
+2020-04-28 12:07:27.828620 [guppy/info] Read 'd3d661c1-a744-4a63-ad2e-d30f9c79d08d' from file "d3d661c1-a744-4a63-ad2e-d30f9c79d08d.fast5" completed.
+2020-04-28 12:07:28.829266 [guppy/info] Read 'a9894e69-e1c5-46e2-84fa-ca91399136bc' from file "a9894e69-e1c5-46e2-84fa-ca91399136bc.fast5" completed.
+2020-04-28 12:07:29.829922 [guppy/info] Read '75edfe80-6c7a-4624-95f8-9f52e3c4439d' from file "75edfe80-6c7a-4624-95f8-9f52e3c4439d.fast5" completed.
+2020-04-28 12:07:30.830545 [guppy/info] Read '790c08bd-684d-4e06-8757-c39f2395351b' from file "790c08bd-684d-4e06-8757-c39f2395351b.fast5" completed.
+2020-04-28 12:07:31.831158 [guppy/info] Read '5bb17f73-10b7-4920-a407-d15ad33f98ea' from file "5bb17f73-10b7-4920-a407-d15ad33f98ea.fast5" completed.
+2020-04-28 12:07:37.633346 [guppy/info] Read '5c4c9048-257b-458f-af31-ec885dfe6d46' from file "5c4c9048-257b-458f-af31-ec885dfe6d46.fast5" completed.
+2020-04-28 12:07:39.634313 [guppy/info] Read '8e717764-9e77-46d8-80cb-efbd8938cf1b' from file "8e717764-9e77-46d8-80cb-efbd8938cf1b.fast5" completed.
+2020-04-28 12:07:40.634876 [guppy/info] Read 'f3a63161-dbd1-4989-83ee-361e50a5d93a' from file "f3a63161-dbd1-4989-83ee-361e50a5d93a.fast5" completed.
+2020-04-28 12:07:42.435746 [guppy/info] Read 'a694dc63-a960-4c7b-84a6-6904c6e46f30' from file "a694dc63-a960-4c7b-84a6-6904c6e46f30.fast5" completed.
+2020-04-28 12:07:43.636522 [guppy/info] Read 'ef38af56-6f45-4dd0-a9ed-d77b27234adb' from file "ef38af56-6f45-4dd0-a9ed-d77b27234adb.fast5" completed.
+2020-04-28 12:07:44.837312 [guppy/info] Read 'ebf34f79-5f86-4566-a891-88648fcb4b19' from file "ebf34f79-5f86-4566-a891-88648fcb4b19.fast5" completed.
+2020-04-28 12:07:46.038001 [guppy/info] Read '8e0d982c-dcdd-4603-a208-9cb4dc0c8697' from file "8e0d982c-dcdd-4603-a208-9cb4dc0c8697.fast5" completed.
+2020-04-28 12:07:48.439090 [guppy/info] Read '52d6a7bf-f4ad-4689-ae17-273c92853b93' from file "52d6a7bf-f4ad-4689-ae17-273c92853b93.fast5" completed.
+2020-04-28 12:07:51.440486 [guppy/info] Read 'e23f94d6-308c-4bec-a9f7-4f5e7a044081' from file "e23f94d6-308c-4bec-a9f7-4f5e7a044081.fast5" completed.
+2020-04-28 12:07:53.241584 [guppy/info] Read '2bba0650-33a6-4e33-a39e-a75fa6345032' from file "2bba0650-33a6-4e33-a39e-a75fa6345032.fast5" completed.
+2020-04-28 12:07:55.442860 [guppy/info] Read 'ce4b5e25-7bb6-4047-aeac-ad1d8205cccb' from file "ce4b5e25-7bb6-4047-aeac-ad1d8205cccb.fast5" completed.
+2020-04-28 12:07:58.044226 [guppy/info] Read 'b58c8136-cf59-4e3e-b119-99c2e2a9048f' from file "b58c8136-cf59-4e3e-b119-99c2e2a9048f.fast5" completed.
+2020-04-28 12:07:59.044959 [guppy/info] Read '114dba1d-b5ac-45b7-92f0-5581dbf38219' from file "114dba1d-b5ac-45b7-92f0-5581dbf38219.fast5" completed.
+2020-04-28 12:08:01.446110 [guppy/info] Read '0098b822-4b8d-41b0-9573-073957a4f092' from file "0098b822-4b8d-41b0-9573-073957a4f092.fast5" completed.
+2020-04-28 12:08:02.446861 [guppy/info] Read '399736f2-013e-4e56-875a-997eb1716e29' from file "399736f2-013e-4e56-875a-997eb1716e29.fast5" completed.
+2020-04-28 12:08:03.447575 [guppy/info] Read '0f5cb484-c1fd-49ea-838a-7e56e0c0b887' from file "0f5cb484-c1fd-49ea-838a-7e56e0c0b887.fast5" completed.
+2020-04-28 12:08:04.848412 [guppy/info] Read 'faf567d4-f9bd-42f8-8531-446faa5ff7bd' from file "faf567d4-f9bd-42f8-8531-446faa5ff7bd.fast5" completed.
+2020-04-28 12:08:07.049367 [guppy/info] Read '923edfa2-3d03-4944-b757-adc406525406' from file "923edfa2-3d03-4944-b757-adc406525406.fast5" completed.
+2020-04-28 12:08:08.049991 [guppy/info] Read '0ec9d31f-a8d7-4490-8377-7e73f211a670' from file "0ec9d31f-a8d7-4490-8377-7e73f211a670.fast5" completed.
+2020-04-28 12:08:10.851129 [guppy/info] Read '4d6cdaf5-fa2d-46d2-92ef-002999b9f07e' from file "4d6cdaf5-fa2d-46d2-92ef-002999b9f07e.fast5" completed.
+2020-04-28 12:08:12.051798 [guppy/info] Read '1e850816-890a-4d06-820c-53365368a05f' from file "1e850816-890a-4d06-820c-53365368a05f.fast5" completed.
+2020-04-28 12:08:13.252515 [guppy/info] Read 'c872b44a-6fa8-465c-a55d-a34fb33375e5' from file "c872b44a-6fa8-465c-a55d-a34fb33375e5.fast5" completed.
+2020-04-28 12:08:16.453946 [guppy/info] Read '8d3572de-7e95-4b2c-bfe2-96f3a56218d6' from file "8d3572de-7e95-4b2c-bfe2-96f3a56218d6.fast5" completed.
+2020-04-28 12:08:18.855165 [guppy/info] Read '4ee5e630-0cc0-47e1-9a1a-d3cf17091898' from file "4ee5e630-0cc0-47e1-9a1a-d3cf17091898.fast5" completed.
+2020-04-28 12:08:20.055902 [guppy/info] Read '7cdb9bcf-bb5d-4cd4-9acc-a25416034eee' from file "7cdb9bcf-bb5d-4cd4-9acc-a25416034eee.fast5" completed.
+2020-04-28 12:08:21.256640 [guppy/info] Read 'ecf99359-693b-4d2e-9607-f266fcd1c33a' from file "ecf99359-693b-4d2e-9607-f266fcd1c33a.fast5" completed.
+2020-04-28 12:08:22.657478 [guppy/info] Read '3433225e-89e2-41a0-9737-161c1fefaf17' from file "3433225e-89e2-41a0-9737-161c1fefaf17.fast5" completed.
+2020-04-28 12:08:26.859192 [guppy/info] Read '6322f748-c1fe-4bd3-a34f-8719fedcd37a' from file "6322f748-c1fe-4bd3-a34f-8719fedcd37a.fast5" completed.
+2020-04-28 12:08:27.859969 [guppy/info] Read '2d4cc6b1-e52c-42d4-80c2-b59003d2ddc3' from file "2d4cc6b1-e52c-42d4-80c2-b59003d2ddc3.fast5" completed.
+2020-04-28 12:08:28.860585 [guppy/info] Read '2a1a0159-6441-436e-ad55-30b525ba57ee' from file "2a1a0159-6441-436e-ad55-30b525ba57ee.fast5" completed.
+2020-04-28 12:08:36.463844 [guppy/info] Read 'bc2bb52e-9c57-4979-b033-6a47fb29af39' from file "bc2bb52e-9c57-4979-b033-6a47fb29af39.fast5" completed.
+2020-04-28 12:08:37.464866 [guppy/info] Read 'f3532b4b-729c-4f80-954f-0ebae8200e47' from file "f3532b4b-729c-4f80-954f-0ebae8200e47.fast5" completed.
+2020-04-28 12:08:38.665664 [guppy/info] Read '26959a37-38de-4b21-98e9-052c5741c219' from file "26959a37-38de-4b21-98e9-052c5741c219.fast5" completed.
+2020-04-28 12:08:41.467120 [guppy/info] Read 'a05be6ce-85a9-4dac-8e2c-a09263711056' from file "a05be6ce-85a9-4dac-8e2c-a09263711056.fast5" completed.
+2020-04-28 12:08:43.268258 [guppy/info] Read '245653d2-dc5f-47b1-986f-784a010fff60' from file "245653d2-dc5f-47b1-986f-784a010fff60.fast5" completed.
+2020-04-28 12:08:44.469145 [guppy/info] Read 'd9e26fa6-013c-49e4-ab3f-33e6536651bf' from file "d9e26fa6-013c-49e4-ab3f-33e6536651bf.fast5" completed.
+2020-04-28 12:08:49.671762 [guppy/info] Read '6f9b143c-04b4-4147-9815-091e576e1058' from file "6f9b143c-04b4-4147-9815-091e576e1058.fast5" completed.
+2020-04-28 12:08:52.273332 [guppy/info] Read '908f43e2-c64d-450b-8925-fae25af4e1da' from file "908f43e2-c64d-450b-8925-fae25af4e1da.fast5" completed.
+2020-04-28 12:08:53.674264 [guppy/info] Read '8e880fff-e407-4512-aa90-1214fff9bad3' from file "8e880fff-e407-4512-aa90-1214fff9bad3.fast5" completed.
+2020-04-28 12:08:54.675012 [guppy/info] Read '499641fb-c566-448f-b69e-bdb298fcfa48' from file "499641fb-c566-448f-b69e-bdb298fcfa48.fast5" completed.
+2020-04-28 12:08:55.675742 [guppy/info] Read '4a90c25c-3bdc-42ed-b520-d0e9d6244e16' from file "4a90c25c-3bdc-42ed-b520-d0e9d6244e16.fast5" completed.
+2020-04-28 12:08:56.876537 [guppy/info] Read 'b843a5b7-97aa-4906-ab00-879f5ae1211d' from file "b843a5b7-97aa-4906-ab00-879f5ae1211d.fast5" completed.
+2020-04-28 12:09:04.279690 [guppy/info] Read 'fdb4b486-a325-4312-848d-78234458a0b9' from file "fdb4b486-a325-4312-848d-78234458a0b9.fast5" completed.
+2020-04-28 12:09:06.681014 [guppy/info] Read '956e122c-29eb-453c-9286-458e8d3bc2e4' from file "956e122c-29eb-453c-9286-458e8d3bc2e4.fast5" completed.
+2020-04-28 12:09:07.481556 [guppy/info] Read '0513f329-fac7-476f-94ce-d5c959229688' from file "0513f329-fac7-476f-94ce-d5c959229688.fast5" completed.
+2020-04-28 12:09:09.282531 [guppy/info] Read 'a96aad23-4125-499f-8b6b-f46ba67e4aa4' from file "a96aad23-4125-499f-8b6b-f46ba67e4aa4.fast5" completed.
+2020-04-28 12:09:10.683385 [guppy/info] Read '0f462745-95ed-4cab-a7f5-e05cec6a07dc' from file "0f462745-95ed-4cab-a7f5-e05cec6a07dc.fast5" completed.
+2020-04-28 12:09:11.884144 [guppy/info] Read '251972c0-ed92-46da-a422-61ef6bec6a7a' from file "251972c0-ed92-46da-a422-61ef6bec6a7a.fast5" completed.
+2020-04-28 12:09:14.485354 [guppy/info] Read '0b132d36-546a-4971-a14e-f2c53f3d4f20' from file "0b132d36-546a-4971-a14e-f2c53f3d4f20.fast5" completed.
+2020-04-28 12:09:15.285954 [guppy/info] Read '82688f35-db87-4f5d-9749-88fb7e68a916' from file "82688f35-db87-4f5d-9749-88fb7e68a916.fast5" completed.
+2020-04-28 12:09:20.087873 [guppy/info] Read 'ff5479e5-0ec3-4040-bc17-3b40b431a514' from file "ff5479e5-0ec3-4040-bc17-3b40b431a514.fast5" completed.
+2020-04-28 12:09:21.088638 [guppy/info] Read 'd282813f-6b2d-4504-a304-46bbd7a9bb80' from file "d282813f-6b2d-4504-a304-46bbd7a9bb80.fast5" completed.
+2020-04-28 12:09:22.089291 [guppy/info] Read '1a0204cc-250e-4199-861a-6239c42ba36d' from file "1a0204cc-250e-4199-861a-6239c42ba36d.fast5" completed.
+2020-04-28 12:09:23.089933 [guppy/info] Read '9b5d95c1-d479-4ab7-a257-0734b312384a' from file "9b5d95c1-d479-4ab7-a257-0734b312384a.fast5" completed.
+2020-04-28 12:09:24.290566 [guppy/info] Read '05f0f901-f020-4303-b131-055df1d1bfb2' from file "05f0f901-f020-4303-b131-055df1d1bfb2.fast5" completed.
+2020-04-28 12:09:25.291212 [guppy/info] Read '8612105c-8403-46d0-8d99-08e67b352d5f' from file "8612105c-8403-46d0-8d99-08e67b352d5f.fast5" completed.
+2020-04-28 12:09:26.491915 [guppy/info] Read 'c694c327-475b-4003-ad1e-16bb11ac4a0b' from file "c694c327-475b-4003-ad1e-16bb11ac4a0b.fast5" completed.
+2020-04-28 12:09:30.293705 [guppy/info] Read 'ea786a64-c9be-4aa2-9e9a-c2df967dac53' from file "ea786a64-c9be-4aa2-9e9a-c2df967dac53.fast5" completed.
+2020-04-28 12:09:31.294448 [guppy/info] Read '1ab7ddf1-41d2-4c6b-a143-d46634b45689' from file "1ab7ddf1-41d2-4c6b-a143-d46634b45689.fast5" completed.
+2020-04-28 12:09:32.495112 [guppy/info] Read '76a2f3de-2d92-460d-97d3-64cfaa08169c' from file "76a2f3de-2d92-460d-97d3-64cfaa08169c.fast5" completed.
+2020-04-28 12:09:33.295678 [guppy/info] Read 'dc349f70-34fd-4fff-abfc-61c8d38db00c' from file "dc349f70-34fd-4fff-abfc-61c8d38db00c.fast5" completed.
+2020-04-28 12:09:35.096672 [guppy/info] Read '5726b9ad-181f-47f8-b0ed-e3a6962f1dcf' from file "5726b9ad-181f-47f8-b0ed-e3a6962f1dcf.fast5" completed.
+2020-04-28 12:09:36.497501 [guppy/info] Read '4814db1d-49c8-4b7e-9f5c-bc82f00af0b4' from file "4814db1d-49c8-4b7e-9f5c-bc82f00af0b4.fast5" completed.
+2020-04-28 12:09:38.698566 [guppy/info] Read '6307891f-93e7-4693-ab5b-b8d7054ac3c5' from file "6307891f-93e7-4693-ab5b-b8d7054ac3c5.fast5" completed.
+2020-04-28 12:09:40.699608 [guppy/info] Read '232b120e-fe3c-497e-8ee7-39b10ec9d1a8' from file "232b120e-fe3c-497e-8ee7-39b10ec9d1a8.fast5" completed.
+2020-04-28 12:09:41.700263 [guppy/info] Read '89e4482e-721d-4ad5-bd85-8e9a598f2da0' from file "89e4482e-721d-4ad5-bd85-8e9a598f2da0.fast5" completed.
+2020-04-28 12:09:42.700845 [guppy/info] Read '2ae54705-a763-44d3-96d5-8c6c30c78072' from file "2ae54705-a763-44d3-96d5-8c6c30c78072.fast5" completed.
+2020-04-28 12:09:43.701468 [guppy/info] Read '75e82310-02dd-4f62-b1f0-b4afb212d0d8' from file "75e82310-02dd-4f62-b1f0-b4afb212d0d8.fast5" completed.
+2020-04-28 12:09:45.102205 [guppy/info] Read '61576778-780e-4f35-9cde-504fa693537f' from file "61576778-780e-4f35-9cde-504fa693537f.fast5" completed.
+2020-04-28 12:09:46.102830 [guppy/info] Read '997ab7ed-d83c-462b-8cf6-e0c8f958cd98' from file "997ab7ed-d83c-462b-8cf6-e0c8f958cd98.fast5" completed.
+2020-04-28 12:09:47.303496 [guppy/info] Read '2310914a-c120-4e40-910d-45ee042f10a3' from file "2310914a-c120-4e40-910d-45ee042f10a3.fast5" completed.
+2020-04-28 12:09:48.304114 [guppy/info] Read '19299a9e-075b-4cd7-89ec-8e1be16d8afc' from file "19299a9e-075b-4cd7-89ec-8e1be16d8afc.fast5" completed.
+2020-04-28 12:09:57.107486 [guppy/info] Read '1a0b3e8b-3b1c-4984-84ac-eac22ea39c84' from file "1a0b3e8b-3b1c-4984-84ac-eac22ea39c84.fast5" completed.
+2020-04-28 12:09:58.308401 [guppy/info] Read '5d9deab3-3fed-478c-aeed-3f2239d16386' from file "5d9deab3-3fed-478c-aeed-3f2239d16386.fast5" completed.
+2020-04-28 12:09:59.309137 [guppy/info] Read '0d64772e-0aba-4cd0-97eb-7157c22585c2' from file "0d64772e-0aba-4cd0-97eb-7157c22585c2.fast5" completed.
+2020-04-28 12:10:01.310202 [guppy/info] Read '614a4ea1-a49c-4fdc-9365-d7a2426e0f42' from file "614a4ea1-a49c-4fdc-9365-d7a2426e0f42.fast5" completed.
+2020-04-28 12:10:07.112729 [guppy/info] Read '6de9b5a0-516c-45a6-9d3c-4566c7eed4d7' from file "6de9b5a0-516c-45a6-9d3c-4566c7eed4d7.fast5" completed.
+2020-04-28 12:10:09.114177 [guppy/info] Read 'b86e586f-b070-4230-a7f3-7224535e06ab' from file "b86e586f-b070-4230-a7f3-7224535e06ab.fast5" completed.
+2020-04-28 12:10:10.314974 [guppy/info] Read '51d85c67-68aa-4901-a582-28f876b1e428' from file "51d85c67-68aa-4901-a582-28f876b1e428.fast5" completed.
+2020-04-28 12:10:11.515643 [guppy/info] Read '2324a99e-a52b-4ccb-b6f7-0d13f2877bbf' from file "2324a99e-a52b-4ccb-b6f7-0d13f2877bbf.fast5" completed.
+2020-04-28 12:10:12.316241 [guppy/info] Read '0b9c1661-6b44-4f8f-b93d-a60a80910cca' from file "0b9c1661-6b44-4f8f-b93d-a60a80910cca.fast5" completed.
+2020-04-28 12:10:13.517051 [guppy/info] Read '1cefba6b-9517-4d14-8b03-2edfb2e67ab3' from file "1cefba6b-9517-4d14-8b03-2edfb2e67ab3.fast5" completed.
+2020-04-28 12:10:14.517791 [guppy/info] Read '1bdd47a6-b65f-4c7a-b268-037b934b65b6' from file "1bdd47a6-b65f-4c7a-b268-037b934b65b6.fast5" completed.
+2020-04-28 12:10:16.118698 [guppy/info] Read '6d162eff-dffe-4724-ae70-f65d5448742b' from file "6d162eff-dffe-4724-ae70-f65d5448742b.fast5" completed.
+2020-04-28 12:10:18.720114 [guppy/info] Read '1a3a80fd-2639-4a7d-8527-a2fb07c2e32c' from file "1a3a80fd-2639-4a7d-8527-a2fb07c2e32c.fast5" completed.
+2020-04-28 12:10:19.721581 [guppy/info] Read '3b35e502-8928-44cd-a02d-6b53aeef868b' from file "3b35e502-8928-44cd-a02d-6b53aeef868b.fast5" completed.
+2020-04-28 12:10:22.922972 [guppy/info] Read 'a29d2951-7e8e-4e0f-b336-8e85b707dbf9' from file "a29d2951-7e8e-4e0f-b336-8e85b707dbf9.fast5" completed.
+2020-04-28 12:10:23.923755 [guppy/info] Read '3786232b-81e5-48c9-930d-d127ea8dc280' from file "3786232b-81e5-48c9-930d-d127ea8dc280.fast5" completed.
+2020-04-28 12:10:25.124624 [guppy/info] Read '1ec1b2f7-ef96-436c-a351-30d70ce5a510' from file "1ec1b2f7-ef96-436c-a351-30d70ce5a510.fast5" completed.
+2020-04-28 12:10:26.925675 [guppy/info] Read 'b989a0b8-8c30-4fd6-aa5b-24971e8b0564' from file "b989a0b8-8c30-4fd6-aa5b-24971e8b0564.fast5" completed.
+2020-04-28 12:10:29.127011 [guppy/info] Read 'c67a8951-6922-42c6-881a-6d135fba530f' from file "c67a8951-6922-42c6-881a-6d135fba530f.fast5" completed.
+2020-04-28 12:10:30.127781 [guppy/info] Read '108d6c19-5cb9-4164-ae36-35ed222db54f' from file "108d6c19-5cb9-4164-ae36-35ed222db54f.fast5" completed.
+2020-04-28 12:10:31.528712 [guppy/info] Read 'b438db5c-f6de-46bf-aaae-0094c9f6880e' from file "b438db5c-f6de-46bf-aaae-0094c9f6880e.fast5" completed.
+2020-04-28 12:10:32.529442 [guppy/info] Read 'd44238e6-cd71-4c05-a9fe-c842f49edc6d' from file "d44238e6-cd71-4c05-a9fe-c842f49edc6d.fast5" completed.
+2020-04-28 12:10:37.331707 [guppy/info] Read '0ce4eb1a-3b52-4b0a-87c6-d811b90c10a5' from file "0ce4eb1a-3b52-4b0a-87c6-d811b90c10a5.fast5" completed.
+2020-04-28 12:10:38.732733 [guppy/info] Read '9fd5487e-767b-43b9-8def-1c2aa7b0d77c' from file "9fd5487e-767b-43b9-8def-1c2aa7b0d77c.fast5" completed.
+2020-04-28 12:10:40.933918 [guppy/info] Read 'a4d9b80a-e11c-4132-91be-411532d362ad' from file "a4d9b80a-e11c-4132-91be-411532d362ad.fast5" completed.
+2020-04-28 12:10:41.934603 [guppy/info] Read '83e92c1a-5e6f-4d1d-8193-8000886b83ab' from file "83e92c1a-5e6f-4d1d-8193-8000886b83ab.fast5" completed.
+2020-04-28 12:10:47.937064 [guppy/info] Read 'd875e4ee-af78-4992-837e-3848489f9bdf' from file "d875e4ee-af78-4992-837e-3848489f9bdf.fast5" completed.
+2020-04-28 12:10:49.138120 [guppy/info] Read '01e21949-24e7-4adb-ba7d-97dc623c90ce' from file "01e21949-24e7-4adb-ba7d-97dc623c90ce.fast5" completed.
+2020-04-28 12:10:50.338830 [guppy/info] Read '5b7429e4-6e2f-456e-8a5e-556a5c9e6332' from file "5b7429e4-6e2f-456e-8a5e-556a5c9e6332.fast5" completed.
+2020-04-28 12:10:51.339432 [guppy/info] Read 'e862690d-e0c4-45db-8e8c-b032afd3de3c' from file "e862690d-e0c4-45db-8e8c-b032afd3de3c.fast5" completed.
+2020-04-28 12:10:52.540188 [guppy/info] Read 'd17cb045-1904-46e4-849b-32673cab5c7c' from file "d17cb045-1904-46e4-849b-32673cab5c7c.fast5" completed.
+2020-04-28 12:10:53.740942 [guppy/info] Read '41ca9451-0431-436b-99fa-404c75402407' from file "41ca9451-0431-436b-99fa-404c75402407.fast5" completed.
+2020-04-28 12:10:54.341441 [guppy/info] Read '913e1853-7b90-42ba-8fb8-eda7dd6b1cec' from file "913e1853-7b90-42ba-8fb8-eda7dd6b1cec.fast5" completed.
+2020-04-28 12:10:55.742360 [guppy/info] Read 'b986b1f7-4157-44af-acbe-1a072634b7bc' from file "b986b1f7-4157-44af-acbe-1a072634b7bc.fast5" completed.
+2020-04-28 12:10:56.743087 [guppy/info] Read '60823b6d-6482-401c-a40a-99c785b1c9c0' from file "60823b6d-6482-401c-a40a-99c785b1c9c0.fast5" completed.
+2020-04-28 12:11:00.944931 [guppy/info] Read 'c70d2951-680c-4f52-962c-5fbffd316367' from file "c70d2951-680c-4f52-962c-5fbffd316367.fast5" completed.
+2020-04-28 12:11:02.545875 [guppy/info] Read '482958b6-0c64-4568-bca0-fe4eb82a4f58' from file "482958b6-0c64-4568-bca0-fe4eb82a4f58.fast5" completed.
+2020-04-28 12:11:04.346817 [guppy/info] Read '8ca1b365-e5dd-4594-bb4b-4003c8315275' from file "8ca1b365-e5dd-4594-bb4b-4003c8315275.fast5" completed.
+2020-04-28 12:11:05.347553 [guppy/info] Read 'ca8dde64-61cd-422d-9347-f62845a36b19' from file "ca8dde64-61cd-422d-9347-f62845a36b19.fast5" completed.
+2020-04-28 12:11:06.348259 [guppy/info] Read '5f2c47dc-4ee3-4fa2-ae92-08c78ad77122' from file "5f2c47dc-4ee3-4fa2-ae92-08c78ad77122.fast5" completed.
+2020-04-28 12:11:08.349119 [guppy/info] Read '7e2004a1-9ab9-4aa9-ad6f-c93145ff6b0c' from file "7e2004a1-9ab9-4aa9-ad6f-c93145ff6b0c.fast5" completed.
+2020-04-28 12:11:09.349861 [guppy/info] Read 'e47bf1a0-7c17-4406-bc2c-d5f4d999de77' from file "e47bf1a0-7c17-4406-bc2c-d5f4d999de77.fast5" completed.
+2020-04-28 12:11:10.550558 [guppy/info] Read 'dfcafbb8-6bf7-42af-a52b-6e471102f599' from file "dfcafbb8-6bf7-42af-a52b-6e471102f599.fast5" completed.
+2020-04-28 12:11:11.751267 [guppy/info] Read '40c28a13-0929-41db-9964-ae949ddc66b1' from file "40c28a13-0929-41db-9964-ae949ddc66b1.fast5" completed.
+2020-04-28 12:11:13.752264 [guppy/info] Read 'ae85aba2-3f59-4be2-acd1-f492a7f2211b' from file "ae85aba2-3f59-4be2-acd1-f492a7f2211b.fast5" completed.
+2020-04-28 12:11:14.752939 [guppy/info] Read '639b928a-0fb3-46a3-8e9e-b78c3fc013e7' from file "639b928a-0fb3-46a3-8e9e-b78c3fc013e7.fast5" completed.
+2020-04-28 12:11:17.354159 [guppy/info] Read '029c7f77-e48d-4c2f-9ba4-94621e7d7d08' from file "029c7f77-e48d-4c2f-9ba4-94621e7d7d08.fast5" completed.
+2020-04-28 12:11:18.755009 [guppy/info] Read 'fe323748-25b5-4fb4-a639-429cdff108d2' from file "fe323748-25b5-4fb4-a639-429cdff108d2.fast5" completed.
+2020-04-28 12:11:19.555495 [guppy/info] Read 'cee8317c-b192-4482-b9ed-a749adcc92f9' from file "cee8317c-b192-4482-b9ed-a749adcc92f9.fast5" completed.
+2020-04-28 12:11:21.356544 [guppy/info] Read '1ae7cf1a-b8be-4cf0-9ee1-88a38c7e52ac' from file "1ae7cf1a-b8be-4cf0-9ee1-88a38c7e52ac.fast5" completed.
+2020-04-28 12:11:22.557357 [guppy/info] Read '6c6534a9-c3da-4cda-be69-93943a1d5b76' from file "6c6534a9-c3da-4cda-be69-93943a1d5b76.fast5" completed.
+2020-04-28 12:11:23.758111 [guppy/info] Read '3bc8ccb9-987e-4f4c-80ae-9be60c70a1e9' from file "3bc8ccb9-987e-4f4c-80ae-9be60c70a1e9.fast5" completed.
+2020-04-28 12:11:24.958897 [guppy/info] Read 'f093a870-78da-43ca-8ab1-e752847f2b8c' from file "f093a870-78da-43ca-8ab1-e752847f2b8c.fast5" completed.
+2020-04-28 12:11:27.360022 [guppy/info] Read '514b2a40-b7d9-4094-95f9-f03cbc6df6f2' from file "514b2a40-b7d9-4094-95f9-f03cbc6df6f2.fast5" completed.
+2020-04-28 12:11:29.361073 [guppy/info] Read 'b1ef5ed7-8101-404e-a1d2-6090a7422cea' from file "b1ef5ed7-8101-404e-a1d2-6090a7422cea.fast5" completed.
+2020-04-28 12:11:30.361769 [guppy/info] Read '5aa4fd3c-f970-4127-a325-2e4e366a0cff' from file "5aa4fd3c-f970-4127-a325-2e4e366a0cff.fast5" completed.
+2020-04-28 12:11:34.163364 [guppy/info] Read 'd4da37f9-0a37-4e61-9c22-7a7f4e127013' from file "d4da37f9-0a37-4e61-9c22-7a7f4e127013.fast5" completed.
+2020-04-28 12:11:35.364176 [guppy/info] Read '73f0ba4c-1893-468b-a9d4-ae897a533cbe' from file "73f0ba4c-1893-468b-a9d4-ae897a533cbe.fast5" completed.
+2020-04-28 12:11:36.365452 [guppy/info] Read 'a5f09217-d3ef-4025-bae4-b369d070a984' from file "a5f09217-d3ef-4025-bae4-b369d070a984.fast5" completed.
+2020-04-28 12:11:37.566179 [guppy/info] Read '6783dd2e-f068-4665-bc34-475191bde1c2' from file "6783dd2e-f068-4665-bc34-475191bde1c2.fast5" completed.
+2020-04-28 12:11:43.768487 [guppy/info] Read 'f68a7d29-07b0-48fa-90a6-abde5e8319ed' from file "f68a7d29-07b0-48fa-90a6-abde5e8319ed.fast5" completed.
+2020-04-28 12:11:44.969337 [guppy/info] Read '23992c44-279f-4bcd-a25d-8669d4111f9a' from file "23992c44-279f-4bcd-a25d-8669d4111f9a.fast5" completed.
+2020-04-28 12:11:45.969908 [guppy/info] Read '11185a16-60ba-419a-b342-b1fb1b2f44e8' from file "11185a16-60ba-419a-b342-b1fb1b2f44e8.fast5" completed.
+2020-04-28 12:11:47.170615 [guppy/info] Read '97f72a03-2e2a-4e89-991b-4e34c91ecbc5' from file "97f72a03-2e2a-4e89-991b-4e34c91ecbc5.fast5" completed.
+2020-04-28 12:11:50.171899 [guppy/info] Read '493d8cb1-ca97-4ff1-a371-8b9ddbee5dd6' from file "493d8cb1-ca97-4ff1-a371-8b9ddbee5dd6.fast5" completed.
+2020-04-28 12:11:51.572786 [guppy/info] Read '3ea8fad4-76ce-4c3d-8760-2c287d6d2b17' from file "3ea8fad4-76ce-4c3d-8760-2c287d6d2b17.fast5" completed.
+2020-04-28 12:11:55.374207 [guppy/info] Read '1c23c923-b875-402b-8791-619e3beac05e' from file "1c23c923-b875-402b-8791-619e3beac05e.fast5" completed.
+2020-04-28 12:11:56.374822 [guppy/info] Read '9dde1bb5-f52c-4eba-b55c-27ae5a3b70d8' from file "9dde1bb5-f52c-4eba-b55c-27ae5a3b70d8.fast5" completed.
+2020-04-28 12:12:00.976538 [guppy/info] Read '5c465ebe-2ad8-4458-b1c0-466fecf3fd91' from file "5c465ebe-2ad8-4458-b1c0-466fecf3fd91.fast5" completed.
+2020-04-28 12:12:06.778887 [guppy/info] Read '3bfff38a-faa2-4713-93fc-7055c05ab7d9' from file "3bfff38a-faa2-4713-93fc-7055c05ab7d9.fast5" completed.
+2020-04-28 12:12:07.979873 [guppy/info] Read '6b5049cb-d13d-4808-8450-397a312d17b9' from file "6b5049cb-d13d-4808-8450-397a312d17b9.fast5" completed.
+2020-04-28 12:12:08.980582 [guppy/info] Read '84001c37-643f-4342-82e4-84677df9fe86' from file "84001c37-643f-4342-82e4-84677df9fe86.fast5" completed.
+2020-04-28 12:12:11.181683 [guppy/info] Read '04de3e69-75ea-4299-a510-557ced9b6610' from file "04de3e69-75ea-4299-a510-557ced9b6610.fast5" completed.
+2020-04-28 12:12:12.182419 [guppy/info] Read 'dfcfe595-f944-4127-9861-75ce19697492' from file "dfcfe595-f944-4127-9861-75ce19697492.fast5" completed.
+2020-04-28 12:12:15.383797 [guppy/info] Read '0c4f1054-c932-4e01-b0cb-b1ef97f56c4e' from file "0c4f1054-c932-4e01-b0cb-b1ef97f56c4e.fast5" completed.
+2020-04-28 12:12:17.184863 [guppy/info] Read '6c1cd21c-77b3-4e4b-8756-5bc60fe9aeae' from file "6c1cd21c-77b3-4e4b-8756-5bc60fe9aeae.fast5" completed.
+2020-04-28 12:12:18.185624 [guppy/info] Read '79024b59-01bd-4dbe-b2a7-76f7b0c8cbc8' from file "79024b59-01bd-4dbe-b2a7-76f7b0c8cbc8.fast5" completed.
+2020-04-28 12:12:20.986967 [guppy/info] Read 'fa049bd4-47c6-4eda-ae8b-af9c91292f0b' from file "fa049bd4-47c6-4eda-ae8b-af9c91292f0b.fast5" completed.
+2020-04-28 12:12:22.387852 [guppy/info] Read '1ba2c497-0016-4b41-a18e-cb993728ce5b' from file "1ba2c497-0016-4b41-a18e-cb993728ce5b.fast5" completed.
+2020-04-28 12:12:24.388955 [guppy/info] Read '8f5f15ee-7b42-4bb1-9f62-cebefbac7683' from file "8f5f15ee-7b42-4bb1-9f62-cebefbac7683.fast5" completed.
+2020-04-28 12:12:25.589787 [guppy/info] Read 'c0002b7c-c612-4a92-b033-7ed74cb59c73' from file "c0002b7c-c612-4a92-b033-7ed74cb59c73.fast5" completed.
+2020-04-28 12:12:26.590432 [guppy/info] Read '010ac325-d26a-40e2-b55c-1f84689ae41a' from file "010ac325-d26a-40e2-b55c-1f84689ae41a.fast5" completed.
+2020-04-28 12:12:29.191664 [guppy/info] Read '481d0b8c-0f06-4fbf-b915-aa4337c66171' from file "481d0b8c-0f06-4fbf-b915-aa4337c66171.fast5" completed.
+2020-04-28 12:12:30.392457 [guppy/info] Read '1e988e7a-fcb5-493d-910a-e1b7644ed5ab' from file "1e988e7a-fcb5-493d-910a-e1b7644ed5ab.fast5" completed.
+2020-04-28 12:12:31.393211 [guppy/info] Read 'c39fc548-4712-4283-a40d-343256240481' from file "c39fc548-4712-4283-a40d-343256240481.fast5" completed.
+2020-04-28 12:12:32.593892 [guppy/info] Read '43979774-9ad8-4b8d-b398-57a217ea7b1c' from file "43979774-9ad8-4b8d-b398-57a217ea7b1c.fast5" completed.
+2020-04-28 12:12:33.594529 [guppy/info] Read '80648d5a-12c2-4dea-ab4d-0a034ac25210' from file "80648d5a-12c2-4dea-ab4d-0a034ac25210.fast5" completed.
+2020-04-28 12:12:34.795287 [guppy/info] Read '66bdb0d6-631f-4910-a699-67313159e8e6' from file "66bdb0d6-631f-4910-a699-67313159e8e6.fast5" completed.
+2020-04-28 12:12:40.597693 [guppy/info] Read '7123623c-9fcc-447b-a624-b32cfa21cae4' from file "7123623c-9fcc-447b-a624-b32cfa21cae4.fast5" completed.
+2020-04-28 12:12:41.798581 [guppy/info] Read '7aecaa2f-5bdf-4bc9-aea5-06386a67af45' from file "7aecaa2f-5bdf-4bc9-aea5-06386a67af45.fast5" completed.
+2020-04-28 12:12:43.599547 [guppy/info] Read '13d478fd-435c-41f8-9350-b8da9831fe74' from file "13d478fd-435c-41f8-9350-b8da9831fe74.fast5" completed.
+2020-04-28 12:12:44.600280 [guppy/info] Read '024a83db-c1c4-4a45-bfac-73790ac88ce6' from file "024a83db-c1c4-4a45-bfac-73790ac88ce6.fast5" completed.
+2020-04-28 12:12:45.600997 [guppy/info] Read 'bebd15e5-fb2e-41e6-b194-68a61e9b7b05' from file "bebd15e5-fb2e-41e6-b194-68a61e9b7b05.fast5" completed.
+2020-04-28 12:12:48.202280 [guppy/info] Read '4ad71129-6602-4696-81a8-2d455e043ca0' from file "4ad71129-6602-4696-81a8-2d455e043ca0.fast5" completed.
+2020-04-28 12:12:49.002966 [guppy/info] Read '1dc31553-fe65-4ff2-b902-6502a28b53b9' from file "1dc31553-fe65-4ff2-b902-6502a28b53b9.fast5" completed.
+2020-04-28 12:12:50.203716 [guppy/info] Read 'a4c49b03-09a9-49ef-b8d2-e806daf64224' from file "a4c49b03-09a9-49ef-b8d2-e806daf64224.fast5" completed.
+2020-04-28 12:12:52.404912 [guppy/info] Read '58178eb5-8792-442f-bbb1-9f1c686ac6f0' from file "58178eb5-8792-442f-bbb1-9f1c686ac6f0.fast5" completed.
+2020-04-28 12:12:53.405655 [guppy/info] Read '4c730d42-21b3-4149-b46f-141392b38586' from file "4c730d42-21b3-4149-b46f-141392b38586.fast5" completed.
+2020-04-28 12:12:54.406299 [guppy/info] Read 'dc35f49c-4ab4-4cca-a315-d9d411b7dfaf' from file "dc35f49c-4ab4-4cca-a315-d9d411b7dfaf.fast5" completed.
+2020-04-28 12:12:57.207736 [guppy/info] Read '86029047-e93c-4b28-ae3a-41798474b122' from file "86029047-e93c-4b28-ae3a-41798474b122.fast5" completed.
+2020-04-28 12:12:58.208533 [guppy/info] Read 'e4bbfb5a-d8aa-4d3e-a643-cf2e64efd696' from file "e4bbfb5a-d8aa-4d3e-a643-cf2e64efd696.fast5" completed.
+2020-04-28 12:12:59.209130 [guppy/info] Read 'e94c95aa-55a7-4156-bc4b-74c1e853038d' from file "e94c95aa-55a7-4156-bc4b-74c1e853038d.fast5" completed.
+2020-04-28 12:13:00.209683 [guppy/info] Read 'cc3a8924-400a-49d3-8e8d-152fc79f411b' from file "cc3a8924-400a-49d3-8e8d-152fc79f411b.fast5" completed.
+2020-04-28 12:13:01.410377 [guppy/info] Read '693dfb92-cb56-4c85-982f-9cc6441f7cac' from file "693dfb92-cb56-4c85-982f-9cc6441f7cac.fast5" completed.
+2020-04-28 12:13:02.611010 [guppy/info] Read '04e2797e-6a65-497f-a15f-efeaf65d5ff8' from file "04e2797e-6a65-497f-a15f-efeaf65d5ff8.fast5" completed.
+2020-04-28 12:13:07.813166 [guppy/info] Read 'fafc3799-ef8e-4fd5-8aad-afd0888e1c0f' from file "fafc3799-ef8e-4fd5-8aad-afd0888e1c0f.fast5" completed.
+2020-04-28 12:13:08.813863 [guppy/info] Read 'ad66347a-983f-478d-bf95-187e2c4fa775' from file "ad66347a-983f-478d-bf95-187e2c4fa775.fast5" completed.
+2020-04-28 12:13:10.814737 [guppy/info] Read 'a8f34ac6-62ab-41ff-b47d-6bdb07055006' from file "a8f34ac6-62ab-41ff-b47d-6bdb07055006.fast5" completed.
+2020-04-28 12:13:14.216237 [guppy/info] Read '51f97946-3252-4cb6-a981-064306a06441' from file "51f97946-3252-4cb6-a981-064306a06441.fast5" completed.
+2020-04-28 12:13:15.216860 [guppy/info] Read '5acb5376-096b-42e2-986d-2f05158cd3d1' from file "5acb5376-096b-42e2-986d-2f05158cd3d1.fast5" completed.
+2020-04-28 12:13:16.417471 [guppy/info] Read 'dde5702f-01e7-4253-b53e-8030c7532a63' from file "dde5702f-01e7-4253-b53e-8030c7532a63.fast5" completed.
+2020-04-28 12:13:17.217969 [guppy/info] Read '2f929475-128c-4089-9cd9-7c6d26bd8627' from file "2f929475-128c-4089-9cd9-7c6d26bd8627.fast5" completed.
+2020-04-28 12:13:19.018769 [guppy/info] Read '7413169f-9188-49bf-ac29-a27376b5db72' from file "7413169f-9188-49bf-ac29-a27376b5db72.fast5" completed.
+2020-04-28 12:13:20.419561 [guppy/info] Read '8f82dbab-82fb-4711-9376-69c1f5db9680' from file "8f82dbab-82fb-4711-9376-69c1f5db9680.fast5" completed.
+2020-04-28 12:13:22.020357 [guppy/info] Read 'ad158df1-1503-4e32-8abc-4845f1173742' from file "ad158df1-1503-4e32-8abc-4845f1173742.fast5" completed.
+2020-04-28 12:13:23.020970 [guppy/info] Read 'f2b3b46a-2e60-495f-bdc6-d25b762ad3db' from file "f2b3b46a-2e60-495f-bdc6-d25b762ad3db.fast5" completed.
+2020-04-28 12:13:24.221710 [guppy/info] Read 'c5c193ef-2d20-4fdf-9b10-8e1a89128564' from file "c5c193ef-2d20-4fdf-9b10-8e1a89128564.fast5" completed.
+2020-04-28 12:13:26.022648 [guppy/info] Read 'a39b0fcd-5dc8-42c3-bb20-ba05c0bb30a4' from file "a39b0fcd-5dc8-42c3-bb20-ba05c0bb30a4.fast5" completed.
+2020-04-28 12:13:28.023553 [guppy/info] Read '16f548e8-d310-48b3-96ec-82e699fded8b' from file "16f548e8-d310-48b3-96ec-82e699fded8b.fast5" completed.
+2020-04-28 12:13:31.425035 [guppy/info] Read '95f1a234-ccc5-437e-8021-e12c88c67de7' from file "95f1a234-ccc5-437e-8021-e12c88c67de7.fast5" completed.
+2020-04-28 12:13:33.626081 [guppy/info] Read '36673890-fe45-415d-92fd-2cdb513e8286' from file "36673890-fe45-415d-92fd-2cdb513e8286.fast5" completed.
+2020-04-28 12:13:40.428769 [guppy/info] Read '7613827b-9093-4d6f-85d4-fbf6ab9ca360' from file "7613827b-9093-4d6f-85d4-fbf6ab9ca360.fast5" completed.
+2020-04-28 12:13:41.429639 [guppy/info] Read '17f439c5-298b-4816-9640-8a4332c5bcd1' from file "17f439c5-298b-4816-9640-8a4332c5bcd1.fast5" completed.
+2020-04-28 12:13:42.430324 [guppy/info] Read 'aa625a7a-6e41-494e-b6c2-f125189bd3b3' from file "aa625a7a-6e41-494e-b6c2-f125189bd3b3.fast5" completed.
+2020-04-28 12:13:43.430979 [guppy/info] Read 'e02a0642-83ff-446f-9549-a80e77f85a41' from file "e02a0642-83ff-446f-9549-a80e77f85a41.fast5" completed.
+2020-04-28 12:13:45.631993 [guppy/info] Read '515c27bc-9590-4584-8d1a-383a3de6169f' from file "515c27bc-9590-4584-8d1a-383a3de6169f.fast5" completed.
+2020-04-28 12:13:47.633083 [guppy/info] Read '0a61b2b7-7d8b-4845-86d7-a4086ea05e4c' from file "0a61b2b7-7d8b-4845-86d7-a4086ea05e4c.fast5" completed.
+2020-04-28 12:13:55.836363 [guppy/info] Read 'f6189de4-8898-40f3-9ded-09669143c35c' from file "f6189de4-8898-40f3-9ded-09669143c35c.fast5" completed.
+2020-04-28 12:14:00.438835 [guppy/info] Read '618e3047-9fb1-4273-8636-8e9ddc500a8b' from file "618e3047-9fb1-4273-8636-8e9ddc500a8b.fast5" completed.
+2020-04-28 12:14:03.840629 [guppy/info] Read '27ac20d2-8acc-47a8-98d0-b86d222c6c18' from file "27ac20d2-8acc-47a8-98d0-b86d222c6c18.fast5" completed.
+2020-04-28 12:14:04.841417 [guppy/info] Read 'e1ffaa9b-002d-4f45-88ed-5354de30fe11' from file "e1ffaa9b-002d-4f45-88ed-5354de30fe11.fast5" completed.
+2020-04-28 12:14:06.642462 [guppy/info] Read '99fbec22-82db-4000-9778-5ca2ea19a7a6' from file "99fbec22-82db-4000-9778-5ca2ea19a7a6.fast5" completed.
+2020-04-28 12:14:11.244347 [guppy/info] Read '844c8f5c-62e6-4275-8495-c881f6765aaa' from file "844c8f5c-62e6-4275-8495-c881f6765aaa.fast5" completed.
+2020-04-28 12:14:13.245297 [guppy/info] Read '3ccc3726-9164-4f37-b55f-63387978f1f0' from file "3ccc3726-9164-4f37-b55f-63387978f1f0.fast5" completed.
+2020-04-28 12:14:14.445987 [guppy/info] Read 'b65dfb29-0d5b-404f-8c67-01c2d7389026' from file "b65dfb29-0d5b-404f-8c67-01c2d7389026.fast5" completed.
+2020-04-28 12:14:15.446700 [guppy/info] Read '156131a5-07e6-4bba-8f2e-3f4a39517931' from file "156131a5-07e6-4bba-8f2e-3f4a39517931.fast5" completed.
+2020-04-28 12:14:16.847461 [guppy/info] Read '0100e84e-b217-4960-8eb4-081f8ee83f82' from file "0100e84e-b217-4960-8eb4-081f8ee83f82.fast5" completed.
+2020-04-28 12:14:18.248224 [guppy/info] Read '6a85db1c-7759-408c-99ac-153b19bfb01c' from file "6a85db1c-7759-408c-99ac-153b19bfb01c.fast5" completed.
+2020-04-28 12:14:19.249008 [guppy/info] Read 'b110acc2-d2ba-4138-b071-faf69fd1a34b' from file "b110acc2-d2ba-4138-b071-faf69fd1a34b.fast5" completed.
+2020-04-28 12:14:25.251501 [guppy/info] Read 'ea12ee6f-acd4-4b05-afbc-a220eacfce0e' from file "ea12ee6f-acd4-4b05-afbc-a220eacfce0e.fast5" completed.
+2020-04-28 12:14:29.453272 [guppy/info] Read '20e04879-a854-4822-ba0b-9494c7641c59' from file "20e04879-a854-4822-ba0b-9494c7641c59.fast5" completed.
+2020-04-28 12:14:31.654516 [guppy/info] Read 'b7ce19d7-11a8-4ccc-a4f0-60847e270654' from file "b7ce19d7-11a8-4ccc-a4f0-60847e270654.fast5" completed.
+2020-04-28 12:14:34.655839 [guppy/info] Read '58060894-11dd-4c08-9650-b330fda0f9cd' from file "58060894-11dd-4c08-9650-b330fda0f9cd.fast5" completed.
+2020-04-28 12:14:35.656567 [guppy/info] Read '02192130-16b7-4214-b258-79a8279f07cf' from file "02192130-16b7-4214-b258-79a8279f07cf.fast5" completed.
+2020-04-28 12:14:36.657210 [guppy/info] Read 'cfefa04a-b45e-4581-827b-8c13d4f4223b' from file "cfefa04a-b45e-4581-827b-8c13d4f4223b.fast5" completed.
+2020-04-28 12:14:40.859029 [guppy/info] Read 'd0652af3-cf2d-4271-a853-c824374e7aef' from file "d0652af3-cf2d-4271-a853-c824374e7aef.fast5" completed.
+2020-04-28 12:14:41.659863 [guppy/info] Read 'fda83784-4ee9-4df4-b175-5cce727f45ee' from file "fda83784-4ee9-4df4-b175-5cce727f45ee.fast5" completed.
+2020-04-28 12:14:44.261080 [guppy/info] Read '07f13b1d-93f1-4b4b-8978-dc0ece350eaa' from file "07f13b1d-93f1-4b4b-8978-dc0ece350eaa.fast5" completed.
+2020-04-28 12:14:45.461804 [guppy/info] Read '81ae5d0b-7517-4916-ab1f-0c824b0ecda6' from file "81ae5d0b-7517-4916-ab1f-0c824b0ecda6.fast5" completed.
+2020-04-28 12:14:46.662388 [guppy/info] Read '5c7b2535-388f-41d5-8b39-93690897376c' from file "5c7b2535-388f-41d5-8b39-93690897376c.fast5" completed.
+2020-04-28 12:14:52.264544 [guppy/info] Read 'e9bd8783-ac3c-4bbf-94cb-0bf2ff5ff61a' from file "e9bd8783-ac3c-4bbf-94cb-0bf2ff5ff61a.fast5" completed.
+2020-04-28 12:14:53.265481 [guppy/info] Read '7dcac916-1931-4316-bb55-d7b5e4019818' from file "7dcac916-1931-4316-bb55-d7b5e4019818.fast5" completed.
+2020-04-28 12:14:54.266139 [guppy/info] Read 'c836f151-fd65-452f-9db0-8b6c83479488' from file "c836f151-fd65-452f-9db0-8b6c83479488.fast5" completed.
+2020-04-28 12:14:55.266827 [guppy/info] Read '38fc9ec6-3fb1-4251-b23f-b2c2bb236b45' from file "38fc9ec6-3fb1-4251-b23f-b2c2bb236b45.fast5" completed.
+2020-04-28 12:14:56.267461 [guppy/info] Read '14f8b17d-b4a9-4503-a5c7-2191a4165e21' from file "14f8b17d-b4a9-4503-a5c7-2191a4165e21.fast5" completed.
+2020-04-28 12:14:57.267998 [guppy/info] Read 'f3021c21-5023-4c39-8b79-00bf87d878c3' from file "f3021c21-5023-4c39-8b79-00bf87d878c3.fast5" completed.
+2020-04-28 12:14:58.468608 [guppy/info] Read 'bad9f66f-1288-442a-965d-8f33666d52e8' from file "bad9f66f-1288-442a-965d-8f33666d52e8.fast5" completed.
+2020-04-28 12:14:59.469138 [guppy/info] Read 'ffcdac70-fec1-4e7e-8369-a549582a83d2' from file "ffcdac70-fec1-4e7e-8369-a549582a83d2.fast5" completed.
+2020-04-28 12:15:05.071206 [guppy/info] Read 'd5d95d5b-afc7-4edb-897e-ae58dd87708a' from file "d5d95d5b-afc7-4edb-897e-ae58dd87708a.fast5" completed.
+2020-04-28 12:15:06.272093 [guppy/info] Read '42aa6a0f-36d3-4b02-a737-2292628d4576' from file "42aa6a0f-36d3-4b02-a737-2292628d4576.fast5" completed.
+2020-04-28 12:15:07.291363 [guppy/info] Read '6d42c546-4026-414e-a621-242a253313c4' from file "6d42c546-4026-414e-a621-242a253313c4.fast5" completed.
+2020-04-28 12:15:07.291838 [guppy/info] Completed batch 0
+2020-04-28 12:15:07.544320 [guppy/message] Caller time: 484032 ms, Samples called: 22611155, samples/s: 46714.2
+2020-04-28 12:15:07.544426 [guppy/message] Finishing up any open output files.
+2020-04-28 12:15:28.100902 [guppy/message] Basecalling completed successfully.
