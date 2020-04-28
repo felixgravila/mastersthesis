@@ -21,6 +21,20 @@ attentionLabelBaseMap = {
     6: 'E'
 }
 
+attentionFlipflopLabelBaseMap = {
+    0: 'P',
+    1: 'A',
+    2: 'C',
+    3: 'G',
+    4: 'T',
+    5: 'a',
+    6: 'c',
+    7: 'g',
+    8: 't',
+    9: 'S',
+    10: 'E'
+}
+
 def print_tensor_to_file(value, file="info"):
     tf.print(value, output_stream=f"file://./{file}.out", summarize=1000000)
 

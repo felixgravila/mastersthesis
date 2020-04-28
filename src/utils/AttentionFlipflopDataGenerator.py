@@ -7,35 +7,25 @@ class AttentionFlipflopDataGenerator(AttentionDataGenerator):
     def __init__(self, read_ids, batch_size, stride, pe_encoder_max_length, pe_decoder_max_length):
         super().__init__(read_ids, batch_size, stride, pe_encoder_max_length, pe_decoder_max_length)
         
-    def get_batch(self, label_as_bases=False):
+    def get_batch(self, label_as_bases=False, training=True):
         while True:
             self._batch_count += 1
             
             x, y_orig = self._buffer.get_windows_in_batch(self.batch_size, self.input_length, self.stride, min_labels_per_window=1)  
-            y = self._to_target_language(y_orig, label_as_bases)    
-            y = self._to_flipflop(y, label_as_bases)     
+            y = self._to_target_language(y_orig, label_as_bases) 
+            if training:   
+                y = self._to_flipflop(y, label_as_bases)     
             yield (x,y)
     
-    def get_batches(self, number_of_batches, label_as_bases=False):
+    def get_batches(self, number_of_batches, label_as_bases=False, training=True):
         while True:
             batches = []
             for _ in range(number_of_batches):
-                x,y = next(self.get_batch(), label_as_bases)
+                x,y = next(self.get_batch(training), label_as_bases)
                 batches.append([x,y])
 
             #batches = np.array(batches)
             yield batches
-
-    def get_window_batch(self, label_as_bases=False):
-        while True:
-            self._batch_count += 1
-            x_windows, y_orig_windows, ref, raw, read_id = self._buffer.get_raw_and_split_read(
-                self.input_length,
-                self.stride
-            )
-            x_windows = np.array(x_windows)
-            y_windows = self._to_target_language(y_orig_windows, label_as_bases)
-            yield x_windows, y_windows, ref, raw, read_id
 
     def _to_target_language(self, y_orig, as_bases):
         y_new = []

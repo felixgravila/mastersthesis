@@ -2,7 +2,7 @@ import tensorflow as tf
 import numpy as np
 
 from models.Attention.attention_utils import create_combined_mask
-from utils.Other import attentionLabelBaseMap, with_eval_timer
+from utils.Other import attentionLabelBaseMap, attentionFlipflopLabelBaseMap, with_eval_timer
 
 def build(model):
     inp = tf.random.uniform((model.pe_encoder_max_length, 1)) 
@@ -44,8 +44,8 @@ def evaluate_window(inp, model, as_bases=True):
 # @with_eval_timer
 def evaluate_batch(inp, model, batch_size, as_bases=True):
     
-    start_token = 5
-    end_token = 6
+    start_token = 9
+    end_token = 10
 
     output = tf.expand_dims(batch_size*[start_token], 1) # (batchsize, 1) 
     attention_weights = None
@@ -67,7 +67,7 @@ def evaluate_batch(inp, model, batch_size, as_bases=True):
             output = output[:,1:] # remove start tokens
             output = cut_predition_ends(output, end_token) # cut end token and everything after it
             if as_bases: # convert every example to a string of bases
-                output = ["".join([attentionLabelBaseMap[base_token] for base_token in example]) for example in output]
+                output = ["".join([attentionFlipflopLabelBaseMap[base_token] for base_token in example]) for example in output]
             return output, attention_weights
 
         output = tf.concat([output, predisction_ids], axis=-1)
@@ -75,7 +75,7 @@ def evaluate_batch(inp, model, batch_size, as_bases=True):
     output = output[:,1:]
     output = cut_predition_ends(output, end_token)
     if as_bases:
-        output = ["".join([attentionLabelBaseMap[base_token] for base_token in example]) for example in output]
+        output = ["".join([attentionFlipflopLabelBaseMap[base_token] for base_token in example]) for example in output]
     return output, attention_weights
 
 def cut_predition_ends(output_batch, end_token):
