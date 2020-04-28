@@ -1,0 +1,10 @@
+c5c193ef-2d20-4fdf-9b10-8e1a89128564	batch0.fast5
+c70d2951-680c-4f52-962c-5fbffd316367	batch0.fast5
+0f462745-95ed-4cab-a7f5-e05cec6a07dc	batch0.fast5
+9b5d95c1-d479-4ab7-a257-0734b312384a	batch0.fast5
+11185a16-60ba-419a-b342-b1fb1b2f44e8	batch0.fast5
+bebd15e5-fb2e-41e6-b194-68a61e9b7b05	batch0.fast5
+f093a870-78da-43ca-8ab1-e752847f2b8c	batch0.fast5
+a4d9b80a-e11c-4132-91be-411532d362ad	batch0.fast5
+95f1a234-ccc5-437e-8021-e12c88c67de7	batch0.fast5
+1ba2c497-0016-4b41-a18e-cb993728ce5b	batch0.fast5
