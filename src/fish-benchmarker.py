@@ -17,22 +17,17 @@ sys.path.insert(0, './src')
 set_gpu_growth()
 
 # %%
-ATTENTION_BLOCKS = 4
-CNN_BLOCKS = 0
-MAXPOOL_BLOCK_IDX = 3
-D_MODEL = 256
-DFF = 2*D_MODEL
-NUM_HEADS = 8
-ENCODER_MAX_LENGTH = 300
-DECODER_MAX_LENGTH = 100
-DROPOUT_RATE = 0.1
-STRIDE = 30
+config_filename = "configs/train-fishnchips-config-skel.json"
+
+if len(sys.argv)>1:
+  config_filename = sys.argv[1]
+with open(config_filename, "r") as f:
+  config = json.load(f)
 
 READS = 10
-BATCH_SIZE = 64
 AS_BASE_STRING = True
 
-MODEL_SAVE_FILENAME = f"./trained_models/fishnchips_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H_{ATTENTION_BLOCKS}B"
+MODEL_SAVE_FILENAME = f"./trained_models/fishnchips_{config['D_MODEL']}_{config['CNN_BLOCKS']}CNN_{config['NUM_HEADS']}H_{config['ATTENTION_BLOCKS']}B"
 
 result_dict = []
 if os.path.isfile(f"{MODEL_SAVE_FILENAME}.json"):
@@ -84,25 +79,25 @@ def pretty_print_progress(current_begin, current_end, total):
     return progstr
 
 fish = FishNChips(
-    num_cnn_blocks=CNN_BLOCKS,
-    max_pool_layer_idx=MAXPOOL_BLOCK_IDX,
-    num_layers=ATTENTION_BLOCKS,
-    d_model=D_MODEL,
+    num_cnn_blocks=config['CNN_BLOCKS'],
+    max_pool_layer_idx=config['MAXPOOL_IDX'],
+    num_layers=config['ATTENTION_BLOCKS'],
+    d_model=config['D_MODEL'],
     output_dim=1 + 4 + 1 + 1,  # PAD + ATCG + START + STOP
-    num_heads=NUM_HEADS,
-    dff=DFF,
-    pe_encoder_max_length=ENCODER_MAX_LENGTH,
-    pe_decoder_max_length=DECODER_MAX_LENGTH,
-    rate=DROPOUT_RATE)
+    num_heads=config['NUM_HEADS'],
+    dff=config['DFF'],
+    pe_encoder_max_length=config['ENCODER_MAX_LENGTH'],
+    pe_decoder_max_length=config['DECODER_MAX_LENGTH'],
+    rate=config['DROPOUT_RATE'])
 
 build(fish)
 fish.load_weights(f"{MODEL_SAVE_FILENAME}.h5")
 
 read_ids = DataPrepper(validation_split=0.1, test_split=0.1).get_train_read_ids()
-generator = AttentionDataGenerator(read_ids, BATCH_SIZE, STRIDE, ENCODER_MAX_LENGTH, DECODER_MAX_LENGTH)
+generator = AttentionDataGenerator(read_ids, config['BATCH_SIZE'], config['STRIDE'], config['ENCODER_MAX_LENGTH'], config['DECODER_MAX_LENGTH'])
 aligner = mp.Aligner("../useful_files/zymo-ref-uniq_2019-03-15.fa")
 
-print(f"stride: {STRIDE} batch size: {BATCH_SIZE}")
+print(f"stride: {config['STRIDE']} batch size: {config['BATCH_SIZE']}")
 for read in range(len(result_dict), READS):
     try:
         x_windows, y_windows, ref, raw, read_id = next(generator.get_window_batch(label_as_bases=AS_BASE_STRING))
@@ -111,11 +106,11 @@ for read in range(len(result_dict), READS):
         assert nr_windows == len(y_windows)
 
         y_pred = []
-        for b in range(0,nr_windows,BATCH_SIZE):
-            x_batch = x_windows[b:b+BATCH_SIZE]
+        for b in range(0,nr_windows,config['BATCH_SIZE']):
+            x_batch = x_windows[b:b+config['BATCH_SIZE']]
             print(f"{read:02d}/{READS:02d} Predicting windows {pretty_print_progress(b, b+len(x_batch), nr_windows)} {b:04d}-{b+len(x_batch):04d}/{nr_windows:04d}", end="\r")
 
-            y_batch_true = y_windows[b:b+BATCH_SIZE]
+            y_batch_true = y_windows[b:b+config['BATCH_SIZE']]
             y_batch_pred, _ = evaluate_batch(x_batch, fish, len(x_batch), as_bases=AS_BASE_STRING)
             y_pred.extend(y_batch_pred)
 
