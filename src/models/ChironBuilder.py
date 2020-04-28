@@ -62,7 +62,7 @@ makes a chiron for the model file
 loads the weights
 returns name of model and predict func
 '''
-def chiron_for_file(input_length, file):
+def chiron_for_file(input_length, file, with_None_input=False, use_our_predict=False):
     description = file.split("/")[1]
     if "CNN" in description:
         cnn = int(re.findall(r"\d+CNN", description)[0][:-3])
@@ -78,6 +78,10 @@ def chiron_for_file(input_length, file):
         cb = cb.with_rnn_padding(5)
     if "maxpool3" in description:
         cb = cb.with_maxpool(3)
+    if with_None_input:
+        cb = cb.with_None_input()
     chiron = cb.build()
     chiron.load_weights(file)
+    if use_our_predict:
+        return (chiron.name, chiron.predict)
     return (chiron.name, chiron.predict_beam_search) # using get_model_name instead of description for safety

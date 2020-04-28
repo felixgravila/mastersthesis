@@ -33,6 +33,11 @@ class RawReadGenerator():
                 windows.append(dac[-self._window_size:])
             yield filename, np.array(windows).reshape((-1, self._window_size, 1)), dac
 
+    def generator_whole_read(self):
+        dac_gen = self._get_dac()
+        for filename, dac in dac_gen:
+            yield filename, np.array(dac).reshape((1,-1,1))
+
     def _get_dac(self):
         filename_gen = self._get_next_read_filename()
         for filename, next_file in filename_gen:

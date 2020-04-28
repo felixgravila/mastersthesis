@@ -19,6 +19,8 @@ experiments = [
     ('/mnt/nvme/bio/train_chiron/output_DNA_MODEL/result/', 'chiron_dna_model'),
     ('/mnt/nvme/bio/mastersthesis/somedata/guppy_output', 'guppy'),
     ('fasta/fishnchips_250_5CNN_25H_4B', 'fishnchips_250_5CNN_25H_4B'),
+    ('fasta/chiron-pad5-maxpool3', 'chiron_pad5_maxpool3'),
+    ('fasta/chiron-pad5-maxpool3-wholeread', 'chiron_pad5_maxpool3_wholeread')
 ]
 
 overwrite_all = False
