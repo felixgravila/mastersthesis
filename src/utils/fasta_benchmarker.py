@@ -23,7 +23,7 @@ experiments = [
 
 overwrite_all = False
 
-read_dict_file = "/mnt/nvme/bio/mastersthesis/utilities/umiToBactDict/uids.json"
+read_dict_file = "../utilities/umiToBactDict/uids.json"
 with open(read_dict_file) as f:
     read_dict = json.load(f)
 
