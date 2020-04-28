@@ -24,7 +24,7 @@ if len(sys.argv)>1:
 with open(config_filename, "r") as f:
   config = json.load(f)
 
-READS = 10
+READS = 50
 AS_BASE_STRING = True
 
 MODEL_SAVE_FILENAME = f"./trained_models/fishnchips_{config['D_MODEL']}_{config['CNN_BLOCKS']}CNN_{config['NUM_HEADS']}H_{config['ATTENTION_BLOCKS']}B"
