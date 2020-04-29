@@ -46,6 +46,7 @@ optimizer = tf.keras.optimizers.Adam(learning_rate, beta_1=0.9, beta_2=0.98, eps
 fish = FishNChips(
   num_cnn_blocks=config['CNN_BLOCKS'], 
   max_pool_layer_idx=config['MAXPOOL_IDX'], 
+  max_pool_kernel_size=config['MAX_POOL_KERNEL'],
   num_layers=config['ATTENTION_BLOCKS'], 
   d_model=config['D_MODEL'], 
   output_dim=1 + 4 + 1 + 1, # PAD + ATCG + START + STOP
