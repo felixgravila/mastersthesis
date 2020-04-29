@@ -25,7 +25,11 @@ if len(sys.argv)>1:
 with open(config_filename, "r") as f:
   config = json.load(f)
 
+print(json.dumps(config, indent=4))
+
 MODEL_SAVE_FILENAME = f"./trained_models/fishnchips_{config['D_MODEL']}_{config['CNN_BLOCKS']}CNN_{config['NUM_HEADS']}H_{config['ATTENTION_BLOCKS']}B"
+if config['MAX_POOL_KERNEL'] != 2:
+    MODEL_SAVE_FILENAME = f"{MODEL_SAVE_FILENAME}_{config['MAX_POOL_KERNEL']}MPK"
 
 if os.path.isfile(f"{MODEL_SAVE_FILENAME}.h5"):
   answer = input("This model exists, are you sure you want to overwrite it? [y/N]:")
@@ -46,6 +50,7 @@ optimizer = tf.keras.optimizers.Adam(learning_rate, beta_1=0.9, beta_2=0.98, eps
 fish = FishNChips(
   num_cnn_blocks=config['CNN_BLOCKS'], 
   max_pool_layer_idx=config['MAXPOOL_IDX'], 
+  max_pool_kernel_size=config['MAX_POOL_KERNEL'],
   num_layers=config['ATTENTION_BLOCKS'], 
   d_model=config['D_MODEL'], 
   output_dim=1 + 4 + 1 + 1, # PAD + ATCG + START + STOP
@@ -95,7 +100,7 @@ for epoch in range(config['EPOCHS']):
 
         print (f'Epoch {epoch + 1} Batch {batch} Loss {train_loss.result():.4f} Accuracy {train_accuracy.result():.4f}', end="\r")
 
-    accs.append([train_loss.result(), train_accuracy.result()])
+    accs.append([train_loss.result(), train_accuracy.result(), time.time()])
     np.save(f"{MODEL_SAVE_FILENAME}.npy", np.array(accs))    
 
     loss = train_loss.result()
