@@ -100,7 +100,7 @@ for epoch in range(config['EPOCHS']):
 
         print (f'Epoch {epoch + 1} Batch {batch} Loss {train_loss.result():.4f} Accuracy {train_accuracy.result():.4f}', end="\r")
 
-    accs.append([train_loss.result(), train_accuracy.result()])
+    accs.append([train_loss.result(), train_accuracy.result(), time.time()])
     np.save(f"{MODEL_SAVE_FILENAME}.npy", np.array(accs))    
 
     loss = train_loss.result()
