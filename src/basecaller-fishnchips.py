@@ -26,12 +26,15 @@ ENCODER_MAX_LENGTH = 300
 DECODER_MAX_LENGTH = 100
 DROPOUT_RATE = 0.1
 STRIDE = 30
+MAX_POOL_KERNEL = 2
 
 READS = 10
 BATCH_SIZE = 64
 AS_BASE_STRING = True
 
 MODEL_LOAD_FILENAME = f"./trained_models/fishnchips_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H_{ATTENTION_BLOCKS}B"
+if MAX_POOL_KERNEL != 2:
+    MODEL_LOAD_FILENAME = f"{MODEL_LOAD_FILENAME}_{MAX_POOL_KERNEL}MPK"
 
 OUT_DIR = f"{out_folder}/fishnchips_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H_{ATTENTION_BLOCKS}B"
 if os.path.isdir(OUT_DIR):
@@ -63,6 +66,7 @@ def pretty_print_progress(current_begin, current_end, total):
 fish = FishNChips(
     num_cnn_blocks=CNN_BLOCKS,
     max_pool_layer_idx=MAXPOOL_BLOCK_IDX,
+    max_pool_kernel_size=MAX_POOL_KERNEL,
     num_layers=ATTENTION_BLOCKS,
     d_model=D_MODEL,
     output_dim=1 + 4 + 1 + 1,  # PAD + ATCG + START + STOP

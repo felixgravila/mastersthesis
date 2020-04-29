@@ -26,6 +26,8 @@ with open(config_filename, "r") as f:
   config = json.load(f)
 
 MODEL_SAVE_FILENAME = f"./trained_models/fishnchips_{config['D_MODEL']}_{config['CNN_BLOCKS']}CNN_{config['NUM_HEADS']}H_{config['ATTENTION_BLOCKS']}B"
+if config['MAX_POOL_KERNEL'] != 2:
+    MODEL_LOAD_FILENAME = f"{MODEL_SAVE_FILENAME}_{config['MAX_POOL_KERNEL']}MPK"
 
 if os.path.isfile(f"{MODEL_SAVE_FILENAME}.h5"):
   answer = input("This model exists, are you sure you want to overwrite it? [y/N]:")

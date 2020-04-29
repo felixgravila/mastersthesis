@@ -28,6 +28,8 @@ READS = 50
 AS_BASE_STRING = True
 
 MODEL_SAVE_FILENAME = f"./trained_models/fishnchips_{config['D_MODEL']}_{config['CNN_BLOCKS']}CNN_{config['NUM_HEADS']}H_{config['ATTENTION_BLOCKS']}B"
+if config['MAX_POOL_KERNEL'] != 2:
+    MODEL_LOAD_FILENAME = f"{MODEL_SAVE_FILENAME}_{config['MAX_POOL_KERNEL']}MPK"
 
 result_dict = []
 if os.path.isfile(f"{MODEL_SAVE_FILENAME}.json"):
@@ -81,6 +83,7 @@ def pretty_print_progress(current_begin, current_end, total):
 fish = FishNChips(
     num_cnn_blocks=config['CNN_BLOCKS'],
     max_pool_layer_idx=config['MAXPOOL_IDX'],
+    max_pool_kernel_size=config['MAX_POOL_KERNEL'],
     num_layers=config['ATTENTION_BLOCKS'],
     d_model=config['D_MODEL'],
     output_dim=1 + 4 + 1 + 1,  # PAD + ATCG + START + STOP
