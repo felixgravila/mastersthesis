@@ -4,18 +4,21 @@ import os
 import numpy
 
 files = [
-    "trained_models/fish_eval_1024_0CNN_8H.json",
+    # "trained_models/fish_eval_1024_0CNN_8H.json",
     #"trained_models/fishnchips_256_0CNN_4H_4B.json",
     #"trained_models/fishnchips_256_0CNN_16H_4B.json",
-    "trained_models/fishnchips_256_0CNN_8H_2B.json",
+    # "trained_models/fishnchips_256_0CNN_8H_2B.json",
     # "trained_models/fishnchips_256_0CNN_8H_8B.json",
     #"trained_models/fishnctsea_512_0CNN_8H_4B.json",
     #"trained_models/fishnchips_256_0CNN_8H_1B.json",
-    "trained_models/fishnchips_250_0CNN_25H_4B.json",
+    # "trained_models/fishnchips_250_0CNN_25H_4B.json",
     # "trained_models/fishnchips_256_0CNN_32H_4B.json",
-    "trained_models/fishnchips_1000_0CNN_25H_2B.json",
+    # "trained_models/fishnchips_1000_0CNN_25H_2B.json",
     "trained_models/fishnchips_250_5CNN_25H_4B.json",
-    "trained_models/fishnchips_1000_0CNN_50H_2B.json"
+    # "trained_models/fishnchips_1000_0CNN_50H_2B.json",
+    # "trained_models/fishnchips_250_4CNN_25H_4B.json",
+    # "trained_models/fishnchips_250_6CNN_25H_4B.json",
+    "trained_models/fishnchips_250_5CNN_25H_2B.json",
 ]
 
 plt.figure(figsize=(20, 10))
