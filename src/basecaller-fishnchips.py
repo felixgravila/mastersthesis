@@ -34,11 +34,15 @@ READS = 10
 BATCH_SIZE = 64
 AS_BASE_STRING = True
 
-MODEL_LOAD_FILENAME = f"./trained_models/fishnchips_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H_{ATTENTION_BLOCKS}B"
+MODEL_IDENT = f"fishnchips_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H_{ATTENTION_BLOCKS}B"
 if MAX_POOL_KERNEL != 2:
-    MODEL_LOAD_FILENAME = f"{MODEL_LOAD_FILENAME}_{MAX_POOL_KERNEL}MPK"
+    MODEL_IDENT = f"{MODEL_IDENT}_{MAX_POOL_KERNEL}MPK"
 
-OUT_DIR = f"{out_folder}/fishnchips_{D_MODEL}_{CNN_BLOCKS}CNN_{NUM_HEADS}H_{ATTENTION_BLOCKS}B"
+MODEL_LOAD_FILENAME = f"./trained_models/{MODEL_IDENT}"
+
+OUT_DIR = f"{out_folder}/{MODEL_IDENT}"
+
+
 if os.path.isdir(OUT_DIR):
     answer = input("Basecall exists, overwrite [y/N]?:")
     if answer not in "yY" or answer == "":
