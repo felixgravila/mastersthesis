@@ -11,6 +11,7 @@ import os
 import sys
 import json
 import mappy as mp
+import time
 
 sys.path.insert(0, './src')
 
@@ -108,6 +109,8 @@ for read in range(len(result_dict), READS):
 
         assert nr_windows == len(y_windows)
 
+        start_time = time.time()
+
         y_pred = []
         for b in range(0,nr_windows,config['BATCH_SIZE']):
             x_batch = x_windows[b:b+config['BATCH_SIZE']]
@@ -120,6 +123,8 @@ for read in range(len(result_dict), READS):
         assembly = assemble(y_pred)
 
         result = get_cig_result(aligner, assembly)
+        result['time'] = time.time() - start_time
+
         result_dict.append(result)
         print(f"{read:02d}/{READS} Done read... cigacc {result['cigacc']}"+" "*50) # 50 blanks to overwrite the previous print
         with open(f'{MODEL_SAVE_FILENAME}.json', 'w') as jsonfile:

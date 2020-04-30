@@ -4,6 +4,7 @@ import mappy as mp
 import matplotlib.pyplot as plt
 import numpy as np
 import json
+import time
 
 from models.ChironBuilder import ChironBuilder
 from utils.assembler import assemble
@@ -60,6 +61,8 @@ for idx in range(reads_to_eval):
     X, ref, raw, read_id = next(generator)
     print(f"Evaluating {idx}/{reads_to_eval}... Read {read_id} ", end="")
     raw = raw.reshape(1,-1,1)
+
+    start_time = time.time()
     
     result_dict['read_ids'].append(read_id)
 
@@ -74,7 +77,8 @@ for idx in range(reads_to_eval):
             'NM': besthit.NM,
             'blen': besthit.blen,
             'cig': analyse_cigar(besthit.cigar_str),
-            'cigacc': 1-(besthit.NM/besthit.blen)
+            'cigacc': 1-(besthit.NM/besthit.blen),
+            'time': time.time()-start_time
         }
         print(style.GREEN(f"Done, cigacc {(1-(besthit.NM/besthit.blen))*100:.2f}%"))
     except:
@@ -85,7 +89,8 @@ for idx in range(reads_to_eval):
             'NM': 0,
             'blen': 0,
             'cig': 0,
-            'cigacc': 0
+            'cigacc': 0,
+            'time': time.time()-start_time
         }
         print(style.RED(f"No match..."))
     

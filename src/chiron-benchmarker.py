@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import json
 import re
+import time
 
 from models.ChironBuilder import ChironBuilder
 from utils.assembler import assemble
@@ -64,6 +65,8 @@ for idx in range(reads_to_eval):
         print(f"Evaluating {idx}/{reads_to_eval}...", end="")
         X, ref, raw, read_id = next(generator)
 
+        start_time = time.time()
+
         prediction, logs = chiron(X, beam_width=1) # beam_width=1 -> greedy
         assembled = assemble(prediction, window=7)
         try:
@@ -78,7 +81,8 @@ for idx in range(reads_to_eval):
                 'NM': besthit.NM,
                 'blen': besthit.blen,
                 'cig': analyse_cigar(besthit.cigar_str),
-                'cigacc': cigacc
+                'cigacc': cigacc,
+                'time': time.time()-start_time
             })
             print(style.GREEN(f"{modelname} ({cigacc*100:.2f})..."), end="")
         except:
@@ -90,7 +94,8 @@ for idx in range(reads_to_eval):
                 'NM': 0,
                 'blen': 0,
                 'cig': 0,
-                'cigacc': 0
+                'cigacc': 0,
+                'time': time.time()-start_time
             })
             print(style.RED(f"{modelname}..."), end="")
         with open(json_write_file, 'w') as jsonfile:
