@@ -3,6 +3,8 @@
 import os
 import sys
 import re
+import time
+import datetime
 
 from utils.RawReadGenerator import RawReadGenerator
 from models.FishNChips import FishNChips
@@ -94,7 +96,7 @@ for filename, dac in readGenerator:
     assembly = assemble(y_pred, window=7)
 
     with open(f"{OUT_DIR}/result.fa", 'a') as f:
-        f.write(f"@{filename}\n")
+        f.write(f"@{filename};{round(time.time())};{datetime.datetime.now().strftime('%m/%d/%Y, %H:%M:%S')}\n")
         f.write(f"{assembly}\n")
 
 
