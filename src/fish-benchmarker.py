@@ -12,6 +12,7 @@ import sys
 import json
 import mappy as mp
 import time
+import datetime
 
 sys.path.insert(0, './src')
 
@@ -129,5 +130,8 @@ for read in range(len(result_dict), READS):
         print(f"{read:02d}/{READS} Done read... cigacc {result['cigacc']}"+" "*50) # 50 blanks to overwrite the previous print
         with open(f'{MODEL_SAVE_FILENAME}.json', 'w') as jsonfile:
             json.dump(result_dict, jsonfile)
+        with open(f"{MODEL_SAVE_FILENAME}_bench.fa", 'a') as f:
+            f.write(f"@{read_id};{round(time.time())};{datetime.datetime.now().strftime('%m/%d/%Y, %H:%M:%S')}\n")
+            f.write(f"{assembly}\n")
     except Exception as e:
         print(e)
