@@ -44,27 +44,29 @@ Tried Dead Fish with alpha 0.4 and CTC looked good, might be that CTC is overpow
 | Chiron-pad5-maxpool3            | 5          | 256     | 250   | T       |    | T       |         | 93.15%     |
 | Chiron-pad5-maxpool3 (big)      | 5          | 512     | 512   | T       |    | T       |         | 86.73%     |
 | Chiron-pad5-maxpool3 (whole)    | 5          | 256     | 250   | T       |    | T       |         | 91.35%     |
-
-| Name               | Type                    | D_Model | Blocks | Heads | CNN    | Accuracy |
-|--------------------|-------------------------|---------|--------|-------|--------|----------|
-| ChironCopy         | Enc + Dec + CTC iter    | 512     |        |       | 5      | 89.72%   |
-| Fish n Chips CTSea | Enc + [Dec / CTC] α 0.1 | 512     | 4      | 8     | 0      | 82%      |
-| Fish n Chips CTSea | Enc + [Dec / CTC] α 0.4 | 256     | 4      | 8     | 0      | Disaster |
-| Fish n CTSea       | Enc + CTC               | 512     | 4      | 8     | 0      | 78%      |
-| Dead Fish          | Enc + Dec + CTC         | 256     | 4      | 8     | 0      | Disaster |
-| Fish n Chips       | Encoder + Decoder       | 256     | 8      | 8     | 0      | 0%       |
-| Fish n Chips       | Encoder + Decoder       | 256     | 4      | 8     | 0      | 81%      |
-| Fish n Chips       | Encoder + Decoder       | 1024    | 4      | 8     | 0      | 90%      |
-| Fish n Chips       | Encoder + Decoder       | 256     | 4      | 4     | 0      | 85%      |
-| Fish n Chips       | Encoder + Decoder       | 256     | 4      | 16    | 0      | 88.7%    |
-| Fish n Chips       | Encoder + Decoder       | 250     | 4      | 25    | 0      | 93.41%   |
-| Fish n Chips       | Encoder + Decoder       | 1000    | 2      | 25    | 0      | 93.86%   |
-| Fish n Chips       | Encoder + Decoder       | 1000    | 2      | 50    | 0      | 94.37    |
-| Fish n Chips       | Encoder + Decoder       | 256     | 4      | 32    | 0      | 92.62%   |
-| Fish n Chips       | Encoder + Decoder       | 256     | 2      | 8     | 0      | 90.74%   |
-| Fish n Chips       | Encoder + Decoder       | 256     | 1      | 8     | 0      | 68.54%   |
-| Fish n Chips       | CNN + Encoder + Decoder | 250     | 4      | 25    | 5      | 96.64%   |
-| Fish n Chips       | CNN + Encoder + Decoder | 250     | 4      | 25    | 4      | Progress |
-| Fish n Chips       | CNN + Encoder + Decoder | 250     | 4      | 25    | 6      | Progress |
-| Fish n Chips       | CNN + Encoder + Decoder | 1000    | 2      | 50    | 4/5/6? | Queued   |
-| Fish n Chips       | CNN + Encoder + Decoder | 1000    | 4      | 50    | 4/5/6? | Queued   |
+| Name               | Type                    | D_Model | Blocks | Heads | CNN    | MPK | Accuracy |
+|--------------------|-------------------------|---------|--------|-------|--------|-----|----------|
+| ChironCopy         | Enc + Dec + CTC iter    | 512     |        |       | 5      |     | 89.72%   |
+| Fish n Chips CTSea | Enc + [Dec / CTC] α 0.1 | 512     | 4      | 8     | 0      |     | 82%      |
+| Fish n Chips CTSea | Enc + [Dec / CTC] α 0.4 | 256     | 4      | 8     | 0      |     | Disaster |
+| Fish n CTSea       | Enc + CTC               | 512     | 4      | 8     | 0      |     | 78%      |
+| Dead Fish          | Enc + Dec + CTC         | 256     | 4      | 8     | 0      |     | Disaster |
+| Fish n Chips       | Encoder + Decoder       | 256     | 8      | 8     | 0      |     | 0%       |
+| Fish n Chips       | Encoder + Decoder       | 256     | 4      | 8     | 0      |     | 81%      |
+| Fish n Chips       | Encoder + Decoder       | 1024    | 4      | 8     | 0      |     | 90%      |
+| Fish n Chips       | Encoder + Decoder       | 256     | 4      | 4     | 0      |     | 85%      |
+| Fish n Chips       | Encoder + Decoder       | 256     | 4      | 16    | 0      |     | 88.7%    |
+| Fish n Chips       | Encoder + Decoder       | 250     | 4      | 25    | 0      |     | 93.41%   |
+| Fish n Chips       | Encoder + Decoder       | 1000    | 2      | 25    | 0      |     | 93.86%   |
+| Fish n Chips       | Encoder + Decoder       | 1000    | 2      | 50    | 0      |     | 94.37    |
+| Fish n Chips       | Encoder + Decoder       | 256     | 4      | 32    | 0      |     | 92.62%   |
+| Fish n Chips       | Encoder + Decoder       | 256     | 2      | 8     | 0      |     | 90.74%   |
+| Fish n Chips       | Encoder + Decoder       | 256     | 1      | 8     | 0      |     | 68.54%   |
+| Fish n Chips       | CNN + Encoder + Decoder | 250     | 4      | 25    | 5      | 2   | 96.64%   |
+| Fish n Chips       | CNN + Encoder + Decoder | 250     | 4      | 25    | 4      | 2   | 95.53%   |
+| Fish n Chips       | CNN + Encoder + Decoder | 250     | 4      | 25    | 6      | 2   | 94.82%   |
+| Fish n Chips       | CNN + Encoder + Decoder | 250     | 2      | 25    | 5      | 2   | 91.66%   |
+| Fish n Chips       | CNN + Encoder + Decoder | 250     | 4      | 25    | 5      | 3   | 96.60%   |
+| Fish n Chips       | CNN + Encoder + Decoder | 250     | 4      | 25    | 5      | 6   | 96.98%   |
+| Fish n Chips       | CNN + Encoder + Decoder | 1000    | 2      | 50    | 4/5/6? |     | Queued   |
+| Fish n Chips       | CNN + Encoder + Decoder | 1000    | 4      | 50    | 4/5/6? |     | Queued   |
