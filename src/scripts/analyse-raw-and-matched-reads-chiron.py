@@ -65,7 +65,7 @@ def run(output_file=None, out_img=False, out_assembly=False):
             print(f"Skips:{readGeneratorObj.skip_count}")
             print(f"Matches:{readGeneratorObj.match_count}")
 
-        if x == None:
+        if x is None:
             continue
         
         y_pred, _ = chiron(x, beam_width=1)
