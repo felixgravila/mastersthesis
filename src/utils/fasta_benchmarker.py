@@ -14,15 +14,14 @@ class style():
     GREEN = lambda x: f"\033[32m{x}\033[0m"
 
 experiments = [
-    # ('path', 'name'),
-    # ('fasta/chiron-bn-pad5', 'chiron_bn_pad5'),
-    # ('/mnt/nvme/bio/train_chiron/output_DNA_MODEL/result/', 'chiron_dna_model'),
-    # ('/mnt/nvme/bio/mastersthesis/somedata/dna_r9.4.1_450bps_fast', 'guppy_fast'),
-    # ('/mnt/nvme/bio/mastersthesis/somedata/guppy_dna_r9.4.1_450bps_hac', 'guppy_hac'),
-    # ('fasta/fishnchips_250_5CNN_25H_4B', 'fishnchips_250_5CNN_25H_4B'),
-    # ('fasta/chiron-pad5-maxpool3', 'chiron_pad5_maxpool3'),
-    # ('fasta/chiron-pad5-maxpool3-wholeread', 'chiron_pad5_maxpool3_wholeread')
-    ('/tmp/aaa', 'tst')
+    ('path', 'name'),
+    ('fasta/chiron-bn-pad5', 'chiron_bn_pad5'),
+    ('/mnt/nvme/bio/train_chiron/output_DNA_MODEL/result/', 'chiron_dna_model'),
+    ('/mnt/nvme/bio/mastersthesis/somedata/dna_r9.4.1_450bps_fast', 'guppy_fast'),
+    ('/mnt/nvme/bio/mastersthesis/somedata/guppy_dna_r9.4.1_450bps_hac', 'guppy_hac'),
+    ('fasta/fishnchips_250_5CNN_25H_4B', 'fishnchips_250_5CNN_25H_4B'),
+    ('fasta/chiron-pad5-maxpool3', 'chiron_pad5_maxpool3'),
+    ('fasta/chiron-pad5-maxpool3-wholeread', 'chiron_pad5_maxpool3_wholeread')
 ]
 
 overwrite_all = False
