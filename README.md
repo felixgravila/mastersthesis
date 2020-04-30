@@ -44,6 +44,7 @@ Tried Dead Fish with alpha 0.4 and CTC looked good, might be that CTC is overpow
 | Chiron-pad5-maxpool3            | 5          | 256     | 250   | T       |    | T       |         | 93.15%     |
 | Chiron-pad5-maxpool3 (big)      | 5          | 512     | 512   | T       |    | T       |         | 86.73%     |
 | Chiron-pad5-maxpool3 (whole)    | 5          | 256     | 250   | T       |    | T       |         | 91.35%     |
+
 | Name               | Type                    | D_Model | Blocks | Heads | CNN    | MPK | Accuracy |
 |--------------------|-------------------------|---------|--------|-------|--------|-----|----------|
 | ChironCopy         | Enc + Dec + CTC iter    | 512     |        |       | 5      |     | 89.72%   |
