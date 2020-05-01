@@ -14,7 +14,7 @@ class style():
     GREEN = lambda x: f"\033[32m{x}\033[0m"
 
 experiments = [
-    # ('path', 'name'),
+    ('path', 'name'),
     ('fasta/chiron-bn-pad5', 'chiron_bn_pad5'),
     ('/mnt/nvme/bio/train_chiron/output_DNA_MODEL/result/', 'chiron_dna_model'),
     ('/mnt/nvme/bio/mastersthesis/somedata/dna_r9.4.1_450bps_fast', 'guppy_fast'),
@@ -54,6 +54,8 @@ for folder,experiment_name in experiments:
             l = data.popleft()
             if l[0] == "@":
                 rid = l[1:-1] # remove @ and \n
+                rid = rid.split(" ")[0]
+                rid = rid.split(";")[0]
                 dna = data.popleft()[:-1]
                 reads[rid] = dna
 
@@ -61,47 +63,51 @@ for folder,experiment_name in experiments:
     misses = 0
     tot_reads = len(reads)
     for i, (rid, dna) in enumerate(reads.items()):
-        print(f"Aligning {i:04d}/{tot_reads}"+" "*50, end="\r")
-        found = False
-        for hit in aligner.map(dna):
-            if hit.ctg.split(";")[0] == read_dict[rid.split(" ")[0]]:
-                found = True
-                cigacc = 1-(hit.NM/hit.blen)
+        if rid in read_dict.keys():
+            print(f"Aligning {i:04d}/{tot_reads}"+" "*50, end="\r")
+            found = False
+            for hit in aligner.map(dna):
+                if hit.ctg.split(";")[0] == read_dict[rid]:
+                    found = True
+                    cigacc = 1-(hit.NM/hit.blen)
+                    result_dict.append({
+                        'read_id':rid,
+                        'dna_len': len(dna),
+                        'ctg': hit.ctg,
+                        'r_st': hit.r_st,
+                        'r_en': hit.r_en,
+                        'q_st': hit.q_st,
+                        'q_en': hit.q_en,
+                        'NM': hit.NM,
+                        'blen': hit.blen,
+                        'cig': analyse_cigar(hit.cigar_str),
+                        'cigacc': cigacc
+                    })
+                    # print(style.GREEN(f"{modelname} ({cigacc*100:.2f})..."), end="")
+                    cigaccs.append(cigacc*100)
+                    break
+
+            if not found:
+                misses += 1
                 result_dict.append({
                     'read_id':rid,
                     'dna_len': len(dna),
-                    'ctg': hit.ctg,
-                    'r_st': hit.r_st,
-                    'r_en': hit.r_en,
-                    'q_st': hit.q_st,
-                    'q_en': hit.q_en,
-                    'NM': hit.NM,
-                    'blen': hit.blen,
-                    'cig': analyse_cigar(hit.cigar_str),
-                    'cigacc': cigacc
+                    'ctg': 0,
+                    'r_st': 0,
+                    'r_en': 0,
+                    'q_st': 0,
+                    'q_en': 0,
+                    'NM': 0,
+                    'blen': 0,
+                    'cig': 0,
+                    'cigacc': 0
                 })
-                # print(style.GREEN(f"{modelname} ({cigacc*100:.2f})..."), end="")
-                cigaccs.append(cigacc*100)
-
-        if not found:
-            misses += 1
-            result_dict.append({
-                'read_id':rid,
-                'dna_len': len(dna),
-                'ctg': 0,
-                'r_st': 0,
-                'r_en': 0,
-                'q_st': 0,
-                'q_en': 0,
-                'NM': 0,
-                'blen': 0,
-                'cig': 0,
-                'cigacc': 0
-            })
-            # print(style.RED(f"{rid}..."), end="")
-            cigaccs.append(0)
-        with open(json_write_file, 'w') as jsonfile:
-            json.dump(result_dict, jsonfile)
+                # print(style.RED(f"{rid}..."), end="")
+                cigaccs.append(0)
+            with open(json_write_file, 'w') as jsonfile:
+                json.dump(result_dict, jsonfile)
+        else:
+            print(f"{rid} not in dict")
 
     print(f"Average cigacc {np.mean(cigaccs):.2f}%, {misses} not found")
 # %%
