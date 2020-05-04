@@ -14,14 +14,15 @@ class style():
     GREEN = lambda x: f"\033[32m{x}\033[0m"
 
 experiments = [
-    ('path', 'name'),
-    ('fasta/chiron-bn-pad5', 'chiron_bn_pad5'),
-    ('/mnt/nvme/bio/train_chiron/output_DNA_MODEL/result/', 'chiron_dna_model'),
-    ('/mnt/nvme/bio/mastersthesis/somedata/dna_r9.4.1_450bps_fast', 'guppy_fast'),
-    ('/mnt/nvme/bio/mastersthesis/somedata/guppy_dna_r9.4.1_450bps_hac', 'guppy_hac'),
-    ('fasta/fishnchips_250_5CNN_25H_4B', 'fishnchips_250_5CNN_25H_4B'),
-    ('fasta/chiron-pad5-maxpool3', 'chiron_pad5_maxpool3'),
-    ('fasta/chiron-pad5-maxpool3-wholeread', 'chiron_pad5_maxpool3_wholeread')
+    # ('path', 'name'),
+    # ('fasta/chiron-bn-pad5', 'chiron_bn_pad5'),
+    # ('/mnt/nvme/bio/train_chiron/output_DNA_MODEL/result/', 'chiron_dna_model'),
+    # ('/mnt/nvme/bio/mastersthesis/somedata/dna_r9.4.1_450bps_fast', 'guppy_fast'),
+    # ('/mnt/nvme/bio/mastersthesis/somedata/guppy_dna_r9.4.1_450bps_hac', 'guppy_hac'),
+    # ('fasta/fishnchips_250_5CNN_25H_4B', 'fishnchips_250_5CNN_25H_4B'),
+    # ('fasta/chiron-pad5-maxpool3', 'chiron_pad5_maxpool3'),
+    # ('fasta/chiron-pad5-maxpool3-wholeread', 'chiron_pad5_maxpool3_wholeread')
+    ('/mnt/nvme/bio/mastersthesis/somedata/our_bonito_basecalls', 'our_bonito'),
 ]
 
 overwrite_all = False
@@ -52,11 +53,13 @@ for folder,experiment_name in experiments:
             data = deque(f.readlines())
         while len(data) > 0:
             l = data.popleft()
-            if l[0] == "@":
+            if l[0] in '@>':
                 rid = l[1:-1] # remove @ and \n
                 rid = rid.split(" ")[0]
                 rid = rid.split(";")[0]
-                dna = data.popleft()[:-1]
+                dna = ""
+                while len(data) > 0 and len(data[0]) != 0 and data[0][0] not in ">@":
+                    dna += data.popleft()[:-1]
                 reads[rid] = dna
 
     cigaccs = []
