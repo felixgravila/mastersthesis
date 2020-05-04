@@ -22,7 +22,8 @@ experiments = [
     # ('fasta/fishnchips_250_5CNN_25H_4B', 'fishnchips_250_5CNN_25H_4B'),
     # ('fasta/chiron-pad5-maxpool3', 'chiron_pad5_maxpool3'),
     # ('fasta/chiron-pad5-maxpool3-wholeread', 'chiron_pad5_maxpool3_wholeread')
-    ('/mnt/nvme/bio/mastersthesis/somedata/our_bonito_basecalls', 'our_bonito'),
+    # ('/mnt/nvme/bio/mastersthesis/somedata/our_bonito_basecalls', 'our_bonito'),
+    ('/mnt/nvme/bio/mastersthesis/somedata/bonito_941', 'bonito_941'),
 ]
 
 overwrite_all = False
