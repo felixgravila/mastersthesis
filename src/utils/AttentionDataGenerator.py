@@ -4,8 +4,8 @@ from utils.DataGenerator import DataGenerator
 from utils.Other import attentionLabelBaseMap
 
 class AttentionDataGenerator(DataGenerator):
-    def __init__(self, read_ids, batch_size, stride, pe_encoder_max_length, pe_decoder_max_length):
-        super().__init__(read_ids, batch_size, stride, pe_encoder_max_length, reads_count=5, use_maxpool=False, rnn_pad_size=0)
+    def __init__(self, read_ids, batch_size, stride, pe_encoder_max_length, pe_decoder_max_length, training):
+        super().__init__(read_ids, batch_size, stride, input_length=pe_encoder_max_length, training=training, reads_count=5, use_maxpool=False, rnn_pad_size=0)
         
         self._pe_decoder_max_length = pe_decoder_max_length
         self._batch_count = 0
@@ -15,7 +15,7 @@ class AttentionDataGenerator(DataGenerator):
             self._batch_count += 1
             
             x, y_orig = self._buffer.get_windows_in_batch(self.batch_size, self.input_length, self.stride, min_labels_per_window=1)  
-            y = self._to_target_language(y_orig, label_as_bases)         
+            y = self._to_target_language(y_orig, label_as_bases)
             yield (x,y)
     
     def get_batches(self, number_of_batches, label_as_bases=False):

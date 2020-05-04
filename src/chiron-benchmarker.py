@@ -25,9 +25,9 @@ model = 'outputs/chiron-512CNN-512LSTM-pad5-maxpool3/2020-04-21_17:32:55/checkpo
 input_length = 300
 reads_to_eval = 200
 
-data_preper = DataPrepper(validation_split=0.1, test_split=0.1)
-read_ids = data_preper.get_train_read_ids()
-generator = DataGenerator(read_ids, batch_size=None, input_length=input_length, stride=20, reads_count=None, rnn_pad_size=None, use_maxpool=None).get_evaluate_batch()
+data_preper = DataPrepper(validation_split=0.1, test_split=0.1, training=False)
+read_ids = data_preper.get_all_read_ids()
+generator = DataGenerator(read_ids, batch_size=None, input_length=input_length, stride=20, reads_count=None, rnn_pad_size=None, use_maxpool=None, training=False).get_evaluate_batch()
 
 '''
 makes a chiron for the model file

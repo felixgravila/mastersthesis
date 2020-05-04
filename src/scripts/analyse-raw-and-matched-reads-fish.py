@@ -60,7 +60,7 @@ def run(output_file):
     data_preper = DataPrepper(validation_split=0.1, test_split=0.1)
     read_ids = data_preper.get_all_read_ids()
 
-    readGeneratorObj = DataGeneratorCombined("../somedata/singlefast5/", window_size=model_params['ENCODER_MAX_LENGTH'], stride=model_params['STRIDE'])
+    readGeneratorObj = DataGeneratorCombined("../somedata/singlefast5/", window_size=model_params['ENCODER_MAX_LENGTH'], training=False, stride=model_params['STRIDE'])
     generator = readGeneratorObj.generator(available_read_ids=read_ids)
     aligner = mp.Aligner("../useful_files/zymo-ref-uniq_2019-03-15.fa")
 

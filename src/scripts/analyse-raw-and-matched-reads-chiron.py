@@ -48,10 +48,10 @@ def run(output_file=None, out_img=False, out_assembly=False):
     aligner = mp.Aligner("../useful_files/zymo-ref-uniq_2019-03-15.fa")
     model = "./trained_models/00377_dis421.h5"
     
-    data_preper = DataPrepper(validation_split=0.1, test_split=0.1)
+    data_preper = DataPrepper(validation_split=0.1, test_split=0.1, training=False)
     read_ids = data_preper.get_all_read_ids()
     
-    readGeneratorObj = DataGeneratorCombined("../somedata/singlefast5/", window_size=INPUT_LENGTH, stride=30)
+    readGeneratorObj = DataGeneratorCombined("../somedata/singlefast5/", training=False, window_size=INPUT_LENGTH, stride=30)
     generator = readGeneratorObj.generator(available_read_ids=read_ids)
     modelname, chiron = make_chiron_for_file(model)
 

@@ -5,12 +5,12 @@ import numpy as np
 from utils.Other import get_valid_taiyaki_filename
 
 class DataLoader():
-    def __init__(self, filename=None):
-        self._set_filename(filename)
+    def __init__(self, training, filename=None):
+        self._set_filename(filename, training)
         
-    def _set_filename(self, filename):
+    def _set_filename(self, filename, training):
         if(filename==None):
-            self._filename = get_valid_taiyaki_filename()
+            self._filename = get_valid_taiyaki_filename(training)
         else:
             self._filename = filename
 

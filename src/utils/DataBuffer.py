@@ -5,11 +5,11 @@ from utils.DataLoader import DataLoader
 
 class DataBuffer():
 
-    def __init__(self, read_ids, size=5):
+    def __init__(self, read_ids, training, size=5):
         
         self._read_ids = read_ids
         self._position = 0
-        self._loader = DataLoader()
+        self._loader = DataLoader(training=training)
 
         self._size = size
         self._signal_windows = []

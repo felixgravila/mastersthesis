@@ -20,13 +20,13 @@ input_length = 300
 rnn_padding = 5
 use_maxpool = True
 
-data_preper = DataPrepper(validation_split=0.1, test_split=0.1)
+data_prepper = DataPrepper(training=True, validation_split=0.1, test_split=0.1)
 
-read_ids = data_preper.get_train_read_ids()
-generator = DataGenerator(read_ids, batch_size=10000, input_length=input_length, stride=30, reads_count=5, rnn_pad_size=rnn_padding, use_maxpool=use_maxpool)
+read_ids = data_prepper.get_train_read_ids()
+generator = DataGenerator(read_ids, batch_size=10000, input_length=input_length, stride=30, reads_count=5, rnn_pad_size=rnn_padding, use_maxpool=use_maxpool, training=True)
 
-val_read_ids = data_preper.get_validation_read_ids()
-val_generator = DataGenerator(val_read_ids, batch_size=500, input_length=input_length, stride=150, reads_count=5, rnn_pad_size=rnn_padding, use_maxpool=use_maxpool)
+val_read_ids = data_prepper.get_validation_read_ids()
+val_generator = DataGenerator(val_read_ids, batch_size=500, input_length=input_length, stride=150, reads_count=5, rnn_pad_size=rnn_padding, use_maxpool=use_maxpool, training=True)
 
 #%%
 

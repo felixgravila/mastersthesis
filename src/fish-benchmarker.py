@@ -98,8 +98,8 @@ fish = FishNChips(
 build(fish)
 fish.load_weights(f"{MODEL_SAVE_FILENAME}.h5")
 
-read_ids = DataPrepper(validation_split=0.1, test_split=0.1).get_train_read_ids()
-generator = AttentionDataGenerator(read_ids, config['BATCH_SIZE'], config['STRIDE'], config['ENCODER_MAX_LENGTH'], config['DECODER_MAX_LENGTH'])
+read_ids = DataPrepper(validation_split=0.1, test_split=0.1, training=False).get_all_read_ids()
+generator = AttentionDataGenerator(read_ids, config['BATCH_SIZE'], config['STRIDE'], config['ENCODER_MAX_LENGTH'], config['DECODER_MAX_LENGTH'], training=False)
 aligner = mp.Aligner("../useful_files/zymo-ref-uniq_2019-03-15.fa")
 
 print(f"stride: {config['STRIDE']} batch size: {config['BATCH_SIZE']}")

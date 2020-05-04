@@ -6,8 +6,8 @@ from utils.DataLoader import DataLoader
 
 class DataPrepper():
     
-    def __init__(self, validation_split=0.1, test_split=0.1):    
-        self._loader = DataLoader()
+    def __init__(self, training, validation_split=0.1, test_split=0.1):    
+        self._loader = DataLoader(training)
         self._validation_split = validation_split
         self._test_split = test_split
         self._train_split = self._get_train_split()

@@ -29,10 +29,10 @@ BATCH_SIZE = 1
 AS_BASE_STRING = True
 
 # %%
-read_ids = DataPrepper(validation_split=0.1,
-                       test_split=0.1).get_train_read_ids()
+read_ids = DataPrepper(training=False, validation_split=0.1,
+                       test_split=0.1).get_all_read_ids()
 generator = AttentionDataGenerator(
-    read_ids, BATCH_SIZE, STRIDE, ENCODER_MAX_LENGTH, DECODER_MAX_LENGTH)
+    read_ids, BATCH_SIZE, STRIDE, ENCODER_MAX_LENGTH, DECODER_MAX_LENGTH, training=False)
 x_batch, y_batch_true = next(
     generator.get_batch(label_as_bases=AS_BASE_STRING))
 
@@ -46,7 +46,8 @@ fish = FishNChips(
     dff=DFF,
     pe_encoder_max_length=ENCODER_MAX_LENGTH,
     pe_decoder_max_length=DECODER_MAX_LENGTH,
-    rate=DROPOUT_RATE)
+    rate=DROPOUT_RATE,
+    max_pool_kernel_size=2)
 
 # %%
 

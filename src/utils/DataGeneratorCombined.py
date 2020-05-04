@@ -4,9 +4,9 @@ from collections import deque
 import numpy as np
 
 class DataGeneratorCombined(RawReadGenerator):
-    def __init__(self, root_folder, window_size, stride=30):
+    def __init__(self, root_folder, window_size, training, stride=30):
         super().__init__(root_folder, window_size, stride=30) 
-        self._loader = DataLoader()
+        self._loader = DataLoader(training)
         self.skip_count = 0
         self.match_count = 0
 
