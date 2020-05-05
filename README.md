@@ -39,11 +39,11 @@ Tried Dead Fish with alpha 0.4 and CTC looked good, might be that CTC is overpow
 | chiron_pad5_maxpool3_wholeread             | 86.38%   |
 | Guppy (fast  - dna_r9.4.1_450bps_fast.cfg) | 91.1%    |
 | Guppy (large - dna_r9.4.1_450bps_hac.cfg)  | 91.6%    |
-| fishnchips_250_5CNN_25H_4B                 | 92.62%   |
+| fishnchips_250_5CNN_25H_4B                 | 92.62% * |
 | fishnchips_250_5CNN_25H_4B_6MPK            | 90.34%   |
 | 6MPK bench ( checking bact )               | 95.80%   |
 | our_bonito                                 | 45.09%   |
-| bonito_941                                 | 92.77%   |
+| bonito_941                                 | 92.77% * |
 
 ### BENCHMARKS (TAIYAKI DATA)
 
@@ -51,7 +51,7 @@ Tried Dead Fish with alpha 0.4 and CTC looked good, might be that CTC is overpow
 |---------------------------------|------------|---------|-------|---------|----|---------|---------|------------|
 | Chiron-bn-pad5                  | 5          | 256     | 250   | T       | T  |         |         | 85.10%     |
 | Chiron-bn-pad5-maxpool3         | 5          | 256     | 250   | T       | T  | T       |         | 90.79%     |
-| Chiron-bn-pad5-dropout-maxpool3 | 5          | 256     | 250   | T       | T  | T       | T       | 70.90%  *  |
+| Chiron-bn-pad5-dropout-maxpool3 | 5          | 256     | 250   | T       | T  | T       | T       | 70.90%     |
 | Chiron-pad5-maxpool3            | 5          | 256     | 250   | T       |    | T       |         | 93.15%     |
 | Chiron-pad5-maxpool3 (big)      | 5          | 512     | 512   | T       |    | T       |         | 86.73%     |
 | Chiron-pad5-maxpool3 (whole)    | 5          | 256     | 250   | T       |    | T       |         | 91.35%     |
