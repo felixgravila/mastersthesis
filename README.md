@@ -30,6 +30,8 @@ Tried Dead Fish with alpha 0.4 and CTC looked good, might be that CTC is overpow
 
 ## BENCHMARKS
 
+### BASECALLS (ALL READS, NO CUTTING)
+
 | Name                                       | Accuracy |
 |--------------------------------------------|----------|
 | Chiron (DNA_MODEL)                         | 82.25%   |
@@ -42,6 +44,8 @@ Tried Dead Fish with alpha 0.4 and CTC looked good, might be that CTC is overpow
 | 6MPK bench ( checking bact )               | 95.80%   |
 | our_bonito                                 | 45.09%   |
 | bonito_941                                 | 92.77%   |
+
+### BENCHMARKS (TAIYAKI DATA)
 
 | Name                            | CNN Blocks | Filters | Cells | Padding | BN | Maxpool | Dropout | Accuracy   |
 |---------------------------------|------------|---------|-------|---------|----|---------|---------|------------|
