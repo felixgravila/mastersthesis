@@ -86,16 +86,13 @@ class Chiron():
         inner = Conv1D(self.cnn_filters, 1,
                       padding="same",
                       activation="relu",
-                      use_bias="false",
                       name=f"res{block}-c1")(inner)
         inner = Conv1D(self.cnn_filters, 3,
                       padding="same",
                       activation="relu",
-                      use_bias="false",
                       name=f"res{block}-c2")(inner)
         inner = Conv1D(self.cnn_filters, 1,
                       padding="same",
-                      use_bias="false",
                       name=f"res{block}-c3")(inner)
 
         added = Add(name=f"res{block}-add")([res, inner])
