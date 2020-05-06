@@ -29,10 +29,11 @@ BATCH_SIZE = 1
 AS_BASE_STRING = True
 
 # %%
-read_ids = DataPrepper(training=False, validation_split=0.1,
-                       test_split=0.1).get_all_read_ids()
+
+filename = "mapped_therest.hdf5"
+bacteria = ["Escherichia", "Salmonella"]
 generator = AttentionDataGenerator(
-    read_ids, BATCH_SIZE, STRIDE, ENCODER_MAX_LENGTH, DECODER_MAX_LENGTH, training=False)
+    filename, bacteria, BATCH_SIZE, STRIDE, ENCODER_MAX_LENGTH, DECODER_MAX_LENGTH)
 x_batch, y_batch_true = next(
     generator.get_batch(label_as_bases=AS_BASE_STRING))
 

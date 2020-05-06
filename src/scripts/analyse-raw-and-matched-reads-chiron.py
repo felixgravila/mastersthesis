@@ -51,8 +51,9 @@ def run(output_file=None, out_img=False, out_assembly=False):
     data_preper = DataPrepper(validation_split=0.1, test_split=0.1, training=False)
     read_ids = data_preper.get_all_read_ids()
     
-    readGeneratorObj = DataGeneratorCombined("../somedata/singlefast5/", training=False, window_size=INPUT_LENGTH, stride=30)
-    generator = readGeneratorObj.generator(available_read_ids=read_ids)
+    filename = "mapped_therest.hdf5"
+    readGeneratorObj = DataGeneratorCombined(filename,"../somedata/singlefast5/", training=False, window_size=INPUT_LENGTH, stride=30)
+    generator = readGeneratorObj.generator()
     modelname, chiron = make_chiron_for_file(model)
 
     outputs = []

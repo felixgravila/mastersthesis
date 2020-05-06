@@ -4,8 +4,8 @@ from utils.DataGenerator import DataGenerator
 from utils.Other import attentionLabelBaseMap
 
 class AttentionDataGenerator(DataGenerator):
-    def __init__(self, read_ids, batch_size, stride, pe_encoder_max_length, pe_decoder_max_length, training):
-        super().__init__(read_ids, batch_size, stride, input_length=pe_encoder_max_length, training=training, reads_count=5, use_maxpool=False, rnn_pad_size=0)
+    def __init__(self, filename, bacteria, batch_size, stride, pe_encoder_max_length, pe_decoder_max_length):
+        super().__init__(filename, bacteria, batch_size, stride, input_length=pe_encoder_max_length, reads_count=5, use_maxpool=False, rnn_pad_size=0)
         
         self._pe_decoder_max_length = pe_decoder_max_length
         self._batch_count = 0
