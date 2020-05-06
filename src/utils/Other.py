@@ -44,7 +44,24 @@ def set_gpu_growth():
                 tf.config.experimental.set_memory_growth(gpu, True)
         except RuntimeError as e:
             print(e)
-        
+
+
+def get_taiyaki_filepath(filename):
+    paths = ["/mnt/nvme/bio/taiyaki_aligned/",
+             "/ssd/",
+             "/user/student.aau.dk/fgravi18/data/",
+             "/Users/felix/MsC/DNA/",
+             "c:/Users/mirop/OneDrive/Documents/Programming/Data/bdm/",
+             "/mnt/c/Users/mirop/OneDrive/Documents/Programming/Data/bdm/"]
+    
+    for path in paths:
+        filepath = f"{path}{filename}"
+        if os.path.isfile(filepath):
+            print(f"Loading data from file:{filepath}")
+            return filepath
+    else:
+        raise "Read data file could not be found!"
+
 def get_valid_taiyaki_filename(training):
     train_filenames = ["/mnt/nvme/bio/taiyaki_aligned/mapped_therest.hdf5",
 			              "/user/student.aau.dk/fgravi18/data/mapped_therest.hdf5",

@@ -1,19 +1,19 @@
 import numpy as np
 from collections import deque
 
-from utils.DataLoader import DataLoader
+from utils.BacteriaDataLoader import BacteriaDataLoader
 
 class DataBuffer():
 
-    def __init__(self, read_ids, training, size=5):
+    def __init__(self, filename, bacteria, size=5):
         
-        self._read_ids = read_ids
         self._position = 0
-        self._loader = DataLoader(training=training)
-
+        self._bacteria = bacteria
+        self._loader = BacteriaDataLoader(filename)
         self._size = size
         self._signal_windows = []
         self._label_windows = []
+        self._read_ids = self._get_read_ids()
         
     def get_windows_in_batch(self, batch_size, window_size, window_stride, min_labels_per_window):
         while (len(self._label_windows) < batch_size):
@@ -41,20 +41,36 @@ class DataBuffer():
         x_read, y_read = self._fetch_read(read_id, window_size, window_stride, min_labels_per_window=0)
         return x_read, y_read, list(REF), DAC, read_id
 
+    def _get_read_ids(self):
+        read_ids = self._loader.load_read_ids()
+        np.random.shuffle(read_ids)
+        return read_ids
+
     def _drop(self, amount):
         self._signal_windows = self._signal_windows[amount+1:]
         self._label_windows = self._label_windows[amount+1:]
 
     def _fetch(self, window_size, window_stride, min_labels_per_window):
-        for i in range(self._size):
-            read_id_idx = self._position + i
+        
+        skips = 0
+        found = 0
+        while found < self._size:
+
+            read_id_idx = self._position + (skips + found)
             read_id = self._read_ids[read_id_idx]
+            
+            is_read_id_valid = self._loader.is_read_id_in_bacteria_lst(read_id, self._bacteria)
+            if is_read_id_valid == False:
+                skips += 1
+                continue
+            
             read_x, read_y = self._fetch_read(read_id, window_size, window_stride, min_labels_per_window) 
 
             self._signal_windows.extend(read_x)
             self._label_windows.extend(read_y)
+            found += 1
         
-        self._position += self._size
+        self._position += (skips + found)
 
     def _shuffle(self):
         x = np.array(self._signal_windows)

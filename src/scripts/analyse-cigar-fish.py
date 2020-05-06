@@ -83,14 +83,15 @@ def run(file_anme):
             dff=model_params['d_model'] * 2,
             pe_encoder_max_length=300,
             pe_decoder_max_length=100,
-            rate=0.1)
+            rate=0.1,
+            max_pool_kernel_size=2)
 
         build(model)
         model.load_weights(f"{model_save_filename}.h5")
 
-        read_ids = DataPrepper(validation_split=0.1,
-                            test_split=0.1, training=False).get_all_read_ids()
-        generator = AttentionDataGenerator(read_ids, BATCH_SIZE, 30, 300, 100)
+        filename = "mapped_therest.hdf5"
+        bacteria = ["Escherichia", "Salmonella"]
+        generator = AttentionDataGenerator(filename,bacteria, BATCH_SIZE, 30, 300, 100)
         aligner = mp.Aligner("../useful_files/zymo-ref-uniq_2019-03-15.fa")
 
         for read in range(READS):

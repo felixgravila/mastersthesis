@@ -1,16 +1,18 @@
 from utils.RawReadGenerator import RawReadGenerator
-from utils.DataLoader import DataLoader
+from utils.BacteriaDataLoader import BacteriaDataLoader
 from collections import deque
 import numpy as np
 
 class DataGeneratorCombined(RawReadGenerator):
-    def __init__(self, root_folder, window_size, training, stride=30):
+    def __init__(self,matched_reads_filename, root_folder, window_size, training, stride=30):
         super().__init__(root_folder, window_size, stride=30) 
-        self._loader = DataLoader(training)
+        self._loader = BacteriaDataLoader(matched_reads_filename)
         self.skip_count = 0
         self.match_count = 0
 
-    def generator(self, available_read_ids):    
+
+    def generator(self):
+        available_read_ids = self._loader.load_read_ids()    
         dac_gen = self._get_dac()
         for read_id, dac in dac_gen:
             if read_id not in available_read_ids:

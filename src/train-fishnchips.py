@@ -37,8 +37,9 @@ if os.path.isfile(f"{MODEL_SAVE_FILENAME}.h5"):
     sys.exit()
 
 #%%
-read_ids = DataPrepper(training=True, validation_split=0.1, test_split=0.1).get_all_read_ids()
-generator = AttentionDataGenerator(read_ids, config['BATCH_SIZE'], config['STRIDE'], config['ENCODER_MAX_LENGTH'], config['DECODER_MAX_LENGTH'], training=True)
+filename = "mapped_therest.hdf5"
+bacteria = ["Bacillus", "Staphylococcus", "Lactobacillus", "Pseudomonas", "Listeria", "Enterococcus"]
+generator = AttentionDataGenerator(filename, bacteria, config['BATCH_SIZE'], config['STRIDE'], config['ENCODER_MAX_LENGTH'], config['DECODER_MAX_LENGTH'])
 
 train_loss = tf.keras.metrics.Mean(name='train_loss')
 train_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='train_accuracy')
