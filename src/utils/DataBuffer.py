@@ -61,11 +61,9 @@ class DataBuffer():
             
             is_read_id_valid = self._loader.is_read_id_in_bacteria_lst(read_id, self._bacteria)
             if is_read_id_valid == False:
-                print("skipping")
                 skips += 1
                 continue
             
-            print("keeping")
             read_x, read_y = self._fetch_read(read_id, window_size, window_stride, min_labels_per_window) 
 
             self._signal_windows.extend(read_x)
