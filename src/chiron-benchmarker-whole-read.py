@@ -23,10 +23,10 @@ model = 'outputs/chiron-pad5-maxpool3/2020-03-04_17:44:03/checkpoints/00927_dis1
 
 reads_to_eval = 2000
 json_write_file = "eval_output_whole.json"
-
-data_preper = DataPrepper(validation_split=0.1, test_split=0.1, training=False)
-read_ids = data_preper.get_all_read_ids()
-generator = DataGenerator(read_ids, batch_size=None, input_length=300, stride=20, reads_count=None, rnn_pad_size=None, use_maxpool=None, training=False).get_evaluate_batch()
+    
+filename = "mapped_therest.hdf5"
+bacteria = ["Escherichia", "Salmonella"]
+generator = DataGenerator(filename,bacteria, batch_size=None, input_length=300, stride=20, reads_count=None, rnn_pad_size=None, use_maxpool=None).get_evaluate_batch()
 
 '''
 makes a chiron for the model file

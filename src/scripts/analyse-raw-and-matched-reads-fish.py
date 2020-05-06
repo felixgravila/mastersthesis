@@ -40,7 +40,8 @@ def make_model(params):
         dff=params['DFF'],
         pe_encoder_max_length=params['ENCODER_MAX_LENGTH'],
         pe_decoder_max_length=params['DECODER_MAX_LENGTH'],
-        rate=params['DROPOUT_RATE'])
+        rate=params['DROPOUT_RATE'],
+        max_pool_kernel_size=['MAX_POOL_KERNEL'])
 
 def get_cig_acc(aligner, assembly):
     try:
@@ -57,11 +58,13 @@ def run(output_file):
     build(model)
     model.load_weights(f"./trained_models/{MODEL_WEIGHTS}")
 
-    data_preper = DataPrepper(validation_split=0.1, test_split=0.1)
-    read_ids = data_preper.get_all_read_ids()
+    filename = "mapped_therest.hdf5"
+    raw_folder = "../somedata/singlefast5/"
+    training_bacteria = ["Bacillus", "Staphylococcus", "Lactobacillus", "Pseudomonas", "Listeria", "Enterococcus"]
+    testing_bacteria = ["Escherichia", "Salmonella"]
 
-    readGeneratorObj = DataGeneratorCombined("../somedata/singlefast5/", window_size=model_params['ENCODER_MAX_LENGTH'], training=False, stride=model_params['STRIDE'])
-    generator = readGeneratorObj.generator(available_read_ids=read_ids)
+    readGeneratorObj = DataGeneratorCombined(matched_reads_filename=filename, root_folder=raw_folder, window_size=model_params['ENCODER_MAX_LENGTH'], training=False, stride=model_params['STRIDE'])
+    generator = readGeneratorObj.generator()
     aligner = mp.Aligner("../useful_files/zymo-ref-uniq_2019-03-15.fa")
 
     outputs = []
