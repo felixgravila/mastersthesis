@@ -15,17 +15,18 @@ class style():
 
 experiments = [
     # ('path', 'name'),
-    ('fasta/chiron-bn-pad5', 'chiron_bn_pad5'),
+    # ('fasta/chiron-bn-pad5', 'chiron_bn_pad5'),
     # ('/mnt/nvme/bio/train_chiron/output_DNA_MODEL/result/', 'chiron_dna_model'),
     # ('/mnt/nvme/bio/mastersthesis/somedata/dna_r9.4.1_450bps_fast', 'guppy_fast'),
     # ('/mnt/nvme/bio/mastersthesis/somedata/guppy_dna_r9.4.1_450bps_hac', 'guppy_hac'),
-    # ('fasta/fishnchips_250_5CNN_25H_4B', 'fishnchips_250_5CNN_25H_4B'),
-    ('fasta/fishnchips_250_5CNN_25H_4B_6MPK', 'fishnchips_250_5CNN_25H_4B_6MPK'),
-    ('fasta/fishnchips_250_5CNN_25H_4B_6MPK_bench', "6MPK bench"),
+    ('fasta/fishnchips_250_5CNN_25H_4B', 'fishnchips_250_5CNN_25H_4B'),
+    # ('fasta/fishnchips_250_5CNN_25H_4B_6MPK', 'fishnchips_250_5CNN_25H_4B_6MPK'),
+    # ('fasta/fishnchips_250_5CNN_25H_4B_6MPK_bench', "6MPK bench"),
     # ('fasta/chiron-pad5-maxpool3', 'chiron_pad5_maxpool3'),
     # ('fasta/chiron-pad5-maxpool3-wholeread', 'chiron_pad5_maxpool3_wholeread'),
     # ('/mnt/nvme/bio/mastersthesis/somedata/our_bonito_basecalls', 'our_bonito'),
-    # ('/mnt/nvme/bio/mastersthesis/somedata/bonito_941', 'bonito_941'),
+    ('/mnt/nvme/bio/mastersthesis/somedata/bonito_941', 'bonito_941'),
+    ('fasta/fishnchips_250_5CNN_25H_4B_3MPK', 'fishnchips_250_5CNN_25H_4B_3MPK')
 ]
 
 overwrite_all = False
@@ -69,6 +70,8 @@ for folder,experiment_name in experiments:
     misses = 0
     tot_reads = len(reads)
     for i, (rid, dna) in enumerate(reads.items()):
+        # if len(dna) > 6000:
+        #     continue
         if rid in read_dict.keys():
             print(f"Aligning {i:04d}/{tot_reads}"+" "*50, end="\r")
             found = False
