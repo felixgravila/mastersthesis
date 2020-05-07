@@ -29,7 +29,7 @@ with open(config_filename, "r") as f:
 READS = 50
 AS_BASE_STRING = True
 
-MODEL_SAVE_FILENAME = f"./trained_models/fishnchips_{config['D_MODEL']}_{config['CNN_BLOCKS']}CNN_{config['NUM_HEADS']}H_{config['ATTENTION_BLOCKS']}B"
+MODEL_SAVE_FILENAME = f"./trained_models/fishnchips62_{config['D_MODEL']}_{config['CNN_BLOCKS']}CNN_{config['NUM_HEADS']}H_{config['ATTENTION_BLOCKS']}B"
 if config['MAX_POOL_KERNEL'] != 2:
     MODEL_SAVE_FILENAME = f"{MODEL_SAVE_FILENAME}_{config['MAX_POOL_KERNEL']}MPK"
 
