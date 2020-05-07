@@ -26,8 +26,9 @@ val_generator = DataGenerator(filename, bacteria=test_bacteria, batch_size=500, 
 
 #%%
 
-cb = ChironBuilder(input_length, cnn_filters=512, lstm_units=512)\
-        .with_rnn_padding(rnn_padding)
+cb = ChironBuilder(input_length, cnn_filters=256, lstm_units=250)\
+        .with_rnn_padding(rnn_padding)\
+        .with_batch_normalization()
 cb = cb.with_maxpool(3) if use_maxpool else cb
 chiron=cb.build()
 
@@ -35,8 +36,8 @@ chiron=cb.build()
 save_cb = SaveCB(chiron, val_generator)\
     .withCheckpoints()\
     .withImageOutput()\
-    .withMaxPool()\
     .withPatience(patience=300)
+save_cb = save_cb.withMaxPool() if use_maxpool else save_cb
 
 
 #%%
