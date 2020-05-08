@@ -28,7 +28,7 @@ with open(config_filename, "r") as f:
 
 config['BATCH_SIZE'] = config['BATCH_SIZE'] * 30
 
-READS = 50
+READS = 200
 AS_BASE_STRING = True
 
 MODEL_SAVE_FILENAME = f"./trained_models/fishnchips62_{config['D_MODEL']}_{config['CNN_BLOCKS']}CNN_{config['NUM_HEADS']}H_{config['ATTENTION_BLOCKS']}B"
