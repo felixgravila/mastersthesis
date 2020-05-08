@@ -26,6 +26,8 @@ if len(sys.argv)>1:
 with open(config_filename, "r") as f:
   config = json.load(f)
 
+config['BATCH_SIZE'] = config['BATCH_SIZE'] * 30
+
 READS = 50
 AS_BASE_STRING = True
 
