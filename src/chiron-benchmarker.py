@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import json
 import re
-import time
+import time, datetime
 
 from models.ChironBuilder import ChironBuilder
 from utils.assembler import assemble
@@ -102,6 +102,9 @@ for idx in range(reads_to_eval):
             print(style.RED(f"{modelname}..."), end="")
         with open(json_write_file, 'w') as jsonfile:
             json.dump(result_dict, jsonfile)
+        with open(f"62{modelname}_bench.fa", 'a') as f:
+            f.write(f"@{read_id};{round(time.time())};{datetime.datetime.now().strftime('%m/%d/%Y, %H:%M:%S')}\n")
+            f.write(f"{assembled}\n")
         print("done.")
     except Exception as e:
         print(e)
