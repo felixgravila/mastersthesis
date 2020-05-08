@@ -20,7 +20,8 @@ class style():
     RED = lambda x: f"\033[31m{x}\033[0m"
     GREEN = lambda x: f"\033[32m{x}\033[0m"
 
-model = 'outputs/chiron-512CNN-512LSTM-pad5-maxpool3/2020-04-21_17:32:55/checkpoints/00464_dis247.h5'
+# model = 'outputs/chiron-512CNN-512LSTM-pad5-maxpool3/2020-04-21_17:32:55/checkpoints/00464_dis247.h5'
+model = 'outputs/chiron-512CNN-512LSTM-pad5-maxpool3/2020-05-06_16:35:10/checkpoints/00300_dis491.h5'
 
 input_length = 300
 reads_to_eval = 200
@@ -57,7 +58,7 @@ def make_chiron_for_file(file):
 modelname, chiron = make_chiron_for_file(model)
 
 result_dict = []
-json_write_file = f"trained_models/{modelname}.json"
+json_write_file = f"trained_models/62{modelname}.json"
 
 #%%
 
