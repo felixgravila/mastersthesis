@@ -31,8 +31,16 @@ def scaled_dot_product_attention(q, k, v, mask):
 
   # softmax is normalized on the last axis (seq_len_k) so that the scores
   # add up to 1.
+  # This leaves us with a matrix of seq_len_q, seq_len_k
+  # meaning:
+  # for each time step of the query, we get a list of length timesteps of the keys
+  # so for each timestep of the query, we get a softmax representing how much attention
+  # to pay per each time step of the keys
   attention_weights = tf.nn.softmax(scaled_attention_logits, axis=-1)  # (..., seq_len_q, seq_len_k)
-
+  # this is just a softmax without actual information
+  # multiply it by v which is always identical to k
+  # this has the effect of creating an encoding which is the weighted sum of all encodings in the sentence
+  # so one big encoding that represents everything that's important
   output = tf.matmul(attention_weights, v)  # (..., seq_len_q, depth_v)
 
   return output, attention_weights  
