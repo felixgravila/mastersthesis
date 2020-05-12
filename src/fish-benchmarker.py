@@ -36,10 +36,10 @@ if config['MAX_POOL_KERNEL'] != 2:
     MODEL_SAVE_FILENAME = f"{MODEL_SAVE_FILENAME}_{config['MAX_POOL_KERNEL']}MPK"
 
 result_dict = []
-if os.path.isfile(f"{MODEL_SAVE_FILENAME}.json"):
+if os.path.isfile(f"nooverlap_{MODEL_SAVE_FILENAME}.json"):
   answer = input("This model exists, do you want to append to existing analysis [Y/n]?:")
   if answer not in "Nn" or answer == "":
-    with open(f"{MODEL_SAVE_FILENAME}.json", "r") as f:
+    with open(f"nooverlap_{MODEL_SAVE_FILENAME}.json", "r") as f:
         result_dict = json.load(f)
 
 
@@ -102,7 +102,7 @@ fish.load_weights(f"{MODEL_SAVE_FILENAME}.h5")
 
 filename = "mapped_therest.hdf5"
 bacteria = ["Escherichia", "Salmonella"]
-generator = AttentionDataGenerator(filename, bacteria, config['BATCH_SIZE'], config['STRIDE'], config['ENCODER_MAX_LENGTH'], config['DECODER_MAX_LENGTH'])
+generator = AttentionDataGenerator(filename, bacteria, config['BATCH_SIZE'], config['ENCODER_MAX_LENGTH'], config['ENCODER_MAX_LENGTH'], config['DECODER_MAX_LENGTH'])
 aligner = mp.Aligner("../useful_files/zymo-ref-uniq_2019-03-15.fa")
 
 print(f"stride: {config['STRIDE']} batch size: {config['BATCH_SIZE']}")
@@ -124,16 +124,16 @@ for read in range(len(result_dict), READS):
             y_batch_pred, _ = evaluate_batch(x_batch, fish, len(x_batch), as_bases=AS_BASE_STRING)
             y_pred.extend(y_batch_pred)
 
-        assembly = assemble(y_pred)
+        assembly = "".join(y_pred)
 
         result = get_cig_result(aligner, assembly)
         result['time'] = time.time() - start_time
 
         result_dict.append(result)
         print(f"{read:02d}/{READS} Done read... cigacc {result['cigacc']}"+" "*50) # 50 blanks to overwrite the previous print
-        with open(f'{MODEL_SAVE_FILENAME}.json', 'w') as jsonfile:
+        with open(f'nooverlap_{MODEL_SAVE_FILENAME}.json', 'w') as jsonfile:
             json.dump(result_dict, jsonfile)
-        with open(f"{MODEL_SAVE_FILENAME}_bench.fa", 'a') as f:
+        with open(f"nooverlap_{MODEL_SAVE_FILENAME}_bench.fa", 'a') as f:
             f.write(f"@{read_id};{round(time.time())};{datetime.datetime.now().strftime('%m/%d/%Y, %H:%M:%S')}\n")
             f.write(f"{assembly}\n")
     except Exception as e:
