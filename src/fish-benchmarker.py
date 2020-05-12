@@ -36,10 +36,10 @@ if config['MAX_POOL_KERNEL'] != 2:
     MODEL_SAVE_FILENAME = f"{MODEL_SAVE_FILENAME}_{config['MAX_POOL_KERNEL']}MPK"
 
 result_dict = []
-if os.path.isfile(f"nooverlap_{MODEL_SAVE_FILENAME}.json"):
+if os.path.isfile(f"{MODEL_SAVE_FILENAME}_nooverlap.json"):
   answer = input("This model exists, do you want to append to existing analysis [Y/n]?:")
   if answer not in "Nn" or answer == "":
-    with open(f"nooverlap_{MODEL_SAVE_FILENAME}.json", "r") as f:
+    with open(f"{MODEL_SAVE_FILENAME}_nooverlap.json", "r") as f:
         result_dict = json.load(f)
 
 
@@ -131,9 +131,9 @@ for read in range(len(result_dict), READS):
 
         result_dict.append(result)
         print(f"{read:02d}/{READS} Done read... cigacc {result['cigacc']}"+" "*50) # 50 blanks to overwrite the previous print
-        with open(f'nooverlap_{MODEL_SAVE_FILENAME}.json', 'w') as jsonfile:
+        with open(f'{MODEL_SAVE_FILENAME}_nooverlap.json', 'w') as jsonfile:
             json.dump(result_dict, jsonfile)
-        with open(f"nooverlap_{MODEL_SAVE_FILENAME}_bench.fa", 'a') as f:
+        with open(f"{MODEL_SAVE_FILENAME}_nooverlap.fa", 'a') as f:
             f.write(f"@{read_id};{round(time.time())};{datetime.datetime.now().strftime('%m/%d/%Y, %H:%M:%S')}\n")
             f.write(f"{assembly}\n")
     except Exception as e:
