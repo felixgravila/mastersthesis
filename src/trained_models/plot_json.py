@@ -14,15 +14,20 @@ files = [
     # "trained_models/fishnchips_250_0CNN_25H_4B.json",
     # "trained_models/fishnchips_256_0CNN_32H_4B.json",
     # "trained_models/fishnchips_1000_0CNN_25H_2B.json",
-    "trained_models/fishnchips_250_5CNN_25H_4B.json",
+
+    # "trained_models/fishnchips_250_5CNN_25H_4B.json",
+    
     # "trained_models/fishnchips_1000_0CNN_50H_2B.json",
     # "trained_models/fishnchips_250_4CNN_25H_4B.json",
     # "trained_models/fishnchips_250_6CNN_25H_4B.json",
     # "trained_models/fishnchips_250_5CNN_25H_2B.json",
-    "trained_models/fishnchips_250_5CNN_25H_4B_3MPK.json",
-    "trained_models/fishnchips_250_5CNN_25H_4B_6MPK.json",
-    "trained_models/fishnchips62_250_5CNN_25H_4B.json",
-    "trained_models/fishnchips62_250_5CNN_25H_4B_6MPK.json"
+
+    # "trained_models/fishnchips_250_5CNN_25H_4B_3MPK.json",
+    # "trained_models/fishnchips_250_5CNN_25H_4B_6MPK.json",
+    # "trained_models/fishnchips62_250_5CNN_25H_4B.json",
+    "trained_models/fishnchips62_250_5CNN_25H_4B_6MPK.json",
+    "trained_models/fa_fishnchips62_250_5CNN_25H_4B_6MPK_bench.json",
+    "trained_models/fa_fishnchips62_250_5CNN_25H_4B_bench.json",
 ]
 
 plt.figure(figsize=(20, 10))
@@ -31,7 +36,7 @@ for filepath in files:
         with open(filepath, "r") as f:
             data = json.load(f)
         cigaccs = [x['cigacc']*100 for x in data]
-#        cigaccs = [x['cigacc']*100 for x in data if x['cigacc'] > 0.7]
+        # cigaccs = [x['cigacc']*100 for x in data if x['cigacc'] > 0.7]
 
         avg = numpy.mean(cigaccs)
         cleaned_filename = filepath.split("/")[1].split(".")[0]
