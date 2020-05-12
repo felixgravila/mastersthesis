@@ -13,21 +13,26 @@ class style():
     RED = lambda x: f"\033[31m{x}\033[0m"
     GREEN = lambda x: f"\033[32m{x}\033[0m"
 
-experiments = [
-    # ('path', 'name'),
-    # ('fasta/chiron-bn-pad5', 'chiron_bn_pad5'),
-    # ('/mnt/nvme/bio/train_chiron/output_DNA_MODEL/result/', 'chiron_dna_model'),
-    # ('/mnt/nvme/bio/mastersthesis/somedata/dna_r9.4.1_450bps_fast', 'guppy_fast'),
-    # ('/mnt/nvme/bio/mastersthesis/somedata/guppy_dna_r9.4.1_450bps_hac', 'guppy_hac'),
-    ('fasta/fishnchips_250_5CNN_25H_4B', 'fishnchips_250_5CNN_25H_4B'),
-    # ('fasta/fishnchips_250_5CNN_25H_4B_6MPK', 'fishnchips_250_5CNN_25H_4B_6MPK'),
-    # ('fasta/fishnchips_250_5CNN_25H_4B_6MPK_bench', "6MPK bench"),
-    # ('fasta/chiron-pad5-maxpool3', 'chiron_pad5_maxpool3'),
-    # ('fasta/chiron-pad5-maxpool3-wholeread', 'chiron_pad5_maxpool3_wholeread'),
-    # ('/mnt/nvme/bio/mastersthesis/somedata/our_bonito_basecalls', 'our_bonito'),
-    ('/mnt/nvme/bio/mastersthesis/somedata/bonito_941', 'bonito_941'),
-    ('fasta/fishnchips_250_5CNN_25H_4B_3MPK', 'fishnchips_250_5CNN_25H_4B_3MPK')
-]
+if len(sys.argv)>1:
+    experiments = [
+        (sys.argv[1], sys.argv[2])
+    ]
+else:
+    experiments = [
+        # ('path', 'name'),
+        # ('fasta/chiron-bn-pad5', 'chiron_bn_pad5'),
+        # ('/mnt/nvme/bio/train_chiron/output_DNA_MODEL/result/', 'chiron_dna_model'),
+        # ('/mnt/nvme/bio/mastersthesis/somedata/dna_r9.4.1_450bps_fast', 'guppy_fast'),
+        # ('/mnt/nvme/bio/mastersthesis/somedata/guppy_dna_r9.4.1_450bps_hac', 'guppy_hac'),
+        ('fasta/fishnchips_250_5CNN_25H_4B', 'fishnchips_250_5CNN_25H_4B'),
+        # ('fasta/fishnchips_250_5CNN_25H_4B_6MPK', 'fishnchips_250_5CNN_25H_4B_6MPK'),
+        # ('fasta/fishnchips_250_5CNN_25H_4B_6MPK_bench', "6MPK bench"),
+        # ('fasta/chiron-pad5-maxpool3', 'chiron_pad5_maxpool3'),
+        # ('fasta/chiron-pad5-maxpool3-wholeread', 'chiron_pad5_maxpool3_wholeread'),
+        # ('/mnt/nvme/bio/mastersthesis/somedata/our_bonito_basecalls', 'our_bonito'),
+        ('/mnt/nvme/bio/mastersthesis/somedata/bonito_941', 'bonito_941'),
+        ('fasta/fishnchips_250_5CNN_25H_4B_3MPK', 'fishnchips_250_5CNN_25H_4B_3MPK')
+    ]
 
 overwrite_all = False
 
@@ -35,7 +40,7 @@ read_dict_file = "../utilities/umiToBactDict/uids.json"
 with open(read_dict_file) as f:
     read_dict = json.load(f)
 
-for folder,experiment_name in experiments:
+for path,experiment_name in experiments:
     print(f"Running {experiment_name}")
 
     result_dict = []
@@ -50,10 +55,17 @@ for folder,experiment_name in experiments:
 
     reads = {}
 
-    for fastafile in os.listdir(folder):
-        if fastafile.split(".")[-1] not in ["fastq", "fasta", "fa", "fq"]:
-            continue
-        with open(os.path.join(folder, fastafile), "r") as f:
+    fastafiles = []
+
+    if os.path.isfile(path):
+        fastafiles.append(path)
+    else:
+        fastafiles.extend([os.path.join(path, x) for x in os.listdir(path) if x.split(".")[-1] in ["fastq", "fasta", "fa", "fq"]])
+
+    
+
+    for fastafile in fastafiles:
+        with open(fastafile, "r") as f:
             data = deque(f.readlines())
         while len(data) > 0:
             l = data.popleft()
