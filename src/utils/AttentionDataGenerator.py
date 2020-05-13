@@ -11,7 +11,7 @@ class AttentionDataGenerator(DataGenerator):
         self._pe_decoder_max_length = pe_decoder_max_length
         self._batch_count = 0
 
-        with open("/mnt/nvme/bio/mastersthesis/utilities/umiToBactDict/uids.json") as f:
+        with open("../utilities/umiToBactDict/uids.json") as f:
             self._umibactdict = json.load(f)
 
     def get_batch(self, label_as_bases=False):
@@ -42,12 +42,15 @@ class AttentionDataGenerator(DataGenerator):
             if read_id not in self._umibactdict:
                 print("Not in dict")
                 continue
-            if "Escherichia" not in self._umibactdict[read_id] and "Salmonella" not in self._umibactdict[read_id]:
+            for bact in self.bacteria:
+                if bact in self._umibactdict[read_id]:
+                    x_windows = np.array(x_windows)
+                    y_windows = self._to_target_language(y_orig_windows, label_as_bases)
+                    yield x_windows, y_windows, ref, raw, read_id
+                continue
+            else:
                 print(f"not in {self._umibactdict[read_id]}")
                 continue
-            x_windows = np.array(x_windows)
-            y_windows = self._to_target_language(y_orig_windows, label_as_bases)
-            yield x_windows, y_windows, ref, raw, read_id
 
     def _to_target_language(self, y_orig, as_bases):
         y_new = []

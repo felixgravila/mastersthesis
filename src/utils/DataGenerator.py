@@ -13,10 +13,11 @@ class DataGenerator():
         self.use_maxpool = use_maxpool
         self.rnn_pad_size = rnn_pad_size
         self.stride = stride
+        self.bacteria = bacteria
 
         self._buffer = DataBuffer(filename, bacteria, size=reads_count)
         self._batch_count = 0
-          
+        
     def get_batch(self):
         while True:
             self._batch_count += 1

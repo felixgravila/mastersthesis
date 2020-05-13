@@ -5,10 +5,12 @@ import numpy as np
 import sys
 import json
 import os
+import mappy as mp
 
 from utils.AttentionDataGenerator import AttentionDataGenerator
 from utils.DataPrepper import DataPrepper
 from utils.Other import set_gpu_growth, print_tensor_to_file
+from utils.attention_evaluation_utils import build, evaluate_batch
 
 from models.Attention.CustomSchedule import CustomSchedule
 from models.Attention.attention_utils import create_combined_mask
@@ -27,7 +29,7 @@ with open(config_filename, "r") as f:
 
 print(json.dumps(config, indent=4))
 
-MODEL_SAVE_FILENAME = f"./trained_models/fishnchips62_{config['D_MODEL']}_{config['CNN_BLOCKS']}CNN_{config['NUM_HEADS']}H_{config['ATTENTION_BLOCKS']}B"
+MODEL_SAVE_FILENAME = f"./trained_models/fishnchips62v_{config['D_MODEL']}_{config['CNN_BLOCKS']}CNN_{config['NUM_HEADS']}H_{config['ATTENTION_BLOCKS']}B"
 if config['MAX_POOL_KERNEL'] != 2:
     MODEL_SAVE_FILENAME = f"{MODEL_SAVE_FILENAME}_{config['MAX_POOL_KERNEL']}MPK"
 
@@ -84,11 +86,58 @@ def train_step(inp, tar):
   train_accuracy(tar_real, predictions)
 
 #%%
-old_loss = 1
+
+READS_TO_VALIDATE = 5
+VAL_BACT = ['Escherichia', 'Salmonella']
+
+config['VALIDATION_STRIDE'] = config['ENCODER_MAX_LENGTH']
+val_generator = AttentionDataGenerator(filename, VAL_BACT, config['BATCH_SIZE'], config['VALIDATION_STRIDE'], config['ENCODER_MAX_LENGTH'], config['DECODER_MAX_LENGTH'])
+
+aligner = mp.Aligner("../useful_files/zymo-ref-uniq_2019-03-15.fa")
+
+def get_cig_acc(assembly):
+    try:
+        besthit = next(aligner.map(assembly))
+        return 1-(besthit.NM/besthit.blen) 
+    except:
+        return 0
+
+
+def get_val_acc():
+  val_loss = 0
+  performed = 0
+  for r in range(READS_TO_VALIDATE):
+    print(f"{r}/{READS_TO_VALIDATE}")
+    try:
+        x_windows, y_windows, _, _, _ = next(val_generator.get_window_batch(label_as_bases=True))
+        nr_windows = len(x_windows)
+
+        assert nr_windows == len(y_windows)
+
+        y_pred = []
+        for b in range(0,nr_windows,config['BATCH_SIZE']*10):
+            x_batch = x_windows[b:b+config['BATCH_SIZE']*10]          
+            y_batch_pred, _ = evaluate_batch(x_batch, fish, len(x_batch), as_bases=True)
+            y_pred.extend(y_batch_pred)
+
+        assembly = "".join(y_pred)
+        acc = get_cig_acc(assembly)
+        val_loss += acc
+        performed += 1
+    except Exception as e:
+        print(e)
+  return val_loss/performed # not using READS_TO_VALIDATE in case of error caught by catch
+
+#%%
+old_acc = 0
 accs = []
 waited = 0
 
 for epoch in range(config['EPOCHS']):
+    # ignore patience until epoch 200
+    if epoch < 200:
+      waited = 0
+
     start = time.time()
     train_loss.reset_states()
     train_accuracy.reset_states()
@@ -104,13 +153,15 @@ for epoch in range(config['EPOCHS']):
     accs.append([train_loss.result(), train_accuracy.result(), time.time()])
     np.save(f"{MODEL_SAVE_FILENAME}.npy", np.array(accs))    
 
+    val_acc = get_val_acc()
+    
     loss = train_loss.result()
     acc = train_accuracy.result()
-    print (f'Epoch {epoch + 1} Loss {loss:.4f} Accuracy {acc:.4f}, took {time.time() - start} secs')
+    print (f'Epoch {epoch + 1} Loss {loss:.4f} Accuracy {acc:.4f}, valloss {val_acc}, took {time.time() - start} secs')
 
-    if loss < old_loss:
+    if val_acc > old_acc:
         waited = 0
-        old_loss = loss
+        old_acc = val_acc
         fish.save_weights(f"{MODEL_SAVE_FILENAME}.h5")
     else:
         waited += 1
