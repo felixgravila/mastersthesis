@@ -82,7 +82,8 @@ def _find_alignment_index(seq_list, seq_to_align):
   if(len(seq_list) == 0):
     return 0
   
-  alignment_from = _get_closest_index(seq_list)-len(seq_to_align)+1 # returns the smallest `index` in the context window
+  # alignment_from = _get_closest_index(seq_list)-len(seq_to_align)+1 # returns the smallest `index` in the context window
+  alignment_from = _get_closest_index(seq_list)+1 # returns the smallest `index` in the context window
   alignment_to = _get_furthest_index(seq_list)-1 # returns the furthest away character
 
   max_score = 0
