@@ -32,6 +32,8 @@ print(json.dumps(config, indent=4))
 MODEL_SAVE_FILENAME = f"./trained_models/fishnchips62v_{config['D_MODEL']}_{config['CNN_BLOCKS']}CNN_{config['NUM_HEADS']}H_{config['ATTENTION_BLOCKS']}B"
 if config['MAX_POOL_KERNEL'] != 2:
     MODEL_SAVE_FILENAME = f"{MODEL_SAVE_FILENAME}_{config['MAX_POOL_KERNEL']}MPK"
+if config['ENCODER_MAX_LENGTH'] != 300:
+    MODEL_SAVE_FILENAME = f"{MODEL_SAVE_FILENAME}_{config['ENCODER_MAX_LENGTH']}W"
 
 if os.path.isfile(f"{MODEL_SAVE_FILENAME}.h5"):
   answer = input("This model exists, are you sure you want to overwrite it? [y/N]:")
@@ -150,10 +152,10 @@ for epoch in range(config['EPOCHS']):
 
         print (f'Epoch {epoch + 1} Batch {batch} Loss {train_loss.result():.4f} Accuracy {train_accuracy.result():.4f}', end="\r")
 
-    accs.append([train_loss.result(), train_accuracy.result(), time.time()])
-    np.save(f"{MODEL_SAVE_FILENAME}.npy", np.array(accs))    
-
     val_acc = get_val_acc()
+
+    accs.append([train_loss.result(), train_accuracy.result(), val_acc, time.time()])
+    np.save(f"{MODEL_SAVE_FILENAME}.npy", np.array(accs))    
     
     loss = train_loss.result()
     acc = train_accuracy.result()

@@ -40,7 +40,7 @@ class AttentionDataGenerator(DataGenerator):
                 self.stride
             )
             if read_id not in self._umibactdict:
-                print("Not in dict")
+#                print("Not in dict")
                 continue
             for bact in self.bacteria:
                 if bact in self._umibactdict[read_id]:
@@ -49,7 +49,7 @@ class AttentionDataGenerator(DataGenerator):
                     yield x_windows, y_windows, ref, raw, read_id
                 continue
             else:
-                print(f"not in {self._umibactdict[read_id]}")
+#                print(f"not in {self._umibactdict[read_id]}")
                 continue
 
     def _to_target_language(self, y_orig, as_bases):
