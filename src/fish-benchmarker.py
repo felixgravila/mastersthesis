@@ -18,6 +18,8 @@ sys.path.insert(0, './src')
 
 set_gpu_growth()
 
+NO_OVERLAP = False
+
 # %%
 config_filename = "configs/train-fishnchips-config-skel.json"
 
@@ -37,11 +39,14 @@ if config['MAX_POOL_KERNEL'] != 2:
 if config['ENCODER_MAX_LENGTH'] != 300:
     MODEL_SAVE_FILENAME = f"{MODEL_SAVE_FILENAME}_{config['ENCODER_MAX_LENGTH']}W"
 
+json_filename = f"{MODEL_SAVE_FILENAME}_nooverlap.json" if NO_OVERLAP else f"{MODEL_SAVE_FILENAME}.json"
+fasta_filename = f"{MODEL_SAVE_FILENAME}_nooverlap.fa" if NO_OVERLAP else f"{MODEL_SAVE_FILENAME}.fa"
+
 result_dict = []
-if os.path.isfile(f"{MODEL_SAVE_FILENAME}_nooverlap.json"):
+if os.path.isfile(json_filename):
   answer = input("This model exists, do you want to append to existing analysis [Y/n]?:")
   if answer not in "Nn" or answer == "":
-    with open(f"{MODEL_SAVE_FILENAME}_nooverlap.json", "r") as f:
+    with open(json_filename, "r") as f:
         result_dict = json.load(f)
 
 
@@ -104,7 +109,10 @@ fish.load_weights(f"{MODEL_SAVE_FILENAME}.h5")
 
 filename = "mapped_therest.hdf5"
 bacteria = ["Escherichia", "Salmonella"]
-generator = AttentionDataGenerator(filename, bacteria, config['BATCH_SIZE'], config['ENCODER_MAX_LENGTH'], config['ENCODER_MAX_LENGTH'], config['DECODER_MAX_LENGTH'])
+if NO_OVERLAP:
+    generator = AttentionDataGenerator(filename, bacteria, config['BATCH_SIZE'], config['ENCODER_MAX_LENGTH'], config['ENCODER_MAX_LENGTH'], config['DECODER_MAX_LENGTH'])
+else:
+    generator = AttentionDataGenerator(filename, bacteria, config['BATCH_SIZE'], config['STRIDE'], config['ENCODER_MAX_LENGTH'], config['DECODER_MAX_LENGTH'])
 aligner = mp.Aligner("../useful_files/zymo-ref-uniq_2019-03-15.fa")
 
 print(f"stride: {config['STRIDE']} batch size: {config['BATCH_SIZE']}")
@@ -126,16 +134,19 @@ for read in range(len(result_dict), READS):
             y_batch_pred, _ = evaluate_batch(x_batch, fish, len(x_batch), as_bases=AS_BASE_STRING)
             y_pred.extend(y_batch_pred)
 
-        assembly = "".join(y_pred)
+        if NO_OVERLAP:
+            assembly = "".join(y_pred)
+        else:
+            assembly = assemble(y_pred)
 
         result = get_cig_result(aligner, assembly)
         result['time'] = time.time() - start_time
 
         result_dict.append(result)
         print(f"{read:02d}/{READS} Done read... cigacc {result['cigacc']}"+" "*50) # 50 blanks to overwrite the previous print
-        with open(f'{MODEL_SAVE_FILENAME}_nooverlap.json', 'w') as jsonfile:
+        with open(json_filename, 'w') as jsonfile:
             json.dump(result_dict, jsonfile)
-        with open(f"{MODEL_SAVE_FILENAME}_nooverlap.fa", 'a') as f:
+        with open(fasta_filename, 'a') as f:
             f.write(f"@{read_id};{round(time.time())};{datetime.datetime.now().strftime('%m/%d/%Y, %H:%M:%S')}\n")
             f.write(f"{assembly}\n")
     except Exception as e:
