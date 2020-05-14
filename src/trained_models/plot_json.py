@@ -25,9 +25,11 @@ files = [
     # "trained_models/fishnchips_250_5CNN_25H_4B_3MPK.json",
     # "trained_models/fishnchips_250_5CNN_25H_4B_6MPK.json",
     # "trained_models/fishnchips62_250_5CNN_25H_4B.json",
-    "trained_models/fishnchips62_250_5CNN_25H_4B_6MPK.json",
-    "trained_models/fa_fishnchips62_250_5CNN_25H_4B_6MPK_bench.json",
-    "trained_models/fa_fishnchips62_250_5CNN_25H_4B_bench.json",
+    # "trained_models/fishnchips62_250_5CNN_25H_4B_6MPK.json",
+    # "trained_models/fa_fishnchips62_250_5CNN_25H_4B_6MPK_bench.json",
+    # "trained_models/fa_fishnchips62_250_5CNN_25H_4B_bench.json",
+    "trained_models/fishnchips62v_250_5CNN_25H_4B_100W_nooverlap.json",
+    "trained_models/fishnchips62v_250_5CNN_25H_4B_6MPK_nooverlap.json"
 ]
 
 plt.figure(figsize=(20, 10))
@@ -36,7 +38,7 @@ for filepath in files:
         with open(filepath, "r") as f:
             data = json.load(f)
         cigaccs = [x['cigacc']*100 for x in data]
-        # cigaccs = [x['cigacc']*100 for x in data if x['cigacc'] > 0.7]
+        cigaccs = [x['cigacc']*100 for x in data if "Escherichia" in x['ctg'] or "Salmonella" in x['ctg']]
 
         avg = numpy.mean(cigaccs)
         cleaned_filename = filepath.split("/")[1].split(".")[0]

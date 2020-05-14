@@ -16,7 +16,7 @@ def create_path(path):
         if answer not in "Yy":
             sys.exit()
     else:
-        os.mkdir(path)
+        os.makedirs(path)
 
 def load_config(filename):
     filepath = f"./configs/{filename}"
@@ -24,14 +24,14 @@ def load_config(filename):
     with open(filepath, "r") as f:
         return json.load(f)
 
-def get_model_save_filepath(model_config, run_name):
+def get_model_save_filepath(model_config, train_config, validation_config, run_name):
     try:
-        path = f"./trained_models/{run_name}"
+        path = f"./trained_models_2/{run_name}"
         create_path(path)
 
-        model_filepath = f"{path}/fishnchips62_{model_config['d_model']}_{model_config['cnn_blocks']}CNN_{model_config['num_heads']}H_{model_config['attention_blocks']}B"
+        model_filepath = f"{path}/fishnchips{len(train_config['bacteria'])}{len(validation_config['bacteria'])}_{model_config['d_model']}_{model_config['cnn_blocks']}CNN_{model_config['num_heads']}H_{model_config['attention_blocks']}B"
         if model_config['maxpool_kernel'] != 2:
-            model_name = f"{model_filepath}_{model_config['maxpool_kernel']}MPK"  
+            model_filepath = f"{model_filepath}_{model_config['maxpool_kernel']}MPK"  
 
         print(f"model name:{model_filepath}")    
         return model_filepath
@@ -77,7 +77,7 @@ def run(config_file, run_name):
     print_run_parameters(config)
     model_config, training_config, validation_config, test_config = split_config(config)
 
-    model_filepath = get_model_save_filepath(model_config, run_name)
+    model_filepath = get_model_save_filepath(model_config, training_config, validation_config, run_name)
     model = make_fish_from_config(model_config)
 
     training_controller = TrainingController(model_config, training_config, validation_config, model, model_filepath)

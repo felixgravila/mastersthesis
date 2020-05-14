@@ -10,6 +10,7 @@ class ValidationController():
         self._reads = validation_config['reads']
         self._batch_size = validation_config['batch_size']
         self._aligner = mp.Aligner("../useful_files/zymo-ref-uniq_2019-03-15.fa")
+        assert validation_config['stride'] <= model_config['encoder_max_length']
         self._with_assembler = model_config['encoder_max_length'] == validation_config['stride']
 
     def get_cig_accuracy(self, assembly):
