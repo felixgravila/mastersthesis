@@ -60,7 +60,7 @@ def get_taiyaki_filepath(filename):
             print(f"Loading data from file:{filepath}")
             return filepath
     else:
-        raise "Read data file could not be found!"
+        raise Exception(f"File {path}{filename} could not be found!")
 
 def get_valid_taiyaki_filename(training):
     train_filenames = ["/mnt/nvme/bio/taiyaki_aligned/mapped_therest.hdf5",
