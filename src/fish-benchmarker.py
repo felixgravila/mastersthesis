@@ -109,6 +109,7 @@ fish.load_weights(f"{MODEL_SAVE_FILENAME}.h5")
 
 filename = "mapped_therest.hdf5"
 bacteria = ["Escherichia", "Salmonella"]
+bacteria.extend(["Bacillus", "Staphylococcus", "Lactobacillus", "Pseudomonas", "Listeria", "Enterococcus"]) #do all
 if NO_OVERLAP:
     generator = AttentionDataGenerator(filename, bacteria, config['BATCH_SIZE'], config['ENCODER_MAX_LENGTH'], config['ENCODER_MAX_LENGTH'], config['DECODER_MAX_LENGTH'])
 else:
