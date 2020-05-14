@@ -1,11 +1,14 @@
 import tensorflow as tf
 import time
 import numpy as np
+import os
+import sys
 
 from controllers.ValidationController import ValidationController
 from utils.process_utils import get_generator
 from models.Attention.CustomSchedule import CustomSchedule
 from models.Attention.attention_utils import create_combined_mask
+from utils.attention_evaluation_utils import build
 
 class TrainingController():
     def __init__(self, model_config, train_config, validation_config, model, model_filepath):
@@ -27,7 +30,25 @@ class TrainingController():
         learning_rate = CustomSchedule(model_config['d_model']*train_config['lr_mult'])
         self._optimizer = tf.keras.optimizers.Adam(learning_rate, beta_1=0.9, beta_2=0.98, epsilon=1e-9)
     
+    def retrain_weights(self):
+
+        if (self._epochs == 0 and os.path.exists(f"{self._model_filepath}.h5") == False):
+            print("*** attemt to skip training, but weights are not provided, exiting...")
+            sys.exit()
+
+        if os.path.exists(f"{self._model_filepath}.h5"):
+            answer = input(f"*** a trained model already exist, are you sure you want to retrain it? [y/N]:")
+            if answer not in "Yy":
+                return False
+        return True 
+
     def train(self):
+
+        if self.retrain_weights() == False:
+            print("*** loading trained model and skipping training...")
+            build(self._model)
+            self._model.load_weights(f"{self._model_filepath}.h5")
+            return self._model
 
         print("*** training...")
 
@@ -48,7 +69,7 @@ class TrainingController():
                 inp = tf.constant(inp, dtype=tf.float32)
                 tar = tf.constant(tar, dtype=tf.int32)
                 self.train_step(inp, tar)
-                print (f'Epoch {epoch + 1} Batch {batch} Loss {self._train_loss.result():.4f} Accuracy {self._train_accuracy.result():.4f}', end="\r")
+                print (f'Epoch {epoch + 1} Batch {batch} Loss {self._train_loss.result():.4f} Accuracy {self._train_accuracy.result():.4f}')
             
             accs.append([self._train_loss.result(), self._train_accuracy.result(), time.time()])
             np.save(f"{self._model_filepath}.npy", np.array(accs)) 

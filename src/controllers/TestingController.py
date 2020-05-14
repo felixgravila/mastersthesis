@@ -68,6 +68,8 @@ class TestingController():
         return progstr
 
     def test(self, model):
+        print("*** testing...")
+
         for read in range(len(self._result_dic), self._reads):
             try:
                 x_windows, y_windows, _, _, read_id = next(self._generator.get_window_batch(label_as_bases=True))
