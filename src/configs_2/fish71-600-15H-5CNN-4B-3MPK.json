@@ -30,7 +30,7 @@
         "stride":300       
     },
     "test":{
-        "data":"mapped_umi11to5.hdf5",
+        "data":"mapped_umi16to9.hdf5",
         "bacteria":["Staphylococcus", "Escherichia"],
         "reads":500,
         "batch_size":300,
