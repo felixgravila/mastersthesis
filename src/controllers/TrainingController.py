@@ -69,7 +69,7 @@ class TrainingController():
                 inp = tf.constant(inp, dtype=tf.float32)
                 tar = tf.constant(tar, dtype=tf.int32)
                 self.train_step(inp, tar)
-                print (f'Epoch {epoch + 1} Batch {batch} Loss {self._train_loss.result():.4f} Accuracy {self._train_accuracy.result():.4f}')
+                print (f'Epoch {epoch + 1} Batch {batch} Loss {self._train_loss.result():.4f} Accuracy {self._train_accuracy.result():.4f}', end="\r")
             
             accs.append([self._train_loss.result(), self._train_accuracy.result(), time.time()])
             np.save(f"{self._model_filepath}.npy", np.array(accs)) 

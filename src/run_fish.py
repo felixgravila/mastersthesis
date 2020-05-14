@@ -19,8 +19,7 @@ def create_path(path):
     else:
         os.makedirs(path)
 
-def load_config(filename):
-    filepath = f"./configs/{filename}"
+def load_config(filepath):
     print(f"*** loading config {filepath}...")
     with open(filepath, "r") as f:
         return json.load(f)

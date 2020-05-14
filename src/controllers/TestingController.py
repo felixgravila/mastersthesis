@@ -93,9 +93,9 @@ class TestingController():
                 self._result_dic.append(result)
 
                 print(f"{read:02d}/{self._reads} Done read... cigacc {result['cigacc']}"+" "*50) # 50 blanks to overwrite the previous print
-                with open(f"{self._model_file_path}_nooverlap.json", 'w') as jsonfile:
+                with open(f"{self._model_file_path}_evaluation.json", 'w') as jsonfile:
                     json.dump(self._result_dic, jsonfile)
-                with open(f"{self._model_file_path}_nooverlap.fa", 'a') as f:
+                with open(f"{self._model_file_path}_evaluation.fa", 'a') as f:
                     f.write(f"@{read_id};{round(time.time())};{datetime.datetime.now().strftime('%m/%d/%Y, %H:%M:%S')}\n")
                     f.write(f"{assembly}\n")
             except Exception as e:
