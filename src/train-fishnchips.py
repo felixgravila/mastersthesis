@@ -32,7 +32,7 @@ print(json.dumps(config, indent=4))
 MODEL_SAVE_FILENAME = f"./trained_models/fishnchips62v_{config['D_MODEL']}_{config['CNN_BLOCKS']}CNN_{config['NUM_HEADS']}H_{config['ATTENTION_BLOCKS']}B"
 if config['MAX_POOL_KERNEL'] != 2:
     MODEL_SAVE_FILENAME = f"{MODEL_SAVE_FILENAME}_{config['MAX_POOL_KERNEL']}MPK"
-if config['ENCODER_MAX_LENGTH'] != 2:
+if config['ENCODER_MAX_LENGTH'] != 300:
     MODEL_SAVE_FILENAME = f"{MODEL_SAVE_FILENAME}_{config['ENCODER_MAX_LENGTH']}W"
 
 if os.path.isfile(f"{MODEL_SAVE_FILENAME}.h5"):
