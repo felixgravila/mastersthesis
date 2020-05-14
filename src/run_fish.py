@@ -3,6 +3,7 @@ import json
 import os
 import time
 import tensorflow as tf
+import datetime
 
 from models.FishNChips import FishNChips
 from models.Attention.CustomSchedule import CustomSchedule
@@ -88,5 +89,8 @@ def run(config_file, run_name):
 
 if __name__ == "__main__":
     config_file = sys.argv[1]
-    run_name = sys.argv[2]
+    if len(sys.argv) > 1:
+        run_name = sys.argv[2]
+    else:
+        run_name = datetime.datetime.now().strftime('%m%d%Y-%H%M%S')
     run(config_file, run_name)
