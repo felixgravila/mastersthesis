@@ -25,7 +25,7 @@
     "validate":{
         "data":"mapped_therest.hdf5",
         "bacteria":["Escherichia"],
-        "reads":7,
+        "reads":3,
         "batch_size":300,
         "stride":300,
         "algorithm": "editdistance"
