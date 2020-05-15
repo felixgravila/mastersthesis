@@ -26,6 +26,7 @@ class TrainingController():
         self._train_loss = tf.keras.metrics.Mean(name='train_loss')
         self._train_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='train_accuracy')
         self._loss_object = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True, reduction='none') 
+        self._val_algo = validation_config['algorithm']
         
         learning_rate = CustomSchedule(model_config['d_model']*train_config['lr_mult'])
         self._optimizer = tf.keras.optimizers.Adam(learning_rate, beta_1=0.9, beta_2=0.98, epsilon=1e-9)
@@ -52,9 +53,8 @@ class TrainingController():
 
         print("*** training...")
 
-        old_acc = 0
         waited = 0
-        old_acc = 0
+        old_acc = 1e10
         accs = []
         for epoch in range(self._epochs):
             if epoch < self._warmup:
@@ -74,15 +74,15 @@ class TrainingController():
             accs.append([self._train_loss.result(), self._train_accuracy.result(), time.time()])
             np.save(f"{self._model_filepath}.npy", np.array(accs)) 
 
-            val_acc = self._validation_controller.validate(self._model)
+            val_loss = self._validation_controller.validate(self._model)
 
             loss = self._train_loss.result()
             acc = self._train_accuracy.result()
-            print (f'Epoch {epoch + 1} Loss {loss:.4f} Accuracy {acc:.4f}, valloss {val_acc}, took {time.time() - start} secs')
+            print (f'Epoch {epoch + 1} Loss {loss:.4f} Accuracy {acc:.4f}, valloss {val_loss}, took {time.time() - start} secs')
 
-            if val_acc > old_acc:
+            if val_loss < old_acc:
                 waited = 0
-                old_acc = val_acc
+                old_acc = val_loss
                 self._model.save_weights(f"{self._model_filepath}.h5")
             else:
                 waited += 1

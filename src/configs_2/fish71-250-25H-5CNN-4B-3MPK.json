@@ -27,7 +27,8 @@
         "bacteria":["Escherichia"],
         "reads":3,
         "batch_size":300,
-        "stride":300       
+        "stride":300,
+        "algorithm": "editdistance"  
     },
     "test":{
         "data":"mapped_umi16to9.hdf5",
