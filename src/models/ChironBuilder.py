@@ -62,7 +62,7 @@ makes a chiron for the model file
 loads the weights
 returns name of model and predict func
 '''
-def chiron_for_file(input_length, file, with_None_input=False, use_our_predict=False):
+def chiron_for_file(input_length, file, num_train, num_validate, with_None_input=False, use_our_predict=False):
     description = file.split("/")[1]
     if "CNN" in description:
         cnn = int(re.findall(r"\d+CNN", description)[0][:-3])
@@ -71,7 +71,7 @@ def chiron_for_file(input_length, file, with_None_input=False, use_our_predict=F
         cnn = 256
         lstm = 200
 
-    cb = ChironBuilder(input_length, cnn_filters=cnn, lstm_units=lstm)
+    cb = ChironBuilder(input_length, num_train, num_validate, cnn_filters=cnn, lstm_units=lstm)
     if "bn" in description:
         cb = cb.with_batch_normalization()
     if "pad5" in description:
