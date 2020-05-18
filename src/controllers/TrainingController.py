@@ -39,7 +39,7 @@ class TrainingController():
 
         if os.path.exists(f"{self._model_filepath}.h5"):
             answer = input(f"*** a trained model already exist, are you sure you want to retrain it? [y/N]:")
-            if answer not in "Yy":
+            if answer not in "Yy" or answer is "":
                 return False
         return True 
 

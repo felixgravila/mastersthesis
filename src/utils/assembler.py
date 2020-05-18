@@ -140,5 +140,5 @@ def _get_alignment_string(s,i):
     pan = 10
     if(i < 0):
         pan = pan + i
-    return pan * '+' + i * '_' + s + f"    :{i}"
+    return pan * '+' + i%100 * '_' + s + f"    :{i}"
 
