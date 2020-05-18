@@ -17,16 +17,16 @@ rnn_padding = 5
 use_maxpool = True
 
 filename = "mapped_therest.hdf5"
-train_bacteria = ["Bacillus", "Staphylococcus", "Lactobacillus", "Pseudomonas", "Listeria", "Enterococcus"]
+train_bacteria = ["Bacillus", "Staphylococcus", "Lactobacillus", "Pseudomonas", "Listeria", "Enterococcus", "Salmonella"]
 generator = DataGenerator(filename, bacteria=train_bacteria, batch_size=10000, input_length=input_length, stride=30, reads_count=5, rnn_pad_size=rnn_padding, use_maxpool=use_maxpool)
 
 filename = "mapped_therest.hdf5"
-test_bacteria = ["Escherichia", "Salmonella"]
+test_bacteria = ["Escherichia"]
 val_generator = DataGenerator(filename, bacteria=test_bacteria, batch_size=500, input_length=input_length, stride=150, reads_count=5, rnn_pad_size=rnn_padding, use_maxpool=use_maxpool)
 
 #%%
 
-cb = ChironBuilder(input_length, cnn_filters=256, lstm_units=250)\
+cb = ChironBuilder(input_length, len(train_bacteria), len(test_bacteria), cnn_filters=256, lstm_units=250)\
         .with_rnn_padding(rnn_padding)\
         .with_batch_normalization()
 cb = cb.with_maxpool(3) if use_maxpool else cb

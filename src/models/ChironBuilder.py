@@ -3,7 +3,7 @@ import re
 
 class ChironBuilder():
 
-    def __init__(self, input_length, cnn_filters=256, lstm_units=200):
+    def __init__(self, input_length, num_train, num_validate, cnn_filters=256, lstm_units=200):
         self.input_length = input_length
         self.cnn_filters = cnn_filters
         self.lstm_units = lstm_units
@@ -12,7 +12,7 @@ class ChironBuilder():
         self.batch_normalization = False
         self.dropout = False
         self.none_input = False
-        self.model_name = f"chiron-{cnn_filters}CNN-{lstm_units}LSTM"
+        self.model_name = f"chiron{num_train}{num_validate}-{cnn_filters}CNN-{lstm_units}LSTM"
 
     def with_batch_normalization(self):
         self.batch_normalization = True
