@@ -12,7 +12,7 @@
         "maxpool_kernel": 3
     },
     "train":{
-        "data":"mapped_random_reads.hdf5",
+        "data":"mapped_random_reads_fx.hdf5",
         "bacteria":[],
         "epochs": 1000,
         "patience": 1000,
