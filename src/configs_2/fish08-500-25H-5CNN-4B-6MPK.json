@@ -1,6 +1,6 @@
 {
     "model":{
-        "encoder_max_length": 200,
+        "encoder_max_length": 300,
         "decoder_max_length": 100,
         "attention_blocks": 4,
         "cnn_blocks": 5,
