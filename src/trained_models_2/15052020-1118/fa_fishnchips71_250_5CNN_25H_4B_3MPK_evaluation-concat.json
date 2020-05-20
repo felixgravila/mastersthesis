@@ -1,0 +1,3597 @@
+[
+    {
+        "read_id": "8c630372-2296-4fa4-a079-839aad577e56",
+        "dna_len": 4506,
+        "ctg": "Escherichia_7;size=1;",
+        "r_st": 3,
+        "r_en": 4440,
+        "q_st": 0,
+        "q_en": 4506,
+        "NM": 567,
+        "blen": 4666,
+        "cig": {
+            "S": 0,
+            "M": 4277,
+            "D": 160,
+            "I": 229
+        },
+        "cigacc": 0.8784826403771967
+    },
+    {
+        "read_id": "d7744d44-891c-4933-a2bb-127c54735cb6",
+        "dna_len": 4342,
+        "ctg": "Escherichia_3;size=1;",
+        "r_st": 45,
+        "r_en": 4397,
+        "q_st": 0,
+        "q_en": 4342,
+        "NM": 350,
+        "blen": 4471,
+        "cig": {
+            "S": 0,
+            "M": 4223,
+            "D": 129,
+            "I": 119
+        },
+        "cigacc": 0.9217177365242675
+    },
+    {
+        "read_id": "e2568ca2-81e2-42b6-ab95-7eed5f69cff7",
+        "dna_len": 4363,
+        "ctg": "Escherichia_7;size=1;",
+        "r_st": 9,
+        "r_en": 4422,
+        "q_st": 1,
+        "q_en": 4363,
+        "NM": 419,
+        "blen": 4520,
+        "cig": {
+            "S": 0,
+            "M": 4255,
+            "D": 158,
+            "I": 107
+        },
+        "cigacc": 0.9073008849557522
+    },
+    {
+        "read_id": "05f80a43-09f6-4982-91b0-cefd1edd3965",
+        "dna_len": 4505,
+        "ctg": "Staphylococcus_6;size=1;",
+        "r_st": 0,
+        "r_en": 4488,
+        "q_st": 0,
+        "q_en": 4505,
+        "NM": 144,
+        "blen": 4559,
+        "cig": {
+            "S": 0,
+            "M": 4434,
+            "D": 54,
+            "I": 71
+        },
+        "cigacc": 0.9684141259048037
+    },
+    {
+        "read_id": "6797a93b-2901-43f3-9373-851ddcfefdf2",
+        "dna_len": 4301,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 3,
+        "r_en": 4394,
+        "q_st": 0,
+        "q_en": 4301,
+        "NM": 260,
+        "blen": 4449,
+        "cig": {
+            "S": 0,
+            "M": 4243,
+            "D": 148,
+            "I": 58
+        },
+        "cigacc": 0.9415599011013711
+    },
+    {
+        "read_id": "005e8488-b305-485a-a6f6-28a8f1d0a688",
+        "dna_len": 4335,
+        "ctg": "Escherichia_5;size=1;",
+        "r_st": 39,
+        "r_en": 4397,
+        "q_st": 0,
+        "q_en": 4335,
+        "NM": 368,
+        "blen": 4477,
+        "cig": {
+            "S": 0,
+            "M": 4216,
+            "D": 142,
+            "I": 119
+        },
+        "cigacc": 0.9178020996202815
+    },
+    {
+        "read_id": "53d3af7f-a8ed-4767-8e45-4f38ad3a3cae",
+        "dna_len": 4428,
+        "ctg": "Escherichia_1;size=1;",
+        "r_st": 3,
+        "r_en": 4459,
+        "q_st": 0,
+        "q_en": 4428,
+        "NM": 393,
+        "blen": 4568,
+        "cig": {
+            "S": 0,
+            "M": 4316,
+            "D": 140,
+            "I": 112
+        },
+        "cigacc": 0.9139667250437828
+    },
+    {
+        "read_id": "c6c8c61c-8567-43f1-9d12-7e782a782cc7",
+        "dna_len": 4549,
+        "ctg": "Staphylococcus_2;size=1;",
+        "r_st": 0,
+        "r_en": 4522,
+        "q_st": 0,
+        "q_en": 4549,
+        "NM": 119,
+        "blen": 4589,
+        "cig": {
+            "S": 0,
+            "M": 4482,
+            "D": 40,
+            "I": 67
+        },
+        "cigacc": 0.9740684244933536
+    },
+    {
+        "read_id": "5ae4eed4-3902-4233-8c26-26c6b652ae95",
+        "dna_len": 4451,
+        "ctg": "Staphylococcus_6;size=1;",
+        "r_st": 56,
+        "r_en": 4511,
+        "q_st": 0,
+        "q_en": 4451,
+        "NM": 167,
+        "blen": 4519,
+        "cig": {
+            "S": 0,
+            "M": 4387,
+            "D": 68,
+            "I": 64
+        },
+        "cigacc": 0.9630449214427971
+    },
+    {
+        "read_id": "01b567c5-c494-4902-a1ca-399efa170cce",
+        "dna_len": 4557,
+        "ctg": "Staphylococcus_2;size=1;",
+        "r_st": 32,
+        "r_en": 4551,
+        "q_st": 0,
+        "q_en": 4557,
+        "NM": 266,
+        "blen": 4641,
+        "cig": {
+            "S": 0,
+            "M": 4435,
+            "D": 84,
+            "I": 122
+        },
+        "cigacc": 0.942684766214178
+    },
+    {
+        "read_id": "9d1b639c-1ef2-4039-a1a4-1c3a0ac38366",
+        "dna_len": 4399,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 53,
+        "r_en": 4430,
+        "q_st": 0,
+        "q_en": 4399,
+        "NM": 122,
+        "blen": 4445,
+        "cig": {
+            "S": 0,
+            "M": 4331,
+            "D": 46,
+            "I": 68
+        },
+        "cigacc": 0.9725534308211473
+    },
+    {
+        "read_id": "f586489b-22ff-4d18-a808-e7e1079f08bd",
+        "dna_len": 4556,
+        "ctg": "Staphylococcus_2;size=1;",
+        "r_st": 3,
+        "r_en": 4525,
+        "q_st": 0,
+        "q_en": 4556,
+        "NM": 192,
+        "blen": 4620,
+        "cig": {
+            "S": 0,
+            "M": 4458,
+            "D": 64,
+            "I": 98
+        },
+        "cigacc": 0.9584415584415584
+    },
+    {
+        "read_id": "1cc121f7-ecc9-4691-9006-88d9e9de9dda",
+        "dna_len": 4313,
+        "ctg": "Escherichia_5;size=1;",
+        "r_st": 2,
+        "r_en": 4343,
+        "q_st": 0,
+        "q_en": 4313,
+        "NM": 537,
+        "blen": 4492,
+        "cig": {
+            "S": 0,
+            "M": 4162,
+            "D": 179,
+            "I": 151
+        },
+        "cigacc": 0.8804541406945681
+    },
+    {
+        "read_id": "c3678a49-9b0c-4259-8905-a54b0adff1ed",
+        "dna_len": 4461,
+        "ctg": "Staphylococcus_6;size=1;",
+        "r_st": 3,
+        "r_en": 4490,
+        "q_st": 0,
+        "q_en": 4461,
+        "NM": 195,
+        "blen": 4545,
+        "cig": {
+            "S": 0,
+            "M": 4403,
+            "D": 84,
+            "I": 58
+        },
+        "cigacc": 0.9570957095709571
+    },
+    {
+        "read_id": "ff318a13-57d3-4285-ab14-bb5a515ed05b",
+        "dna_len": 4458,
+        "ctg": "Staphylococcus_1;size=1;",
+        "r_st": 61,
+        "r_en": 4502,
+        "q_st": 0,
+        "q_en": 4458,
+        "NM": 89,
+        "blen": 4492,
+        "cig": {
+            "S": 0,
+            "M": 4407,
+            "D": 34,
+            "I": 51
+        },
+        "cigacc": 0.980186999109528
+    },
+    {
+        "read_id": "103c6ee3-6b49-4564-821a-c7c1ef3f4ac1",
+        "dna_len": 4508,
+        "ctg": "Staphylococcus_2;size=1;",
+        "r_st": 0,
+        "r_en": 4519,
+        "q_st": 0,
+        "q_en": 4508,
+        "NM": 134,
+        "blen": 4573,
+        "cig": {
+            "S": 0,
+            "M": 4454,
+            "D": 65,
+            "I": 54
+        },
+        "cigacc": 0.9706975727093812
+    },
+    {
+        "read_id": "79b2b785-9b45-4b70-b374-9d05ada5da40",
+        "dna_len": 4537,
+        "ctg": "Staphylococcus_2;size=1;",
+        "r_st": 59,
+        "r_en": 4551,
+        "q_st": 0,
+        "q_en": 4537,
+        "NM": 201,
+        "blen": 4592,
+        "cig": {
+            "S": 0,
+            "M": 4437,
+            "D": 55,
+            "I": 100
+        },
+        "cigacc": 0.9562282229965157
+    },
+    {
+        "read_id": "7d61ee0f-657b-48a6-a577-f1b127ac621f",
+        "dna_len": 4296,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 29,
+        "r_en": 4430,
+        "q_st": 0,
+        "q_en": 4296,
+        "NM": 268,
+        "blen": 4471,
+        "cig": {
+            "S": 0,
+            "M": 4226,
+            "D": 175,
+            "I": 70
+        },
+        "cigacc": 0.9400581525385819
+    },
+    {
+        "read_id": "9691ebe0-cef4-431d-bd44-f43ac4cc4cb5",
+        "dna_len": 4522,
+        "ctg": "Staphylococcus_1;size=1;",
+        "r_st": 30,
+        "r_en": 4505,
+        "q_st": 0,
+        "q_en": 4522,
+        "NM": 234,
+        "blen": 4592,
+        "cig": {
+            "S": 0,
+            "M": 4405,
+            "D": 70,
+            "I": 117
+        },
+        "cigacc": 0.9490418118466899
+    },
+    {
+        "read_id": "7aea9c9e-5426-4d7f-b656-e887b08e29a3",
+        "dna_len": 4453,
+        "ctg": "Staphylococcus_1;size=1;",
+        "r_st": 0,
+        "r_en": 4473,
+        "q_st": 0,
+        "q_en": 4453,
+        "NM": 187,
+        "blen": 4537,
+        "cig": {
+            "S": 0,
+            "M": 4389,
+            "D": 84,
+            "I": 64
+        },
+        "cigacc": 0.9587833370068327
+    },
+    {
+        "read_id": "148691d4-b2c7-4bb3-ad37-dfb31d1b3996",
+        "dna_len": 4427,
+        "ctg": "Staphylococcus_6;size=1;",
+        "r_st": 57,
+        "r_en": 4522,
+        "q_st": 0,
+        "q_en": 4427,
+        "NM": 147,
+        "blen": 4511,
+        "cig": {
+            "S": 0,
+            "M": 4381,
+            "D": 84,
+            "I": 46
+        },
+        "cigacc": 0.9674129904677455
+    },
+    {
+        "read_id": "72014ac1-5ae8-41b1-825f-93cd326fe7be",
+        "dna_len": 4313,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 18,
+        "r_en": 4133,
+        "q_st": 0,
+        "q_en": 4102,
+        "NM": 172,
+        "blen": 4179,
+        "cig": {
+            "S": 0,
+            "M": 4038,
+            "D": 77,
+            "I": 64
+        },
+        "cigacc": 0.9588418281885619
+    },
+    {
+        "read_id": "a68831e8-3da9-40a5-b12a-42b46c51af8f",
+        "dna_len": 4447,
+        "ctg": "Staphylococcus_5;size=1;",
+        "r_st": 56,
+        "r_en": 4463,
+        "q_st": 0,
+        "q_en": 4447,
+        "NM": 137,
+        "blen": 4491,
+        "cig": {
+            "S": 0,
+            "M": 4363,
+            "D": 44,
+            "I": 84
+        },
+        "cigacc": 0.9694945446448453
+    },
+    {
+        "read_id": "13bdcc66-52c4-4231-b412-ce875e73ae5d",
+        "dna_len": 4412,
+        "ctg": "Staphylococcus_5;size=1;",
+        "r_st": 38,
+        "r_en": 4463,
+        "q_st": 0,
+        "q_en": 4412,
+        "NM": 96,
+        "blen": 4463,
+        "cig": {
+            "S": 0,
+            "M": 4374,
+            "D": 51,
+            "I": 38
+        },
+        "cigacc": 0.9784898050638584
+    },
+    {
+        "read_id": "36f37518-1bbe-4d2c-9b5d-03ffc021d00c",
+        "dna_len": 4409,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 33,
+        "r_en": 4430,
+        "q_st": 0,
+        "q_en": 4409,
+        "NM": 100,
+        "blen": 4452,
+        "cig": {
+            "S": 0,
+            "M": 4354,
+            "D": 43,
+            "I": 55
+        },
+        "cigacc": 0.977538185085355
+    },
+    {
+        "read_id": "2ee0470c-029a-4afa-af6a-a7b47f2f094b",
+        "dna_len": 4436,
+        "ctg": "Staphylococcus_1;size=1;",
+        "r_st": 3,
+        "r_en": 4453,
+        "q_st": 0,
+        "q_en": 4436,
+        "NM": 125,
+        "blen": 4498,
+        "cig": {
+            "S": 0,
+            "M": 4388,
+            "D": 62,
+            "I": 48
+        },
+        "cigacc": 0.9722098710538016
+    },
+    {
+        "read_id": "02d5e5a1-5424-47b5-9fa1-f160f98cc58f",
+        "dna_len": 4487,
+        "ctg": "Staphylococcus_1;size=1;",
+        "r_st": 3,
+        "r_en": 4459,
+        "q_st": 0,
+        "q_en": 4487,
+        "NM": 129,
+        "blen": 4531,
+        "cig": {
+            "S": 0,
+            "M": 4412,
+            "D": 44,
+            "I": 75
+        },
+        "cigacc": 0.9715294636945486
+    },
+    {
+        "read_id": "b3d7ecdb-49cd-48d2-89fb-bed54e5fa8e2",
+        "dna_len": 4415,
+        "ctg": "Staphylococcus_5;size=1;",
+        "r_st": 3,
+        "r_en": 4413,
+        "q_st": 0,
+        "q_en": 4415,
+        "NM": 134,
+        "blen": 4472,
+        "cig": {
+            "S": 0,
+            "M": 4353,
+            "D": 57,
+            "I": 62
+        },
+        "cigacc": 0.9700357781753131
+    },
+    {
+        "read_id": "276ba640-70d8-46d9-ac30-4a5f09b15fe1",
+        "dna_len": 4506,
+        "ctg": "Staphylococcus_2;size=1;",
+        "r_st": 51,
+        "r_en": 4548,
+        "q_st": 0,
+        "q_en": 4506,
+        "NM": 88,
+        "blen": 4544,
+        "cig": {
+            "S": 0,
+            "M": 4459,
+            "D": 38,
+            "I": 47
+        },
+        "cigacc": 0.9806338028169014
+    },
+    {
+        "read_id": "da8ee796-2a34-42ef-902e-909f42d0f055",
+        "dna_len": 4515,
+        "ctg": "Staphylococcus_3;size=1;",
+        "r_st": 3,
+        "r_en": 4511,
+        "q_st": 0,
+        "q_en": 4515,
+        "NM": 127,
+        "blen": 4567,
+        "cig": {
+            "S": 0,
+            "M": 4456,
+            "D": 52,
+            "I": 59
+        },
+        "cigacc": 0.9721918108167287
+    },
+    {
+        "read_id": "0b715e66-a371-4aca-b286-8a525fc9be91",
+        "dna_len": 4420,
+        "ctg": "Escherichia_4;size=1;",
+        "r_st": 30,
+        "r_en": 4491,
+        "q_st": 0,
+        "q_en": 4420,
+        "NM": 352,
+        "blen": 4563,
+        "cig": {
+            "S": 0,
+            "M": 4318,
+            "D": 143,
+            "I": 102
+        },
+        "cigacc": 0.9228577690116152
+    },
+    {
+        "read_id": "805d6629-7fa3-4a01-9614-6206587898ee",
+        "dna_len": 4472,
+        "ctg": "Escherichia_4;size=1;",
+        "r_st": 14,
+        "r_en": 4452,
+        "q_st": 11,
+        "q_en": 4472,
+        "NM": 444,
+        "blen": 4597,
+        "cig": {
+            "S": 0,
+            "M": 4302,
+            "D": 136,
+            "I": 159
+        },
+        "cigacc": 0.9034152708288014
+    },
+    {
+        "read_id": "128345a0-c7a1-476d-a573-b55aedde8073",
+        "dna_len": 4467,
+        "ctg": "Staphylococcus_2;size=1;",
+        "r_st": 40,
+        "r_en": 4531,
+        "q_st": 0,
+        "q_en": 4467,
+        "NM": 137,
+        "blen": 4537,
+        "cig": {
+            "S": 0,
+            "M": 4421,
+            "D": 70,
+            "I": 46
+        },
+        "cigacc": 0.969803835133348
+    },
+    {
+        "read_id": "ebcc3dd6-30eb-4788-b70c-421f9f4c7056",
+        "dna_len": 4450,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 46,
+        "r_en": 4430,
+        "q_st": 0,
+        "q_en": 4450,
+        "NM": 167,
+        "blen": 4489,
+        "cig": {
+            "S": 0,
+            "M": 4345,
+            "D": 39,
+            "I": 105
+        },
+        "cigacc": 0.9627979505457785
+    },
+    {
+        "read_id": "844a6adb-616b-4323-9370-5d3ea9650c25",
+        "dna_len": 4445,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 4,
+        "r_en": 4381,
+        "q_st": 0,
+        "q_en": 4445,
+        "NM": 210,
+        "blen": 4508,
+        "cig": {
+            "S": 0,
+            "M": 4314,
+            "D": 63,
+            "I": 131
+        },
+        "cigacc": 0.953416149068323
+    },
+    {
+        "read_id": "da9c64e0-e7cb-4348-97f6-ab198bc28a07",
+        "dna_len": 4495,
+        "ctg": "Staphylococcus_1;size=1;",
+        "r_st": 60,
+        "r_en": 4505,
+        "q_st": 0,
+        "q_en": 4495,
+        "NM": 159,
+        "blen": 4540,
+        "cig": {
+            "S": 0,
+            "M": 4400,
+            "D": 45,
+            "I": 95
+        },
+        "cigacc": 0.964977973568282
+    },
+    {
+        "read_id": "0c093fd8-e7be-4a23-8521-7b7192eace31",
+        "dna_len": 4531,
+        "ctg": "Staphylococcus_5;size=1;",
+        "r_st": 24,
+        "r_en": 4435,
+        "q_st": 7,
+        "q_en": 4531,
+        "NM": 300,
+        "blen": 4593,
+        "cig": {
+            "S": 0,
+            "M": 4342,
+            "D": 69,
+            "I": 182
+        },
+        "cigacc": 0.9346832135858916
+    },
+    {
+        "read_id": "13a78ace-6c0a-40e1-8605-3b8b2e9d597b",
+        "dna_len": 4420,
+        "ctg": "Staphylococcus_5;size=1;",
+        "r_st": 0,
+        "r_en": 4429,
+        "q_st": 0,
+        "q_en": 4420,
+        "NM": 157,
+        "blen": 4494,
+        "cig": {
+            "S": 0,
+            "M": 4355,
+            "D": 74,
+            "I": 65
+        },
+        "cigacc": 0.9650645304850912
+    },
+    {
+        "read_id": "b342c464-951c-4a61-80a5-dce5e1d76627",
+        "dna_len": 4383,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 47,
+        "r_en": 4430,
+        "q_st": 0,
+        "q_en": 4383,
+        "NM": 105,
+        "blen": 4432,
+        "cig": {
+            "S": 0,
+            "M": 4334,
+            "D": 49,
+            "I": 49
+        },
+        "cigacc": 0.9763086642599278
+    },
+    {
+        "read_id": "ae92289c-7a0d-47e4-8e08-cb26f147b586",
+        "dna_len": 4542,
+        "ctg": "Staphylococcus_3;size=1;",
+        "r_st": 37,
+        "r_en": 4555,
+        "q_st": 0,
+        "q_en": 4542,
+        "NM": 76,
+        "blen": 4567,
+        "cig": {
+            "S": 0,
+            "M": 4493,
+            "D": 25,
+            "I": 49
+        },
+        "cigacc": 0.9833588789139479
+    },
+    {
+        "read_id": "a6444163-6238-4c2d-9242-34913b3d4239",
+        "dna_len": 4485,
+        "ctg": "Staphylococcus_1;size=1;",
+        "r_st": 13,
+        "r_en": 4474,
+        "q_st": 0,
+        "q_en": 4485,
+        "NM": 118,
+        "blen": 4528,
+        "cig": {
+            "S": 0,
+            "M": 4418,
+            "D": 43,
+            "I": 67
+        },
+        "cigacc": 0.973939929328622
+    },
+    {
+        "read_id": "48b9d405-390f-449d-80fc-24469aa3e066",
+        "dna_len": 4488,
+        "ctg": "Staphylococcus_1;size=1;",
+        "r_st": 0,
+        "r_en": 4455,
+        "q_st": 0,
+        "q_en": 4488,
+        "NM": 255,
+        "blen": 4570,
+        "cig": {
+            "S": 0,
+            "M": 4373,
+            "D": 82,
+            "I": 115
+        },
+        "cigacc": 0.9442013129102844
+    },
+    {
+        "read_id": "2e1c3195-cfdd-42dd-b8c6-b4034088bc9d",
+        "dna_len": 4404,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 24,
+        "r_en": 4412,
+        "q_st": 0,
+        "q_en": 4404,
+        "NM": 264,
+        "blen": 4502,
+        "cig": {
+            "S": 0,
+            "M": 4290,
+            "D": 98,
+            "I": 114
+        },
+        "cigacc": 0.9413593958240782
+    },
+    {
+        "read_id": "09084fdb-eb29-43d6-be8b-d755da61786a",
+        "dna_len": 4500,
+        "ctg": "Staphylococcus_1;size=1;",
+        "r_st": 32,
+        "r_en": 4505,
+        "q_st": 0,
+        "q_en": 4500,
+        "NM": 124,
+        "blen": 4543,
+        "cig": {
+            "S": 0,
+            "M": 4430,
+            "D": 43,
+            "I": 70
+        },
+        "cigacc": 0.9727052608408541
+    },
+    {
+        "read_id": "0b3c4489-f7e0-49b4-b959-f6994433fc0f",
+        "dna_len": 4455,
+        "ctg": "Staphylococcus_1;size=1;",
+        "r_st": 54,
+        "r_en": 4505,
+        "q_st": 0,
+        "q_en": 4455,
+        "NM": 79,
+        "blen": 4491,
+        "cig": {
+            "S": 0,
+            "M": 4415,
+            "D": 36,
+            "I": 40
+        },
+        "cigacc": 0.9824092629703852
+    },
+    {
+        "read_id": "35027d8d-421e-49bf-a724-e6bb81dba865",
+        "dna_len": 4397,
+        "ctg": "Staphylococcus_5;size=1;",
+        "r_st": 57,
+        "r_en": 4463,
+        "q_st": 0,
+        "q_en": 4397,
+        "NM": 177,
+        "blen": 4468,
+        "cig": {
+            "S": 0,
+            "M": 4335,
+            "D": 71,
+            "I": 62
+        },
+        "cigacc": 0.9603849597135183
+    },
+    {
+        "read_id": "ee29d617-800b-4983-b970-9074a0d3dff0",
+        "dna_len": 4288,
+        "ctg": "Escherichia_2;size=1;",
+        "r_st": 54,
+        "r_en": 4397,
+        "q_st": 0,
+        "q_en": 4288,
+        "NM": 356,
+        "blen": 4447,
+        "cig": {
+            "S": 0,
+            "M": 4184,
+            "D": 159,
+            "I": 104
+        },
+        "cigacc": 0.9199460310321566
+    },
+    {
+        "read_id": "a3259088-53f5-4dce-bf67-4e224eb49881",
+        "dna_len": 4392,
+        "ctg": "Escherichia_3;size=1;",
+        "r_st": 20,
+        "r_en": 4350,
+        "q_st": 17,
+        "q_en": 4392,
+        "NM": 536,
+        "blen": 4539,
+        "cig": {
+            "S": 0,
+            "M": 4166,
+            "D": 164,
+            "I": 209
+        },
+        "cigacc": 0.881912315487993
+    },
+    {
+        "read_id": "6b897bbd-54fc-4a0f-8c8a-c7b72e83c649",
+        "dna_len": 4532,
+        "ctg": "Staphylococcus_3;size=1;",
+        "r_st": 3,
+        "r_en": 4508,
+        "q_st": 0,
+        "q_en": 4532,
+        "NM": 169,
+        "blen": 4591,
+        "cig": {
+            "S": 0,
+            "M": 4446,
+            "D": 59,
+            "I": 86
+        },
+        "cigacc": 0.9631888477455892
+    },
+    {
+        "read_id": "8577c412-bcec-4635-9f52-0b4083966474",
+        "dna_len": 4444,
+        "ctg": "Escherichia_6;size=1;",
+        "r_st": 0,
+        "r_en": 4439,
+        "q_st": 0,
+        "q_en": 4444,
+        "NM": 398,
+        "blen": 4577,
+        "cig": {
+            "S": 0,
+            "M": 4306,
+            "D": 133,
+            "I": 138
+        },
+        "cigacc": 0.9130434782608696
+    },
+    {
+        "read_id": "2ccaf1da-d1d5-4fc5-a4f5-5c83951b5a07",
+        "dna_len": 4473,
+        "ctg": "Staphylococcus_5;size=1;",
+        "r_st": 3,
+        "r_en": 4437,
+        "q_st": 0,
+        "q_en": 4473,
+        "NM": 168,
+        "blen": 4527,
+        "cig": {
+            "S": 0,
+            "M": 4380,
+            "D": 54,
+            "I": 93
+        },
+        "cigacc": 0.9628893306825712
+    },
+    {
+        "read_id": "882f6c47-fdfb-4677-b9cb-632d55b6584e",
+        "dna_len": 4316,
+        "ctg": "Escherichia_7;size=1;",
+        "r_st": 53,
+        "r_en": 4425,
+        "q_st": 0,
+        "q_en": 4316,
+        "NM": 415,
+        "blen": 4490,
+        "cig": {
+            "S": 0,
+            "M": 4198,
+            "D": 174,
+            "I": 118
+        },
+        "cigacc": 0.9075723830734966
+    },
+    {
+        "read_id": "609ef3c8-4a35-4e1d-a4c3-25c383534b99",
+        "dna_len": 4343,
+        "ctg": "Escherichia_5;size=1;",
+        "r_st": 0,
+        "r_en": 4364,
+        "q_st": 0,
+        "q_en": 4343,
+        "NM": 393,
+        "blen": 4501,
+        "cig": {
+            "S": 0,
+            "M": 4206,
+            "D": 158,
+            "I": 137
+        },
+        "cigacc": 0.9126860697622751
+    },
+    {
+        "read_id": "4677be82-d9d5-4214-b002-10ec1b0ae359",
+        "dna_len": 4496,
+        "ctg": "Staphylococcus_3;size=1;",
+        "r_st": 51,
+        "r_en": 4555,
+        "q_st": 0,
+        "q_en": 4496,
+        "NM": 90,
+        "blen": 4542,
+        "cig": {
+            "S": 0,
+            "M": 4458,
+            "D": 46,
+            "I": 38
+        },
+        "cigacc": 0.9801849405548216
+    },
+    {
+        "read_id": "151438b7-28fb-4104-946d-b0897ec1b482",
+        "dna_len": 4520,
+        "ctg": "Staphylococcus_6;size=1;",
+        "r_st": 35,
+        "r_en": 4522,
+        "q_st": 0,
+        "q_en": 4520,
+        "NM": 137,
+        "blen": 4565,
+        "cig": {
+            "S": 0,
+            "M": 4442,
+            "D": 45,
+            "I": 78
+        },
+        "cigacc": 0.9699890470974808
+    },
+    {
+        "read_id": "77126cac-85a9-4603-b8fd-183049189041",
+        "dna_len": 4427,
+        "ctg": "Staphylococcus_5;size=1;",
+        "r_st": 3,
+        "r_en": 4428,
+        "q_st": 0,
+        "q_en": 4427,
+        "NM": 113,
+        "blen": 4481,
+        "cig": {
+            "S": 0,
+            "M": 4371,
+            "D": 54,
+            "I": 56
+        },
+        "cigacc": 0.9747824146395894
+    },
+    {
+        "read_id": "2ea91617-9687-476e-b716-3d461e96aafe",
+        "dna_len": 4395,
+        "ctg": "Staphylococcus_5;size=1;",
+        "r_st": 35,
+        "r_en": 4445,
+        "q_st": 0,
+        "q_en": 4395,
+        "NM": 77,
+        "blen": 4439,
+        "cig": {
+            "S": 0,
+            "M": 4366,
+            "D": 44,
+            "I": 29
+        },
+        "cigacc": 0.9826537508447849
+    },
+    {
+        "read_id": "49787144-2b29-432e-a798-2c0b1fdaa865",
+        "dna_len": 4506,
+        "ctg": "Staphylococcus_2;size=1;",
+        "r_st": 42,
+        "r_en": 4551,
+        "q_st": 0,
+        "q_en": 4506,
+        "NM": 123,
+        "blen": 4559,
+        "cig": {
+            "S": 0,
+            "M": 4456,
+            "D": 53,
+            "I": 50
+        },
+        "cigacc": 0.9730203992103531
+    },
+    {
+        "read_id": "1341a369-4329-4395-a72f-b2607f5a331b",
+        "dna_len": 4446,
+        "ctg": "Staphylococcus_5;size=1;",
+        "r_st": 45,
+        "r_en": 4463,
+        "q_st": 0,
+        "q_en": 4446,
+        "NM": 213,
+        "blen": 4521,
+        "cig": {
+            "S": 0,
+            "M": 4343,
+            "D": 75,
+            "I": 103
+        },
+        "cigacc": 0.9528865295288653
+    },
+    {
+        "read_id": "3bd919bc-b522-43d8-8fc0-58a4d0a271bf",
+        "dna_len": 4434,
+        "ctg": "Escherichia_2;size=1;",
+        "r_st": 3,
+        "r_en": 4332,
+        "q_st": 0,
+        "q_en": 4434,
+        "NM": 524,
+        "blen": 4570,
+        "cig": {
+            "S": 0,
+            "M": 4193,
+            "D": 136,
+            "I": 241
+        },
+        "cigacc": 0.8853391684901531
+    },
+    {
+        "read_id": "c7bcf2e5-8106-4ca2-82a4-ebbf568a2e95",
+        "dna_len": 4395,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 40,
+        "r_en": 4430,
+        "q_st": 0,
+        "q_en": 4395,
+        "NM": 85,
+        "blen": 4431,
+        "cig": {
+            "S": 0,
+            "M": 4354,
+            "D": 36,
+            "I": 41
+        },
+        "cigacc": 0.9808169713382984
+    },
+    {
+        "read_id": "9e3d3931-89d2-4478-a619-8dcc72014dde",
+        "dna_len": 4557,
+        "ctg": "Staphylococcus_2;size=1;",
+        "r_st": 3,
+        "r_en": 4512,
+        "q_st": 0,
+        "q_en": 4557,
+        "NM": 238,
+        "blen": 4628,
+        "cig": {
+            "S": 0,
+            "M": 4438,
+            "D": 71,
+            "I": 119
+        },
+        "cigacc": 0.9485738980121002
+    },
+    {
+        "read_id": "4ff7d9ce-6f8e-473b-89ff-bf5de93aa4ae",
+        "dna_len": 4491,
+        "ctg": "Staphylococcus_2;size=1;",
+        "r_st": 41,
+        "r_en": 4551,
+        "q_st": 0,
+        "q_en": 4491,
+        "NM": 97,
+        "blen": 4548,
+        "cig": {
+            "S": 0,
+            "M": 4453,
+            "D": 57,
+            "I": 38
+        },
+        "cigacc": 0.9786719437115216
+    },
+    {
+        "read_id": "4e3a3528-baaf-4add-8427-c3f782abde57",
+        "dna_len": 4385,
+        "ctg": "Staphylococcus_5;size=1;",
+        "r_st": 3,
+        "r_en": 4422,
+        "q_st": 0,
+        "q_en": 4385,
+        "NM": 185,
+        "blen": 4478,
+        "cig": {
+            "S": 0,
+            "M": 4326,
+            "D": 93,
+            "I": 59
+        },
+        "cigacc": 0.958686913800804
+    },
+    {
+        "read_id": "fe42854d-d4f9-4f17-a49d-22b5610f1d80",
+        "dna_len": 4488,
+        "ctg": "Staphylococcus_6;size=1;",
+        "r_st": 0,
+        "r_en": 4488,
+        "q_st": 0,
+        "q_en": 4488,
+        "NM": 109,
+        "blen": 4541,
+        "cig": {
+            "S": 0,
+            "M": 4435,
+            "D": 53,
+            "I": 53
+        },
+        "cigacc": 0.975996476547016
+    },
+    {
+        "read_id": "00e10da5-f959-4eb9-bad7-32ec6d587d85",
+        "dna_len": 4322,
+        "ctg": "Escherichia_2;size=1;",
+        "r_st": 0,
+        "r_en": 4340,
+        "q_st": 0,
+        "q_en": 4322,
+        "NM": 528,
+        "blen": 4493,
+        "cig": {
+            "S": 0,
+            "M": 4169,
+            "D": 171,
+            "I": 153
+        },
+        "cigacc": 0.8824838637881148
+    },
+    {
+        "read_id": "17ecac12-4b43-4375-b7ec-d6a5a7c7444d",
+        "dna_len": 4506,
+        "ctg": "Staphylococcus_3;size=1;",
+        "r_st": 3,
+        "r_en": 4514,
+        "q_st": 3,
+        "q_en": 4506,
+        "NM": 156,
+        "blen": 4572,
+        "cig": {
+            "S": 0,
+            "M": 4442,
+            "D": 69,
+            "I": 61
+        },
+        "cigacc": 0.9658792650918635
+    },
+    {
+        "read_id": "0080199f-9267-45ec-8c8e-f41db35de994",
+        "dna_len": 4369,
+        "ctg": "Escherichia_3;size=1;",
+        "r_st": 3,
+        "r_en": 4355,
+        "q_st": 0,
+        "q_en": 4369,
+        "NM": 367,
+        "blen": 4489,
+        "cig": {
+            "S": 0,
+            "M": 4232,
+            "D": 120,
+            "I": 137
+        },
+        "cigacc": 0.9182445979059924
+    },
+    {
+        "read_id": "4bb61bb9-dbf8-4e0b-8eaa-5a48b486b295",
+        "dna_len": 4548,
+        "ctg": "Staphylococcus_1;size=1;",
+        "r_st": 42,
+        "r_en": 4497,
+        "q_st": 0,
+        "q_en": 4548,
+        "NM": 314,
+        "blen": 4622,
+        "cig": {
+            "S": 0,
+            "M": 4381,
+            "D": 74,
+            "I": 167
+        },
+        "cigacc": 0.9320640415404586
+    },
+    {
+        "read_id": "1c069d86-be07-448a-a04b-09708e0f57fe",
+        "dna_len": 4446,
+        "ctg": "Staphylococcus_2;size=1;",
+        "r_st": 42,
+        "r_en": 4551,
+        "q_st": 0,
+        "q_en": 4446,
+        "NM": 146,
+        "blen": 4546,
+        "cig": {
+            "S": 0,
+            "M": 4409,
+            "D": 100,
+            "I": 37
+        },
+        "cigacc": 0.9678838539375275
+    },
+    {
+        "read_id": "094dd1c3-deeb-4ebb-bea5-29ea5163e065",
+        "dna_len": 4498,
+        "ctg": "Staphylococcus_6;size=1;",
+        "r_st": 3,
+        "r_en": 4477,
+        "q_st": 0,
+        "q_en": 4498,
+        "NM": 118,
+        "blen": 4538,
+        "cig": {
+            "S": 0,
+            "M": 4434,
+            "D": 40,
+            "I": 64
+        },
+        "cigacc": 0.9739973556632878
+    },
+    {
+        "read_id": "402e6461-7248-4f81-a0d1-789344beb6ee",
+        "dna_len": 4492,
+        "ctg": "Escherichia_1;size=1;",
+        "r_st": 26,
+        "r_en": 4490,
+        "q_st": 0,
+        "q_en": 4492,
+        "NM": 489,
+        "blen": 4638,
+        "cig": {
+            "S": 0,
+            "M": 4318,
+            "D": 146,
+            "I": 174
+        },
+        "cigacc": 0.8945666235446313
+    },
+    {
+        "read_id": "a9185ee5-0c2f-4330-8569-2e07e4402cdc",
+        "dna_len": 4625,
+        "ctg": "Staphylococcus_2;size=1;",
+        "r_st": 3,
+        "r_en": 4530,
+        "q_st": 0,
+        "q_en": 4625,
+        "NM": 242,
+        "blen": 4683,
+        "cig": {
+            "S": 0,
+            "M": 4469,
+            "D": 58,
+            "I": 156
+        },
+        "cigacc": 0.9483237241084774
+    },
+    {
+        "read_id": "8767be12-f73b-4c1b-9669-4513f4f04d87",
+        "dna_len": 4456,
+        "ctg": "Staphylococcus_5;size=1;",
+        "r_st": 0,
+        "r_en": 4424,
+        "q_st": 0,
+        "q_en": 4456,
+        "NM": 114,
+        "blen": 4491,
+        "cig": {
+            "S": 0,
+            "M": 4389,
+            "D": 35,
+            "I": 67
+        },
+        "cigacc": 0.9746158984635939
+    },
+    {
+        "read_id": "997a4fa9-aeea-4998-89ca-3acca5efd17b",
+        "dna_len": 4502,
+        "ctg": "Staphylococcus_6;size=1;",
+        "r_st": 39,
+        "r_en": 4522,
+        "q_st": 0,
+        "q_en": 4502,
+        "NM": 83,
+        "blen": 4532,
+        "cig": {
+            "S": 0,
+            "M": 4453,
+            "D": 30,
+            "I": 49
+        },
+        "cigacc": 0.9816857899382171
+    },
+    {
+        "read_id": "d55835d4-2032-43ea-928b-06719ba77edc",
+        "dna_len": 4446,
+        "ctg": "Staphylococcus_2;size=1;",
+        "r_st": 60,
+        "r_en": 4522,
+        "q_st": 0,
+        "q_en": 4446,
+        "NM": 81,
+        "blen": 4490,
+        "cig": {
+            "S": 0,
+            "M": 4418,
+            "D": 44,
+            "I": 28
+        },
+        "cigacc": 0.9819599109131403
+    },
+    {
+        "read_id": "b6527ff7-2720-4bc7-b891-4c57e65622fc",
+        "dna_len": 4493,
+        "ctg": "Staphylococcus_6;size=1;",
+        "r_st": 0,
+        "r_en": 4491,
+        "q_st": 0,
+        "q_en": 4493,
+        "NM": 101,
+        "blen": 4537,
+        "cig": {
+            "S": 0,
+            "M": 4447,
+            "D": 44,
+            "I": 46
+        },
+        "cigacc": 0.9777385937844391
+    },
+    {
+        "read_id": "1e70c706-e957-4f7f-a5e9-1ba863a4a9ed",
+        "dna_len": 4424,
+        "ctg": "Escherichia_6;size=1;",
+        "r_st": 42,
+        "r_en": 4480,
+        "q_st": 0,
+        "q_en": 4424,
+        "NM": 433,
+        "blen": 4566,
+        "cig": {
+            "S": 0,
+            "M": 4296,
+            "D": 142,
+            "I": 128
+        },
+        "cigacc": 0.9051686377573368
+    },
+    {
+        "read_id": "c2b0b93a-61ad-4b12-ba21-00b05c8603df",
+        "dna_len": 4464,
+        "ctg": "Staphylococcus_1;size=1;",
+        "r_st": 50,
+        "r_en": 4505,
+        "q_st": 0,
+        "q_en": 4464,
+        "NM": 99,
+        "blen": 4507,
+        "cig": {
+            "S": 0,
+            "M": 4412,
+            "D": 43,
+            "I": 52
+        },
+        "cigacc": 0.978034169070335
+    },
+    {
+        "read_id": "8b2e90df-0ecb-4533-b1ad-0155697c87ab",
+        "dna_len": 4512,
+        "ctg": "Staphylococcus_5;size=1;",
+        "r_st": 26,
+        "r_en": 4463,
+        "q_st": 0,
+        "q_en": 4512,
+        "NM": 172,
+        "blen": 4553,
+        "cig": {
+            "S": 0,
+            "M": 4396,
+            "D": 41,
+            "I": 116
+        },
+        "cigacc": 0.9622227103009005
+    },
+    {
+        "read_id": "f91a2ef0-ab20-4483-b86a-1e44e821f73a",
+        "dna_len": 4416,
+        "ctg": "Staphylococcus_1;size=1;",
+        "r_st": 41,
+        "r_en": 4467,
+        "q_st": 0,
+        "q_en": 4416,
+        "NM": 78,
+        "blen": 4459,
+        "cig": {
+            "S": 0,
+            "M": 4383,
+            "D": 43,
+            "I": 33
+        },
+        "cigacc": 0.9825072886297376
+    },
+    {
+        "read_id": "1705db15-2a3e-472a-ab7b-a5410518d4d9",
+        "dna_len": 4353,
+        "ctg": "Escherichia_5;size=1;",
+        "r_st": 39,
+        "r_en": 4397,
+        "q_st": 0,
+        "q_en": 4353,
+        "NM": 459,
+        "blen": 4519,
+        "cig": {
+            "S": 0,
+            "M": 4192,
+            "D": 166,
+            "I": 161
+        },
+        "cigacc": 0.89842885594158
+    },
+    {
+        "read_id": "0f122adc-7620-4c58-8b48-747d145766ed",
+        "dna_len": 4498,
+        "ctg": "Staphylococcus_2;size=1;",
+        "r_st": 54,
+        "r_en": 4551,
+        "q_st": 0,
+        "q_en": 4498,
+        "NM": 155,
+        "blen": 4559,
+        "cig": {
+            "S": 0,
+            "M": 4436,
+            "D": 61,
+            "I": 62
+        },
+        "cigacc": 0.9660013160780873
+    },
+    {
+        "read_id": "798182cc-2df9-4cff-badb-3b70fe449546",
+        "dna_len": 4406,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 3,
+        "r_en": 4390,
+        "q_st": 0,
+        "q_en": 4406,
+        "NM": 138,
+        "blen": 4458,
+        "cig": {
+            "S": 0,
+            "M": 4335,
+            "D": 52,
+            "I": 71
+        },
+        "cigacc": 0.9690444145356663
+    },
+    {
+        "read_id": "a1c786be-491c-4279-bbe1-b0388b744d67",
+        "dna_len": 4416,
+        "ctg": "Staphylococcus_5;size=1;",
+        "r_st": 53,
+        "r_en": 4459,
+        "q_st": 0,
+        "q_en": 4416,
+        "NM": 105,
+        "blen": 4459,
+        "cig": {
+            "S": 0,
+            "M": 4363,
+            "D": 43,
+            "I": 53
+        },
+        "cigacc": 0.9764521193092621
+    },
+    {
+        "read_id": "81da65d5-07d2-4f6e-9581-66b73e535108",
+        "dna_len": 4277,
+        "ctg": "Escherichia_5;size=1;",
+        "r_st": 0,
+        "r_en": 4345,
+        "q_st": 0,
+        "q_en": 4277,
+        "NM": 382,
+        "blen": 4447,
+        "cig": {
+            "S": 0,
+            "M": 4175,
+            "D": 170,
+            "I": 102
+        },
+        "cigacc": 0.9140993928491118
+    },
+    {
+        "read_id": "605c3ab2-e7de-4275-80db-76ff7f926b59",
+        "dna_len": 4530,
+        "ctg": "Staphylococcus_3;size=1;",
+        "r_st": 40,
+        "r_en": 4555,
+        "q_st": 0,
+        "q_en": 4530,
+        "NM": 210,
+        "blen": 4608,
+        "cig": {
+            "S": 0,
+            "M": 4437,
+            "D": 78,
+            "I": 93
+        },
+        "cigacc": 0.9544270833333334
+    },
+    {
+        "read_id": "d8982552-150a-4182-b0c1-c55a5868143f",
+        "dna_len": 4514,
+        "ctg": "Staphylococcus_2;size=1;",
+        "r_st": 50,
+        "r_en": 4551,
+        "q_st": 0,
+        "q_en": 4514,
+        "NM": 153,
+        "blen": 4579,
+        "cig": {
+            "S": 0,
+            "M": 4436,
+            "D": 65,
+            "I": 78
+        },
+        "cigacc": 0.9665865909587246
+    },
+    {
+        "read_id": "f685cdaf-9da1-4ad3-860b-7fad8e95b71e",
+        "dna_len": 4451,
+        "ctg": "Staphylococcus_1;size=1;",
+        "r_st": 37,
+        "r_en": 4505,
+        "q_st": 0,
+        "q_en": 4451,
+        "NM": 214,
+        "blen": 4540,
+        "cig": {
+            "S": 0,
+            "M": 4379,
+            "D": 89,
+            "I": 72
+        },
+        "cigacc": 0.952863436123348
+    },
+    {
+        "read_id": "3b7ff7d0-7b10-422d-b195-21f9d9855807",
+        "dna_len": 4472,
+        "ctg": "Staphylococcus_2;size=1;",
+        "r_st": 0,
+        "r_en": 4484,
+        "q_st": 0,
+        "q_en": 4472,
+        "NM": 89,
+        "blen": 4519,
+        "cig": {
+            "S": 0,
+            "M": 4437,
+            "D": 47,
+            "I": 35
+        },
+        "cigacc": 0.9803053772958619
+    },
+    {
+        "read_id": "f5deb538-b147-4c38-b424-48e0ac865c09",
+        "dna_len": 4397,
+        "ctg": "Escherichia_1;size=1;",
+        "r_st": 41,
+        "r_en": 4490,
+        "q_st": 0,
+        "q_en": 4397,
+        "NM": 349,
+        "blen": 4552,
+        "cig": {
+            "S": 0,
+            "M": 4294,
+            "D": 155,
+            "I": 103
+        },
+        "cigacc": 0.9233304042179262
+    },
+    {
+        "read_id": "53547198-63d8-4ade-9a02-35d89d79be86",
+        "dna_len": 4470,
+        "ctg": "Escherichia_6;size=1;",
+        "r_st": 56,
+        "r_en": 4480,
+        "q_st": 0,
+        "q_en": 4470,
+        "NM": 471,
+        "blen": 4613,
+        "cig": {
+            "S": 0,
+            "M": 4281,
+            "D": 143,
+            "I": 189
+        },
+        "cigacc": 0.897897246910904
+    },
+    {
+        "read_id": "3bda8b9f-4d8b-4b7c-a6ce-107fc4a0ab8e",
+        "dna_len": 4369,
+        "ctg": "Escherichia_2;size=1;",
+        "r_st": 67,
+        "r_en": 4397,
+        "q_st": 0,
+        "q_en": 4328,
+        "NM": 301,
+        "blen": 4430,
+        "cig": {
+            "S": 0,
+            "M": 4228,
+            "D": 102,
+            "I": 100
+        },
+        "cigacc": 0.9320541760722347
+    },
+    {
+        "read_id": "5166b5c0-69ed-46fe-9887-5b5243465856",
+        "dna_len": 4330,
+        "ctg": "Escherichia_2;size=1;",
+        "r_st": 0,
+        "r_en": 4367,
+        "q_st": 0,
+        "q_en": 4330,
+        "NM": 327,
+        "blen": 4463,
+        "cig": {
+            "S": 0,
+            "M": 4234,
+            "D": 133,
+            "I": 96
+        },
+        "cigacc": 0.9267308984987677
+    },
+    {
+        "read_id": "a71a3f80-2c7c-450e-bedb-d8ab7283fe34",
+        "dna_len": 4394,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 37,
+        "r_en": 4430,
+        "q_st": 0,
+        "q_en": 4394,
+        "NM": 125,
+        "blen": 4448,
+        "cig": {
+            "S": 0,
+            "M": 4339,
+            "D": 54,
+            "I": 55
+        },
+        "cigacc": 0.9718974820143885
+    },
+    {
+        "read_id": "16e0acf1-0474-4b4a-8fa4-31b54512fc41",
+        "dna_len": 4419,
+        "ctg": "Escherichia_7;size=1;",
+        "r_st": 10,
+        "r_en": 4438,
+        "q_st": 0,
+        "q_en": 4419,
+        "NM": 586,
+        "blen": 4615,
+        "cig": {
+            "S": 0,
+            "M": 4232,
+            "D": 196,
+            "I": 187
+        },
+        "cigacc": 0.8730227518959913
+    },
+    {
+        "read_id": "f94f99fb-5d9e-4e83-aa91-997efe8ebdeb",
+        "dna_len": 4397,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 49,
+        "r_en": 4425,
+        "q_st": 0,
+        "q_en": 4397,
+        "NM": 109,
+        "blen": 4437,
+        "cig": {
+            "S": 0,
+            "M": 4336,
+            "D": 40,
+            "I": 61
+        },
+        "cigacc": 0.9754338517016001
+    },
+    {
+        "read_id": "61ea0e7a-9e7d-4de1-b461-3292966fcb4c",
+        "dna_len": 4441,
+        "ctg": "Staphylococcus_5;size=1;",
+        "r_st": 50,
+        "r_en": 4463,
+        "q_st": 0,
+        "q_en": 4441,
+        "NM": 86,
+        "blen": 4468,
+        "cig": {
+            "S": 0,
+            "M": 4386,
+            "D": 27,
+            "I": 55
+        },
+        "cigacc": 0.9807520143240823
+    },
+    {
+        "read_id": "48ba4d0d-9e5c-4246-ae61-860947d1363f",
+        "dna_len": 4475,
+        "ctg": "Staphylococcus_1;size=1;",
+        "r_st": 3,
+        "r_en": 4470,
+        "q_st": 0,
+        "q_en": 4475,
+        "NM": 117,
+        "blen": 4527,
+        "cig": {
+            "S": 0,
+            "M": 4415,
+            "D": 52,
+            "I": 60
+        },
+        "cigacc": 0.974155069582505
+    },
+    {
+        "read_id": "17123fb3-7c2b-42a7-a3db-01a4a65149bd",
+        "dna_len": 4393,
+        "ctg": "Escherichia_4;size=1;",
+        "r_st": 48,
+        "r_en": 4491,
+        "q_st": 0,
+        "q_en": 4393,
+        "NM": 381,
+        "blen": 4556,
+        "cig": {
+            "S": 0,
+            "M": 4280,
+            "D": 163,
+            "I": 113
+        },
+        "cigacc": 0.9163740122914837
+    },
+    {
+        "read_id": "9f66b8d3-b5b4-460b-a4bc-da68f3abd840",
+        "dna_len": 4557,
+        "ctg": "Staphylococcus_3;size=1;",
+        "r_st": 54,
+        "r_en": 4555,
+        "q_st": 0,
+        "q_en": 4557,
+        "NM": 144,
+        "blen": 4594,
+        "cig": {
+            "S": 0,
+            "M": 4464,
+            "D": 37,
+            "I": 93
+        },
+        "cigacc": 0.9686547670875054
+    },
+    {
+        "read_id": "0c0d91db-2b14-414e-bb85-1b890eb1af79",
+        "dna_len": 4432,
+        "ctg": "Staphylococcus_5;size=1;",
+        "r_st": 5,
+        "r_en": 4429,
+        "q_st": 0,
+        "q_en": 4432,
+        "NM": 101,
+        "blen": 4472,
+        "cig": {
+            "S": 0,
+            "M": 4384,
+            "D": 40,
+            "I": 48
+        },
+        "cigacc": 0.9774150268336315
+    },
+    {
+        "read_id": "561d0238-3b6e-4f94-8dcd-2b2d2b5f7346",
+        "dna_len": 4346,
+        "ctg": "Escherichia_3;size=1;",
+        "r_st": 3,
+        "r_en": 4365,
+        "q_st": 0,
+        "q_en": 4346,
+        "NM": 345,
+        "blen": 4470,
+        "cig": {
+            "S": 0,
+            "M": 4238,
+            "D": 124,
+            "I": 108
+        },
+        "cigacc": 0.9228187919463087
+    },
+    {
+        "read_id": "5fe1dfdf-4494-4161-8666-bea9d320c310",
+        "dna_len": 4397,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 33,
+        "r_en": 4430,
+        "q_st": 0,
+        "q_en": 4397,
+        "NM": 61,
+        "blen": 4427,
+        "cig": {
+            "S": 0,
+            "M": 4367,
+            "D": 30,
+            "I": 30
+        },
+        "cigacc": 0.986220917099616
+    },
+    {
+        "read_id": "53da7562-4448-49f7-bb99-948499f9419f",
+        "dna_len": 4530,
+        "ctg": "Staphylococcus_3;size=1;",
+        "r_st": 0,
+        "r_en": 4506,
+        "q_st": 0,
+        "q_en": 4530,
+        "NM": 91,
+        "blen": 4561,
+        "cig": {
+            "S": 0,
+            "M": 4475,
+            "D": 31,
+            "I": 55
+        },
+        "cigacc": 0.9800482350361763
+    },
+    {
+        "read_id": "dde8b728-1981-429f-bf74-325d0711bf12",
+        "dna_len": 4397,
+        "ctg": "Escherichia_1;size=1;",
+        "r_st": 3,
+        "r_en": 4425,
+        "q_st": 0,
+        "q_en": 4397,
+        "NM": 393,
+        "blen": 4548,
+        "cig": {
+            "S": 0,
+            "M": 4271,
+            "D": 151,
+            "I": 126
+        },
+        "cigacc": 0.9135883905013192
+    },
+    {
+        "read_id": "ecbd4698-d6c2-430e-9dd7-c95b859cc713",
+        "dna_len": 4506,
+        "ctg": "Staphylococcus_2;size=1;",
+        "r_st": 47,
+        "r_en": 4531,
+        "q_st": 0,
+        "q_en": 4506,
+        "NM": 120,
+        "blen": 4545,
+        "cig": {
+            "S": 0,
+            "M": 4445,
+            "D": 39,
+            "I": 61
+        },
+        "cigacc": 0.9735973597359736
+    },
+    {
+        "read_id": "63abdc60-3239-4521-8d67-e378039a08fd",
+        "dna_len": 4478,
+        "ctg": "Escherichia_1;size=1;",
+        "r_st": 23,
+        "r_en": 4490,
+        "q_st": 0,
+        "q_en": 4478,
+        "NM": 582,
+        "blen": 4665,
+        "cig": {
+            "S": 0,
+            "M": 4280,
+            "D": 187,
+            "I": 198
+        },
+        "cigacc": 0.8752411575562701
+    },
+    {
+        "read_id": "ea03649d-a0ab-43fe-91c6-babad508249a",
+        "dna_len": 4316,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 0,
+        "r_en": 4352,
+        "q_st": 0,
+        "q_en": 4316,
+        "NM": 123,
+        "blen": 4389,
+        "cig": {
+            "S": 0,
+            "M": 4279,
+            "D": 73,
+            "I": 37
+        },
+        "cigacc": 0.9719753930280246
+    },
+    {
+        "read_id": "4b0e4573-45cd-4f4c-a9fc-f7047820751d",
+        "dna_len": 4424,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 30,
+        "r_en": 4430,
+        "q_st": 0,
+        "q_en": 4424,
+        "NM": 202,
+        "blen": 4500,
+        "cig": {
+            "S": 0,
+            "M": 4324,
+            "D": 76,
+            "I": 100
+        },
+        "cigacc": 0.9551111111111111
+    },
+    {
+        "read_id": "9eb7d242-f629-47d2-8bf4-2e372c291454",
+        "dna_len": 4320,
+        "ctg": "Escherichia_5;size=1;",
+        "r_st": 0,
+        "r_en": 4348,
+        "q_st": 0,
+        "q_en": 4320,
+        "NM": 396,
+        "blen": 4473,
+        "cig": {
+            "S": 0,
+            "M": 4195,
+            "D": 153,
+            "I": 125
+        },
+        "cigacc": 0.9114688128772636
+    },
+    {
+        "read_id": "51a74dd3-3537-417d-85c9-a3a12a8dabcd",
+        "dna_len": 4539,
+        "ctg": "Staphylococcus_6;size=1;",
+        "r_st": 3,
+        "r_en": 4496,
+        "q_st": 0,
+        "q_en": 4539,
+        "NM": 422,
+        "blen": 4672,
+        "cig": {
+            "S": 0,
+            "M": 4360,
+            "D": 133,
+            "I": 179
+        },
+        "cigacc": 0.9096746575342466
+    },
+    {
+        "read_id": "754041e6-c2e4-44a2-8aa8-e8775218f398",
+        "dna_len": 4398,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 0,
+        "r_en": 4396,
+        "q_st": 0,
+        "q_en": 4398,
+        "NM": 100,
+        "blen": 4439,
+        "cig": {
+            "S": 0,
+            "M": 4355,
+            "D": 41,
+            "I": 43
+        },
+        "cigacc": 0.9774724036945258
+    },
+    {
+        "read_id": "34ec8734-aee4-42d6-9dc2-b6c4fd39cd9e",
+        "dna_len": 4436,
+        "ctg": "Staphylococcus_3;size=1;",
+        "r_st": 4,
+        "r_en": 4503,
+        "q_st": 0,
+        "q_en": 4436,
+        "NM": 211,
+        "blen": 4548,
+        "cig": {
+            "S": 0,
+            "M": 4387,
+            "D": 112,
+            "I": 49
+        },
+        "cigacc": 0.9536059806508356
+    },
+    {
+        "read_id": "511e9717-7b7e-4556-8981-1412dab56190",
+        "dna_len": 4421,
+        "ctg": "Staphylococcus_1;size=1;",
+        "r_st": 75,
+        "r_en": 4505,
+        "q_st": 0,
+        "q_en": 4421,
+        "NM": 84,
+        "blen": 4465,
+        "cig": {
+            "S": 0,
+            "M": 4386,
+            "D": 44,
+            "I": 35
+        },
+        "cigacc": 0.9811870100783875
+    },
+    {
+        "read_id": "8a218f0e-5011-429a-97dd-2c8cf7abbb1b",
+        "dna_len": 4419,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 50,
+        "r_en": 4430,
+        "q_st": 0,
+        "q_en": 4419,
+        "NM": 94,
+        "blen": 4442,
+        "cig": {
+            "S": 0,
+            "M": 4357,
+            "D": 23,
+            "I": 62
+        },
+        "cigacc": 0.9788383610986042
+    },
+    {
+        "read_id": "4c1277ff-98e8-4e0d-95d5-20e66b81a3f0",
+        "dna_len": 4353,
+        "ctg": "Escherichia_7;size=1;",
+        "r_st": 39,
+        "r_en": 4474,
+        "q_st": 0,
+        "q_en": 4353,
+        "NM": 541,
+        "blen": 4579,
+        "cig": {
+            "S": 0,
+            "M": 4209,
+            "D": 226,
+            "I": 144
+        },
+        "cigacc": 0.8818519327364054
+    },
+    {
+        "read_id": "a470f6aa-d50f-4da5-b695-90db23e69d0b",
+        "dna_len": 4406,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 13,
+        "r_en": 4391,
+        "q_st": 0,
+        "q_en": 4406,
+        "NM": 117,
+        "blen": 4446,
+        "cig": {
+            "S": 0,
+            "M": 4338,
+            "D": 40,
+            "I": 68
+        },
+        "cigacc": 0.9736842105263158
+    },
+    {
+        "read_id": "9e147fad-edcf-4680-97e0-8f5252cd310a",
+        "dna_len": 4407,
+        "ctg": "Staphylococcus_5;size=1;",
+        "r_st": 50,
+        "r_en": 4463,
+        "q_st": 0,
+        "q_en": 4407,
+        "NM": 82,
+        "blen": 4448,
+        "cig": {
+            "S": 0,
+            "M": 4372,
+            "D": 41,
+            "I": 35
+        },
+        "cigacc": 0.9815647482014388
+    },
+    {
+        "read_id": "ae97855f-c3d8-4f43-9d45-14f03fd9409e",
+        "dna_len": 4385,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 44,
+        "r_en": 4420,
+        "q_st": 0,
+        "q_en": 4385,
+        "NM": 150,
+        "blen": 4450,
+        "cig": {
+            "S": 0,
+            "M": 4311,
+            "D": 65,
+            "I": 74
+        },
+        "cigacc": 0.9662921348314607
+    },
+    {
+        "read_id": "411b334f-4f6a-446f-a97d-3e52265306a2",
+        "dna_len": 4480,
+        "ctg": "Staphylococcus_5;size=1;",
+        "r_st": 8,
+        "r_en": 4427,
+        "q_st": 0,
+        "q_en": 4480,
+        "NM": 165,
+        "blen": 4523,
+        "cig": {
+            "S": 0,
+            "M": 4376,
+            "D": 43,
+            "I": 104
+        },
+        "cigacc": 0.9635197877514924
+    },
+    {
+        "read_id": "0e36d16c-ec52-4c4f-9e70-6e56333460e8",
+        "dna_len": 4576,
+        "ctg": "Staphylococcus_3;size=1;",
+        "r_st": 42,
+        "r_en": 4555,
+        "q_st": 0,
+        "q_en": 4576,
+        "NM": 110,
+        "blen": 4597,
+        "cig": {
+            "S": 0,
+            "M": 4492,
+            "D": 21,
+            "I": 84
+        },
+        "cigacc": 0.9760713508810094
+    },
+    {
+        "read_id": "58950159-44d6-48a9-a318-68506918937c",
+        "dna_len": 4449,
+        "ctg": "Staphylococcus_1;size=1;",
+        "r_st": 3,
+        "r_en": 4458,
+        "q_st": 0,
+        "q_en": 4449,
+        "NM": 208,
+        "blen": 4528,
+        "cig": {
+            "S": 0,
+            "M": 4376,
+            "D": 79,
+            "I": 73
+        },
+        "cigacc": 0.9540636042402827
+    },
+    {
+        "read_id": "30963316-7785-4c99-a788-c95f73a9a647",
+        "dna_len": 4530,
+        "ctg": "Staphylococcus_3;size=1;",
+        "r_st": 30,
+        "r_en": 4555,
+        "q_st": 0,
+        "q_en": 4530,
+        "NM": 131,
+        "blen": 4588,
+        "cig": {
+            "S": 0,
+            "M": 4467,
+            "D": 58,
+            "I": 63
+        },
+        "cigacc": 0.9714472537053183
+    },
+    {
+        "read_id": "a18c3dee-c0ac-4ffd-ae86-ced2ef8794c0",
+        "dna_len": 4511,
+        "ctg": "Staphylococcus_3;size=1;",
+        "r_st": 3,
+        "r_en": 4507,
+        "q_st": 0,
+        "q_en": 4511,
+        "NM": 125,
+        "blen": 4563,
+        "cig": {
+            "S": 0,
+            "M": 4452,
+            "D": 52,
+            "I": 59
+        },
+        "cigacc": 0.972605741836511
+    },
+    {
+        "read_id": "d3e5da1a-5aa2-499c-aa8a-114350627622",
+        "dna_len": 4387,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 0,
+        "r_en": 4381,
+        "q_st": 0,
+        "q_en": 4387,
+        "NM": 92,
+        "blen": 4430,
+        "cig": {
+            "S": 0,
+            "M": 4338,
+            "D": 43,
+            "I": 49
+        },
+        "cigacc": 0.9792325056433409
+    },
+    {
+        "read_id": "1aadf95a-cd69-4e8a-a6c5-6243e0439687",
+        "dna_len": 4564,
+        "ctg": "Staphylococcus_2;size=1;",
+        "r_st": 40,
+        "r_en": 4546,
+        "q_st": 0,
+        "q_en": 4564,
+        "NM": 172,
+        "blen": 4611,
+        "cig": {
+            "S": 0,
+            "M": 4459,
+            "D": 47,
+            "I": 105
+        },
+        "cigacc": 0.9626978963348515
+    },
+    {
+        "read_id": "27c65c10-6bc9-4278-bf4d-27cbbc6b6f4a",
+        "dna_len": 4393,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 46,
+        "r_en": 4430,
+        "q_st": 0,
+        "q_en": 4393,
+        "NM": 104,
+        "blen": 4438,
+        "cig": {
+            "S": 0,
+            "M": 4339,
+            "D": 45,
+            "I": 54
+        },
+        "cigacc": 0.9765660207300586
+    },
+    {
+        "read_id": "7fafb9d3-3a3c-4b3c-871a-76797829324c",
+        "dna_len": 4533,
+        "ctg": "Staphylococcus_2;size=1;",
+        "r_st": 3,
+        "r_en": 4492,
+        "q_st": 0,
+        "q_en": 4533,
+        "NM": 109,
+        "blen": 4562,
+        "cig": {
+            "S": 0,
+            "M": 4460,
+            "D": 29,
+            "I": 73
+        },
+        "cigacc": 0.976106970626918
+    },
+    {
+        "read_id": "34a198ca-01ac-434e-90f2-5dfb4a566051",
+        "dna_len": 4307,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 64,
+        "r_en": 4420,
+        "q_st": 0,
+        "q_en": 4307,
+        "NM": 183,
+        "blen": 4402,
+        "cig": {
+            "S": 0,
+            "M": 4261,
+            "D": 95,
+            "I": 46
+        },
+        "cigacc": 0.9584279872785098
+    },
+    {
+        "read_id": "dc331cb1-c56b-434b-8ce4-d671aea66142",
+        "dna_len": 4439,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 3,
+        "r_en": 4389,
+        "q_st": 0,
+        "q_en": 4439,
+        "NM": 162,
+        "blen": 4486,
+        "cig": {
+            "S": 0,
+            "M": 4339,
+            "D": 47,
+            "I": 100
+        },
+        "cigacc": 0.9638876504681231
+    },
+    {
+        "read_id": "5e9f1a34-c422-492b-8d8f-6b381246c8c3",
+        "dna_len": 4377,
+        "ctg": "Escherichia_2;size=1;",
+        "r_st": 0,
+        "r_en": 4373,
+        "q_st": 0,
+        "q_en": 4377,
+        "NM": 377,
+        "blen": 4509,
+        "cig": {
+            "S": 0,
+            "M": 4241,
+            "D": 132,
+            "I": 136
+        },
+        "cigacc": 0.9163894433355512
+    },
+    {
+        "read_id": "16679a62-56e4-49fe-8fa6-69809fe24494",
+        "dna_len": 4364,
+        "ctg": "Escherichia_5;size=1;",
+        "r_st": 0,
+        "r_en": 4364,
+        "q_st": 0,
+        "q_en": 4364,
+        "NM": 350,
+        "blen": 4492,
+        "cig": {
+            "S": 0,
+            "M": 4236,
+            "D": 128,
+            "I": 128
+        },
+        "cigacc": 0.9220837043633126
+    },
+    {
+        "read_id": "1ae8473f-14b7-4a00-adb2-7d0384829d5f",
+        "dna_len": 4552,
+        "ctg": "Staphylococcus_6;size=1;",
+        "r_st": 3,
+        "r_en": 4494,
+        "q_st": 0,
+        "q_en": 4540,
+        "NM": 136,
+        "blen": 4578,
+        "cig": {
+            "S": 0,
+            "M": 4453,
+            "D": 38,
+            "I": 87
+        },
+        "cigacc": 0.9702927042376583
+    },
+    {
+        "read_id": "db1a5701-a0cb-476c-9908-d24c51d3877e",
+        "dna_len": 4457,
+        "ctg": "Staphylococcus_6;size=1;",
+        "r_st": 68,
+        "r_en": 4522,
+        "q_st": 0,
+        "q_en": 4457,
+        "NM": 88,
+        "blen": 4498,
+        "cig": {
+            "S": 0,
+            "M": 4413,
+            "D": 41,
+            "I": 44
+        },
+        "cigacc": 0.9804357492218764
+    },
+    {
+        "read_id": "9b9a9a4e-058f-4280-8ff5-1223908a9bd0",
+        "dna_len": 4264,
+        "ctg": "Escherichia_5;size=1;",
+        "r_st": 70,
+        "r_en": 4397,
+        "q_st": 0,
+        "q_en": 4264,
+        "NM": 408,
+        "blen": 4433,
+        "cig": {
+            "S": 0,
+            "M": 4158,
+            "D": 169,
+            "I": 106
+        },
+        "cigacc": 0.9079630047371983
+    },
+    {
+        "read_id": "5bc6dae7-f7b3-41fa-bfcd-548914555e66",
+        "dna_len": 4525,
+        "ctg": "Staphylococcus_2;size=1;",
+        "r_st": 3,
+        "r_en": 4505,
+        "q_st": 0,
+        "q_en": 4525,
+        "NM": 133,
+        "blen": 4576,
+        "cig": {
+            "S": 0,
+            "M": 4451,
+            "D": 51,
+            "I": 74
+        },
+        "cigacc": 0.9709353146853147
+    },
+    {
+        "read_id": "ea74dc67-cc7b-4bb8-9abb-614d6765a04d",
+        "dna_len": 4388,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 42,
+        "r_en": 4430,
+        "q_st": 0,
+        "q_en": 4388,
+        "NM": 71,
+        "blen": 4422,
+        "cig": {
+            "S": 0,
+            "M": 4354,
+            "D": 34,
+            "I": 34
+        },
+        "cigacc": 0.9839439167797377
+    },
+    {
+        "read_id": "6c4747d3-6d3e-4feb-9f96-af1ed8a26079",
+        "dna_len": 4474,
+        "ctg": "Escherichia_6;size=1;",
+        "r_st": 3,
+        "r_en": 4460,
+        "q_st": 0,
+        "q_en": 4474,
+        "NM": 375,
+        "blen": 4594,
+        "cig": {
+            "S": 0,
+            "M": 4337,
+            "D": 120,
+            "I": 137
+        },
+        "cigacc": 0.9183717892903788
+    },
+    {
+        "read_id": "0da23f8f-b0b4-44a1-8338-f56d6de9256d",
+        "dna_len": 4446,
+        "ctg": "Staphylococcus_6;size=1;",
+        "r_st": 59,
+        "r_en": 4512,
+        "q_st": 0,
+        "q_en": 4446,
+        "NM": 96,
+        "blen": 4496,
+        "cig": {
+            "S": 0,
+            "M": 4403,
+            "D": 50,
+            "I": 43
+        },
+        "cigacc": 0.9786476868327402
+    },
+    {
+        "read_id": "5fe1c2a5-86a8-49d8-a750-2a43c9bc51a8",
+        "dna_len": 4381,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 41,
+        "r_en": 4415,
+        "q_st": 0,
+        "q_en": 4381,
+        "NM": 110,
+        "blen": 4430,
+        "cig": {
+            "S": 0,
+            "M": 4325,
+            "D": 49,
+            "I": 56
+        },
+        "cigacc": 0.9751693002257337
+    },
+    {
+        "read_id": "25201a5d-4c79-4d29-a451-91252b4f1018",
+        "dna_len": 4437,
+        "ctg": "Escherichia_4;size=1;",
+        "r_st": 3,
+        "r_en": 4461,
+        "q_st": 0,
+        "q_en": 4437,
+        "NM": 391,
+        "blen": 4575,
+        "cig": {
+            "S": 0,
+            "M": 4320,
+            "D": 138,
+            "I": 117
+        },
+        "cigacc": 0.9145355191256831
+    },
+    {
+        "read_id": "c1178ba1-ca04-4888-bd7b-95138e623049",
+        "dna_len": 4436,
+        "ctg": "Staphylococcus_5;size=1;",
+        "r_st": 35,
+        "r_en": 4463,
+        "q_st": 0,
+        "q_en": 4436,
+        "NM": 108,
+        "blen": 4480,
+        "cig": {
+            "S": 0,
+            "M": 4384,
+            "D": 44,
+            "I": 52
+        },
+        "cigacc": 0.9758928571428571
+    },
+    {
+        "read_id": "8a6195db-97c3-4a0c-a6de-b12665622675",
+        "dna_len": 4500,
+        "ctg": "Staphylococcus_3;size=1;",
+        "r_st": 0,
+        "r_en": 4509,
+        "q_st": 0,
+        "q_en": 4500,
+        "NM": 105,
+        "blen": 4552,
+        "cig": {
+            "S": 0,
+            "M": 4457,
+            "D": 52,
+            "I": 43
+        },
+        "cigacc": 0.9769332161687171
+    },
+    {
+        "read_id": "8fee3a66-76bd-4595-9734-6ac573e3280e",
+        "dna_len": 4525,
+        "ctg": "Staphylococcus_3;size=1;",
+        "r_st": 12,
+        "r_en": 4516,
+        "q_st": 14,
+        "q_en": 4525,
+        "NM": 169,
+        "blen": 4574,
+        "cig": {
+            "S": 0,
+            "M": 4441,
+            "D": 63,
+            "I": 70
+        },
+        "cigacc": 0.9630520332313074
+    },
+    {
+        "read_id": "22d27f1f-8f24-4b88-8592-d3fb42d3a62e",
+        "dna_len": 4474,
+        "ctg": "Staphylococcus_5;size=1;",
+        "r_st": 19,
+        "r_en": 4460,
+        "q_st": 0,
+        "q_en": 4474,
+        "NM": 159,
+        "blen": 4524,
+        "cig": {
+            "S": 0,
+            "M": 4391,
+            "D": 50,
+            "I": 83
+        },
+        "cigacc": 0.9648541114058355
+    },
+    {
+        "read_id": "0ae82722-2adf-4150-a8d1-dc4cbaa98f59",
+        "dna_len": 4371,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 60,
+        "r_en": 4427,
+        "q_st": 0,
+        "q_en": 4371,
+        "NM": 105,
+        "blen": 4420,
+        "cig": {
+            "S": 0,
+            "M": 4318,
+            "D": 49,
+            "I": 53
+        },
+        "cigacc": 0.9762443438914027
+    },
+    {
+        "read_id": "dbbb6eea-5df1-4169-9a6b-47389d5f4d46",
+        "dna_len": 4467,
+        "ctg": "Staphylococcus_1;size=1;",
+        "r_st": 3,
+        "r_en": 4458,
+        "q_st": 0,
+        "q_en": 4467,
+        "NM": 149,
+        "blen": 4524,
+        "cig": {
+            "S": 0,
+            "M": 4398,
+            "D": 57,
+            "I": 69
+        },
+        "cigacc": 0.9670645446507515
+    },
+    {
+        "read_id": "49b01b88-8d45-49b4-8665-709ef5077dcf",
+        "dna_len": 4522,
+        "ctg": "Staphylococcus_3;size=1;",
+        "r_st": 3,
+        "r_en": 4521,
+        "q_st": 0,
+        "q_en": 4522,
+        "NM": 120,
+        "blen": 4574,
+        "cig": {
+            "S": 0,
+            "M": 4466,
+            "D": 52,
+            "I": 56
+        },
+        "cigacc": 0.9737647573240052
+    },
+    {
+        "read_id": "595b858a-32e0-4749-b51b-119a07b1044b",
+        "dna_len": 4441,
+        "ctg": "Staphylococcus_6;size=1;",
+        "r_st": 18,
+        "r_en": 4483,
+        "q_st": 0,
+        "q_en": 4441,
+        "NM": 173,
+        "blen": 4524,
+        "cig": {
+            "S": 0,
+            "M": 4382,
+            "D": 83,
+            "I": 59
+        },
+        "cigacc": 0.9617595048629531
+    },
+    {
+        "read_id": "5d93400b-0c4e-4327-ba2d-e40c3605b17f",
+        "dna_len": 4430,
+        "ctg": "Escherichia_1;size=1;",
+        "r_st": 48,
+        "r_en": 4490,
+        "q_st": 0,
+        "q_en": 4430,
+        "NM": 353,
+        "blen": 4542,
+        "cig": {
+            "S": 0,
+            "M": 4330,
+            "D": 112,
+            "I": 100
+        },
+        "cigacc": 0.9222809335094672
+    },
+    {
+        "read_id": "5a2646ff-9f54-414e-b2a3-a3941ef7e008",
+        "dna_len": 4252,
+        "ctg": "Escherichia_3;size=1;",
+        "r_st": 160,
+        "r_en": 4394,
+        "q_st": 0,
+        "q_en": 4127,
+        "NM": 849,
+        "blen": 4473,
+        "cig": {
+            "S": 0,
+            "M": 3888,
+            "D": 346,
+            "I": 239
+        },
+        "cigacc": 0.8101945003353455
+    },
+    {
+        "read_id": "5ae5abcd-fd37-4312-9227-b5e96459bd42",
+        "dna_len": 4519,
+        "ctg": "Staphylococcus_2;size=1;",
+        "r_st": 42,
+        "r_en": 4551,
+        "q_st": 0,
+        "q_en": 4519,
+        "NM": 124,
+        "blen": 4568,
+        "cig": {
+            "S": 0,
+            "M": 4460,
+            "D": 49,
+            "I": 59
+        },
+        "cigacc": 0.9728546409807356
+    },
+    {
+        "read_id": "5484889b-f489-4eda-bcd1-d3c2e6b25c29",
+        "dna_len": 4501,
+        "ctg": "Staphylococcus_6;size=1;",
+        "r_st": 32,
+        "r_en": 4522,
+        "q_st": 0,
+        "q_en": 4501,
+        "NM": 124,
+        "blen": 4555,
+        "cig": {
+            "S": 0,
+            "M": 4436,
+            "D": 54,
+            "I": 65
+        },
+        "cigacc": 0.9727771679473106
+    },
+    {
+        "read_id": "b7801a6e-a58f-4327-bd89-500251fc7123",
+        "dna_len": 4486,
+        "ctg": "Staphylococcus_3;size=1;",
+        "r_st": 18,
+        "r_en": 4494,
+        "q_st": 0,
+        "q_en": 4486,
+        "NM": 190,
+        "blen": 4559,
+        "cig": {
+            "S": 0,
+            "M": 4403,
+            "D": 73,
+            "I": 83
+        },
+        "cigacc": 0.9583241939021715
+    },
+    {
+        "read_id": "7f9ba2fd-51b4-4990-a483-76154a601d9e",
+        "dna_len": 4502,
+        "ctg": "Staphylococcus_2;size=1;",
+        "r_st": 3,
+        "r_en": 4514,
+        "q_st": 0,
+        "q_en": 4502,
+        "NM": 110,
+        "blen": 4559,
+        "cig": {
+            "S": 0,
+            "M": 4454,
+            "D": 57,
+            "I": 48
+        },
+        "cigacc": 0.9758719017328361
+    },
+    {
+        "read_id": "1df95a42-907b-4ea2-846a-50b1cddeb32b",
+        "dna_len": 4409,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 46,
+        "r_en": 4430,
+        "q_st": 0,
+        "q_en": 4409,
+        "NM": 193,
+        "blen": 4477,
+        "cig": {
+            "S": 0,
+            "M": 4316,
+            "D": 68,
+            "I": 93
+        },
+        "cigacc": 0.9568907750725932
+    },
+    {
+        "read_id": "ce3f78b3-b5be-4a22-a820-b4e95bcecce6",
+        "dna_len": 4437,
+        "ctg": "Staphylococcus_5;size=1;",
+        "r_st": 42,
+        "r_en": 4463,
+        "q_st": 0,
+        "q_en": 4437,
+        "NM": 121,
+        "blen": 4477,
+        "cig": {
+            "S": 0,
+            "M": 4381,
+            "D": 40,
+            "I": 56
+        },
+        "cigacc": 0.972972972972973
+    },
+    {
+        "read_id": "9847be5c-8098-465b-9f33-3904c61f3459",
+        "dna_len": 4261,
+        "ctg": "Escherichia_2;size=1;",
+        "r_st": 3,
+        "r_en": 4363,
+        "q_st": 0,
+        "q_en": 4261,
+        "NM": 505,
+        "blen": 4482,
+        "cig": {
+            "S": 0,
+            "M": 4139,
+            "D": 221,
+            "I": 122
+        },
+        "cigacc": 0.8873270861222669
+    },
+    {
+        "read_id": "2a90159b-2f32-4170-a075-64e0e52f4c78",
+        "dna_len": 4520,
+        "ctg": "Staphylococcus_2;size=1;",
+        "r_st": 0,
+        "r_en": 4512,
+        "q_st": 0,
+        "q_en": 4520,
+        "NM": 327,
+        "blen": 4631,
+        "cig": {
+            "S": 0,
+            "M": 4401,
+            "D": 111,
+            "I": 119
+        },
+        "cigacc": 0.929388900885338
+    },
+    {
+        "read_id": "55421633-76fb-4443-9b44-35eec5db4f98",
+        "dna_len": 4281,
+        "ctg": "Escherichia_3;size=1;",
+        "r_st": 67,
+        "r_en": 4397,
+        "q_st": 0,
+        "q_en": 4262,
+        "NM": 424,
+        "blen": 4443,
+        "cig": {
+            "S": 0,
+            "M": 4149,
+            "D": 181,
+            "I": 113
+        },
+        "cigacc": 0.9045689849200991
+    },
+    {
+        "read_id": "97661908-e1f6-4faa-ab9d-47c817b995a7",
+        "dna_len": 4354,
+        "ctg": 0,
+        "r_st": 0,
+        "r_en": 0,
+        "q_st": 0,
+        "q_en": 0,
+        "NM": 0,
+        "blen": 0,
+        "cig": 0,
+        "cigacc": 0
+    },
+    {
+        "read_id": "85049b5c-d266-417a-9d72-6f538961d9ce",
+        "dna_len": 4451,
+        "ctg": "Staphylococcus_5;size=1;",
+        "r_st": 3,
+        "r_en": 4413,
+        "q_st": 0,
+        "q_en": 4451,
+        "NM": 141,
+        "blen": 4489,
+        "cig": {
+            "S": 0,
+            "M": 4372,
+            "D": 38,
+            "I": 79
+        },
+        "cigacc": 0.9685898863889508
+    },
+    {
+        "read_id": "667e5a80-8897-4992-ab4c-7947bcb5b6d9",
+        "dna_len": 4467,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 3,
+        "r_en": 4412,
+        "q_st": 0,
+        "q_en": 4466,
+        "NM": 129,
+        "blen": 4499,
+        "cig": {
+            "S": 0,
+            "M": 4376,
+            "D": 33,
+            "I": 90
+        },
+        "cigacc": 0.9713269615470105
+    },
+    {
+        "read_id": "04e7a45b-9fea-4b81-8b70-20b52e44760a",
+        "dna_len": 4579,
+        "ctg": "Staphylococcus_1;size=1;",
+        "r_st": 30,
+        "r_en": 4505,
+        "q_st": 0,
+        "q_en": 4579,
+        "NM": 280,
+        "blen": 4631,
+        "cig": {
+            "S": 0,
+            "M": 4423,
+            "D": 52,
+            "I": 156
+        },
+        "cigacc": 0.9395378967825524
+    },
+    {
+        "read_id": "c3d5f20d-2910-4136-bad4-9f9f1819d006",
+        "dna_len": 4412,
+        "ctg": "Staphylococcus_5;size=1;",
+        "r_st": 0,
+        "r_en": 4421,
+        "q_st": 0,
+        "q_en": 4412,
+        "NM": 84,
+        "blen": 4457,
+        "cig": {
+            "S": 0,
+            "M": 4376,
+            "D": 45,
+            "I": 36
+        },
+        "cigacc": 0.9811532420910927
+    },
+    {
+        "read_id": "7dd7973d-0622-463a-b74a-b124475e7a94",
+        "dna_len": 4357,
+        "ctg": "Escherichia_5;size=1;",
+        "r_st": 40,
+        "r_en": 4397,
+        "q_st": 0,
+        "q_en": 4357,
+        "NM": 361,
+        "blen": 4481,
+        "cig": {
+            "S": 0,
+            "M": 4233,
+            "D": 124,
+            "I": 124
+        },
+        "cigacc": 0.9194376255300156
+    },
+    {
+        "read_id": "821bfad4-6125-4fed-8793-ccaaca859ce0",
+        "dna_len": 4492,
+        "ctg": "Escherichia_6;size=1;",
+        "r_st": 3,
+        "r_en": 4450,
+        "q_st": 0,
+        "q_en": 4492,
+        "NM": 435,
+        "blen": 4633,
+        "cig": {
+            "S": 0,
+            "M": 4306,
+            "D": 141,
+            "I": 186
+        },
+        "cigacc": 0.9061083531189295
+    },
+    {
+        "read_id": "cfb4224d-ef7d-4f54-b01e-c0b3f1c26800",
+        "dna_len": 4442,
+        "ctg": "Staphylococcus_5;size=1;",
+        "r_st": 48,
+        "r_en": 4457,
+        "q_st": 0,
+        "q_en": 4442,
+        "NM": 129,
+        "blen": 4484,
+        "cig": {
+            "S": 0,
+            "M": 4367,
+            "D": 42,
+            "I": 75
+        },
+        "cigacc": 0.9712310437109724
+    },
+    {
+        "read_id": "6a50124d-7230-4b45-bd20-d45c1133d072",
+        "dna_len": 4455,
+        "ctg": "Staphylococcus_3;size=1;",
+        "r_st": 79,
+        "r_en": 4555,
+        "q_st": 0,
+        "q_en": 4455,
+        "NM": 146,
+        "blen": 4524,
+        "cig": {
+            "S": 0,
+            "M": 4407,
+            "D": 69,
+            "I": 48
+        },
+        "cigacc": 0.9677276746242264
+    },
+    {
+        "read_id": "e459ebe5-da39-44b2-829b-6004fce05883",
+        "dna_len": 4438,
+        "ctg": "Staphylococcus_6;size=1;",
+        "r_st": 41,
+        "r_en": 4522,
+        "q_st": 0,
+        "q_en": 4438,
+        "NM": 132,
+        "blen": 4521,
+        "cig": {
+            "S": 0,
+            "M": 4398,
+            "D": 83,
+            "I": 40
+        },
+        "cigacc": 0.9708029197080292
+    },
+    {
+        "read_id": "53acabf2-a138-40d1-872b-799c1a9a9d2e",
+        "dna_len": 4421,
+        "ctg": "Staphylococcus_6;size=1;",
+        "r_st": 75,
+        "r_en": 4522,
+        "q_st": 0,
+        "q_en": 4421,
+        "NM": 83,
+        "blen": 4472,
+        "cig": {
+            "S": 0,
+            "M": 4396,
+            "D": 51,
+            "I": 25
+        },
+        "cigacc": 0.9814400715563506
+    },
+    {
+        "read_id": "223e4811-cd63-41a5-b8a5-4a31fbc30ebd",
+        "dna_len": 4377,
+        "ctg": "Staphylococcus_5;size=1;",
+        "r_st": 46,
+        "r_en": 4463,
+        "q_st": 0,
+        "q_en": 4377,
+        "NM": 97,
+        "blen": 4442,
+        "cig": {
+            "S": 0,
+            "M": 4352,
+            "D": 65,
+            "I": 25
+        },
+        "cigacc": 0.9781629896443044
+    },
+    {
+        "read_id": "b19d3662-2091-44b9-b016-3d435f5a72c8",
+        "dna_len": 4506,
+        "ctg": "Staphylococcus_3;size=1;",
+        "r_st": 51,
+        "r_en": 4555,
+        "q_st": 0,
+        "q_en": 4506,
+        "NM": 113,
+        "blen": 4558,
+        "cig": {
+            "S": 0,
+            "M": 4452,
+            "D": 52,
+            "I": 54
+        },
+        "cigacc": 0.9752084247476963
+    },
+    {
+        "read_id": "518bd1a6-96b7-4a01-937c-4403c3b6b78e",
+        "dna_len": 4364,
+        "ctg": "Staphylococcus_1;size=1;",
+        "r_st": 60,
+        "r_en": 4505,
+        "q_st": 0,
+        "q_en": 4364,
+        "NM": 159,
+        "blen": 4481,
+        "cig": {
+            "S": 0,
+            "M": 4328,
+            "D": 117,
+            "I": 36
+        },
+        "cigacc": 0.9645168489176523
+    },
+    {
+        "read_id": "5721c3d1-a692-450a-8eea-bd886097873c",
+        "dna_len": 4446,
+        "ctg": "Staphylococcus_1;size=1;",
+        "r_st": 50,
+        "r_en": 4495,
+        "q_st": 0,
+        "q_en": 4446,
+        "NM": 89,
+        "blen": 4487,
+        "cig": {
+            "S": 0,
+            "M": 4404,
+            "D": 41,
+            "I": 42
+        },
+        "cigacc": 0.9801649208825496
+    },
+    {
+        "read_id": "ef30b902-0521-4564-af96-ac67ce01fd5d",
+        "dna_len": 4437,
+        "ctg": "Staphylococcus_5;size=1;",
+        "r_st": 41,
+        "r_en": 4463,
+        "q_st": 0,
+        "q_en": 4437,
+        "NM": 86,
+        "blen": 4470,
+        "cig": {
+            "S": 0,
+            "M": 4389,
+            "D": 33,
+            "I": 48
+        },
+        "cigacc": 0.9807606263982103
+    },
+    {
+        "read_id": "b43cb5d5-7ba2-413a-b5b2-28348c25a745",
+        "dna_len": 4504,
+        "ctg": "Staphylococcus_2;size=1;",
+        "r_st": 32,
+        "r_en": 4551,
+        "q_st": 0,
+        "q_en": 4504,
+        "NM": 116,
+        "blen": 4563,
+        "cig": {
+            "S": 0,
+            "M": 4460,
+            "D": 59,
+            "I": 44
+        },
+        "cigacc": 0.9745781284242823
+    },
+    {
+        "read_id": "00feb044-d741-41a5-94ac-93d45420bf7a",
+        "dna_len": 4557,
+        "ctg": "Staphylococcus_3;size=1;",
+        "r_st": 0,
+        "r_en": 4505,
+        "q_st": 0,
+        "q_en": 4557,
+        "NM": 196,
+        "blen": 4609,
+        "cig": {
+            "S": 0,
+            "M": 4453,
+            "D": 52,
+            "I": 104
+        },
+        "cigacc": 0.9574745064005207
+    },
+    {
+        "read_id": "10eba49f-98eb-46ad-a383-790d1431225f",
+        "dna_len": 4421,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 0,
+        "r_en": 4399,
+        "q_st": 0,
+        "q_en": 4421,
+        "NM": 108,
+        "blen": 4457,
+        "cig": {
+            "S": 0,
+            "M": 4363,
+            "D": 36,
+            "I": 58
+        },
+        "cigacc": 0.9757684541171191
+    },
+    {
+        "read_id": "a72ad3b4-d403-42a1-9679-ae16f48f037a",
+        "dna_len": 4510,
+        "ctg": "Staphylococcus_1;size=1;",
+        "r_st": 42,
+        "r_en": 4505,
+        "q_st": 0,
+        "q_en": 4510,
+        "NM": 177,
+        "blen": 4565,
+        "cig": {
+            "S": 0,
+            "M": 4408,
+            "D": 55,
+            "I": 102
+        },
+        "cigacc": 0.9612267250821468
+    },
+    {
+        "read_id": "43a860b6-ca89-464c-9e00-a82546796f97",
+        "dna_len": 4535,
+        "ctg": "Staphylococcus_5;size=1;",
+        "r_st": 2,
+        "r_en": 4429,
+        "q_st": 85,
+        "q_en": 4535,
+        "NM": 138,
+        "blen": 4499,
+        "cig": {
+            "S": 0,
+            "M": 4378,
+            "D": 49,
+            "I": 72
+        },
+        "cigacc": 0.9693265170037786
+    },
+    {
+        "read_id": "3896823a-fc06-41f7-8265-e4916ddf30c0",
+        "dna_len": 4382,
+        "ctg": "Escherichia_6;size=1;",
+        "r_st": 0,
+        "r_en": 4429,
+        "q_st": 0,
+        "q_en": 4379,
+        "NM": 387,
+        "blen": 4519,
+        "cig": {
+            "S": 0,
+            "M": 4289,
+            "D": 140,
+            "I": 90
+        },
+        "cigacc": 0.9143615844213322
+    },
+    {
+        "read_id": "06f15843-9467-4b44-a669-12f01092e4b2",
+        "dna_len": 4424,
+        "ctg": "Staphylococcus_1;size=1;",
+        "r_st": 50,
+        "r_en": 4505,
+        "q_st": 0,
+        "q_en": 4424,
+        "NM": 190,
+        "blen": 4512,
+        "cig": {
+            "S": 0,
+            "M": 4367,
+            "D": 88,
+            "I": 57
+        },
+        "cigacc": 0.9578900709219859
+    },
+    {
+        "read_id": "700ca7bd-48d0-48e1-b45f-b3c728066de8",
+        "dna_len": 4488,
+        "ctg": "Escherichia_1;size=1;",
+        "r_st": 37,
+        "r_en": 4490,
+        "q_st": 0,
+        "q_en": 4488,
+        "NM": 392,
+        "blen": 4602,
+        "cig": {
+            "S": 0,
+            "M": 4339,
+            "D": 114,
+            "I": 149
+        },
+        "cigacc": 0.914819643633203
+    },
+    {
+        "read_id": "a3c11803-ad59-4cb8-ae8e-4a93bd1b5484",
+        "dna_len": 4555,
+        "ctg": "Staphylococcus_6;size=1;",
+        "r_st": 49,
+        "r_en": 4522,
+        "q_st": 0,
+        "q_en": 4555,
+        "NM": 259,
+        "blen": 4616,
+        "cig": {
+            "S": 0,
+            "M": 4412,
+            "D": 61,
+            "I": 143
+        },
+        "cigacc": 0.9438908145580589
+    },
+    {
+        "read_id": "19a4d721-3e17-4d8d-80f8-923b08342985",
+        "dna_len": 4357,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 0,
+        "r_en": 4396,
+        "q_st": 0,
+        "q_en": 4357,
+        "NM": 203,
+        "blen": 4464,
+        "cig": {
+            "S": 0,
+            "M": 4289,
+            "D": 107,
+            "I": 68
+        },
+        "cigacc": 0.9545250896057348
+    },
+    {
+        "read_id": "5eb051ea-b2bc-4eee-974c-593c696d91aa",
+        "dna_len": 4383,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 48,
+        "r_en": 4430,
+        "q_st": 0,
+        "q_en": 4383,
+        "NM": 184,
+        "blen": 4458,
+        "cig": {
+            "S": 0,
+            "M": 4307,
+            "D": 75,
+            "I": 76
+        },
+        "cigacc": 0.9587258860475549
+    },
+    {
+        "read_id": "4a8abf86-48e5-4e1c-bdd5-bc3a4f685f3c",
+        "dna_len": 4517,
+        "ctg": "Escherichia_4;size=1;",
+        "r_st": 90,
+        "r_en": 4491,
+        "q_st": 0,
+        "q_en": 4466,
+        "NM": 476,
+        "blen": 4590,
+        "cig": {
+            "S": 0,
+            "M": 4277,
+            "D": 124,
+            "I": 189
+        },
+        "cigacc": 0.8962962962962963
+    },
+    {
+        "read_id": "460ff79b-64b8-4c26-b309-84e566bde034",
+        "dna_len": 4426,
+        "ctg": "Escherichia_4;size=1;",
+        "r_st": 0,
+        "r_en": 4447,
+        "q_st": 0,
+        "q_en": 4426,
+        "NM": 451,
+        "blen": 4587,
+        "cig": {
+            "S": 0,
+            "M": 4286,
+            "D": 161,
+            "I": 140
+        },
+        "cigacc": 0.9016786570743405
+    },
+    {
+        "read_id": "abc043e7-d8fd-484d-b517-ef2b45b80116",
+        "dna_len": 4396,
+        "ctg": "Staphylococcus_4;size=1;",
+        "r_st": 3,
+        "r_en": 4397,
+        "q_st": 0,
+        "q_en": 4396,
+        "NM": 132,
+        "blen": 4458,
+        "cig": {
+            "S": 0,
+            "M": 4332,
+            "D": 62,
+            "I": 64
+        },
+        "cigacc": 0.9703903095558546
+    },
+    {
+        "read_id": "d0329eb8-d6e4-41ee-9ae3-49028f977a0c",
+        "dna_len": 4507,
+        "ctg": "Staphylococcus_6;size=1;",
+        "r_st": 26,
+        "r_en": 4522,
+        "q_st": 0,
+        "q_en": 4507,
+        "NM": 115,
+        "blen": 4556,
+        "cig": {
+            "S": 0,
+            "M": 4447,
+            "D": 49,
+            "I": 60
+        },
+        "cigacc": 0.9747585601404741
+    },
+    {
+        "read_id": "b2ca40b8-d8d0-4a49-aa0e-b4af19de88d0",
+        "dna_len": 4459,
+        "ctg": "Escherichia_1;size=1;",
+        "r_st": 3,
+        "r_en": 4462,
+        "q_st": 0,
+        "q_en": 4459,
+        "NM": 385,
+        "blen": 4591,
+        "cig": {
+            "S": 0,
+            "M": 4327,
+            "D": 132,
+            "I": 132
+        },
+        "cigacc": 0.9161402744500109
+    },
+    {
+        "read_id": "ad793cdc-8d06-4e4e-9bc2-619d13be4fd7",
+        "dna_len": 4517,
+        "ctg": "Staphylococcus_1;size=1;",
+        "r_st": 30,
+        "r_en": 4505,
+        "q_st": 0,
+        "q_en": 4517,
+        "NM": 85,
+        "blen": 4537,
+        "cig": {
+            "S": 0,
+            "M": 4455,
+            "D": 20,
+            "I": 62
+        },
+        "cigacc": 0.9812651531849239
+    },
+    {
+        "read_id": "a15fe009-9a67-49df-ac1f-430544b55869",
+        "dna_len": 4517,
+        "ctg": "Staphylococcus_3;size=1;",
+        "r_st": 42,
+        "r_en": 4555,
+        "q_st": 0,
+        "q_en": 4517,
+        "NM": 97,
+        "blen": 4558,
+        "cig": {
+            "S": 0,
+            "M": 4472,
+            "D": 41,
+            "I": 45
+        },
+        "cigacc": 0.9787187362878456
+    },
+    {
+        "read_id": "f1ec2b72-1bfd-46f9-9d37-3112bf57edc5",
+        "dna_len": 4406,
+        "ctg": "Staphylococcus_5;size=1;",
+        "r_st": 49,
+        "r_en": 4463,
+        "q_st": 0,
+        "q_en": 4406,
+        "NM": 86,
+        "blen": 4449,
+        "cig": {
+            "S": 0,
+            "M": 4371,
+            "D": 43,
+            "I": 35
+        },
+        "cigacc": 0.9806698134412227
+    },
+    {
+        "read_id": "7d1579ed-b9bf-4611-9c09-7d245ed18fcb",
+        "dna_len": 4541,
+        "ctg": "Staphylococcus_2;size=1;",
+        "r_st": 4,
+        "r_en": 4525,
+        "q_st": 0,
+        "q_en": 4541,
+        "NM": 118,
+        "blen": 4583,
+        "cig": {
+            "S": 0,
+            "M": 4479,
+            "D": 42,
+            "I": 62
+        },
+        "cigacc": 0.9742526729216671
+    },
+    {
+        "read_id": "bfd19044-724f-4143-8cdf-3913515be5fd",
+        "dna_len": 4374,
+        "ctg": "Staphylococcus_5;size=1;",
+        "r_st": 3,
+        "r_en": 4424,
+        "q_st": 0,
+        "q_en": 4374,
+        "NM": 292,
+        "blen": 4518,
+        "cig": {
+            "S": 0,
+            "M": 4277,
+            "D": 144,
+            "I": 97
+        },
+        "cigacc": 0.935369632580788
+    },
+    {
+        "read_id": "22a22bc1-345f-4564-94ee-cbebcd27b7d3",
+        "dna_len": 4515,
+        "ctg": "Staphylococcus_3;size=1;",
+        "r_st": 3,
+        "r_en": 4515,
+        "q_st": 0,
+        "q_en": 4515,
+        "NM": 119,
+        "blen": 4566,
+        "cig": {
+            "S": 0,
+            "M": 4461,
+            "D": 51,
+            "I": 54
+        },
+        "cigacc": 0.9739378011388524
+    },
+    {
+        "read_id": "3f16594f-bff9-4b9b-9738-fb1ffd3db262",
+        "dna_len": 4250,
+        "ctg": "Escherichia_5;size=1;",
+        "r_st": 32,
+        "r_en": 4362,
+        "q_st": 32,
+        "q_en": 4247,
+        "NM": 763,
+        "blen": 4550,
+        "cig": {
+            "S": 0,
+            "M": 3995,
+            "D": 335,
+            "I": 220
+        },
+        "cigacc": 0.8323076923076923
+    }
+]

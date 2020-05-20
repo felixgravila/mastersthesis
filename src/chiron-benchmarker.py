@@ -21,7 +21,8 @@ class style():
     GREEN = lambda x: f"\033[32m{x}\033[0m"
 
 # model = 'outputs/chiron-512CNN-512LSTM-pad5-maxpool3/2020-04-21_17:32:55/checkpoints/00464_dis247.h5'
-model = 'outputs/chiron-512CNN-512LSTM-pad5-maxpool3/2020-05-06_16:35:10/checkpoints/00300_dis491.h5'
+# model = 'outputs/chiron-512CNN-512LSTM-pad5-maxpool3/2020-05-06_16:35:10/checkpoints/00300_dis491.h5'
+model = 'outputs/chiron71-256CNN-250LSTM-pad5-bn-maxpool3/2020-05-18_11:46:28/checkpoints/00462_dis339.h5'
 
 input_length = 300
 reads_to_eval = 200
@@ -44,7 +45,7 @@ def make_chiron_for_file(file):
     else:
         cnn = 256
         lstm = 200
-    cb = ChironBuilder(input_length, cnn_filters=cnn, lstm_units=lstm)
+    cb = ChironBuilder(input_length, 7, 1, cnn_filters=cnn, lstm_units=lstm)
     if "bn" in description:
         cb = cb.with_batch_normalization()
     if "pad5" in description:
