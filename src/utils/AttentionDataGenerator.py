@@ -42,15 +42,16 @@ class AttentionDataGenerator(DataGenerator):
             if read_id not in self._umibactdict:
 #                print("Not in dict")
                 continue
-            for bact in self.bacteria:
-                if bact in self._umibactdict[read_id]:
-                    x_windows = np.array(x_windows)
-                    y_windows = self._to_target_language(y_orig_windows, label_as_bases)
-                    yield x_windows, y_windows, ref, raw, read_id
-                continue
+            if len(self.bacteria) == 0:
+                x_windows = np.array(x_windows)
+                y_windows = self._to_target_language(y_orig_windows, label_as_bases)
+                yield x_windows, y_windows, ref, raw, read_id
             else:
-#                print(f"not in {self._umibactdict[read_id]}")
-                continue
+                for bact in self.bacteria:
+                    if bact in self._umibactdict[read_id]:
+                        x_windows = np.array(x_windows)
+                        y_windows = self._to_target_language(y_orig_windows, label_as_bases)
+                        yield x_windows, y_windows, ref, raw, read_id
 
     def _to_target_language(self, y_orig, as_bases):
         y_new = []
