@@ -23,6 +23,8 @@ class BacteriaDataLoader:
         return DAC, RTS, REF
 
     def is_read_id_in_bacteria_lst(self, read_id, bacteria_lst):
+        if len(bacteria_lst) == 0:
+            return True
         bacteria_name = self._get_bacteria(read_id).lower()
         if bacteria_name is None:
             return False
