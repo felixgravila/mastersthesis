@@ -5,7 +5,7 @@ import os
 import sys
 
 from controllers.ValidationController import ValidationController
-from utils.process_utils import get_generator
+from utils.process_utils import get_generator, get_doping_generator
 from models.Attention.CustomSchedule import CustomSchedule
 from models.Attention.attention_utils import create_combined_mask
 from utils.attention_evaluation_utils import build
@@ -19,7 +19,8 @@ class TrainingController():
         self._batch_size = train_config['batch_size']
         self._stride = train_config['stride']
 
-        self._generator = get_generator(model_config, train_config, kind="training")
+        self._generator = get_generator(model_config, train_config, kind="training-bact")
+        self._dope_generator = get_doping_generator(model_config, train_config, kind="training-doping")
         self._validation_controller = ValidationController(model_config, validation_config)
         self._model = model
         self._model_filepath = model_filepath
@@ -63,8 +64,16 @@ class TrainingController():
             start = time.time()
             self._train_loss.reset_states()
             self._train_accuracy.reset_states()
-
+            
             batches = next(self._generator.get_batches(self._batches))
+            if self._dope_generator is not None:
+                dna_batches = batches
+                batches = []
+                dope_batches = next(self._dope_generator.get_batches(self._batches))
+
+                for ((inp, tar),(d_inp, d_tar)) in zip(dna_batches, dope_batches):
+                    batches.append([np.concatenate((inp, d_inp)),np.concatenate((tar, d_tar))])
+
             for (batch, (inp, tar)) in enumerate(batches):  
                 inp = tf.constant(inp, dtype=tf.float32)
                 tar = tf.constant(tar, dtype=tf.int32)

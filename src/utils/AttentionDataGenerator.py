@@ -66,5 +66,3 @@ class AttentionDataGenerator(DataGenerator):
             y_new.append(y)
         return np.array(y_new)
 
-
-
