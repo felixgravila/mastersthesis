@@ -13,6 +13,8 @@
     },
     "train":{
         "data":"mapped_random_reads_fx.hdf5",
+        "dope": "",
+        "dope_ratio": 0,
         "bacteria":[],
         "epochs": 1000,
         "patience": 1000,
