@@ -2,7 +2,6 @@ import tensorflow as tf
 import time
 import numpy as np
 import os
-import sys
 
 from controllers.ValidationController import ValidationController
 from utils.process_utils import get_generator
@@ -32,30 +31,29 @@ class TrainingController():
         self._optimizer = tf.keras.optimizers.Adam(learning_rate, beta_1=0.9, beta_2=0.98, epsilon=1e-9)
     
     def retrain_weights(self):
-
-        if (self._epochs == 0 and os.path.exists(f"{self._model_filepath}.h5") == False):
-            print("*** attemt to skip training, but weights are not provided, exiting...")
-            sys.exit()
-
         if os.path.exists(f"{self._model_filepath}.h5"):
             answer = input(f"*** a trained model already exist, are you sure you want to retrain it? [y/N]:")
             if answer not in "Yy" or answer is "":
                 return False
         return True 
 
+    def _load_model_from_file(self):
+        print("*** loading trained model from a file and skipping training...")
+        build(self._model)
+        self._model.load_weights(f"{self._model_filepath}.h5")
+        return self._model
+
     def train(self):
 
         if self.retrain_weights() == False:
-            print("*** loading trained model and skipping training...")
-            build(self._model)
-            self._model.load_weights(f"{self._model_filepath}.h5")
-            return self._model
+            return self._load_model_from_file()
 
         print("*** training...")
 
         waited = 0
         old_acc = 1e10
         accs = []
+        weights = None
         for epoch in range(self._epochs):
             if epoch < self._warmup:
                 waited = 0
@@ -84,13 +82,16 @@ class TrainingController():
             if val_loss < old_acc:
                 waited = 0
                 old_acc = val_loss
+                print("*** saving model weights")
                 self._model.save_weights(f"{self._model_filepath}.h5")
+                weights = self._model.get_weights()
             else:
                 waited += 1
                 if waited > self._patience:
                     print("Out of patience, exiting...")
                     break
 
+        self._model.set_weights(weights)
         return self._model  
     
     # train_step_signature = [
