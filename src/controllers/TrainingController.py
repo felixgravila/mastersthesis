@@ -2,6 +2,7 @@ import tensorflow as tf
 import time
 import numpy as np
 import os
+import sys
 
 from controllers.ValidationController import ValidationController
 from utils.process_utils import get_generator
@@ -31,6 +32,11 @@ class TrainingController():
         self._optimizer = tf.keras.optimizers.Adam(learning_rate, beta_1=0.9, beta_2=0.98, epsilon=1e-9)
     
     def retrain_weights(self):
+
+        if (self._epochs == 0 and os.path.exists(f"{self._model_filepath}.h5") == False):	
+            print("*** attemt to skip training, but weights are not provided, exiting...")	
+            sys.exit()
+
         if os.path.exists(f"{self._model_filepath}.h5"):
             answer = input(f"*** a trained model already exist, are you sure you want to retrain it? [y/N]:")
             if answer not in "Yy" or answer is "":
