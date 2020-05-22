@@ -75,7 +75,7 @@ class ValidationController():
             performed = 0
 
             for r in range(self._reads):
-                print(f"{r+1}/{self._reads}", end="\r")
+                print(f"*** validating {r+1}/{self._reads}", end="\r")
                 try:
                     x_windows, y_windows, _, _, _ = next(self._generator.get_window_batch(label_as_bases=True))
                     nr_windows = len(x_windows)
