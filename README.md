@@ -44,6 +44,7 @@ Tried Dead Fish with alpha 0.4 and CTC looked good, might be that CTC is overpow
 | 6MPK bench ( checking bact )               | 95.80%   |
 | our_bonito                                 | 45.09%   |
 | bonito_941                                 | 92.77% * |
+| bonito_941 under 5k                        | 93.46%   |
 
 ### BENCHMARKS (TAIYAKI DATA)
 
