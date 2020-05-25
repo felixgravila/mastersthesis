@@ -35,10 +35,12 @@ Tried Dead Fish with alpha 0.4 and CTC looked good, might be that CTC is overpow
 | Name                                       | Accuracy |
 |--------------------------------------------|----------|
 | Chiron (DNA_MODEL)                         | 82.25%   |
+| Chiron (DNA_MODEL) under 5k                | 84.03%   |
 | chiron_pad5_maxpool3                       | 81.44%   |
 | chiron_pad5_maxpool3_wholeread             | 86.38%   |
-| Guppy (fast  - dna_r9.4.1_450bps_fast.cfg) | 91.1%    |
-| Guppy (large - dna_r9.4.1_450bps_hac.cfg)  | 91.6%    |
+| Guppy (fast  - dna_r9.4.1_450bps_fast.cfg) | 91.10%   |
+| Guppy (dna_r9.4.1_450bps_hac.cfg)          | 91.60%   |
+| Guppy (dna_r9.4.1_450bps_hac.cfg) < 5k     | 92.83%   |
 | fishnchips_250_5CNN_25H_4B                 | 92.62% * |
 | fishnchips_250_5CNN_25H_4B_6MPK            | 90.34%   |
 | 6MPK bench ( checking bact )               | 95.80%   |
