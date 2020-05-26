@@ -76,10 +76,10 @@ class TrainingController():
                 print (f'Epoch {epoch + 1} Batch {batch} Loss {self._train_loss.result():.4f} Accuracy {self._train_accuracy.result():.4f}', end="\r")
             print()
             
-            accs.append([self._train_loss.result(), self._train_accuracy.result(), time.time()])
-            np.save(f"{self._model_filepath}.npy", np.array(accs)) 
 
             val_loss = self._validation_controller.validate(self._model)
+            accs.append([self._train_loss.result(), self._train_accuracy.result(), val_loss, time.time()])
+            np.save(f"{self._model_filepath}.npy", np.array(accs)) 
 
             loss = self._train_loss.result()
             acc = self._train_accuracy.result()
