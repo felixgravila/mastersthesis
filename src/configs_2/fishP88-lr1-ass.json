@@ -13,7 +13,7 @@
     },
     "train":{
         "data":"mapped_therest.hdf5",
-        "bacteria":["Bacillus", "Salmonella", "Lactobacillus", "Pseudomonas", "Listeria", "Enterococcus", "Staphylococcus"],
+        "bacteria":["Bacillus", "Salmonella", "Lactobacillus", "Pseudomonas", "Listeria", "Enterococcus", "Staphylococcus", "Escherichia"],
         "epochs": 0,
         "patience": 0,
         "warmup":10,
@@ -24,7 +24,7 @@
     },
     "validate":{
         "data":"mapped_therest.hdf5",
-        "bacteria":["Escherichia"],
+        "bacteria":["Bacillus", "Salmonella", "Lactobacillus", "Pseudomonas", "Listeria", "Enterococcus", "Staphylococcus", "Escherichia"],
         "reads":3,
         "batch_size":300,
         "stride":300,
