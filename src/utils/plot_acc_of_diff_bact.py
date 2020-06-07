@@ -4,7 +4,9 @@ import json
 import matplotlib.pyplot as plt
 import numpy as np
 
-analysisfile = "/mnt/nvme/bio/mastersthesis/src/trained_models/fa_fishP-lr1-ass-allbact.json"
+# analysisfile = "/mnt/nvme/bio/mastersthesis/src/trained_models/fa_fishP-lr1-ass-allbact.json"
+# analysisfile = "/mnt/nvme/bio/mastersthesis/src/trained_models/fa_fishP-lr1-concat-twobact.json"
+# analysisfile = "/mnt/nvme/bio/mastersthesis/src/trained_models/fa_fishP-lr1-concat-allbact.json"
 
 with open(analysisfile) as f:
     analysisdata = json.load(f)

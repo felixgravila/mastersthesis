@@ -4,6 +4,14 @@
 import json
 import math
 import matplotlib.pyplot as plt
+from matplotlib import rc
+import matplotlib.ticker as mtick
+
+font = {'family' : 'serif',
+        'size'   : 36}
+
+rc('text', usetex=True)
+rc('font', **font)
 
 with open("zymo_ref.json") as f:
     zymo_ref = json.load(f)
@@ -16,9 +24,9 @@ opposites = {
     "C": "G",
     "G": "C"}
 
-kmer_sizes = [5,7,10,15, 25]
+kmer_sizes = [5,7,10,15]
 
-fig = plt.figure(figsize=(7, 2*len(kmer_sizes)))
+fig = plt.figure(figsize=(15, 4*len(kmer_sizes)))
 
 for axi, kmer_size in enumerate(kmer_sizes):
     print(kmer_size, end="...")
@@ -72,29 +80,24 @@ for axi, kmer_size in enumerate(kmer_sizes):
     print(f"done computation, plotting {len(allkmer_dict)} ({len(allkmer_dict)*100/math.pow(4, kmer_size)})...")
 
 
-    # fig.add_subplot(4, 1, axi+1)
-    # values = sorted(allkmer_dict.values(), reverse=True)
-    # # rest = [0]*round(math.pow(4, kmer_size)-len(values))
-    # # values.extend(rest)
+    fig.add_subplot(len(kmer_sizes), 1, axi+1)
+    values = sorted(allkmer_dict.values(), reverse=True)
+    # rest = [0]*round(math.pow(4, kmer_size)-len(values))
+    # values.extend(rest)
 
-    # values = [v/sum(values) for v in values]
-    # pops = [p*100/math.pow(4, kmer_size) for p in range(len(values))]
-    # plt.plot(pops, values, label=f"k-mer size {kmer_size}")
+    values = [v/sum(values) for v in values]
+    pops = [p*100/math.pow(4, kmer_size) for p in range(len(values))]
+    plt.plot(pops, values, label=f"k-mer size {kmer_size}")
 
-    # plt.xlabel("% position in all possible k-mers")
-    # plt.ylabel("density")
+    plt.gca().yaxis.set_major_formatter(mtick.FormatStrFormatter('%.6f'))
 
-    # plt.legend()
+    if axi == len(kmer_sizes) - 1:
+        plt.xlabel("percentile of all possible k-mers")
+    plt.ylabel("density")
 
+    plt.legend()
+
+plt.tight_layout()
 plt.savefig(f"dist_all_mer.png")
-
-# %%
-
-for bact in kmer_dict:
-    print(bact, end=" ")
-    bact_kmers = kmer_dict[bact].items()
-    bact_kmers = sorted(bact_kmers, key=lambda x: x[1], reverse=True)
-    print(bact_kmers[0])
-
 
 # %%
