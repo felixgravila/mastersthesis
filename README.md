@@ -1,5 +1,9 @@
 # Improving Oxford Nanopore Technologies (ONT) MinION base calling Master's Thesis
 
+This was the working repository for our MSc thesis. The working basecallers now reside at 
+
+https://github.com/fishnchips-basecaller/fishnchips
+
 ## ChironCopy
 
 ```
